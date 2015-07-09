@@ -1,0 +1,205 @@
+@charset "utf-8";
+
+@import url("proxima-nova.css");
+
+@import url("../../assets/css/font-awesome.min.css");
+
+/*---GLOBAL---*/
+body {
+    color: #292929;
+    font-family: 'ProximaNovaRegular';
+    min-width: 320px;
+}
+
+.btn-primary {
+    background-color: #487896;
+    border-color: #487896;
+}
+
+.btn-primary:focus, .btn-primary:hover {
+    background-color: #fff;
+    color: #487896;
+}
+
+.phone-link:focus, .phone-link:hover {
+    text-decoration: none;
+}
+
+/*---HEADER---*/
+.secondary-nav {
+    margin-top: 12px;
+}
+
+.secondary-nav li {
+    margin-left: 30px;
+}
+
+.secondary-nav li a {
+    color: #292929;
+    font-family: 'ProximaNovaSemibold';
+    text-transform: uppercase;
+}
+
+.catalogue-donate-button {
+    border-radius: 0;
+    font-family: 'ProximaNovaExtrabold';
+    font-size: 19px;
+    margin-top: 10px;
+    padding-bottom: 14px;
+    padding-top: 14px;
+    text-transform: uppercase;
+}
+
+/*---NAV---*/
+.primary-nav {
+    background-color: #153B50;
+    margin-top: 20px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.primary-nav nav {
+    margin-top: 10px;
+}
+
+.primary-nav nav ul {
+    margin-bottom: 0;
+}
+
+.primary-nav nav > ul > li {
+    margin-left: 35px;
+}
+
+.primary-nav nav li > button {
+    color: #fff;
+    font-family: 'ProximaNovaSemibold';
+    font-size: 20px;
+    letter-spacing: .05em;
+}
+
+.primary-nav nav li > button:focus, .primary-nav nav li > button:hover {
+    color: #FDAF17;
+}
+
+.primary-nav nav > ul li:first-child, .secondary-nav > ul li:first-child {
+    margin-left: 0;
+}
+
+.primary-nav fieldset .search-submit {
+    background: #FDAF17;
+    border-color: #FDAF17;
+    color: #000;
+}
+
+.primary-nav fieldset .search-submit:focus, .primary-nav fieldset .search-submit:hover {
+    background: #000;
+    border-color: #000;
+    color: #FDAF17;
+}
+
+.primary-nav nav ul .dropdown-menu {
+    background: #153b50;
+    border: 0;
+    border-radius: 0;
+    margin-top: 16px;
+    padding-bottom: 0;
+}
+
+.primary-nav nav ul ul li a {
+    color: #fff;
+}
+
+.global-search-field input, .global-search-field button {
+    border-radius: 0;
+}
+
+/*---CAROUSEL---*/
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.77);
+    right: auto;
+}
+
+/*---SIDEBAR---*/
+
+/*---FOOTER---*/
+footer {
+    background: #487896;
+    border-top: 3px solid #153B50;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 85px;
+    padding-top: 20px;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:focus, footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer .social-icons li {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+footer .social-icons li:first-child {
+    margin-left: 0;
+}
+
+footer .social-icons .fa {
+    padding: 10px 15px;
+}
+
+footer .social-icons .fa:focus, footer .social-icons .fa:hover {
+    color: #292929;
+    background: #fff;
+    text-decoration: none;
+}
+
+footer .primary-footer-nav li {
+    margin-left: 25px;
+}
+
+footer .primary-footer-nav li:first-child {
+    margin-left: 0;
+}
+
+footer .primary-footer-nav a {
+    font-family: 'ProximaNovaSemibold';
+    text-transform: uppercase;
+}
+
+footer .secondary-footer-nav li {
+    margin-left: 30px;
+}
+
+footer .secondary-footer-nav li:first-child {
+    margin-left: 0;
+}
+
+/*---MEDIA QUERIES---*/
+@media screen and (min-width: 768px) {
+    /**** Temporary style for logo in header ****/
+    .wordmark {
+        margin-top: 30px;
+        margin-left: 2%;
+    }
+    .secondary-nav {
+        float: right;
+    }
+    .catalogue-donate-button-container {
+        float: right;
+    }
+    .catalogue-donate-button {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1370px) {
+    .catalogue-donate-button-container {
+        width: 25%;
+    }
+}

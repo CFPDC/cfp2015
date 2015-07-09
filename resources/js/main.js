@@ -1,0 +1,36 @@
+/*** loading order
+1. Setting variables
+2. global functions for each page
+3. page specific functions
+***/
+
+/*** variables ***/
+
+
+
+/*** global functions ***/
+
+$(function() {
+	//.ready for global functions
+	$('#myCarousel').carousel({
+		pause: "hover"
+	});
+});
+
+/*** page specific functions ***/
+
+
+//these all run at the same time but separate each into page specific sections for organization
+$(function() {
+	//home page
+
+
+	//about page
+
+
+	//contact page
+
+
+	//non-profit pages
+
+});
