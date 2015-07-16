@@ -2,23 +2,87 @@
 
 @import url("proxima-nova.css");
 
+@import url("libre-baskerville.css");
+
 @import url("../../assets/css/font-awesome.min.css");
+
+@import url("docs.css");
 
 /*---GLOBAL---*/
 body {
     color: #292929;
     font-family: 'ProximaNovaRegular';
+    font-size: 16px;
+    font-size: 2.5555em;
+    font-size: 1.6rem;
+    position: relative;
     min-width: 320px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-family: 'LibreBaskervilleBold';
+    font-size: 26px;
+}
+
+h3 {
+    color: #143A50;
+    font-family: 'ProximaNovaBold';
+    font-size: 18px;
+    font-size: 1.125em;
+    font-size: 1.8rem;
+}
+
+h4 {}
+
+h5 {}
+
+h6 {}
+
+p {}
+
+a {
+    color: #477896;
+    text-decoration: underline;
+}
+
+.lead {
+    font-size: 26px;
+    line-height: 1.5;
+}
+
+.btn {
+    border-radius: 0;
 }
 
 .btn-primary {
     background-color: #487896;
     border-color: #487896;
+    font-family: 'ProximaNovaBold';
+    text-transform: uppercase;
 }
 
 .btn-primary:focus, .btn-primary:hover {
     background-color: #fff;
+    border-color: #487896;
     color: #487896;
+}
+
+.btn-secondary {
+    background-color: #934683;
+    border-color: #934683;
+    color: #fff;
+    font-family: 'ProximaNovaBold';
+    text-transform: uppercase;
+}
+
+.btn-secondary:focus, .btn-secondary:hover {
+    background-color: #fff;
+    border-color: #934683;
+    color: #934683;
 }
 
 .phone-link:focus, .phone-link:hover {
@@ -120,6 +184,38 @@ body {
 }
 
 /*---SIDEBAR---*/
+
+/*---Styleguide---*/
+.style-example {
+    padding: 0 15px 25px;
+    margin-top: 0;
+}
+
+.style-color {
+    display: block;
+    height: 64px;
+    width: 64px;
+}
+
+.style-color.primary {
+    background-color: #153B50;
+}
+
+.style-color.secondary {
+    background-color: #487896;
+}
+
+.style-color.tertiary {
+    background-color: #292929;
+}
+
+.style-color.text {
+    background-color: #FDAF17;
+}
+
+.style-color.btn-secondary-color {
+    background-color: #934683;
+}
 
 /*---FOOTER---*/
 footer {

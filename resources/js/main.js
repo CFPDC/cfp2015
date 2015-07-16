@@ -15,6 +15,21 @@ $(function() {
 	$('#myCarousel').carousel({
 		pause: "hover"
 	});
+
+	//scroll spy for styleguide
+	$('body').scrollspy({
+		target: '.bs-docs-sidebar'
+	})
+	var nav = $(".push-down");
+	$(window).scroll(function() {
+		var scroll = $(window).scrollTop();
+
+		if (scroll >= 230) {
+			nav.addClass("scrolling");
+		} else {
+			nav.removeClass("scrolling");
+		}
+	});
 });
 
 /*** page specific functions ***/
