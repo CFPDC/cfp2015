@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'LibreBaskervilleBold';
+    src: url("../fonts/librebaskerville-bold-webfont.eot");
+    src: url("../fonts/librebaskerville-bold-webfont.svg#libre_baskervillebold") format("svg"), url("../fonts/librebaskerville-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/librebaskerville-bold-webfont.woff2") format("woff2"), url("../fonts/librebaskerville-bold-webfont.woff") format("woff"), url("../fonts/librebaskerville-bold-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'LibreBaskervilleItalic';
+    src: url("../fonts/librebaskerville-italic-webfont.eot");
+    src: url("../fonts/librebaskerville-italic-webfont.svg#libre_baskervilleitalic") format("svg"), url("../fonts/librebaskerville-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/librebaskerville-italic-webfont.woff2") format("woff2"), url("../fonts/librebaskerville-italic-webfont.woff") format("woff"), url("../fonts/librebaskerville-italic-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'LibreBaskervilleRegular';
+    src: url("../fonts/librebaskerville-regular-webfont.eot");
+    src: url("../fonts/librebaskerville-regular-webfont.svg#libre_baskervilleregular") format("svg"), url("../fonts/librebaskerville-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/librebaskerville-regular-webfont.woff2") format("woff2"), url("../fonts/librebaskerville-regular-webfont.woff") format("woff"), url("../fonts/librebaskerville-regular-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
