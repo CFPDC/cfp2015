@@ -1,8 +1,8 @@
 <footer class="container-fluid" role="contentinfo">
 	<section class="row">
-		<div class="col-sm-5">
+		<div class="col-sm-3">
 			<a href="">
-				<img src="" title="CFP footer logo">
+				<img class="img-responsive" src="resources/images/footer-logo-no-flag-white.gif" title="CFP footer logo">
 			</a>
 			<ul class="list-inline social-icons">
 				<li><a class="fa fa-facebook fa-3x" href="#"><span class="sr-only">Like CFP on Facebook</span></a></li>
@@ -10,8 +10,8 @@
 				<li><a class="fa fa-linkedin fa-3x" href="#"><span class="sr-only">Visit CFP on Linkedin</span></a></li>
 			</ul>
 		</div>
-		<nav class="col-sm-7">
-			<ul class="list-inline pull-right col-sm-offset-6 primary-footer-nav">
+		<nav class="col-sm-9">
+			<ul class="list-inline pull-right primary-footer-nav">
 				<li>
 					<a href="#">Donate<span class="sr-only"> to The Catalogue for Philanthropy</span></a>
 				</li>
@@ -37,7 +37,7 @@
 				</li>
 			</ul>
 		</nav>
-		<p class="col-xs-12 "></p>
+		
 		<address class="col-xs-12">
 <span class="name">&copy; 2014 CATALOGUE FOR PHILANTHROPY: GREATER WASHINGTON</span><br>
 		<span class="street">1899 L Street NW Suite 900</span>, <span class="city-state">Washington DC 20036</span>, <a class="phone-link" href="tel:202-955-6538">202-955-6538</a></address>

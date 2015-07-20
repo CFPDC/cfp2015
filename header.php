@@ -18,19 +18,24 @@
 		<meta name="robots" content="index, follow">
 		<meta name="revisit-after" content="15 days">
 		<title>Catalogue for Philanthropy</title>
+		<link href="resources/css/proxima-nova.css" rel="stylesheet">
+		<link href="resources/css/libre-baskerville.css" rel="stylesheet">
+		<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+		<link href="resources/css/docs.css" rel="stylesheet">
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
 		<link href="resources/css/base.css" rel="stylesheet">
 		<script src="resources/libs/modernizr/modernizr.js"></script>
 		<head>
+		<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 			<body <?php page_id(); ?> >
 				<header class="container-fluid" role="banner">
 					<div class="row">
-						<div class="col-sm-4">
-							<a class="pull-left" href="#" title="Catalogue for Philanthropy: Greater Washington home">
-								<img class="pull-left" src="resources/images/cfp-logo-blue-brown.gif" alt="Catalogue for Philanthropy: Greater Washington logo">
+						<div class="col-sm-5">
+							<a href="#" title="Catalogue for Philanthropy: Greater Washington home">
+								<img class="img-responsive" src="resources/images/cfp-logo-blue-brown2.gif" alt="Catalogue for Philanthropy: Greater Washington logo">
 							</a>
 						</div>
-						<nav class="col-sm-8 secondary-nav">
+						<nav class="col-sm-7 secondary-nav">
 							<ul class="list-inline pull-right">
 								<li>
 									<a href="#">Contact<span class="sr-only"> The Catalogue for Philanthropy</span></a>
