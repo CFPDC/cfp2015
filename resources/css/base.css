@@ -1,13 +1,5 @@
 @charset "utf-8";
 
-@import url("proxima-nova.css");
-
-@import url("libre-baskerville.css");
-
-@import url("../../assets/css/font-awesome.min.css");
-
-@import url("docs.css");
-
 /*---GLOBAL---*/
 body {
     color: #292929;
@@ -36,7 +28,11 @@ h3 {
     font-size: 1.8rem;
 }
 
-h4 {}
+h4 {
+    font-family: 'ProximaNovasemibold';
+    font-size: 16px;
+    font-size: 1.6rem;
+}
 
 h5 {}
 
@@ -46,7 +42,14 @@ p {}
 
 a {
     color: #477896;
+}
+
+a:focus, a:hover {
     text-decoration: underline;
+}
+
+hr {
+    border-top-color: #ddd;
 }
 
 .lead {
@@ -54,8 +57,13 @@ a {
     line-height: 1.5;
 }
 
+.dropdown-toggle:focus {
+    outline: 2px solid #487896;
+}
+
 .btn {
     border-radius: 0;
+    font-family: 'ProximaNovaSemibold';
 }
 
 .btn-primary {
@@ -85,6 +93,56 @@ a {
     color: #934683;
 }
 
+.btn-success {
+    background-color: #05583D;
+    border-color: #05583D;
+}
+
+.btn-success:focus, .btn-success:hover {
+    background-color: #fff;
+    border-color: #05583D;
+    color: #05583D;
+}
+
+.btn-info {
+    background-color: #008ACE;
+    border-color: #008ACE;
+    color: #101214;
+}
+
+.btn-info:focus, .btn-info:hover {
+    background-color: #fff;
+    border-color: #008ACE;
+    color: #292929;
+}
+
+.btn-warning {
+    background-color: #FE7F2D;
+    border-color: #FE7F2D;
+    color: #292929;
+}
+
+.btn-warning:focus, .btn-warning:hover {
+    background-color: #fff;
+    border-color: #FE7F2D;
+    color: inherit;
+}
+
+.btn-danger {
+    background-color: #931621;
+    border-color: #931621;
+}
+
+.btn-danger:focus, .btn-danger:hover {
+    background-color: #fff;
+    border-color: #931621;
+    color: #931621;
+}
+
+.btn-link {
+    color: #477896;
+}
+
 .phone-link:focus, .phone-link:hover {
     text-decoration: none;
 }
@@ -106,11 +164,12 @@ a {
 
 .catalogue-donate-button {
     border-radius: 0;
-    font-family: 'ProximaNovaExtrabold';
+    font-family: 'ProximaNovaBold';
     font-size: 19px;
+    line-height: 1;
     margin-top: 10px;
-    padding-bottom: 14px;
-    padding-top: 14px;
+    padding-bottom: 10px;
+    padding-top: 15px;
     text-transform: uppercase;
 }
 
@@ -183,9 +242,92 @@ a {
     right: auto;
 }
 
+.carousel-control:focus, .carousel-control:hover {
+    color: #FDAF17;
+}
+
+.carousel-control:focus span {
+    outline: 2px solid #487896;
+}
+
+.carousel-control {
+    z-index: 1;
+}
+
 /*---SIDEBAR---*/
 
+/*---HOMEPAGE---*/
+.carousel-indicators li, .carousel-indicators .active {
+    height: 15px;
+    width: 15px;
+}
+
+.carouselButtons {
+    background-color: rgba(0, 0, 0, 0.77);
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 4.5em;
+    z-index: 2;
+}
+
+.carouselButtons .btn-link {
+    color: #fff;
+}
+
+.carouselButtons .btn-link:focus, .carouselButtons .btn-link:hover {
+    color: #FDAF17;
+}
+
+.subcategories .thumb {
+    border: none;
+    display: table;
+    margin-bottom: 30px;
+    padding: 0px;
+    position: relative;
+}
+
+.subcategories .cap {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: table-cell;
+    left: 0;
+    padding: 0;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.subcategories .cap > h3 {
+    min-height: 70px;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.subcategories .cap a {
+    color: rgb(255, 255, 255);
+    display: block;
+    font-size: 19px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    padding-bottom: 23px;
+    padding-top: 27px;
+}
+
+.subcategories .cap h3.multi-line a {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 13px;
+    padding-top: 17px;
+}
+
 /*---Styleguide---*/
+.style-guide-container h2 {
+    margin-top: 40px;
+}
+
 .style-example {
     padding: 0 15px 25px;
     margin-top: 0;
@@ -276,7 +418,42 @@ footer .secondary-footer-nav li:first-child {
     margin-left: 0;
 }
 
+/*--- HOME PAGE ---*/
+.home-lead-text {
+    margin-bottom: 100px;
+    margin-top: 75px;
+}
+
+.nav.nav-pills.home-search {
+    margin-bottom: 15px;
+    margin-top: 35px;
+}
+
+.nav.nav-pills.home-search > li {
+    display: inline;
+    float: none;
+    font-family: 'ProximaNovaSemibold';
+    font-size: 15px;
+}
+
+.nav.nav-pills.home-search > li button.btn-link {
+    color: #292929;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+.nav.nav-pills.home-search > li + li {
+    margin-left: 15px;
+}
+
 /*---MEDIA QUERIES---*/
+@media screen and (min-width: 480px) {
+    .carouselButtons {
+        display: block;
+    }
+}
+
 @media screen and (min-width: 768px) {
     /**** Temporary style for logo in header ****/
     .wordmark {
@@ -290,7 +467,54 @@ footer .secondary-footer-nav li:first-child {
         float: right;
     }
     .catalogue-donate-button {
-        font-size: 20px;
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .nav.nav-pills.home-search > li {
+        margin-left: 25px;
+    }
+    .nav.nav-pills.home-search > li + li {
+        margin-left: 65px;
+    }
+    .subcategories .cap a {
+        padding-bottom: 23px;
+    }
+    .subcategories .cap h3.multi-line a {
+        padding-bottom: 13px;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .nav.nav-pills.home-search > li {
+        margin-left: 20px;
+    }
+    .nav.nav-pills.home-search > li + li {
+        margin-left: 100px;
+    }
+    .subcategories .cap a {
+        font-size: 16px;
+    }
+    .subcategories .cap > h3 {
+        min-height: 54px;
+    }
+    .subcategories .cap a {
+        padding-bottom: 17px;
+        padding-top: 20px;
+    }
+    .subcategories .cap h3.multi-line a {
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+}
+
+@media screen and (min-width: 1170px) {
+    .nav.nav-pills.home-search > li {
+        margin-left: 0;
+    }
+    .nav.nav-pills.home-search > li + li {
+        margin-left: 150px;
     }
 }
 

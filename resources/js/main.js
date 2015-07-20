@@ -15,7 +15,12 @@ $(function() {
 	$('#myCarousel').carousel({
 		pause: "hover"
 	});
-
+	$('#playButton').on('click', function() {
+		$('#myCarousel').carousel('cycle');
+	});
+	$('#pauseButton').on('click', function() {
+		$('#myCarousel').carousel('pause');
+	});
 	//scroll spy for styleguide
 	$('body').scrollspy({
 		target: '.bs-docs-sidebar'

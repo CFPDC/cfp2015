@@ -8,7 +8,7 @@ include('includes/functions.php');
 			<nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix">
 				<ul class="nav bs-docs-sidenav">
 					<li>
-						<a href="#overview">Overview</a>
+						<a href="#colors">Colors</a>
 						<ul class="nav">
 							<li>
 								<a href="#overview-doctype">HTML5 doctype</a>
@@ -299,10 +299,10 @@ include('includes/functions.php');
 				<a class="back-to-top" href="#top"> Back to top </a> <a href="#" class="bs-docs-theme-toggle" role="button">Disable theme preview</a>
 			</nav>
 		</div>
-		<div class="col-sm-9">
-			<div class="row">
+		<div class="col-sm-9 style-guide-container">
+			<div class="clearfix">
 				<h1 class="page-header">Style Guide</h1>
-				<h2 id="type"> <a class="anchorjs-link " href="#type" aria-label="Anchor link for: type" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a> Colors </h2>
+				<h2 id="colors"> <a class="anchorjs-link " href="#colors" aria-label="Anchor link for: type" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a> Colors </h2>
 				<p>
 				The signature color palette creates a powerful differentiator for the CFP website. Using this palette appropriately and consistently creates an additional layer of distinction.
 				</p>
@@ -345,41 +345,41 @@ include('includes/functions.php');
 				<h3>Supporting (secondary) Colors</h3>
 				<div class="media col-sm-4 style-example">
 					<div class="media-left media-middle">
-						<a href="javascript:void(0);" class="style-color tertiary">
+						<span class="style-color tertiary">
 							<span class="sr-only">
-							#153B50
+							#292929
 							</span>
-						</a>
+						</span>
 					</div>
 					<div class="media-body">
 						<h4 class="media-heading">Middle aligned media</h4>
-						...
+						<p>HEX code: #292929</p>
 					</div>
 				</div>
 				<div class="media col-sm-4 style-example">
 					<div class="media-left media-middle">
-						<a href="javascript:void(0);" class="style-color text">
+						<span class="style-color text">
 							<span class="sr-only">
-							#153B50
+							#FDAF17
 							</span>
-						</a>
+						</span>
 					</div>
 					<div class="media-body">
 						<h4 class="media-heading">Middle aligned media</h4>
-						...
+						<p>HEX code: #FDAF17</p>
 					</div>
 				</div>
 				<div class="media col-sm-4 style-example">
 					<div class="media-left media-middle">
 						<span class="style-color btn-secondary-color">
 							<span class="sr-only">
-							#153B50
+							#934683
 							</span>
 						</span>
 					</div>
 					<div class="media-body">
 						<h4 class="media-heading">Middle aligned media</h4>
-						...
+						<p>HEX code: #934683</p>
 					</div>
 				</div>
 				<!-- row -->
@@ -402,9 +402,9 @@ include('includes/functions.php');
 					<button type="button" class="btn btn-link">Link</button>
 				</div>
 			</div>
-				<h1 id="type" class="page-header"> <a class="anchorjs-link " href="#type" aria-label="Anchor link for: type" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a> Typography </h1>
+				<h2 id="type"> <a class="anchorjs-link " href="#type" aria-label="Anchor link for: type" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a> Typography </h2>
 				<!-- Headings -->
-				<h2 id="type-headings"><a class="anchorjs-link " href="#type-headings" aria-label="Anchor link for: type headings" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>Headings</h2>
+				<h3 id="type-headings"><a class="anchorjs-link " href="#type-headings" aria-label="Anchor link for: type headings" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>Headings</h3>
 				<p>
 				All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, are available.
 				</p>
@@ -454,7 +454,7 @@ include('includes/functions.php');
 				</div>
 				
 				<!-- Body copy -->
-				<h2 id="type-body-copy"><a class="anchorjs-link " href="#type-body-copy" aria-label="Anchor link for: type body copy" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>Body copy</h2>
+				<h3 id="type-body-copy"><a class="anchorjs-link " href="#type-body-copy" aria-label="Anchor link for: type body copy" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>Body copy</h3>
 				<p>
 				CFP's global default <code>font-size</code> is <strong>16px</strong>, with a <code>line-height</code> of <strong>1.428</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of half their computed line-height (10px by default).
 				</p>
@@ -479,7 +479,8 @@ include('includes/functions.php');
 </code></pre>
 				</div>
 				<!-- Body copy .lead -->
-				<h3 id="lead-body-copy"><a class="anchorjs-link " href="#lead-body-copy" aria-label="Anchor link for: lead body copy" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>Lead body copy</h3>
+				<h4 id="lead-body-copy"><a class="anchorjs-link " href="#lead-body-copy" aria-label="Anchor link for: lead body copy" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>Lead body copy</h4>
+				<!-- Melani this was the last one I changed -->
 				<p>
 				Make a paragraph stand out by adding <code>.lead</code>.
 				</p>
