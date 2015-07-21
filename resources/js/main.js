@@ -10,6 +10,25 @@
 
 /*** global functions ***/
 
+//skip nav prevent hashtag in url
+function globalSkipNav() {
+	$(function() {
+		$('.skip-navigation-link').each(function() {
+			var focusedElement = $(this).attr('href');
+			//set a tabindex of -1 to make the element focusable for the skip nav but is not focusable for tabbing on page, this is only needed if the target is not a normally focusable element like a div container.
+			$(focusedElement).attr('tabindex', '-1');
+		}).on('click', function(event) {
+			var focusedElement = $(this).attr('href');
+
+			//prevent the hash and element id to show in url
+			event.preventDefault();
+
+			// set focus to element for skip nav
+			$(focusedElement).focus();
+		});
+	});
+}
+
 $(function() {
 	//.ready for global functions
 	$('#myCarousel').carousel({
@@ -21,6 +40,10 @@ $(function() {
 	$('#pauseButton').on('click', function() {
 		$('#myCarousel').carousel('pause');
 	});
+
+
+	globalSkipNav();
+
 	//scroll spy for styleguide
 	$('body').scrollspy({
 		target: '.bs-docs-sidebar'
@@ -29,7 +52,7 @@ $(function() {
 	$(window).scroll(function() {
 		var scroll = $(window).scrollTop();
 
-		if (scroll >= 230) {
+		if (scroll >= 105) {
 			nav.addClass("scrolling");
 		} else {
 			nav.removeClass("scrolling");
