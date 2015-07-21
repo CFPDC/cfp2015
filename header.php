@@ -26,7 +26,7 @@
 		<link href="resources/css/base.css" rel="stylesheet">
 		<script src="resources/libs/modernizr/modernizr.js"></script>
 		<head>
-		<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+		<a class="sr-only sr-only-focusable skip-navigation-link" href="#primary-nav-container">Skip to main navigation</a>
 			<body <?php page_id(); ?> >
 				<header class="container-fluid" role="banner">
 					<div class="row">
@@ -55,7 +55,7 @@
 							<button class="btn btn-block btn-primary catalogue-donate-button" id="donate-to-catalogue">Donate to The Catalogue</button>
 						</div>
 					</div>
-					<div class="row primary-nav">
+					<div class="row primary-nav" id="primary-nav-container">
 						<nav class="col-sm-9 hidden-xs hidden-xs" role="navigation">
 							<ul class="list-inline">
 								<li class="dropdown">
