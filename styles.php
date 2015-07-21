@@ -1,6 +1,7 @@
 <?php
 include('includes/functions.php');
 ?>
+
 <?php get_template('header', 'Title of homepage'); ?>
 <div class="container-fluid">
 	<div class="bs-docs-section row">
