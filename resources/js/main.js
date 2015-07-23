@@ -9,6 +9,13 @@
 
 
 /*** global functions ***/
+//jpanel menu global navigation 
+var jPM = $.jPanelMenu({
+	menu: '.mobile-nav',
+	trigger: '.mobile-nav-toggle'
+});
+
+jPM.on();
 
 //skip nav prevent hashtag in url
 function globalSkipNav() {
@@ -29,6 +36,23 @@ function globalSkipNav() {
 	});
 }
 
+function homeSearchActiveToggle() {
+
+	$('.home-search button').on('click', function() {
+		var activeEl = this;
+		$('.home-search button.active').not(this).removeClass('active');
+
+		if (!$(this).hasClass('view-all-btn')) {
+			$(this).toggleClass('active');
+		}
+		/*if ($('.home-search button').hasClass('active')) {
+					console.log(this);
+					this.removeClass('active');
+				}
+				$(this).addClass('active');*/
+	});
+}
+
 $(function() {
 	//.ready for global functions
 	$('#myCarousel').carousel({
@@ -43,6 +67,7 @@ $(function() {
 
 
 	globalSkipNav();
+	homeSearchActiveToggle();
 
 	//scroll spy for styleguide
 	$('body').scrollspy({

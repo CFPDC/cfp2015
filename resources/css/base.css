@@ -26,6 +26,8 @@ h3 {
     font-size: 18px;
     font-size: 1.125em;
     font-size: 1.8rem;
+    margin-top: 75px;
+    text-transform: uppercase;
 }
 
 h4 {
@@ -64,6 +66,8 @@ hr {
 .btn {
     border-radius: 0;
     font-family: 'ProximaNovaSemibold';
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .btn-primary {
@@ -153,27 +157,97 @@ hr {
 }
 
 .secondary-nav li {
-    margin-left: 30px;
+    margin-left: 10px;
 }
 
 .secondary-nav li a {
     color: #292929;
     font-family: 'ProximaNovaSemibold';
+    font-size: 15px;
     text-transform: uppercase;
 }
 
 .catalogue-donate-button {
     border-radius: 0;
-    font-family: 'ProximaNovaBold';
-    font-size: 19px;
     line-height: 1;
     margin-top: 10px;
     padding-bottom: 10px;
     padding-top: 15px;
-    text-transform: uppercase;
 }
 
 /*---NAV---*/
+.mobile-nav {
+    overflow-y: auto !important;
+    padding-left: 0;
+    position: absolute;
+    text-indent: -9999em;
+}
+
+.mobile-nav li {
+    list-style: none;
+}
+
+.mobile-nav li a {}
+
+#jPanelMenu-menu {
+    background: #3b3b3b;
+    background: -o-linear-gradient(top, #3e3e3e, #383838);
+    background: -ms-linear-gradient(top, #3e3e3e, #383838);
+    background: -moz-linear-gradient(top, #3e3e3e, #383838);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #3e3e3e), color-stop(1, #383838));
+    background: -webkit-linear-gradient(#3e3e3e, #383838);
+    background: linear-gradient(top, #3e3e3e, #383838);
+    text-indent: 0;
+}
+
+#jPanelMenu-menu a {
+    background: #3b3b3b;
+    background: -o-linear-gradient(top, #3e3e3e, #383838);
+    background: -ms-linear-gradient(top, #3e3e3e, #383838);
+    background: -moz-linear-gradient(top, #3e3e3e, #383838);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #3e3e3e), color-stop(1, #383838));
+    background: -webkit-linear-gradient(#3e3e3e, #383838);
+    background: linear-gradient(top, #3e3e3e, #383838);
+    font-family: 'ProximaNovaSemibold';
+    display: block;
+    padding: 0.5em 10%;
+    border-top: 1px solid #484848;
+    border-bottom: 1px solid #2e2e2e;
+    text-decoration: none;
+    text-shadow: 0 -1px 2px #222;
+    color: #f7f7f7;
+    position: relative;
+}
+
+#jPanelMenu-menu li a:hover, #jPanelMenu-menu li a:focus {
+    background: #404040;
+    background: -o-linear-gradient(top, #484848, #383838);
+    background: -ms-linear-gradient(top, #484848, #383838);
+    background: -moz-linear-gradient(top, #484848, #383838);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #484848), color-stop(1, #383838));
+    background: -webkit-linear-gradient(#484848, #383838);
+    background: linear-gradient(top, #484848, #383838);
+    color: #fdaf17;
+}
+
+#jPanelMenu-menu li a:hover:before, #jPanelMenu-menu li a:focus:before, #jPanelMenu-menu li a.current:before {
+    content: "\f105";
+    font-family: 'FontAwesome';
+    height: 5px;
+    width: 5px;
+    position: absolute;
+    left: 10px;
+    top: 22%;
+}
+
+#jPanelMenu-menu li a.current {
+    color: #fdaf17;
+}
+
+.primary-nav, .secondary-nav {
+    display: none;
+}
+
 .primary-nav {
     background-color: #153B50;
     margin-top: 20px;
@@ -182,6 +256,7 @@ hr {
 }
 
 .primary-nav nav {
+    margin-bottom: 10px;
     margin-top: 10px;
 }
 
@@ -189,18 +264,15 @@ hr {
     margin-bottom: 0;
 }
 
-.primary-nav nav > ul > li {
-    margin-left: 35px;
-}
-
-.primary-nav nav li > button {
+.primary-nav nav li > button, .primary-nav nav li > a {
     color: #fff;
     font-family: 'ProximaNovaSemibold';
-    font-size: 20px;
+    font-size: inherit;
     letter-spacing: .05em;
+    transition: color 0.3s ease;
 }
 
-.primary-nav nav li > button:focus, .primary-nav nav li > button:hover {
+.primary-nav nav li > button:focus, .primary-nav nav li > button:hover, .primary-nav nav li > a:focus, .primary-nav nav li > a:hover {
     color: #FDAF17;
 }
 
@@ -280,10 +352,16 @@ hr {
     color: #FDAF17;
 }
 
+.subcategory-section h2 {
+    margin-top: 100px;
+}
+
 .subcategories .thumb {
     border: none;
     display: table;
     margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0px;
     position: relative;
 }
@@ -314,6 +392,11 @@ hr {
     letter-spacing: 0.07em;
     padding-bottom: 23px;
     padding-top: 27px;
+    transition: background-color 0.3s ease;
+}
+
+.subcategories .cap a:hover {
+    background: #000;
 }
 
 .subcategories .cap h3.multi-line a {
@@ -321,6 +404,12 @@ hr {
     margin-bottom: 0;
     padding-bottom: 13px;
     padding-top: 17px;
+}
+
+.home-how-help-section .btn {
+    font-size: 19px;
+    margin-top: 15px;
+    width: 100%;
 }
 
 /*---Styleguide---*/
@@ -454,23 +543,6 @@ footer .secondary-footer-nav li:first-child {
     }
 }
 
-@media screen and (min-width: 768px) {
-    /**** Temporary style for logo in header ****/
-    .wordmark {
-        margin-top: 30px;
-        margin-left: 2%;
-    }
-    .secondary-nav {
-        float: right;
-    }
-    .catalogue-donate-button-container {
-        float: right;
-    }
-    .catalogue-donate-button {
-        font-size: 17px;
-    }
-}
-
 @media screen and (min-width: 767px) {
     .nav.nav-pills.home-search > li {
         margin-left: 25px;
@@ -478,15 +550,91 @@ footer .secondary-footer-nav li:first-child {
     .nav.nav-pills.home-search > li + li {
         margin-left: 65px;
     }
+    .subcategories .thumb {
+        margin-left: 0;
+        margin-right: 0;
+    }
     .subcategories .cap a {
         padding-bottom: 23px;
     }
     .subcategories .cap h3.multi-line a {
         padding-bottom: 13px;
     }
+    .home-how-help-section .btn {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-nav {
+        display: none !important;
+    }
+    .primary-nav, .secondary-nav {
+        display: block;
+    }
+    .secondary-nav {
+        float: right;
+    }
+    .primary-nav nav > ul li {
+        margin-left: 2%;
+    }
+    .catalogue-donate-button-container {
+        float: right;
+    }
+    .catalogue-donate-button {
+        font-size: 17px;
+        float: right;
+    }
+    .nav.nav-pills.home-search > li button.btn-link {
+        border: 0;
+        border-bottom: 5px solid transparent;
+        margin-bottom: 15px;
+    }
+    .nav.nav-pills.home-search > li button.btn-link:focus, .nav.nav-pills.home-search > li button.btn-link:hover {
+        text-decoration: none;
+    }
+    .nav.nav-pills.home-search > li button.btn-link.active.nature-btn, .nav.nav-pills.home-search > li button.btn-link.nature-btn:focus, .nav.nav-pills.home-search > li button.btn-link.nature-btn:hover {
+        border-bottom-color: #05583D;
+    }
+    .nav.nav-pills.home-search > li button.btn-link.active.culture-btn, .nav.nav-pills.home-search > li button.btn-link.culture-btn:focus, .nav.nav-pills.home-search > li button.btn-link.culture-btn:hover {
+        border-bottom-color: #934683;
+    }
+    .nav.nav-pills.home-search > li button.btn-link.active.education-btn, .nav.nav-pills.home-search > li button.btn-link.education-btn:focus, .nav.nav-pills.home-search > li button.btn-link.education-btn:hover {
+        border-bottom-color: #E06C9F;
+    }
+    .nav.nav-pills.home-search > li button.btn-link.active.human-services-btn, .nav.nav-pills.home-search > li button.btn-link.human-services-btn:focus, .nav.nav-pills.home-search > li button.btn-link.human-services-btn:hover {
+        border-bottom-color: #487896;
+    }
+    .nav.nav-pills.home-search > li button.btn-link.view-all-btn:focus, .nav.nav-pills.home-search > li button.btn-link.view-all-btn:hover {
+        border-bottom-color: #FDAF17;
+    }
+    .home-how-help-section .btn {
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .home-how-help-section .btn {
+        font-size: 19px;
+    }
+    .primary-nav nav > ul li {
+        margin-left: 6%;
+    }
+    .primary-nav nav li > button, .primary-nav nav li > a {
+        font-size: 17px;
+    }
+    .secondary-nav li {
+        margin-left: 30px;
+    }
 }
 
 @media screen and (min-width: 991px) {
+    .primary-nav nav li > button, .primary-nav nav li > a {
+        font-size: 15px;
+    }
+    .secondary-nav li a {
+        font-size: inherit;
+    }
     .nav.nav-pills.home-search > li {
         margin-left: 20px;
     }
