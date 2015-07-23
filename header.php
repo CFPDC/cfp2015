@@ -26,8 +26,20 @@
 		<link href="resources/css/base.css" rel="stylesheet">
 		<script src="resources/libs/modernizr/modernizr.js"></script>
 		<head>
-		<a class="sr-only sr-only-focusable skip-navigation-link" href="#primary-nav-container">Skip to main navigation</a>
+			<a class="sr-only sr-only-focusable skip-navigation-link" href="#primary-nav-container">Skip to main navigation</a>
 			<body <?php page_id(); ?> >
+				<ul class="mobile-nav">
+					<li><a href="#">Overview</a></li>
+					<li><a href="#usage">Usage</a></li>
+					<li><a href="#inner-workings">Inner-Workings</a></li>
+					<li><a href="#animation">Animation</a></li>
+					<li><a href="#options">Options</a></li>
+					<li><a href="#api">API</a></li>
+					<li><a href="#tips">Tips &amp; Examples</a></li>
+					<li><a href="#license">License</a></li>
+					<li><a href="#changelog">Changelog</a></li>
+					<li><a href="#about">About</a></li>
+				</ul>
 				<header class="container-fluid" role="banner">
 					<div class="row">
 						<div class="col-sm-5">
@@ -51,12 +63,20 @@
 								</li>
 							</ul>
 						</nav>
-						<div class="col-sm-6 col-md-4 col-lg-3 catalogue-donate-button-container">
-							<button class="btn btn-block btn-primary catalogue-donate-button" id="donate-to-catalogue">Donate to The Catalogue</button>
+						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 catalogue-donate-button-container">
+							<button class="btn  btn-primary catalogue-donate-button" id="donate-to-catalogue">Donate to The Catalogue</button>
+							<button class="navbar-toggle navbar-toggle-main pull-right mobile-nav-toggle" data-mainmobilebuttontoggle="">
+							<span class="adobeBlank sr-only" aria-hidden="true">
+							Expand Menu Icon
+							</span>
+							<em class="fa fa-bars fa-lg fa-2x" style="font-family :'FontAwesome' !important">
+							<span id="expandText" class="sr-only">Expand Menu</span>
+							</em>
+							</button>
 						</div>
 					</div>
 					<div class="row primary-nav" id="primary-nav-container">
-						<nav class="col-sm-9 hidden-xs hidden-xs" role="navigation">
+						<nav class="col-sm-12 col-md-8" role="navigation">
 							<ul class="list-inline">
 								<li class="dropdown">
 									<button class="btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown-who">Who We Are</button>
@@ -101,11 +121,11 @@
 									</ul>
 								</li>
 								<li>
-									<button class="btn-link">Our Good Works Blog</button>
+									<a class="btn-link" href="#">Our Good Works Blog</a>
 								</li>
 							</ul>
 						</nav>
-						<fieldset class="col-sm-3 pull-right global-search-field">
+						<fieldset class="col-sm-offset-9 col-md-offset-0 col-sm-5 col-md-4 pull-right global-search-field">
 							<legend class="sr-only">Search The Catalogue for Philanthropy website</legend>
 							<label class="sr-only" for="globalSearch"></label>
 							<div class="input-group">
