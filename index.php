@@ -56,14 +56,14 @@ include('includes/functions.php');
   <p class="lead text-center home-lead-text col-sm-8 col-sm-offset-2">Donec metus ex, maximus vel dolor vel, pellentesque dictum diam. Maecenas feugiat nulla sem, vel ultrices nisi fringilla in. Sed ac rutrum purus. Donec libero massa, pulvinar eget elit et, accumsan porttitor orci.</p>
   <hr class="col-sm-4 col-sm-offset-4">
 </div>
-<div class="row">
+<div class="row subcategory-section">
   <h2 class="center-block text-center clearfix">NONPROFITS</h2>
   <ul class="nav nav-pills home-search col-sm-12 text-center">
-    <li role="presentation"><button class="btn btn-link">Nature</button></li>
-    <li role="presentation"><button class="btn btn-link">Culture</button></li>
-    <li role="presentation"><button class="btn btn-link">Education</button></li>
-    <li role="presentation"><button class="btn btn-link">Human Services</button></li>
-    <li role="presentation"><button class="btn btn-link">View All</button></li>
+    <li role="presentation"><button class="btn btn-link nature-btn">Nature</button></li>
+    <li role="presentation"><button class="btn btn-link culture-btn">Culture</button></li>
+    <li role="presentation"><button class="btn btn-link education-btn">Education</button></li>
+    <li role="presentation"><button class="btn btn-link human-services-btn">Human Services</button></li>
+    <li role="presentation"><button class="btn btn-link view-all-btn">View All</button></li>
   </ul>
 </div>
 <div class="row subcategories">
@@ -237,5 +237,17 @@ include('includes/functions.php');
     </div>
   </div>
 </div>
+<!-- end of subcategories -->
+<div class="row text-center home-how-help-section">
+  <div>
+    <h3>How to Help</h3>
+    <p class="col-sm-10 col-sm-offset-1">Ut non ex eget augue euismod tempor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean nec ultrices ex. Donec porta rhoncus ipsum, sed gravida urna posuere commodo. </p>
+    <div class="col-sm-8 col-sm-offset-2">
+      <a class="btn btn-primary pull-left" href="#">Donate to a Nonprofit</a>
+      <a class="btn btn-secondary pull-right" href="#">Volunteer Opportunities</a>
+    </div>
+  </div>
+</div>
 </main>
+
 <?php get_template('footer'); ?>

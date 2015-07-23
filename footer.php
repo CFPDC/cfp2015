@@ -52,6 +52,7 @@ if (!window.jQuery) { document.write('<script src="assets/js/jquery.js"><\/scrip
 <script>
 $.fn.modal || document.write('<script src="assets/js/bootstrap.min.js"><\/script>')
 </script>
+<script src="assets/js/jpanel.js"></script>
 <!-- end of library loading -->
 <!-- load JS -->
 <script src="resources/js/main.js" async></script>
