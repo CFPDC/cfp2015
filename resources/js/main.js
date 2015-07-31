@@ -9,14 +9,6 @@
 
 
 /*** global functions ***/
-//jpanel menu global navigation 
-var jPM = $.jPanelMenu({
-	menu: '.mobile-nav',
-	trigger: '.mobile-nav-toggle'
-});
-
-jPM.on();
-
 //skip nav prevent hashtag in url
 function globalSkipNav() {
 	$(function() {

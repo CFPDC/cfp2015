@@ -23,12 +23,14 @@
 		<link href="assets/css/font-awesome.min.css" rel="stylesheet">
 		<link href="resources/css/docs.css" rel="stylesheet">
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/jasny-bootstrap.min.css" rel="stylesheet">
 		<link href="resources/css/base.css" rel="stylesheet">
 		<script src="resources/libs/modernizr/modernizr.js"></script>
-		<head>
+		</head>
 			<a class="sr-only sr-only-focusable skip-navigation-link" href="#primary-nav-container">Skip to main navigation</a>
 			<body <?php page_id(); ?> >
-				<ul class="mobile-nav">
+				<div class="mobile-nav navmenu navmenu-default navmenu-fixed-left offcanvas">
+				<ul>
 					<li><a href="#">Overview</a></li>
 					<li><a href="#usage">Usage</a></li>
 					<li><a href="#inner-workings">Inner-Workings</a></li>
@@ -40,6 +42,7 @@
 					<li><a href="#changelog">Changelog</a></li>
 					<li><a href="#about">About</a></li>
 				</ul>
+			</div>
 				<header class="container-fluid" role="banner">
 					<div class="row">
 						<div class="col-sm-5">
@@ -65,7 +68,7 @@
 						</nav>
 						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 catalogue-donate-button-container">
 							<button class="btn  btn-primary catalogue-donate-button" id="donate-to-catalogue">Donate to The Catalogue</button>
-							<button class="navbar-toggle navbar-toggle-main pull-right mobile-nav-toggle" data-mainmobilebuttontoggle="">
+							<button class="navbar-toggle pull-right" data-toggle="offcanvas" data-target=".mobile-nav" data-canvas="body">
 							<span class="adobeBlank sr-only" aria-hidden="true">
 							Expand Menu Icon
 							</span>
