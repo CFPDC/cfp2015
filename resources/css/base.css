@@ -176,12 +176,12 @@ hr {
 }
 
 /*---NAV---*/
-.mobile-nav {
+/*.mobile-nav {
     overflow-y: auto !important;
     padding-left: 0;
     position: absolute;
     text-indent: -9999em;
-}
+}*/
 
 .mobile-nav li {
     list-style: none;
@@ -189,7 +189,7 @@ hr {
 
 .mobile-nav li a {}
 
-#jPanelMenu-menu {
+.mobile-nav {
     background: #3b3b3b;
     background: -o-linear-gradient(top, #3e3e3e, #383838);
     background: -ms-linear-gradient(top, #3e3e3e, #383838);
@@ -200,7 +200,7 @@ hr {
     text-indent: 0;
 }
 
-#jPanelMenu-menu a {
+.mobile-nav a {
     background: #3b3b3b;
     background: -o-linear-gradient(top, #3e3e3e, #383838);
     background: -ms-linear-gradient(top, #3e3e3e, #383838);
@@ -219,7 +219,7 @@ hr {
     position: relative;
 }
 
-#jPanelMenu-menu li a:hover, #jPanelMenu-menu li a:focus {
+.mobile-nav li a:hover, .mobile-nav li a:focus {
     background: #404040;
     background: -o-linear-gradient(top, #484848, #383838);
     background: -ms-linear-gradient(top, #484848, #383838);
@@ -230,7 +230,7 @@ hr {
     color: #fdaf17;
 }
 
-#jPanelMenu-menu li a:hover:before, #jPanelMenu-menu li a:focus:before, #jPanelMenu-menu li a.current:before {
+.mobile-nav li a:hover:before, .mobile-nav li a:focus:before, .mobile-nav li a.current:before {
     content: "\f105";
     font-family: 'FontAwesome';
     height: 5px;
@@ -240,7 +240,7 @@ hr {
     top: 22%;
 }
 
-#jPanelMenu-menu li a.current {
+.mobile-nav li a.current {
     color: #fdaf17;
 }
 
