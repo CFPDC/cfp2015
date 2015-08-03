@@ -53,16 +53,16 @@
 						<nav class="col-sm-7 secondary-nav">
 							<ul class="list-inline pull-right">
 								<li>
-									<a href="#">Contact<span class="sr-only"> The Catalogue for Philanthropy</span></a>
+									<a href="contact-cfp.php" target="_self" title="CFP's contact information">Contact<span class="sr-only"> The Catalogue for Philanthropy</span></a>
 								</li>
 								<li>
-									<a href="#">Request a Catalog</a>
+									<a href="request-a-catalogue.php" target="_self" title="Request a catalogue from CFP">Request a Catalog</a>
 								</li>
 								<li>
-									<a href="#">Sign Up</a>
+									<a href="account-sign-up.php" target="_self" title="Sign up for a CFP account">Sign Up</a>
 								</li>
 								<li>
-									<a href="#">Log In<span class="sr-only"> to your Catalogue for Philanthropy account</span></a>
+									<a href="account-login.php" target="_self" title="Login to your CFP account">Log In<span class="sr-only"> to your Catalogue for Philanthropy account</span></a>
 								</li>
 							</ul>
 						</nav>
@@ -85,13 +85,25 @@
 									<button class="btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown-who">Who We Are</button>
 									<ul class="dropdown-menu" id="dropdown" aria-labelledby="dropdown-who">
 										<li>
-											<a href="#">Link 1</a>
+											<a href="about-us.php" target="_self" title="About CFP">About Us</a>
 										</li>
 										<li>
-											<a href="#">Link 2</a>
+											<a href="cfp-team.php" target="_self" title="About the CFP team">Team</a>
 										</li>
 										<li>
-											<a href="#">Link 3</a>
+											<a href="cfp-reviewers.php" target="_self" title="CFP reviewers">Our Reviewers</a>
+										</li>
+										<li>
+											<a href="sponsors.php" target="_self" title="Sponsors of CFP">Sponsors</a>
+										</li>
+										<li>
+											<a href="press.php" target="_self" title="Press information">Press</a>
+										</li>
+										<li>
+											<a href="testimonials.php" target="_self" title="Testimonials">Testimonials</a>
+										</li>
+										<li>
+											<a href="vision-report.php" target="_self" title="CFP's vision for the future">Vision Report</a>
 										</li>
 									</ul>
 								</li>
@@ -99,13 +111,19 @@
 									<button class="btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown-our-nonprofits">Our Nonprofits</button>
 									<ul class="dropdown-menu" aria-labelledby="dropdown-our-nonprofits">
 										<li>
-											<a href="#">Link 1</a>
+											<a href="our-nonprofits.php" target="_self" title="View our Nonprofits">Our Vetted Nonprofits</a>
 										</li>
 										<li>
-											<a href="#">Link 2</a>
+											<a href="our-nonprofits.php?strCategory=nature" target="_self" title="View our Nature Nonprofits">Nature Nonprofits</a>
 										</li>
 										<li>
-											<a href="#">Link 3</a>
+											<a href="our-nonprofits.php?strCategory=culture" target="_self" title="View our Culture Nonprofits">Culture Nonprofits</a>
+										</li>
+										<li>
+											<a href="our-nonprofits.php?strCategory=education" target="_self" title="View our Education Nonprofits">Education Nonprofits</a>
+										</li>
+										<li>
+											<a href="our-nonprofits.php?strCategory=human-services" target="_self" title="View our Human Services Nonprofits">Human Services Nonprofits</a>
 										</li>
 									</ul>
 								</li>
@@ -113,18 +131,16 @@
 									<button class="btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown-volunteers">Volunteering &amp; Events</button>
 									<ul class="dropdown-menu" aria-labelledby="dropdown-volunteers">
 										<li>
-											<a href="#">Link 1</a>
+											<a href="all-events.php" target="_self" title="View events with our nonprofits">Events</a>
 										</li>
 										<li>
-											<a href="#">Link 2</a>
-										</li>
-										<li>
-											<a href="#">Link 3</a>
+											<a href="our-nonprofits.php" target="_self" title="View volunteer opportunities with our nonprofits">Volunteer Opportunities</a>
 										</li>
 									</ul>
 								</li>
 								<li>
-									<a class="btn-link" href="#">Our Good Works Blog</a>
+									<a class="btn-link" href="http://www.cfp-dc.org/blog/" target="_self" title="Visit our blog to share stories, events, and inspiration from the
+CFP and our charities.">Our Good Works Blog</a>
 								</li>
 							</ul>
 						</nav>
