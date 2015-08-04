@@ -29,7 +29,6 @@ function globalSkipNav() {
 }
 
 function homeSearchActiveToggle() {
-
 	$('.home-search button').on('click', function() {
 		var activeEl = this;
 		$('.home-search button.active').not(this).removeClass('active');
@@ -44,6 +43,17 @@ function homeSearchActiveToggle() {
 				$(this).addClass('active');*/
 	});
 }
+
+//results page change toggle view active class
+function searchPageActiveToggle() {
+
+	$('.display-group button').on('click', function() {
+		var activeEl = this;
+		$('.display-group button.active').not(this).removeClass('active');
+		$(this).toggleClass('active');
+	});
+}
+
 
 $(function() {
 	//.ready for global functions
@@ -60,6 +70,7 @@ $(function() {
 
 	globalSkipNav();
 	homeSearchActiveToggle();
+	searchPageActiveToggle();
 
 	//scroll spy for styleguide
 	$('body').scrollspy({
@@ -75,6 +86,13 @@ $(function() {
 			nav.removeClass("scrolling");
 		}
 	});
+
+	//open collapsed sections of filtering on results/search page
+	$(".category-toggle").click();
+
+	//add unchecked to each results page filter section
+	$('.select-all').attr("data-type", "uncheck");
+
 });
 
 /*** page specific functions ***/
@@ -82,6 +100,11 @@ $(function() {
 
 //these all run at the same time but separate each into page specific sections for organization
 $(function() {
+	//bootstrap tooltips activated on page load
+	$('[data-toggle="tooltip"]').tooltip({
+		container: 'body'
+	});
+
 	//home page
 
 
@@ -89,6 +112,28 @@ $(function() {
 
 
 	//contact page
+
+
+	//search/results page
+
+	//when user clicks the select all link, check the appropriate checkboxes and update text
+	$('.select-all').on('click', function() {
+		var $this = $(this),
+			listClass = $this.attr('data-list'),
+			dataType = $this.attr("data-type");
+		if (dataType === 'uncheck') {
+			$this.attr("data-type", "check").text('Unselect All');
+			$('.' + listClass).prop("checked", true);
+		} else {
+			$this.attr("data-type", "uncheck").text('Select All');
+			$('.' + listClass).prop("checked", false);
+		}
+	});
+	$('.sort-by a').on('click', function(e) {
+		e.preventDefault();
+		//add functionality to update url with parameter from data-sort into this --> &strSort=name
+	});
+
 
 
 	//non-profit pages

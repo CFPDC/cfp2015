@@ -128,7 +128,7 @@
 									</ul>
 								</li>
 								<li class="dropdown">
-									<button class="btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown-volunteers">Volunteering &amp; Events</button>
+									<button class="btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown-volunteers">Getting Involved</button>
 									<ul class="dropdown-menu" aria-labelledby="dropdown-volunteers">
 										<li>
 											<a href="all-events.php" target="_self" title="View events with our nonprofits">Events</a>
@@ -136,6 +136,10 @@
 										<li>
 											<a href="our-nonprofits.php" target="_self" title="View volunteer opportunities with our nonprofits">Volunteer Opportunities</a>
 										</li>
+										<li>
+											<a href="how-to-help.php" target="_self" title="View events with our nonprofits">How To Help</a>
+										</li>
+
 									</ul>
 								</li>
 								<li>
