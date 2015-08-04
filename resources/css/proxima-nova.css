@@ -86,7 +86,7 @@
 
 
 @font-face {
-    font-family: 'ProximaNova';
+    font-family: 'ProximaNovaBlackItalic';
     src: url("../fonts/ProximaNova-BlackIt-webfont.eot");
     src: url("../fonts/ProximaNova-BlackIt-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-BlackIt-webfont.svg#ProximaNovaBlackItalic") format("svg"), url("../fonts/ProximaNova-BlackIt-webfont.woff") format("woff");
     font-weight: 900;
@@ -104,7 +104,7 @@
 
 
 @font-face {
-    font-family: 'ProximaNova';
+    font-family: 'ProximaNovaExtraboldItalic';
     src: url("../fonts/ProximaNova-XboldIt-webfont.eot");
     src: url("../fonts/ProximaNova-XboldIt-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-XboldIt-webfont.svg#ProximaNovaExtraboldItalic") format("svg"), url("../fonts/ProximaNova-XboldIt-webfont.woff") format("woff");
     font-weight: 800;
@@ -122,7 +122,7 @@
 
 
 @font-face {
-    font-family: 'ProximaNova';
+    font-family: 'ProximaNovaLightItalic';
     src: url("../fonts/ProximaNova-LightIt-webfont.eot");
     src: url("../fonts/ProximaNova-LightIt-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-LightIt-webfont.svg#ProximaNovaLightItalic") format("svg"), url("../fonts/ProximaNova-LightIt-webfont.woff") format("woff");
     font-weight: 300;
@@ -149,7 +149,7 @@
 
 
 @font-face {
-    font-family: 'ProximaNova';
+    font-family: 'ProximaNovaThinItalic';
     src: url("../fonts/ProximaNova-ThinIt-webfont.eot");
     src: url("../fonts/ProximaNova-ThinIt-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-ThinIt-webfont.woff") format("woff"), url("../fonts/ProximaNova-ThinIt-webfont.svg#ProximaNovaThinItalic") format("svg");
     font-weight: 100;

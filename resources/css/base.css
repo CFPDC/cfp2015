@@ -13,6 +13,8 @@ body {
 
 h1 {
     font-size: 40px;
+    padding-bottom: 53px;
+    padding-top: 53px;
 }
 
 h2 {
@@ -31,7 +33,7 @@ h3 {
 }
 
 h4 {
-    font-family: 'ProximaNovasemibold';
+    font-family: 'ProximaNovaSemibold';
     font-size: 16px;
     font-size: 1.6rem;
 }
@@ -68,6 +70,16 @@ hr {
     font-family: 'ProximaNovaSemibold';
     transition: color 0.3s ease;
     transition: background-color 0.3s ease;
+}
+
+.btn-gray {
+    background-color: #c8c8c8;
+}
+
+.btn-gray:focus, .btn-gray:hover {
+    background-color: #292929;
+    border-color: #c8c8c8;
+    color: #fff;
 }
 
 .btn-primary {
@@ -290,6 +302,7 @@ hr {
 
 .primary-nav nav ul.dropdown-menu li a {
     font-family: 'ProximaNovaRegular';
+    font-size: 14px;
 }
 
 .primary-nav nav > ul li:first-child, .secondary-nav > ul li:first-child {
@@ -463,6 +476,297 @@ hr {
 .style-color.btn-secondary-color {
     background-color: #934683;
 }
+
+/*---Search/Results page---*/
+.search-results {
+    margin-top: 100px;
+}
+
+.search-results aside h3 {
+    margin-top: 40px;
+}
+
+.search-results aside .category-toggle {
+    color: inherit;
+    font-family: 'ProximaNovaSemibold';
+    font-size: inherit;
+    padding: 0;
+    position: relative;
+}
+
+.search-results aside .category-toggle[aria-expanded="true"]:after, .search-results aside .category-toggle[aria-expanded="false"]:after {
+    font-family: 'FontAwesome';
+    position: absolute;
+    right: -20px;
+    top: 0;
+}
+
+.search-results aside .category-toggle[aria-expanded="false"]:after {
+    content: '\f196';
+}
+
+.search-results aside .category-toggle[aria-expanded="true"]:after {
+    content: '\f147';
+}
+
+.search-results aside .selections .btn-link, .search-results aside .selections a {
+    font-size: 14px;
+}
+
+.search-results aside .selections .btn-link {
+    margin-left: 15px;
+}
+
+.search-results aside .selections ul {
+    margin-left: 10px;
+}
+
+.search-results aside .selections ul li label {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.search-results aside .collaspingSection .state-collapse {
+    color: inherit;
+    font-family: 'ProximaNovaSemibold';
+    position: relative;
+}
+
+.search-results aside .collaspingSection .state-collapse[aria-expanded="true"]:after, .search-results aside .collaspingSection .state-collapse[aria-expanded="false"]:after {
+    font-family: 'FontAwesome';
+    position: absolute;
+    right: -5px;
+    top: 5px;
+}
+
+.search-results aside .collaspingSection .state-collapse[aria-expanded="false"]:after {
+    content: '\f054';
+}
+
+.search-results aside .collaspingSection .state-collapse[aria-expanded="true"]:after {
+    content: '\f078';
+}
+
+.search-results aside .collaspingSection ul {
+    margin-left: 35px;
+}
+
+.search-results .thumbnail {
+    border-radius: 0;
+}
+
+.search-results .thumbnail .caption {
+    padding: 0;
+}
+
+.search-results .thumbnail .caption h2 {
+    font-size: 22px;
+}
+
+.search-results .thumbnail .caption h2 small {
+    font-family: 'ProximaNovaRegular';
+    font-style: italic;
+}
+
+.search-results .thumbnail .caption p {
+    font-size: 15px;
+}
+
+.search-results .sort-display-menu-container {
+    margin-bottom: 20px;
+}
+
+.search-results .sort-display-menu-container .sort-display-menu {
+    position: relative;
+}
+
+.search-results .sort-display-menu-container .sort-display-menu .sort-toggle {
+    color: inherit;
+    font-family: 'ProximaNovaSemibold';
+    font-size: 15px;
+    margin-right: 45px;
+    padding: 0 13px 0 0;
+    position: relative;
+}
+
+.search-results .sort-display-menu-container .sort-display-menu .sort-toggle.collapsed:after, .search-results .sort-display-menu-container .sort-display-menu .sort-toggle:after {
+    font-family: 'FontAwesome';
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.search-results .sort-display-menu-container .sort-display-menu .sort-toggle:after {
+    content: '\f0d7';
+}
+
+.search-results .sort-display-menu-container .sort-display-menu .sort-toggle.collapsed:after {
+    content: '\f0da';
+}
+
+.search-results .sort-display-menu-container .sort-display-menu .sort-by {
+    left: 0;
+    position: absolute;
+    right: auto;
+    top: 22px;
+    min-width: auto;
+}
+
+.search-results .sort-display-menu-container .sort-display-menu .display-group {
+    display: inline-block;
+}
+
+.search-results .sort-display-menu-container .sort-display-menu .display-group label {
+    display: block;
+    font-family: 'ProximaNovaSemibold';
+    font-size: 15px;
+}
+
+.search-results .sort-display-menu-container .sort-display-menu .display-group .btn-sort {
+    background: #fff;
+    border: none;
+    color: #487896;
+}
+
+.search-results .sort-display-menu-container .sort-display-menu .display-group .btn-sort.active {
+    background: #487896;
+    color: #fff;
+}
+
+/*
+.search-results {
+    margin-top: 100px;
+    aside {
+        h3 {
+            margin-top: 40px;
+        }
+        .category-toggle {
+            color: inherit;
+            font-family: 'ProximaNovaSemibold';
+            font-size: inherit;
+            padding: 0;
+            position: relative;
+            &[aria-expanded="true"]:after, &[aria-expanded="false"]:after {
+                font-family: 'FontAwesome';
+                position: absolute;
+                right: -20px;
+                top: 0;
+            }
+            &[aria-expanded="false"]:after {
+                content: '\f196';
+            }
+            &[aria-expanded="true"]:after {
+                content: '\f147';
+            }
+        }
+        .selections {
+            .btn-link, a {
+                font-size: 14px;
+            }
+            .btn-link {
+                margin-left: 15px;
+            }
+            ul {
+                margin-left: 10px;
+                li {
+                    label {
+                        font-size: 14px;
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+        .collaspingSection {
+            .state-collapse {
+                color: inherit;
+                font-family: 'ProximaNovaBold';
+                position: relative;
+                &[aria-expanded="true"]:after, &[aria-expanded="false"]:after {
+                    font-family: 'FontAwesome';
+                    position: absolute;
+                    right: -5px;
+                    top: 5px;
+                }
+                &[aria-expanded="false"]:after {
+                    content: '\f054';
+                }
+                &[aria-expanded="true"]:after {
+                    content: '\f078';
+                }
+            }
+            ul {
+                margin-left: 35px;
+            }
+        }
+    }
+    .thumbnail {
+        border-radius: 0;
+        .caption {
+            padding: 0;
+            h2 {
+                font-size: 22px;
+                small {
+                    font-family: 'ProximaNovaRegular';
+                    font-style: italic;
+                }
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+    .sort-display-menu-container {
+        margin-bottom: 20px;
+        .sort-display-menu {
+            position: relative;
+            .sort-toggle {
+                color: inherit;
+                font-family: 'ProximaNovaSemibold';
+                font-size: 15px;
+                margin-right: 45px;
+                padding: 0 13px 0 0;
+                position: relative;
+                &.collapsed:after, &:after {
+                    font-family: 'FontAwesome';
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+                &:after {
+                    content: '\f0d7';
+                }
+                &.collapsed:after {
+                    content: '\f0da';
+                }
+            }
+            .sort-by {
+                left: 0;
+                position: absolute;
+                right: auto;
+                top: 22px;
+                min-width: auto;
+            }
+            .display-group {
+                display: inline-block;
+                label {
+                    display: block;
+                    font-family: 'ProximaNovaSemibold';
+                    font-size: 15px;
+                }
+                .btn-sort {
+                    background: #fff;
+                    border: none;
+                    color: #487896;
+                    &.active {
+                        background: #487896;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+*/
 
 /*---FOOTER---*/
 footer {
