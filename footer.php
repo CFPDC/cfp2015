@@ -53,6 +53,8 @@ if (!window.jQuery) { document.write('<script src="assets/js/jquery.js"><\/scrip
 $.fn.modal || document.write('<script src="assets/js/bootstrap.min.js"><\/script>')
 </script>
 <script src="assets/js/jasny-bootstrap.min.js"></script>
+<script src="assets/js/underscore.js"></script>
+<script src="resources/js/assets.responsive.js"></script>
 <!-- end of library loading -->
 <!-- load JS -->
 <script src="resources/js/main.js" async></script>
