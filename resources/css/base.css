@@ -479,7 +479,11 @@ hr {
 
 /*---Search/Results page---*/
 .search-results {
-    margin-top: 100px;
+    margin-top: 50px;
+}
+
+.search-results .filter-toggle-button .btn {
+    margin-bottom: 25px;
 }
 
 .search-results aside h3 {
@@ -635,7 +639,12 @@ hr {
 
 /*
 .search-results {
-    margin-top: 100px;
+    margin-top: 50px;
+    .filter-toggle-button {
+        .btn {
+            margin-bottom: 25px;
+        }
+    }
     aside {
         h3 {
             margin-top: 40px;
@@ -931,6 +940,9 @@ footer .secondary-footer-nav li:first-child {
     .home-how-help-section .btn {
         width: auto;
     }
+    .search-results {
+        margin-top: 100px;
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -986,6 +998,12 @@ footer .secondary-footer-nav li:first-child {
     }
 }
 
+@media screen and (min-width: 1077px) {
+    .primary-nav nav li > button, .primary-nav nav li > a {
+        font-size: 18px;
+    }
+}
+
 @media screen and (min-width: 1170px) {
     .nav.nav-pills.home-search > li {
         margin-left: 0;
@@ -1003,12 +1021,64 @@ footer .secondary-footer-nav li:first-child {
 
 @media screen and (min-width: 1225px) {
     .primary-nav nav > ul li {
-        margin-left: 5%;
+        margin-left: 4%;
     }
 }
 
 @media screen and (min-width: 1370px) {
     .catalogue-donate-button-container {
         width: 25%;
+    }
+    .primary-nav nav > ul li {
+        margin-left: 6%;
+    }
+}
+
+#screen-indicator {
+    position: absolute;
+    height: 0;
+    width: 0;
+    z-index: 1;
+}
+
+@media (max-width: 1199px) {
+    #screen-indicator {
+        z-index: 8;
+    }
+}
+
+@media (max-width: 991px) {
+    #screen-indicator {
+        z-index: 7;
+    }
+}
+
+@media (max-width: 767px) {
+    #screen-indicator {
+        z-index: 6;
+    }
+}
+
+@media (min-width: 480px) {
+    #screen-indicator {
+        z-index: 5;
+    }
+}
+
+@media (min-width: 768px) {
+    #screen-indicator {
+        z-index: 4;
+    }
+}
+
+@media (min-width: 992px) {
+    #screen-indicator {
+        z-index: 3;
+    }
+}
+
+@media (min-width: 1200px) {
+    #screen-indicator {
+        z-index: 2;
     }
 }

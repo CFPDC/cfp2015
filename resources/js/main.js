@@ -55,8 +55,37 @@ function searchPageActiveToggle() {
 }
 
 
+//load assets responsive for screen size detection
+A11yResp.Core();
+//Set media query
+var lastDeviceState = A11yResp.getScreenWidth();
+$(window).resize(_.debounce(function() {
+	var state = A11yResp.getScreenWidth();
+	if (state != lastDeviceState) {
+		// Save the new state as current
+		lastDeviceState = state;
+		performMediaQueries(state);
+	}
+}, 20));
+
+//Do custom Media query logic
+function performMediaQueries(state) {
+	if (state == 'screen-sm-max' || state == 'screen-xs-max' || state == 'screen-xs-min') {
+		$('#asideFilter').addClass('collapse');
+	} else {
+		$('#asideFilter').removeClass('collapse');
+	}
+}
+
 $(function() {
 	//.ready for global functions
+
+	//Do initial check for media state
+	var state = A11yResp.getScreenWidth();
+	if (state !== 'desktop') {
+		performMediaQueries(state);
+	}
+
 	$('#myCarousel').carousel({
 		pause: "hover"
 	});
