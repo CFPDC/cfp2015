@@ -32,10 +32,13 @@ include('includes/functions.php');
       </div>
     </div>
   </div>
-  <aside class="col-sm-3">
+  <div class="col-xs-10 col-xs-offset-1 visible-xs filter-toggle-button">
+      <button class="btn btn-primary center-block" data-toggle="collapse" data-target="#asideFilter" aria-expanded="false" aria-controls="asideFilter">Filter Results</button>
+  </div>
+  <aside class="collapse col-xs-12 col-sm-3" id="asideFilter">
     <form onsubmit="return iso_doit()">
       <div class="input-group form-group form-group-lg">
-        <input type="text" class="form-control"  id="filtertext" si="30" placeholder="SEARCH NONPROFITS">
+        <input type="text" class="form-control" id="filtertext" si="30" placeholder="SEARCH NONPROFITS">
         <span class="input-group-btn">
         <button class="btn btn-gray btn-lg"><span class="fa fa-search"><span class="sr-only">Submit Search</span></span></button>
         </span>
@@ -279,7 +282,7 @@ include('includes/functions.php');
     </div>
     <!-- end of Populations served section -->
   </aside>
-  <section class="col-sm-9">
+  <section class="col-xs-12 col-sm-9">
     <div class="row">
       <div class="col-sm-6 col-md-3">
         <div class="thumbnail">
