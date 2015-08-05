@@ -943,7 +943,12 @@ footer .secondary-footer-nav li:first-child {
     .search-results {
         margin-top: 100px;
     }
+    .search-results .caption .btn {
+        width: 49%;
+    }
 }
+}
+
 
 @media screen and (min-width: 900px) {
     .home-how-help-section .btn {
@@ -990,11 +995,19 @@ footer .secondary-footer-nav li:first-child {
         padding-bottom: 10px;
         padding-top: 10px;
     }
+     .search-results .caption .btn {
+        width: auto;
+    }
 }
 
 @media screen and (min-width: 1050px) {
     .primary-nav nav li > button, .primary-nav nav li > a {
         font-size: 16px;
+    }
+    .search-results .caption .btn {
+        width: 48%;
+        font-size: 74%;
+        padding: 6px 3px;
     }
 }
 
@@ -1017,6 +1030,9 @@ footer .secondary-footer-nav li:first-child {
     .primary-nav nav > ul li {
         margin-left: 3%;
     }
+    .search-results .caption .btn {
+        font-size: 85%;
+    }
 }
 
 @media screen and (min-width: 1225px) {
@@ -1031,6 +1047,11 @@ footer .secondary-footer-nav li:first-child {
     }
     .primary-nav nav > ul li {
         margin-left: 6%;
+    }
+    .search-results .caption .btn {
+        width: 49%;
+        font-size: 100%;
+        padding: 8px 5px;
     }
 }
 
