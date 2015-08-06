@@ -1,6 +1,6 @@
 <footer class="container-fluid" role="contentinfo">
 	<section class="row">
-		<div class="col-sm-3">
+		<div class="col-sm-5 col-xs-12 col-md-4">
 			<a href="">
 				<img class="img-responsive" src="resources/images/footer-logo-no-flag-white.gif" title="CFP footer logo">
 			</a>
@@ -10,30 +10,30 @@
 				<li><a class="fa fa-linkedin fa-3x" href="#"><span class="sr-only">Visit CFP on Linkedin</span></a></li>
 			</ul>
 		</div>
-		<nav class="col-sm-9">
+		<nav class="col-sm-7 col-xs-12 col-md-8">
 			<ul class="list-inline pull-right primary-footer-nav">
 				<li>
-					<a href="#">Donate<span class="sr-only"> to The Catalogue for Philanthropy</span></a>
+					<a href="nonprofits/Catalogue-for-Philanthropy-Greater-Washington">Donate<span class="sr-only"> to The Catalogue for Philanthropy</span></a>
 				</li>
 				<li>
-					<a href="#">Request a Catalog</a>
+					<a href="request-catalogue.php">Request a Catalog</a>
 				</li>
 				<li>
 					<a href="#">Subscribe</a>
 				</li>
 				<li>
-					<a href="#">Sponsors<span class="sr-only"> of The Catalogue for Philanthropy</span></a>
+					<a href="sponsors.php">Sponsors<span class="sr-only"> of The Catalogue for Philanthropy</span></a>
 				</li>
 			</ul>
-			<ul class="list-inline pull-right secondary-footer-nav col-sm-offset-6">
+			<ul class="list-inline pull-right secondary-footer-nav col-sm-offset-5">
 				<li>
-					<a href="#">Apply<span class="sr-only"> to The Catalogue for Philanthropy</span></a>
+					<a href="apply.php">Apply<span class="sr-only"> to The Catalogue for Philanthropy</span></a>
 				</li>
 				<li>
-					<a href="#">Sitemap</a>
+					<a href="sitemap.php">Sitemap</a>
 				</li>
 				<li>
-					<a href="#">Privacy Policy</a>
+					<a href="privacy.php">Privacy Policy</a>
 				</li>
 			</ul>
 		</nav>

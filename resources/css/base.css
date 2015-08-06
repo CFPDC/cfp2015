@@ -799,6 +799,7 @@ footer a:focus, footer a:hover {
 footer .social-icons li {
     margin-left: 10px;
     margin-right: 10px;
+    margin-top: 10px;
 }
 
 footer .social-icons li:first-child {
@@ -866,12 +867,59 @@ footer .secondary-footer-nav li:first-child {
 }
 
 /*---MEDIA QUERIES---*/
+@media screen and (max-width: 767px) {
+    footer ul.social-icons {
+        text-align: center;
+    }
+    footer ul.primary-footer-nav, footer ul.secondary-footer-nav {
+        width: 100%;
+    }
+    footer ul.primary-footer-nav li, footer ul.secondary-footer-nav li {
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+    }
+    footer address {
+        text-align: center;
+    }
+   /* footer {
+        ul {
+            .social-icons {
+                text-align: center;
+            }
+            .primary-footer-nav, .secondary-footer-nav {
+                width: 100%;
+            }
+            .primary-footer-nav, .secondary-footer-nav {
+                li{
+                    text-align: center;
+                    width: 100%;
+                    margin-left: 0;
+                }
+            }
+        }
+        address {
+            text-align: center;
+        }
+    }*/
+}
 @media screen and (min-width: 480px) {
     .carouselButtons {
         display: block;
     }
 }
-
+@media screen and (min-width: 768px) and (max-width: 884px) {
+    footer .primary-footer-nav li, footer .secondary-footer-nav li {
+        margin-left: 0;
+    }
+    /*footer {
+        .primary-footer-nav, .secondary-footer-nav {
+            li {
+                margin-left: 0;
+            }
+        } 
+    }*/
+}
 @media screen and (min-width: 767px) {
     .nav.nav-pills.home-search > li {
         margin-left: 25px;
