@@ -333,9 +333,10 @@ include('includes/functions.php');
             <div class="clearfix">
               <h3 class="media-heading collapsed" data-toggle="collapse" aria-expanded="false">Alice Ferguson Foundation<br><small>Accokeek, MD</small></h3>
             </div>
+            
             <div class="collapse content">
               <p>Thanks to the Alice Ferguson Foundation, there’s a special place in Maryland where students from throughout the region can dig in the dirt, take a hike, and catch an unbeatable glimpse of the Potomac. </p>
-              <p><a data-target="#" class="btn btn-primary" role="button">Learn More<span class="sr-only"> about Alice Ferguson Foundation</span></a> <a href="#" class="btn btn-secondary" role="button">Donate <span class="sr-only"> to Alice Ferguson Foundation</span></a></p>
+              <p><a href="#" class="btn btn-primary" role="button">Learn More<span class="sr-only"> about Alice Ferguson Foundation</span></a> <a href="#" class="btn btn-secondary" role="button">Donate <span class="sr-only"> to Alice Ferguson Foundation</span></a></p>
             </div>
           </div>
         </div>
