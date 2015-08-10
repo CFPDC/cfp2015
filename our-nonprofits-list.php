@@ -352,7 +352,8 @@ include('includes/functions.php');
             </div>
             <div class="collapse content">
               <p>Operating in the middle of a large, subsidized housing project in Ward 5 where students typically perform in the lowest quartile on standardized tests, Beacon House creates a culture of self-discipline and academic success for its children. </p>
-              <p><a href="#" class="btn btn-primary" role="button">Learn More<span class="sr-only"> about Beacon House</span></a> <a href="#" class="btn btn-secondary" role="button">Donate <span class="sr-only"> to Beacon House</span></a></p>
+              <p><a href="#" class="btn btn-primary" role="button">Learn More<span class="sr-only"> about Beacon House</span></a> 
+              <a href="#" class="btn btn-secondary" role="button">Donate <span class="sr-only"> to Beacon House</span></a></p>
             </div>
           </div>
         </div>
