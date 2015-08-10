@@ -5,6 +5,76 @@
 ***/
 
 /*** variables ***/
+var $root = $('html, body');
+var global = {
+	jumplink: function() {
+		$('.jumplink').on('click', function() {
+			var target = $(this).attr('data-target');
+			$(target).attr('tabindex', '0');
+			$root.animate({
+				scrollTop: $(target).offset().top
+			}, 'slow');
+			$(target).focus();
+			return false;
+		});
+
+	},
+	navMenu: function() {
+		$(".nav-primary-nav").accessibleMegaMenu({
+			/* prefix for generated unique id attributes, which are required 
+			   to indicate aria-owns, aria-controls and aria-labelledby */
+			uuidPrefix: "accessible-megamenu",
+
+			/* css class used to define the megamenu styling */
+			menuClass: "nav-menu",
+
+			/* css class for a top-level navigation item in the megamenu */
+			topNavItemClass: "nav-item",
+
+			/* css class for a megamenu panel */
+			panelClass: "sub-nav",
+
+			/* css class for a group of items within a megamenu panel */
+			panelGroupClass: "sub-nav-group",
+
+			/* css class for the hover state */
+			hoverClass: "hover",
+
+			/* css class for the focus state */
+			focusClass: "focus",
+
+			/* css class for the open state */
+			openClass: "open"
+		});
+	}
+};
+
+
+//list view page
+var listViewResults = {
+	nonprofitCollapse: function() {
+		$(".media").each(function(index) {
+			var npListing = $(this),
+				npHeader = npListing.find('.media-heading'),
+				npName = npHeader.clone() //clone the element
+				.children() //select all the children
+				.remove() //remove all the children
+				.end() //again go back to selected element
+				.text().trim().replace(/ /g, ''),
+				npContent = npListing.find('.content');
+			npContent.attr({
+				'id': '_' + npName
+			});
+			npHeader.attr({
+				'aria-controls': '_' + npName,
+				'data-target': '#_' + npName,
+				'tabindex': '0'
+			});
+
+		});
+	},
+
+};
 
 
 
@@ -122,6 +192,8 @@ $(function() {
 	//add unchecked to each results page filter section
 	$('.select-all').attr("data-type", "uncheck");
 
+
+
 });
 
 /*** page specific functions ***/
@@ -144,6 +216,11 @@ $(function() {
 
 
 	//search/results page
+
+	/* list view */
+	listViewResults.nonprofitCollapse();
+	global.jumplink();
+	global.navMenu();
 
 	//when user clicks the select all link, check the appropriate checkboxes and update text
 	$('.select-all').on('click', function() {

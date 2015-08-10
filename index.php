@@ -4,7 +4,6 @@ include('includes/functions.php');
 <?php get_template('header', 'Title of homepage'); ?>
 <div id="myCarousel" class="carousel slide clearfix" data-ride="carousel">
   <!-- Indicators -->
-  
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class=""></li>
     <li data-target="#myCarousel" data-slide-to="1" class="active"></li>

@@ -4,7 +4,7 @@ include('includes/functions.php');
 <?php get_template('header', 'Title of homepage'); ?>
 <div class="container-fluid">
   <div class="row">
-    <h1 class="col-xs-12">Our Nonprofits</h1>
+    <h1 class="col-xs-12 text-center">Our Nonprofits</h1>
   </div>
 </div>
 <div class="clearfix">
