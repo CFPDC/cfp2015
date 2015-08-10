@@ -335,7 +335,7 @@ include('includes/functions.php');
             </div>
             <div class="collapse content">
               <p>Thanks to the Alice Ferguson Foundation, there’s a special place in Maryland where students from throughout the region can dig in the dirt, take a hike, and catch an unbeatable glimpse of the Potomac. </p>
-              <p><a data-target="#" class="btn btn-primary" role="button">Learn More<span class="sr-only"> about Alice Ferguson Foundation</span></a> <a data-target="#" class="btn btn-secondary" role="button">Donate <span class="sr-only"> to Alice Ferguson Foundation</span></a></p>
+              <p><a data-target="#" class="btn btn-primary" role="button">Learn More<span class="sr-only"> about Alice Ferguson Foundation</span></a> <a href="#" class="btn btn-secondary" role="button">Donate <span class="sr-only"> to Alice Ferguson Foundation</span></a></p>
             </div>
           </div>
         </div>
@@ -352,7 +352,7 @@ include('includes/functions.php');
             </div>
             <div class="collapse content">
               <p>Operating in the middle of a large, subsidized housing project in Ward 5 where students typically perform in the lowest quartile on standardized tests, Beacon House creates a culture of self-discipline and academic success for its children. </p>
-              <p><a href="#" class="btn btn-primary" role="button">Learn More<span class="sr-only"> about Beacon House</span></a> <a data-target="#" class="btn btn-secondary" role="button">Donate <span class="sr-only"> to Beacon House</span></a></p>
+              <p><a href="#" class="btn btn-primary" role="button">Learn More<span class="sr-only"> about Beacon House</span></a> <a href="#" class="btn btn-secondary" role="button">Donate <span class="sr-only"> to Beacon House</span></a></p>
             </div>
           </div>
         </div>
@@ -370,7 +370,7 @@ include('includes/functions.php');
             </div>
             <div class="collapse content">
               <p>In today's economy, receiving a college education has never been more important. Since 1993, Capital Partners for Education has helped motivated, low-income high school and college students from the DC region overcome the academic and social barriers that prevent them from attending and succeeding in the colleges of their choice.</p>
-              <p><a href="#" class="btn btn-primary" role="button">Learn More<span class="sr-only"> about Capital Partners for Education</span></a> <a data-target="#" class="btn btn-secondary" role="button">Donate <span class="sr-only"> to Capital Partners for Education</span></a></p>
+              <p><a href="#" class="btn btn-primary" role="button">Learn More<span class="sr-only"> about Capital Partners for Education</span></a> <a href="#" class="btn btn-secondary" role="button">Donate <span class="sr-only"> to Capital Partners for Education</span></a></p>
             </div>
           </div>
         </div>
