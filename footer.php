@@ -55,6 +55,8 @@ $.fn.modal || document.write('<script src="assets/js/bootstrap.min.js"><\/script
 <script src="assets/js/jasny-bootstrap.min.js"></script>
 <script src="assets/js/underscore.js"></script>
 <script src="assets/js/jquery-accessibleMegaMenu.js"></script>
+<script src="assets/js/jquery.validate.min.js"></script>
+<script src="assets/js/additional-methods.min.js"></script>
 <script src="resources/js/assets.responsive.js"></script>
 <!-- end of library loading -->
 <!-- load JS -->

@@ -5,7 +5,6 @@ body {
     color: #292929;
     font-family: 'ProximaNovaRegular';
     font-size: 16px;
-    font-size: 1.6em;
     font-size: 1.6rem;
     position: relative;
     min-width: 303px;
@@ -20,13 +19,13 @@ h1 {
 h2 {
     font-family: 'LibreBaskervilleBold';
     font-size: 26px;
+    margin-bottom: 35px;
 }
 
 h3 {
     color: #143A50;
     font-family: 'ProximaNovaBold';
     font-size: 18px;
-    font-size: 1.125em;
     font-size: 1.8rem;
     margin-top: 75px;
     text-transform: uppercase;
@@ -34,15 +33,26 @@ h3 {
 
 h4 {
     font-family: 'ProximaNovaSemibold';
-    font-size: 16px;
-    font-size: 1.6rem;
+    /*16px*/
+    font-size: inherit;
+    margin: 0;
+}
+
+h4 > small {
+    font-family: 'ProximaNovaRegular';
+    font-style: italic;
+    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 h5 {}
 
 h6 {}
 
-p {}
+p {
+    font-size: 15px;
+    font-size: 1.5rem;
+}
 
 a {
     color: #477896;
@@ -50,6 +60,11 @@ a {
 
 a:focus, a:hover {
     text-decoration: underline;
+}
+
+a[href^="tel"], a[href^="tel"]:hover, a[href^="tel"]:focus {
+    color: inherit;
+    text-decoration: none;
 }
 
 h2 small {
@@ -60,6 +75,20 @@ h2 small {
 
 hr {
     border-top-color: #ddd;
+}
+
+ol li, ul li {
+    margin-bottom: 20px;
+}
+
+textarea, select, select.form-control, textarea.form-control {
+    border: 1px solid #ddd;
+    border-radius: 0;
+}
+
+input:focus, select:focus, textarea:focus {
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 
 .lead {
@@ -165,10 +194,77 @@ hr {
     color: #477896;
 }
 
-.phone-link:focus, .phone-link:hover {
-    text-decoration: none;
+.well {
+    background: none !important;
+    border: 2px solid #DDD;
+    padding: 15px;
+    border-radius: 0;
 }
 
+input, select {
+    border: 1px solid #ddd;
+}
+
+/*--- form errors ---*/
+
+div[class^=errors-] {
+    background: #fde9ea;
+    margin-bottom: 15px;
+    color: #931621;
+}
+
+div[class^=errors-] .error-heading {
+    background: #931621;
+    border-color: #931621;
+    color: #fff;
+    font-family: 'ProximaNovaBold';
+    font-size: 17px;
+    font-size: 1.7rem;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+div[class^=errors-] .error-heading .fa-exclamation {
+    font-size: 28px;
+    font-size: 2.8rem;
+}
+
+div[class^=errors-] .summary-list a {
+    color: #931621;
+    font-family: 'ProximaNovaSemibold';
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+form div.error {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+form div.error select, form input.error {
+    border: 1px solid #931621;
+}
+
+form label.error {
+    color: #931621;
+}
+
+form strong.error {
+    bottom: 0;
+    color: #931621;
+    display: block;
+    font-family: 'ProximaNovaSemibold';
+    font-size: 13px;
+    font-size: 1.3rem;
+    position: absolute;
+}
+
+.adobeBlank {
+    font-size: 0;
+}
+
+/*--- end of form errors ---*/
 /*---HEADER---*/
 .secondary-nav {
     margin-top: 12px;
@@ -550,7 +646,7 @@ hr {
 }
 
 /*---Search/Results page---*/
-.search-results {
+.secondary {
     margin-top: 50px;
 }
 
@@ -752,6 +848,91 @@ hr {
     width: 100%;
 }
 
+/*---CONTACT---*/
+.email-contact {
+    margin-top: 35px;
+}
+
+.email-contact li {
+    margin-bottom: 25px;
+}
+
+main address {
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+main address > span, address > a {
+    display: block;
+    font-size: 15px;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+/*---Request A Catalogue---*/
+.request-catalogue input, .request-catalogue label {
+    display: block;
+    width: 100%;
+}
+
+.request-catalogue input {
+    margin-bottom: 15px;
+    height: 35px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+}
+
+.request-catalogue select.form-control {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.request-catalogue .user-type select.form-control {
+    margin-right: 0;
+}
+
+.request-catalogue .zip-label {
+    clear: both;
+    display: block;
+}
+
+.request-catalogue .checkbox input, .request-catalogue .checkbox label {
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+
+.request-catalogue .checkbox label {
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+
+.request-catalogue .checkbox, .request-catalogue textarea {
+    margin-bottom: 15px;
+}
+
+.request-catalogue .comments {
+    text-align: left;
+}
+
+.request-catalogue input.btn {
+    font-size: inherit;
+    height: auto;
+    line-height: 1.42857143;
+    padding: 6px 12px;
+    margin-bottom: 0;
+}
+
+.request-catalogue .submit-button {
+    text-align: left;
+}
+
+.request-catalogue .verify input {
+    display: block;
+}
+
 /*---FOOTER---*/
 footer {
     background: #487896;
@@ -906,6 +1087,9 @@ footer .secondary-footer-nav li:first-child {
 }
 
 @media screen and (min-width: 768px) {
+    form strong.error {
+        right: 0;
+    }
     .mobile-nav {
         display: none !important;
     }
@@ -954,14 +1138,52 @@ footer .secondary-footer-nav li:first-child {
     .home-how-help-section .btn {
         width: auto;
     }
-    .search-results {
-        margin-top: 100px;
+    .secondary {
+        margin-top: 85px;
     }
     .search-results .caption .btn {
         display: block;
     }
     .search-results .caption .btn.btn-primary {
         margin-bottom: 10px;
+    }
+    .email-contact {
+        margin-left: 25px;
+    }
+    form.request-catalogue {
+        text-align: right;
+    }
+    .request-catalogue input, .request-catalogue label {
+        display: inline-block;
+        width: auto;
+    }
+    .request-catalogue label.organization-label {
+        font-size: 90%;
+    }
+    .request-catalogue .checkbox {
+        float: right;
+        width: 15.6em;
+    }
+    .request-catalogue .checkbox input, .request-catalogue .checkbox label {
+        float: left;
+        text-align: left;
+    }
+    .request-catalogue input.zip-code {
+        width: 4.95em;
+    }
+    .request-catalogue .zip-label {
+        display: inline-block;
+    }
+    .request-catalogue select.form-control {
+        float: none;
+        margin-right: 2.4em;
+        width: 75px;
+    }
+    .request-catalogue .user-type select.form-control {
+        width: auto;
+    }
+    .verify strong.error {
+        left: 0;
     }
 }
 
@@ -972,12 +1194,18 @@ footer .secondary-footer-nav li:first-child {
     .secondary-nav li {
         margin-left: 30px;
     }
+    .request-catalogue label.organization-label {
+        font-size: inherit;
+    }
 }
 
 @media screen and (min-width: 915px) {
     .carousel-caption {
         bottom: 20px;
         top: auto;
+    }
+    .request-catalogue select.form-control {
+        margin-right: 2.5em;
     }
 }
 

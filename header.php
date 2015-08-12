@@ -25,17 +25,17 @@
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
 		<link href="assets/css/jasny-bootstrap.min.css" rel="stylesheet">
 		<link href="resources/css/base.css" rel="stylesheet">
-		<script src="resources/libs/modernizr/modernizr.js"></script>
+		<script src="assets/js/modernizr.js"></script>
 	</head>
 	<a class="sr-only sr-only-focusable skip-navigation-link" href="#primary-nav-container">Skip to main navigation</a>
 	<body <?php page_id(); ?> >
 		<div class="mobile-nav navmenu navmenu-default navmenu-fixed-left offcanvas">
 			<ul>
 				<li>
-					<a href="contact-cfp.php" target="_self" title="CFP's contact information">Contact<span class="sr-only"> The Catalogue for Philanthropy</span></a>
+					<a href="contact.php" target="_self" title="CFP's contact information">Contact<span class="sr-only"> The Catalogue for Philanthropy</span></a>
 				</li>
 				<li>
-					<a href="request-a-catalogue.php" target="_self" title="Request a catalogue from CFP">Request a Catalog</a>
+					<a href="request-catalogue.php" target="_self" title="Request a catalogue from CFP">Request a Catalog</a>
 				</li>
 				<li>
 					<a href="account-sign-up.php" target="_self" title="Sign up for a CFP account">Sign Up</a>
@@ -120,10 +120,10 @@
 				<nav class="col-sm-7 secondary-nav">
 					<ul class="list-inline pull-right">
 						<li>
-							<a href="contact-cfp.php" target="_self" title="CFP's contact information">Contact<span class="sr-only"> The Catalogue for Philanthropy</span></a>
+							<a href="contact.php" target="_self" title="CFP's contact information">Contact<span class="sr-only"> The Catalogue for Philanthropy</span></a>
 						</li>
 						<li>
-							<a href="request-a-catalogue.php" target="_self" title="Request a catalogue from CFP">Request a Catalog</a>
+							<a href="request-catalogue.php" target="_self" title="Request a catalogue from CFP">Request a Catalog</a>
 						</li>
 						<li>
 							<a href="account-sign-up.php" target="_self" title="Sign up for a CFP account">Sign Up</a>
