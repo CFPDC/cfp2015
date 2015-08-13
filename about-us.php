@@ -14,7 +14,7 @@ include('includes/functions.php');
 <div class="row">
 	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
 		<ul style="list-style: none;">
-			<li><a href="about-us.php">About Us</a></li>
+			<li><a href="about-us.php" class="current">About Us</a></li>
 			<li><a href="cfp-team.php">Team</a></li>
 			<li><a href="cfp-reviewers.php">Our Reviewers</a></li>
 			<li><a href="sponsors.php">Sponsors</a></li>
@@ -30,14 +30,16 @@ include('includes/functions.php');
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-xs-12 col-sm-7 col-md-7">
+			<div class="col-sm-12 col-md-7">
 				<p>We do this by identifying the best community-based charities in Greater Washington and spreading the word through our annual Catalogue (distributed to more than 25,000 people!), website, social media, partnerships and events throughout the year.</p> </br>
 				<p>The Catalogue for Philanthropy's commitment to strengthening our community of nonprofits runs deep. From vetting charity applicants to creating educational and awareness-building programs, select the links below to learn how we do it all.</p>
 			</div>
-			<figure class="col-xs-12 col-sm-5 col-md-5">
-				<iframe src="https://player.vimeo.com/video/110540179" width="300" height="175" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			<div class="col-sm-12 col-md-5">
+			<figure class="embed-responsive embed-responsive-16by9">
+				<iframe src="https://player.vimeo.com/video/110540179" class="embed-responsive-item" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 				<figcaption class="cfp-video-caption"><a href="http://vimeo.com/110540179">Give Like a Local</a> from <a href="http://vimeo.com/user9318152">Catalogue for Philanthropy: GW</a> on <a href="https://vimeo.com">Vimeo</a>.</figcaption>
 			</figure>
+			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-12">

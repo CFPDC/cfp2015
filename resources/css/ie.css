@@ -20,3 +20,7 @@ form.request-catalogue {
 .lt-ie9 .catalogue-donate-button-container {
     float: right;
 }
+
+.lt-ie9 .search-results .sort-display-menu-container .sort-display-menu {
+    margin-top: 50px;
+}

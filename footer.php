@@ -11,7 +11,7 @@
 			</ul>
 		</div>
 		<nav class="col-sm-7 col-xs-12 col-md-8">
-			<ul class="list-inline pull-right primary-footer-nav">
+			<ul class="list-inline primary-footer-nav">
 				<li>
 					<a href="nonprofits/Catalogue-for-Philanthropy-Greater-Washington">Donate<span class="sr-only"> to The Catalogue for Philanthropy</span></a>
 				</li>
@@ -25,7 +25,7 @@
 					<a href="sponsors.php">Sponsors<span class="sr-only"> of The Catalogue for Philanthropy</span></a>
 				</li>
 			</ul>
-			<ul class="list-inline pull-right secondary-footer-nav col-sm-offset-5">
+			<ul class="list-inline secondary-footer-nav col-sm-offset-5">
 				<li>
 					<a href="apply.php">Apply<span class="sr-only"> to The Catalogue for Philanthropy</span></a>
 				</li>
@@ -40,7 +40,7 @@
 		
 		<address class="col-xs-12">
 <span class="name">&copy; 2014 CATALOGUE FOR PHILANTHROPY: GREATER WASHINGTON</span><br>
-		<span class="street">1899 L Street NW Suite 900</span>, <span class="city-state">Washington DC 20036</span>, <a class="phone-link" href="tel:202-955-6538">202-955-6538</a></address>
+		<span class="street">1899 L Street NW Suite 900</span>, <span class="city-state">Washington DC 20036</span>, <a href="tel:202-955-6538">202-955-6538</a></address>
 	</section>
 </footer>
 <!-- loading libraries with local fallbacks -->

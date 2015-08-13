@@ -323,7 +323,7 @@ include('includes/functions.php');
       </ul>
       <div class="col-xs-12">
         <h2 class="title-section" id="letter-a">A</h2>
-        <div class="media">
+        <div class="media listing">
           <div class="media-left">
             <a data-target="#" title="link to Alice Ferguson Foundation details">
               <img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40167">
@@ -341,7 +341,7 @@ include('includes/functions.php');
           </div>
         </div>
         <h2 class="title-section" id="letter-b">B</h2>
-        <div class="media">
+        <div class="media listing">
           <div class="media-left">
             <a href="#" title="link to Beacon House details">
               <img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40203">
@@ -360,7 +360,7 @@ include('includes/functions.php');
         </div>
 
         <h2 class="title-section" id="letter-c">C</h2>
-        <div class="media">
+        <div class="media listing">
           <div class="media-left">
             <a href="#" title="link to Beacon House details">
               <img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40225">

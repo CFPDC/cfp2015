@@ -97,7 +97,7 @@
 					</ul>
 				</li>
 				<li>
-					Getting Involved
+					Get Involved
 					<ul>
 						<li>
 							<a href="all-events.php" target="_self" title="View events with our nonprofits">Events</a>
@@ -204,7 +204,7 @@
 							</div>
 						</li>
 						<li class="nav-item">
-							<a role="button" href="javascript:void(0);">Getting Involved</a>
+							<a role="button" href="javascript:void(0);">Get Involved</a>
 							<div class="sub-nav">
 								<ul class="sub-nav-group">
 									<li>
