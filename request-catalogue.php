@@ -13,7 +13,7 @@ include('includes/functions.php');
 </div>
 <main class="container-fluid search-results secondary" role="main">
   <div class="row">
-    <article class="col-md-10 col-lg-8">
+    <section class="col-md-10 col-lg-8">
       <h2>Catalogue Request Form</h2>
       <p>
         Thank you for your interest! There are several ways you can access the Catalogue for Philanthropy.
@@ -85,6 +85,7 @@ include('includes/functions.php');
                 <input type="text" id="city" maxlength="40" name="city" aria-required="true">
               </div>
               <div>
+              <div>
                 <label for="state">State</label>
                 <select class="form-control" id="state" name="state" aria-required="true">
                   <option value="" selected="">Select</option>
@@ -147,6 +148,7 @@ include('includes/functions.php');
                   <option value="WY">Wyoming</option>
                   </optgroup>
                 </select>
+                </div>
                 <label class="zip-label" for="zip">Zip</label>
                 <input type="text" class="zip-code" id="zip" maxlength="5" name="zip" aria-required="true">
               </div>
@@ -190,7 +192,7 @@ include('includes/functions.php');
           </div>
         </fieldset>
       </form>
-    </article>
+    </section>
   </div>
 </main>
 <?php get_template('footer'); ?>

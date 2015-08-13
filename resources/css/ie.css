@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+.ie-caret {
+    background: url("http://eve.smith-net.org.uk/resources/images/caret_large.png") no-repeat scroll transparent 0 0;
+    height: 10px;
+    position: absolute;
+    right: -5px;
+    top: 33%;
+    width: 13px;
+}
+
+.ie-caret:hover, .ie-caret:focus {
+    text-dcoration: none;
+}
+
+form.request-catalogue {
+    float: left;
+}
