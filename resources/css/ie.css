@@ -16,3 +16,7 @@
 form.request-catalogue {
     float: left;
 }
+
+.lt-ie9 .catalogue-donate-button-container {
+    float: right;
+}
