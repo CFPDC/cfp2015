@@ -78,10 +78,10 @@
 
 @font-face {
     font-family: 'ProximaNovaRegularItalic';
-    src: url("../fonts/ProximaNova-RegIt-webfont.eot");
-    src: url("../fonts/ProximaNova-RegIt-webfont.svg#ProximaNovaRegularItalic") format("svg"), url("../fonts/ProximaNova-RegIt-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-RegIt-webfont.woff") format("woff");
-    font-weight: 400;
-    font-style: italic;
+    src: url("../fonts/proximanova-regit-webfont.eot");
+    src: url("../fonts/proximanova-regit-webfont.svg#proxima_novaregular_italic") format("svg"), url("../fonts/proximanova-regit-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-regit-webfont.woff2") format("woff2"), url("../fonts/proximanova-regit-webfont.woff") format("woff"), url("../fonts/proximanova-regit-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 

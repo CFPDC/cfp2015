@@ -64,7 +64,7 @@ var global = {
 //list view page
 var listViewResults = {
 	nonprofitCollapse: function() {
-		$(".media").each(function(index) {
+		$(".listing").each(function(index) {
 			var npListing = $(this),
 				npHeader = npListing.find('.media-heading'),
 				npName = npHeader.clone() //clone the element
@@ -466,7 +466,8 @@ $('.request-catalogue').validate({
 	//Removed the error summary upon successful completion of form
 	submitHandler: function(form) {
 		$('.errors-' + $(this.currentForm).attr('class')).remove();
-		return false;
+
+		$(form).submit();
 	}
 });
 

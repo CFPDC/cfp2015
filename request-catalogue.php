@@ -37,7 +37,7 @@ include('includes/functions.php');
       <p>
         Please fill the following form in order to receive a catalogue by mail and to join our email list. We respect your privacy. Your information will never be shared.
       </p>
-      <form class="request-catalogue form-horizontal clearfix" action="#" method="post">
+      <form class="request-catalogue form-horizontal clearfix" action="/cfpdc/print_cat_request_dc.php" method="post">
         <fieldset>
           <legend class="sr-only">Fill and submit this form to receive the latest Catalogue for Philanthropy catalogue by mail.</legend>
           <div class="row">
