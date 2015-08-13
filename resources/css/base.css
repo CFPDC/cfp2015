@@ -236,7 +236,7 @@ div[class^=errors-] .summary-list a {
     font-size: 1.6rem;
 }
 
-form div.error {
+form div.error, form div.error > div {
     position: relative;
     padding-bottom: 10px;
     margin-bottom: 10px;
@@ -1211,6 +1211,15 @@ footer .secondary-footer-nav li:first-child {
     }
     .verify strong.error {
         left: 0;
+    }
+    form div.error > div {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+    }
+    form div.error > div strong.error {
+        bottom: -10px;
+        right: -119px;
     }
 }
 
