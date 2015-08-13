@@ -12,7 +12,7 @@ include('includes/functions.php');
 </div>
 <main class="container-fluid search-results secondary" role="main">
 <div class="row">
-  <article class="col-sm-8">
+  <section class="col-sm-8">
     <h2>Catalogue for Philanthropy: Greater Washington</h2>
     <p>If you are a donor wishing to make a donation by phone, looking for information about donating appreciated stock, or wanting help of any kind, please call our office at <a href="tel:202-955-6538" title="call The Catalogue for Philanthropy's main office">202-955-6538</a>. We are here and happy to help you.</p>
     <p>Interested in viewing the Catalogue online, or receiving a copy by mail? Please use our <a href="request-catalogue.php" title="Request The Catalogue for Philanthropy by mail">Request Form</a>.</p>
@@ -61,7 +61,7 @@ include('includes/functions.php');
       </li>
       
     </ul>
-  </article>
+  </section>
   <div class="col-sm-4 col-lg-3 col-lg-offset-1">
     <h3>Contact<span class="sr-only"> The Catalogue for Philanthropy</span></h3>
     <div class="well">

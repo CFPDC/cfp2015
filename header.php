@@ -27,8 +27,13 @@
 		<link href="resources/css/base.css" rel="stylesheet">
 		<script src="assets/js/modernizr.js"></script>
 	</head>
-	<a class="sr-only sr-only-focusable skip-navigation-link" href="#primary-nav-container">Skip to main navigation</a>
 	<body <?php page_id(); ?> >
+		<a class="sr-only sr-only-focusable skip-navigation-link" href="#primary-nav-container">Skip to main navigation</a>
+		<noscript>
+		<p class="js-off-message">
+		The page could not be loaded. Assets.cms.gov currently does not fully support browsers with &quot;JavaScript&quot; disabled. Please note that if you choose to continue without enabling &quot;JavaScript&quot; certain functionalities on this website may not be available.
+		</p>
+		</noscript>
 		<div class="mobile-nav navmenu navmenu-default navmenu-fixed-left offcanvas">
 			<ul>
 				<li>
@@ -214,8 +219,8 @@
 								</ul>
 							</div>
 						</li>
-						<li class="nav-item">
-							<a href="javascript:void(0);">Blog</a>
+						<li class="nav-item last">
+							<a href="blog.php">Blog</a>
 						</li>
 					</ul>
 				</nav>

@@ -3,7 +3,15 @@
 2. global functions for each page
 3. page specific functions
 ***/
+//ie8 test
 
+Modernizr.load({
+	test: Modernizr.textshadow,
+	nope: ['resources/css/ie.css', 'assets/js/html5shiv.js', 'assets/js/respond.js', 'resources/js/ie.js']
+});
+if (($('.lt-ie9').length > 0) || ($('.ie9').length > 0)) {
+
+}
 /*** variables ***/
 var $root = $('html, body');
 var global = {
@@ -20,6 +28,8 @@ var global = {
 
 	},
 	navMenu: function() {
+		//add empty sub nav div for alignment purposes. This is needed if there is no dropdown.
+		$('.nav-item.last').append('<div class="sub-nav hidden"></div>');
 		$(".nav-primary-nav").accessibleMegaMenu({
 			/* prefix for generated unique id attributes, which are required 
 			   to indicate aria-owns, aria-controls and aria-labelledby */
@@ -46,6 +56,7 @@ var global = {
 			/* css class for the open state */
 			openClass: "open"
 		});
+
 	}
 };
 
