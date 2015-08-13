@@ -933,6 +933,33 @@ main address > span, address > a {
     display: block;
 }
 
+/*Who We Are pages*/
+.about-list li:before {
+    content: "-";
+    position: relative;
+    left: -5px;
+}
+.about-list li {
+    text-indent: -5px;
+}
+.about-list {
+    list-style: none;
+    padding-top: 20px;
+}
+.who-we-are-nav li a {
+    text-decoration: none;
+}
+.who-we-are-nav li a:hover:after, .who-we-are-nav li a:focus:after, .who-we-are-nav li a.current:after {
+    content: "\f105";
+    font-family: 'FontAwesome';
+    margin-left: 5px;
+}
+.cfp-video-caption {
+    width: 300px;
+}
+.media-object {
+    width: 100px;
+}
 /*---FOOTER---*/
 footer {
     background: #487896;
