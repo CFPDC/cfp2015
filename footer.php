@@ -10,7 +10,7 @@
 				<li><a class="fa fa-linkedin fa-3x" href="#"><span class="sr-only">Visit CFP on Linkedin</span></a></li>
 			</ul>
 		</div>
-		<nav class="col-sm-7 col-xs-12 col-md-8">
+		<nav class="col-sm-7 col-xs-12 col-md-8 text-right">
 			<ul class="list-inline primary-footer-nav">
 				<li>
 					<a href="nonprofits/Catalogue-for-Philanthropy-Greater-Washington">Donate<span class="sr-only"> to The Catalogue for Philanthropy</span></a>
