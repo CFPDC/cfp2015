@@ -1351,10 +1351,6 @@ footer .secondary-footer-nav li:first-child {
     .primary-nav .sub-nav ul li a {
         font-size: 14px;
     }
-    .secondary-footer-nav {
-        text-align: right;
-        padding-right: 0;
-    }
 }
 
 @media screen and (min-width: 1225px) {
