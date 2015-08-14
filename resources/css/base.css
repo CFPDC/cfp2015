@@ -39,8 +39,7 @@ h4 {
 }
 
 h4 > small {
-    font-family: 'ProximaNovaRegular';
-    font-style: italic;
+    font-family: 'ProximaNovaRegularItalic';
     font-size: 14px;
     font-size: 1.4rem;
 }
