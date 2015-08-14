@@ -18,8 +18,8 @@
 		<meta name="robots" content="index, follow">
 		<meta name="revisit-after" content="15 days">
 		<title>Catalogue for Philanthropy</title>
-		<link href="resources/css/proxima-nova.css" rel="stylesheet">
-		<link href="resources/css/libre-baskerville.css" rel="stylesheet">
+		<link href="assets/css/proxima-nova.css" rel="stylesheet">
+		<link href="assets/css/libre-baskerville.css" rel="stylesheet">
 		<link href="assets/css/font-awesome.min.css" rel="stylesheet">
 		<link href="resources/css/docs.css" rel="stylesheet">
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet">

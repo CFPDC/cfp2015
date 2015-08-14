@@ -39,8 +39,7 @@ h4 {
 }
 
 h4 > small {
-    font-family: 'ProximaNovaRegular';
-    font-style: italic;
+    font-family: 'ProximaNovaRegularItalic';
     font-size: 14px;
     font-size: 1.4rem;
 }
@@ -666,18 +665,18 @@ form strong.error {
     position: relative;
 }
 
-.search-results aside .category-toggle[aria-expanded="true"]:after, .search-results aside .category-toggle[aria-expanded="false"]:after {
+.search-results aside .category-toggle[aria-expanded="true"]:before, .search-results aside .category-toggle[aria-expanded="false"]:before {
     font-family: 'FontAwesome';
     position: absolute;
     right: -20px;
     top: 0;
 }
 
-.search-results aside .category-toggle[aria-expanded="false"]:after {
+.search-results aside .category-toggle[aria-expanded="false"]:before {
     content: '\f196';
 }
 
-.search-results aside .category-toggle[aria-expanded="true"]:after {
+.search-results aside .category-toggle[aria-expanded="true"]:before {
     content: '\f147';
 }
 
@@ -704,18 +703,18 @@ form strong.error {
     position: relative;
 }
 
-.search-results aside .collaspingSection .state-collapse[aria-expanded="true"]:after, .search-results aside .collaspingSection .state-collapse[aria-expanded="false"]:after {
+.search-results aside .collaspingSection .state-collapse[aria-expanded="true"]:before, .search-results aside .collaspingSection .state-collapse[aria-expanded="false"]:before {
     font-family: 'FontAwesome';
     position: absolute;
     right: -5px;
     top: 5px;
 }
 
-.search-results aside .collaspingSection .state-collapse[aria-expanded="false"]:after {
+.search-results aside .collaspingSection .state-collapse[aria-expanded="false"]:before {
     content: '\f054';
 }
 
-.search-results aside .collaspingSection .state-collapse[aria-expanded="true"]:after {
+.search-results aside .collaspingSection .state-collapse[aria-expanded="true"]:before {
     content: '\f078';
 }
 
@@ -761,18 +760,18 @@ form strong.error {
     position: relative;
 }
 
-.search-results .sort-display-menu-container .sort-display-menu .sort-toggle.collapsed:after, .search-results .sort-display-menu-container .sort-display-menu .sort-toggle:after {
+.search-results .sort-display-menu-container .sort-display-menu .sort-toggle.collapsed:before, .search-results .sort-display-menu-container .sort-display-menu .sort-toggle:before {
     font-family: 'FontAwesome';
     position: absolute;
     right: 0;
     top: 0;
 }
 
-.search-results .sort-display-menu-container .sort-display-menu .sort-toggle:after {
+.search-results .sort-display-menu-container .sort-display-menu .sort-toggle:before {
     content: '\f0d7';
 }
 
-.search-results .sort-display-menu-container .sort-display-menu .sort-toggle.collapsed:after {
+.search-results .sort-display-menu-container .sort-display-menu .sort-toggle.collapsed:before {
     content: '\f0da';
 }
 
@@ -829,18 +828,18 @@ form strong.error {
     position: relative;
 }
 
-.search-list-view .media .media-body .media-heading.collapsed:after, .search-list-view .media .media-body .media-heading:after {
+.search-list-view .media .media-body .media-heading.collapsed:before, .search-list-view .media .media-body .media-heading:before {
     font-family: 'FontAwesome';
     position: absolute;
     right: -20px;
     top: 0;
 }
 
-.search-list-view .media .media-body .media-heading:after {
+.search-list-view .media .media-body .media-heading:before {
     content: '\f0d7';
 }
 
-.search-list-view .media .media-body .media-heading.collapsed:after {
+.search-list-view .media .media-body .media-heading.collapsed:before {
     content: '\f0da';
 }
 
@@ -951,12 +950,20 @@ main address > span, address > a {
 
 .who-we-are-nav li a {
     text-decoration: none;
+    position: relative;
 }
 
-.who-we-are-nav li a:hover:after, .who-we-are-nav li a:focus:after, .who-we-are-nav li a.current:after {
+.who-we-are-nav li a.current {
+    font-family: 'ProximaNovaSemibold';
+    font-size: 110%;
+}
+
+.who-we-are-nav li a.current:before, .who-we-are-nav li a:hover:before, .who-we-are-nav li a:focus:before, .who-we-are-nav li a.current:before {
     content: "\f105";
     font-family: 'FontAwesome';
-    margin-left: 5px;
+    right: -15px;
+    position: absolute;
+    top: -1px;
 }
 
 .cfp-video-caption {
@@ -966,9 +973,11 @@ main address > span, address > a {
 .media-object {
     width: 100px;
 }
+
 .sponsors-heading3 {
     margin-top: 5px;
 }
+
 /*---FOOTER---*/
 footer {
     background: #487896;
@@ -1341,6 +1350,10 @@ footer .secondary-footer-nav li:first-child {
     }
     .primary-nav .sub-nav ul li a {
         font-size: 14px;
+    }
+    .secondary-footer-nav {
+        text-align: right;
+        padding-right: 0;
     }
 }
 
