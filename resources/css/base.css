@@ -997,6 +997,29 @@ footer a:focus, footer a:hover {
     text-decoration: underline;
 }
 
+footer address, footer .social-icons, footer .primary-footer-nav li, footer .secondary-footer-nav li {
+    text-align: center;
+}
+
+footer .primary-footer-nav li, footer .secondary-footer-nav li {
+    display: block;
+}
+
+footer .primary-footer-nav a, footer .secondary-footer-nav a {
+    font-family: 'ProximaNovaSemibold';
+    font-size: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+footer address a[href^="tel"], footer address a[href^="tel"]:hover, footer address a[href^="tel"]:focus {
+    display: inline-block;
+}
+
+footer .social-icons {
+    margin: 30px 0 25px -5px;
+}
+
 footer .social-icons li {
     margin-left: 10px;
     margin-right: 10px;
@@ -1015,27 +1038,6 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     color: #292929;
     background: #fff;
     text-decoration: none;
-}
-
-footer .primary-footer-nav li {
-    margin-left: 25px;
-}
-
-footer .primary-footer-nav li:first-child {
-    margin-left: 0;
-}
-
-footer .primary-footer-nav a {
-    font-family: 'ProximaNovaSemibold';
-    text-transform: uppercase;
-}
-
-footer .secondary-footer-nav li {
-    margin-left: 30px;
-}
-
-footer .secondary-footer-nav li:first-child {
-    margin-left: 0;
 }
 
 /*--- HOME PAGE ---*/
@@ -1068,32 +1070,9 @@ footer .secondary-footer-nav li:first-child {
 }
 
 /*---MEDIA QUERIES---*/
-@media screen and (max-width: 767px) {
-    footer ul.social-icons {
-        text-align: center;
-    }
-    footer ul.primary-footer-nav, footer ul.secondary-footer-nav {
-        width: 100%;
-    }
-    footer ul.primary-footer-nav li, footer ul.secondary-footer-nav li {
-        text-align: center;
-        width: 100%;
-        margin-left: 0;
-    }
-    footer address {
-        text-align: center;
-    }
-}
-
 @media screen and (min-width: 480px) {
     .carouselButtons {
         display: block;
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 884px) {
-    footer .primary-footer-nav li, footer .secondary-footer-nav li {
-        margin-left: 0;
     }
 }
 
@@ -1128,6 +1107,37 @@ footer .secondary-footer-nav li:first-child {
     }
     .home-how-help-section .btn {
         font-size: 16px;
+        font-size: 1.6rem;
+    }
+    footer .social-icons, footer address, footer .primary-footer-nav li, footer .secondary-footer-nav li {
+        text-align: left;
+    }
+    footer .primary-footer-nav {
+        margin-bottom: 0;
+    }
+    footer .primary-footer-nav li {
+        margin-bottom: 15px;
+    }
+    footer .secondary-footer-nav li {
+        margin-left: 8px;
+    }
+    footer .primary-footer-nav li, footer .secondary-footer-nav li {
+        display: inline-block;
+        width: auto;
+    }
+    footer .primary-footer-nav a {
+        font-size: inherit;
+    }
+    footer .secondary-footer-nav a {
+        font-family: inherit;
+        font-size: inherit;
+        text-transform: none;
+    }
+    footer .primary-footer-nav li:first-child, footer .secondary-footer-nav li:first-child {
+        margin-left: 0;
+    }
+    footer .social-icons {
+        margin: 0 0 0 -5px;
     }
 }
 
@@ -1253,6 +1263,12 @@ footer .secondary-footer-nav li:first-child {
     }
     .request-catalogue label.organization-label {
         font-size: inherit;
+    }
+    footer .secondary-footer-nav li {
+        margin-left: 33px;
+    }
+    footer .primary-footer-nav li {
+        margin-left: 25px;
     }
 }
 
