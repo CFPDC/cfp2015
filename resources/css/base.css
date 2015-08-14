@@ -1230,7 +1230,7 @@ footer .secondary-footer-nav li:first-child {
     .verify strong.error {
         left: 0;
     }
-    .request-catalogue div > div {
+    .request-catalogue div > div.two-wide {
         display: inline-block;
     }
     form div.error > div {
