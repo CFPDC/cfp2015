@@ -62,18 +62,15 @@ a:focus, a:hover {
     text-decoration: underline;
 }
 
-.img-responsive {
-    width: 100%;
-}
-
 a[href^="tel"], a[href^="tel"]:hover, a[href^="tel"]:focus {
     color: inherit;
     text-decoration: none;
 }
 
 h2 small {
-    font-family: 'ProximaNovaRegularItalic';
+    font-family: 'ProximaNovaRegular';
     font-size: 16px;
+    font-style: italic;
 }
 
 hr {
@@ -427,32 +424,15 @@ form strong.error {
     padding: 0;
 }
 
-.navbar-toggle:hover, .navbar-toggle:focus {
-    color: #487896;
-    outline: 5px auto -webkit-focus-ring-color;
-}
-
 .mobile-nav ul {
     padding-left: 0;
 }
 
 .mobile-nav li {
     list-style: none;
-    margin-bottom: 0;
 }
 
-.mobile-nav > ul > li {
-    font-family: 'ProximaNovaSemibold';
-    color: white;
-    font-size: 17px;
-    font-size: 1.7rem;
-}
-
-.mobile-nav li a {
-    font-family: 'ProximaNovaRegular';
-    font-size: 1.5px;
-    font-size: 1.5rem;
-}
+.mobile-nav li a {}
 
 .mobile-nav {
     background: #3b3b3b;
@@ -616,10 +596,6 @@ form strong.error {
     background: #000;
 }
 
-.subcategories .cap a:focus {
-    color: #FDAF17;
-}
-
 .subcategories .cap h3.multi-line a {
     margin-top: 0;
     margin-bottom: 0;
@@ -628,8 +604,7 @@ form strong.error {
 }
 
 .home-how-help-section .btn {
-    font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 19px;
     margin-top: 15px;
     width: 100%;
 }
@@ -978,15 +953,10 @@ main address > span, address > a {
     text-decoration: none;
 }
 
-.who-we-are-nav li a.current {
-    font-family: 'ProximaNovaSemibold';
-}
-
-.who-we-are-nav li a.current:after, .who-we-are-nav li a:hover:after, .who-we-are-nav li a:focus:after, .who-we-are-nav li a.current:after {
+.who-we-are-nav li a:hover:after, .who-we-are-nav li a:focus:after, .who-we-are-nav li a.current:after {
     content: "\f105";
     font-family: 'FontAwesome';
     margin-left: 5px;
-    position: absolute;
 }
 
 .cfp-video-caption {
@@ -996,26 +966,9 @@ main address > span, address > a {
 .media-object {
     width: 100px;
 }
-
-.team-member {
-    margin-top: 50px;
+.sponsors-heading3 {
+    margin-top: 5px;
 }
-
-.team-member h2 {
-    margin-bottom: 25px;
-    margin-top: 0;
-}
-
-.team-member h2 > small {
-    display: block;
-    marging-top: 5px;
-}
-
-.team-member h2 > small a {
-    display: block;
-    marging-top: 3px;
-}
-
 /*---FOOTER---*/
 footer {
     background: #487896;
@@ -1033,10 +986,6 @@ footer a {
 footer a:focus, footer a:hover {
     color: #fff;
     text-decoration: underline;
-}
-
-footer .social-icons, footer address {
-    text-align: center;
 }
 
 footer .social-icons li {
@@ -1057,16 +1006,6 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     color: #292929;
     background: #fff;
     text-decoration: none;
-}
-
-footer .primary-footer-nav, footer .secondary-footer-nav {
-    display: block;
-}
-
-footer ul.primary-footer-nav li, footer ul.secondary-footer-nav li {
-    text-align: center;
-    width: 100%;
-    margin-left: 0;
 }
 
 footer .primary-footer-nav li {
@@ -1120,13 +1059,32 @@ footer .secondary-footer-nav li:first-child {
 }
 
 /*---MEDIA QUERIES---*/
+@media screen and (max-width: 767px) {
+    footer ul.social-icons {
+        text-align: center;
+    }
+    footer ul.primary-footer-nav, footer ul.secondary-footer-nav {
+        width: 100%;
+    }
+    footer ul.primary-footer-nav li, footer ul.secondary-footer-nav li {
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+    }
+    footer address {
+        text-align: center;
+    }
+}
+
 @media screen and (min-width: 480px) {
     .carouselButtons {
         display: block;
     }
-    .home-how-help-section .btn {
-        font-size: 19px;
-        font-size: 1.9rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 884px) {
+    footer .primary-footer-nav li, footer .secondary-footer-nav li {
+        margin-left: 0;
     }
 }
 
@@ -1161,26 +1119,6 @@ footer .secondary-footer-nav li:first-child {
     }
     .home-how-help-section .btn {
         font-size: 16px;
-    }
-    footer .social-icons, footer address, footer ul.primary-footer-nav li, footer ul.secondary-footer-nav li {
-        text-align: left;
-    }
-    footer address a {
-        display: inline-block;
-    }
-    footer ul.primary-footer-nav {
-        margin-bottom: 0;
-    }
-    footer ul.primary-footer-nav, footer ul.secondary-footer-nav {
-        display: inherit;
-        float: right;
-    }
-    footer ul.primary-footer-nav li, footer ul.secondary-footer-nav li {
-        margin-bottom: 15px;
-        width: auto;
-    }
-    footer ul.secondary-footer-nav li {
-        margin-left: 8px;
     }
 }
 
@@ -1249,7 +1187,6 @@ footer .secondary-footer-nav li:first-child {
         margin-left: 25px;
     }
     form.request-catalogue {
-        float: left;
         text-align: right;
     }
     .request-catalogue input, .request-catalogue label {
@@ -1287,9 +1224,6 @@ footer .secondary-footer-nav li:first-child {
     .request-catalogue div > div {
         display: inline-block;
     }
-    .request-catalogue div > .comments, .request-catalogue div > .verify, .request-catalogue div > .submit-button {
-        display: block;
-    }
     form div.error > div {
         display: inline-block;
         padding: 0;
@@ -1310,12 +1244,6 @@ footer .secondary-footer-nav li:first-child {
     }
     .request-catalogue label.organization-label {
         font-size: inherit;
-    }
-    footer ul.primary-footer-nav li {
-        margin-left: 13px;
-    }
-    footer ul.secondary-footer-nav li {
-        margin-left: 20px;
     }
 }
 
