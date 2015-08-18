@@ -34,7 +34,7 @@ include('includes/functions.php');
 					<p class="lead">In the News:</p>
 					<div class="row">
 						<div class="col-sm-12">
-							<iframe class="longlist" style="padding:0px;height:4000px" src="/resources/public/more_info.php"></iframe>
+							<iframe class="longlist" style="padding:0px;height:4000px" src="more_info.php"></iframe>
 						</div>
 					</div>
 				</div>
