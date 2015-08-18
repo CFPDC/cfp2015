@@ -43,7 +43,7 @@
 					<a href="request-catalogue.php" target="_self" title="Request a catalogue from CFP">Request a Catalog</a>
 				</li>
 				<li>
-					<a href="account-sign-up.php" target="_self" title="Sign up for a CFP account">Sign Up</a>
+					<a href="sign-up.php" target="_self" title="Sign up for a CFP account">Sign Up</a>
 				</li>
 				<li>
 					<a href="account-login.php" target="_self" title="Login to your CFP account">Log In<span class="sr-only"> to your Catalogue for Philanthropy account</span></a>
@@ -131,7 +131,7 @@
 							<a href="request-catalogue.php" target="_self" title="Request a catalogue from CFP">Request a Catalog</a>
 						</li>
 						<li>
-							<a href="account-sign-up.php" target="_self" title="Sign up for a CFP account">Sign Up</a>
+							<a href="sign-up.php" target="_self" title="Sign up for a CFP account">Sign Up</a>
 						</li>
 						<li>
 							<a href="account-login.php" target="_self" title="Login to your CFP account">Log In<span class="sr-only"> to your Catalogue for Philanthropy account</span></a>
