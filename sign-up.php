@@ -4,54 +4,39 @@ include('includes/functions.php');
 <?php get_template('header', 'Title of homepage'); ?>
 <div class="container-fluid">
   <div class="row">
-    <h1 class="col-xs-12 text-center">Request a Catalogue</h1>
+    <h1 class="col-xs-12 text-center">Create An Account</h1>
   </div>
 </div>
 <div class="clearfix">
   <img src="http://lorempixel.com/1200/500/" style="width:100%" alt="First slide">
 </div>
-<main class="container-fluid search-results secondary" role="main">
+<main class="container-fluid secondary" role="main">
 <div class="row">
   <section class="col-md-10 col-lg-8">
-    <h2>Catalogue Request Form</h2>
+    <h2>Sign Up<span class="sr-only"> for a Catalogue for Philanthropy account</span></h2>
     <p>
-    Thank you for your interest! There are several ways you can access the Catalogue for Philanthropy.
+    When you sign up, you gain access to a wide range of benefits found in the <a href="how-to-give.php" title="The Catalogue for Philanthropy How to Give page">How to Give</a> section of our website.</p>
     </p>
-    <ol>
-      <li>
-        View the Catalogue online: Choose our interactive, digital edition of the Catalogue if you like flipping the pages on your desktop or mobile device. (You can also choose a pdf if you prefer.) Download the Catalogue as a PDF!
-      </li>
-      <li>
-        Browse our charities: Explore our charities by name, city, populations served, and even by affiliations such as Combined Federal Campaign or United Way members. Click here.<br>
-        <small>
-        <span>
-        Note:
-        </span>
-        2014-2015 Catalogue charities will be live on our website beginning November 1st.</small>
-      </li>
-      <li>
-        Receive a Catalogue by mail: Fill out the form below to receive a copy. You may also  join our mailing list with the form below in order to receive an updated version each year. Our newest edition is released each year in early November.
-      </li>
-    </ol>
-    <p>
-    Please fill the following form in order to receive a catalogue by mail and to join our email list. We respect your privacy. Your information will never be shared.
-    </p>
-    <form class="two-column-form request-catalogue form-horizontal col-xs-12" action="/cfpdc/print_cat_request_dc.php" method="post">
+    <form class="two-column-form sign-up form-horizontal col-xs-12" action="/cfpdc/print_cat_request_dc.php" method="post">
       <fieldset>
         <legend class="sr-only">Fill and submit this form to receive the latest Catalogue for Philanthropy catalogue by mail.</legend>
         <div class="row">
           <div class="col-sm-6">
             <div>
-              <label for="fname">Your First Name</label>
+              <label for="fname">Your First Name<small> (required)</small></label>
               <input type="text" class="required" id="fname" maxlength="40" name="fname" aria-required="true">
             </div>
             <div>
-              <label for="lname">Your Last Name</label>
+              <label for="lname">Your Last Name<small> (required)</small></label>
               <input type="text" id="lname" maxlength="40" name="lname" aria-required="true">
             </div>
             <div>
-              <label for="Organization" class="organization-label">Your Organization</label>
-              <input id="Organization" name="Organization" type="text">
+              <label for="password" class="password-label">Password<small> (required)</small></label>
+              <input id="password" name="password" type="text">
+            </div>
+            <div>
+              <label for="email">Email<small> (required)</small></label>
+              <input type="email" id="email" name="email" aria-required="true">
             </div>
             <div class="user-type">
               <label for="who">You are a:</label>
@@ -66,13 +51,14 @@ include('includes/functions.php');
             </div>
             <div class="checkbox">
               <div>
+                <p id="checkboxDescriptor">Please keep me posted:</p>
                 <label class="checkbox-label" for="requests">
-                  <input type="checkbox" id="requests" name="requests">
-                Please send a catalogue by mail </label>
+                  <input type="checkbox" id="opt_in_fields_0" name="opt_in_fields[]" value="emails" aria-describedby="checkboxDescriptor">
+                Send me occasional emails</label>
                 <br>
                 <label class="checkbox-label" for="mailing_list">
-                  <input type="checkbox" id="mailing_list" name="mailing_list">
-                Please add my contact information to your mailing list </label>
+                  <input type="checkbox" id="opt_in_fields_1" name="opt_in_fields[]" value="newsletter" aria-describedby="checkboxDescriptor">
+                Send me the catalogue newsletter</label>
               </div>
             </div>
           </div>
@@ -157,32 +143,45 @@ include('includes/functions.php');
                 </div>
               </div>
             </div>
-            <div>
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" aria-required="true">
+            <div class="user-type">
+              <label for="who">County</label>
+              <select id="who" name="who" class="form-control" aria-required="true">
+                <option value="">Select</option>
+                <option value="n/a">N/A</option>
+                <option value="DC: District Of Columbia">DC: District Of Columbia</option>
+                <option value="MD: Montgomery County">MD: Montgomery County</option>
+                <option value="MD: Prince George's County">MD: Prince George's County</option>
+                <option value="MD: Frederick County">MD: Frederick County</option>
+                <option value="VA: Arlington County">VA: Arlington County</option>
+                <option value="VA: Fairfax County">VA: Fairfax County</option>
+                <option value="VA: Loudoun County">VA: Loudoun County</option>
+                <option value="VA: Prince William County">VA: Prince William County</option>
+                <option value="VA: City Of Alexandria">VA: City Of Alexandria</option>
+                <option value="VA: City Of Fairfax">VA: City Of Fairfax</option>
+                <option value="VA: City Of Falls Church">VA: City Of Falls Church</option>
+              </select>
+            </div>
+            <div class="user-type">
+              <label for="who">Ward</label>
+              <select id="who" name="who" class="form-control" aria-required="true">
+                <option value="">Select</option>
+                <option value="n/a">N/A</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+              </select>
             </div>
             <div>
               <label for="phone">Phone</label>
               <input type="text" id="phone" maxlength="14" name="phone" placeholder="000-000-0000">
             </div>
-            
-            <div class="request-questions">
-              <div>
-                <label for="how_learn">How did you hear about the Catalogue?</label>
-                <input type="text" id="how_learn" name="how_learn">
-              </div>
-              <div>
-                <label for="how_learn_other">If ‘Other’, please specify</label>
-                <input type="text" id="how_learn_other" name="how_learn_other">
-              </div>
-            </div>
           </div>
           <div class="col-xs-12">
-            <div class="comments">
-              <label for="notes">Comments <small>(optional)</small></label>
-              <textarea class="form-control" id="notes" name="notes" rows="6">Add a comment&hellip;
-              </textarea>
-            </div>
             <div class="text-left verify">
               <label>Verify Code <small>(required)</small> <img id="i1" src="http://www.cfp-dc.org/cfpdc/captcha.php?1439404152298"></label>
               <input type="text" id="captcha_code" name="captcha_code" maxlength="4" aria-required="true">
@@ -195,10 +194,10 @@ include('includes/functions.php');
               <input type="submit" class="btn btn-primary" id="form-submit" value="Submit Request">
             </div>
           </div>
-          
-        </fieldset>
-      </form>
-    </section>
-  </div>
-  </main>
-  <?php get_template('footer'); ?>
+        </div>
+      </fieldset>
+    </form>
+  </section>
+</div>
+</main>
+<?php get_template('footer'); ?>
