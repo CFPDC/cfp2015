@@ -1471,6 +1471,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
         padding-top: 5px;
         width: 100%;
     }
+    .two-column-form .two-line label {
+        padding-top: 0;
+    }
     .two-column-form label.organization-label {
         font-size: 90%;
     }
