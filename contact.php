@@ -7,8 +7,8 @@ include('includes/functions.php');
     <h1 class="col-xs-12 text-center">Contact CFP</h1>
   </div>
 </div>
-<div class="clearfix">
-  <img src="http://lorempixel.com/1200/500/" style="width:100%" alt="First slide">
+<div class="clearfix hero">
+  <img src="http://lorempixel.com/1200/500/" alt="First slide">
 </div>
 <main class="container-fluid search-results secondary" role="main">
 <div class="row">
