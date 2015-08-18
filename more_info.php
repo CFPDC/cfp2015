@@ -1,8 +1,40 @@
-<?php
-include('includes/functions.php');
-?>
-<?php get_template('header', 'Title of homepage'); ?>
-<main class="container-fluid search-results secondary" role="main">
+<!DOCTYPE HTML>
+<!--[if lt IE 8]><html class="no-js oldIE" lang="en-US"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en-US"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9" lang="en-US"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en-US" class="no-js not-ie">
+	<!--<![endif]-->
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="http://cfp-dc.org/images/dc/covers/current-full.jpg">
+		<meta property="og:title" content="HOME: Catalogue for Philanthropy: Greater Washington">
+		<meta property="og:url" content="http://cfp-dc.org/cfpdc/index.php">
+		<meta name="description" content="The Catalogue for Philanthropy: Greater Washington - The most trusted guide to giving in Greater Washington (DC, MD, VA), featuring the area's best, vetted, community-based charities for high-impact local giving.">
+		<meta name="keywords" content="catalogue, catalog, DC, VA, MD, Virginia, Maryland, Washington DC, Greater Washington, Greater DC, Metropolitan DC, Metro DC, / , a non profit, nonprofit organization, charity donations, local donations, catalogue for philanthropy: greater washington, catalogue for philanthropy dc, philanthropy giving, washinton nonprofits, charities to donate to, charity to donate, cfp, about philanthropy, what is philanthropy, charity philanthropy, the best charities, nonprofit dc, nonprofits dc, non profit washington dc, catalogue for, online catalogue">
+		<meta name="robots" content="index, follow">
+		<meta name="revisit-after" content="15 days">
+		<title>Catalogue for Philanthropy</title>
+		<link href="assets/css/proxima-nova.css" rel="stylesheet">
+		<link href="assets/css/libre-baskerville.css" rel="stylesheet">
+		<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+		<link href="resources/css/docs.css" rel="stylesheet">
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/jasny-bootstrap.min.css" rel="stylesheet">
+		<link href="resources/css/base.css" rel="stylesheet">
+		<script src="assets/js/modernizr.js"></script>
+	</head>
+	<body>
+		<a class="sr-only sr-only-focusable skip-navigation-link" href="#main">Skip to main navigation</a>
+		<noscript>
+		<p class="js-off-message">
+		The page could not be loaded. Assets.cms.gov currently does not fully support browsers with &quot;JavaScript&quot; disabled. Please note that if you choose to continue without enabling &quot;JavaScript&quot; certain functionalities on this website may not be available.
+		</p>
+		</noscript>
+<main class="container-fluid search-results secondary" id="main" role="main">
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="yui3-normalized" style="margin:12px;font-family:Georgia;font-size:12px;line-height:1.7em;">
@@ -12,5 +44,6 @@ include('includes/functions.php');
 			</div>
 		</div>
 	</main>
-<?php get_template('footer'); ?>
+</body>
+</html>
 	
