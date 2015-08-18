@@ -28,14 +28,14 @@
 		<script src="assets/js/modernizr.js"></script>
 	</head>
 	<body <?php page_id(); ?> >
-		<a class="sr-only sr-only-focusable skip-navigation-link" href="#primary-nav-container">Skip to main navigation</a>
+		<a class="sr-only sr-only-focusable skip-navigation-link" href="javascript:void(0);" data-target="#primary-nav-container">Skip to main navigation</a>
 		<noscript>
 		<p class="js-off-message">
 		The page could not be loaded. Assets.cms.gov currently does not fully support browsers with &quot;JavaScript&quot; disabled. Please note that if you choose to continue without enabling &quot;JavaScript&quot; certain functionalities on this website may not be available.
 		</p>
 		</noscript>
 		<div class="mobile-nav navmenu navmenu-default navmenu-fixed-left offcanvas">
-			<ul>
+			<ul class="list-unstyled">
 				<li>
 					<a href="contact.php" target="_self" title="CFP's contact information">Contact<span class="sr-only"> The Catalogue for Philanthropy</span></a>
 				</li>
@@ -46,7 +46,7 @@
 					<a href="sign-up.php" target="_self" title="Sign up for a CFP account">Sign Up</a>
 				</li>
 				<li>
-					<a href="account-login.php" target="_self" title="Login to your CFP account">Log In<span class="sr-only"> to your Catalogue for Philanthropy account</span></a>
+					<a href="login.php" target="_self" title="Login to your CFP account">Log In<span class="sr-only"> to your Catalogue for Philanthropy account</span></a>
 				</li>
 			</ul>
 			<ul>
@@ -134,7 +134,7 @@
 							<a href="sign-up.php" target="_self" title="Sign up for a CFP account">Sign Up</a>
 						</li>
 						<li>
-							<a href="account-login.php" target="_self" title="Login to your CFP account">Log In<span class="sr-only"> to your Catalogue for Philanthropy account</span></a>
+							<a href="login.php" target="_self" title="Login to your CFP account">Log In<span class="sr-only"> to your Catalogue for Philanthropy account</span></a>
 						</li>
 					</ul>
 				</nav>

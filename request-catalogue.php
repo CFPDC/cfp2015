@@ -7,8 +7,8 @@ include('includes/functions.php');
     <h1 class="col-xs-12 text-center">Request a Catalogue</h1>
   </div>
 </div>
-<div class="clearfix">
-  <img src="http://lorempixel.com/1200/500/" style="width:100%" alt="First slide">
+<div class="clearfix hero">
+  <img src="http://lorempixel.com/1200/500/" alt="First slide">
 </div>
 <main class="container-fluid search-results secondary" role="main">
 <div class="row">
@@ -41,12 +41,12 @@ include('includes/functions.php');
         <legend class="sr-only">Fill and submit this form to receive the latest Catalogue for Philanthropy catalogue by mail.</legend>
         <div class="row">
           <div class="col-sm-6">
-            <div>
-              <label for="fname">Your First Name</label>
+            <div class="two-line">
+              <label for="fname">Your First Name<small> (required)</small></label>
               <input type="text" class="required" id="fname" maxlength="40" name="fname" aria-required="true">
             </div>
-            <div>
-              <label for="lname">Your Last Name</label>
+            <div class="two-line">
+              <label for="lname">Your Last Name<small> (required)</small></label>
               <input type="text" id="lname" maxlength="40" name="lname" aria-required="true">
             </div>
             <div>
@@ -77,18 +77,18 @@ include('includes/functions.php');
             </div>
           </div>
           <div class="col-sm-6">
-            <div>
-              <label for="street">Street Address</label>
+            <div class="two-line">
+              <label for="street">Street Address<small> (required)</small></label>
               <input type="text" id="street" maxlength="40" name="street" aria-required="true">
             </div>
-            <div>
-              <label for="city">City</label>
+            <div class="two-line">
+              <label for="city">City<small> (required)</small></label>
               <input type="text" id="city" maxlength="40" name="city" aria-required="true">
             </div>
             <div class="two-wide clearfix">
               <div class="pull-right">
-                <div>
-                  <label for="state">State</label>
+                <div class="two-line">
+                  <label for="state">State<small> (required)</small></label>
                   <select class="form-control" id="state" name="state" aria-required="true">
                     <option value="" selected="">Select</option>
                     <optgroup label="Greater Washington Area">
@@ -151,14 +151,14 @@ include('includes/functions.php');
                     </optgroup>
                   </select>
                 </div>
-                <div>
-                  <label class="zip-label" for="zip">Zip</label>
+                <div class="two-line">
+                  <label class="zip-label" for="zip">Zip<small> (required)</small></label>
                   <input type="text" class="zip-code" id="zip" maxlength="5" name="zip" aria-required="true">
                 </div>
               </div>
             </div>
-            <div>
-              <label for="email">Email</label>
+            <div class="two-line">
+              <label for="email">Email<small> (required)</small></label>
               <input type="email" id="email" name="email" aria-required="true">
             </div>
             <div>
@@ -184,7 +184,7 @@ include('includes/functions.php');
               </textarea>
             </div>
             <div class="text-left verify">
-              <label>Verify Code <small>(required)</small> <img id="i1" src="http://www.cfp-dc.org/cfpdc/captcha.php?1439404152298"></label>
+              <label for="captcha_code">Verify Code <small>(required)</small> <img id="i1" src="http://www.cfp-dc.org/cfpdc/captcha.php?1439404152298"></label>
               <input type="text" id="captcha_code" name="captcha_code" maxlength="4" aria-required="true">
             </div>
           </div>

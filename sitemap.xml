@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>https://cgi-cfp.herokuapp.com/</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://cgi-cfp.herokuapp.com/contact.php</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://cgi-cfp.herokuapp.com/request-catalogue.php</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://cgi-cfp.herokuapp.com/sign-up.php</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://cgi-cfp.herokuapp.com/about-us.php</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://cgi-cfp.herokuapp.com/cfp-team.php</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://cgi-cfp.herokuapp.com/cfp-reviewers.php</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://cgi-cfp.herokuapp.com/sponsors.php</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://cgi-cfp.herokuapp.com/press.php</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://cgi-cfp.herokuapp.com/testimonials.php</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://cgi-cfp.herokuapp.com/vision-report.php</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://cgi-cfp.herokuapp.com/our-nonprofits.php</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://cgi-cfp.herokuapp.com/our-nonprofits.php?strCategory=nature</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://cgi-cfp.herokuapp.com/our-nonprofits.php?strCategory=culture</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://cgi-cfp.herokuapp.com/our-nonprofits.php?strCategory=education</loc>
+  <changefreq>weekly</changefreq>
+</url>

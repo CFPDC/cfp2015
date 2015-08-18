@@ -7,8 +7,8 @@ include('includes/functions.php');
     <h1 class="col-xs-12 text-center">Create An Account</h1>
   </div>
 </div>
-<div class="clearfix">
-  <img src="http://lorempixel.com/1200/500/" style="width:100%" alt="First slide">
+<div class="clearfix hero">
+  <img src="http://lorempixel.com/1200/500/" alt="First slide">
 </div>
 <main class="container-fluid secondary" role="main">
 <div class="row">
@@ -191,7 +191,7 @@ include('includes/functions.php');
           </div>
           <div class="col-xs-12">
             <div class="text-left verify">
-              <label>Verify Code <small>(required)</small> <img id="i1" src="http://www.cfp-dc.org/cfpdc/captcha.php?1439404152298"></label>
+              <label for="captcha_code">Verify Code <small>(required)</small> <img id="i1" src="http://www.cfp-dc.org/cfpdc/captcha.php?1439404152298"></label>
               <input type="text" id="captcha_code" name="captcha_code" maxlength="4" aria-required="true">
             </div>
           </div>

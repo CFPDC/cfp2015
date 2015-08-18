@@ -7,8 +7,8 @@ include('includes/functions.php');
 		<h1 class="text-center">About The Catalogue For Philanthropy</h1>
 	</div>
 </div>
-<div class="clearfix">
-	<img src="http://lorempixel.com/1200/500/" style="width:100%" alt="First slide">
+<div class="clearfix hero">
+  <img src="http://lorempixel.com/1200/500/" alt="First slide">
 </div>
 <main class="container-fluid search-results secondary" role="main">
 <div class="row">
@@ -43,7 +43,7 @@ include('includes/functions.php');
 		</div>
 		<div class="row">
 			<div class="col-sm-12">
-				<ul class="about-list">
+				<ul class="about-list list-unstyled">
 					<li><a href="#">Vetting:</a> An overview of our application</li>
 					<li><a href="#">Storytelling:</a> Communicating the mission and impact of our nonprofits</li>
 					<li><a href="#">Training:</a> An overview of the educational seminars and marketing resources we provide to our charities</li>
