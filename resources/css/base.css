@@ -1040,6 +1040,181 @@ main address > span, address > a {
     margin-top: 5px;
 }
 
+.longlist {
+    width: 500px;
+}
+.testimonial {
+    color: #487896;
+}
+.engage {
+    background: url("/resources/images/vision/engage-gray.png") transparent 0 0 scroll;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.create {
+    background: url("/resources/images/vision/create-gray.png") transparent 0 0 scroll;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.empower {
+    background: url("/resources/images/vision/empower-gray.png") transparent 0 0 scroll;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.expand {
+    background: url("/resources/images/vision/expand-gray.png") 0 0 no-repeat;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.educate {
+    background: url("/resources/images/vision/educate-gray.png") 0 0 scroll;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.convene {
+    background: url("/resources/images/vision/convene-gray.png") transparent 0 0 scroll;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.collaborate {
+    background: url("/resources/images/vision/collaborate-gray.png") transparent 0 0 scroll;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.inspire {
+    background: url("/resources/images/vision/inspire-gray.png") transparent 0 0 scroll;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.transform {
+    background: url("/resources/images/vision/transform-gray.png") transparent 0 0 scroll;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.engage:hover, .engage:focus {
+    background: url("/resources/images/vision/engage-yellow.png") transparent 0 0 scroll;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.create:hover, .create:focus {
+    background: url("/resources/images/vision/create-yellow.png") transparent 0 0 scroll;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.empower:hover, .empower:focus {
+    background: url("/resources/images/vision/empower-yellow.png") transparent 0 0 scroll;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.expand:hover, .expand:focus {
+    background: url("/resources/images/vision/expand-yellow.png") 0 0 no-repeat;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.educate:hover, .educate:focus {
+    background: url("/resources/images/vision/educate-yellow.png") 0 0 scroll;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.convene:hover, .convene:focus {
+    background: url("/resources/images/vision/convene-yellow.png") transparent 0 0 scroll;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.collaborate:hover, .collaborate:focus {
+    background: url("/resources/images/vision/collaborate-yellow.png") transparent 0 0 scroll;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.inspire:hover, .inspire:focus {
+    background: url("/resources/images/vision/inspire-yellow.png") transparent 0 0 scroll;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.transform:hover, .transform:focus {
+    background: url("/resources/images/vision/transform-yellow.png") transparent 0 0 scroll;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.engage:active {
+    background: url("/resources/images/vision/engage-vs-clear.png") transparent 0 0 scroll;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.create:active {
+    background: url("/resources/images/vision/create-vs-clear.png") transparent 0 0 scroll;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.empower:active {
+    background: url("/resources/images/vision/empower-vs-clear.png") transparent 0 0 scroll;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.expand:active {
+    background: url("/resources/images/vision/expand-vs-clear.png") 0 0 no-repeat;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.educate:active {
+    background: url("/resources/images/vision/educate-vs-clear.png") 0 0 scroll;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.convene:active {
+    background: url("/resources/images/vision/convene-vs-clear.png") transparent 0 0 scroll;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.collaborate:active {
+    background: url("/resources/images/vision/collaborate-vs-clear.png") transparent 0 0 scroll;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.inspire:active {
+    background: url("/resources/images/vision/inspire-vs-clear.png") transparent 0 0 scroll;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.transform:active {
+    background: url("/resources/images/vision/transform-vs-clear.png") transparent 0 0 scroll;
+    height: 173px;
+    width: 208px;
+    display: block;
+}
+.two-column-well {
+    overflow: auto;
+}
+.two-column-list li {
+    float: left;
+    width: 50%;
+}
 /*---FOOTER---*/
 footer {
     background: #487896;
