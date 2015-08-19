@@ -30,31 +30,31 @@ include('includes/functions.php');
 			</div>
 			<div class="row">
 				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="vision-engage.php" class="thumbnail engage"></a>
+					<a href="vision-engage.php" class="thumbnail vision engage"></a>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="vision-create.php" class="thumbnail create"></a>
+					<a href="vision-create.php" class="thumbnail vision create"></a>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="vision-empower.php" class="thumbnail empower"></a>
+					<a href="vision-empower.php" class="thumbnail vision empower"></a>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="vision-expand.php" class="thumbnail expand"></a>
+					<a href="vision-expand.php" class="thumbnail vision expand"></a>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="vision-educate.php" class="thumbnail educate"></a>
+					<a href="vision-educate.php" class="thumbnail vision educate"></a>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="vision-convene.php" class="thumbnail convene"></a>
+					<a href="vision-convene.php" class="thumbnail vision convene"></a>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="vision-collaborate.php" class="thumbnail collaborate"></a>
+					<a href="vision-collaborate.php" class="thumbnail vision collaborate"></a>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="vision-inspire.php" class="thumbnail inspire"></a>
+					<a href="vision-inspire.php" class="thumbnail vision inspire"></a>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="vision-transform.php" class="thumbnail transform"></a>
+					<a href="vision-transform.php" class="thumbnail vision transform"></a>
 				</div>
 			</div>
 		</div>
