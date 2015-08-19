@@ -115,6 +115,22 @@ input:focus, select:focus, textarea:focus {
     line-height: 1.5;
 }
 
+blockquote {
+    padding-left: 0;
+    border: none;
+    padding-bottom: 0;
+    margin-bottom: 5px;
+}
+
+blockquote small {
+    font-size: 13px;
+    font-size: 1.3rem;
+}
+
+blockquote ol:last-child, blockquote p:last-child, blockquote ul:last-child {
+    margin-bottom: 15px;
+}
+
 .dropdown-toggle:focus {
     outline: 2px solid #487896;
 }
@@ -1273,6 +1289,40 @@ main address > span, address > a {
 .two-column-list li {
     float: left;
     width: 50%;
+}
+
+.team-member {
+    margin-bottom: 40px;
+}
+
+.team-member h2 {
+    margin-bottom: 15px;
+}
+
+.team-member h2 > small, .team-member h2 > small > a {
+    display: block;
+}
+
+/*---Press Page---*/
+.press-release {
+    margin-bottom: 0;
+}
+
+.press-release strong {
+    display: block;
+}
+
+.press-release a:first-child {
+    font-family: 'ProximaNovaSemibold';
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+.url_press_release a {
+    font-family: 'ProximaNovaRegularItalic';
+    font-size: 15px;
+    font-size: 1.5rem;
+    text-transform: capitalize;
 }
 
 /*---FOOTER---*/
