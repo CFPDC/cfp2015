@@ -1,8 +1,8 @@
 <footer class="container-fluid" role="contentinfo">
 	<section class="row">
 		<div class="col-sm-5 col-xs-12 col-md-4">
-			<a href="">
-				<img class="img-responsive" src="resources/images/footer-logo-no-flag-white.gif" title="CFP footer logo">
+			<a href="../" title="The Catalogue for Philanthropy: Greater Washington home">
+				<img class="img-responsive footer-logo" src="resources/images/footer-logo-no-flag-white.gif" title="CFP footer logo">
 			</a>
 			<ul class="list-inline social-icons">
 				<li><a class="fa fa-facebook fa-3x" href="#"><span class="sr-only">Like CFP on Facebook</span></a></li>
@@ -19,7 +19,7 @@
 					<a href="request-catalogue.php">Request a Catalog</a>
 				</li>
 				<li>
-					<a href="#">Subscribe</a>
+					<a href="subscribe.php">Subscribe</a>
 				</li>
 				<li>
 					<a href="sponsors.php">Sponsors<span class="sr-only"> of The Catalogue for Philanthropy</span></a>

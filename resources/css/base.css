@@ -203,14 +203,14 @@ blockquote ol:last-child, blockquote p:last-child, blockquote ul:last-child {
 }
 
 .btn-warning {
-    background-color: #FE7F2D;
-    border-color: #FE7F2D;
+    background-color: #FDAF17;
+    border-color: #FDAF17;
     color: #292929;
 }
 
 .btn-warning:focus, .btn-warning:hover {
     background-color: #fff;
-    border-color: #FE7F2D;
+    border-color: #FDAF17;
     color: inherit;
 }
 
@@ -919,7 +919,63 @@ main address > span, address > a {
     margin-bottom: 5px;
 }
 
-/*---Request A Catalogue---*/
+/*---one column forms---*/
+.one-column-form input, .one-column-form label, .one-column-form select.form-control {
+    display: block;
+    width: 100%;
+}
+
+.one-column-form input, .one-column-form select.form-control {
+    margin-bottom: 15px;
+    height: 35px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+}
+
+.one-column-form select.form-control {
+    padding: 6px 12px;
+}
+
+.one-column-form .checkbox input, .one-column-form .checkbox label {
+    display: inline-block;
+    clear: both;
+    float: left;
+    height: auto;
+    width: auto;
+}
+
+.one-column-form .checkbox label {
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+
+.one-column-form .checkbox, .one-column-form textarea {
+    margin-bottom: 15px;
+}
+
+.one-column-form .verify label {
+    padding-bottom: 5px;
+}
+
+.one-column-form .verify label > small {
+    display: inline-block;
+}
+
+.one-column-form .verify input {
+    display: block;
+}
+
+.checkbox .error p:first-child {
+    color: #931621;
+}
+
+.checkbox .error strong.error {
+    bottom: -10px;
+    left: 0;
+}
+
+/*---two column forms---*/
 .two-column-form input, .two-column-form label {
     display: block;
     width: 100%;
@@ -974,7 +1030,7 @@ main address > span, address > a {
     text-align: left;
 }
 
-.two-column-form input.btn {
+.one-column-form input.btn, .two-column-form input.btn {
     font-size: inherit;
     height: auto;
     line-height: 1.42857143;
@@ -982,7 +1038,7 @@ main address > span, address > a {
     margin-bottom: 0;
 }
 
-.two-column-form .submit-button {
+.one-column-form .submit-button, .two-column-form .submit-button {
     text-align: left;
 }
 
@@ -1090,7 +1146,10 @@ main address > span, address > a {
 }
 
 .testimonial {
-    color: #487896;
+    color: #153B50;
+    font-family: 'ProximaNovaBold';
+    font-size: 18px;
+    font-size: 1.8rem;
 }
 
 .engage {
@@ -1503,6 +1562,10 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     form strong.error {
         right: 0;
     }
+    .one-column-form strong.error {
+        left: 0;
+        right: auto;
+    }
     .mobile-nav {
         display: none !important;
     }
@@ -1562,6 +1625,16 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     .email-contact {
         margin-left: 25px;
+    }
+    .one-column-form fieldset > div {
+        display: table;
+        width: 100%;
+    }
+    .one-column-form .submit-button {
+        display: table;
+    }
+    .one-column-form .submit-button > .btn {
+        display: table-cell;
     }
     form.two-column-form {
         text-align: right;
@@ -1661,6 +1734,12 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     .login-form > div {
         margin-left: 5%;
+    }
+    .footer-logo {
+        max-width: 450px;
+    }
+    .header-logo {
+        max-width: 630px;
     }
 }
 

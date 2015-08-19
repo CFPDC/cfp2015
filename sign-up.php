@@ -19,7 +19,7 @@ include('includes/functions.php');
     </p>
     <form class="two-column-form sign-up form-horizontal col-xs-12" action="account.php?i=0-0" method="post">
       <fieldset>
-        <legend class="sr-only">Fill and submit this form to receive the latest Catalogue for Philanthropy catalogue by mail.</legend>
+        <legend class="sr-only">Fill and submit this form to open a Catalogue for Philanthropy account.</legend>
         <div class="row">
           <div class="col-sm-6">
             <div class="two-line">
