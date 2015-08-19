@@ -1141,6 +1141,26 @@ main address > span, address > a {
     margin-top: 5px;
 }
 
+.two-column-well {
+    overflow: auto;
+}
+
+.two-column-list li {
+    float: left;
+    width: 50%;
+}
+
+.team-member {
+    margin-bottom: 40px;
+}
+
+.team-member h2 {
+    margin-bottom: 15px;
+}
+
+.team-member h2 > small, .team-member h2 > small > a {
+    display: block;
+}
 .longlist {
     width: 500px;
 }
@@ -1341,25 +1361,38 @@ main address > span, address > a {
     display: block;
 }
 
-.two-column-well {
-    overflow: auto;
+.vision-image {
+    margin-bottom: 50px;
 }
-
-.two-column-list li {
-    float: left;
-    width: 50%;
+.back {
+   margin-left: 30px; 
+   margin-bottom: 15px;
 }
-
-.team-member {
-    margin-bottom: 40px;
+.back:before {
+    content: "\f060";
+    font-family: 'FontAwesome';
+    height: 5px;
+    width: 5px;
+    position: absolute;
+    left: 10px;
 }
-
-.team-member h2 {
-    margin-bottom: 15px;
+.forward {
+   margin-right: 12px; 
 }
-
-.team-member h2 > small, .team-member h2 > small > a {
-    display: block;
+.forward:before {
+    content: "\f061";
+    font-family: 'FontAwesome';
+    height: 5px;
+    width: 5px;
+    position: absolute;
+    right: 15px;
+}
+.vs-heading {
+    color: #FDAF17;
+    margin-bottom: 0;
+}
+.inspire-p {
+    text-indent: 1em;
 }
 
 /*---Press Page---*/
