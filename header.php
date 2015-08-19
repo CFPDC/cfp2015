@@ -119,7 +119,7 @@
 			<div class="row">
 				<div class="col-sm-5">
 					<a href="../" title="Catalogue for Philanthropy: Greater Washington home">
-						<img class="img-responsive" src="resources/images/cfp-logo-blue-brown2.gif" alt="Catalogue for Philanthropy: Greater Washington logo">
+						<img class="img-responsive header-logo" src="resources/images/cfp-logo-blue-brown2.gif" alt="Catalogue for Philanthropy: Greater Washington logo">
 					</a>
 				</div>
 				<nav class="col-sm-7 secondary-nav">

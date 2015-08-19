@@ -48,7 +48,7 @@ include('includes/functions.php');
       <h2><span class="sr-only">Log in form for </span>Catalogue Nonprofits</h2>
       <form class="login-form-container form-horizontal"  id="nonprofit-form" method="post" action="http://cfp-dc.org/admin/login.php?from=09website">
         <fieldset>
-          <legend class="sr-only">Use this form to login if you are a donor.</legend>
+          <legend class="sr-only">Use this form to login if you are a nonprofit.</legend>
           <div class="form-group form-group-lg">
             <label for="username2">Username<small> (your email address)</small></label>
             <input type="password" class="required form-control" id="username2" maxlength="40" name="username2" aria-required="true">
