@@ -30,31 +30,31 @@ include('includes/functions.php');
 			</div>
 			<div class="row">
 				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="/cfpdc/2013vision-engage.php" class="thumbnail engage"></a>
+					<a href="/cfpdc/2013vision-engage.php" class="thumbnail vision engage"></a>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="/cfpdc/2013vision-create.php" class="thumbnail create"></a>
+					<a href="/cfpdc/2013vision-create.php" class="thumbnail vision create"></a>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="/cfpdc/2013vision-empower.php" class="thumbnail empower"></a>
+					<a href="/cfpdc/2013vision-empower.php" class="thumbnail vision empower"></a>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="/cfpdc/2013vision-expand.php" class="thumbnail expand"></a>
+					<a href="/cfpdc/2013vision-expand.php" class="thumbnail vision expand"></a>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="/cfpdc/2013vision-educate.php" class="thumbnail educate"></a>
+					<a href="/cfpdc/2013vision-educate.php" class="thumbnail vision educate"></a>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="/cfpdc/2013vision-convene.php" class="thumbnail convene"></a>
+					<a href="/cfpdc/2013vision-convene.php" class="thumbnail vision convene"></a>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="/cfpdc/2013vision-collaborate.php" class="thumbnail collaborate"></a>
+					<a href="/cfpdc/2013vision-collaborate.php" class="thumbnail vision collaborate"></a>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="/cfpdc/2013vision-inspire.php" class="thumbnail inspire"></a>
+					<a href="/cfpdc/2013vision-inspire.php" class="thumbnail vision inspire"></a>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="/cfpdc/2013vision-transform.php" class="thumbnail transform"></a>
+					<a href="/cfpdc/2013vision-transform.php" class="thumbnail vision transform"></a>
 				</div>
 			</div>
 		</div>
