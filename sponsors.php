@@ -30,16 +30,12 @@ include('includes/functions.php');
 				<p>We rely on the generosity of foundations, organizations and individuals in our community to keep the Catalogue free. When you support the Catalogue, you not only help us spread the word about our region’s best charities, but you also help us create resources that empower our nonprofits to continue growing well beyond their inclusion in the Catalogue.</p>
 				<p>In the past year (September 16, 2013&ndash;September 15, 2014) the following foundations, corporations, individuals, and nonprofit organizations have made the Catalogue possible&mdash;in print and online:</p>
 			</div>
-		</div>
-		<div class="row">
 			<div class="col-sm-12">
 				<h3 class="sponsors-heading3">Founder</h3>
 				<ul class="list-unstyled">
 					<li><a href="http://harman-foundation.org/" title="The Harman Family Foundation's website">Harman Family Foundation</a></li>
 				</ul>
 			</div>
-		</div>
-		<div class="row">
 			<div class="col-sm-12">
 				<h3 class="sponsors-heading3">Partner</h3>
 				<ul class="list-unstyled">
@@ -47,8 +43,6 @@ include('includes/functions.php');
 					<li><a href="http://cgi.com/" title="The CGI website">CGI</a></li>
 				</ul>
 			</div>
-		</div>
-		<div class="row">
 			<div class="col-sm-12">
 				<h3 class="sponsors-heading3">Investor</h3>
 				<ul class="list-unstyled">
@@ -59,8 +53,6 @@ include('includes/functions.php');
 					<li><a href="http://www.webberfoundation.org/" title="The Webber Foundation's website">Webber Family Foundation</a></li>
 				</ul>
 			</div>
-		</div>
-		<div class="row">
 			<div class="col-sm-12">
 				<h3 class="sponsors-heading3">Ally</h3>
 				<ul class="list-unstyled">
@@ -81,8 +73,6 @@ include('includes/functions.php');
 					<li>UBS Private Wealth Management, Rod von Lipsey </li>
 				</ul>
 			</div>
-		</div>
-		<div class="row">
 			<div class="col-sm-12">
 				<h3 class="sponsors-heading3">Friend</h3>
 				<ul class="list-unstyled">
@@ -107,8 +97,6 @@ include('includes/functions.php');
 					<li>Mark Srere &amp; Jayne Jerkins</li>
 				</ul>
 			</div>
-		</div>
-		<div class="row">
 			<div class="col-sm-12">
 				<h3 class="sponsors-heading3">Supporter</h3>
 				<ul class="list-unstyled">
@@ -140,8 +128,6 @@ include('includes/functions.php');
 					<li>Kathleen Zeifang </li>
 				</ul>
 			</div>
-		</div>
-		<div class="row">
 			<div class="col-sm-12">
 				<h3 class="sponsors-heading3">Contributor</h3>
 				<p>Anonymous (1), Nancy Adams, Amy Austin, Nancy and Robert Brown, Margaret Clark, Rose Ann Cleveland, Laurie Davis and Joseph Sellers, Brian Doherty and Kelsey Flora, Kelley Ellsworth, Michael Farrell, Mary Cornelia Ginn, Philip Golrick, Lauren Hodapp, Elizabeth Hyman, Charles Kackley, Jerome A Kaplan and Deena L Kaplan Family Foundation, Michael and Erna Kerst, Marie Lerch, The Herbert J and Dianne J Lerner Foundation, Deirdre Maloney, Marget Maurer, Paul McClenon, Jill Meyer, Barry and Margery Passett, Jane Ramsey, Sherry Reilly, David Rhoad, J Brinton Rowdybush, Kenneth and Beverly Sheiffer, Laura Sherman, Rachel Shub, Nancy and Wayne Swartz, Anne Urban and Peter Yeo, Rex Wagner, Audrey Winter</p>

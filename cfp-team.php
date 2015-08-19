@@ -7,8 +7,8 @@ include('includes/functions.php');
 		<h1 class="text-center">About The Team</h1>
 	</div>
 </div>
-<div class="clearfix">
-http://lorempixel.com/1200/500/" styl
+<div class="clearfix hero">
+<img src="http://lorempixel.com/1200/500/" alt="First slide">
 </div>
 <main class="container-fluid search-results secondary" role="main">
 <div class="row">
@@ -106,37 +106,37 @@ http://lorempixel.com/1200/500/" styl
 				<h2>Board of Directors</h2>
 				<ul class="list-unstyled">
 					<li>
-						Eileen Daly (Treasurer), <em>Philip L Graham Fund</em>
+						Eileen Daly (Treasurer), <small>Philip L Graham Fund</small>
 					</li>
 					<li>
-						Oktay Dogramaci, <em>PayPal</em>
+						Oktay Dogramaci, <small>PayPal</small>
 					</li>
 					<li>
-						Jeff Fergus, <em>Independent Financial Consultant</em>
+						Jeff Fergus, <small>Independent Financial Consultant</small>
 					</li>
 					<li>
-						Barbara Harman, <em>Harman Family Foundation</em>
+						Barbara Harman, <small>Harman Family Foundation</small>
 					</li>
 					<li>
-						Gayla Keller (Secretary), <em>Boeing</em>
+						Gayla Keller (Secretary), <small>Boeing</small>
 					</li>
 					<li>
-						Michael Lainoff, <em>Lainoff Family Foundation</em>
+						Michael Lainoff, <small>Lainoff Family Foundation</small>
 					</li>
 					<li>
-						Noni Lindahl, <em>Many Hands</em>
+						Noni Lindahl, <small>Many Hands</small>
 					</li>
 					<li>
-						Sandra McCoy (Board Chair), <em>The McCoy Family Fund</em>
+						Sandra McCoy (Board Chair), <small>The McCoy Family Fund</small>
 					</li>
 					<li>
-						Tom Raffa (Board Vice Chair), <em>Raffa, PC</em>
+						Tom Raffa (Board Vice Chair), <small>Raffa, PC</small>
 					</li>
 					<li>
-						George Schindler, <em>CGI</em>
+						George Schindler, <small>CGI</small>
 					</li>
 					<li>
-						Kathleen Zeifang, <em>Trinity Washington University</em>
+						Kathleen Zeifang, <small>Trinity Washington University</small>
 					</li>
 					<ul>
 					</div>

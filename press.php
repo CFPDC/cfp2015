@@ -8,7 +8,7 @@ include('includes/functions.php');
 	</div>
 </div>
 <div class="clearfix hero">
-  <img src="http://lorempixel.com/1200/500/" alt="First slide">
+	<img src="http://lorempixel.com/1200/500/" alt="First slide">
 </div>
 <main class="container-fluid search-results secondary" role="main">
 <div class="row">
@@ -24,22 +24,16 @@ include('includes/functions.php');
 		</ul>
 	</aside>
 	<section class="col-xs-12 col-sm-9">
-		<div class="row">
-			<div class="col-sm-12">
-				<p class="lead">For information about the Catalogue, please contact:</p>
-				<p>Barbara Harman, </br>
-					President and Editor  </br>
-					<a href="tel:202-955-6538" class="phone" title="call The Catalogue for Philanthropy's main office">202-955-6538</a> </br>
-					<a href="mailto:bharman@cfp-dc.org" title="contact Barbara Harman">bharman@cfp-dc.org</a></p>
-					<p class="lead">In the News:</p>
-					<div class="row">
-						<div class="col-sm-12">
-							<iframe class="longlist" style="padding:0px;height:4000px" src="more_info.php"></iframe>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	</div>
-	</main>
-	<?php get_template('footer'); ?>
+		<p class="lead">For information about the Catalogue, please contact:</p>
+		<p>Barbara Harman, </br>
+		President and Editor  </br>
+		<a href="tel:202-955-6538" class="phone" title="call The Catalogue for Philanthropy's main office">202-955-6538</a> </br>
+		<a href="mailto:bharman@cfp-dc.org" title="contact Barbara Harman">bharman@cfp-dc.org</a></p>
+		<p class="lead">In the News:</p>
+		<div class="embed-responsive embed-responsive-16by9">
+			<iframe class="longlist embed-responsive-item" src="more_info.php"></iframe>
+		</div>
+	</section>
+</div>
+</main>
+<?php get_template('footer'); ?>
