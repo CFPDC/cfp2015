@@ -7,8 +7,8 @@ include('includes/functions.php');
     <h1 class="col-xs-12 text-center">Create An Account</h1>
   </div>
 </div>
-<div class="clearfix">
-  <img src="http://lorempixel.com/1200/500/" style="width:100%" alt="First slide">
+<div class="clearfix hero">
+  <img src="http://lorempixel.com/1200/500/" alt="First slide">
 </div>
 <main class="container-fluid secondary" role="main">
 <div class="row">
@@ -17,30 +17,34 @@ include('includes/functions.php');
     <p>
     When you sign up, you gain access to a wide range of benefits found in the <a href="how-to-give.php" title="The Catalogue for Philanthropy How to Give page">How to Give</a> section of our website.</p>
     </p>
-    <form class="two-column-form sign-up form-horizontal col-xs-12" action="/cfpdc/print_cat_request_dc.php" method="post">
+    <form class="two-column-form sign-up form-horizontal col-xs-12" action="account.php?i=0-0" method="post">
       <fieldset>
         <legend class="sr-only">Fill and submit this form to receive the latest Catalogue for Philanthropy catalogue by mail.</legend>
         <div class="row">
           <div class="col-sm-6">
-            <div>
+            <div class="two-line">
               <label for="fname">Your First Name<small> (required)</small></label>
-              <input type="text" class="required" id="fname" maxlength="40" name="fname" aria-required="true">
+              <input type="text" id="fname" maxlength="40" name="fname" aria-required="true">
             </div>
-            <div>
+            <div class="two-line">
               <label for="lname">Your Last Name<small> (required)</small></label>
               <input type="text" id="lname" maxlength="40" name="lname" aria-required="true">
             </div>
-            <div>
+            <div class="two-line">
               <label for="password" class="password-label">Password<small> (required)</small></label>
-              <input id="password" name="password" type="text">
+              <input id="password" maxlength="20" name="password" type="password" aria-required="true">
             </div>
-            <div>
+            <div class="two-line">
+              <label for="password2" class="password2-label">Confirm Password<small> (required)</small></label>
+              <input id="password2" maxlength="20" name="password2" type="password" aria-required="true">
+            </div>
+            <div class="two-line">
               <label for="email">Email<small> (required)</small></label>
               <input type="email" id="email" name="email" aria-required="true">
             </div>
             <div class="user-type">
               <label for="who">You are a:</label>
-              <select id="who" name="who" class="form-control" aria-required="true">
+              <select id="who" name="who" class="form-control">
                 <option value="" selected="">Select</option>
                 <option value="non-profit">non-profit</option>
                 <option value="donor">donor</option>
@@ -65,17 +69,17 @@ include('includes/functions.php');
           <div class="col-sm-6">
             <div>
               <label for="street">Street Address</label>
-              <input type="text" id="street" maxlength="40" name="street" aria-required="true">
+              <input type="text" id="street" maxlength="40" name="street">
             </div>
             <div>
               <label for="city">City</label>
-              <input type="text" id="city" maxlength="40" name="city" aria-required="true">
+              <input type="text" id="city" maxlength="40" name="city">
             </div>
             <div class="two-wide clearfix">
               <div class="pull-right">
                 <div>
                   <label for="state">State</label>
-                  <select class="form-control" id="state" name="state" aria-required="true">
+                  <select class="form-control" id="state" name="state">
                     <option value="" selected="">Select</option>
                     <optgroup label="Greater Washington Area">
                       <option value="DC">District of Columbia</option>
@@ -139,13 +143,13 @@ include('includes/functions.php');
                 </div>
                 <div>
                   <label class="zip-label" for="zip">Zip</label>
-                  <input type="text" class="zip-code" id="zip" maxlength="5" name="zip" aria-required="true">
+                  <input type="text" class="zip-code" id="zip" maxlength="5" name="zip">
                 </div>
               </div>
             </div>
             <div class="user-type">
-              <label for="who">County</label>
-              <select id="who" name="who" class="form-control" aria-required="true">
+              <label for="county">County</label>
+              <select id="county" name="county" class="form-control">
                 <option value="">Select</option>
                 <option value="n/a">N/A</option>
                 <option value="DC: District Of Columbia">DC: District Of Columbia</option>
@@ -162,8 +166,8 @@ include('includes/functions.php');
               </select>
             </div>
             <div class="user-type">
-              <label for="who">Ward</label>
-              <select id="who" name="who" class="form-control" aria-required="true">
+              <label for="dc_ward">Ward</label>
+              <select id="dc_ward" name="dc_ward" class="form-control">
                 <option value="">Select</option>
                 <option value="n/a">N/A</option>
                 <option value="1">1</option>
@@ -180,10 +184,14 @@ include('includes/functions.php');
               <label for="phone">Phone</label>
               <input type="text" id="phone" maxlength="14" name="phone" placeholder="000-000-0000">
             </div>
+            <div>
+              <label for="organization" class="organization-label">Organization</label>
+              <input id="organization" name="organization" type="text">
+            </div>
           </div>
           <div class="col-xs-12">
             <div class="text-left verify">
-              <label>Verify Code <small>(required)</small> <img id="i1" src="http://www.cfp-dc.org/cfpdc/captcha.php?1439404152298"></label>
+              <label for="captcha_code">Verify Code <small>(required)</small> <img id="i1" src="http://www.cfp-dc.org/cfpdc/captcha.php?1439404152298"></label>
               <input type="text" id="captcha_code" name="captcha_code" maxlength="4" aria-required="true">
             </div>
           </div>

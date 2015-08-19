@@ -220,6 +220,10 @@ input:focus, select:focus, textarea:focus {
     border-radius: 0;
 }
 
+.well-lg {
+    padding-: 25px;
+}
+
 small {
     font-family: 'ProximaNovaSemiboldItalic';
 }
@@ -250,7 +254,7 @@ div[class^=errors-] .error-heading .fa-exclamation {
 
 div[class^=errors-] .summary-list a {
     color: #931621;
-    font-family: 'ProximaNovaSemibold';
+    font-family: 'ProximaNovaRegular';
     font-size: 16px;
     font-size: 1.6rem;
 }
@@ -328,7 +332,6 @@ form .error strong {
 .primary-nav nav .nav-menu {
     display: block;
     position: relative;
-    list-style: none;
     margin: 0;
     padding: 0;
     z-index: 15;
@@ -373,7 +376,6 @@ form .error strong {
 
 /* a top level navigation item in the mega menu */
 .nav-item {
-    list-style: none;
     display: inline-block;
     padding: 0;
     margin: 0;
@@ -438,7 +440,6 @@ form .error strong {
 /* list item within sub-navigation panel */
 .sub-nav li {
     display: block;
-    list-style-type: none;
     margin: 0;
     padding: 0;
 }
@@ -550,6 +551,10 @@ form .error strong {
 
 .carousel-inner > .item > img {
     display: none;
+}
+
+.hero img {
+    width: 100%;
 }
 
 /*---SIDEBAR---*/
@@ -994,6 +999,31 @@ main address > span, address > a {
     width: 100%;
 }
 
+.login-form fieldset {
+    padding: 15px;
+}
+
+.login-form li {
+    margin-bottom: 0;
+}
+
+.login-form .form-group-lg input.form-control {
+    border-radius: 0;
+}
+
+.login-form a {
+    display: inline-block;
+}
+
+.login-form .submit-button {
+    width: 12.1em;
+}
+
+.login-form strong.error {
+    bottom: -12px;
+    left: 0;
+}
+
 /*Who We Are pages*/
 .about-list li:before {
     content: "-";
@@ -1006,7 +1036,6 @@ main address > span, address > a {
 }
 
 .about-list {
-    list-style: none;
     padding-top: 20px;
 }
 
@@ -1043,178 +1072,209 @@ main address > span, address > a {
 .longlist {
     width: 500px;
 }
+
 .testimonial {
     color: #487896;
 }
+
 .engage {
     background: url("/resources/images/vision/engage-gray.png") transparent 0 0 scroll;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .create {
     background: url("/resources/images/vision/create-gray.png") transparent 0 0 scroll;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .empower {
     background: url("/resources/images/vision/empower-gray.png") transparent 0 0 scroll;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .expand {
     background: url("/resources/images/vision/expand-gray.png") 0 0 no-repeat;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .educate {
     background: url("/resources/images/vision/educate-gray.png") 0 0 scroll;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .convene {
     background: url("/resources/images/vision/convene-gray.png") transparent 0 0 scroll;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .collaborate {
     background: url("/resources/images/vision/collaborate-gray.png") transparent 0 0 scroll;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .inspire {
     background: url("/resources/images/vision/inspire-gray.png") transparent 0 0 scroll;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .transform {
     background: url("/resources/images/vision/transform-gray.png") transparent 0 0 scroll;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .engage:hover, .engage:focus {
     background: url("/resources/images/vision/engage-yellow.png") transparent 0 0 scroll;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .create:hover, .create:focus {
     background: url("/resources/images/vision/create-yellow.png") transparent 0 0 scroll;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .empower:hover, .empower:focus {
     background: url("/resources/images/vision/empower-yellow.png") transparent 0 0 scroll;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .expand:hover, .expand:focus {
     background: url("/resources/images/vision/expand-yellow.png") 0 0 no-repeat;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .educate:hover, .educate:focus {
     background: url("/resources/images/vision/educate-yellow.png") 0 0 scroll;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .convene:hover, .convene:focus {
     background: url("/resources/images/vision/convene-yellow.png") transparent 0 0 scroll;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .collaborate:hover, .collaborate:focus {
     background: url("/resources/images/vision/collaborate-yellow.png") transparent 0 0 scroll;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .inspire:hover, .inspire:focus {
     background: url("/resources/images/vision/inspire-yellow.png") transparent 0 0 scroll;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .transform:hover, .transform:focus {
     background: url("/resources/images/vision/transform-yellow.png") transparent 0 0 scroll;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .engage:active {
     background: url("/resources/images/vision/engage-vs-clear.png") transparent 0 0 scroll;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .create:active {
     background: url("/resources/images/vision/create-vs-clear.png") transparent 0 0 scroll;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .empower:active {
     background: url("/resources/images/vision/empower-vs-clear.png") transparent 0 0 scroll;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .expand:active {
     background: url("/resources/images/vision/expand-vs-clear.png") 0 0 no-repeat;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .educate:active {
     background: url("/resources/images/vision/educate-vs-clear.png") 0 0 scroll;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .convene:active {
     background: url("/resources/images/vision/convene-vs-clear.png") transparent 0 0 scroll;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .collaborate:active {
     background: url("/resources/images/vision/collaborate-vs-clear.png") transparent 0 0 scroll;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .inspire:active {
     background: url("/resources/images/vision/inspire-vs-clear.png") transparent 0 0 scroll;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .transform:active {
     background: url("/resources/images/vision/transform-vs-clear.png") transparent 0 0 scroll;
     height: 173px;
     width: 208px;
     display: block;
 }
+
 .two-column-well {
     overflow: auto;
 }
+
 .two-column-list li {
     float: left;
     width: 50%;
 }
+
 /*---FOOTER---*/
 footer {
     background: #487896;
@@ -1471,6 +1531,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
         padding-top: 5px;
         width: 100%;
     }
+    .two-column-form .two-line label {
+        padding-top: 0;
+    }
     .two-column-form label.organization-label {
         font-size: 90%;
     }
@@ -1545,6 +1608,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     .two-column-form .two-wide strong.error {
         width: 200px;
+    }
+    .login-form > div {
+        margin-left: 5%;
     }
 }
 
@@ -1657,6 +1723,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     .primary-nav .sub-nav ul li a {
         font-size: 14px;
+    }
+    .login-form > div {
+        margin-left: 10%;
     }
 }
 
