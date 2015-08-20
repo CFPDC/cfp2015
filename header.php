@@ -8,7 +8,7 @@
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
 		<meta property="og:type" content="website">
 		<meta property="og:image" content="http://cfp-dc.org/images/dc/covers/current-full.jpg">
 		<meta property="og:title" content="HOME: Catalogue for Philanthropy: Greater Washington">

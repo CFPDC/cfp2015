@@ -13,7 +13,7 @@ include('includes/functions.php');
 <main class="container-fluid search-results secondary" role="main">
 <div class="row">
 	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
-		<ul style="list-style: none;">
+		<ul class="list-unstyled">
 			<li><a href="about-us.php">About Us</a></li>
 			<li><a href="cfp-team.php">Team</a></li>
 			<li><a href="cfp-reviewers.php">Our Reviewers</a></li>
@@ -25,11 +25,11 @@ include('includes/functions.php');
 	</aside>
 	<section class="col-xs-12 col-sm-9">
 		<div class="row">
-			<p><a href="vision-report.php" class="back">Back<span class="sr-only">Go back to the Vision Report page</span></a></p>
-			<div class="col-xs-12 col-sm-3 pull-right">
-				<img class="vision-image img-responsive" src="/resources/images/vision/educate-clear.png">
+			<div class="col-xs-12"><a href="vision-report.php" class="back">Back<span class="sr-only">Go back to the Vision Report page</span></a></div>
+			<div class="col-xs-12 col-md-3 pull-right hidden-xs hidden-sm">
+				<img class="vision-image img-responsive" src="/resources/images/vision/educate-clear.png" alt="" aria-hidden="true">
 			</div>
-			<div class="col-xs-12 col-sm-9">
+			<div class="col-xs-12 col-md-9">
 				<p class="lead">We will educate donors about the essential work that community&dash;based nonprofits perform.</p>
 				<p>Though her day job may be President and Editor of the Catalogue for Philanthropy, Barbara Harman&rsquo;s passion for philanthropy extends well beyond the walls of the CFP. From sharing the stories of our charities, to evaluating the nonprofit evaluators, Barbara&rsquo;s dedication to educating donors about the work of community&dash;based nonprofits has made her a sought&dash;after speaker and writer. In 2013 she offered the keynote address at George Washington University&rsquo;s 5th annual Women &amp; Philanthropy Forum, spoke at an AFP panel on impact evaluation with Jacob Harold of Guidestar, and lead a discussion on powerful storytelling at the America’s Charities Membership Assembly.</p>
 				

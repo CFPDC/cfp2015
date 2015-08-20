@@ -13,7 +13,7 @@ include('includes/functions.php');
 <main class="container-fluid search-results secondary" role="main">
 <div class="row">
 	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
-		<ul style="list-style: none;">
+		<ul class="list-unstyled">
 			<li><a href="about-us.php">About Us</a></li>
 			<li><a href="cfp-team.php">Team</a></li>
 			<li><a href="cfp-reviewers.php">Our Reviewers</a></li>
@@ -25,11 +25,11 @@ include('includes/functions.php');
 	</aside>
 	<section class="col-xs-12 col-sm-9">
 		<div class="row">
-			<p><a href="vision-report.php" class="back">Back<span class="sr-only">Go back to the Vision Report page</span></a></p>
-			<div class="col-xs-12 col-sm-3 pull-right">
-				<img class="vision-image img-responsive" src="/resources/images/vision/collaborate-clear.png">
+			<div class="col-xs-12"><a href="vision-report.php" class="back">Back<span class="sr-only">Go back to the Vision Report page</span></a></div>
+			<div class="col-xs-12 col-md-3 pull-right  hidden-xs hidden-sm">
+				<img class="vision-image img-responsive" src="/resources/images/vision/collaborate-clear.png" alt="" aria-hidden="true">
 			</div>
-			<div class="col-xs-12 col-sm-9">
+			<div class="col-xs-12 col-md-9">
 				<p class="lead">We will collaborate with our partners in the philanthropic space to leverage our work and theirs and to multiply the impact that we can have together.</p>
 
 				<p>The nonprofit sector in Greater Washington is one of the most vibrant and engaged in our nation. Through effective collaboration, we know that we can multiply our collective, positive impact on the community. In 2013, the Catalogue received grants from 10 foundations in Greater Washington, and partnered with leaders such as the Georgetown Center for Social Impact Communication, the Foundation Center, Compass Partners, and the Booz Allen Hamilton Nonprofit Speaker Series on events, funding, and capacity&dash;building initiatives.</p>

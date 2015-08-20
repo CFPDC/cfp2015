@@ -13,7 +13,7 @@ include('includes/functions.php');
 <main class="container-fluid search-results secondary" role="main">
 <div class="row">
 	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
-		<ul style="list-style: none;">
+		<ul class="list-unstyled">
 			<li><a href="about-us.php">About Us</a></li>
 			<li><a href="cfp-team.php">Team</a></li>
 			<li><a href="cfp-reviewers.php">Our Reviewers</a></li>
@@ -25,11 +25,11 @@ include('includes/functions.php');
 	</aside>
 	<section class="col-xs-12 col-sm-9">
 		<div class="row">
-			<p><a href="vision-report.php" class="back">Back<span class="sr-only">Go back to the Vision Report page</span></a></p>
-			<div class="col-xs-12 col-sm-3 pull-right">
-				<img class="vision-image img-responsive" src="/resources/images/vision/inspire-clear.png">
+			<div class="col-xs-12"><a href="vision-report.php" class="back">Back<span class="sr-only">Go back to the Vision Report page</span></a></div>
+			<div class="col-xs-12 col-md-3 pull-right  hidden-xs hidden-sm">
+				<img class="vision-image img-responsive" src="/resources/images/vision/inspire-clear.png" alt="" aria-hidden="true">
 			</div>
-			<div class="col-xs-12 col-sm-9">
+			<div class="col-xs-12 col-md-9">
 				<p class="lead">We will inspire in others a vivid sense of the value that local charities create every day and stimulate giving, here, where we live.</p>
 				
 				<p>We believe that there is too much talk about what charities fail to do&dash;about scandals, overhead, waste, and duplication. Our focus in 2013&dash;and for the decade before it&dash;was on spotlighting the value that our network of charities brings to this community. We want to inspire volunteering and giving, but we also want to change the way people think about the nonprofit sector. We survey our charities every other year (we don&rsquo;t want to burden them; we want to help them!) and here is what they reported in 2012:</p>

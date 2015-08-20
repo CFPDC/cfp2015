@@ -13,7 +13,7 @@ include('includes/functions.php');
 <main class="container-fluid search-results secondary" role="main">
 <div class="row">
 	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
-		<ul style="list-style: none;">
+		<ul class="list-unstyled">
 			<li><a href="about-us.php">About Us</a></li>
 			<li><a href="cfp-team.php">Team</a></li>
 			<li><a href="cfp-reviewers.php">Our Reviewers</a></li>
@@ -25,11 +25,11 @@ include('includes/functions.php');
 	</aside>
 	<section class="col-xs-12 col-sm-9">
 		<div class="row">
-			<p><a href="vision-report.php" class="back">Back<span class="sr-only">Go back to the Vision Report page</span></a></p>
-			<div class="col-xs-12 col-sm-3 pull-right">
-				<img class="vision-image img-responsive" src="/resources/images/vision/convene-clear.png">
+			<div class="col-xs-12"><a href="vision-report.php" class="back">Back<span class="sr-only">Go back to the Vision Report page</span></a></div>
+			<div class="col-xs-12 col-md-3 pull-right  hidden-xs hidden-sm">
+				<img class="vision-image img-responsive" src="/resources/images/vision/educate-clear.png" alt="" aria-hidden="true">
 			</div>
-			<div class="col-xs-12 col-sm-9">
+			<div class="col-xs-12 col-md-9">
 				<p class="lead">We will convene these two communities, nonprofits and donors, with the goal of making them one.</p>
 				
 				<p>On December 9th, the Catalogue for Philanthropy celebrated its 11th year at Inspiration to Action 2013. With over 300 friends and supporters in attendance, the event took place at the Shakespeare Theatre&rsquo;s Sidney Harman Hall. Some of Washington&rsquo;s best small charities mingled with Catalogue supporters during a cocktail hour, where they watched members of Chess Challenge play competitive games (with life&dash;size pieces), and were treated to the sights of beautiful art from Art Enables and the sounds of classical music from DC Youth Orchestra Program. In the theater, Joy of Motion Dance Center, Miriam&rsquo;s Kitchen, The Barker Foundation and Horton&rsquo;s Kids moved and inspired the audience with stories and performances showcasing their work. A dinner and auction followed the theater performances, resulting in $100,000 raised for the Catalogue to strengthen and expand its mission in Greater Washington.</p>

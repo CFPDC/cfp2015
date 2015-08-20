@@ -8,12 +8,12 @@ include('includes/functions.php');
 	</div>
 </div>
 <div class="clearfix hero">
-  <img src="http://lorempixel.com/1200/500/" alt="First slide">
+	<img src="http://lorempixel.com/1200/500/" alt="First slide">
 </div>
 <main class="container-fluid search-results secondary" role="main">
 <div class="row">
 	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
-		<ul style="list-style: none;">
+		<ul class="list-unstyled">
 			<li><a href="about-us.php">About Us</a></li>
 			<li><a href="cfp-team.php">Team</a></li>
 			<li><a href="cfp-reviewers.php">Our Reviewers</a></li>
@@ -24,38 +24,34 @@ include('includes/functions.php');
 		</ul>
 	</aside>
 	<section class="col-xs-12 col-sm-9">
-		<div class="col-sm-12">
-			<div class="row">
-				<p>At the Catalogue for Philanthropy, we are agents for change, dedicated to the following goals. We will:</p>
+		<p class="lead">At the Catalogue for Philanthropy, we are agents for change, dedicated to the following goals. We will:</p>
+		<div class="row">
+			<div class="col-sm-6 col-md-4">
+				<a href="vision-engage.php" class="thumbnail vision engage"></a>
 			</div>
-			<div class="row">
-				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="vision-engage.php" class="thumbnail engage"></a>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="vision-create.php" class="thumbnail create"></a>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="vision-empower.php" class="thumbnail empower"></a>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="vision-expand.php" class="thumbnail expand"></a>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="vision-educate.php" class="thumbnail educate"></a>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="vision-convene.php" class="thumbnail convene"></a>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="vision-collaborate.php" class="thumbnail collaborate"></a>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="vision-inspire.php" class="thumbnail inspire"></a>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-4">
-					<a href="vision-transform.php" class="thumbnail transform"></a>
-				</div>
+			<div class="col-sm-6 col-md-4">
+				<a href="vision-create.php" class="thumbnail vision create"></a>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<a href="vision-empower.php" class="thumbnail vision empower"></a>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<a href="vision-expand.php" class="thumbnail vision expand"></a>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<a href="vision-educate.php" class="thumbnail vision educate"></a>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<a href="vision-convene.php" class="thumbnail vision convene"></a>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<a href="vision-collaborate.php" class="thumbnail vision collaborate"></a>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<a href="vision-inspire.php" class="thumbnail vision inspire"></a>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<a href="vision-transform.php" class="thumbnail vision transform"></a>
 			</div>
 		</div>
 	</section>

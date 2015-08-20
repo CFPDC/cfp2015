@@ -13,7 +13,7 @@ include('includes/functions.php');
 <main class="container-fluid search-results secondary" role="main">
 <div class="row">
 	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
-		<ul style="list-style: none;">
+		<ul class="list-unstyled">
 			<li><a href="about-us.php">About Us</a></li>
 			<li><a href="cfp-team.php">Team</a></li>
 			<li><a href="cfp-reviewers.php">Our Reviewers</a></li>
@@ -25,11 +25,11 @@ include('includes/functions.php');
 	</aside>
 	<section class="col-xs-12 col-sm-9">
 		<div class="row">
-			<p><a href="vision-report.php" class="back">Back<span class="sr-only">Go back to the Vision Report page</span></a></p>
-			<div class="col-xs-12 col-sm-3 pull-right">
-				<img class="vision-image img-responsive" src="/resources/images/vision/expand-clear.png">
+			<div class="col-xs-12"><a href="vision-report.php" class="back">Back<span class="sr-only">Go back to the Vision Report page</span></a></div>
+			<div class="col-xs-12 col-md-3 pull-right hidden-xs hidden-sm">
+				<img class="vision-image img-responsive" src="/resources/images/vision/expand-clear.png" alt="" aria-hidden="true">
 			</div>
-			<div class="col-xs-12 col-sm-9">
+			<div class="col-xs-12 col-md-9">
 				<p class="lead">We will expand our audience through traditional and social media to raise awareness, increase visibility, and accelerate the success of our family of high-impact nonprofits.</p>
 				<p>Our motive for increasing the Catalogue for Philanthropy&rsquo;s visibility is simple: when the Catalogue has a strong presence in the community, our charities win in big ways. They get more exposure to donors, volunteers, and partners who can help them broaden their impact. They are in a stronger position when they apply for grants and awards thanks to the Catalogue&rsquo;s well&dash;known vetting process and &ldquo;seal of approval.&rdquo; So, forgive us for being bold but &hellip; we&rsquo;re ready to get loud!</p>
 				<p>In November, we teamed up with the Washington City Paper on <a href="http://www.washingtoncitypaper.com/articles/45081/give-it-up-dc-2013/">&ldquo;Give it Up, D.C.&rdquo;</a>  The paper&rsquo;s annual charitable giving guide featured our 2013&dash;14 CFP charities, along with their wish lists and volunteer opportunities. We celebrated the launch with a City Paper/Catalogue party at City Tap House in D.C., bringing both audiences together and toasting philanthropy in Greater Washington.  The Catalogue also partnered with Washingtonian Magazine on a full&dash;page feature in the December issue that <a href="http://www.washingtonian.com/articles/work-education/how-your-donations-to-a-charity-make-a-difference/">highlighted 26 of our charities and their wish lists.</a> Combined, the circulation of these publications put the Catalogue for Philanthropy&rsquo;s name in front of nearly 500,000 Washingtonians during the 2013 giving season! </p>
