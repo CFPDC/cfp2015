@@ -106,7 +106,7 @@
 							<a href="how-to-help.php" target="_self" title="View events with our nonprofits">How To Give</a>
 						</li>
 						<li>
-							<a href="our-nonprofits.php" target="_self" title="View volunteer opportunities with our nonprofits">Volunteer Opportunities</a>
+							<a href="volunteer-opportunities.php" target="_self" title="View volunteer opportunities with our nonprofits">Volunteer Opportunities</a>
 						</li>
 					</ul>
 				</li>
@@ -214,7 +214,7 @@
 										<a href="how-to-help.php" target="_self" title="View events with our nonprofits">How To Give</a>
 									</li>
 									<li>
-										<a href="our-nonprofits.php" target="_self" title="View volunteer opportunities with our nonprofits">Volunteer Opportunities</a>
+										<a href="volunteer-opportunities.php" target="_self" title="View volunteer opportunities with our nonprofits">Volunteer Opportunities</a>
 									</li>
 								</ul>
 							</div>

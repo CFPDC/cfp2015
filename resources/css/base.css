@@ -30,7 +30,8 @@ h3 {
     font-family: 'ProximaNovaBold';
     font-size: 18px;
     font-size: 1.8rem;
-    margin-top: 75px;
+    margin-top: 0;
+    /* changed to global 0px need to make this more specific margin-top: 75px;*/
     text-transform: uppercase;
 }
 
@@ -79,6 +80,30 @@ form small {
     font-family: 'ProximaNovaThin';
     font-size: 13px;
     font-size: 1.3rem;
+}
+
+strong {
+    color: #101214;
+}
+
+/* do not group these rules */
+*::-webkit-input-placeholder {
+    color: #292929;
+}
+
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: #292929;
+}
+
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: #292929;
+}
+
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #292929;
 }
 
 hr {
@@ -142,6 +167,18 @@ blockquote ol:last-child, blockquote p:last-child, blockquote ul:last-child {
 
 p.img-above {
     margin-top: 15px;
+}
+
+.normal {
+    margin-bottom: 10px;
+}
+
+.normal li {
+    margin-bottom: 5px;
+}
+
+.well .normal {
+    margin-bottom: 0;
 }
 
 .btn {
@@ -246,7 +283,11 @@ p.img-above {
 }
 
 .well-lg {
-    padding-: 25px;
+    padding: 25px;
+}
+
+.well-sm {
+    padding: 5px;
 }
 
 small {
@@ -255,6 +296,18 @@ small {
 
 small a {
     font-family: 'ProximaNovaRegular';
+}
+
+dl > div {
+    margin-bottom: 35px;
+}
+
+dl dt {
+    margin-bottom: 5px;
+}
+
+dl > div a {
+    cursor: pointer;
 }
 
 /*--- form errors ---*/
@@ -314,6 +367,24 @@ form .error strong {
 
 .adobeBlank {
     font-size: 0;
+}
+
+.back-top {
+    display: block;
+    margin-left: 20px;
+    margin-top: 5px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.back-top:before {
+    content: "\f062";
+    font-family: 'FontAwesome';
+    height: 20px;
+    left: 3px;
+    position: absolute;
+    top: -2px;
+    width: 15px;
 }
 
 /*--- end of form errors ---*/
@@ -1110,6 +1181,36 @@ main address > span, address > a {
 .login-form strong.error {
     bottom: -12px;
     left: 0;
+}
+
+/*---FAQ page---*/
+.faq-list-container {}
+
+.faq-list-container dt {
+    margin-bottom: 15px;
+}
+
+.faq-list-container dt, .faq-list-container dd {
+    position: relative;
+    padding-left: 40px;
+}
+
+.faq-list-container dt:before, .faq-list-container dd:before {
+    content: "Q:";
+    left: 0;
+    position: absolute;
+    font-family: 'LibreBaskervilleBold';
+    font-size: 26px;
+    font-size: 2.6rem;
+    top: -10px;
+}
+
+.faq-list-container dd:before {
+    content: "A:";
+}
+
+.faq-questions {
+    margin-bottom: 20px;
 }
 
 /*Who We Are pages*/
