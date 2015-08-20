@@ -1617,6 +1617,7 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     .one-column-form .submit-button > .btn {
         display: table-cell;
+        width: auto;
     }
     form.two-column-form {
         text-align: right;
