@@ -13,7 +13,7 @@ include('includes/functions.php');
 <main class="container-fluid search-results secondary" role="main">
 <div class="row">
 	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
-		<ul style="list-style: none;">
+		<ul class="list-unstyled">
 			<li><a href="about-us.php">About Us</a></li>
 			<li><a href="cfp-team.php">Team</a></li>
 			<li><a href="cfp-reviewers.php">Our Reviewers</a></li>
@@ -25,12 +25,12 @@ include('includes/functions.php');
 	</aside>
 	<section class="col-xs-12 col-sm-9">
 		<div class="row">
-			<p><a href="vision-report.php" class="back">Back<span class="sr-only">Go back to the Vision Report page</span></a></p>
-			<div class="col-xs-12 col-sm-3 pull-right">
-				<img class="vision-image img-responsive" src="/resources/images/vision/engage-clear.png">
-				<img class="vision-image img-responsive" src="/resources/images/vision/info-engage.png">
+			<div class="col-xs-12"><a href="vision-report.php" class="back">Back<span class="sr-only">Go back to the Vision Report page</span></a></div>
+			<div class="col-xs-12 col-md-3 pull-right hidden-xs hidden-sm">
+				<img class="img-responsive" src="/resources/images/vision/engage-clear.png" alt="" aria-hidden="true">
+				<img class="vision-image img-responsive" src="/resources/images/vision/info-engage.png" aria-hidden="true" alt="Image of a pie chart showing the breakdown of 2013-2014 charities by catagories">
 			</div>
-			<div class="col-xs-12 col-sm-9">
+			<div class="col-xs-12 col-md-9">
 				<p class="lead">We will engage the best minds in our community, pooling their knowledge to evaluate applicant charities and help us select the very best.</p>
 				
 				<p>We all approach charitable giving with the best intentions, but the truth is that exercising due diligence before making a donation is no small endeavor. Donors are always encouraged to analyze a charity’s finances, examine its programs, visit the site, and talk to the leaders &hellip; but between work, family, and other commitments, who has the time?</p>

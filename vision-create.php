@@ -13,7 +13,7 @@ include('includes/functions.php');
 <main class="container-fluid search-results secondary" role="main">
 <div class="row">
 	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
-		<ul style="list-style: none;">
+		<ul class="list-unstyled">
 			<li><a href="about-us.php">About Us</a></li>
 			<li><a href="cfp-team.php">Team</a></li>
 			<li><a href="cfp-reviewers.php">Our Reviewers</a></li>
@@ -25,15 +25,15 @@ include('includes/functions.php');
 	</aside>
 	<section class="col-xs-12 col-sm-9">
 		<div class="row">
-			<p><a href="vision-report.php" class="back">Back<span class="sr-only">Go back to the Vision Report page</span></a></p>
-			<div class="col-xs-12 col-sm-3 pull-right">
-				<img class="vision-image img-responsive" src="/resources/images/vision/create-clear.png">
+			<div class="col-xs-12"><a href="vision-report.php" class="back">Back<span class="sr-only">Go back to the Vision Report page</span></a></div>
+			<div class="col-xs-12 col-md-3 pull-right hidden-xs hidden-sm">
+				<img class="vision-image img-responsive" src="/resources/images/vision/create-clear.png" alt="" aria-hidden="true">
 				<h2 class="vs-heading">27,000</h2>
 				<p>People who received the 2013-14 Catalogue in the mail, at events, workshops, galas and meetings </p>
 				<h2 class="vs-heading">$3,000,000+</h2>
 				<p>Amount raised in 2013</p>
 			</div>
-			<div class="col-xs-12 col-sm-9">
+			<div class="col-xs-12 col-md-9">
 				<p class="lead">We will create an informative, imaginative, and attention-seizing catalogue (and website) to share our charities&rsquo; stories and to honor and enrich their work.</p>
 				<p>Anyone can share statistics. The challenge is using them to create powerful stories.</p>
 				<p>The Catalogue for Philanthropy’s flagship product, our print catalogue, brings each charity’s mission, programs and impact to life through storytelling and imagery.  These accounts live not only in our print catalogue and <a href="http://en.calameo.com/read/0012788674c703b42cb3e">digital edition</a>, but also on our website, in our blog posts, in the press, and &hellip; anywhere we can spread the word about the great work that our charities are doing every day of the year.</p>

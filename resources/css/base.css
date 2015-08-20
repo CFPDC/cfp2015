@@ -136,6 +136,14 @@ blockquote ol:last-child, blockquote p:last-child, blockquote ul:last-child {
     outline: 2px solid #487896;
 }
 
+.img-responsive {
+    width: 100%;
+}
+
+p.img-above {
+    margin-top: 15px;
+}
+
 .btn {
     border-radius: 0;
     font-family: 'ProximaNovaSemibold';
@@ -245,6 +253,10 @@ small {
     font-family: 'ProximaNovaSemiboldItalic';
 }
 
+small a {
+    font-family: 'ProximaNovaRegular';
+}
+
 /*--- form errors ---*/
 
 div[class^=errors-] {
@@ -330,6 +342,9 @@ form .error strong {
 }
 
 /*---NAV---*/
+.navbar-toggle {
+    margin-right: 0;
+}
 
 .primary-nav, .secondary-nav {
     display: none;
@@ -697,7 +712,7 @@ form .error strong {
 }
 
 /*---Search/Results page---*/
-.secondary {
+main.secondary {
     margin-top: 50px;
 }
 
@@ -1162,6 +1177,7 @@ main address > span, address > a {
 .team-member h2 > small, .team-member h2 > small > a {
     display: block;
 }
+
 .longlist {
     width: 500px;
 }
@@ -1175,9 +1191,10 @@ main address > span, address > a {
 
 .vision {
     background: url("/resources/images/vision-sprite.jpg") no-repeat transparent 0 0 scroll;
-    height: 173px;
-    width: 208px;
     display: block;
+    height: 173px;
+    margin: 0 auto 20px;
+    width: 208px;
 }
 
 .vision.create {
@@ -1285,35 +1302,44 @@ main address > span, address > a {
 }
 
 .vision-image {
-    margin-bottom: 50px;
+    margin: 50px auto 0;
+    max-width: 194px;
 }
+
 .back {
-   margin-left: 30px; 
-   margin-bottom: 15px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
 }
+
 .back:before {
     content: "\f060";
     font-family: 'FontAwesome';
-    height: 5px;
-    width: 5px;
+    height: 22px;
+    width: 15px;
     position: absolute;
-    left: 10px;
+    left: 0;
 }
+
 .forward {
-   margin-right: 12px; 
+    padding-right: 20px;
+    position: relative;
 }
+
 .forward:before {
     content: "\f061";
     font-family: 'FontAwesome';
-    height: 5px;
-    width: 5px;
+    height: 22px;
+    width: 15px;
     position: absolute;
-    right: 15px;
+    right: 0;
 }
+
 .vs-heading {
-    color: #FDAF17;
+    color: #05583D;
     margin-bottom: 0;
 }
+
 .inspire-p {
     text-indent: 1em;
 }
@@ -1570,7 +1596,7 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .home-how-help-section .btn {
         width: auto;
     }
-    .secondary {
+    main.secondary {
         margin-top: 85px;
     }
     .search-results .caption .btn {
@@ -1696,6 +1722,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     .header-logo {
         max-width: 630px;
+    }
+    .vision {
+        margin: 0 0 20px;
     }
 }
 
