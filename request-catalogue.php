@@ -19,10 +19,10 @@ include('includes/functions.php');
     </p>
     <ol>
       <li>
-        View the Catalogue online: Choose our interactive, digital edition of the Catalogue if you like flipping the pages on your desktop or mobile device. (You can also choose a pdf if you prefer.) Download the Catalogue as a PDF!
+        View the Catalogue online: Choose our interactive, <a href="http://en.calameo.com/read/0012788670d83233749da" title="View the Catalogue for Philanthropy catalogue online with an interative reader">digital edition</a> of the Catalogue if you like flipping the pages on your desktop or mobile device. Download the Catalogue as a <a href="http://www.cfp-dc.org/images/pdfs/Pdf2014/Catalogue2014dc.pdf" title="View the latest Catalogue for Philanthropy catalogue as a PDF">PDF</a>!
       </li>
       <li>
-        Browse our charities: Explore our charities by name, city, populations served, and even by affiliations such as Combined Federal Campaign or United Way members. Click here.<br>
+        Browse our charities: Explore our charities by name, city, populations served, and even by affiliations such as Combined Federal Campaign or United Way members. <a href="our-nonprofits.php" title="Browse our charities">Click here</a>.<br>
         <small>
         <span>
         Note:
@@ -169,7 +169,22 @@ include('includes/functions.php');
             <div class="request-questions">
               <div>
                 <label for="how_learn">How did you hear about the Catalogue?</label>
-                <input type="text" id="how_learn" name="how_learn">
+                <select id="how_learn" name="how_learn" class="form-control">
+                  <option value="" selected="">Select</option>
+                  <option>Catalogue for Philanthropy charity</option>
+                  <option>Received a Catalogue in the mail</option>
+                  <option>Social media: Facebook/Twitter</option>
+                  <option>Fundraising campaign </option>
+                  <option>WAMU 88.5 FM</option>
+                  <option>Washington CityPaper</option>
+                  <option>Washingtonian Magazine</option>
+                  <option>Washington Life Magazine</option>
+                  <option>The Washington Post </option>
+                  <option>Other media (news, magazine articles, etc.)</option>
+                  <option>Web search</option>
+                  <option>Word of mouth: friend/family/colleague</option>
+                  <option>Other</option>
+                </select>
               </div>
               <div>
                 <label for="how_learn_other">If ‘Other’, please specify</label>
@@ -179,7 +194,7 @@ include('includes/functions.php');
           </div>
           <div class="col-xs-12">
             <div class="comments">
-              <label for="notes">Comments <small>(optional)</small></label>
+              <label for="notes">Comments</label>
               <textarea class="form-control" id="notes" name="notes" rows="6">Add a comment&hellip;
               </textarea>
             </div>

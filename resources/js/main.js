@@ -970,6 +970,16 @@ $(function() {
 	global.jumplink();
 	global.navMenu();
 
+	//make all anchor tags 'clickable' by enter key
+	$('a').on('keydown', function(event) {
+		if (event.keyCode === 13) {
+			event.preventDefault();
+			$(this).click();
+		}
+		return true;
+	});
+
+
 	//when user clicks the select all link, check the appropriate checkboxes and update text
 	$('.select-all').on('click', function() {
 		var $this = $(this),
