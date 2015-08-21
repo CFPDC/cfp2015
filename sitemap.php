@@ -17,6 +17,12 @@ include('includes/functions.php');
         <ul class="sitemap-list">
           <li>
             <a href="https://cgi-cfp.herokuapp.com/about-us.php" title="Catalogue for Philanthropy">About The Catalogue for Philanthropy</a>
+            <ul>
+            <li><a href="https://cgi-cfp.herokuapp.com/vetting.php" title="Catalogue for Philanthropy">Vetting and Selecting</a></li>
+            <li><a href="https://cgi-cfp.herokuapp.com/storytelling.php" title="Catalogue for Philanthropy">Storytelling</a></li>
+            <li><a href="https://cgi-cfp.herokuapp.com/training.php" title="Catalogue for Philanthropy">Training and Educating</a></li>
+            <li><a href="https://cgi-cfp.herokuapp.com/sharing.php" title="Catalogue for Philanthropy">Spreading the Word</a></li>
+          </ul>
           </li>
           <li>
             <a href="https://cgi-cfp.herokuapp.com/cfp-team.php" title="Catalogue for Philanthropy">About The Team</a>

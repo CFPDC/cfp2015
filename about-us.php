@@ -39,10 +39,10 @@ include('includes/functions.php');
 		</div>
 		<div class="row">
 			<ul class="about-list list-unstyled col-sm-12">
-				<li><a href="#">Vetting:</a> An overview of our application</li>
-				<li><a href="#">Storytelling:</a> Communicating the mission and impact of our nonprofits</li>
-				<li><a href="#">Training:</a> An overview of the educational seminars and marketing resources we provide to our charities</li>
-				<li><a href="#">Sharing:</a> Using print and digital media to connect citizens with our charities</li>
+				<li><a href="vetting.php">Vetting:</a> An overview of our application</li>
+				<li><a href="storytelling.php">Storytelling:</a> Communicating the mission and impact of our nonprofits</li>
+				<li><a href="training.php">Training:</a> An overview of the educational seminars and marketing resources we provide to our charities</li>
+				<li><a href="sharing.php">Sharing:</a> Using print and digital media to connect citizens with our charities</li>
 			</ul>
 		</div>
 	</div>
