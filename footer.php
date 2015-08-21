@@ -30,7 +30,7 @@
 					<a href="apply.php">Apply<span class="sr-only"> to The Catalogue for Philanthropy</span></a>
 				</li>
 				<li>
-					<a href="sitemap.php">Sitemap</a>
+					<a href="sitemap.php">Site Map</a>
 				</li>
 				<li>
 					<a href="privacy.php">Privacy Policy</a>

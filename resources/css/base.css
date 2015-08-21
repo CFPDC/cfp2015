@@ -1467,6 +1467,37 @@ main address > span, address > a {
     text-transform: capitalize;
 }
 
+/*---Sitemap---*/
+.sitemap-list {
+    padding-left: 8px;
+}
+
+.sitemap-list li {
+    list-style: none;
+    padding-left: 15px;
+    position: relative;
+}
+
+.sitemap-list li ul {
+    margin-top: 5px;
+    padding-left: 3px;
+}
+
+.sitemap-list li ul li {
+    margin-bottom: 5px;
+}
+
+.sitemap-list li:before {
+    color: #FDAF17;
+    content: "\f04d";
+    font-family: 'FontAwesome';
+    font-size: 7px;
+    font-size: 0.7rem;
+    position: absolute;
+    left: 0;
+    top: 6px;
+}
+
 /*---FOOTER---*/
 footer {
     background: #487896;
