@@ -24,12 +24,11 @@ include('includes/functions.php');
 		</ul>
 	</aside>
 	<section class="col-xs-12 col-sm-9">
-		<div class="row">
-			<div class="col-xs-12"><a href="vision-report.php" class="back">Back<span class="sr-only">Go back to the Vision Report page</span></a></div>
 			<div class="col-xs-12 col-md-3 pull-right hidden-xs hidden-sm">
 				<img class="vision-image img-responsive" src="/resources/images/vision/empower-clear.png" alt="" aria-hidden="true">
 			</div>
 			<div class="col-xs-12 col-md-9">
+		<a href="vision-report.php" class="back">Back<span class="sr-only">Go back to the Vision Report page</span></a>
 				<p class="lead">We will empower this network of charities with programs and materials that fulfill and extend their missions.</p>
 				<p>Just because our name is &ldquo;the Catalogue&rdquo; doesn&rsquo;t mean our work stops when the last envelope leaves the office. In fact, it means our work has just begun. With the acceptance of a new class of charities, the Catalogue&rsquo;s team is dedicated to helping each organization build on and fuel its own success through training and educational opportunities. By helping our charities become more effective at sharing stories, connecting with donors, and communicating with the public at large, we leverage the work that the Catalogue does on their behalf, and increase their ability to make our communities stronger. Below are some of the ways we do this during the year:</p>
 				<div class="well">
@@ -50,8 +49,6 @@ include('includes/functions.php');
 				<p><b></b></p>
 				<a class="forward pull-right" href="vision-expand.php">Next: Expand <span class="sr-only">Visit the Expand page</span></a>
 			</div>
-			
-		</div>
 	</section>
 </div>
 </main>

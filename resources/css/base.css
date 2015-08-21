@@ -1289,7 +1289,25 @@ main address > span, address > a {
     font-size: 18px;
     font-size: 1.8rem;
 }
+/*Vetting page*/
 
+.apply-heading {
+    color: #931621;
+}
+.review-heading {
+    color: #05583D;
+}
+.process-heading {
+    color: #934683;
+}
+.vetted-heading {
+    color: #337ab7;
+}
+/*Sharing Page*/
+.best-of-badge-sharing {
+    max-width: 350px;
+}
+/*Vision Pages*/
 .vision {
     background: url("/resources/images/vision-sprite.jpg") no-repeat transparent 0 0 scroll;
     display: block;

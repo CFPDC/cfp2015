@@ -24,12 +24,11 @@ include('includes/functions.php');
 		</ul>
 	</aside>
 	<section class="col-xs-12 col-sm-9">
-		<div class="row">
-			<div class="col-xs-12"><a href="vision-report.php" class="back">Back<span class="sr-only">Go back to the Vision Report page</span></a></div>
 			<div class="col-xs-12 col-md-3 pull-right hidden-xs hidden-sm">
 				<img class="vision-image img-responsive" src="/resources/images/vision/educate-clear.png" alt="" aria-hidden="true">
 			</div>
 			<div class="col-xs-12 col-md-9">
+				<a href="vision-report.php" class="back">Back<span class="sr-only">Go back to the Vision Report page</span></a>
 				<p class="lead">We will educate donors about the essential work that community&dash;based nonprofits perform.</p>
 				<p>Though her day job may be President and Editor of the Catalogue for Philanthropy, Barbara Harman&rsquo;s passion for philanthropy extends well beyond the walls of the CFP. From sharing the stories of our charities, to evaluating the nonprofit evaluators, Barbara&rsquo;s dedication to educating donors about the work of community&dash;based nonprofits has made her a sought&dash;after speaker and writer. In 2013 she offered the keynote address at George Washington University&rsquo;s 5th annual Women &amp; Philanthropy Forum, spoke at an AFP panel on impact evaluation with Jacob Harold of Guidestar, and lead a discussion on powerful storytelling at the America’s Charities Membership Assembly.</p>
 				
@@ -43,7 +42,6 @@ include('includes/functions.php');
 				Foundation. (No, we don&rsquo;t know how she does it all &hellip; but we&rsquo;re impressed!).</p>
 				<a class="forward pull-right" href="vision-convene.php">Next: Convene <span class="sr-only">Visit the Convene page</span></a>
 			</div>
-		</div>
 	</section>
 </div>
 </main>

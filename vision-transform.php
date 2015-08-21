@@ -24,12 +24,11 @@ include('includes/functions.php');
 		</ul>
 	</aside>
 	<section class="col-xs-12 col-sm-9">
-		<div class="row">
-			<div class="col-xs-12"><a href="vision-report.php" class="back">Back<span class="sr-only">Go back to the Vision Report page</span></a></div>
 			<div class="col-xs-12 col-md-3 pull-right hidden-xs hidden-sm">
 				<img class="vision-image img-responsive" src="/resources/images/vision/transform-clear.png" alt="" aria-hidden="true">
 			</div>
 			<div class="col-xs-12 col-md-9">
+			<a href="vision-report.php" class="back">Back<span class="sr-only">Go back to the Vision Report page</span></a>
 				<p class="lead">We will transform this community, turning watchers into doers, and bystanders into givers.</p>
 				
 				<p>Engaging donors and increasing resources for our charities&ndash;fuel for their growth&ndash;are central Catalogue objectives. We do this by creating engaging volunteer opportunities (more than 200 events posted in 2013!), and multiple opportunities to give&ndash;easily.</p>
@@ -41,7 +40,6 @@ include('includes/functions.php');
 				</div>
 				<p class="img-above">So&hellip; what&rsquo;s next? The Catalogue for Philanthropy aims to be as well known in the Washington region as the Red Cross is during an emergency. An ambitious goal.  But we also want to see our model spread. Everywhere we go people tell us that &ldquo;there should be a Catalogue for Philanthropy in every region in the country&rdquo; and&hellip; we agree!  The trick is getting there.  The Catalogue relies on the <a href="sponsors.php">support of passionate, community&dash;minded people</a> to keep our vision alive.  Join the movement! Support the Catalogue for Philanthropy in 2014.</p>
 			</div>
-		</div>
 	</section>
 </div>
 </main>

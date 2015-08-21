@@ -26,7 +26,7 @@ include('includes/functions.php');
 	<section class="col-sm-8">
 		<div class="media team-member">
 			<div class="media-left">
-				<img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=34998&g2_serialNumber=2" alt="...">
+				<img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=34998&g2_serialNumber=2" aria-hidden="true">
 			</div>
 			<div class="media-body">
 				<h2 class="media-heading">Barbara Harman
@@ -40,7 +40,7 @@ include('includes/functions.php');
 		</div>
 		<div class="media team-member">
 			<div class="media-left">
-				<img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=35010&g2_serialNumber=2" alt="...">
+				<img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=35010&g2_serialNumber=2" aria-hidden="true">
 			</div>
 			<div class="media-body">
 				<h2 class="media-heading">Nancy Swartz
@@ -53,7 +53,7 @@ include('includes/functions.php');
 		</div>
 		<div class="media team-member">
 			<div class="media-left">
-				<img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=39236&g2_serialNumber=2" alt="...">
+				<img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=39236&g2_serialNumber=2" aria-hidden="true">
 			</div>
 			<div class="media-body">
 				<h2 class="media-heading">Emma Bloksberg-Fireovid
@@ -65,7 +65,7 @@ include('includes/functions.php');
 		</div>
 		<div class="media team-member">
 			<div class="media-left">
-				<img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40844&g2_serialNumber=2" alt="...">
+				<img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40844&g2_serialNumber=2" aria-hidden="true">
 			</div>
 			<div class="media-body">
 				<h2 class="media-heading">Emily Flanagan
@@ -78,7 +78,7 @@ include('includes/functions.php');
 		</div>
 		<div class="media team-member">
 			<div class="media-left">
-				<img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=35003&g2_serialNumber=4" alt="...">
+				<img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=35003&g2_serialNumber=4" aria-hidden="true">
 			</div>
 			<div class="media-body">
 				<h2 class="media-heading">Aline Newman
@@ -90,7 +90,7 @@ include('includes/functions.php');
 		</div>
 		<div class="media team-member">
 			<div class="media-left">
-				<img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40840&g2_serialNumber=2" alt="...">
+				<img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40840&g2_serialNumber=2" aria-hidden="true">
 			</div>
 			<div class="media-body">
 				<h2 class="lead media-heading">Holly Richardson

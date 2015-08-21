@@ -24,8 +24,6 @@ include('includes/functions.php');
 		</ul>
 	</aside>
 	<section class="col-xs-12 col-sm-9">
-		<div class="row">
-			<div class="col-xs-12"><a href="vision-report.php" class="back">Back<span class="sr-only">Go back to the Vision Report page</span></a></div>
 			<div class="col-xs-12 col-md-3 pull-right hidden-xs hidden-sm">
 				<img class="vision-image img-responsive" src="/resources/images/vision/create-clear.png" alt="" aria-hidden="true">
 				<h2 class="vs-heading">27,000</h2>
@@ -34,6 +32,7 @@ include('includes/functions.php');
 				<p>Amount raised in 2013</p>
 			</div>
 			<div class="col-xs-12 col-md-9">
+		<a href="vision-report.php" class="back">Back<span class="sr-only">Go back to the Vision Report page</span></a>
 				<p class="lead">We will create an informative, imaginative, and attention-seizing catalogue (and website) to share our charities&rsquo; stories and to honor and enrich their work.</p>
 				<p>Anyone can share statistics. The challenge is using them to create powerful stories.</p>
 				<p>The Catalogue for Philanthropy’s flagship product, our print catalogue, brings each charity’s mission, programs and impact to life through storytelling and imagery.  These accounts live not only in our print catalogue and <a href="http://en.calameo.com/read/0012788674c703b42cb3e">digital edition</a>, but also on our website, in our blog posts, in the press, and &hellip; anywhere we can spread the word about the great work that our charities are doing every day of the year.</p>
@@ -46,8 +45,6 @@ include('includes/functions.php');
 				<p>Our website underwent an exciting revision this year: we went &ldquo;responsive&rdquo;! This means that cfp-dc.org is readable and accessible on desktops, tablets and, most importantly, phones. We look forward to engaging a new audience of young people, and we think reaching them on their phones is the way to go. Besides, mobile browsers command 20% of all mobile application use, so &hellip; going mobile is where it&rsquo;s at, and we&rsquo;re already seeing results. After implementing responsive design, our website saw a 50 percent increase in mobile traffic during the 2013-14 giving season. And it continues to grow!</p>
 				<a class="forward pull-right" href="vision-empower.php">Next: Empower <span class="sr-only">Visit the Empower page</span></a>
 			</div>
-			
-		</div>
 	</section>
 </div>
 </main>
