@@ -113,7 +113,7 @@ include('includes/functions.php');
                 <a href="https://cgi-cfp.herokuapp.com/faq.php" title="Catalogue for Philanthropy">Freqently Asked Questions</a>
               </li>
               <li>
-                <a href="https://cgi-cfp.herokuapp.com/rfp.php" title="Catalogue for Philanthropy">Application Guidelines &amp; Instructions</a>
+                <a href="https://cgi-cfp.herokuapp.com/application-instructions.php" title="Catalogue for Philanthropy">Application Guidelines &amp; Instructions</a>
               </li>
             </ul>
           </li>

@@ -33,7 +33,7 @@ include('includes/functions.php');
 			<div class="col-xs-8 col-xs-offset-2 col-sm-12 col-sm-offset-0 col-md-4 well">
 				<h3>Quick Links</h3>
 				<ul class="list-unstyled normal">
-					<li><a href="" title="The Catalogue for Philanthropy application guidelines and instructions"><span class="sr-only">CFP's </span>Application Guidelines and Instructions</a></li>
+					<li><a href="application-instructions.php" title="The Catalogue for Philanthropy application guidelines and instructions"><span class="sr-only">CFP's </span>Application Guidelines and Instructions</a></li>
 					<li><a href="http://www.catalogueforphilanthropy-dc.org/applynow/apps_home.php">Application</a></li>
 					<li><a href="faq.php" title="Visit The Catalogue for Philanthropy Frequently Asked Questions page">FAQ<span class="sr-only"> - frequently asked questions about applying to The Catalogue for Philanthropy</span></a></li>
 				</ul>
