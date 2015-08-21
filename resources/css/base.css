@@ -181,6 +181,15 @@ p.img-above {
     margin-bottom: 0;
 }
 
+.alert-danger {
+    background-color: #F6E6E6;
+    color: #9E3735;
+}
+
+.alert-danger a {
+    text-decoration: underline;
+}
+
 .btn {
     border-radius: 0;
     font-family: 'ProximaNovaSemibold';
