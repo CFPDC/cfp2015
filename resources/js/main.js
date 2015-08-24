@@ -63,6 +63,11 @@ var global = {
 		if (window.location.search.indexOf('subscribe=true') > -1) {
 			//alert('track present');
 		}
+	},
+	carouselPlayPause: function() {
+		var button = $(this).attr('id');
+		console.log($(this));
+
 	}
 };
 
@@ -120,7 +125,7 @@ function homeSearchActiveToggle() {
 		var activeEl = this;
 		$('.home-search button.active').not(this).removeClass('active');
 
-		if (!$(this).hasClass('view-all-btn')) {
+		if (!$(this).hasClass('active')) {
 			$(this).toggleClass('active');
 		}
 		/*if ($('.home-search button').hasClass('active')) {
@@ -978,6 +983,20 @@ $(function() {
 	listViewResults.nonprofitCollapse();
 	global.jumplink();
 	global.navMenu();
+	$('.carouselButtons button').on('click', function() {
+		var button = $(this),
+			buttonFocus = button.siblings(),
+			liveText = $(this).siblings().text().trim(),
+			liveTextRegion = $('#liveTextPolite').children('p');
+
+		button.delay(500).addClass('hide').siblings().removeClass('hide');
+		buttonFocus.focus();
+		$('#liveTextPolite').children('p').html(liveText)
+		liveTextRegion.text(liveText);
+		setTimeout(function() {
+			liveTextRegion.text('');
+		}, 3000);
+	})
 
 	//make all anchor tags 'clickable' by enter key
 	$('a').on('keydown', function(event) {

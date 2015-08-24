@@ -13,7 +13,7 @@ include('includes/functions.php');
     <button id="pauseButton" type="button" class="btn btn-link btn-xs">
     <span class="fa fa-pause fa-2x"><span class="sr-only">Pause the carousel</span></span>
     </button>
-    <button id="playButton" type="button" class="btn btn-link btn-xs">
+    <button id="playButton" type="button" class="btn btn-link btn-xs hide">
     <span class="fa fa-play-circle fa-2x"><span class="sr-only">Play the carousel</span></span>
     </button>
   </div>

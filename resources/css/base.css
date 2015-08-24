@@ -641,12 +641,31 @@ form .error strong {
     top: 0;
 }
 
+.carousel-control.left, .carousel-control.right {
+    opacity: .8;
+}
+
 .carousel-control:focus, .carousel-control:hover {
     color: #FDAF17;
 }
 
 .carousel-control:focus span {
     outline: 2px solid #487896;
+}
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {
+    background-color: black;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    height: auto;
+    padding: 8px;
+    width: auto;
+}
+
+.carousel-control:hover .glyphicon-chevron-left, .carousel-control:hover .glyphicon-chevron-right, .carousel-control:focus .glyphicon-chevron-left, .carousel-control:focus .glyphicon-chevron-right {
+    border: 1px solid black;
+    padding: 7px;
 }
 
 .carousel-control {
@@ -666,10 +685,6 @@ form .error strong {
     display: none;
 }
 
-.hero img {
-    width: 100%;
-}
-
 /*---SIDEBAR---*/
 
 /*---HOMEPAGE---*/
@@ -684,7 +699,6 @@ form .error strong {
     position: absolute;
     right: 0;
     top: 0;
-    width: 4.5em;
     z-index: 2;
 }
 
@@ -1753,7 +1767,7 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .nav.nav-pills.home-search > li button.btn-link.active.human-services-btn, .nav.nav-pills.home-search > li button.btn-link.human-services-btn:focus, .nav.nav-pills.home-search > li button.btn-link.human-services-btn:hover {
         border-bottom-color: #487896;
     }
-    .nav.nav-pills.home-search > li button.btn-link.view-all-btn:focus, .nav.nav-pills.home-search > li button.btn-link.view-all-btn:hover {
+    .nav.nav-pills.home-search > li button.btn-link.active.view-all-btn, .nav.nav-pills.home-search > li button.btn-link.view-all-btn:focus, .nav.nav-pills.home-search > li button.btn-link.view-all-btn:hover {
         border-bottom-color: #FDAF17;
     }
     .carousel-caption {
