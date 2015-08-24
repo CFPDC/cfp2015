@@ -301,7 +301,7 @@ p.img-above {
 
 small {
     font-family: 'ProximaNovaSemiboldItalic';
-    color: #292929;
+    color: #292929 !important;
 }
 
 small a {
