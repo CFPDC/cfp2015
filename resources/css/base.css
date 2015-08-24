@@ -458,7 +458,7 @@ form .error strong {
     transition: color 0.3s ease;
 }
 
-.primary-nav > nav > ul > li > a:focus, .primary-nav > nav > ul > li > a:hover, .primary-nav > nav > ul > li > a.open {
+.primary-nav > nav > ul > li > a:focus, .primary-nav > nav > ul > li > a:hover, .primary-nav > nav > ul > li > a.open.primary-nav > nav > ul > li > a:focus, .primary-nav > nav > ul > li > a:hover, .primary-nav > nav > ul > li > a.open, .primary-nav > nav > ul > li > a.active-section {
     color: #FDAF17;
     text-decoration: underline;
 }
