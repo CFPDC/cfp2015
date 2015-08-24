@@ -28,6 +28,7 @@
 		<script src="assets/js/modernizr.js"></script>
 	</head>
 	<body <?php page_id(); ?> >
+	<div class="sr-only" aria-live="polite" id="liveTextPolite"><p></p></div>
 		<a class="sr-only sr-only-focusable skip-navigation-link" href="javascript:void(0);" data-target="#primary-nav-container">Skip to main navigation</a>
 		<noscript>
 		<p class="js-off-message">
