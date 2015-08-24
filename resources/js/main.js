@@ -209,6 +209,15 @@ $(function() {
 	//add unchecked to each results page filter section
 	$('.select-all').attr("data-type", "uncheck");
 
+	//this is to find all pages pointing to prod links which we will need to change to relative to ensure each page is covered
+	$('a').each(function() {
+		var host = this.hostname;
+		if (host === 'cfp-dc.org' || host === 'catalogueforphilanthropy-dc.org') {
+			$(this).addClass('need-page');
+			console.log('Still have old links showing')
+		}
+
+	})
 
 
 });
