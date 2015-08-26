@@ -2,7 +2,7 @@
 include('includes/functions.php');
 ?>
 <?php get_template('header', 'Title of homepage'); ?>
-<div id="myCarousel" class="carousel slide clearfix" data-ride="carousel">
+<div id="myCarousel" class="carousel slide clearfix hero" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class=""></li>
@@ -19,7 +19,7 @@ include('includes/functions.php');
   </div>
   <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
   <div class="carousel-inner">
-    <div class="item"> <img src="http://lorempixel.com/1200/500/" style="width:100%" alt="First slide">
+    <div class="item"> <img src="http://lorempixel.com/1200/500/animals" class="img-responsive" alt="" aria-hidden="true">
       <div class="container">
         <div class="carousel-caption col-sm-4 col-md-3">
           <h1>Slide 1</h1>
@@ -28,7 +28,7 @@ include('includes/functions.php');
         </div>
       </div>
     </div>
-    <div class="item active"> <img src="http://lorempixel.com/1200/500/" style="width:100%" data-src="" alt="Second    slide">
+    <div class="item active"> <img src="http://lorempixel.com/1200/500/nature" class="img-responsive" alt="" aria-hidden="true">
       <div class="container">
         <div class="carousel-caption col-sm-4 col-md-3">
           <h1>Slide 2</h1>
@@ -37,7 +37,7 @@ include('includes/functions.php');
         </div>
       </div>
     </div>
-    <div class="item"> <img src="http://lorempixel.com/1200/500/" style="width:100%" data-src="" alt="Third slide">
+    <div class="item"> <img src="http://lorempixel.com/1200/500/abstract" class="img-responsive" alt="" aria-hidden="true">
       <div class="container">
         <div class="carousel-caption col-sm-4 col-md-3">
           <h1>Slide 3</h1>
