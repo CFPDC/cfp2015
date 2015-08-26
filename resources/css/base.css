@@ -400,7 +400,7 @@ form .error strong {
 }
 
 .secondary-nav li {
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 .secondary-nav li a {
@@ -430,7 +430,6 @@ form .error strong {
 .primary-nav {
     background-color: #153B50;
     margin-top: 20px;
-    padding-bottom: 15px;
 }
 
 .primary-nav nav {
@@ -635,6 +634,8 @@ form .error strong {
     right: 0;
     left: 0;
     top: 0;
+    padding-left: 55px;
+    padding-right: 55px;
 }
 
 .carousel-control.left, .carousel-control.right {
@@ -679,6 +680,11 @@ form .error strong {
 
 .carousel-inner > .item > img {
     display: none;
+}
+
+.carousel-indicators {
+    bottom: 0;
+    margin-bottom: 0;
 }
 
 /*---SIDEBAR---*/
@@ -1643,9 +1649,19 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .carouselButtons {
         display: block;
     }
+    .carousel-caption {
+        padding-left: 13%;
+        padding-right: 13%;
+    }
 }
 
 @media screen and (min-width: 767px) {
+    .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+        margin-right: -25px;
+    }
+    .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {
+        margin-left: -25px;
+    }
     .nav.nav-pills.home-search > li {
         margin-left: 25px;
     }
@@ -1659,6 +1675,8 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .carousel-caption {
         bottom: 0;
         left: 10%;
+        padding-left: 15px;
+        padding-right: 15px;
         top: 0;
     }
     .carousel-inner > .item > img {
@@ -1718,6 +1736,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
         padding-bottom: 53px;
         padding-top: 53px;
     }
+    .header-logo {
+        max-width: 630px;
+    }
     .carousel-inner > .item h1 {
         padding-bottom: 0;
         padding-top: 0;
@@ -1735,11 +1756,11 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .primary-nav, .secondary-nav {
         display: block;
     }
-    .secondary-nav {
-        float: right;
-    }
     .primary-nav > nav > ul > li {
-        margin-left: 2%;
+        margin-left: 5%;
+    }
+    .secondary-nav li {
+        margin-top: 9px;
     }
     .catalogue-donate-button-container {
         float: right;
@@ -1902,9 +1923,6 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .footer-logo {
         max-width: 450px;
     }
-    .header-logo {
-        max-width: 630px;
-    }
     .vision {
         margin: 0 0 20px;
     }
@@ -1935,9 +1953,15 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
 }
 
+@media screen and (min-width: 950px) {
+    .header-logo {
+        max-width: 630px;
+    }
+}
+
 @media screen and (min-width: 991px) {
     .primary-nav {
-        padding-top: 15px;
+        padding: 15px 0;
     }
     .primary-nav > nav {
         margin-bottom: 0;
@@ -1948,6 +1972,12 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     .primary-nav > nav > ul > li > a {
         font-size: 17px;
+    }
+    .secondary-nav ul {
+        float: right;
+    }
+    .secondary-nav li {
+        margin-top: 0;
     }
     .sub-nav {
         top: 61px;
