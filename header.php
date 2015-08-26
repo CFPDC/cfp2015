@@ -118,13 +118,13 @@
 		</div>
 		<header class="container-fluid" role="banner">
 			<div class="row">
-				<div class="col-sm-5">
+				<div class="col-sm-12 col-md-5">
 					<a href="../" title="Catalogue for Philanthropy: Greater Washington home">
 						<img class="img-responsive header-logo" src="resources/images/cfp-logo-blue-brown2.gif" alt="Catalogue for Philanthropy: Greater Washington logo">
 					</a>
 				</div>
-				<nav class="col-sm-7 secondary-nav">
-					<ul class="list-inline pull-right">
+				<nav class="col-xs-7 col-md-7 secondary-nav">
+					<ul class="list-inline">
 						<li>
 							<a href="contact.php" target="_self" title="CFP's contact information">Contact<span class="sr-only"> The Catalogue for Philanthropy</span></a>
 						</li>
@@ -139,7 +139,7 @@
 						</li>
 					</ul>
 				</nav>
-				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 catalogue-donate-button-container">
+				<div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 catalogue-donate-button-container">
 					<button class="btn  btn-primary catalogue-donate-button" id="donate-to-catalogue">Donate to The Catalogue</button>
 					<button class="navbar-toggle pull-right" data-toggle="offcanvas" data-target=".mobile-nav" data-canvas="body">
 					<span class="adobeBlank sr-only" aria-hidden="true">
@@ -152,7 +152,7 @@
 				</div>
 			</div>
 			<div class="row primary-nav" id="primary-nav-container">
-				<nav class="col-sm-12 col-md-8 nav-primary-nav" role="navigation">
+				<nav class="col-md-8 col-md-offset-0 nav-primary-nav" role="navigation">
 					<ul class="nav-menu list-inline">
 						<li class="nav-item">
 							<a role="button" href="javascript:void(0)">Who We Are</a>
@@ -225,7 +225,7 @@
 						</li>
 					</ul>
 				</nav>
-				<fieldset class="col-sm-offset-9 col-md-offset-0 col-sm-5 col-md-4 pull-right global-search-field">
+				<fieldset class="col-sm-offset-9 col-md-offset-0 col-sm-5 col-md-4 hidden-xs hidden-sm pull-right global-search-field">
 					<legend class="sr-only">Search The Catalogue for Philanthropy website</legend>
 					<label class="sr-only" for="globalSearch"></label>
 					<div class="input-group">
