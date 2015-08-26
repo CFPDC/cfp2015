@@ -8,7 +8,7 @@ include('includes/functions.php');
 	</div>
 </div>
 <div class="clearfix hero">
-	<img src="http://lorempixel.com/1200/500/" alt="First slide">
+	<img src="http://lorempixel.com/1200/500/nature" alt="" aria-hidden="true" class="img-responsive">
 </div>
 <main class="container-fluid search-results secondary" role="main">
 <div class="row">
