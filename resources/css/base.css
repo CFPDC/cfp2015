@@ -1511,6 +1511,11 @@ main address > span, address > a {
     text-transform: capitalize;
 }
 
+/* How to Help page*/
+.give-image {
+    margin-left: -10px;
+}
+
 /*---Sitemap---*/
 .sitemap-list {
     padding-left: 8px;
