@@ -687,6 +687,10 @@ form .error strong {
     margin-bottom: 0;
 }
 
+.carousel-indicators .active {
+    margin: 1px;
+}
+
 /*---SIDEBAR---*/
 
 /*---HOMEPAGE---*/
@@ -940,11 +944,28 @@ main.secondary {
 }
 
 .search-results .sort-display-menu-container .sort-display-menu .sort-by {
+    border-radius: 0;
     left: 0;
+    padding: 0;
     position: absolute;
     right: auto;
     top: 22px;
     min-width: auto;
+}
+
+.sort-by.dropdown-menu > li {
+    margin-bottom: 0;
+}
+
+.sort-by.dropdown-menu > li > a {
+    border: 1px solid transparent;
+}
+
+.sort-by.dropdown-menu > li > a:focus, .sort-by.dropdown-menu > li > a:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #487896;
+    border-color: #487896;
 }
 
 .search-results .sort-display-menu-container .sort-display-menu .display-group {
@@ -972,6 +993,7 @@ main.secondary {
 .search-list-view .search-list-jumplinks li a {
     font-family: 'ProximaNovaBold';
     font-size: 22px;
+    font-size: 2.2rem;
 }
 
 .search-list-view .title-section {
@@ -988,14 +1010,16 @@ main.secondary {
     color: inherit;
     float: left;
     font-family: 'LibreBaskervilleBold';
-    font-size: 22px;
+    font-size: 15px;
+    font-size: 1.5rem;
     position: relative;
+    width: 100%;
 }
 
 .search-list-view .media .media-body .media-heading.collapsed:before, .search-list-view .media .media-body .media-heading:before {
     font-family: 'FontAwesome';
     position: absolute;
-    right: -20px;
+    right: 0;
     top: 0;
 }
 
@@ -1030,6 +1054,10 @@ main address > span, address > a {
     font-size: 15px;
     font-size: 1.5rem;
     margin-bottom: 5px;
+}
+
+.input-group .form-control {
+    border-radius: 0;
 }
 
 /*---one column forms---*/
@@ -1950,6 +1978,14 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .carousel-caption {
         bottom: 20px;
         top: auto;
+    }
+    .search-list-view .media .media-body .media-heading {
+        font-size: 22px;
+        font-size: 2.2rem;
+        width: auto;
+    }
+    .search-list-view .media .media-body .media-heading.collapsed:before, .search-list-view .media .media-body .media-heading:before {
+        right: -20px;
     }
 }
 

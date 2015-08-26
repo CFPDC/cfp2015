@@ -17,7 +17,7 @@ include('includes/functions.php');
       <button class="btn btn-link pull-left clearfix sort-toggle collapsed" data-toggle="collapse" data-target="#sortBy" aria-expanded="false" aria-controls="sortByCollapse">
       Sort By
       </button>
-      <ul class="collapse sort-by list-unstyled dropdown-menu" id="sortBy">
+      <ul class="collapse sort-by list-unstyled dropdown-menu normal" id="sortBy">
         <li><a href="javascript:void(0);" data-sort="category">Category</a></li>
         <li><a href="javascript:void(0);" data-sort="name">Name</a></li>
         <li><a href="javascript:void(0);" data-sort="region">Region</a></li>
@@ -51,7 +51,7 @@ include('includes/functions.php');
       </button>
       <div class="collapse selections" id="natureSearch">
         <button class="btn btn-link select-all" data-list="natureSubCat">Select All</button>
-        <ul class="list-unstyled">
+        <ul class="list-unstyled normal">
           <li>
             <label for="animals">
               <input type="checkbox" id="animals" class="natureSubCat"> Animals (<span class="environ-count">4</span>)
@@ -72,7 +72,7 @@ include('includes/functions.php');
       </button>
       <div class="collapse selections" id="cultureSearch">
         <button class="btn btn-link select-all" data-list="cultureSubCat">Select All</button>
-        <ul class="list-unstyled">
+        <ul class="list-unstyled normal">
           <li>
             <label for="kid-art">
               <input type="checkbox" id="kid-art" class="cultureSubCat"> Community Arts/Arts for Kids (<span class="kid-art-count">4</span>)
@@ -93,7 +93,7 @@ include('includes/functions.php');
       </button>
       <div class="collapse selections" id="educationSearch">
         <button class="btn btn-link select-all" data-list="educationSubCat">Select All</button>
-        <ul class="list-unstyled">
+        <ul class="list-unstyled normal">
           <li>
             <label for="enrichment">
               <input type="checkbox" id="enrichment" class="educationSubCat"> Educational Enrichment (<span class="kid-art-count">4</span>)
@@ -119,7 +119,7 @@ include('includes/functions.php');
       </button>
       <div class="collapse selections" id="humanServicesSearch">
         <button class="btn btn-link select-all" data-list="humanServicesSubCat">Select All</button>
-        <ul class="list-unstyled">
+        <ul class="list-unstyled normal">
           <li>
             <label for="Aging">
               <input type="checkbox" id="Aging" class="humanServicesSubCat"> Aging (<span class="kid-art-count">4</span>)
@@ -178,7 +178,7 @@ include('includes/functions.php');
         <div class="collaspingSection">
           <button class="btn btn-link state-collapse" data-toggle="collapse" data-target="#marylandCollapse" aria-expanded="false" aria-controls="marylandCollapse">Maryland</button>
           <div class="collapse" id="marylandCollapse">
-            <ul class="list-unstyled">
+            <ul class="list-unstyled normal">
               <li>
                 <label for="md-1">
                   <input type="checkbox" id="md-1" class="areasSubCat"> area 1 (<span class="md-1-count">4</span>)
@@ -196,7 +196,7 @@ include('includes/functions.php');
         <div class="collaspingSection">
           <button class="btn btn-link state-collapse" data-toggle="collapse" data-target="#virginiaCollapse" aria-expanded="false" aria-controls="virginiaCollapse">Virginia</button>
           <div class="collapse" id="virginiaCollapse">
-            <ul class="list-unstyled">
+            <ul class="list-unstyled normal">
               <li>
                 <label for="va-1">
                   <input type="checkbox" id="va-1" class="areasSubCat"> area 1 (<span class="va-1-count">4</span>)
@@ -213,7 +213,7 @@ include('includes/functions.php');
           <div class="collaspingSection">
           <button class="btn btn-link state-collapse" data-toggle="collapse" data-target="#dcCollapse" aria-expanded="false" aria-controls="dcCollapse">District of Columbia</button>
           <div class="collapse" id="dcCollapse">
-            <ul class="list-unstyled">
+            <ul class="list-unstyled normal">
               <li>
                 <label for="dc-1">
                   <input type="checkbox" id="dc-1" class="areasSubCat"> area 1 (<span class="cd-1-count">4</span>)
@@ -231,7 +231,7 @@ include('includes/functions.php');
         <div class="collaspingSection">
           <button class="btn btn-link state-collapse" data-toggle="collapse" data-target="#internationalCollapse" aria-expanded="false" aria-controls="internationalCollapse">International</button>
           <div class="collapse" id="internationalCollapse">
-            <ul class="list-unstyled">
+            <ul class="list-unstyled normal">
               <li>
                 <label for="int-1">
                   <input type="checkbox" id="int-1" class="areasSubCat"> area 1 (<span class="int-1-count">4</span>)
@@ -256,7 +256,7 @@ include('includes/functions.php');
       </button>
       <div class="collapse selections" id="populationsServed">
         <button class="btn btn-link select-all" data-list="popsSubCat">Select All</button>
-        <ul class="list-unstyled"> 
+        <ul class="list-unstyled normal"> 
           <li>
             <label for="infants">
               <input type="checkbox" id="infants" class="popsSubCat"> Infants &amp; Children (<span class="arts-count">3</span>)
