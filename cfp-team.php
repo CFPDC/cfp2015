@@ -10,7 +10,7 @@ include('includes/functions.php');
 <div class="clearfix hero">
 <img src="http://lorempixel.com/1200/500/nature" alt="" aria-hidden="true" class="img-responsive">
 </div>
-<main class="container-fluid search-results secondary" role="main">
+<main class="container-fluid secondary" role="main">
 <div class="row">
 	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
 		<ul class="list-unstyled">
