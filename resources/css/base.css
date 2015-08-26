@@ -161,10 +161,6 @@ blockquote ol:last-child, blockquote p:last-child, blockquote ul:last-child {
     outline: 2px solid #487896;
 }
 
-.img-responsive {
-    width: 100%;
-}
-
 p.img-above {
     margin-top: 15px;
 }
@@ -2021,6 +2017,10 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     .login-form > div {
         margin-left: 10%;
+    }
+    /*make 1200 pixel wide images stretch entire width of page*/
+    .hero img.img-responsive {
+        width: 100%;
     }
 }
 
