@@ -1546,9 +1546,7 @@ main address > span, address > a {
 }
 
 /* How to Help page*/
-.give-image {
-    margin-left: -10px;
-}
+.give-image {}
 
 /*---Sitemap---*/
 .sitemap-list {
@@ -2045,6 +2043,13 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .search-results .caption .btn {
         width: auto;
     }
+    .vision-report > .row .col-md-3 {
+        padding: 0;
+        margin-left: 55px;
+    }
+    .vision-report > .row .col-md-3.first {
+        margin-left: 0;
+    }
 }
 
 @media screen and (min-width: 1024px) {}
@@ -2052,12 +2057,6 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
 @media screen and (min-width: 1050px) {
     .primary-nav > nav > ul > li > a {
         font-size: 18px;
-    }
-    .search-results .caption .btn {
-        /* width: 48%;
-         font-family: 'ProximaNovaSemibold';
-         font-size: 69%;
-         padding: 6px 3px;*/
     }
 }
 
@@ -2092,6 +2091,15 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     /*make 1200 pixel wide images stretch entire width of page*/
     .hero img.img-responsive {
         width: 100%;
+    }
+    .vision-report {
+        width: 930px;
+    }
+    .vision-report > .row {
+        margin: 0 auto;
+    }
+    .vision-report > .row .col-md-3 {
+        margin-left: 5px;
     }
 }
 
