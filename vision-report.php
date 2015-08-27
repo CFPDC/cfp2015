@@ -20,7 +20,7 @@ include('includes/functions.php');
 			<li><a href="sponsors.php">Sponsors</a></li>
 			<li><a href="press.php">Press</a></li>
 			<li><a href="testimonials.php">Testimonials</a></li>
-			<li><a href="vision-report.php" class="current">Vision Report</a></li>
+			<li><a href="javascript:void(0);" class="current">Vision Report</a></li>
 		</ul>
 	</aside>
 	<section class="col-xs-12 col-sm-8">

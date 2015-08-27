@@ -17,7 +17,7 @@ include('includes/functions.php');
 			<li><a href="about-us.php">About Us</a></li>
 			<li><a href="cfp-team.php">Team</a></li>
 			<li><a href="cfp-reviewers.php">Our Reviewers</a></li>
-			<li><a href="sponsors.php" class="current">Sponsors</a></li>
+			<li><a href="javascript:void(0);" class="current">Sponsors</a></li>
 			<li><a href="press.php">Press</a></li>
 			<li><a href="testimonials.php">Testimonials</a></li>
 			<li><a href="vision-report.php">Vision Report</a></li>

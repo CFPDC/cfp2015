@@ -14,7 +14,7 @@ include('includes/functions.php');
 <div class="row">
 	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
 		<ul class="list-unstyled">
-			<li><a href="about-us.php" class="current">About Us</a></li>
+			<li><a href="javascript:void(0);" class="current">About Us</a></li>
 			<li><a href="cfp-team.php">Team</a></li>
 			<li><a href="cfp-reviewers.php">Our Reviewers</a></li>
 			<li><a href="sponsors.php">Sponsors</a></li>
