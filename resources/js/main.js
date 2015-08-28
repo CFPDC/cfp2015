@@ -101,6 +101,8 @@ var listViewResults = {
 
 
 /*** global functions ***/
+jPM.on();
+
 //skip nav prevent hashtag in url
 function globalSkipNav() {
 	$(function() {
