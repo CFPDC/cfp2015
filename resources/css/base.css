@@ -1550,6 +1550,11 @@ main address > span, address > a {
 /* How to Help page*/
 .give-image {}
 
+/*---Stock---*/
+.stock {
+    padding-bottom: 10px;
+}
+
 /*---Sitemap---*/
 .sitemap-list {
     padding-left: 8px;

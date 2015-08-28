@@ -4,7 +4,7 @@ include('includes/functions.php');
 <?php get_template('header', 'Title of homepage'); ?>
 <div class="container-fluid">
 	<div class="row">
-		<h1 class="text-center">Volunteer Opportunities</h1>
+		<h1 class="text-center">Donate Now / Decide Later</h1>
 	</div>
 </div>
 <div class="clearfix hero">
@@ -23,14 +23,15 @@ include('includes/functions.php');
 			<li><a href="giftcards.php">Gift Cards</a></li>
 			<li><a href="mycatalogue.php">My Catalogue</a></li>
 			<li><a href="kids.php">Especially for Kids</a></li>
-			<li><a href="donate.php">Donate Now / Decide Later</a></li>
+			<li><a href="javascript:void(0);" class="current">Donate Now / Decide Later</a></li>
 			<li><a href="appreciated-stock.php">Appreciated Stock</a></li>
 			<li><a href="corporate-sponsorship.php">Corporate Sponsorship</a></li>
-			<li><a href="javascript:void(0);" class="current">Volunteer Opportunities</a></li>
+			<li><a href="volunteer-opportunities.php">Volunteer Opportunities</a></li>
 		</ul>
 	</aside>
-	<section class="col-xs-12 col-sm-9">
-		<p>Catalogue nonprofits are recruiting volunteers to help them run, organize, or participate in the following events. Identify an organization that interests you, and then call or email the contact person to find out what you can do to help out or join in. Click &ldquo;more event info&rdquo; to see the entire entry, including event details. Click the event name, and then &ldquo;share&rdquo; to let others know!</p>
+	<section class="col-xs-12 col-sm-8">
+		<p>Our Donate Now/Decide Later Fund allows you to make your tax-deductible  contribution to the Catalogue in November or December, and make your nonprofit selections after the busy holiday season is over. Just write &ldquo;DNDL&rdquo; in the designation box when you are going through the donation process. Then inform us in January who the recipients will be. Click here &mdash; <a href="#" class="needs-page" title="Visit the Donate page"><strong>DONATE NOW / DECIDE LATER</strong></a> &mdash; to begin the process. If you wish to contribute by mail, click CONTACT below for mailing instructions.</p>
+		<p>When the holiday rush has settled down, and you have the leisure to make informed decisions, please write, call, or email (see CONTACT below) and tell us which charities you have chosen. We will distribute your funds as you direct.</p>
 	</section>
 </div>
 </main>
