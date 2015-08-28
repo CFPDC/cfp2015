@@ -13,7 +13,8 @@ if (($('.lt-ie9').length > 0) || ($('.ie9').length > 0)) {
 
 }
 /*** variables ***/
-var $root = $('html, body');
+var $root = $('html, body'),
+	liveTextRegion = $('#liveTextPolite').children('p');;
 var global = {
 	jumplink: function() {
 		$('.jumplink').on('click', function() {
@@ -162,15 +163,62 @@ $(window).resize(_.debounce(function() {
 
 //Do custom Media query logic
 function performMediaQueries(state) {
-	if (state == 'screen-sm-max' || state == 'screen-xs-max' || state == 'screen-xs-min') {
-		$('#asideFilter').addClass('collapse');
-	} else {
-		$('#asideFilter').removeClass('collapse');
+		if (state == 'screen-sm-max' || state == 'screen-xs-max' || state == 'screen-xs-min') {
+			$('#asideFilter').addClass('collapse');
+		} else {
+			$('#asideFilter').removeClass('collapse');
+		}
 	}
-}
+	//begin isotop script
+var $grid = $('.grid');
+//sort button functionality with isotope
+$('.sort-by').on('click', 'button', function() {
+	var sortByValue = $(this).attr('data-sort-by');
+	$grid.isotope({
+		sortBy: sortByValue
+	});
+	//update screen reader of sorting announcement
+	liveTextRegion.text("Results sorted by " + sortByValue);
+	setTimeout(function() {
+		liveTextRegion.text('');
+	}, 3000);
+	//collapse the dropdown after selecting
+	$('.sort-toggle').click();
+});
+
+//end isotop script
 
 $(function() {
 	//.ready for global functions
+
+	//if url contains string, show only the nonprofits with the category tied to it --- requires data to be in elements with a class 
+	/* not working correctly at the moment
+	if (window.location.href.indexOf("nature") > -1) {
+		if (!($('.category:contains("nature")'))) {
+			var $this = $(this).parent('iso-item');
+			$grid.isotope('remove', $this)
+				// layout remaining item elements
+				.isotope('layout');
+		}
+	} else if (window.location.href.indexOf("culture") > -1) {
+		$grid.isotope({
+			filter: '.category'
+		});
+	} else if (window.location.href.indexOf("education") > -1) {
+		$grid.isotope({
+			filter: '.category'
+		});
+	} else if (window.location.href.indexOf("human-services") > -1) {
+		$grid.isotope({
+			filter: '.category'
+		});
+	} else {
+		$grid.isotope({
+			filter: '*'
+		});
+	}
+*/
+
 
 	//Do initial check for media state
 	var state = A11yResp.getScreenWidth();
@@ -986,9 +1034,7 @@ $(function() {
 	$('.carouselButtons button').on('click', function() {
 		var button = $(this),
 			buttonFocus = button.siblings(),
-			liveText = $(this).siblings().text().trim(),
-			liveTextRegion = $('#liveTextPolite').children('p');
-
+			liveText = $(this).siblings().text().trim();
 		button.delay(500).addClass('hide').siblings().removeClass('hide');
 		buttonFocus.focus();
 		$('#liveTextPolite').children('p').html(liveText)

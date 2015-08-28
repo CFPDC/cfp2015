@@ -58,6 +58,7 @@ $.fn.modal || document.write('<script src="assets/js/bootstrap.min.js"><\/script
 <script src="assets/js/jquery.validate.min.js"></script>
 <script src="assets/js/additional-methods.min.js"></script>
 <script src="resources/js/assets.responsive.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
 <!-- end of library loading -->
 <!-- load JS -->
 <script src="resources/js/main.js" async></script>

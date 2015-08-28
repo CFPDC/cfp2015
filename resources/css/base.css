@@ -957,11 +957,13 @@ main.secondary {
     margin-bottom: 0;
 }
 
-.sort-by.dropdown-menu > li > a {
+.sort-by.dropdown-menu > li > button {
     border: 1px solid transparent;
+    display: block;
+    width: 100%;
 }
 
-.sort-by.dropdown-menu > li > a:focus, .sort-by.dropdown-menu > li > a:hover {
+.sort-by.dropdown-menu > li > button:focus, .sort-by.dropdown-menu > li > button:hover {
     color: #FFFFFF;
     text-decoration: none;
     background-color: #487896;
@@ -2014,7 +2016,7 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
         margin-top: 0;
     }
     .sub-nav {
-        top: 61px;
+        top: 35px;
     }
     .primary-nav .sub-nav ul li a {
         font-size: 15px;
