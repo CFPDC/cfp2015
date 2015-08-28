@@ -2,9 +2,8 @@
 include('includes/functions.php');
 ?>
 <?php get_template('header', 'Title of homepage'); ?>
-<div id="myCarousel" class="carousel slide clearfix" data-ride="carousel">
+<div id="myCarousel" class="carousel slide clearfix hero" data-ride="carousel">
   <!-- Indicators -->
-  
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class=""></li>
     <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
@@ -14,33 +13,33 @@ include('includes/functions.php');
     <button id="pauseButton" type="button" class="btn btn-link btn-xs">
     <span class="fa fa-pause fa-2x"><span class="sr-only">Pause the carousel</span></span>
     </button>
-    <button id="playButton" type="button" class="btn btn-link btn-xs">
+    <button id="playButton" type="button" class="btn btn-link btn-xs hide">
     <span class="fa fa-play-circle fa-2x"><span class="sr-only">Play the carousel</span></span>
     </button>
   </div>
   <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
   <div class="carousel-inner">
-    <div class="item"> <img src="http://lorempixel.com/1200/400/sports" style="width:100%" alt="First slide">
+    <div class="item"> <img src="http://lorempixel.com/1200/500/animals" class="img-responsive" alt="" aria-hidden="true">
       <div class="container">
-        <div class="carousel-caption col-sm-3">
+        <div class="carousel-caption col-sm-4 col-md-3">
           <h1>Slide 1</h1>
           <p>Aenean a rutrum nulla. Vestibulum a arcu at nisi tristique pretium.</p>
           <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
         </div>
       </div>
     </div>
-    <div class="item active"> <img src="http://lorempixel.com/1200/400/people" style="width:100%" data-src="" alt="Second    slide">
+    <div class="item active"> <img src="http://lorempixel.com/1200/500/nature" class="img-responsive" alt="" aria-hidden="true">
       <div class="container">
-        <div class="carousel-caption col-sm-3">
+        <div class="carousel-caption col-sm-4 col-md-3">
           <h1>Slide 2</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae egestas purus. </p>
           <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
         </div>
       </div>
     </div>
-    <div class="item"> <img src="http://lorempixel.com/1200/400/abstract" style="width:100%" data-src="" alt="Third slide">
+    <div class="item"> <img src="http://lorempixel.com/1200/500/abstract" class="img-responsive" alt="" aria-hidden="true">
       <div class="container">
-        <div class="carousel-caption col-sm-3">
+        <div class="carousel-caption col-sm-4 col-md-3">
           <h1>Slide 3</h1>
           <p>Donec sit amet mi imperdiet mauris viverra accumsan ut at libero.</p>
           <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
