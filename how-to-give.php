@@ -16,8 +16,17 @@ include('includes/functions.php');
 		<ul class="list-unstyled">
 			<li><a href="all-events.php">Events</a></li>
 			<li><a href="javascript:void(0);" class="current">How to Give</a></li>
+			<li><a href=""></a></li>
+			<li><a href="history.php">Donation History</a></li>
+			<li><a href="favorites.php">View Favorites</a></li>
+			<li><a href="registry.php">Gift Registry</a></li>
+			<li><a href="giftcards.php">Gift Cards</a></li>
+			<li><a href="mycatalogue.php">My Catalogue</a></li>
+			<li><a href="kids.php">Especially for Kids</a></li>
+			<li><a href="donate.php">Donate Now / Decide Later</a></li>
+			<li><a href="appreciated-stock.php">Appreciated Stock</a></li>
+			<li><a href="corporate-sponsorship.php">Corporate Sponsorship</a></li>
 			<li><a href="volunteer-opportunities.php">Volunteer Opportunities</a></li>
-		</ul>
 	</aside>
 	<section class="col-xs-12 col-sm-8">
 		<p class="lead">With a Catalogue account, you can keep track of your contributions, compile a list of favorite charities, create a gift registry, purchase gift cards, print your own personal Catalogue, visit our kids section or sign up for our newsletter.</p>
