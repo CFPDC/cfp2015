@@ -69,6 +69,67 @@ var global = {
 		var button = $(this).attr('id');
 		console.log($(this));
 
+	},
+	addNonprofitNameToButton: function() {
+		var nonprofitListing = $('.nonprofit-listing'),
+			nonprofitName = $('.nonprofit-listing h2');
+		nonprofitListing.each(function(index) {
+			var nonprofit = $(this),
+				nonprofitTitleRaw = nonprofit.find('.name').contents().filter(
+					function() {
+						return this.nodeType == 3
+					}),
+				nonprofitChildRemove = nonprofitTitleRaw.text(),
+				nonprofitTitle = nonprofitChildRemove.split(' ').join('_').trim(),
+				learnMoreButton = nonprofit.find('.learn-more'),
+				learnMoreButtonLink = learnMoreButton.attr('href'),
+				donateButton = nonprofit.find('.donate-nonprofit'),
+				donateButtonLink = donateButton.attr('href');
+			//appand sr only info for each button and add parameter for 'donateButtonPrefill' function
+			learnMoreButton.append('<span/>').children('span').addClass('sr-only').text(' about ' + nonprofitChildRemove);
+			donateButton.append('<span/>').children('span').addClass('sr-only').text(' to ' + nonprofitChildRemove);
+			//check each href of learn more and donate buttons to see if parameters exist
+			if (learnMoreButtonLink.indexOf('?') != -1) {
+				learnMoreButton.attr("href", learnMoreButtonLink + "&np_title=" + nonprofitTitle);
+			} else {
+				learnMoreButton.attr("href", learnMoreButtonLink + "?np_title=" + nonprofitTitle);
+			}
+			if (donateButtonLink.indexOf('?') != -1) {
+				donateButton.attr("href", donateButtonLink + "&np_title=" + nonprofitTitle);
+			} else {
+				donateButton.attr("href", donateButtonLink + "?np_title=" + nonprofitTitle);
+			}
+
+		})
+
+	},
+	donateButtonPrefill: function() {
+		//replace checkout page org name to the name of the org which the user clicks on by the substring '?np_title=, if none exists, then do nothing
+		function getParameterByName(name) {
+			name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+			var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+				results = regex.exec(location.search);
+			return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+		}
+		var substringTitle = 'np_title',
+			prodId = getParameterByName(substringTitle),
+			prodIdInput = getParameterByName(substringTitle).split('_').join(' ').trim(),
+			orgInput = $('#org-name'),
+			orgInputValue = orgInput.val(),
+			orgLabel = $("label[for='" + orgInput + "']");
+		if (window.location.search.indexOf(substringTitle) > -1) {
+
+			if ($(orgInput)[0]) {
+				$('<p class="np-selected-name" id="np-selected" />').insertBefore(orgInput).text(prodIdInput);
+				$(orgInput).val(prodIdInput).attr('type', 'hidden').siblings(orgLabel).attr('aria-describedby', 'np-selected');
+
+			}
+		} else if (orgInput.val().length) {
+			$('<p class="np-selected-name" id="np-selected" />').insertBefore(orgInput).text(orgInputValue);
+			$(orgInput).val(prodIdInput).attr('type', 'hidden').siblings(orgLabel).attr('aria-describedby', 'np-selected');
+
+		}
+
 	}
 };
 
@@ -1206,6 +1267,9 @@ $(function() {
 	listViewResults.nonprofitCollapse();
 	global.jumplink();
 	global.navMenu();
+	global.donateButtonPrefill();
+	global.addNonprofitNameToButton();
+
 	$('.carouselButtons button').on('click', function() {
 		var button = $(this),
 			buttonFocus = button.siblings(),

@@ -13,7 +13,7 @@
 		<nav class="col-sm-7 col-xs-12 col-md-8 text-right">
 			<ul class="list-inline primary-footer-nav">
 				<li>
-					<a href="nonprofits/Catalogue-for-Philanthropy-Greater-Washington">Donate<span class="sr-only"> to The Catalogue for Philanthropy</span></a>
+					<a href="checkout.php?np_title=Catalogue_for_Philanthropy:_Greater_Washington" title="Donate to The Catalogue for Philanthropy">Donate<span class="sr-only"> to The Catalogue for Philanthropy</span></a>
 				</li>
 				<li>
 					<a href="request-catalogue.php">Request a Catalog</a>

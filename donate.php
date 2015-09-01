@@ -12,11 +12,10 @@ include('includes/functions.php');
 </div>
 <main class="container-fluid secondary" role="main">
 <div class="row">
-	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
+	<aside class="col-sm-3 who-we-are-nav" id="asideFilter">
 		<ul class="list-unstyled">
 			<li><a href="all-events.php">Events</a></li>
 			<li><a href="how-to-give.php">How to Give</a></li>
-			<li><a href=""></a></li>
 			<li><a href="history.php">Donation History</a></li>
 			<li><a href="favorites.php">View Favorites</a></li>
 			<li><a href="registry.php">Gift Registry</a></li>
@@ -29,9 +28,9 @@ include('includes/functions.php');
 			<li><a href="volunteer-opportunities.php">Volunteer Opportunities</a></li>
 		</ul>
 	</aside>
-	<section class="col-xs-12 col-sm-8">
-		<p>Our Donate Now/Decide Later Fund allows you to make your tax-deductible  contribution to the Catalogue in November or December, and make your nonprofit selections after the busy holiday season is over. Just write &ldquo;DNDL&rdquo; in the designation box when you are going through the donation process. Then inform us in January who the recipients will be. Click here &mdash; <a href="#" class="needs-page" title="Visit the Donate page"><strong>DONATE NOW / DECIDE LATER</strong></a> &mdash; to begin the process. If you wish to contribute by mail, click CONTACT below for mailing instructions.</p>
-		<p>When the holiday rush has settled down, and you have the leisure to make informed decisions, please write, call, or email (see CONTACT below) and tell us which charities you have chosen. We will distribute your funds as you direct.</p>
+	<section class="col-sm-8">
+		<p>Our Donate Now/Decide Later Fund allows you to make your tax-deductible  contribution to the Catalogue in November or December, and make your nonprofit selections after the busy holiday season is over. Just write &ldquo;DNDL&rdquo; in the designation box when you are going through the donation process. Then inform us in January who the recipients will be. Select <a href="checkout.php" class="text-bold" title="Visit the Donate page">DONATE NOW / DECIDE LATER</a> to begin the process. If you wish to contribute by mail, visit our <a href="contact.php" title="The Catalogue for Philanthropy contact information">contact page</a> for mailing information.</p>
+		<p>When the holiday rush has settled down, and you have the leisure to make informed decisions, please write, call, or email (via our <a href="contact.php" title="The Catalogue for Philanthropy contact information">contact page</a>) and tell us which charities you have chosen. We will distribute your funds as you direct.</p>
 	</section>
 </div>
 </main>
