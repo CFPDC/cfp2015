@@ -30,7 +30,7 @@ include('includes/functions.php');
               <div class="two-line">
                 <label for="org-name">Organization</label>
                 <!-- add readonly to this input if input is prepopulated-->
-                <input type="text" id="org-name" maxlength="60" name="org-name" readonly="" value="Catalogue for Philanthropy: Greater Washington">
+                <input type="text" id="org-name" maxlength="60" class="nonprofit-name" name="org-name" value="">
               </div>
               <div class="two-line">
                 <label for="amount">Amount<span class="sr-only"> in dollars</span><small> (required)</small></label>

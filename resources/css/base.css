@@ -53,8 +53,8 @@ h5 {}
 h6 {}
 
 p {
-    font-size: 15px;
-    font-size: 1.5rem;
+    font-size: 15.5px;
+    font-size: 1.55rem;
 }
 
 a {
@@ -85,6 +85,7 @@ form small {
 strong {
     color: #101214;
 }
+.text-bold{font-weight: 700;}
 
 /* do not group these rules */
 *::-webkit-input-placeholder {
@@ -1591,7 +1592,12 @@ main address > span, address > a {
     left: 0;
     top: 6px;
 }
-
+.np-selected-name {
+    font-family: 'ProximaNovaBold';
+    font-size: 18px;
+    font-size: 1.8rem;
+    text-align: left;
+}
 /*---FOOTER---*/
 footer {
     background: #487896;
@@ -1974,6 +1980,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .checkout-form .btn-primary{
         float: right;
     }
+    .np-selected-name {
+        width: 227px;
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -1986,6 +1995,7 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .two-column-form label.organization-label {
         font-size: inherit;
     }
+    
     footer .secondary-footer-nav li {
         margin-left: 33px;
     }
