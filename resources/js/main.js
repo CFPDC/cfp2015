@@ -124,11 +124,11 @@ var global = {
 				$(orgInput).val(prodIdInput).attr('type', 'hidden').siblings(orgLabel).attr('aria-describedby', 'np-selected');
 
 			}
-		} else if (orgInput.val().length) {
+		} else if (orgInput.length && orgInput.val().length) {
 			$('<p class="np-selected-name" id="np-selected" />').insertBefore(orgInput).text(orgInputValue);
 			$(orgInput).val(prodIdInput).attr('type', 'hidden').siblings(orgLabel).attr('aria-describedby', 'np-selected');
 
-		}
+		} else {}
 
 	}
 };
