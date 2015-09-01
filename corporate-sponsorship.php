@@ -12,11 +12,10 @@ include('includes/functions.php');
 </div>
 <main class="container-fluid secondary" role="main">
 <div class="row">
-	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
+	<aside class="col-sm-3 who-we-are-nav" id="asideFilter">
 		<ul class="list-unstyled">
 			<li><a href="all-events.php">Events</a></li>
 			<li><a href="how-to-give.php">How to Give</a></li>
-			<li><a href=""></a></li>
 			<li><a href="history.php">Donation History</a></li>
 			<li><a href="favorites.php">View Favorites</a></li>
 			<li><a href="registry.php">Gift Registry</a></li>
@@ -29,7 +28,7 @@ include('includes/functions.php');
 			<li><a href="volunteer-opportunities.php">Volunteer Opportunities</a></li>
 		</ul>
 	</aside>
-	<section class="col-xs-12 col-sm-8">
+	<section class="col-sm-8">
 		<p class="lead">Companies committed to corporate social responsibility can get involved with the Catalogue for Philanthropy in the following ways:</p>
 		<h2>Community Connections</h2>
 		<p>Community Connections is a customizable, web&dash;based portal that connects employees with our network of over 350 vetted charities in Greater Washington, and facilitates their involvement with these charities as volunteers and donors.</p>

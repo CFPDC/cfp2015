@@ -12,11 +12,10 @@ include('includes/functions.php');
 </div>
 <main class="container-fluid secondary" role="main">
 <div class="row">
-	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
+	<aside class="col-sm-3 who-we-are-nav" id="asideFilter">
 		<ul class="list-unstyled">
 			<li><a href="all-events.php">Events</a></li>
 			<li><a href="how-to-give.php">How to Give</a></li>
-			<li><a href=""></a></li>
 			<li><a href="history.php">Donation History</a></li>
 			<li><a href="favorites.php">View Favorites</a></li>
 			<li><a href="registry.php">Gift Registry</a></li>
@@ -29,7 +28,7 @@ include('includes/functions.php');
 			<li><a href="volunteer-opportunities.php">Volunteer Opportunities</a></li>
 		</ul>
 	</aside>
-	<section class="col-xs-12 col-sm-8">
+	<section class="col-sm-8">
 		<p>If you like holding something in your hands and want to print your own Catalogue you can do that here. Browse our nonprofits, click &ldquo;add to favorites&rdquo; when you find the ones that interest you most, and then visit the View Favorites section where you can choose the Add to My Catalogue option. Return to this section, and the nonprofits you select will be turned into a pdf that you can view and print. To get started you'll need to Create an Account (it&rsquo;s free, of course) and build a favorites list. Then you&rsquo;ll be ready to go!</p>
 		<p><a href="sign-up.php" class="needs-page" title="Visit the Create An Account Page">Create My Catalogue</a></p>
 	</section>

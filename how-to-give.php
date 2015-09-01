@@ -16,7 +16,6 @@ include('includes/functions.php');
 		<ul class="list-unstyled">
 			<li><a href="all-events.php">Events</a></li>
 			<li><a href="javascript:void(0);" class="current">How to Give</a></li>
-			<li><a href=""></a></li>
 			<li><a href="history.php">Donation History</a></li>
 			<li><a href="favorites.php">View Favorites</a></li>
 			<li><a href="registry.php">Gift Registry</a></li>

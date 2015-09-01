@@ -1557,6 +1557,14 @@ main address > span, address > a {
 /* How to Help page*/
 .give-image {}
 
+/*---Gift Cards---*/
+.gift-card-img {
+     width: 300px;
+     padding-top: 15px;
+}
+.red-text {
+    color: #ff0000;
+}
 /*---Stock---*/
 .stock {
     padding-bottom: 10px;
