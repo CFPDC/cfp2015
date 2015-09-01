@@ -12,11 +12,10 @@ include('includes/functions.php');
 </div>
 <main class="container-fluid secondary" role="main">
 <div class="row">
-	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
+	<aside class="col-sm-3 who-we-are-nav" id="asideFilter">
 		<ul class="list-unstyled">
 			<li><a href="all-events.php">Events</a></li>
 			<li><a href="how-to-give.php">How to Give</a></li>
-			<li><a href=""></a></li>
 			<li><a href="history.php">Donation History</a></li>
 			<li><a href="favorites.php">View Favorites</a></li>
 			<li><a href="registry.php">Gift Registry</a></li>
@@ -29,7 +28,7 @@ include('includes/functions.php');
 			<li><a href="volunteer-opportunities.php">Volunteer Opportunities</a></li>
 		</ul>
 	</aside>
-	<section class="col-xs-12 col-sm-8">
+	<section class="col-sm-8">
 		<p class="lead">Donating appreciated stock can be a tax&dash;wise way to conduct your charitable giving. Investors Capital Inc., a member of NASD &amp; SIPC, handles gifts of stock for Catalogue donors. Here’s how it works:</p>
 		<p class="stock"><strong>Step One:</strong> Complete and SIGN the <a href="#" class="needs-page" title="Letter of Authorization">Letter of Authorization</a> and send it to your broker.</p>
 		<p class="stock"><strong>Step Two:</strong> Email a copy of the Letter of Authorization to Emma Bloksberg&dash;Fireovid at <a href="mailto: emmabf@cfp-dc.org" title="Email Emma Bloksberg-Fireovid">emmabf@cfp-dc.org</a>. Once you do this, we will advise our broker to watch for the transfer and to liquidate the stock when it is received into our account. PLEASE NOTE: there is NO IDENTIFYING INFORMATION attached to a stock transfer, so alerting us is CRUCIAL.</p>
