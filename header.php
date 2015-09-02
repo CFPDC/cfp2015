@@ -107,6 +107,33 @@
 							<a href="how-to-give.php" target="_self" title="View events with our nonprofits">How To Give</a>
 						</li>
 						<li>
+							<a href="history.php" target="_self" title="View donation history for nonprofits">Donation History</a>
+						</li>
+						<li>
+							<a href="favorites.php" target="_self" title="View favorite nonprofits">View Favorites</a>
+						</li>
+						<li>
+							<a href="registry.php" target="_self" title="Gift Registry">Gift Registry</a>
+						</li>
+						<li>
+							<a href="giftcards.php" target="_self" title="Buy CFP gift cards">Gift Cards</a>
+						</li>
+						<li>
+							<a href="mycatalogue.php" target="_self" title="View your CFP catalogue">My Catalogue</a>
+						</li>
+						<li>
+							<a href="kids.php" target="_self" title="View nonprofits that are especially for kids">Especially for Kids</a>
+						</li>
+						<li>
+							<a href="donate.php" target="_self" title="Donate Now/Decide Later">Donate Now / Decide Later</a>
+						</li>
+						<li>
+							<a href="appreciated-stock.php" target="_self" title="Appreciated Stock">Appreciated Stock</a>
+						</li>
+						<li>
+							<a href="corporate-sponsorship.php" target="_self" title="Corporate Sponsorship">Corporate Sponsorship</a>
+						</li>
+						<li>
 							<a href="volunteer-opportunities.php" target="_self" title="View volunteer opportunities with our nonprofits">Volunteer Opportunities</a>
 						</li>
 					</ul>
