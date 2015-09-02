@@ -243,7 +243,7 @@ include('includes/functions.php');
     <p class="col-sm-10 col-sm-offset-1">Ut non ex eget augue euismod tempor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean nec ultrices ex. Donec porta rhoncus ipsum, sed gravida urna posuere commodo. </p>
     <div class="col-sm-8 col-sm-offset-2">
       <a class="btn btn-primary pull-left" href="#">Donate to a Nonprofit</a>
-      <a class="btn btn-secondary pull-right" href="#">Volunteer Opportunities</a>
+      <a class="btn btn-secondary pull-right" href="volunteer-opportunities.php">Volunteer Opportunities</a>
     </div>
   </div>
 </div>
