@@ -1568,6 +1568,34 @@ main address > span, address > a {
     text-transform: capitalize;
 }
 
+/*---All Events---*/
+.all-event-button .fa, .event-button .fa {
+    font-weight: bold;
+}
+.search-event > small {
+    display: block;
+}
+.location-select, .category-select {
+    display: block;
+    width: 100%;
+    padding: 5px;
+}
+.event-add-to-calendar {
+    margin: 25px 0;
+}
+.event-details {
+    margin-top: 25px;
+}
+.back-to-events {
+    padding-bottom: 10px;
+}
+.event-details-row {
+    padding-bottom: 25px;
+}
+
+.see-also {
+    margin-top: 25px;
+}
 /* How to Help page*/
 .give-image {}
 
@@ -1900,6 +1928,12 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .home-how-help-section .btn {
         font-size: 16px;
         font-size: 1.6rem;
+    }
+    .event-page-headings {
+        margin-top: 0;
+    }
+    .all-event-button, .event-button {
+        float: right;
     }
     footer .social-icons, footer address, footer .primary-footer-nav li, footer .secondary-footer-nav li {
         text-align: left;
