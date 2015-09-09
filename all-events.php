@@ -5,7 +5,6 @@ include('includes/functions.php');
 <div class="container-fluid">
 	<div class="row">
 		<h1 class="text-center">Events and Volunteering</h1>
-		
 	</div>
 </div>
 <div class="clearfix hero">
@@ -20,6 +19,7 @@ include('includes/functions.php');
 <div class="row">
 	<aside class="col-sm-3 who-we-are-nav" id="asideFilter">
 		<ul class="list-unstyled">
+			<li><a href="all-news.php">All News</a></li>
 			<li><a href="javascript:void(0);" class="current">Events</a></li>
 			<li><a href="volunteer-opportunities.php">Volunteer Opportunities</a></li>
 		</ul>

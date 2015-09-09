@@ -14,6 +14,7 @@ include('includes/functions.php');
 <div class="row">
 	<aside class="col-sm-3 who-we-are-nav" id="asideFilter">
 		<ul class="list-unstyled">
+			<li><a href="all-news.php">All News</a></li>
 			<li><a href="all-events.php">Events</a></li>
 			<li><a href="how-to-give.php">How to Give</a></li>
 			<li><a href="history.php">Donation History</a></li>
@@ -35,7 +36,7 @@ include('includes/functions.php');
 		<h4><a title="Permanent link to this event listing" href="all-events.php?id=4720">Paintings &amp; Pairings</a></h4>
 		<p>Join us in celebrating the care, support, and education IMCC provides to thousands of individuals affected by Alzheimer&rsquo;s disease and other memory impairments in our Northern Virginia community. This year&rsquo;s Paintings &amp; Pairings event will feature: &bull; Paired hors d&rsquo;oeuvres with seasonal wines &bull; Delicious three-course seated dinner &bull; Beautiful local paintings and art work for sale &bull; And, of course wonderful silent and live auction items A fantastic live and silent auction will be the highlight of this year's event. You will not want to miss out on the fun; items include everything from a wine tasting dinner for 6, sports memorabilia, local dance lessons or golf outings, or a weekend getaway at a B&amp;B. There will be something for everyone! The Art show will feature the works of several local artists connected with our center and day center participants. These works are also a part of the auction this year. <a href="javascript:void(0);" class="more-info-toggle" data-toggle="collapse" data-target="#more-info" aria-expanded="false" aria-controls="more-info">more event info</a></p>
 		<div id="more-info" class="collapse selections more-info">
-			<button href="javascript:void(0);" class="btn btn-default event-add-to-calendar"><span class="fa fa-calendar"></span>Add to My Calendar</button>
+			<button href="javascript:void(0);" class="btn btn-default event-add-to-calendar"><span class="fa fa-calendar"></span> Add to My Calendar</button>
 			<p><strong>When:</strong> Thu Oct 22 2015  (6:00 PM - 9:00 PM)</p>
 			<p><strong>Where:</strong> Stacy C. Sherwood Center, 3740 Old Lee Highway, Fairfax, VA 22030</p>
 			<p><strong>Volunteer Info:</strong> Volunteers can help with set-up, auction check-out, and clean up!</p>
