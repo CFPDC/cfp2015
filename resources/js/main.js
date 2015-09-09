@@ -9,27 +9,11 @@ Modernizr.load({
 	test: Modernizr.textshadow,
 	nope: ['resources/css/ie.css', 'assets/js/html5shiv.js', 'assets/js/respond.js', 'resources/js/ie.js']
 });
-if (($('.lt-ie9').length > 0) || ($('.ie9').length > 0)) {
 
-}
 /*** variables ***/
 var $root = $('html, body'),
-	liveTextRegion = $('#liveTextPolite').children('p'),
-	urlParams,
-	formDebug = true;
-(window.onpopstate = function() {
-	var match,
-		pl = /\+/g, // Regex for replacing addition symbol with a space
-		search = /([^&=]+)=?([^&]*)/g,
-		decode = function(s) {
-			return decodeURIComponent(s.replace(pl, " "));
-		},
-		query = window.location.search.substring(1);
+	liveTextRegion = $('#liveTextPolite').children('p');
 
-	urlParams = {};
-	while (match = search.exec(query))
-		urlParams[decode(match[1])] = decode(match[2]);
-})();
 
 
 var global = {
@@ -76,16 +60,8 @@ var global = {
 		});
 
 	},
-	subscribePage: function() {
-		//change paragraph text for subscribing instead of just signing up
-		if (window.location.search.indexOf('subscribe=true') > -1) {
-			//alert('track present');
-		}
-	},
 	carouselPlayPause: function() {
 		var button = $(this).attr('id');
-		console.log($(this));
-
 	},
 	addNonprofitNameToButton: function() {
 		var nonprofitListing = $('.nonprofit-listing'),
@@ -94,7 +70,7 @@ var global = {
 			var nonprofit = $(this),
 				nonprofitTitleRaw = nonprofit.find('.name').contents().filter(
 					function() {
-						return this.nodeType == 3
+						return this.nodeType == 3;
 					}),
 				nonprofitChildRemove = nonprofitTitleRaw.text(),
 				nonprofitTitle = nonprofitChildRemove.split(' ').join('_').trim(),
@@ -117,7 +93,7 @@ var global = {
 				donateButton.attr("href", donateButtonLink + "?np_title=" + nonprofitTitle);
 			}
 
-		})
+		});
 
 	},
 	donateButtonPrefill: function() {
@@ -212,7 +188,7 @@ var global = {
 			$('.right.carousel-control').hide();
 		}
 	}
-}
+};
 
 
 //list view page
@@ -221,11 +197,7 @@ var listViewResults = {
 		$(".listing").each(function(index) {
 			var npListing = $(this),
 				npHeader = npListing.find('.media-heading'),
-				npName = npHeader.clone() //clone the element
-				.children() //select all the children
-				.remove() //remove all the children
-				.end() //again go back to selected element
-				.text().trim().replace(/ /g, ''),
+				npName = npHeader.clone().children().remove().end().text().trim().replace(/ /g, ''),
 				npContent = npListing.find('.content');
 			npContent.attr({
 				'id': '_' + npName
@@ -235,13 +207,9 @@ var listViewResults = {
 				'data-target': '#_' + npName,
 				'tabindex': '0'
 			});
-
 		});
-	},
-
+	}
 };
-
-
 
 /*** global functions ***/
 
@@ -272,11 +240,6 @@ function homeSearchActiveToggle() {
 		if (!$(this).hasClass('active')) {
 			$(this).toggleClass('active');
 		}
-		/*if ($('.home-search button').hasClass('active')) {
-					console.log(this);
-					this.removeClass('active');
-				}
-				$(this).addClass('active');*/
 	});
 }
 
@@ -331,92 +294,6 @@ $('.sort-by').on('click', 'button', function() {
 
 //end isotop script
 
-$(function() {
-	//.ready for global functions
-
-	//if url contains string, show only the nonprofits with the category tied to it --- requires data to be in elements with a class 
-	/* not working correctly at the moment
-	if (window.location.href.indexOf("nature") > -1) {
-		if (!($('.category:contains("nature")'))) {
-			var $this = $(this).parent('iso-item');
-			$grid.isotope('remove', $this)
-				// layout remaining item elements
-				.isotope('layout');
-		}
-	} else if (window.location.href.indexOf("culture") > -1) {
-		$grid.isotope({
-			filter: '.category'
-		});
-	} else if (window.location.href.indexOf("education") > -1) {
-		$grid.isotope({
-			filter: '.category'
-		});
-	} else if (window.location.href.indexOf("human-services") > -1) {
-		$grid.isotope({
-			filter: '.category'
-		});
-	} else {
-		$grid.isotope({
-			filter: '*'
-		});
-	}
-*/
-
-
-	//Do initial check for media state
-	var state = A11yResp.getScreenWidth();
-	if (state !== 'desktop') {
-		performMediaQueries(state);
-	}
-
-	$('#related-carousel').carousel({
-		pause: "hover"
-	});
-	$('#playButton').on('click', function() {
-		$('#related-carousel').carousel('cycle');
-	});
-	$('#pauseButton').on('click', function() {
-		$('#related-carousel').carousel('pause');
-	});
-
-
-	globalSkipNav();
-	homeSearchActiveToggle();
-	searchPageActiveToggle();
-
-	//scroll spy for styleguide
-	$('body').scrollspy({
-		target: '.bs-docs-sidebar'
-	})
-	var nav = $(".push-down");
-	$(window).scroll(function() {
-		var scroll = $(window).scrollTop();
-
-		if (scroll >= 105) {
-			nav.addClass("scrolling");
-		} else {
-			nav.removeClass("scrolling");
-		}
-	});
-
-	//open collapsed sections of filtering on results/search page
-	$(".category-toggle").click();
-
-	//add unchecked to each results page filter section
-	$('.select-all').attr("data-type", "uncheck");
-
-	//this is to find all pages pointing to prod links which we will need to change to relative to ensure each page is covered
-	$('a').each(function() {
-		var host = this.hostname;
-		if (host === 'cfp-dc.org' || host === 'catalogueforphilanthropy-dc.org') {
-			$(this).addClass('need-page');
-			console.log('Still have old links showing')
-		}
-
-	})
-
-
-});
 
 //checkout page checkbox toggle functions
 var expressCheckout = $('.express-checkout-section'),
@@ -447,20 +324,14 @@ $('.checkout-form .toggle-check').on('click', function() {
 //namespace to keep form functions short
 var formHandlers = {
 	highlight: function(element, errorClass, validClass) {
-		$(element.form).find("label[for=" + element.id + "]")
-			.addClass("error");
-		$(element.form).find("input[id=" + element.id + "]")
-			.addClass("error");
-		$(element.form).find("input[id=" + element.id + "], select[id=" + element.id + "]").closest('div')
-			.addClass("error");
+		$(element.form).find("label[for=" + element.id + "]").addClass("error");
+		$(element.form).find("input[id=" + element.id + "]").addClass("error");
+		$(element.form).find("input[id=" + element.id + "], select[id=" + element.id + "]").closest('div').addClass("error");
 	},
 	unHighlight: function(element, errorClass, validClass) {
-		$(element.form).find("label[for=" + element.id + "]")
-			.removeClass("error");
-		$(element.form).find("input[id=" + element.id + "]")
-			.removeClass("error");
-		$(element.form).find("input[id=" + element.id + "], select[id=" + element.id + "]").closest('div')
-			.removeClass("error");
+		$(element.form).find("label[for=" + element.id + "]").removeClass("error");
+		$(element.form).find("input[id=" + element.id + "]").removeClass("error");
+		$(element.form).find("input[id=" + element.id + "], select[id=" + element.id + "]").closest('div').removeClass("error");
 	},
 	showError: function(errorMap, errorList) {
 		if (submitted && errorList) {
@@ -521,948 +392,66 @@ var formHandlers = {
 			error.insertAfter(element);
 		}
 	}
-}
-if ($('form').length > 0) {
+};
 
-	$.validator.setDefaults({
-		debug: true,
-		errorElement: "strong",
-		focusInvalid: false
+
+$(function() {
+	//.ready for global functions
+
+	//Do initial check for media state
+	var state = A11yResp.getScreenWidth();
+	if (state !== 'desktop') {
+		performMediaQueries(state);
+	}
+
+	$('#Mycarousel').carousel({
+		pause: "hover"
+	});
+	$('#playButton').on('click', function() {
+		$('#Mycarousel').carousel('cycle');
+	});
+	$('#pauseButton').on('click', function() {
+		$('#Mycarousel').carousel('pause');
 	});
 
-	var submitted = false;
-}
-//only accepts US phone numbers
-$.validator.addMethod('phoneUS', function(phone_number, element) {
-	phone_number = phone_number.replace(/\s+/g, "");
-	return this.optional(element) || phone_number.length == 12 &&
-		phone_number.match(/\d{10}|(([\(]?([0-9]{3})[\)]?)?[ \.\-]?([0-9]{3})[ \.\-]([0-9]{4}))$/);
-}, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Please specify a valid phone number');
 
-//allows you to specify a zip code range to accept
-$.validator.addMethod("ziprange", function(value, element) {
-	return this.optional(element) || /^2[0101-4658]/.test(value);
-}, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Please enter a Virginia Zip Code');
+	globalSkipNav();
+	homeSearchActiveToggle();
+	searchPageActiveToggle();
 
-$.validator.addMethod("lettersonly", function(value, element) {
-	return this.optional(element) || /^[a-z]+$/i.test(value);
-}, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Letters only please');
+	//scroll spy for styleguide
+	$('body').scrollspy({
+		target: '.bs-docs-sidebar'
+	});
+	var nav = $(".push-down");
+	$(window).scroll(function() {
+		var scroll = $(window).scrollTop();
 
-$.validator.addMethod("letterswithbasicpunc", function(value, element) {
-	return this.optional(element) || /^[a-z\-.,()'"\s]+$/i.test(value);
-}, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Letters or punctuation only please');
-
-$.validator.addMethod('require-one', function(value, element) {
-	return $('.require-one:checked').size() > 0;
-}, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please check at least one box.');
-
-$('.request-catalogue').validate({
-	focusCleanup: false,
-	errorClass: 'error',
-	rules: {
-		fname: {
-			required: true,
-			minlength: 2,
-			lettersonly: true
-		},
-		lname: {
-			required: true,
-			minlength: 2,
-			letterswithbasicpunc: true
-		},
-		street: {
-			required: true
-		},
-		city: {
-			required: true,
-			lettersonly: true
-		},
-		state: {
-			required: true
-		},
-		zip: {
-			required: true,
-			digits: true,
-			ziprange: true,
-			minlength: 5,
-			maxlength: 5
-		},
-		email: {
-			required: true,
-			email: true,
-			minlength: 7
-		},
-		captcha_code: {
-			required: true
+		if (scroll >= 105) {
+			nav.addClass("scrolling");
+		} else {
+			nav.removeClass("scrolling");
 		}
-	},
+	});
 
-	messages: {
-		fname: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
-			minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.'),
-			lettersonly: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid first name'
-		},
-		lname: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
-			minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.'),
-			letterswithbasicpunc: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid last name'
-		},
-		street: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required'
-		},
-		city: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
-			lettersonly: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid city'
-		},
-		state: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required'
-		},
-		zip: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
-			digits: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid Virginia zip code',
-			minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.'),
-			maxlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter no more than {0} characters.')
-		},
-		email: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
-			email: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid email address.',
-			minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.')
-		},
-		captcha_code: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter the verification code',
+	//open collapsed sections of filtering on results/search page
+	$(".category-toggle").click();
 
+	//add unchecked to each results page filter section
+	$('.select-all').attr("data-type", "uncheck");
+
+	//this is to find all pages pointing to prod links which we will need to change to relative to ensure each page is covered
+	$('a').each(function() {
+		var host = this.hostname;
+		if (host === 'cfp-dc.org' || host === 'catalogueforphilanthropy-dc.org') {
+			$(this).addClass('need-page');
 		}
-	},
+	});
 
-	//Create our error summary that will appear before the form
-	showErrors: function(errorMap, errorList) {
-		//formHandlers.showError(errorMap, errorList);
-		if (submitted && errorList) {
-			var $errorFormClass1 = 'errors-' + $(this.currentForm).attr('class'),
-				$errorFormClass = $errorFormClass1.split(' ')[0];
-
-			//Reset and remove error messages if the form
-			//has been validated once already
-			var summary = "";
-			$('label .error', $(this.currentForm)).remove();
-
-			//Create our container if one doesnt already exits
-			//better than an empty div being in the HTML source
-			if ($('.' + $errorFormClass).length === 0) {
-				$('<div class="' + $errorFormClass + '" tabindex="-1"/>').insertBefore($(this.currentForm));
-			}
-
-			//Generate our error summary list
-			for (this.error in errorList) {
-				//get associated label text to be used for the error summary
-				var $errorLabel = $('label[for="' + $(errorList[this.error].element).attr('id') + '"]').text();
-				summary += '<li><a href="#' + errorList[this.error].element.id + '">' + $errorLabel + ' ' + errorList[this.error].message.replace('Important: ', '') + '</a></li>';
-			}
-
-			//Output our error summary and place it in the error container
-			$('.' + $errorFormClass).html('<h4 class="error-heading row"><span class="fa fa-exclamation" aria-hidden="true" style="font-family: FontAwesome !important"></span><span class="adobeBlank">Attention</span> Your information contains ' + this.numberOfInvalids() + ' errors</h4><ol class="summary-list">' + summary + '</ol>');
-			$('.' + $errorFormClass).addClass('col-xs-12');
-
-			//Focus on the error container
-			//Alternatively, you might want to use the Validation default option (focusInvalid)
-			$('.errors-' + $(this.currentForm).attr('class')).focus();
-
-			//Move the focus to the associated input when error message link is triggered
-			//a simple href anchor link doesnt seem to place focus inside the input
-			$('.' + $errorFormClass + ' a').on('click', function() {
-				$($(this).attr('href')).focus();
-				return false;
-			});
-
-			//removes exclamation icon from error summary list
-			if ($('.summary-list li a span').hasClass('Exclamation')) {
-				$('.summary-list li a span').removeClass('fa fa-exclamation-circle');
-			}
-			//remove required text from summary list
-			if ($('.summary-list li a span').hasClass('Exclamation')) {
-				$('.summary-list li a:contains(" (required)")').each(function() {
-					$(this).html($(this).html().split(" (required)").join(":"));
-				});
-			}
-			//removes adobeBlank text from error summary list
-			$('.summary-list li a span span').remove('.adobeBlank');
-		}
-		this.defaultShowErrors();
-		submitted = false;
-	},
-	errorPlacement: function(error, element) {
-		formHandlers.errorPosition(error, element);
-	},
-	highlight: function(element, errorClass, validClass) {
-		formHandlers.highlight(element, errorClass, validClass);
-	},
-	unhighlight: function(element, errorClass, validClass) {
-		formHandlers.unHighlight(element, errorClass, validClass);
-
-	},
-
-	invalidHandler: function(form, validator) {
-		submitted = true;
-	},
-
-	//Removed the error summary upon successful completion of form
-	submitHandler: function(form) {
-		$('.errors-' + $(this.currentForm).attr('class')).remove();
-
-		$(form).submit();
-	}
-});
-
-//signup form
-$('.sign-up').validate({
-	focusCleanup: false,
-	errorClass: 'error',
-	rules: {
-		fname: {
-			required: true,
-			minlength: 2,
-			lettersonly: true
-		},
-		lname: {
-			required: true,
-			minlength: 2,
-			letterswithbasicpunc: true
-		},
-		password: {
-			required: true
-		},
-		password2: {
-			required: true,
-			equalTo: '#password'
-		},
-		email: {
-			required: true,
-			email: true,
-			minlength: 7
-		},
-		captcha_code: {
-			required: true
-		}
-	},
-
-	messages: {
-		fname: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
-			minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.'),
-			lettersonly: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid first name'
-		},
-		lname: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
-			minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.'),
-			letterswithbasicpunc: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid last name'
-		},
-
-		password: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a password'
-		},
-		password2: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a password',
-			equalTo: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Passwords do not match'
-		},
-		email: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
-			email: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid email address.',
-			minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.')
-		},
-		captcha_code: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter the verification code',
-
-		}
-	},
-
-	//Create our error summary that will appear before the form
-	showErrors: function(errorMap, errorList) {
-		//formHandlers.showError(errorMap, errorList);
-		if (submitted && errorList) {
-			var $errorFormClass1 = 'errors-' + $(this.currentForm).attr('class'),
-				$errorFormClass = $errorFormClass1.split(' ')[0];
-
-			//Reset and remove error messages if the form
-			//has been validated once already
-			var summary = "";
-			$('label .error', $(this.currentForm)).remove();
-
-			//Create our container if one doesnt already exits
-			//better than an empty div being in the HTML source
-			if ($('.' + $errorFormClass).length === 0) {
-				$('<div class="' + $errorFormClass + '" tabindex="-1"/>').insertBefore($(this.currentForm));
-			}
-
-			//Generate our error summary list
-			for (this.error in errorList) {
-				//get associated label text to be used for the error summary
-				var $errorLabel = $('label[for="' + $(errorList[this.error].element).attr('id') + '"]').text();
-				summary += '<li><a href="#' + errorList[this.error].element.id + '">' + $errorLabel + ' ' + errorList[this.error].message.replace('Important: ', '') + '</a></li>';
-			}
-
-			//Output our error summary and place it in the error container
-			$('.' + $errorFormClass).html('<h4 class="error-heading row"><span class="fa fa-exclamation" aria-hidden="true" style="font-family: FontAwesome !important"></span><span class="adobeBlank">Attention</span> Your information contains ' + this.numberOfInvalids() + ' errors</h4><ol class="summary-list">' + summary + '</ol>');
-			$('.' + $errorFormClass).addClass('col-xs-12');
-
-			//Focus on the error container
-			//Alternatively, you might want to use the Validation default option (focusInvalid)
-			$('.errors-' + $(this.currentForm).attr('class')).focus();
-
-			//Move the focus to the associated input when error message link is triggered
-			//a simple href anchor link doesnt seem to place focus inside the input
-			$('.' + $errorFormClass + ' a').on('click', function() {
-				$($(this).attr('href')).focus();
-				return false;
-			});
-
-			//removes exclamation icon from error summary list
-			if ($('.summary-list li a span').hasClass('Exclamation')) {
-				$('.summary-list li a span').removeClass('fa fa-exclamation-circle');
-			}
-			//remove required text from summary list
-			if ($('.summary-list li a span').hasClass('Exclamation')) {
-				$('.summary-list li a:contains(" (required)")').each(function() {
-					$(this).html($(this).html().split(" (required)").join(":"));
-				});
-			}
-
-			//removes adobeBlank text from error summary list
-			$('.summary-list li a span span').remove('.adobeBlank');
-		}
-		this.defaultShowErrors();
-		submitted = false;
-	},
-	errorPlacement: function(error, element) {
-		formHandlers.errorPosition(error, element);
-	},
-	highlight: function(element, errorClass, validClass) {
-		formHandlers.highlight(element, errorClass, validClass);
-	},
-	unhighlight: function(element, errorClass, validClass) {
-		formHandlers.unHighlight(element, errorClass, validClass);
-
-	},
-
-	invalidHandler: function(form, validator) {
-		submitted = true;
-	},
-
-	//Removed the error summary upon successful completion of form
-	submitHandler: function(form) {
-		$('.errors-' + $(this.currentForm).attr('class')).remove();
-
-		$(form).submit();
-	}
-});
-//signup form
-$('.donor-form-container').validate({
-	focusCleanup: false,
-	errorClass: 'error',
-	rules: {
-		username1: {
-			required: true,
-			email: true,
-			minlength: 7
-		},
-		password1: {
-			required: true
-		}
-	},
-
-	messages: {
-		username1: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
-			email: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid email address.',
-			minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.')
-		},
-		password1: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a password'
-		}
-	},
-
-	//Create our error summary that will appear before the form
-	showErrors: function(errorMap, errorList) {
-		//formHandlers.showError(errorMap, errorList);
-		if (submitted && errorList) {
-			var $errorFormClass1 = 'errors-' + $(this.currentForm).attr('class'),
-				$errorFormClass = $errorFormClass1.split(' ')[0];
-
-			//Reset and remove error messages if the form
-			//has been validated once already
-			var summary = "";
-			$('label .error', $(this.currentForm)).remove();
-
-			//Create our container if one doesnt already exits
-			//better than an empty div being in the HTML source
-			if ($('.' + $errorFormClass).length === 0) {
-				$('<div class="' + $errorFormClass + '" tabindex="-1"/>').insertBefore($(this.currentForm));
-			}
-
-			//Generate our error summary list
-			for (this.error in errorList) {
-				//get associated label text to be used for the error summary
-				var $errorLabel = $('label[for="' + $(errorList[this.error].element).attr('id') + '"]').text();
-				summary += '<li><a href="#' + errorList[this.error].element.id + '">' + $errorLabel + ' ' + errorList[this.error].message.replace('Important: ', '') + '</a></li>';
-			}
-
-			//Output our error summary and place it in the error container
-			$('.' + $errorFormClass).html('<h4 class="error-heading row"><span class="fa fa-exclamation" aria-hidden="true" style="font-family: FontAwesome !important"></span><span class="adobeBlank">Attention</span> Your information contains ' + this.numberOfInvalids() + ' errors</h4><ol class="summary-list">' + summary + '</ol>');
-			$('.' + $errorFormClass).addClass('col-xs-12');
-
-			//Focus on the error container
-			//Alternatively, you might want to use the Validation default option (focusInvalid)
-			$('.errors-' + $(this.currentForm).attr('class')).focus();
-
-			//Move the focus to the associated input when error message link is triggered
-			//a simple href anchor link doesnt seem to place focus inside the input
-			$('.' + $errorFormClass + ' a').on('click', function() {
-				$($(this).attr('href')).focus();
-				return false;
-			});
-
-			//removes exclamation icon from error summary list
-			if ($('.summary-list li a span').hasClass('Exclamation')) {
-				$('.summary-list li a span').removeClass('fa fa-exclamation-circle');
-			}
-			//remove required text from summary list
-			if ($('.summary-list li a span').hasClass('Exclamation')) {
-				$('.summary-list li a:contains(" (your email address)")').each(function() {
-					$(this).html($(this).html().split(" (your email address)").join(":"));
-				});
-			}
-
-			//removes adobeBlank text from error summary list
-			$('.summary-list li a span span').remove('.adobeBlank');
-		}
-		this.defaultShowErrors();
-		submitted = false;
-	},
-	errorPlacement: function(error, element) {
-		formHandlers.errorPosition(error, element);
-	},
-	highlight: function(element, errorClass, validClass) {
-		formHandlers.highlight(element, errorClass, validClass);
-	},
-	unhighlight: function(element, errorClass, validClass) {
-		formHandlers.unHighlight(element, errorClass, validClass);
-
-	},
-
-	invalidHandler: function(form, validator) {
-		submitted = true;
-	},
-
-	//Removed the error summary upon successful completion of form
-	submitHandler: function(form) {
-		$('.errors-' + $(this.currentForm).attr('class')).remove();
-
-		$(form).submit();
-	}
-});
-
-//login form
-$('.login-form-container').validate({
-	focusCleanup: false,
-	errorClass: 'error',
-	rules: {
-		username2: {
-			required: true,
-			email: true,
-			minlength: 7
-		},
-		password: {
-			required: true
-		}
-	},
-
-	messages: {
-		username2: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
-			email: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid email address.',
-			minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.')
-		},
-
-		password: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a password'
-		}
-	},
-
-	//Create our error summary that will appear before the form
-	showErrors: function(errorMap, errorList) {
-		//formHandlers.showError(errorMap, errorList);
-		if (submitted && errorList) {
-			var $errorFormClass1 = 'errors-' + $(this.currentForm).attr('class'),
-				$errorFormClass = $errorFormClass1.split(' ')[0];
-
-			//Reset and remove error messages if the form
-			//has been validated once already
-			var summary = "";
-			$('label .error', $(this.currentForm)).remove();
-
-			//Create our container if one doesnt already exits
-			//better than an empty div being in the HTML source
-			if ($('.' + $errorFormClass).length === 0) {
-				$('<div class="' + $errorFormClass + '" tabindex="-1"/>').insertBefore($(this.currentForm));
-			}
-
-			//Generate our error summary list
-			for (this.error in errorList) {
-				//get associated label text to be used for the error summary
-				var $errorLabel = $('label[for="' + $(errorList[this.error].element).attr('id') + '"]').text();
-				summary += '<li><a href="#' + errorList[this.error].element.id + '">' + $errorLabel + ' ' + errorList[this.error].message.replace('Important: ', '') + '</a></li>';
-			}
-
-			//Output our error summary and place it in the error container
-			$('.' + $errorFormClass).html('<h4 class="error-heading row"><span class="fa fa-exclamation" aria-hidden="true" style="font-family: FontAwesome !important"></span><span class="adobeBlank">Attention</span> Your information contains ' + this.numberOfInvalids() + ' errors</h4><ol class="summary-list">' + summary + '</ol>');
-			$('.' + $errorFormClass).addClass('col-xs-12');
-
-			//Focus on the error container
-			//Alternatively, you might want to use the Validation default option (focusInvalid)
-			$('.errors-' + $(this.currentForm).attr('class')).focus();
-
-			//Move the focus to the associated input when error message link is triggered
-			//a simple href anchor link doesnt seem to place focus inside the input
-			$('.' + $errorFormClass + ' a').on('click', function() {
-				$($(this).attr('href')).focus();
-				return false;
-			});
-
-			//removes exclamation icon from error summary list
-			if ($('.summary-list li a span').hasClass('Exclamation')) {
-				$('.summary-list li a span').removeClass('fa fa-exclamation-circle');
-			}
-			//remove required text from summary list
-			if ($('.summary-list li a span').hasClass('Exclamation')) {
-				$('.summary-list li a:contains(" (required)")').each(function() {
-					$(this).html($(this).html().split(" (required)").join(":"));
-				});
-			}
-
-			//removes adobeBlank text from error summary list
-			$('.summary-list li a span span').remove('.adobeBlank');
-		}
-		this.defaultShowErrors();
-		submitted = false;
-	},
-	errorPlacement: function(error, element) {
-		formHandlers.errorPosition(error, element);
-	},
-	highlight: function(element, errorClass, validClass) {
-		formHandlers.highlight(element, errorClass, validClass);
-	},
-	unhighlight: function(element, errorClass, validClass) {
-		formHandlers.unHighlight(element, errorClass, validClass);
-
-	},
-
-	invalidHandler: function(form, validator) {
-		submitted = true;
-	},
-
-	//Removed the error summary upon successful completion of form
-	submitHandler: function(form) {
-		$('.errors-' + $(this.currentForm).attr('class')).remove();
-
-		$(form).submit();
-	}
-});
-
-//subscribe form
-var checkboxes = $('.require-one');
-var checkbox_names = $.map(checkboxes, function(e, i) {
-	return $(e).attr("name")
-}).join(" ");
-
-$('.subscribe-form').validate({
-	focusCleanup: false,
-	errorClass: 'error',
-	groups: {
-		checks: checkbox_names
-	},
-	rules: {
-		email: {
-			required: true,
-			email: true,
-			minlength: 7
-		}
-	},
-
-	messages: {
-		email: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
-			email: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid email address.',
-			minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.')
-		}
-	},
-
-	//Create our error summary that will appear before the form
-	showErrors: function(errorMap, errorList) {
-		//formHandlers.showError(errorMap, errorList);
-		if (submitted && errorList) {
-			var $errorFormClass1 = 'errors-' + $(this.currentForm).attr('class'),
-				$errorFormClass = $errorFormClass1.split(' ')[0];
-
-			//Reset and remove error messages if the form
-			//has been validated once already
-			var summary = "";
-			$('label .error', $(this.currentForm)).remove();
-
-			//Create our container if one doesnt already exits
-			//better than an empty div being in the HTML source
-			if ($('.' + $errorFormClass).length === 0) {
-				$('<div class="' + $errorFormClass + '" tabindex="-1"/>').insertBefore($(this.currentForm));
-			}
-
-			//Generate our error summary list
-			for (this.error in errorList) {
-				//get associated label text to be used for the error summary
-				var $errorLabel = $('label[for="' + $(errorList[this.error].element).attr('id') + '"]').text();
-				summary += '<li><a href="#' + errorList[this.error].element.id + '">' + $errorLabel + ' ' + errorList[this.error].message.replace('Important: ', '') + '</a></li>';
-			}
-
-			//Output our error summary and place it in the error container
-			$('.' + $errorFormClass).html('<h4 class="error-heading row"><span class="fa fa-exclamation" aria-hidden="true" style="font-family: FontAwesome !important"></span><span class="adobeBlank">Attention</span> Your information contains ' + this.numberOfInvalids() + ' errors</h4><ol class="summary-list">' + summary + '</ol>');
-			$('.' + $errorFormClass).addClass('col-xs-12');
-
-			//Focus on the error container
-			//Alternatively, you might want to use the Validation default option (focusInvalid)
-			$('.errors-' + $(this.currentForm).attr('class')).focus();
-
-			//Move the focus to the associated input when error message link is triggered
-			//a simple href anchor link doesnt seem to place focus inside the input
-			$('.' + $errorFormClass + ' a').on('click', function() {
-				$($(this).attr('href')).focus();
-				return false;
-			});
-
-			//removes exclamation icon from error summary list
-			if ($('.summary-list li a span').hasClass('Exclamation')) {
-				$('.summary-list li a span').removeClass('fa fa-exclamation-circle');
-			}
-			//remove required text from summary list
-			if ($('.summary-list li a span').hasClass('Exclamation')) {
-				$('.summary-list li a:contains(" (required)")').each(function() {
-					$(this).html($(this).html().split(" (required)").join(":"));
-				});
-			}
-
-			//removes adobeBlank text from error summary list
-			$('.summary-list li a span span').remove('.adobeBlank');
-		}
-		this.defaultShowErrors();
-		submitted = false;
-	},
-	errorPlacement: function(error, element) {
-		formHandlers.errorPosition(error, element);
-	},
-	highlight: function(element, errorClass, validClass) {
-		formHandlers.highlight(element, errorClass, validClass);
-	},
-	unhighlight: function(element, errorClass, validClass) {
-		formHandlers.unHighlight(element, errorClass, validClass);
-
-	},
-
-	invalidHandler: function(form, validator) {
-		submitted = true;
-	},
-
-	//Removed the error summary upon successful completion of form
-	submitHandler: function(form) {
-		$('.errors-' + $(this.currentForm).attr('class')).remove();
-
-		$(form).submit();
-	}
-});
-
-//checkout form
-$('.checkout-form').validate({
-	focusCleanup: false,
-	errorClass: 'error',
-	debug: true,
-	rules: {
-		name: {
-			required: true,
-			minlength: 2,
-			lettersonly: true
-		},
-		amount: {
-			required: true,
-			minlength: 2,
-			number: true
-		},
-		street: {
-			required: true
-		},
-		city: {
-			required: true,
-			lettersonly: true
-		},
-		state: {
-			required: true
-		},
-		zip: {
-			required: true,
-			digits: true,
-			ziprange: true,
-			minlength: 5,
-			maxlength: 5
-		},
-		email: {
-			required: true,
-			email: true,
-			minlength: 7
-		}
-	},
-
-	messages: {
-		name: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
-			minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.'),
-			lettersonly: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid name'
-		},
-		amount: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
-			number: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid dollar amount'
-		},
-		street: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required'
-		},
-		city: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
-			lettersonly: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid city'
-		},
-		state: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required'
-		},
-		zip: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
-			digits: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid Virginia zip code',
-			minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.'),
-			maxlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter no more than {0} characters.')
-		},
-		email: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
-			email: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid email address.',
-			minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.')
-		}
-	},
-
-	//Create our error summary that will appear before the form
-	showErrors: function(errorMap, errorList) {
-		//formHandlers.showError(errorMap, errorList);
-		if (submitted && errorList) {
-			var $errorFormClass1 = 'errors-' + $(this.currentForm).attr('class'),
-				$errorFormClass = $errorFormClass1.split(' ')[0];
-
-			//Reset and remove error messages if the form
-			//has been validated once already
-			var summary = "";
-			$('label .error', $(this.currentForm)).remove();
-
-			//Create our container if one doesnt already exits
-			//better than an empty div being in the HTML source
-			if ($('.' + $errorFormClass).length === 0) {
-				$('<div class="' + $errorFormClass + '" tabindex="-1"/>').insertBefore($(this.currentForm));
-			}
-
-			//Generate our error summary list
-			for (this.error in errorList) {
-				//get associated label text to be used for the error summary
-				var $errorLabel = $('label[for="' + $(errorList[this.error].element).attr('id') + '"]').text();
-				summary += '<li><a href="#' + errorList[this.error].element.id + '">' + $errorLabel + ' ' + errorList[this.error].message.replace('Important: ', '') + '</a></li>';
-			}
-
-			//Output our error summary and place it in the error container
-			$('.' + $errorFormClass).html('<h4 class="error-heading row"><span class="fa fa-exclamation" aria-hidden="true" style="font-family: FontAwesome !important"></span><span class="adobeBlank">Attention</span> Your information contains ' + this.numberOfInvalids() + ' errors</h4><ol class="summary-list">' + summary + '</ol>');
-			$('.' + $errorFormClass).addClass('col-xs-12');
-
-			//Focus on the error container
-			//Alternatively, you might want to use the Validation default option (focusInvalid)
-			$('.errors-' + $(this.currentForm).attr('class')).focus();
-
-			//Move the focus to the associated input when error message link is triggered
-			//a simple href anchor link doesnt seem to place focus inside the input
-			$('.' + $errorFormClass + ' a').on('click', function() {
-				$($(this).attr('href')).focus();
-				return false;
-			});
-
-			//removes exclamation icon from error summary list
-			if ($('.summary-list li a span').hasClass('Exclamation')) {
-				$('.summary-list li a span').removeClass('fa fa-exclamation-circle');
-			}
-			//remove required text from summary list
-			if ($('.summary-list li a span').hasClass('Exclamation')) {
-				$('.summary-list li a:contains(" (required)")').each(function() {
-					$(this).html($(this).html().split(" (required)").join(":"));
-				});
-			}
-			//removes adobeBlank text from error summary list
-			$('.summary-list li a span span').remove('.adobeBlank');
-		}
-		this.defaultShowErrors();
-		submitted = false;
-	},
-	errorPlacement: function(error, element) {
-		formHandlers.errorPosition(error, element);
-	},
-	highlight: function(element, errorClass, validClass) {
-		formHandlers.highlight(element, errorClass, validClass);
-	},
-	unhighlight: function(element, errorClass, validClass) {
-		formHandlers.unHighlight(element, errorClass, validClass);
-
-	},
-
-	invalidHandler: function(form, validator) {
-		submitted = true;
-	},
-
-	//Removed the error summary upon successful completion of form
-	submitHandler: function(form) {
-		$('.errors-' + $(this.currentForm).attr('class')).remove();
-
-		$(form).submit();
-	}
-});
-//blog reply form
-$('.comment-form').validate({
-	focusCleanup: false,
-	errorClass: 'error',
-	rules: {
-		author: {
-			required: true,
-			minlength: 2,
-			lettersonly: true
-		},
-		email: {
-			required: true,
-			email: true,
-			minlength: 7
-		},
-		comment: {
-			required: true
-		}
-	},
-
-	messages: {
-		author: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
-			minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.'),
-			lettersonly: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid first name'
-		},
-		email: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
-			email: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid email address.',
-			minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.')
-		},
-		comment: {
-			required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a comment',
-
-		}
-	},
-
-	//Create our error summary that will appear before the form
-	showErrors: function(errorMap, errorList) {
-		//formHandlers.showError(errorMap, errorList);
-		if (submitted && errorList) {
-			var $errorFormClass1 = 'errors-' + $(this.currentForm).attr('class'),
-				$errorFormClass = $errorFormClass1.split(' ')[0];
-
-			//Reset and remove error messages if the form
-			//has been validated once already
-			var summary = "";
-			$('label .error', $(this.currentForm)).remove();
-
-			//Create our container if one doesnt already exits
-			//better than an empty div being in the HTML source
-			if ($('.' + $errorFormClass).length === 0) {
-				$('<div class="' + $errorFormClass + '" tabindex="-1"/>').insertBefore($(this.currentForm));
-			}
-
-			//Generate our error summary list
-			for (this.error in errorList) {
-				//get associated label text to be used for the error summary
-				var $errorLabel = $('label[for="' + $(errorList[this.error].element).attr('id') + '"]').text();
-				summary += '<li><a href="#' + errorList[this.error].element.id + '">' + $errorLabel + ' ' + errorList[this.error].message.replace('Important: ', '') + '</a></li>';
-			}
-
-			//Output our error summary and place it in the error container
-			$('.' + $errorFormClass).html('<h4 class="error-heading row"><span class="fa fa-exclamation" aria-hidden="true" style="font-family: FontAwesome !important"></span><span class="adobeBlank">Attention</span> Your information contains ' + this.numberOfInvalids() + ' errors</h4><ol class="summary-list">' + summary + '</ol>');
-			$('.' + $errorFormClass).addClass('col-xs-12');
-
-			//Focus on the error container
-			//Alternatively, you might want to use the Validation default option (focusInvalid)
-			$('.errors-' + $(this.currentForm).attr('class')).focus();
-
-			//Move the focus to the associated input when error message link is triggered
-			//a simple href anchor link doesnt seem to place focus inside the input
-			$('.' + $errorFormClass + ' a').on('click', function() {
-				$($(this).attr('href')).focus();
-				return false;
-			});
-
-			//removes exclamation icon from error summary list
-			if ($('.summary-list li a span').hasClass('Exclamation')) {
-				$('.summary-list li a span').removeClass('fa fa-exclamation-circle');
-			}
-			//remove required text from summary list
-			if ($('.summary-list li a span').hasClass('Exclamation')) {
-				$('.summary-list li a:contains(" (required)")').each(function() {
-					$(this).html($(this).html().split(" (required)").join(":"));
-				});
-			}
-
-			//removes adobeBlank text from error summary list
-			$('.summary-list li a span span').remove('.adobeBlank');
-		}
-		this.defaultShowErrors();
-		submitted = false;
-	},
-	errorPlacement: function(error, element) {
-		formHandlers.errorPosition(error, element);
-	},
-	highlight: function(element, errorClass, validClass) {
-		formHandlers.highlight(element, errorClass, validClass);
-	},
-	unhighlight: function(element, errorClass, validClass) {
-		formHandlers.unHighlight(element, errorClass, validClass);
-
-	},
-
-	invalidHandler: function(form, validator) {
-		submitted = true;
-	},
-
-	//Removed the error summary upon successful completion of form
-	submitHandler: function(form) {
-		$('.errors-' + $(this.currentForm).attr('class')).remove();
-
-		$(form).submit();
-	}
-});
-
-
-
-//these all run at the same time but separate each into page specific sections for organization
-$(function() {
 	//bootstrap tooltips activated on page load
 	$('[data-toggle="tooltip"]').tooltip({
 		container: 'body'
 	});
-
-	//home page
-
-
-	//about page
-
-
-	//contact page
-
-
-	//search/results page
 
 	/* list view */
 	listViewResults.nonprofitCollapse();
@@ -1471,18 +460,19 @@ $(function() {
 	global.donateButtonPrefill();
 	global.addNonprofitNameToButton();
 	global.a11yCarousel();
+
 	$('.carouselButtons button').on('click', function() {
 		var button = $(this),
 			buttonFocus = button.siblings(),
 			liveText = $(this).siblings().text().trim();
 		button.delay(500).addClass('hide').siblings().removeClass('hide');
 		buttonFocus.focus();
-		$('#liveTextPolite').children('p').html(liveText)
+		$('#liveTextPolite').children('p').html(liveText);
 		liveTextRegion.text(liveText);
 		setTimeout(function() {
 			liveTextRegion.text('');
 		}, 3000);
-	})
+	});
 
 	//make all anchor tags 'clickable' by enter key
 	$('a').on('keydown', function(event) {
@@ -1514,8 +504,920 @@ $(function() {
 
 
 
-	//non-profit page
+	//all form validation must be in .ready
+	$.validator.setDefaults({
+		debug: true,
+		errorElement: "strong",
+		focusInvalid: false
+	});
+
+	var submitted = false;
+	//only accepts US phone numbers
+	$.validator.addMethod('phoneUS', function(phone_number, element) {
+		phone_number = phone_number.replace(/\s+/g, "");
+		return this.optional(element) || phone_number.length == 12 && phone_number.match(/\d{10}|(([\(]?([0-9]{3})[\)]?)?[ \.\-]?([0-9]{3})[ \.\-]([0-9]{4}))$/);
+	}, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Please specify a valid phone number');
+
+	//allows you to specify a zip code range to accept
+	$.validator.addMethod("ziprange", function(value, element) {
+		return this.optional(element) || (/^2[0101-4658]/).test(value);
+	}, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Please enter a Virginia Zip Code');
+
+	$.validator.addMethod("lettersonly", function(value, element) {
+		return this.optional(element) || (/^[a-z]+$/i).test(value);
+	}, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Letters only please');
+
+	$.validator.addMethod("letterswithbasicpunc", function(value, element) {
+		return this.optional(element) || (/^[a-z\-.,()'"\s]+$/i).test(value);
+	}, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Letters or punctuation only please');
+
+	$.validator.addMethod('require-one', function(value, element) {
+		return $('.require-one:checked').size() > 0;
+	}, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please check at least one box.');
 
 
+	$('.request-catalogue').validate({
+		focusCleanup: false,
+		errorClass: 'error',
+		rules: {
+			fname: {
+				required: true,
+				minlength: 2,
+				lettersonly: true
+			},
+			lname: {
+				required: true,
+				minlength: 2,
+				letterswithbasicpunc: true
+			},
+			street: {
+				required: true
+			},
+			city: {
+				required: true,
+				lettersonly: true
+			},
+			state: {
+				required: true
+			},
+			zip: {
+				required: true,
+				digits: true,
+				ziprange: true,
+				minlength: 5,
+				maxlength: 5
+			},
+			email: {
+				required: true,
+				email: true,
+				minlength: 7
+			},
+			captcha_code: {
+				required: true
+			}
+		},
 
+		messages: {
+			fname: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
+				minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.'),
+				lettersonly: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid first name'
+			},
+			lname: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
+				minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.'),
+				letterswithbasicpunc: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid last name'
+			},
+			street: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required'
+			},
+			city: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
+				lettersonly: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid city'
+			},
+			state: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required'
+			},
+			zip: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
+				digits: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid Virginia zip code',
+				minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.'),
+				maxlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter no more than {0} characters.')
+			},
+			email: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
+				email: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid email address.',
+				minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.')
+			},
+			captcha_code: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter the verification code'
+			}
+		},
+
+		//Create our error summary that will appear before the form
+		showErrors: function(errorMap, errorList) {
+			//formHandlers.showError(errorMap, errorList);
+			if (submitted && errorList) {
+				var $errorFormClass1 = 'errors-' + $(this.currentForm).attr('class'),
+					$errorFormClass = $errorFormClass1.split(' ')[0];
+
+				//Reset and remove error messages if the form
+				//has been validated once already
+				var summary = "";
+				$('label .error', $(this.currentForm)).remove();
+
+				//Create our container if one doesnt already exits
+				//better than an empty div being in the HTML source
+				if ($('.' + $errorFormClass).length === 0) {
+					$('<div class="' + $errorFormClass + '" tabindex="-1"/>').insertBefore($(this.currentForm));
+				}
+
+				//Generate our error summary list
+				for (this.error in errorList) {
+					//get associated label text to be used for the error summary
+					var $errorLabel = $('label[for="' + $(errorList[this.error].element).attr('id') + '"]').text();
+					summary += '<li><a href="#' + errorList[this.error].element.id + '">' + $errorLabel + ' ' + errorList[this.error].message.replace('Important: ', '') + '</a></li>';
+				}
+
+				//Output our error summary and place it in the error container
+				$('.' + $errorFormClass).html('<h4 class="error-heading row"><span class="fa fa-exclamation" aria-hidden="true" style="font-family: FontAwesome !important"></span><span class="adobeBlank">Attention</span> Your information contains ' + this.numberOfInvalids() + ' errors</h4><ol class="summary-list">' + summary + '</ol>');
+				$('.' + $errorFormClass).addClass('col-xs-12');
+
+				//Focus on the error container
+				//Alternatively, you might want to use the Validation default option (focusInvalid)
+				$('.errors-' + $(this.currentForm).attr('class')).focus();
+
+				//Move the focus to the associated input when error message link is triggered
+				//a simple href anchor link doesnt seem to place focus inside the input
+				$('.' + $errorFormClass + ' a').on('click', function() {
+					$($(this).attr('href')).focus();
+					return false;
+				});
+
+				//removes exclamation icon from error summary list
+				if ($('.summary-list li a span').hasClass('Exclamation')) {
+					$('.summary-list li a span').removeClass('fa fa-exclamation-circle');
+				}
+				//remove required text from summary list
+				if ($('.summary-list li a span').hasClass('Exclamation')) {
+					$('.summary-list li a:contains(" (required)")').each(function() {
+						$(this).html($(this).html().split(" (required)").join(":"));
+					});
+				}
+				//removes adobeBlank text from error summary list
+				$('.summary-list li a span span').remove('.adobeBlank');
+			}
+			this.defaultShowErrors();
+			submitted = false;
+		},
+		errorPlacement: function(error, element) {
+			formHandlers.errorPosition(error, element);
+		},
+		highlight: function(element, errorClass, validClass) {
+			formHandlers.highlight(element, errorClass, validClass);
+		},
+		unhighlight: function(element, errorClass, validClass) {
+			formHandlers.unHighlight(element, errorClass, validClass);
+
+		},
+
+		invalidHandler: function(form, validator) {
+			submitted = true;
+		},
+
+		//Removed the error summary upon successful completion of form
+		submitHandler: function(form) {
+			$('.errors-' + $(this.currentForm).attr('class')).remove();
+
+			$(form).submit();
+		}
+	});
+
+	//signup form
+	$('.sign-up').validate({
+		focusCleanup: false,
+		errorClass: 'error',
+		rules: {
+			fname: {
+				required: true,
+				minlength: 2,
+				lettersonly: true
+			},
+			lname: {
+				required: true,
+				minlength: 2,
+				letterswithbasicpunc: true
+			},
+			password: {
+				required: true
+			},
+			password2: {
+				required: true,
+				equalTo: '#password'
+			},
+			email: {
+				required: true,
+				email: true,
+				minlength: 7
+			},
+			captcha_code: {
+				required: true
+			}
+		},
+
+		messages: {
+			fname: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
+				minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.'),
+				lettersonly: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid first name'
+			},
+			lname: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
+				minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.'),
+				letterswithbasicpunc: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid last name'
+			},
+
+			password: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a password'
+			},
+			password2: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a password',
+				equalTo: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Passwords do not match'
+			},
+			email: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
+				email: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid email address.',
+				minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.')
+			},
+			captcha_code: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter the verification code'
+			}
+		},
+
+		//Create our error summary that will appear before the form
+		showErrors: function(errorMap, errorList) {
+			//formHandlers.showError(errorMap, errorList);
+			if (submitted && errorList) {
+				var $errorFormClass1 = 'errors-' + $(this.currentForm).attr('class'),
+					$errorFormClass = $errorFormClass1.split(' ')[0];
+
+				//Reset and remove error messages if the form
+				//has been validated once already
+				var summary = "";
+				$('label .error', $(this.currentForm)).remove();
+
+				//Create our container if one doesnt already exits
+				//better than an empty div being in the HTML source
+				if ($('.' + $errorFormClass).length === 0) {
+					$('<div class="' + $errorFormClass + '" tabindex="-1"/>').insertBefore($(this.currentForm));
+				}
+
+				//Generate our error summary list
+				for (this.error in errorList) {
+					//get associated label text to be used for the error summary
+					var $errorLabel = $('label[for="' + $(errorList[this.error].element).attr('id') + '"]').text();
+					summary += '<li><a href="#' + errorList[this.error].element.id + '">' + $errorLabel + ' ' + errorList[this.error].message.replace('Important: ', '') + '</a></li>';
+				}
+
+				//Output our error summary and place it in the error container
+				$('.' + $errorFormClass).html('<h4 class="error-heading row"><span class="fa fa-exclamation" aria-hidden="true" style="font-family: FontAwesome !important"></span><span class="adobeBlank">Attention</span> Your information contains ' + this.numberOfInvalids() + ' errors</h4><ol class="summary-list">' + summary + '</ol>');
+				$('.' + $errorFormClass).addClass('col-xs-12');
+
+				//Focus on the error container
+				//Alternatively, you might want to use the Validation default option (focusInvalid)
+				$('.errors-' + $(this.currentForm).attr('class')).focus();
+
+				//Move the focus to the associated input when error message link is triggered
+				//a simple href anchor link doesnt seem to place focus inside the input
+				$('.' + $errorFormClass + ' a').on('click', function() {
+					$($(this).attr('href')).focus();
+					return false;
+				});
+
+				//removes exclamation icon from error summary list
+				if ($('.summary-list li a span').hasClass('Exclamation')) {
+					$('.summary-list li a span').removeClass('fa fa-exclamation-circle');
+				}
+				//remove required text from summary list
+				if ($('.summary-list li a span').hasClass('Exclamation')) {
+					$('.summary-list li a:contains(" (required)")').each(function() {
+						$(this).html($(this).html().split(" (required)").join(":"));
+					});
+				}
+
+				//removes adobeBlank text from error summary list
+				$('.summary-list li a span span').remove('.adobeBlank');
+			}
+			this.defaultShowErrors();
+			submitted = false;
+		},
+		errorPlacement: function(error, element) {
+			formHandlers.errorPosition(error, element);
+		},
+		highlight: function(element, errorClass, validClass) {
+			formHandlers.highlight(element, errorClass, validClass);
+		},
+		unhighlight: function(element, errorClass, validClass) {
+			formHandlers.unHighlight(element, errorClass, validClass);
+
+		},
+
+		invalidHandler: function(form, validator) {
+			submitted = true;
+		},
+
+		//Removed the error summary upon successful completion of form
+		submitHandler: function(form) {
+			$('.errors-' + $(this.currentForm).attr('class')).remove();
+
+			$(form).submit();
+		}
+	});
+	//signup form
+	$('.donor-form-container').validate({
+		focusCleanup: false,
+		errorClass: 'error',
+		rules: {
+			username1: {
+				required: true,
+				email: true,
+				minlength: 7
+			},
+			password1: {
+				required: true
+			}
+		},
+
+		messages: {
+			username1: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
+				email: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid email address.',
+				minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.')
+			},
+			password1: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a password'
+			}
+		},
+
+		//Create our error summary that will appear before the form
+		showErrors: function(errorMap, errorList) {
+			//formHandlers.showError(errorMap, errorList);
+			if (submitted && errorList) {
+				var $errorFormClass1 = 'errors-' + $(this.currentForm).attr('class'),
+					$errorFormClass = $errorFormClass1.split(' ')[0];
+
+				//Reset and remove error messages if the form
+				//has been validated once already
+				var summary = "";
+				$('label .error', $(this.currentForm)).remove();
+
+				//Create our container if one doesnt already exits
+				//better than an empty div being in the HTML source
+				if ($('.' + $errorFormClass).length === 0) {
+					$('<div class="' + $errorFormClass + '" tabindex="-1"/>').insertBefore($(this.currentForm));
+				}
+
+				//Generate our error summary list
+				for (this.error in errorList) {
+					//get associated label text to be used for the error summary
+					var $errorLabel = $('label[for="' + $(errorList[this.error].element).attr('id') + '"]').text();
+					summary += '<li><a href="#' + errorList[this.error].element.id + '">' + $errorLabel + ' ' + errorList[this.error].message.replace('Important: ', '') + '</a></li>';
+				}
+
+				//Output our error summary and place it in the error container
+				$('.' + $errorFormClass).html('<h4 class="error-heading row"><span class="fa fa-exclamation" aria-hidden="true" style="font-family: FontAwesome !important"></span><span class="adobeBlank">Attention</span> Your information contains ' + this.numberOfInvalids() + ' errors</h4><ol class="summary-list">' + summary + '</ol>');
+				$('.' + $errorFormClass).addClass('col-xs-12');
+
+				//Focus on the error container
+				//Alternatively, you might want to use the Validation default option (focusInvalid)
+				$('.errors-' + $(this.currentForm).attr('class')).focus();
+
+				//Move the focus to the associated input when error message link is triggered
+				//a simple href anchor link doesnt seem to place focus inside the input
+				$('.' + $errorFormClass + ' a').on('click', function() {
+					$($(this).attr('href')).focus();
+					return false;
+				});
+
+				//removes exclamation icon from error summary list
+				if ($('.summary-list li a span').hasClass('Exclamation')) {
+					$('.summary-list li a span').removeClass('fa fa-exclamation-circle');
+				}
+				//remove required text from summary list
+				if ($('.summary-list li a span').hasClass('Exclamation')) {
+					$('.summary-list li a:contains(" (your email address)")').each(function() {
+						$(this).html($(this).html().split(" (your email address)").join(":"));
+					});
+				}
+
+				//removes adobeBlank text from error summary list
+				$('.summary-list li a span span').remove('.adobeBlank');
+			}
+			this.defaultShowErrors();
+			submitted = false;
+		},
+		errorPlacement: function(error, element) {
+			formHandlers.errorPosition(error, element);
+		},
+		highlight: function(element, errorClass, validClass) {
+			formHandlers.highlight(element, errorClass, validClass);
+		},
+		unhighlight: function(element, errorClass, validClass) {
+			formHandlers.unHighlight(element, errorClass, validClass);
+
+		},
+
+		invalidHandler: function(form, validator) {
+			submitted = true;
+		},
+
+		//Removed the error summary upon successful completion of form
+		submitHandler: function(form) {
+			$('.errors-' + $(this.currentForm).attr('class')).remove();
+
+			$(form).submit();
+		}
+	});
+
+	//login form
+	$('.login-form-container').validate({
+		focusCleanup: false,
+		errorClass: 'error',
+		rules: {
+			username2: {
+				required: true,
+				email: true,
+				minlength: 7
+			},
+			password: {
+				required: true
+			}
+		},
+
+		messages: {
+			username2: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
+				email: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid email address.',
+				minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.')
+			},
+
+			password: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a password'
+			}
+		},
+
+		//Create our error summary that will appear before the form
+		showErrors: function(errorMap, errorList) {
+			//formHandlers.showError(errorMap, errorList);
+			if (submitted && errorList) {
+				var $errorFormClass1 = 'errors-' + $(this.currentForm).attr('class'),
+					$errorFormClass = $errorFormClass1.split(' ')[0];
+
+				//Reset and remove error messages if the form
+				//has been validated once already
+				var summary = "";
+				$('label .error', $(this.currentForm)).remove();
+
+				//Create our container if one doesnt already exits
+				//better than an empty div being in the HTML source
+				if ($('.' + $errorFormClass).length === 0) {
+					$('<div class="' + $errorFormClass + '" tabindex="-1"/>').insertBefore($(this.currentForm));
+				}
+
+				//Generate our error summary list
+				for (this.error in errorList) {
+					//get associated label text to be used for the error summary
+					var $errorLabel = $('label[for="' + $(errorList[this.error].element).attr('id') + '"]').text();
+					summary += '<li><a href="#' + errorList[this.error].element.id + '">' + $errorLabel + ' ' + errorList[this.error].message.replace('Important: ', '') + '</a></li>';
+				}
+
+				//Output our error summary and place it in the error container
+				$('.' + $errorFormClass).html('<h4 class="error-heading row"><span class="fa fa-exclamation" aria-hidden="true" style="font-family: FontAwesome !important"></span><span class="adobeBlank">Attention</span> Your information contains ' + this.numberOfInvalids() + ' errors</h4><ol class="summary-list">' + summary + '</ol>');
+				$('.' + $errorFormClass).addClass('col-xs-12');
+
+				//Focus on the error container
+				//Alternatively, you might want to use the Validation default option (focusInvalid)
+				$('.errors-' + $(this.currentForm).attr('class')).focus();
+
+				//Move the focus to the associated input when error message link is triggered
+				//a simple href anchor link doesnt seem to place focus inside the input
+				$('.' + $errorFormClass + ' a').on('click', function() {
+					$($(this).attr('href')).focus();
+					return false;
+				});
+
+				//removes exclamation icon from error summary list
+				if ($('.summary-list li a span').hasClass('Exclamation')) {
+					$('.summary-list li a span').removeClass('fa fa-exclamation-circle');
+				}
+				//remove required text from summary list
+				if ($('.summary-list li a span').hasClass('Exclamation')) {
+					$('.summary-list li a:contains(" (required)")').each(function() {
+						$(this).html($(this).html().split(" (required)").join(":"));
+					});
+				}
+
+				//removes adobeBlank text from error summary list
+				$('.summary-list li a span span').remove('.adobeBlank');
+			}
+			this.defaultShowErrors();
+			submitted = false;
+		},
+		errorPlacement: function(error, element) {
+			formHandlers.errorPosition(error, element);
+		},
+		highlight: function(element, errorClass, validClass) {
+			formHandlers.highlight(element, errorClass, validClass);
+		},
+		unhighlight: function(element, errorClass, validClass) {
+			formHandlers.unHighlight(element, errorClass, validClass);
+
+		},
+
+		invalidHandler: function(form, validator) {
+			submitted = true;
+		},
+
+		//Removed the error summary upon successful completion of form
+		submitHandler: function(form) {
+			$('.errors-' + $(this.currentForm).attr('class')).remove();
+
+			$(form).submit();
+		}
+	});
+
+	//subscribe form
+	var checkboxes = $('.require-one');
+	var checkbox_names = $.map(checkboxes, function(e, i) {
+		return $(e).attr("name");
+	}).join(" ");
+
+	$('.subscribe-form').validate({
+		focusCleanup: false,
+		errorClass: 'error',
+		groups: {
+			checks: checkbox_names
+		},
+		rules: {
+			email: {
+				required: true,
+				email: true,
+				minlength: 7
+			}
+		},
+
+		messages: {
+			email: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
+				email: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid email address.',
+				minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.')
+			}
+		},
+
+		//Create our error summary that will appear before the form
+		showErrors: function(errorMap, errorList) {
+			//formHandlers.showError(errorMap, errorList);
+			if (submitted && errorList) {
+				var $errorFormClass1 = 'errors-' + $(this.currentForm).attr('class'),
+					$errorFormClass = $errorFormClass1.split(' ')[0];
+
+				//Reset and remove error messages if the form
+				//has been validated once already
+				var summary = "";
+				$('label .error', $(this.currentForm)).remove();
+
+				//Create our container if one doesnt already exits
+				//better than an empty div being in the HTML source
+				if ($('.' + $errorFormClass).length === 0) {
+					$('<div class="' + $errorFormClass + '" tabindex="-1"/>').insertBefore($(this.currentForm));
+				}
+
+				//Generate our error summary list
+				for (this.error in errorList) {
+					//get associated label text to be used for the error summary
+					var $errorLabel = $('label[for="' + $(errorList[this.error].element).attr('id') + '"]').text();
+					summary += '<li><a href="#' + errorList[this.error].element.id + '">' + $errorLabel + ' ' + errorList[this.error].message.replace('Important: ', '') + '</a></li>';
+				}
+
+				//Output our error summary and place it in the error container
+				$('.' + $errorFormClass).html('<h4 class="error-heading row"><span class="fa fa-exclamation" aria-hidden="true" style="font-family: FontAwesome !important"></span><span class="adobeBlank">Attention</span> Your information contains ' + this.numberOfInvalids() + ' errors</h4><ol class="summary-list">' + summary + '</ol>');
+				$('.' + $errorFormClass).addClass('col-xs-12');
+
+				//Focus on the error container
+				//Alternatively, you might want to use the Validation default option (focusInvalid)
+				$('.errors-' + $(this.currentForm).attr('class')).focus();
+
+				//Move the focus to the associated input when error message link is triggered
+				//a simple href anchor link doesnt seem to place focus inside the input
+				$('.' + $errorFormClass + ' a').on('click', function() {
+					$($(this).attr('href')).focus();
+					return false;
+				});
+
+				//removes exclamation icon from error summary list
+				if ($('.summary-list li a span').hasClass('Exclamation')) {
+					$('.summary-list li a span').removeClass('fa fa-exclamation-circle');
+				}
+				//remove required text from summary list
+				if ($('.summary-list li a span').hasClass('Exclamation')) {
+					$('.summary-list li a:contains(" (required)")').each(function() {
+						$(this).html($(this).html().split(" (required)").join(":"));
+					});
+				}
+
+				//removes adobeBlank text from error summary list
+				$('.summary-list li a span span').remove('.adobeBlank');
+			}
+			this.defaultShowErrors();
+			submitted = false;
+		},
+		errorPlacement: function(error, element) {
+			formHandlers.errorPosition(error, element);
+		},
+		highlight: function(element, errorClass, validClass) {
+			formHandlers.highlight(element, errorClass, validClass);
+		},
+		unhighlight: function(element, errorClass, validClass) {
+			formHandlers.unHighlight(element, errorClass, validClass);
+
+		},
+
+		invalidHandler: function(form, validator) {
+			submitted = true;
+		},
+
+		//Removed the error summary upon successful completion of form
+		submitHandler: function(form) {
+			$('.errors-' + $(this.currentForm).attr('class')).remove();
+
+			$(form).submit();
+		}
+	});
+
+	//checkout form
+	$('.checkout-form').validate({
+		focusCleanup: false,
+		errorClass: 'error',
+		debug: true,
+		rules: {
+			name: {
+				required: true,
+				minlength: 2,
+				lettersonly: true
+			},
+			amount: {
+				required: true,
+				minlength: 2,
+				number: true
+			},
+			street: {
+				required: true
+			},
+			city: {
+				required: true,
+				lettersonly: true
+			},
+			state: {
+				required: true
+			},
+			zip: {
+				required: true,
+				digits: true,
+				ziprange: true,
+				minlength: 5,
+				maxlength: 5
+			},
+			email: {
+				required: true,
+				email: true,
+				minlength: 7
+			}
+		},
+
+		messages: {
+			name: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
+				minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.'),
+				lettersonly: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid name'
+			},
+			amount: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
+				number: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid dollar amount'
+			},
+			street: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required'
+			},
+			city: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
+				lettersonly: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid city'
+			},
+			state: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required'
+			},
+			zip: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
+				digits: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid Virginia zip code',
+				minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.'),
+				maxlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter no more than {0} characters.')
+			},
+			email: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
+				email: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid email address.',
+				minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.')
+			}
+		},
+
+		//Create our error summary that will appear before the form
+		showErrors: function(errorMap, errorList) {
+			//formHandlers.showError(errorMap, errorList);
+			if (submitted && errorList) {
+				var $errorFormClass1 = 'errors-' + $(this.currentForm).attr('class'),
+					$errorFormClass = $errorFormClass1.split(' ')[0];
+
+				//Reset and remove error messages if the form
+				//has been validated once already
+				var summary = "";
+				$('label .error', $(this.currentForm)).remove();
+
+				//Create our container if one doesnt already exits
+				//better than an empty div being in the HTML source
+				if ($('.' + $errorFormClass).length === 0) {
+					$('<div class="' + $errorFormClass + '" tabindex="-1"/>').insertBefore($(this.currentForm));
+				}
+
+				//Generate our error summary list
+				for (this.error in errorList) {
+					//get associated label text to be used for the error summary
+					var $errorLabel = $('label[for="' + $(errorList[this.error].element).attr('id') + '"]').text();
+					summary += '<li><a href="#' + errorList[this.error].element.id + '">' + $errorLabel + ' ' + errorList[this.error].message.replace('Important: ', '') + '</a></li>';
+				}
+
+				//Output our error summary and place it in the error container
+				$('.' + $errorFormClass).html('<h4 class="error-heading row"><span class="fa fa-exclamation" aria-hidden="true" style="font-family: FontAwesome !important"></span><span class="adobeBlank">Attention</span> Your information contains ' + this.numberOfInvalids() + ' errors</h4><ol class="summary-list">' + summary + '</ol>');
+				$('.' + $errorFormClass).addClass('col-xs-12');
+
+				//Focus on the error container
+				//Alternatively, you might want to use the Validation default option (focusInvalid)
+				$('.errors-' + $(this.currentForm).attr('class')).focus();
+
+				//Move the focus to the associated input when error message link is triggered
+				//a simple href anchor link doesnt seem to place focus inside the input
+				$('.' + $errorFormClass + ' a').on('click', function() {
+					$($(this).attr('href')).focus();
+					return false;
+				});
+
+				//removes exclamation icon from error summary list
+				if ($('.summary-list li a span').hasClass('Exclamation')) {
+					$('.summary-list li a span').removeClass('fa fa-exclamation-circle');
+				}
+				//remove required text from summary list
+				if ($('.summary-list li a span').hasClass('Exclamation')) {
+					$('.summary-list li a:contains(" (required)")').each(function() {
+						$(this).html($(this).html().split(" (required)").join(":"));
+					});
+				}
+				//removes adobeBlank text from error summary list
+				$('.summary-list li a span span').remove('.adobeBlank');
+			}
+			this.defaultShowErrors();
+			submitted = false;
+		},
+		errorPlacement: function(error, element) {
+			formHandlers.errorPosition(error, element);
+		},
+		highlight: function(element, errorClass, validClass) {
+			formHandlers.highlight(element, errorClass, validClass);
+		},
+		unhighlight: function(element, errorClass, validClass) {
+			formHandlers.unHighlight(element, errorClass, validClass);
+
+		},
+
+		invalidHandler: function(form, validator) {
+			submitted = true;
+		},
+
+		//Removed the error summary upon successful completion of form
+		submitHandler: function(form) {
+			$('.errors-' + $(this.currentForm).attr('class')).remove();
+
+			$(form).submit();
+		}
+	});
+	//blog reply form
+	$('.comment-form').validate({
+		focusCleanup: false,
+		errorClass: 'error',
+		rules: {
+			author: {
+				required: true,
+				minlength: 2,
+				lettersonly: true
+			},
+			email: {
+				required: true,
+				email: true,
+				minlength: 7
+			},
+			comment: {
+				required: true
+			}
+		},
+
+		messages: {
+			author: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
+				minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.'),
+				lettersonly: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid first name'
+			},
+			email: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
+				email: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid email address.',
+				minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.')
+			},
+			comment: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a comment'
+			}
+		},
+
+		//Create our error summary that will appear before the form
+		showErrors: function(errorMap, errorList) {
+			//formHandlers.showError(errorMap, errorList);
+			if (submitted && errorList) {
+				var $errorFormClass1 = 'errors-' + $(this.currentForm).attr('class'),
+					$errorFormClass = $errorFormClass1.split(' ')[0];
+
+				//Reset and remove error messages if the form
+				//has been validated once already
+				var summary = "";
+				$('label .error', $(this.currentForm)).remove();
+
+				//Create our container if one doesnt already exits
+				//better than an empty div being in the HTML source
+				if ($('.' + $errorFormClass).length === 0) {
+					$('<div class="' + $errorFormClass + '" tabindex="-1"/>').insertBefore($(this.currentForm));
+				}
+
+				//Generate our error summary list
+				for (this.error in errorList) {
+					//get associated label text to be used for the error summary
+					var $errorLabel = $('label[for="' + $(errorList[this.error].element).attr('id') + '"]').text();
+					summary += '<li><a href="#' + errorList[this.error].element.id + '">' + $errorLabel + ' ' + errorList[this.error].message.replace('Important: ', '') + '</a></li>';
+				}
+
+				//Output our error summary and place it in the error container
+				$('.' + $errorFormClass).html('<h4 class="error-heading row"><span class="fa fa-exclamation" aria-hidden="true" style="font-family: FontAwesome !important"></span><span class="adobeBlank">Attention</span> Your information contains ' + this.numberOfInvalids() + ' errors</h4><ol class="summary-list">' + summary + '</ol>');
+				$('.' + $errorFormClass).addClass('col-xs-12');
+
+				//Focus on the error container
+				//Alternatively, you might want to use the Validation default option (focusInvalid)
+				$('.errors-' + $(this.currentForm).attr('class')).focus();
+
+				//Move the focus to the associated input when error message link is triggered
+				//a simple href anchor link doesnt seem to place focus inside the input
+				$('.' + $errorFormClass + ' a').on('click', function() {
+					$($(this).attr('href')).focus();
+					return false;
+				});
+
+				//removes exclamation icon from error summary list
+				if ($('.summary-list li a span').hasClass('Exclamation')) {
+					$('.summary-list li a span').removeClass('fa fa-exclamation-circle');
+				}
+				//remove required text from summary list
+				if ($('.summary-list li a span').hasClass('Exclamation')) {
+					$('.summary-list li a:contains(" (required)")').each(function() {
+						$(this).html($(this).html().split(" (required)").join(":"));
+					});
+				}
+
+				//removes adobeBlank text from error summary list
+				$('.summary-list li a span span').remove('.adobeBlank');
+			}
+			this.defaultShowErrors();
+			submitted = false;
+		},
+		errorPlacement: function(error, element) {
+			formHandlers.errorPosition(error, element);
+		},
+		highlight: function(element, errorClass, validClass) {
+			formHandlers.highlight(element, errorClass, validClass);
+		},
+		unhighlight: function(element, errorClass, validClass) {
+			formHandlers.unHighlight(element, errorClass, validClass);
+
+		},
+
+		invalidHandler: function(form, validator) {
+			submitted = true;
+		},
+
+		//Removed the error summary upon successful completion of form
+		submitHandler: function(form) {
+			$('.errors-' + $(this.currentForm).attr('class')).remove();
+
+			$(form).submit();
+		}
+	});
 });
