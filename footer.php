@@ -16,7 +16,7 @@
 					<a href="checkout.php?np_title=Catalogue_for_Philanthropy:_Greater_Washington" title="Donate to The Catalogue for Philanthropy">Donate<span class="sr-only"> to The Catalogue for Philanthropy</span></a>
 				</li>
 				<li>
-					<a href="request-catalogue.php">Request a Catalog</a>
+					<a href="request-catalogue.php">Request a Catalogue</a>
 				</li>
 				<li>
 					<a href="subscribe.php">Subscribe</a>
