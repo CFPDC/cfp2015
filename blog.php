@@ -150,7 +150,7 @@ include('includes/functions.php');
 		<div class="well">
 			<p>Need to add share this links to this section with sr only text for each link</p>
 		</div>
-		<h3>Search This Blog</h3>
+		<h3>Share This Blog</h3>
 		<div class="well blog-search">
 			<fieldset class="global-search-field">
 				<legend class="sr-only">Search The Catalogue for Philanthropy website</legend>
