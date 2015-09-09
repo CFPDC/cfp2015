@@ -1596,6 +1596,14 @@ main address > span, address > a {
 .see-also {
     margin-top: 25px;
 }
+/*---All News---*/
+.news-paragraph {
+    margin: 0;
+}
+/*---Kids List---*/
+.category-sort li {
+    display: inline;
+}
 /* How to Help page*/
 .give-image {}
 

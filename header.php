@@ -101,6 +101,9 @@
 					Get Involved
 					<ul>
 						<li>
+							<a href="all-news.php">All News</a>
+						</li>
+						<li>
 							<a href="all-events.php" target="_self" title="View events with our nonprofits">Events</a>
 						</li>
 						<li>

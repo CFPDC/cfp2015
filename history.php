@@ -14,6 +14,7 @@ include('includes/functions.php');
 <div class="row">
 	<aside class="col-sm-3 who-we-are-nav" id="asideFilter">
 		<ul class="list-unstyled">
+			<li><a href="all-news.php">All News</a></li>
 			<li><a href="all-events.php">Events</a></li>
 			<li><a href="how-to-give.php">How to Give</a></li>
 			<li><a href="javascript:void(0);" class="current">Donation History</a></li>
