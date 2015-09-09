@@ -219,8 +219,7 @@ var A11y = {
             var currentPage = pages.filter(".active");
             var currentIndex = pages.index(currentPage) + 1;
             var lrUpdate = "Showing Carousel page " + currentIndex + " of " + pages.length;
-            $(".myCarousel-liveRegion").text(lrUpdate);
-
+            $(".carousel-liveRegion").text(lrUpdate);
             var $this = $(this);
             $this.children('.carousel-control').show();
             if ($('.carousel-inner .item:first').hasClass('active')) {

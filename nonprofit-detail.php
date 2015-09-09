@@ -39,12 +39,12 @@ include('includes/functions.php');
 		<p>The Catalogue selected us as one of its featured nonprofits! Each year 120 expert reviewers evaluate applicants for distinction, merit, and impact. Each featured charity has been successfully site visited and its financials given the thumbs up. The Catalogue for Philanthropy charges no fees and raises funds separately to support its work. Since 2003, it has raised over $24 million for charities across Greater Washington.</p>
 		<h3>If you like Nonprofit you might also like these:</h3>
 		<div id="carouselwrapper" class="carouselwrapper col-xs-10 col-xs-offset-1">
-			<div id="related-carousel" class="carousel slide related-carousel-container" data-interval="false">
+			<div id="related-carousel" class="varousel slide related-carousel-container">
 				<button class="left carousel-control" data-target="#related-carousel" data-slide="prev">
-				<span id="related-carousel-liveRegion" class="sr-only"> Slide Carousel backward </span>
+				<span id="carousel-liveRegion" class="sr-only"> Slide Carousel backward </span>
 				</button>
-				<ul class="carousel-inner list-unstyled">
-					<li class="col-md-4" role="listitem">
+				<ul class="carousel-inner list-unstyled" role="list">
+					<li class="col-md-4" role="listitem active">
 						<a href=""><img src="http://lorempixel.com/1200/500/nature" alt="" aria-hidden="true" class="img-responsive">
 							<h4>Similar Nonprofit</h4>
 							<p>Ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae egestas purus.</p>

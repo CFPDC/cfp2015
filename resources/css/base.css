@@ -1572,23 +1572,29 @@ main address > span, address > a {
 .all-event-button .fa, .event-button .fa {
     font-weight: bold;
 }
+
 .search-event > small {
     display: block;
 }
+
 .location-select, .category-select {
     display: block;
     width: 100%;
     padding: 5px;
 }
+
 .event-add-to-calendar {
     margin: 25px 0;
 }
+
 .event-details {
     margin-top: 25px;
 }
+
 .back-to-events {
     padding-bottom: 10px;
 }
+
 .event-details-row {
     padding-bottom: 25px;
 }
@@ -1596,14 +1602,17 @@ main address > span, address > a {
 .see-also {
     margin-top: 25px;
 }
+
 /*---All News---*/
 .news-paragraph {
     margin: 0;
 }
+
 /*---Kids List---*/
 .category-sort li {
     display: inline;
 }
+
 /* How to Help page*/
 .give-image {}
 
