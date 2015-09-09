@@ -1573,12 +1573,14 @@ main address > span, address > a {
 
 /*---Gift Cards---*/
 .gift-card-img {
-     width: 300px;
-     padding-top: 15px;
+    width: 300px;
+    padding-top: 15px;
 }
+
 .red-text {
     color: #ff0000;
 }
+
 /*---Stock---*/
 .stock {
     padding-bottom: 10px;
@@ -1709,6 +1711,218 @@ main address > span, address > a {
 
 .blog .comments small {
     display: inline-block;
+}
+
+/*---nonprofit details---*/
+.hero.details, .more-about-section {
+    margin-bottom: 30px;
+}
+
+.more-about-section > button {
+    display: block;
+    font-size: 18px;
+    font-size: 1.8rem;
+    position: relative;
+}
+
+.more-about-section > button[aria-expanded="true"]:before, .more-about-section > button[aria-expanded="false"]:before {
+    font-family: 'FontAwesome';
+    position: absolute;
+    right: -5px;
+    top: 5px;
+}
+
+.more-about-section > button[aria-expanded="false"]:before {
+    content: '\f105';
+}
+
+.more-about-section > button[aria-expanded="true"]:before {
+    content: '\f107';
+}
+
+.details-wishlist .btn, .details-support .btn {
+    padding: 10px 60px;
+}
+
+.details-wishlist hr, .details-support hr {
+    width: 66.6666667%;
+}
+
+.details-partnership ul, .details-partnership li {
+    margin-bottom: 0;
+}
+
+.details-partnership li {
+    display: inline-block;
+    float: left;
+    margin-left: 3%;
+    max-width: 30%;
+}
+
+.details-partnership li:first-child {
+    margin-left: 0;
+}
+
+.nonprofit-social a {
+    color: #292929;
+}
+
+.nonprofit-social a:focus, .nonprofit-social a:hover {
+    color: #555;
+}
+
+.two-wide a {
+    margin-left: 50px;
+}
+
+.three-wide a {
+    margin-left: 44px;
+}
+
+.four-wide a {
+    margin-left: 15px;
+}
+
+.nonprofit-social a:first-child {
+    margin-left: 0;
+}
+
+.nonprofit-social.two-wide a > .fa {
+    font-size: 60px;
+    font-size: 6rem;
+}
+
+.nonprofit-social.three-wide a > .fa {
+    font-size: 60px;
+    font-size: 6rem;
+}
+
+.nonprofit-social.four-wide a > .fa {
+    font-size: 60px;
+    font-size: 6rem;
+}
+
+.related-carousel-container {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.related-carousel-container > .carousel-inner {
+    margin-bottom: 0;
+}
+
+.related-carousel-container li {
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.related-carousel-container .item {
+    min-height: 150px;
+    padding-left: 0;
+}
+
+.related-carousel-container li a h4 {
+    color: #292929;
+    font-family: 'ProximaNovaSemibold';
+    font-size: 18px;
+    font-size: 1.8rem;
+    margin-top: 15px;
+}
+
+.related-carousel-container li a:focus, .related-carousel-container li a:hover, .related-carousel-container li a:focus h4, .related-carousel-container li a:hover h4 {
+    text-decoration: none;
+}
+
+.related-carousel-container li a p {
+    color: #292929;
+    font-size: 14px;
+    font-size: 1.4rem;
+    margin-bottom: 0;
+}
+
+.related-carousel-container li a:focus p, .related-carousel-container li a:hover p {
+    text-decoration: underline;
+}
+
+.related-carousel-container .carousel-control {
+    background: none;
+    border: 0;
+    color: #477896;
+    padding: 0;
+    opacity: 1;
+    width: 40px;
+}
+
+.carousel-control:focus, .carousel-control:hover {
+    outline: 2px solid #487896;
+}
+
+.related-carousel-container .carousel-control.left {
+    left: -50px;
+}
+
+.related-carousel-container .carousel-control.right {
+    right: -50px;
+}
+
+.related-carousel-container .carousel-control:before {
+    font-family: 'FontAwesome';
+    position: absolute;
+    left: auto;
+    right: auto;
+    top: 5px;
+    font-size: 90px;
+    font-size: 9rem;
+}
+
+.related-carousel-container .carousel-control.left:before {
+    content: '\f104';
+    left: -5px;
+}
+
+.related-carousel-container .carousel-control.right:before {
+    content: '\f105';
+    right: -5px;
+}
+
+/*budget list on details page*/
+.budget-container {
+    border-left: 1px solid #ddd;
+    padding-left: 9%;
+}
+
+.budget-container h2 {
+    font-family: 'ProximaNovaSemibold';
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+.budget-container h2 > small {
+    display: block;
+    font-family: 'ProximaNovaRegular';
+    font-size: 13px;
+    font-size: 1.3rem;
+}
+
+.budget-container .budget-status li {
+    position: relative;
+}
+
+.budget-container .budget-status li.current-status {
+    font-family: 'ProximaNovaBold';
+    font-size: 20px;
+    font-size: 2rem;
+}
+
+.budget-container .budget-status li.current-status:before {
+    color: #FDAF17;
+    content: '\f005';
+    font-family: 'FontAwesome';
+    position: absolute;
+    left: -30px;
+    top: -12px;
+    font-size: 30px;
+    font-size: 3rem;
 }
 
 /*---Sitemap---*/
@@ -2157,6 +2371,13 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .blog .two-column-form .checkbox {
         margin-top: 20px;
     }
+    .nonprofit-social.four-wide a > .fa {
+        font-size: 44px;
+        font-size: 4.4rem;
+    }
+    .three-wide a {
+        margin-left: 15px;
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -2174,6 +2395,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     footer .primary-footer-nav li {
         margin-left: 25px;
+    }
+    .three-wide a {
+        margin-left: 40px;
     }
 }
 
@@ -2270,6 +2494,10 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
         margin-top: 10px;
         padding-left: 10px;
     }
+    .nonprofit-social.four-wide a > .fa {
+        font-size: 60px;
+        font-size: 6rem;
+    }
 }
 
 @media screen and (min-width: 1024px) {}
@@ -2320,6 +2548,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     .vision-report > .row .col-md-3 {
         margin-left: 5px;
+    }
+    .four-wide a {
+        margin-left: 13px;
     }
 }
 

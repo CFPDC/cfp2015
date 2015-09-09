@@ -14,7 +14,24 @@ if (($('.lt-ie9').length > 0) || ($('.ie9').length > 0)) {
 }
 /*** variables ***/
 var $root = $('html, body'),
-	liveTextRegion = $('#liveTextPolite').children('p');;
+	liveTextRegion = $('#liveTextPolite').children('p'),
+	urlParams,
+	formDebug = true;
+(window.onpopstate = function() {
+	var match,
+		pl = /\+/g, // Regex for replacing addition symbol with a space
+		search = /([^&=]+)=?([^&]*)/g,
+		decode = function(s) {
+			return decodeURIComponent(s.replace(pl, " "));
+		},
+		query = window.location.search.substring(1);
+
+	urlParams = {};
+	while (match = search.exec(query))
+		urlParams[decode(match[1])] = decode(match[2]);
+})();
+
+
 var global = {
 	jumplink: function() {
 		$('.jumplink').on('click', function() {
@@ -111,27 +128,91 @@ var global = {
 				results = regex.exec(location.search);
 			return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 		}
+
+		function getQueryVariable(variable) {
+			var query = window.location.search.substring(1);
+			var vars = query.split("&");
+			for (var i = 0; i < vars.length; i++) {
+				var pair = vars[i].split("=");
+				if (pair[0] == variable) {
+					return pair[1];
+				}
+			}
+			return (false);
+		}
 		var substringTitle = 'np_title',
 			prodId = getParameterByName(substringTitle),
 			prodIdInput = getParameterByName(substringTitle).split('_').join(' ').trim(),
 			orgInput = $('#org-name'),
 			orgInputValue = orgInput.val(),
-			orgLabel = $("label[for='" + orgInput + "']");
+			orgLabel = $("label[for='" + orgInput + "']"),
+			substringAmount = getQueryVariable('np_amount'),
+			amountId = substringAmount,
+			amountIdInput = substringAmount,
+			amountInput = $('#amount'),
+			amountInputValue = amountId,
+			amountLabel = $("label[for='" + amountInput + "']");
 		if (window.location.search.indexOf(substringTitle) > -1) {
 
 			if ($(orgInput)[0]) {
 				$('<p class="np-selected-name" id="np-selected" />').insertBefore(orgInput).text(prodIdInput);
-				$(orgInput).val(prodIdInput).attr('type', 'hidden').siblings(orgLabel).attr('aria-describedby', 'np-selected');
+				$(orgInput).addClass('sr-only').attr({
+					'tabindex': '-1',
+					'value': prodIdInput
+				}).siblings(orgLabel).attr('aria-describedby', 'np-selected');
 
 			}
 		} else if (orgInput.length && orgInput.val().length) {
 			$('<p class="np-selected-name" id="np-selected" />').insertBefore(orgInput).text(orgInputValue);
-			$(orgInput).val(prodIdInput).attr('type', 'hidden').siblings(orgLabel).attr('aria-describedby', 'np-selected');
+			$(orgInput).addClass('sr-only').attr({
+				'tabindex': '-1',
+				'value': prodIdInput
+			}).siblings(orgLabel).attr('aria-describedby', 'np-selected');
 
-		} else {}
+		} //if an amount is passed by parameter add a 'p' tag and with the value given and add the value to the input while hiding the input
+		if (window.location.search.indexOf(amountId) > -1) {
 
+			if ($(amountInput)[0]) {
+				$('<p class="np-selected-name" id="np-selected-amount" />').insertBefore(amountInput).text('$' + amountIdInput);
+				$(amountInput).addClass('sr-').attr({
+					'tabindex': '-1',
+					'value': amountIdInput
+				}).siblings(amountLabel).attr('aria-describedby', 'np-selected-amount');
+			}
+		} else if (amountInput.length && amountInput.val().length) {
+			$('<p class="np-selected-name" id="np-selected-amount" />').insertBefore(amountInput).text('$' + amountInputValue);
+			$(amountInput).addClass('sr-').attr({
+				'tabindex': '-1',
+				'value': amountIdInput
+			}).siblings(amountLabel).attr('aria-describedby', 'np-selected-amount');
+
+		}
+
+
+	},
+	a11yCarousel: function() {
+		//nonprofit details page carousel
+		var carouselWidth = $('#carouselwrapper').width(),
+			carouselItem = $('#related-carousel li');
+		A11y.carousel();
+
+		if (carouselWidth > 440 && carouselWidth < 980) {
+
+			if (carouselItem.parent().is('ul.item')) {
+				carouselItem.unwrap();
+			}
+			do {
+				$(carouselItem.slice(0, 3)).wrapAll('<ul class="item row" role="presentation "></ul>');
+			} while ((carouselItem = carouselItem.slice(3)).length > 0);
+			$('#related-carousel ul.item').first().addClass('active');
+		} else {
+			carouselItem.unwrap();
+			carouselItem.wrapAll('<ul class="carousel-inner" role="list"></ul>');
+			$('.left.carousel-control').hide();
+			$('.right.carousel-control').hide();
+		}
 	}
-};
+}
 
 
 //list view page
@@ -288,14 +369,14 @@ $(function() {
 		performMediaQueries(state);
 	}
 
-	$('#myCarousel').carousel({
+	$('#related-carousel').carousel({
 		pause: "hover"
 	});
 	$('#playButton').on('click', function() {
-		$('#myCarousel').carousel('cycle');
+		$('#related-carousel').carousel('cycle');
 	});
 	$('#pauseButton').on('click', function() {
-		$('#myCarousel').carousel('pause');
+		$('#related-carousel').carousel('pause');
 	});
 
 
@@ -441,14 +522,16 @@ var formHandlers = {
 		}
 	}
 }
-$.validator.setDefaults({
-	debug: true,
-	errorElement: "strong",
-	focusInvalid: false
-});
+if ($('form').length > 0) {
 
-var submitted = false;
+	$.validator.setDefaults({
+		debug: true,
+		errorElement: "strong",
+		focusInvalid: false
+	});
 
+	var submitted = false;
+}
 //only accepts US phone numbers
 $.validator.addMethod('phoneUS', function(phone_number, element) {
 	phone_number = phone_number.replace(/\s+/g, "");
@@ -1097,6 +1180,7 @@ $('.subscribe-form').validate({
 $('.checkout-form').validate({
 	focusCleanup: false,
 	errorClass: 'error',
+	debug: true,
 	rules: {
 		name: {
 			required: true,
@@ -1360,6 +1444,8 @@ $('.comment-form').validate({
 	}
 });
 
+
+
 //these all run at the same time but separate each into page specific sections for organization
 $(function() {
 	//bootstrap tooltips activated on page load
@@ -1384,7 +1470,7 @@ $(function() {
 	global.navMenu();
 	global.donateButtonPrefill();
 	global.addNonprofitNameToButton();
-
+	global.a11yCarousel();
 	$('.carouselButtons button').on('click', function() {
 		var button = $(this),
 			buttonFocus = button.siblings(),
