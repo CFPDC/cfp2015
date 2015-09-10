@@ -2101,9 +2101,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     margin-left: 15px;
 }
 
-.ie10 .img-responsive, .ie11 .img-responsive {
+/*.ie10 .img-responsive, .ie11 .img-responsive {
     width: 100%;
-}
+}*/
 
 /*---MEDIA QUERIES---*/
 @media screen and (min-width: 480px) {
