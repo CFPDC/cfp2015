@@ -17,6 +17,18 @@ var $root = $('html, body'),
 
 
 var global = {
+	globalImageCheck: function(img) {
+		//call this in another function by naming variable. See homeImageCheck() for reference
+		img.each(function() {
+			if (this.naturalWidth === 0 || this.naturalHeight === 0 || this.complete === false) {
+				$(this).attr('src', '../resources/images/clear.gif');
+			}
+		});
+	},
+	homeImageCheck: function() {
+		var img = $('.subcategories .img-responsive');
+		this.globalImageCheck(img);
+	},
 	jumplink: function() {
 		$('.jumplink').on('click', function() {
 			var target = $(this).attr('data-target');
@@ -400,6 +412,9 @@ var formHandlers = {
 
 $(function() {
 	//.ready for global functions
+
+	//check for missing images in the home page grid
+	global.homeImageCheck();
 
 	//Do initial check for media state
 	var state = A11yResp.getScreenWidth();

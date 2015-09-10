@@ -169,7 +169,7 @@
 						</li>
 					</ul>
 				</nav>
-				<div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 catalogue-donate-button-container">
+				<div class="hidden-print col-xs-12 col-sm-5 col-md-4 col-lg-3 catalogue-donate-button-container">
 					<a href="checkout.php?np_title=Catalogue_for_Philanthropy:_Greater_Washington" title="Donate to The Catalogue for Philanthropy" class="btn btn-primary catalogue-donate-button" id="donate-to-catalogue">Donate to The Catalogue</a>
 					<button class="navbar-toggle pull-right" data-toggle="offcanvas" data-target=".mobile-nav" data-canvas="body">
 					<span class="adobeBlank sr-only" aria-hidden="true">

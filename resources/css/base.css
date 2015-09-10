@@ -424,7 +424,7 @@ form .error + textarea {
 }
 
 .secondary-nav li {
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
 .secondary-nav li a {
@@ -1804,6 +1804,10 @@ main address > span, address > a {
     max-width: 29%;
 }
 
+.details-partnership.four-badge li {
+    max-width: 21%;
+}
+
 .details-partnership li:first-child {
     margin-left: 0;
 }
@@ -2101,9 +2105,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     margin-left: 15px;
 }
 
-/*.ie10 .img-responsive, .ie11 .img-responsive {
+.ie10 .img-responsive, .ie11 .img-responsive {
     width: 100%;
-}*/
+}
 
 /*---MEDIA QUERIES---*/
 @media screen and (min-width: 480px) {
@@ -2201,13 +2205,14 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     footer .primary-footer-nav li:first-child, footer .secondary-footer-nav li:first-child {
         margin-left: 0;
+        padding-left: 0;
     }
     footer .social-icons {
         margin: 0 0 0 -5px;
     }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     h1, .carousel-inner > .item h1 {
         font-family: 'ProximaNovaThin';
         font-size: 60px;
@@ -2409,9 +2414,6 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .login-form > div {
         margin-left: 5%;
     }
-    .footer-logo {
-        max-width: 450px;
-    }
     .vision {
         margin: 0 0 20px;
     }
@@ -2443,7 +2445,7 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
 }
 
-@media screen and (min-width: 900px) {
+@media (min-width: 900px) {
     .home-how-help-section .btn {
         font-size: 19px;
     }
@@ -2464,7 +2466,7 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
 }
 
-@media screen and (min-width: 915px) {
+@media (min-width: 915px) {
     .carousel-caption {
         bottom: 20px;
         top: auto;
@@ -2482,13 +2484,13 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
 }
 
-@media screen and (min-width: 950px) {
+@media (min-width: 950px) {
     .header-logo {
         max-width: 630px;
     }
 }
 
-@media screen and (min-width: 991px) {
+@media (min-width: 991px) {
     .primary-nav {
         padding: 15px 0;
     }
@@ -2578,15 +2580,19 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
 }
 
-@media screen and (min-width: 1024px) {}
+@media (min-width: 1024px) {
+    .footer-logo {
+        max-width: 450px;
+    }
+}
 
-@media screen and (min-width: 1050px) {
+@media (min-width: 1050px) {
     .primary-nav > nav > ul > li > a {
         font-size: 18px;
     }
 }
 
-@media screen and (min-width: 1077px) {
+@media (min-width: 1077px) {
     .primary-nav nav li > button, .primary-nav nav li > a {
         font-size: 18px;
     }
@@ -2595,7 +2601,7 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
 }
 
-@media screen and (min-width: 1170px) {
+@media (min-width: 1170px) {
     .nav.nav-pills.home-search > li {
         margin-left: 0;
     }
@@ -2604,7 +2610,7 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
     .primary-nav > nav > ul > li {
         margin-left: 3%;
     }
@@ -2632,7 +2638,7 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
 }
 
-@media screen and (min-width: 1225px) {
+@media (min-width: 1225px) {
     .primary-nav > nav > ul > li {
         margin-left: 4%;
     }
@@ -2650,7 +2656,7 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
 }
 
-@media screen and (min-width: 1370px) {
+@media (min-width: 1370px) {
     .catalogue-donate-button-container {
         width: 25%;
     }
@@ -2716,5 +2722,103 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
 @media (min-width: 1200px) {
     #screen-indicator {
         z-index: 2;
+    }
+}
+
+@media print {
+    .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-sx-12, .col-sm-12, .col-md-12, .col-lg-12 {
+        float: left;
+    }
+    .col-sx-12, .col-sm-12, .col-md-12, .col-lg-12 {
+        width: 100%;
+    }
+    .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11 {
+        width: 91.66667%;
+    }
+    .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10 {
+        width: 83.33333%;
+    }
+    .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9 {
+        width: 75%;
+    }
+    .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8 {
+        width: 66.66667%;
+    }
+    .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7 {
+        width: 58.33333%;
+    }
+    .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6 {
+        width: 50%;
+    }
+    .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5 {
+        width: 41.66667%;
+    }
+    .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4 {
+        width: 33.33333%;
+    }
+    .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3 {
+        width: 25%;
+    }
+    .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2 {
+        width: 16.66667%;
+    }
+    .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1 {
+        width: 8.33333%;
+    }
+    * {
+        text-shadow: none !important;
+        color: #000 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+    a, a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    a[href^="javascript:"]:after, a[href^="#"]:after {
+        content: "";
+    }
+    pre, blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    thead {
+        display: table-header-group;
+    }
+    tr, img {
+        page-break-inside: avoid;
+    }
+    img {
+        max-width: 100% !important;
+    }
+    p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2, h3 {
+        page-break-after: avoid;
+    }
+    select {
+        background: #fff !important;
+    }
+    .navbar {
+        display: none;
+    }
+    .table td, .table th {
+        background-color: #fff !important;
+    }
+    .label {
+        border: 1px solid #000;
+    }
+    .table {
+        border-collapse: collapse !important;
+    }
+    .table-bordered th, .table-bordered td {
+        border: 1px solid #ddd !important;
     }
 }

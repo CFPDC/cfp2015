@@ -16,9 +16,9 @@ include('includes/functions.php');
 		<p>2Seeds Network believes that one essential ingredient is missing in international development: the trusted relationship. 2Seeds addresses food and income insecurity in the East African country of Tanzania by connecting the country’s most vulnerable population – isolated subsistence farmers who live on less than one dollar a day – with talented and trained volunteers. Spending a year in remote villages, teams of young professionals work together on agricultural projects with their partner farmers, helping them become creative and productive agricultural entrepreneurs – locating new markets, forming cooperatives, finding alternative farming opportunities (chicken farms where plants won’t grow), and generating an income for the farmers’ families. Volunteers also push beyond their own comfort zones by gaining valuable experience in international development. Since its founding, 2Seeds has engaged more than 60 year-long volunteers to work with over 1,000 partner farmers. The result: improved food security for vulnerable residents, the creation of business opportunities in unexpected places, the transformation of agricultural markets, and the development of the next generation of global leaders. Plant a seed. Watch it grow.</p>
 		<div class="more-about-section clearfix">
 			<button class="btn btn-link" data-toggle="collapse" data-target="#areas-served" aria-expanded="false" aria-controls="areas-served">Areas and Clients Served</button>
-			<p id="areas-served" class="collapse">Test</p>
+			<div id="areas-served" class="collapse"><p class="col-xs-12">Content for Areas served</p></div>
 			<button class="btn btn-link" data-toggle="collapse" data-target="#recognition" aria-expanded="false" aria-controls="recognition">Recognition</button>
-			<p id="recognition" class="collapse">Test</p>
+			<div id="recognition" class="collapse"><p class="col-xs-12">Content for Recognition</p></div>
 			<button class="btn btn-link" data-toggle="collapse" data-target="#financial-snapshot" aria-expanded="false" aria-controls="financial-snapshot">Financial Snapshot</button>
 			<div id="financial-snapshot" class="collapse">
 				<p class="col-md-7">Consectetur adipiscing elit. Sed vitae egestas purus. LLorem  ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae egestas purus. Consectetur adipiscing elit. Sed vitae egestas purus. LLorem  ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae egestas purus.</p>
@@ -119,7 +119,7 @@ include('includes/functions.php');
 		</div>
 		<h3>Catalogue Partnership</h3>
 		<div class="well details-partnership clearfix">
-			<!-- this can accept 1-4 badges -->
+			<!-- this can accept 1-4 badges, to add a fourth badge, add the class'four-badge' to the previous div with the class 'details-partnership' -->
 			<ul class="list-unstyled center-block">
 				<li><img src="../resources/images/logos/best-of-badge-13-14.gif" data-toggle="tooltip" data-placement="top" class="img-responsive" alt="Selected for the 2013-14 Catalogue" title="Selected for the 2013-14 Catalogue"></li>
 				<li><img src="../resources/images/logos/best-of-badge-14-15.gif" data-toggle="tooltip" data-placement="top" class="img-responsive" alt="Selected for the 2014-15 Catalogue" title="Selected for the 2014-15 Catalogue"></li>

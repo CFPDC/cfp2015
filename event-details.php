@@ -16,7 +16,7 @@ include('includes/functions.php');
 		<h2 class="event-page-headings">Event Details</h2>
 	</div>
 	<div class="col-sm-4">
-		<a href="#" class="btn btn-info event-button"><span class="fa fa-calendar"></span> Check Our Event Calendar</a>
+		<a href="#" class="btn btn-info event-button"><span class="fa fa-calendar"> Check Our Event Calendar</span></a>
 	</div>
 </div>
 </div>
@@ -34,7 +34,7 @@ include('includes/functions.php');
 	<p>You are invited to IMCC&rsquo;s Snapshot, an overview and tour, to see firsthand the work we are doing. Coffee and pastries are provided. You will meet the Executive Director, Joel, and hear about our unique approaches and the innovative practices that IMCC provides to individuals with memory impairment and their caregivers.</p>
 	<div class="row">
 		<div class="col-sm-5">
-			<button class="btn btn-default event-add-to-calendar"><span class="fa fa-calendar" aria-hidden="true"></span> Add to My Calendar</button>
+			<button class="btn btn-default event-add-to-calendar"><span class="fa fa-calendar"></span> Add to My Calendar</button>
 		</div>
 		<div class="col-sm-5 event-details">
 			<p><strong>When:</strong> Tue Sep 8 2015 (09:00 AM - 10:00 AM) </p>
