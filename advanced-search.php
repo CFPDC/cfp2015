@@ -33,6 +33,7 @@ include('includes/functions.php');
 	</aside>
 	<section class="col-sm-8">
 		<div class="col-sm-6">
+			<h2>Quick Links</h2>
 			<p>The links below provide an easy means of accessing our nonprofits based on their location, the populations they serve, where they work, etc. Find the link that&rsquo;s most helpful to you.</p>
 			<ul class="list-unstyled">
 				<li><a href="all-nonprofits.php?strSort=name">Nonprofits A-Z</a></li>
@@ -52,6 +53,8 @@ include('includes/functions.php');
 		</div>
 		<div class="col-sm-6">
 			<div class="well">
+				<h3>Organization Search</h3>
+				<p>Select (1) or more options below</p>
 				<form onsubmit="return iso_doit()">
 					<div class="input-group form-group">
 						<label for="category">Category</label>

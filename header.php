@@ -101,9 +101,6 @@
 					Get Involved
 					<ul>
 						<li>
-							<a href="all-news.php">All News</a>
-						</li>
-						<li>
 							<a href="all-events.php" target="_self" title="View events with our nonprofits">Events</a>
 						</li>
 						<li>
@@ -239,13 +236,13 @@
 							<div class="sub-nav">
 								<ul class="sub-nav-group">
 									<li>
-										<a href="all-events.php" target="_self" title="View events with our nonprofits">Events</a>
+										<a href="how-to-give.php" target="_self" title="View events with our nonprofits">Give</a>
 									</li>
 									<li>
-										<a href="how-to-give.php" target="_self" title="View events with our nonprofits">How To Give</a>
+										<a href="volunteer-opportunities.php" target="_self" title="View volunteer opportunities with our nonprofits">Volunteer</a>
 									</li>
 									<li>
-										<a href="volunteer-opportunities.php" target="_self" title="View volunteer opportunities with our nonprofits">Volunteer Opportunities</a>
+										<a href="all-events.php" target="_self" title="View events with our nonprofits">Attend an event</a>
 									</li>
 								</ul>
 							</div>

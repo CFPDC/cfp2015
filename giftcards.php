@@ -14,7 +14,6 @@ include('includes/functions.php');
 <div class="row">
 	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
 		<ul class="list-unstyled">
-			<li><a href="all-news.php">All News</a></li>
 			<li><a href="all-events.php">Events</a></li>
 			<li><a href="mycatalogue.php">My Catalogue Account</a>
 			<ul>
@@ -37,7 +36,7 @@ include('includes/functions.php');
 <section class="col-sm-8">
 	<p>A Gift Card is a great (and convenient) way to let someone know that you care about your community and that you think they do too. <span class="red-text">As the holidays approach, we recommend E&dash;cards, which can be sent to you for printing and hand delivery, or sent to your recipients directly via email. Just remember to choose the e&dash;card option.</span> Family members, friends, teachers, employees, are all great gift card recipients! Once you purchase a card, in denominations of $25, $50, $100, $150 and up, we will send it to you or to your recipient&dash;either as an e&dash;card or as a hard card in beautiful packaging, with instructions about visiting the Catalogue website, and choosing the charity or charities of their choice. Gift cards are redeemed during the checkout process using the code on the back of the card. We aim to fill gift card orders promptly, especially during the holiday season. But do leave time for your card to arrive in the US mail. In order to arrive in time for the holidays, we recommend that gift cards requested by mail are purchased no later than Friday, December 19th.</p>
 	<button class="btn btn-primary" id="gift-card">Purchase a Gift Card or E-Card</button>
-	<img src="resources/images/giftcard.jpg" class="img-responsive hidden-xs hidden-sm gift-card-img" alt aria-hidden="true">
+	<img src="resources/images/GiftCard.jpg" class="img-responsive hidden-xs hidden-sm gift-card-img" alt aria-hidden="true">
 	<h2>Redeeming a Gift Card</h2>
 	<p>If you have received a gift card, you can redeem it on this site. Choose Our Nonprofits from the links above, and browse charities by field, region, or other areas of interest. Check out the search options on the left side of your screen.</p>
 	<p>Once you&rsquo;ve chosen the charity to which you wish to make your donation, follow these steps:</p>
