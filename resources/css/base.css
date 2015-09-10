@@ -1630,6 +1630,11 @@ main address > span, address > a {
 .stock {
     padding-bottom: 10px;
 }
+/*---Advanced Search---*/
+label[for="year"] {
+    display: block;
+}
+
 
 /*---Blog---*/
 .blog .posts.back {
@@ -1854,6 +1859,7 @@ main address > span, address > a {
 
 .related-carousel-container > .carousel-inner {
     margin-bottom: 0;
+    padding-left: 0;
 }
 
 .related-carousel-container li {
