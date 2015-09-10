@@ -166,13 +166,13 @@ var global = {
 
 
 	},
-	a11yCarousel: function() {
+	relatedCarousel: function() {
 		//nonprofit details page carousel
 		var carouselWidth = $('#carouselwrapper').width(),
 			carouselItem = $('#related-carousel li');
 		A11y.carousel();
-
-		if (carouselWidth > 440 && carouselWidth < 980) {
+		//dont make carousel unless page is specific width
+		if (carouselWidth > 486) {
 
 			if (carouselItem.parent().is('ul.item')) {
 				carouselItem.unwrap();
@@ -256,6 +256,7 @@ function searchPageActiveToggle() {
 
 //load assets responsive for screen size detection
 A11yResp.Core();
+A11y.ieDetect();
 //Set media query
 var lastDeviceState = A11yResp.getScreenWidth();
 $(window).resize(_.debounce(function() {
@@ -271,8 +272,10 @@ $(window).resize(_.debounce(function() {
 function performMediaQueries(state) {
 		if (state == 'screen-sm-max' || state == 'screen-xs-max' || state == 'screen-xs-min') {
 			$('#asideFilter').addClass('collapse');
+
 		} else {
 			$('#asideFilter').removeClass('collapse');
+
 		}
 	}
 	//begin isotop script
@@ -459,7 +462,7 @@ $(function() {
 	global.navMenu();
 	global.donateButtonPrefill();
 	global.addNonprofitNameToButton();
-	global.a11yCarousel();
+	global.relatedCarousel();
 
 	$('.carouselButtons button').on('click', function() {
 		var button = $(this),
