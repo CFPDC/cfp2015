@@ -741,7 +741,7 @@ form .error + textarea {
 }
 
 .subcategory-section h2 {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .subcategories .thumb {
@@ -1786,7 +1786,8 @@ main address > span, address > a {
 }
 
 .details-wishlist .btn, .details-support .btn {
-    padding: 10px 60px;
+    padding: 10px 0;
+    width: 13em;
 }
 
 .details-wishlist hr, .details-support hr {
@@ -1799,9 +1800,8 @@ main address > span, address > a {
 
 .details-partnership li {
     display: inline-block;
-    float: left;
     margin-left: 3%;
-    max-width: 30%;
+    max-width: 29%;
 }
 
 .details-partnership li:first-child {
@@ -1931,15 +1931,12 @@ main address > span, address > a {
 }
 
 /*budget list on details page*/
-.budget-container {
-    border-left: 1px solid #ddd;
-    padding-left: 9%;
-}
 
 .budget-container h2 {
     font-family: 'ProximaNovaSemibold';
     font-size: 18px;
     font-size: 1.8rem;
+    width: 83%;
 }
 
 .budget-container h2 > small {
@@ -1947,6 +1944,11 @@ main address > span, address > a {
     font-family: 'ProximaNovaRegular';
     font-size: 13px;
     font-size: 1.3rem;
+}
+
+.budget-container .budget-status {
+    margin: 0 auto 10px;
+    width: 75%;
 }
 
 .budget-container .budget-status li {
@@ -2072,7 +2074,7 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
 
 /*--- HOME PAGE ---*/
 .home-lead-text {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     margin-top: 75px;
 }
 
@@ -2099,6 +2101,10 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     margin-left: 15px;
 }
 
+.ie10 .img-responsive, .ie11 .img-responsive {
+    width: 100%;
+}
+
 /*---MEDIA QUERIES---*/
 @media screen and (min-width: 480px) {
     .carouselButtons {
@@ -2110,6 +2116,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     header .comments-link {
         float: right;
+    }
+    .budget-container .budget-status {
+        width: 45%;
     }
 }
 
@@ -2429,6 +2438,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .three-wide a {
         margin-left: 15px;
     }
+    .hero.details img {
+        margin-top: 30px;
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -2549,6 +2561,21 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
         font-size: 60px;
         font-size: 6rem;
     }
+    .budget-container {
+        border-left: 1px solid #ddd;
+        padding-left: 8.333333%;
+    }
+    .budget-container .budget-status {
+        width: 100%;
+    }
+    .budget-container .budget-status li {
+        font-size: 14px;
+        font-size: 1.4rem;
+    }
+    .budget-container .budget-status li.current-status {
+        font-size: 15px;
+        font-size: 1.5rem;
+    }
 }
 
 @media screen and (min-width: 1024px) {}
@@ -2608,6 +2635,18 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
 @media screen and (min-width: 1225px) {
     .primary-nav > nav > ul > li {
         margin-left: 4%;
+    }
+    .budget-container {
+        border-left: 1px solid #ddd;
+        padding-left: 8.333333%;
+    }
+    .budget-container .budget-status li {
+        font-size: 16px;
+        font-size: 1.6rem;
+    }
+    .budget-container .budget-status li.current-status {
+        font-size: 20px;
+        font-size: 2rem;
     }
 }
 

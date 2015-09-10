@@ -141,7 +141,7 @@ include('includes/functions.php');
 		</fieldset>
 	</form>
 </section>
-<aside class="col-sm-4" id="asideFilter">
+<aside class="col-sm-4">
 <h3>Share This Page</h3>
 	<div class="well">
 <p>Need to add share this links to this section with sr only text for each link</p>
