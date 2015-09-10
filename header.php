@@ -14,7 +14,7 @@
 		<meta property="og:title" content="HOME: Catalogue for Philanthropy: Greater Washington">
 		<meta property="og:url" content="http://cfp-dc.org/cfpdc/index.php">
 		<meta name="description" content="The Catalogue for Philanthropy: Greater Washington - The most trusted guide to giving in Greater Washington (DC, MD, VA), featuring the area's best, vetted, community-based charities for high-impact local giving.">
-		<meta name="keywords" content="catalogue, catalog, DC, VA, MD, Virginia, Maryland, Washington DC, Greater Washington, Greater DC, Metropolitan DC, Metro DC, / , a non profit, nonprofit organization, charity donations, local donations, catalogue for philanthropy: greater washington, catalogue for philanthropy dc, philanthropy giving, washinton nonprofits, charities to donate to, charity to donate, cfp, about philanthropy, what is philanthropy, charity philanthropy, the best charities, nonprofit dc, nonprofits dc, non profit washington dc, catalogue for, online catalogue">
+		<meta name="keywords" content="catalogue, catalogue, DC, VA, MD, Virginia, Maryland, Washington DC, Greater Washington, Greater DC, Metropolitan DC, Metro DC, / , a non profit, nonprofit organization, charity donations, local donations, catalogue for philanthropy: greater washington, catalogue for philanthropy dc, philanthropy giving, washinton nonprofits, charities to donate to, charity to donate, cfp, about philanthropy, what is philanthropy, charity philanthropy, the best charities, nonprofit dc, nonprofits dc, non profit washington dc, catalogue for, online catalogue">
 		<meta name="robots" content="index, follow">
 		<meta name="revisit-after" content="15 days">
 		<title>Catalogue for Philanthropy</title>
@@ -41,7 +41,7 @@
 					<a href="contact.php" target="_self" title="CFP's contact information">Contact<span class="sr-only"> The Catalogue for Philanthropy</span></a>
 				</li>
 				<li>
-					<a href="request-catalogue.php" target="_self" title="Request a catalogue from CFP">Request a Catalog</a>
+					<a href="request-catalogue.php" target="_self" title="Request a catalogue from CFP">Request a Catalogue</a>
 				</li>
 				<li>
 					<a href="sign-up.php" target="_self" title="Sign up for a CFP account">Sign Up</a>
@@ -107,6 +107,33 @@
 							<a href="how-to-give.php" target="_self" title="View events with our nonprofits">How To Give</a>
 						</li>
 						<li>
+							<a href="history.php" target="_self" title="View donation history for nonprofits">Donation History</a>
+						</li>
+						<li>
+							<a href="favorites.php" target="_self" title="View favorite nonprofits">View Favorites</a>
+						</li>
+						<li>
+							<a href="registry.php" target="_self" title="Gift Registry">Gift Registry</a>
+						</li>
+						<li>
+							<a href="giftcards.php" target="_self" title="Buy CFP gift cards">Gift Cards</a>
+						</li>
+						<li>
+							<a href="mycatalogue.php" target="_self" title="View your CFP catalogue">My Catalogue</a>
+						</li>
+						<li>
+							<a href="kids.php" target="_self" title="View nonprofits that are especially for kids">Especially for Kids</a>
+						</li>
+						<li>
+							<a href="donate.php" target="_self" title="Donate Now/Decide Later">Donate Now / Decide Later</a>
+						</li>
+						<li>
+							<a href="appreciated-stock.php" target="_self" title="Appreciated Stock">Appreciated Stock</a>
+						</li>
+						<li>
+							<a href="corporate-sponsorship.php" target="_self" title="Corporate Sponsorship">Corporate Sponsorship</a>
+						</li>
+						<li>
 							<a href="volunteer-opportunities.php" target="_self" title="View volunteer opportunities with our nonprofits">Volunteer Opportunities</a>
 						</li>
 					</ul>
@@ -129,7 +156,7 @@
 							<a href="contact.php" target="_self" title="CFP's contact information">Contact<span class="sr-only"> The Catalogue for Philanthropy</span></a>
 						</li>
 						<li>
-							<a href="request-catalogue.php" target="_self" title="Request a catalogue from CFP">Request a Catalog</a>
+							<a href="request-catalogue.php" target="_self" title="Request a catalogue from CFP">Request a Catalogue</a>
 						</li>
 						<li>
 							<a href="sign-up.php" target="_self" title="Sign up for a CFP account">Sign Up</a>
@@ -139,8 +166,8 @@
 						</li>
 					</ul>
 				</nav>
-				<div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 catalogue-donate-button-container">
-					<button class="btn  btn-primary catalogue-donate-button" id="donate-to-catalogue">Donate to The Catalogue</button>
+				<div class="hidden-print col-xs-12 col-sm-5 col-md-4 col-lg-3 catalogue-donate-button-container">
+					<a href="checkout.php?np_title=Catalogue_for_Philanthropy:_Greater_Washington" title="Donate to The Catalogue for Philanthropy" class="btn btn-primary catalogue-donate-button" id="donate-to-catalogue">Donate to The Catalogue</a>
 					<button class="navbar-toggle pull-right" data-toggle="offcanvas" data-target=".mobile-nav" data-canvas="body">
 					<span class="adobeBlank sr-only" aria-hidden="true">
 					Expand Menu Icon
@@ -209,13 +236,13 @@
 							<div class="sub-nav">
 								<ul class="sub-nav-group">
 									<li>
-										<a href="all-events.php" target="_self" title="View events with our nonprofits">Events</a>
+										<a href="how-to-give.php" target="_self" title="View events with our nonprofits">Give</a>
 									</li>
 									<li>
-										<a href="how-to-give.php" target="_self" title="View events with our nonprofits">How To Give</a>
+										<a href="volunteer-opportunities.php" target="_self" title="View volunteer opportunities with our nonprofits">Volunteer</a>
 									</li>
 									<li>
-										<a href="volunteer-opportunities.php" target="_self" title="View volunteer opportunities with our nonprofits">Volunteer Opportunities</a>
+										<a href="all-events.php" target="_self" title="View events with our nonprofits">Attend an event</a>
 									</li>
 								</ul>
 							</div>

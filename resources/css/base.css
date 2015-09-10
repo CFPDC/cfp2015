@@ -38,7 +38,8 @@ h3 {
 h4 {
     font-family: 'ProximaNovaSemibold';
     /*16px*/
-    font-size: inherit;
+    font-size: 18px;
+    font-size: 1.8rem;
     margin: 0;
 }
 
@@ -53,8 +54,8 @@ h5 {}
 h6 {}
 
 p {
-    font-size: 15px;
-    font-size: 1.5rem;
+    font-size: 15.5px;
+    font-size: 1.55rem;
 }
 
 a {
@@ -84,6 +85,10 @@ form small {
 
 strong {
     color: #101214;
+}
+
+.text-bold {
+    font-weight: 700;
 }
 
 /* do not group these rules */
@@ -295,6 +300,15 @@ p.img-above {
     padding: 5px;
 }
 
+.info-tooltip {
+    padding: 0;
+}
+
+.info-tooltip > .fa {
+    font-size: 20px;
+    font-size: 2rem;
+}
+
 small {
     font-family: 'ProximaNovaSemiboldItalic';
     color: #292929 !important;
@@ -353,15 +367,15 @@ form div.error, form div.error > div {
     margin-bottom: 10px;
 }
 
-form .error select, form .error input {
+form .error select, form .error input, form .error + textarea {
     border: 1px solid #931621;
 }
 
-form .error label {
+form .error label, form label.error {
     color: #931621;
 }
 
-form .error strong {
+form .error strong, form strong.error {
     bottom: 0;
     color: #931621;
     display: block;
@@ -369,6 +383,16 @@ form .error strong {
     font-size: 13px;
     font-size: 1.3rem;
     position: absolute;
+}
+
+/*blog comment textarea*/
+form .comments strong.error {
+    top: 165px;
+    left: 5px;
+}
+
+form .error + textarea {
+    margin-bottom: 30px;
 }
 
 .adobeBlank {
@@ -400,7 +424,7 @@ form .error strong {
 }
 
 .secondary-nav li {
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
 .secondary-nav li a {
@@ -717,7 +741,7 @@ form .error strong {
 }
 
 .subcategory-section h2 {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .subcategories .thumb {
@@ -899,10 +923,6 @@ main.secondary {
     width: 100%;
 }
 
-.search-results .thumbnail .caption {
-    /* padding: 0;*/
-}
-
 .search-results .thumbnail .caption h2 {
     font-size: 22px;
 }
@@ -1080,7 +1100,7 @@ main address > span, address > a {
     padding: 6px 12px;
 }
 
-.one-column-form .checkbox input, .one-column-form .checkbox label {
+.one-column-form .checkbox input, .one-column-form .checkbox label, .one-column-form .radio input, .one-column-form .radio label {
     display: inline-block;
     clear: both;
     float: left;
@@ -1088,12 +1108,12 @@ main address > span, address > a {
     width: auto;
 }
 
-.one-column-form .checkbox label {
+.one-column-form .checkbox label, .one-column-form .radio label {
     font-size: 14px;
     font-size: 1.4rem;
 }
 
-.one-column-form .checkbox, .one-column-form textarea {
+.one-column-form .checkbox, .one-column-form .radio, .one-column-form textarea {
     margin-bottom: 15px;
 }
 
@@ -1109,11 +1129,11 @@ main address > span, address > a {
     display: block;
 }
 
-.checkbox .error p:first-child {
+.checkbox .error p:first-child, .radio .error p:first-child {
     color: #931621;
 }
 
-.checkbox .error strong.error {
+.checkbox .error strong.error, .radio .error strong.error {
     bottom: -10px;
     left: 0;
 }
@@ -1147,12 +1167,12 @@ main address > span, address > a {
     width: auto;
 }
 
-.two-column-form .checkbox > div {
+.two-column-form .checkbox > div, .two-column-form .radio > div {
     display: table-cell;
     margin-left: 0;
 }
 
-.two-column-form .checkbox input, .two-column-form .checkbox label {
+.two-column-form .checkbox input, .two-column-form .checkbox label, .two-column-form .radio input, .two-column-form .radio label {
     display: inline-block;
     clear: both;
     float: left;
@@ -1160,16 +1180,17 @@ main address > span, address > a {
     width: auto;
 }
 
-.two-column-form .checkbox label {
+.checkbox label, .radio label {
     font-size: 14px;
     font-size: 1.4rem;
 }
 
-.two-column-form .checkbox, .two-column-form textarea {
+.two-column-form .checkbox, .two-column-form .radio, .two-column-form textarea {
     margin-bottom: 15px;
 }
 
 .two-column-form .comments {
+    position: relative;
     text-align: left;
 }
 
@@ -1206,7 +1227,7 @@ main address > span, address > a {
     position: relative;
 }
 
-.checkbox p {
+.checkbox p, .radio p {
     float: left;
     font-family: 'ProximaNovaSemibold';
     margin-bottom: 0;
@@ -1547,8 +1568,419 @@ main address > span, address > a {
     text-transform: capitalize;
 }
 
+/*---All Events---*/
+.all-event-button .fa, .event-button .fa {
+    font-weight: bold;
+}
+
+.search-event > small {
+    display: block;
+}
+
+.location-select, .category-select {
+    display: block;
+    width: 100%;
+    padding: 5px;
+}
+
+.event-add-to-calendar {
+    margin: 25px 0;
+}
+
+.event-details {
+    margin-top: 25px;
+}
+
+.back-to-events {
+    padding-bottom: 10px;
+}
+
+.event-details-row {
+    padding-bottom: 25px;
+}
+
+.see-also {
+    margin-top: 25px;
+}
+
+/*---All News---*/
+.news-paragraph {
+    margin: 0;
+}
+
+/*---Kids List---*/
+.category-sort li {
+    display: inline;
+}
+
 /* How to Help page*/
 .give-image {}
+
+/*---Gift Cards---*/
+.gift-card-img {
+    width: 300px;
+    padding-top: 15px;
+}
+
+.red-text {
+    color: #ff0000;
+}
+
+/*---Stock---*/
+.stock {
+    padding-bottom: 10px;
+}
+/*---Advanced Search---*/
+label[for="year"] {
+    display: block;
+}
+
+
+/*---Blog---*/
+.blog .posts.back {
+    position: relative;
+    padding-left: 35px;
+}
+
+.blog .posts.back:before {
+    content: "\f177";
+    font-family: 'FontAwesome';
+    font-size: 28px;
+    font-size: 2.8rem;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    height: 15px;
+    width: 40px;
+}
+
+.blog article {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+.blog aside h3 {
+    font-family: "LibreBaskervilleBold";
+    text-transform: capitalize;
+}
+
+.entry-title > a {
+    color: inherit;
+}
+
+.entry-meta {
+    margin-bottom: 15px;
+}
+
+.comments-link {
+    margin-top: -35px;
+}
+
+.entry-content > * {
+    float: left;
+}
+
+.entry-content h3 {
+    margin-top: 25px;
+}
+
+.entry-content h3, .entry-content h4, .entry-content > .org {
+    clear: both;
+}
+
+.entry-content h4 {
+    margin-bottom: 15px;
+}
+
+.entry-content .img-word-wrap {
+    float: left;
+    margin-bottom: 30px;
+    margin-right: 30px;
+}
+
+.entry-content .img-only-container {
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.entry-content .img-responsive {
+    display: inline-block;
+}
+
+.entry-content .text-wrap {
+    float: left;
+}
+
+.entry-content ul, .entry-content ol {
+    padding-left: 18px;
+}
+
+.entry-content ol li > p {
+    margin-top: 15px;
+}
+
+.blog footer {
+    background: transparent;
+    border: none;
+    color: inherit;
+    margin-top: 0;
+}
+
+.blog footer a {
+    color: #477896;
+}
+
+.blog footer a:focus, .blog footer a:hover {
+    color: #23527c;
+}
+
+.blog aside .well {
+    margin-bottom: 45px;
+}
+
+.blog-search {
+    padding: 15px 30px;
+}
+
+.blog-search .btn-primary {
+    background-color: #292929;
+    border-color: #292929;
+}
+
+.blog-search .btn-primary:focus, .blog-search .btn-primary:hover {
+    background-color: #fff;
+    border-color: #292929;
+    color: #292929;
+}
+
+.blog .two-column-form {
+    max-width: 640px;
+}
+
+.blog .comments small {
+    display: inline-block;
+}
+
+/*---nonprofit details---*/
+.hero.details, .more-about-section {
+    margin-bottom: 30px;
+}
+
+.more-about-section > button {
+    display: block;
+    font-size: 18px;
+    font-size: 1.8rem;
+    position: relative;
+}
+
+.more-about-section > button[aria-expanded="true"]:before, .more-about-section > button[aria-expanded="false"]:before {
+    font-family: 'FontAwesome';
+    position: absolute;
+    right: -5px;
+    top: 5px;
+}
+
+.more-about-section > button[aria-expanded="false"]:before {
+    content: '\f105';
+}
+
+.more-about-section > button[aria-expanded="true"]:before {
+    content: '\f107';
+}
+
+.details-wishlist .btn, .details-support .btn {
+    padding: 10px 0;
+    width: 13em;
+}
+
+.details-wishlist hr, .details-support hr {
+    width: 66.6666667%;
+}
+
+.details-partnership ul, .details-partnership li {
+    margin-bottom: 0;
+}
+
+.details-partnership li {
+    display: inline-block;
+    margin-left: 3%;
+    max-width: 29%;
+}
+
+.details-partnership.four-badge li {
+    max-width: 21%;
+}
+
+.details-partnership li:first-child {
+    margin-left: 0;
+}
+
+.nonprofit-social a {
+    color: #292929;
+}
+
+.nonprofit-social a:focus, .nonprofit-social a:hover {
+    color: #555;
+}
+
+.two-wide a {
+    margin-left: 50px;
+}
+
+.three-wide a {
+    margin-left: 44px;
+}
+
+.four-wide a {
+    margin-left: 15px;
+}
+
+.nonprofit-social a:first-child {
+    margin-left: 0;
+}
+
+.nonprofit-social.two-wide a > .fa {
+    font-size: 60px;
+    font-size: 6rem;
+}
+
+.nonprofit-social.three-wide a > .fa {
+    font-size: 60px;
+    font-size: 6rem;
+}
+
+.nonprofit-social.four-wide a > .fa {
+    font-size: 60px;
+    font-size: 6rem;
+}
+
+.related-carousel-container {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.related-carousel-container > .carousel-inner {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.related-carousel-container li {
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.related-carousel-container .item {
+    min-height: 150px;
+    padding-left: 0;
+}
+
+.related-carousel-container li a h4 {
+    color: #292929;
+    font-family: 'ProximaNovaSemibold';
+    font-size: 18px;
+    font-size: 1.8rem;
+    margin-top: 15px;
+}
+
+.related-carousel-container li a:focus, .related-carousel-container li a:hover, .related-carousel-container li a:focus h4, .related-carousel-container li a:hover h4 {
+    text-decoration: none;
+}
+
+.related-carousel-container li a p {
+    color: #292929;
+    font-size: 14px;
+    font-size: 1.4rem;
+    margin-bottom: 0;
+}
+
+.related-carousel-container li a:focus p, .related-carousel-container li a:hover p {
+    text-decoration: underline;
+}
+
+.related-carousel-container .carousel-control {
+    background: none;
+    border: 0;
+    color: #477896;
+    padding: 0;
+    opacity: 1;
+    width: 40px;
+}
+
+.carousel-control:focus, .carousel-control:hover {
+    outline: 2px solid #487896;
+}
+
+.related-carousel-container .carousel-control.left {
+    left: -50px;
+}
+
+.related-carousel-container .carousel-control.right {
+    right: -50px;
+}
+
+.related-carousel-container .carousel-control:before {
+    font-family: 'FontAwesome';
+    position: absolute;
+    left: auto;
+    right: auto;
+    top: 5px;
+    font-size: 90px;
+    font-size: 9rem;
+}
+
+.related-carousel-container .carousel-control.left:before {
+    content: '\f104';
+    left: -5px;
+}
+
+.related-carousel-container .carousel-control.right:before {
+    content: '\f105';
+    right: -5px;
+}
+
+/*budget list on details page*/
+
+.budget-container h2 {
+    font-family: 'ProximaNovaSemibold';
+    font-size: 18px;
+    font-size: 1.8rem;
+    width: 83%;
+}
+
+.budget-container h2 > small {
+    display: block;
+    font-family: 'ProximaNovaRegular';
+    font-size: 13px;
+    font-size: 1.3rem;
+}
+
+.budget-container .budget-status {
+    margin: 0 auto 10px;
+    width: 75%;
+}
+
+.budget-container .budget-status li {
+    position: relative;
+}
+
+.budget-container .budget-status li.current-status {
+    font-family: 'ProximaNovaBold';
+    font-size: 20px;
+    font-size: 2rem;
+}
+
+.budget-container .budget-status li.current-status:before {
+    color: #FDAF17;
+    content: '\f005';
+    font-family: 'FontAwesome';
+    position: absolute;
+    left: -30px;
+    top: -12px;
+    font-size: 30px;
+    font-size: 3rem;
+}
 
 /*---Sitemap---*/
 .sitemap-list {
@@ -1579,6 +2011,13 @@ main address > span, address > a {
     position: absolute;
     left: 0;
     top: 6px;
+}
+
+.np-selected-name {
+    font-family: 'ProximaNovaBold';
+    font-size: 18px;
+    font-size: 1.8rem;
+    text-align: left;
 }
 
 /*---FOOTER---*/
@@ -1645,7 +2084,7 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
 
 /*--- HOME PAGE ---*/
 .home-lead-text {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     margin-top: 75px;
 }
 
@@ -1672,6 +2111,10 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     margin-left: 15px;
 }
 
+.ie10 .img-responsive, .ie11 .img-responsive {
+    width: 100%;
+}
+
 /*---MEDIA QUERIES---*/
 @media screen and (min-width: 480px) {
     .carouselButtons {
@@ -1680,6 +2123,18 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .carousel-caption {
         padding-left: 13%;
         padding-right: 13%;
+    }
+    header .comments-link {
+        float: right;
+    }
+    .budget-container .budget-status {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .entry-content .text-wrap {
+        float: none;
     }
 }
 
@@ -1724,6 +2179,12 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
         font-size: 16px;
         font-size: 1.6rem;
     }
+    .event-page-headings {
+        margin-top: 0;
+    }
+    .all-event-button, .event-button {
+        float: right;
+    }
     footer .social-icons, footer address, footer .primary-footer-nav li, footer .secondary-footer-nav li {
         text-align: left;
     }
@@ -1750,13 +2211,14 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     footer .primary-footer-nav li:first-child, footer .secondary-footer-nav li:first-child {
         margin-left: 0;
+        padding-left: 0;
     }
     footer .social-icons {
         margin: 0 0 0 -5px;
     }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     h1, .carousel-inner > .item h1 {
         font-family: 'ProximaNovaThin';
         font-size: 60px;
@@ -1773,6 +2235,10 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     form strong.error {
         right: 0;
+    }
+    form.comment-form strong.error {
+        left: 0;
+        right: auto;
     }
     .one-column-form strong.error {
         left: 0;
@@ -1876,11 +2342,11 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .two-column-form small {
         display: block;
     }
-    .two-column-form .checkbox {
+    .two-column-form .checkbox, .two-column-form .radio {
         float: right;
         width: 15.6em;
     }
-    .two-column-form .checkbox input, .two-column-form .checkbox label {
+    .two-column-form .checkbox input, .two-column-form .checkbox label, .two-column-form .radio input, .two-column-form .radio label {
         float: left;
         padding-right: 0;
         text-align: left;
@@ -1935,8 +2401,14 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
         padding: 0;
         margin: 0;
     }
-    .two-column-form .checkbox > div {
+    .two-column-form .checkbox > div, .two-column-form .radio > div {
         float: right;
+    }
+    .two-column-form .checkbox.left > div {
+        margin-right: 95px;
+    }
+    .two-column-form .radio.left > div {
+        margin-right: 145px;
     }
     form div.error > div strong.error {
         bottom: -10px;
@@ -1948,15 +2420,38 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .login-form > div {
         margin-left: 5%;
     }
-    .footer-logo {
-        max-width: 450px;
-    }
     .vision {
         margin: 0 0 20px;
     }
+    .checkout-form .btn-primary {
+        float: right;
+    }
+    .np-selected-name {
+        width: 227px;
+    }
+    .blog .two-column-form label {
+        display: block;
+        text-align: left;
+    }
+    .blog .two-column-form input {
+        float: left;
+    }
+    .blog .two-column-form .checkbox {
+        margin-top: 20px;
+    }
+    .nonprofit-social.four-wide a > .fa {
+        font-size: 44px;
+        font-size: 4.4rem;
+    }
+    .three-wide a {
+        margin-left: 15px;
+    }
+    .hero.details img {
+        margin-top: 30px;
+    }
 }
 
-@media screen and (min-width: 900px) {
+@media (min-width: 900px) {
     .home-how-help-section .btn {
         font-size: 19px;
     }
@@ -1972,9 +2467,12 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     footer .primary-footer-nav li {
         margin-left: 25px;
     }
+    .three-wide a {
+        margin-left: 40px;
+    }
 }
 
-@media screen and (min-width: 915px) {
+@media (min-width: 915px) {
     .carousel-caption {
         bottom: 20px;
         top: auto;
@@ -1987,15 +2485,18 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .search-list-view .media .media-body .media-heading.collapsed:before, .search-list-view .media .media-body .media-heading:before {
         right: -20px;
     }
+    .entry-content .img-only-container .img-responsive {
+        max-width: 600px;
+    }
 }
 
-@media screen and (min-width: 950px) {
+@media (min-width: 950px) {
     .header-logo {
         max-width: 630px;
     }
 }
 
-@media screen and (min-width: 991px) {
+@media (min-width: 991px) {
     .primary-nav {
         padding: 15px 0;
     }
@@ -2052,17 +2553,52 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .vision-report > .row .col-md-3.first {
         margin-left: 0;
     }
+    .blog .two-column-form label {
+        display: table-cell;
+        text-align: right;
+    }
+    .blog .two-column-form .checkbox label {
+        text-align: left;
+    }
+    .blog .two-column-form input {}
+    .blog .two-column-form .checkbox {
+        margin-top: 10px;
+        padding-left: 10px;
+    }
+    .nonprofit-social.four-wide a > .fa {
+        font-size: 60px;
+        font-size: 6rem;
+    }
+    .budget-container {
+        border-left: 1px solid #ddd;
+        padding-left: 8.333333%;
+    }
+    .budget-container .budget-status {
+        width: 100%;
+    }
+    .budget-container .budget-status li {
+        font-size: 14px;
+        font-size: 1.4rem;
+    }
+    .budget-container .budget-status li.current-status {
+        font-size: 15px;
+        font-size: 1.5rem;
+    }
 }
 
-@media screen and (min-width: 1024px) {}
+@media (min-width: 1024px) {
+    .footer-logo {
+        max-width: 450px;
+    }
+}
 
-@media screen and (min-width: 1050px) {
+@media (min-width: 1050px) {
     .primary-nav > nav > ul > li > a {
         font-size: 18px;
     }
 }
 
-@media screen and (min-width: 1077px) {
+@media (min-width: 1077px) {
     .primary-nav nav li > button, .primary-nav nav li > a {
         font-size: 18px;
     }
@@ -2071,7 +2607,7 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
 }
 
-@media screen and (min-width: 1170px) {
+@media (min-width: 1170px) {
     .nav.nav-pills.home-search > li {
         margin-left: 0;
     }
@@ -2080,7 +2616,7 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
     .primary-nav > nav > ul > li {
         margin-left: 3%;
     }
@@ -2103,15 +2639,30 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .vision-report > .row .col-md-3 {
         margin-left: 5px;
     }
-}
-
-@media screen and (min-width: 1225px) {
-    .primary-nav > nav > ul > li {
-        margin-left: 4%;
+    .four-wide a {
+        margin-left: 13px;
     }
 }
 
-@media screen and (min-width: 1370px) {
+@media (min-width: 1225px) {
+    .primary-nav > nav > ul > li {
+        margin-left: 4%;
+    }
+    .budget-container {
+        border-left: 1px solid #ddd;
+        padding-left: 8.333333%;
+    }
+    .budget-container .budget-status li {
+        font-size: 16px;
+        font-size: 1.6rem;
+    }
+    .budget-container .budget-status li.current-status {
+        font-size: 20px;
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1370px) {
     .catalogue-donate-button-container {
         width: 25%;
     }
@@ -2125,6 +2676,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     .search-results .caption .btn.btn-primary {
         margin-bottom: 0;
+    }
+    .blog-search {
+        padding: 15px 70px;
     }
 }
 
@@ -2174,5 +2728,103 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
 @media (min-width: 1200px) {
     #screen-indicator {
         z-index: 2;
+    }
+}
+
+@media print {
+    .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-sx-12, .col-sm-12, .col-md-12, .col-lg-12 {
+        float: left;
+    }
+    .col-sx-12, .col-sm-12, .col-md-12, .col-lg-12 {
+        width: 100%;
+    }
+    .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11 {
+        width: 91.66667%;
+    }
+    .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10 {
+        width: 83.33333%;
+    }
+    .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9 {
+        width: 75%;
+    }
+    .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8 {
+        width: 66.66667%;
+    }
+    .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7 {
+        width: 58.33333%;
+    }
+    .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6 {
+        width: 50%;
+    }
+    .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5 {
+        width: 41.66667%;
+    }
+    .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4 {
+        width: 33.33333%;
+    }
+    .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3 {
+        width: 25%;
+    }
+    .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2 {
+        width: 16.66667%;
+    }
+    .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1 {
+        width: 8.33333%;
+    }
+    * {
+        text-shadow: none !important;
+        color: #000 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+    a, a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    a[href^="javascript:"]:after, a[href^="#"]:after {
+        content: "";
+    }
+    pre, blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    thead {
+        display: table-header-group;
+    }
+    tr, img {
+        page-break-inside: avoid;
+    }
+    img {
+        max-width: 100% !important;
+    }
+    p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2, h3 {
+        page-break-after: avoid;
+    }
+    select {
+        background: #fff !important;
+    }
+    .navbar {
+        display: none;
+    }
+    .table td, .table th {
+        background-color: #fff !important;
+    }
+    .label {
+        border: 1px solid #000;
+    }
+    .table {
+        border-collapse: collapse !important;
+    }
+    .table-bordered th, .table-bordered td {
+        border: 1px solid #ddd !important;
     }
 }

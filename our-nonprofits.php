@@ -282,7 +282,7 @@ include('includes/functions.php');
   <section class="col-xs-12 col-sm-9">
     <!--<div class="row grid">-->    
      <div class="row js-isotope grid" data-isotope-options='{ "layoutMode": "fitRows","itemSelector": ".iso-item", "getSortData": {"name": ".name", "category": ".category", "year": ".year", "region": ".region"}}'> 
-      <div class="col-sm-6 col-md-4 col-lg-3 iso-item">
+      <div class="col-sm-6 col-md-4 col-lg-3 iso-item nonprofit-listing">
         <div class="sr-only"><span class="region">VA</span><span class="year">2008</span><span class="category">culture</span></div>
         <div class="thumbnail">
           <img src="http://www.cfp-dc.org/images/dc/cropped/165.jpg">
@@ -290,12 +290,12 @@ include('includes/functions.php');
             <h2 class="name">Bowen McCauley Dance Company<br><small class="city">Arlington, VA</small></h2>
             <p class="sr-only iso-hidden">2014 CULTURE: Performing, Literary, and Visual Arts</p>
             <p>Founded in 1996 by dancer, teacher, and choreographer Lucy Bowen McCauley, whose dual training in music and dance is the hallmark of her choreography, Bowen McCauley Dance Company is known for its live music, talented corps of dancers, and rich collaborations with outstanding designers and musicians.</p>
-            <p><a href="#" class="btn btn-primary" role="button">Learn More<span class="sr-only"> about xxx nonprofit name</span></a> <a href="#" class="btn btn-secondary" role="button">Donate<span class="sr-only"> to xxx nonprofit name</span></a></p>
+            <p><a href="#" class="btn btn-primary learn-more" role="button">Learn More</a> <a href="checkout.php" class="btn btn-secondary donate-nonprofit" role="button">Donate</a></p>
           <p><small>Culture</small></p>
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 iso-item">
+      <div class="col-sm-6 col-md-4 col-lg-3 iso-item nonprofit-listing">
       <div class="hidden"><span class="region">MD</span><span class="year">2014</span><span class="category">nature</span></div>
         <div class="thumbnail">
           <img src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -303,25 +303,25 @@ include('includes/functions.php');
             <h2 class="name" >Alice Ferguson Foundation<br><small class="city">Accokeek, MD</small></h2>
             <p class="sr-only iso-hidden">2014 CULTURE: Performing, Literary, and Visual Arts</p>
             <p>Thanks to the Alice Ferguson Foundation, there’s a special place in Maryland where students from throughout the region can dig in the dirt, take a hike, and catch an unbeatable glimpse of the Potomac. That place is Hard Bargain Farm, which annually hosts nearly 6,000 K-8 students who come to interact with plants and animals about which many of them.</p>
-            <p><a href="#" class="btn btn-primary" role="button">Learn More<span class="sr-only"> about xxx nonprofit name</span></a> <a href="#" class="btn btn-secondary" role="button">Donate<span class="sr-only"> to xxx nonprofit name</span></a></p>
+            <p><a href="#" class="btn btn-primary learn-more" role="button">Learn More</a> <a href="checkout.php" class="btn btn-secondary donate-nonprofit" role="button">Donate</a></p>
           <p><small>Nature</small></p>
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 iso-item">
+      <div class="col-sm-6 col-md-4 col-lg-3 iso-item nonprofit-listing">
       <div class="hidden"><span class="region">DC</span><span class="year">2014</span><span class="category">nature</span></div>
         <div class="thumbnail">
           <img src="http://www.cfp-dc.org/images/dc/cropped/217.jpg">
           <div class="caption">
             <h2 class="name">DC Greens<br><small class="city">Washington, DC</small></h2>
             <p>Here is a troubling statistic: one in five children aged 10-17 is overweight or obese in our nation’s capital, making it third in the country for childhood obesity. DC Greens comes at this tough problem from multiple angles. First, it unites educators and nonprofits from all eight wards of the city, bringing them together to raise awareness and develop.</p>
-            <p><a href="#" class="btn btn-primary" role="button">Learn More<span class="sr-only"> about xxx nonprofit name</span></a> <a href="#" class="btn btn-secondary" role="button">Donate<span class="sr-only"> to xxx nonprofit name</span></a></p>
+            <p><a href="#" class="btn btn-primary learn-more" role="button">Learn More</a> <a href="checkout.php" class="btn btn-secondary donate-nonprofit" role="button">Donate</a></p>
           <p><small>Nature</small></p>
           </div>
         </div>
       </div>
 
-      <div class="col-sm-6 col-md-4 col-lg-3 iso-item">
+      <div class="col-sm-6 col-md-4 col-lg-3 iso-item nonprofit-listing">
       <div class="hidden"><span class="region">DC</span><span class="year">2010</span><span class="category">culture</span></div>
         <div class="thumbnail">
           <img src="http://www.cfp-dc.org/images/dc/cropped/162.jpg">
@@ -329,56 +329,56 @@ include('includes/functions.php');
             <h2 class="name">United States Capitol Historical Society<br><small class="city">Washington, DC</small></h2>
             <p class="sr-only iso-hidden">2010 CULTURE: Performing, Literary, and Visual Arts</p>
             <p>Recent surveys reveal a woeful lack of historical education in the United States – and this is true even for DC students who live in a city with a wealth of learning opportunities. But many have never even visited the Capitol. The non-partisan (and non-governmental) US Capitol Historical Society is committed to turning things around.</p>
-            <p><a href="#" class="btn btn-primary" role="button">Learn More<span class="sr-only"> about xxx nonprofit name</span></a> <a href="#" class="btn btn-secondary" role="button">Donate<span class="sr-only"> to xxx nonprofit name</span></a></p>
+            <p><a href="#" class="btn btn-primary learn-more" role="button">Learn More</a> <a href="donate.php" class="btn btn-secondary donate-nonprofit" role="button">Donate</a></p>
           <p><small>Culture</small></p>
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 iso-item">
+      <div class="col-sm-6 col-md-4 col-lg-3 iso-item nonprofit-listing">
       <div class="hidden"><span class="region">MD</span><span class="year">2011</span><span class="category">nature</span></div>
         <div class="thumbnail">
           <img src="http://www.cfp-dc.org/images/dc/cropped/233.jpg">
           <div class="caption">
             <h2 class="name" >Rock Creek Conservancy <br><small class="city">Bethesda, MD</small></h2>
             <p>One of the largest forested urban parks on earth, Rock Creek Park is nestled within the Rock Creek Watershed, which spreads over 77-square miles and is home to nearly 500,000 people.</p>
-            <p><a href="#" class="btn btn-primary" role="button">Learn More<span class="sr-only"> about xxx nonprofit name</span></a> <a href="#" class="btn btn-secondary" role="button">Donate<span class="sr-only"> to xxx nonprofit name</span></a></p>
+            <p><a href="#" class="btn btn-primary learn-more" role="button">Learn More</a> <a href="checkout.php" class="btn btn-secondary donate-nonprofit" role="button">Donate</a></p>
           <p><small>Nature</small></p>
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 iso-item">
+      <div class="col-sm-6 col-md-4 col-lg-3 iso-item nonprofit-listing">
       <div class="hidden"><span class="region">DC</span><span class="year">2014</span><span class="category">education</span></div>
         <div class="thumbnail">
           <img src="http://www.cfp-dc.org/images/dc/cropped/266.jpg">
           <div class="caption">
             <h2 class="name">Latin American Montessori Bilingual Public Charter School<br><small class="city">Washington, DC</small></h2>
             <p>A unique charter school for children ages 3 to 5th grade, Latin American Montessori Bilingual creates a nurturing, empowering environment both for non-native-English speakers (who might elsewhere be penalized for their lack of fluency) and English-dominant ones (who might otherwise not benefit from learning a new language).</p>
-            <p><a href="#" class="btn btn-primary" role="button">Learn More<span class="sr-only"> about xxx nonprofit name</span></a> <a href="#" class="btn btn-secondary" role="button">Donate<span class="sr-only"> to xxx nonprofit name</span></a></p>
+            <p><a href="#" class="btn btn-primary learn-more" role="button">Learn More</a> <a href="checkout.php" class="btn btn-secondary donate-nonprofit" role="button">Donate</a></p>
           <p><small>Education</small></p>
           </div>
         </div>
       </div>
 
-      <div class="col-sm-6 col-md-4 col-lg-3 iso-item">
+      <div class="col-sm-6 col-md-4 col-lg-3 iso-item nonprofit-listing">
         <div class="sr-only"><span class="region">DC</span><span class="year">2014</span><span class="category">education</span></div>
         <div class="thumbnail">
           <img src="http://www.cfp-dc.org/images/dc/cropped/196.jpg">
           <div class="caption">
             <h2 class="name">The Posse Foundation<br><small class="city">Washington, DC</small></h2>
             <p>The Posse Foundation identifies public high school students with extraordinary academic and leadership potential who might otherwise be overlooked in the college admissions process, and places them in multicultural teams (“posses”) of ten students that act as support systems on campus and beyond.</p>
-            <p><a href="#" class="btn btn-primary" role="button">Learn More<span class="sr-only"> about xxx nonprofit name</span></a> <a href="#" class="btn btn-secondary" role="button">Donate<span class="sr-only"> to xxx nonprofit name</span></a></p>
+            <p><a href="commit.php?test=123" class="btn btn-primary learn-more" role="button">Learn More</a> <a href="checkout.php" class="btn btn-secondary donate-nonprofit" role="button">Donate</a></p>
           <p><small>Education</small></p>
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 iso-item">
+      <div class="col-sm-6 col-md-4 col-lg-3 iso-item nonprofit-listing">
       <div class="hidden"><span class="region">MD</span><span class="year">2014</span><span class="category">human-services</span></div>
         <div class="thumbnail">
           <img src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
           <div class="caption">
             <h2 class="name" >KEEN Greater DC (Kids Enjoy Exercise Now)<br><small class="city">Bethesda, MD</small></h2>
             <p>It was clear from the beginning: children, teenagers, and young adults with profound disabilities&mdash;autism, cerebral palsy, Down syndrome, developmental disabilities, and other severe health problems&mdash;needed some help. Existing organizations focused on medical, vocational, and occupational needs, but none offered exercise and recreational programs designed especially for young people with severe developmental and physical disabilities.</p>
-            <p><a href="#" class="btn btn-primary" role="button">Learn More<span class="sr-only"> about xxx nonprofit name</span></a> <a href="#" class="btn btn-secondary" role="button">Donate<span class="sr-only"> to xxx nonprofit name</span></a></p>
+            <p><a href="#" class="btn btn-primary learn-more" role="button">Learn More</a> <a href="checkout.php" class="btn btn-secondary donate-nonprofit" role="button">Donate</a></p>
             <p><small>Human Services</small></p>
           </div>
         </div>
