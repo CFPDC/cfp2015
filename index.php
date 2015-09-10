@@ -68,7 +68,7 @@ include('includes/functions.php');
 <div class="row subcategories">
   <div class="col-sm-6 col-md-3">
     <div class="thumb">
-      <img class="img-responsive" aria-hidden="true" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40157" alt="...">
+      <img class="img-responsive" aria-hidden="true" src="-dc.org/gallerm&g2_itemId=40157" alt="...">
       <div class="cap text-center">
         <h3>
         <a href="#"><span class="sr-only">Show only </span>Environment</a>
