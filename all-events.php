@@ -20,7 +20,7 @@ include('includes/functions.php');
 	<aside class="col-sm-3 who-we-are-nav" id="asideFilter">
 		<ul class="list-unstyled">
 			<li><a href="javascript:void(0);" class="current">Events</a></li>
-			<li><a href="volunteer-opportunities.php">Volunteer Opportunities</a></li>
+			<li><a href="volunteer-opportunities.php">Volunteer</a></li>
 		</ul>
 		<h3 class="search-event">Search for Events
 		<small>(All fields are optional)</small>
@@ -63,7 +63,7 @@ include('includes/functions.php');
 				<h2 class="event-page-headings ">All Events</h2>
 			</div>
 			<div class="col-sm-4">
-				<button href="#" class="btn btn-info all-event-button"><span class="fa fa-calendar"></span> Check Our Event Calendar</button>
+				<a href="events-calendar.php" class="btn btn-info all-event-button hidden"><span class="fa fa-calendar"></span> Check Our Event Calendar</a>
 			</div>
 		</div>
 		<div>
@@ -82,7 +82,7 @@ include('includes/functions.php');
 			</div>
 		</div>
 		<div>
-			<h4><a title="Permanent link to this event listing" href="/cfpdc/all-events.php?id=4708" class="needs-page">Open House at CityDance POP! in Tenleytown</a></h4>
+			<h4><a title="Permanent link to this event listing"  href="event-details.php" class="needs-page">Open House at CityDance POP! in Tenleytown</a></h4>
 			<p><a href="more_info.php?id=94774&amp;tab=events">CityDance Ensemble</a></p>
 			<p>Try a FREE dance class at our CityDance POP! Open House September 8&dash;12! CityDance POP! introduces new genres and classes for all ages, including Mommy &amp; Me, Creative Movement, Pre&dash;Ballet, B&dash;boy, Jazz, Hip&dash;Hop, African, Break Dancing, Contemporary, Zumba and more! Conveniently located in Upper Northwest&mdash;just a few steps from the Tenley/AU-Metro Red Line stop&mdash;POP! is THE destination for high quality, fast&dash;paced fun Classes start Sept 14. Register early for 5% discount. View classes and RSVP at citydance.net Walk&dash;ins are welcome for Open House, but RSVP is encouraged. <a href="javascript:void(0);" class="more-info-toggle" data-toggle="collapse" data-target="#more-info-city-dance" aria-expanded="false" aria-controls="more-info-city-dance">more event info</a></p>
 			<div id="more-info-city-dance" class="collapse selections more-info">
@@ -97,7 +97,7 @@ include('includes/functions.php');
 		<hr>
 		<div>
 			<h3>Thursday, September 10, 2015</h3>
-			<h4><a title="Permanent link to this event listing" href="/cfpdc/all-events.php?id=4710" class="needs-page">Exhibition Opening Reception</a></h4>
+			<h4><a title="Permanent link to this event listing"  href="event-details.php" class="needs-page">Exhibition Opening Reception</a></h4>
 			<p><a href="more_info.php?id=95708&amp;tab=events">McLean Project for the Arts</a></p>
 			<p>Three new exhibitions are opening on Thursday, September 10. Make plans to attend the Opening Reception at McLean Project for the Arts (inside the McLean Community Center.) The exhibitions and reception are free and open to the public. Featured will be... Emerson Gallery: Robin Rose Presents Scriptonics: An Art for the Future Atrium Gallery: Equilibrium: Drawings by John Adams Ramp Gallery: Color Riffs: Paintings By Barbara Januszkiewicz <a href="javascript:void(0);" class="more-info-toggle" data-toggle="collapse" data-target="#more-info-mclean-project" aria-expanded="false" aria-controls="more-info-mclean-project">more event info</a></p>
 			<div id="more-info-mclean-project" class="collapse selections more-info">

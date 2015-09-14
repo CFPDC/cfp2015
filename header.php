@@ -24,6 +24,8 @@
 		<link href="resources/css/docs.css" rel="stylesheet">
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
 		<link href="assets/css/jasny-bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/fullcalendar.min.css" rel="stylesheet">
+		<link href="assets/css/fullcalendar.print.css" rel="stylesheet" media="print">
 		<link href="resources/css/base.css" rel="stylesheet">
 		<script src="assets/js/modernizr.js"></script>
 	</head>
@@ -122,7 +124,7 @@
 							<a href="mycatalogue.php" target="_self" title="View your CFP catalogue">My Catalogue</a>
 						</li>
 						<li>
-							<a href="kids.php" target="_self" title="View nonprofits that are especially for kids">Especially for Kids</a>
+							<a href="kids.php" target="_self" title="View nonprofits that are especially for kids">Family Philanthropy</a>
 						</li>
 						<li>
 							<a href="donate.php" target="_self" title="Donate Now/Decide Later">Donate Now / Decide Later</a>
@@ -134,7 +136,7 @@
 							<a href="corporate-sponsorship.php" target="_self" title="Corporate Sponsorship">Corporate Sponsorship</a>
 						</li>
 						<li>
-							<a href="volunteer-opportunities.php" target="_self" title="View volunteer opportunities with our nonprofits">Volunteer Opportunities</a>
+							<a href="volunteer-opportunities.php" target="_self" title="View volunteer opportunities with our nonprofits">Volunteer</a>
 						</li>
 					</ul>
 				</li>

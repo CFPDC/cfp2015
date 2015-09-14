@@ -12,22 +12,28 @@ include('includes/functions.php');
 </div>
 <main class="container-fluid secondary" role="main">
 <div class="row">
-	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
+	<aside class="col-sm-3 who-we-are-nav" id="asideFilter">
 		<ul class="list-unstyled">
-			<li><a href="all-news.php">All News</a></li>
 			<li><a href="all-events.php">Events</a></li>
-			<li><a href="javascript:void(0);" class="current">How to Give</a></li>
-			<li><a href="history.php">Donation History</a></li>
-			<li><a href="favorites.php">View Favorites</a></li>
-			<li><a href="registry.php">Gift Registry</a></li>
+			<li><a href="mycatalogue.php">My Catalogue Account</a>
+			<ul>
+				<li><a href="sign-up.php">Create An Account</a></li>
+				<li><a href="history.php">Giving History</a></li>
+			</ul>
+		</li>
+		<li><a href="javascript:void(0);" class="current">Ways to Give</a>
+		<ul>
 			<li><a href="giftcards.php">Gift Cards</a></li>
-			<li><a href="mycatalogue.php">My Catalogue</a></li>
-			<li><a href="kids.php">Especially for Kids</a></li>
 			<li><a href="donate.php">Donate Now / Decide Later</a></li>
+			<li><a href="kids.php">Family Philanthropy</a></li>
+			<li><a href="registry.php">Gift Registry</a></li>
 			<li><a href="appreciated-stock.php">Appreciated Stock</a></li>
 			<li><a href="corporate-sponsorship.php">Corporate Sponsorship</a></li>
-			<li><a href="volunteer-opportunities.php">Volunteer Opportunities</a></li>
-	</aside>
+		</ul>
+	</li>
+	<li><a href="volunteer-opportunities.php">Volunteer</a></li>
+</ul>
+</aside>
 	<section class="col-xs-12 col-sm-8">
 		<p class="lead">With a Catalogue account, you can keep track of your contributions, compile a list of favorite charities, create a gift registry, purchase gift cards, print your own personal Catalogue, visit our kids section or sign up for our newsletter.</p>
 		

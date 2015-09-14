@@ -42,7 +42,7 @@ include('includes/functions.php');
 			</header>
 			<div class="entry-content clearfix">
 				<div>
-					<img class="img-word-wrap img-responsive" src="http://blog.cfp-dc.org/wp-content/uploads/2015/08/pec1915-200x300.jpg" alt="81410-JG" width="200" height="300">
+					<img class="img-word-wrap img-responsive blog-img-ie" src="http://blog.cfp-dc.org/wp-content/uploads/2015/08/pec1915-200x300.jpg" alt="81410-JG" width="200" height="300">
 					<p class="text-wrap">In honor of Arts Appreciation Month in August, we welcome Jan Goldstein to 7 Questions. Since its founding in 2003, <a href="http://www.cfp-dc.org/npo/Arts-on-the-Block">Arts on the Block</a>‘s mission has been to empower creative youth to imagine and shape fulfilling futures and contribute to the quality of life in their communities.Jan has been an arts administrator since 1995, serving as the founding director of Arts on the Block since 2002. In this role, she is responsible for development of the overall artistic vision as well as day-to-day leadership and program management.</p>
 				</div>
 				<ol>
@@ -53,7 +53,7 @@ include('includes/functions.php');
 						<p>About five years ago, Arts on the Block embarked on a project that dared to attempt to work with residents of a low-income apartment community in Silver Spring to change the quality of their lives – through art and design. The young people in our program invited community members ages 5 to 85 to spend a day sharing with us likes and dislikes about their environment; their ideas about what makes a place beautiful and livable, and their interest in working together to bring about positive change. </p>
 						<p>Today, the risers of two major stairways connecting the upper and lower levels of the community are covered with sumptuous designs, implemented in mosaics and created by community members. Previously invisible house numbers have morphed into internally lit mosaic address light boxes. The community center now boasts stained glass-like windows designed by the youth in a summer program which Arts on the Block helped start and in which, four years later, it still participates. </p>
 						<p>I’m thrilled to say that while there is work yet to be done, thanks to project successes, we are now on the lookout for a second community into which we can expand. In the next few months, we should have the field narrowed to one community, and work with our new partners will begin. We have an energetic and dedicated young Americorps Vista member helping to make this happen, and we are excited!</p>
-						<p class="img-only-container"><img src="http://blog.cfp-dc.org/wp-content/uploads/2015/08/SAP-1002QuebecTerraceIlluminatedAddress-300x222.jpg" alt="SAP-1002QuebecTerraceIlluminatedAddress" class="img-responsive"></p>
+						<p class="img-only-container"><img src="http://blog.cfp-dc.org/wp-content/uploads/2015/08/SAP-1002QuebecTerraceIlluminatedAddress-300x222.jpg" alt="SAP-1002QuebecTerraceIlluminatedAddress" class="img-responsive blog-img-ie"></p>
 					</li>
 					<li>Who inspires you (in the philanthropy world or otherwise)?
 						<p>This may sound like a cliche, but truly, the youth in our programs inspire me to do what I do; to put in the hours and the effort. They come to us excited and perhaps a bit nervous about the commitment they are making. They often also come with stories, and issues, and more weight to bear than any teenager should have to contend with. But they typically jump in and, like sponges, absorb everything we have to offer. AND then there are our alumni. The more I learn about what they are doing, the more inspired I become. Architects, graphic designers, photographers, teachers; inspiring young people embarking on the great adventures of their lives. Or just finding their way the best they can. They are an inspirational lot, all of them.</p>
@@ -61,7 +61,7 @@ include('includes/functions.php');
 					<li>What was your most interesting recent project/partnership?
 						<p>This is such a difficult question, as our apprentice artists have completed well over 100 commissioned art projects mostly mosaics over the last 12 years. That said, I typically love the projects we do for other nonprofits the most. Earlier this year, with the help of a grant from the Arts and Humanities Council of Montgomery County, we partnered with Manna Food Center (a Catalog for Philanthropy awardee) in creating a mural for the reception area where clients wait to collect their groceries. Our apprentices met with Manna Food staff and a pair of clients who very much endeared themselves to the apprentices. The experience was an eye-opener for our apprentices; they responded beautifully to the challenge of empathizing with their client and created a mixed-media painting/mosaic that earned itself a permanent place at Manna. In fact, Manna built a brand new wall on which to hang it!</p>
 						<figure class="img-only-container">
-							<img src="http://i59.tinypic.com/2564sab.jpg" alt="" class="img-responsive">
+							<img src="http://i59.tinypic.com/2564sab.jpg" alt="" class="img-responsive blog-img-ie">
 							<figcaption class="wp-caption-text">Dedication of the Manna Food Center mural, A Bountiful Community</figcaption>
 						</figure>
 					</li>
