@@ -1314,7 +1314,9 @@ main address > span, address > a {
     font-family: 'ProximaNovaSemibold';
     font-size: 110%;
 }
-
+.list-unstyled > li > ul > li {
+    list-style-type: none;
+}
 .who-we-are-nav li a.current:before, .who-we-are-nav li a:hover:before, .who-we-are-nav li a:focus:before, .who-we-are-nav li a.current:before {
     content: "\f105";
     font-family: 'FontAwesome';
@@ -2113,6 +2115,10 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
 
 .ie10 .img-responsive, .ie11 .img-responsive {
     width: 100%;
+}
+
+.ie10 .blog-img-ie, .ie11 .blog-img-ie {
+    width: inherit;
 }
 
 /*---MEDIA QUERIES---*/

@@ -12,22 +12,28 @@ include('includes/functions.php');
 </div>
 <main class="container-fluid secondary" role="main">
 <div class="row">
-	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
+	<aside class="col-sm-3 who-we-are-nav" id="asideFilter">
 		<ul class="list-unstyled">
 			<li><a href="all-events.php">Events</a></li>
-			<li><a href="how-to-give.php">How to Give</a></li>
-			<li><a href="history.php">Donation History</a></li>
-			<li><a href="favorites.php">View Favorites</a></li>
-			<li><a href="registry.php">Gift Registry</a></li>
+			<li><a href="mycatalogue.php">My Catalogue Account</a>
+			<ul>
+				<li><a href="sign-up.php">Create An Account</a></li>
+				<li><a href="history.php">Giving History</a></li>
+			</ul>
+		</li>
+		<li><a href="how-to-give.php">Ways to Give</a>
+		<ul>
 			<li><a href="giftcards.php">Gift Cards</a></li>
-			<li><a href="mycatalogue.php">My Catalogue</a></li>
-			<li><a href="javascript:void(0);" class="current">Especially for Kids</a></li>
 			<li><a href="donate.php">Donate Now / Decide Later</a></li>
+			<li><a href="javascript:void(0);" class="current">Family Philanthropy</a></li>
+			<li><a href="registry.php">Gift Registry</a></li>
 			<li><a href="appreciated-stock.php">Appreciated Stock</a></li>
 			<li><a href="corporate-sponsorship.php">Corporate Sponsorship</a></li>
-			<li><a href="volunteer-opportunities.php">Volunteer Opportunities</a></li>
 		</ul>
-	</aside>
+	</li>
+	<li><a href="volunteer-opportunities.php">Volunteer</a></li>
+</ul>
+</aside>
 	<section class="col-xs-12 col-sm-9">
 		<p>Welcome to Especially for Kids! Scroll through our photos and descriptions until you find something that interests you. The list is sorted by category, but you can also sort it by location if you prefer to look in &ldquo;your own backyard.&rdquo; If you want to learn more, click the name of the organization to get to its page on the Catalogue website; sometimes there&rsquo;s even a video! Return to this page by clicking &ldquo;back to list.&rdquo; </p>
 		<p>To make the fullest use of this portal, you will need to log in (or sign up to create a donor account if you don&rsquo;t have one). Once you do, you will see checkboxes next to each entry. As you and your child identify organizations that interest you, click the relevant boxes. When you&rsquo;re done, make sure to click Add Checked Items to My List and then View My List before you get ready to donate or to print your own mini&dash;catalogue. If you want to donate online click the Donate button. If you want to print first, click Print My Catalogue. </p>
