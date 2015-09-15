@@ -432,7 +432,7 @@ $(function() {
 		$('#Mycarousel').carousel('pause');
 	});
 
-	/*$('#calendar').fullCalendar({
+	$('#calendar').fullCalendar({
 			header: {
 				left: 'prev,next today',
 				center: 'title',
@@ -498,8 +498,12 @@ $(function() {
 					start: '2015-09-28'
 				}
 			]
-		});*/
+		});
 
+	/*$(".all-event-button").click(function(){
+		window.location = "events-calendar.php"
+	});*/
+	
 	globalSkipNav();
 	homeSearchActiveToggle();
 	searchPageActiveToggle();
