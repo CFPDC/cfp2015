@@ -63,7 +63,7 @@ include('includes/functions.php');
 				<h2 class="event-page-headings ">All Events</h2>
 			</div>
 			<div class="col-sm-4">
-				<a href="events-calendar.php" class="btn btn-info all-event-button hidden"><span class="fa fa-calendar"></span> Check Our Event Calendar</a>
+				<a href="#" class="btn btn-info all-event-button hidden"><span class="fa fa-calendar"></span> Check Our Event Calendar</a>
 			</div>
 		</div>
 		<div>

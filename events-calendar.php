@@ -8,6 +8,11 @@ include('includes/functions.php');
 	</div>
 </div>
 <main class="container-fluid secondary" role="main">
+	<div class="row event-details-row">
+		<div class="col-sm-3">
+		<a href="all-events.php" class="back back-to-events">Back to All Events</a>
+	</div>
+	</div>
 <div class="row">
 	<aside class="col-sm-3 who-we-are-nav" id="asideFilter">
 		<ul class="list-unstyled">
