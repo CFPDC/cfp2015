@@ -1619,11 +1619,12 @@ main address > span, address > a {
 .give-image {}
 .volunteer-img {
     vertical-align: inherit;
+    margin-left: 5px;
 }
 
 /*---Gift Cards---*/
 .gift-card-img {
-    width: 300px;
+    width: 300px !important;
     padding-top: 15px;
 }
 
