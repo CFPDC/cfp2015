@@ -1617,6 +1617,9 @@ main address > span, address > a {
 
 /* How to Help page*/
 .give-image {}
+.volunteer-img {
+    vertical-align: inherit;
+}
 
 /*---Gift Cards---*/
 .gift-card-img {
