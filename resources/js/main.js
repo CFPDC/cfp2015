@@ -441,7 +441,7 @@ $(function() {
 			defaultDate: '2015-09-12',
 			editable: true,
 			eventLimit: true, // allow "more" link when too many events
-			eventStartEditable: true,
+			eventStartEditable: false,
 			events: [
 				{
 					title: 'All Day Event',
@@ -497,7 +497,8 @@ $(function() {
 					url: 'http://google.com/',
 					start: '2015-09-28'
 				}
-			]
+			], 
+			eventColor: '#487896'
 		});
 
 	/*$(".all-event-button").click(function(){

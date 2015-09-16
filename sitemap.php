@@ -12,17 +12,25 @@ include('includes/functions.php');
   <section class="col-xs-12">
     <div class="row">
       <div class="col-xs-12 col-sm-4">
-      <h2 class="sr-only">Use this site map to navigate the Catalogue for Philanthropy website</h2>
+        <h2 class="sr-only">Use this site map to navigate the Catalogue for Philanthropy website</h2>
         <h3>About The Catalogue for Philanthropy</h3>
         <ul class="sitemap-list">
           <li>
             <a href="https://cgi-cfp.herokuapp.com/about-us.php" title="Catalogue for Philanthropy">About The Catalogue for Philanthropy</a>
             <ul>
-            <li><a href="https://cgi-cfp.herokuapp.com/vetting.php" title="Catalogue for Philanthropy">Vetting and Selecting</a></li>
-            <li><a href="https://cgi-cfp.herokuapp.com/storytelling.php" title="Catalogue for Philanthropy">Storytelling</a></li>
-            <li><a href="https://cgi-cfp.herokuapp.com/training.php" title="Catalogue for Philanthropy">Training and Educating</a></li>
-            <li><a href="https://cgi-cfp.herokuapp.com/sharing.php" title="Catalogue for Philanthropy">Spreading the Word</a></li>
-          </ul>
+              <li>
+                <a href="https://cgi-cfp.herokuapp.com/vetting.php" title="Catalogue for Philanthropy">Vetting and Selecting</a>
+              </li>
+              <li>
+                <a href="https://cgi-cfp.herokuapp.com/storytelling.php" title="Catalogue for Philanthropy">Storytelling</a>
+              </li>
+              <li>
+                <a href="https://cgi-cfp.herokuapp.com/training.php" title="Catalogue for Philanthropy">Training and Educating</a>
+              </li>
+              <li>
+                <a href="https://cgi-cfp.herokuapp.com/sharing.php" title="Catalogue for Philanthropy">Spreading the Word</a>
+              </li>
+            </ul>
           </li>
           <li>
             <a href="https://cgi-cfp.herokuapp.com/cfp-team.php" title="Catalogue for Philanthropy">About The Team</a>
@@ -39,7 +47,7 @@ include('includes/functions.php');
           <li>
             <a href="https://cgi-cfp.herokuapp.com/sponsors.php" title="Catalogue for Philanthropy">Our Sponsors</a>
           </li>
-           <li>
+          <li>
             <a href="https://cgi-cfp.herokuapp.com/sitemap.php" title="Catalogue for Philanthropy">Catalogue For Philanthropy Site Map</a>
           </li>
           <li>
@@ -129,16 +137,45 @@ include('includes/functions.php');
         <h3>News &amp; Events</h3>
         <ul class="sitemap-list">
           <li>
-            <a href="https://cgi-cfp.herokuapp.com/Events.php" title="Catalogue for Philanthropy">Events</a>
+            <a href="https://cgi-cfp.herokuapp.com/all-events.php" title="Catalogue for Philanthropy">Events</a>
           </li>
           <li>
-            <a href="https://cgi-cfp.herokuapp.com/how-to-give.php" title="Catalogue for Philanthropy">How To Give</a>
+            <a href="https://cgi-cfp.herokuapp.com/mycatalogue.php" title="Catalogue for Philanthropy">My Catalogue</a>
+            <ul>
+              <li>
+                <a href="https://cgi-cfp.herokuapp.com/history.php" title="Catalogue for Philanthropy">Giving History</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li>
+            <a href="https://cgi-cfp.herokuapp.com/how-to-give.php" title="Catalogue for Philanthropy">Ways To Give</a>
+            <ul>
+              <li>
+                <a href="https://cgi-cfp.herokuapp.com/giftcards.php" title="Catalogue for Philanthropy">Gift Cards</a>
+              </li>
+              <li>
+                <a href="https://cgi-cfp.herokuapp.com/donate.php" title="Catalogue for Philanthropy">Donate Now / Decide Later</a>
+              </li>
+              <li>
+                <a href="https://cgi-cfp.herokuapp.com/kids.php" title="Catalogue for Philanthropy">Family Philanthropy</a>
+              </li>
+              <li>
+                <a href="https://cgi-cfp.herokuapp.com/registry.php" title="Catalogue for Philanthropy">Gift Registry</a>
+              </li>
+              <li>
+                <a href="https://cgi-cfp.herokuapp.com/appreciated-stock.php" title="Catalogue for Philanthropy">Appreciated Stock</a>
+              </li>
+              <li>
+                <a href="https://cgi-cfp.herokuapp.com/corporate-sponsorship.php" title="Catalogue for Philanthropy">Corporate Sponsorship</a>
+              </li>
+            </ul>
           </li>
           <li>
             <a href="https://cgi-cfp.herokuapp.com/volunteer-opportunities.php" title="Catalogue for Philanthropy">Volunteer Opportunities</a>
           </li>
           <li>
-            <a href="https://cgi-cfp.herokuapp.com/blog/" title="Catalogue for Philanthropy">Blog</a>
+            <a href="https://cgi-cfp.herokuapp.com/blog.php" title="Catalogue for Philanthropy">Blog</a>
           </li>
           <li>
             <a href="https://cgi-cfp.herokuapp.com/press.php" title="Catalogue for Philanthropy">Press</a>
