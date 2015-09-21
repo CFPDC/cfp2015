@@ -1314,9 +1314,11 @@ main address > span, address > a {
     font-family: 'ProximaNovaSemibold';
     font-size: 110%;
 }
+
 .list-unstyled > li > ul > li {
     list-style-type: none;
 }
+
 .who-we-are-nav li a.current:before, .who-we-are-nav li a:hover:before, .who-we-are-nav li a:focus:before, .who-we-are-nav li a.current:before {
     content: "\f105";
     font-family: 'FontAwesome';
@@ -1605,6 +1607,15 @@ main address > span, address > a {
     margin-top: 25px;
 }
 
+.more-info-toggle {
+    padding: 0;
+}
+
+.event-day-container {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+
 /*---All News---*/
 .news-paragraph {
     margin: 0;
@@ -1617,6 +1628,7 @@ main address > span, address > a {
 
 /* How to Help page*/
 .give-image {}
+
 .volunteer-img {
     vertical-align: inherit;
     margin-left: 5px;
@@ -1632,94 +1644,116 @@ main address > span, address > a {
 .red-text {
     color: #ff0000;
 }
+
 /*---Gift Cards Process---*/
 .gift-card-p {
     margin-top: 15px;
 }
+
 .gift-card-form .two-wide > div {
     width: auto;
 }
+
 .gift-card-form .two-wide > div > div {
     display: table-cell;
     vertical-align: top;
     width: 105px;
 }
+
 .gift-card-form .two-wide > div > div:first-child {
     width: 150px;
 }
+
 .gift-card-form .two-wide > div label, .gift-card-form .two-wide > div select {
     clear: both;
     vertical-align: bottom;
     width: auto;
 }
+
 .gift-card-form .two-wide > div select {
     width: 120px;
 }
+
 .gift-card-form .two-wide > div > div:first-child strong {
     right: -105px;
 }
+
 .gift-card-form .two-wide > div > div:nth-child(2) strong {
     left: -150px;
 }
+
 .input-group-addon input[type="radio"] {
     height: 15px;
     margin-bottom: 0;
 }
+
 form.gift-card-form {
     text-align: left;
 }
+
 .gift-card-form .col-sm-6 > div {
     /*display: table;*/
     width: 100%;
     padding-top: 0;
 }
+
 .radio-select .radio {
     float: left;
 }
+
 .gift-card-form input, .gift-card-form label {
     /*display: table-cell;*/
     width: auto;
     vertical-align: top;
 }
+
 .gift-card-form label {
     padding-right: 2%;
     padding-top: 5px;
     width: 100%;
 }
+
 .gift-card-form .two-line label {
     padding-top: 0;
 }
+
 .gift-card-form .checkbox, .gift-card-form .radio {
     width: 15.6em;
 }
+
 .gift-card-form .checkbox input, .gift-card-form .checkbox label, .gift-card-form .radio input, .gift-card-form .radio label {
     float: left;
     padding-right: 0;
     text-align: left;
 }
+
 .gift-card-form input.zip-code {
     clear: both;
     float: right;
     width: 4.95em;
 }
+
 .gift-card-form select.form-control {
     width: 49%;
 }
+
 .gift-card-form .user-type select.form-control {
     width: auto;
 }
+
 .gift-card-form .btn-primary {
     margin-top: 10px;
 }
+
 /*---Stock---*/
 .stock {
     padding-bottom: 10px;
 }
+
 /*---Advanced Search---*/
 label[for="year"] {
     display: block;
 }
-
 
 /*---Blog---*/
 .blog .posts.back {
@@ -1993,7 +2027,7 @@ label[for="year"] {
     width: 40px;
 }
 
-.carousel-control:focus, .carousel-control:hover {
+.carousel-control:focus {
     outline: 2px solid #487896;
 }
 
