@@ -4,7 +4,6 @@
 3. page specific functions
 ***/
 //ie8 test
-
 Modernizr.load({
 	test: Modernizr.textshadow,
 	nope: ['resources/css/ie.css', 'assets/js/html5shiv.js', 'assets/js/respond.js', 'resources/js/ie.js']
@@ -13,7 +12,6 @@ Modernizr.load({
 /*** variables ***/
 var $root = $('html, body'),
 	liveTextRegion = $('#liveTextPolite').children('p');
-
 
 
 var global = {
@@ -74,6 +72,65 @@ var global = {
 	},
 	carouselPlayPause: function() {
 		var button = $(this).attr('id');
+	},
+	calendar: function() {
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,basicWeek,basicDay'
+			},
+			defaultDate: '2015-09-12',
+			editable: true,
+			eventLimit: true, // allow "more" link when too many events
+			eventStartEditable: false,
+			events: [{
+				title: 'All Day Event',
+				start: '2015-02-01'
+			}, {
+				title: 'Long Event',
+				start: '2015-09-07',
+				end: '2015-09-10'
+			}, {
+				id: 999,
+				title: 'Repeating Event',
+				start: '2015-09-09T16:00:00',
+			}, {
+				id: 999,
+				title: 'Repeating Event',
+				start: '2015-09-16T16:00:00'
+			}, {
+				title: 'Conference',
+				start: '2015-09-11',
+				end: '2015-09-13'
+			}, {
+				title: 'Meeting',
+				start: '2015-09-12T10:30:00',
+				end: '2015-09-12T12:30:00'
+			}, {
+				title: 'Lunch',
+				start: '2015-09-12T12:00:00'
+			}, {
+				title: 'Meeting',
+				start: '2015-09-12T14:30:00'
+			}, {
+				title: 'Happy Hour',
+				start: '2015-09-12T17:30:00'
+			}, {
+				title: 'Dinner',
+				start: '2015-09-12T20:00:00'
+			}, {
+				title: 'Birthday Party',
+				start: '2015-09-13T07:00:00'
+			}, {
+				title: 'Click for Google',
+				url: 'http://google.com/',
+				start: '2015-09-28'
+			}],
+			eventColor: '#487896'
+		});
+		$('.fc-prev-button').prepend('<span class="sr-only">Select to for previous calendar</span>');
+		$('.fc-next-button').prepend('<span class="sr-only">Select to for next calendar</span>');
 	},
 	addNonprofitNameToButton: function() {
 		var nonprofitListing = $('.nonprofit-listing'),
@@ -179,25 +236,29 @@ var global = {
 
 	},
 	relatedCarousel: function() {
-		//nonprofit details page carousel
-		var carouselWidth = $('#carouselwrapper').width(),
-			carouselItem = $('#related-carousel li');
-		A11y.carousel();
-		//dont make carousel unless page is specific width
-		if (carouselWidth > 486) {
+		if ($(".carousel[data-class]").length) {
 
-			if (carouselItem.parent().is('ul.item')) {
+			//nonprofit details page carousel
+			var carouselWidth = $('#carouselwrapper').width(),
+				carouselItem = $('#related-carousel li');
+
+			A11y.carousel();
+			//dont make carousel unless page is specific width
+			if (carouselWidth > 486) {
+
+				if (carouselItem.parent().is('ul.item')) {
+					carouselItem.unwrap();
+				}
+				do {
+					$(carouselItem.slice(0, 3)).wrapAll('<ul class="item row" role="presentation "></ul>');
+				} while ((carouselItem = carouselItem.slice(3)).length > 0);
+				$('#related-carousel ul.item').first().addClass('active');
+			} else {
 				carouselItem.unwrap();
+				carouselItem.wrapAll('<ul class="carousel-inner" role="list"></ul>');
+				$('.left.carousel-control').hide();
+				$('.right.carousel-control').hide();
 			}
-			do {
-				$(carouselItem.slice(0, 3)).wrapAll('<ul class="item row" role="presentation "></ul>');
-			} while ((carouselItem = carouselItem.slice(3)).length > 0);
-			$('#related-carousel ul.item').first().addClass('active');
-		} else {
-			carouselItem.unwrap();
-			carouselItem.wrapAll('<ul class="carousel-inner" role="list"></ul>');
-			$('.left.carousel-control').hide();
-			$('.right.carousel-control').hide();
 		}
 	}
 };
@@ -309,6 +370,10 @@ $('.sort-by').on('click', 'button', function() {
 
 //end isotop script
 
+// events calendar button -- navigate to the calendar page
+$('.event-button, .all-event-button').on('click', function() {
+	location.href = '/events-calendar.php';
+})
 
 //checkout page checkbox toggle functions
 var expressCheckout = $('.express-checkout-section'),
@@ -432,79 +497,8 @@ $(function() {
 		$('#Mycarousel').carousel('pause');
 	});
 
-	$('#calendar').fullCalendar({
-			header: {
-				left: 'prev,next today',
-				center: 'title',
-				right: 'month,basicWeek,basicDay'
-			},
-			defaultDate: '2015-09-12',
-			editable: true,
-			eventLimit: true, // allow "more" link when too many events
-			eventStartEditable: false,
-			events: [
-				{
-					title: 'All Day Event',
-					start: '2015-02-01'
-				},
-				{
-					title: 'Long Event',
-					start: '2015-09-07',
-					end: '2015-09-10'
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: '2015-09-09T16:00:00',
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: '2015-09-16T16:00:00'
-				},
-				{
-					title: 'Conference',
-					start: '2015-09-11',
-					end: '2015-09-13'
-				},
-				{
-					title: 'Meeting',
-					start: '2015-09-12T10:30:00',
-					end: '2015-09-12T12:30:00'
-				},
-				{
-					title: 'Lunch',
-					start: '2015-09-12T12:00:00'
-				},
-				{
-					title: 'Meeting',
-					start: '2015-09-12T14:30:00'
-				},
-				{
-					title: 'Happy Hour',
-					start: '2015-09-12T17:30:00'
-				},
-				{
-					title: 'Dinner',
-					start: '2015-09-12T20:00:00'
-				},
-				{
-					title: 'Birthday Party',
-					start: '2015-09-13T07:00:00'
-				},
-				{
-					title: 'Click for Google',
-					url: 'http://google.com/',
-					start: '2015-09-28'
-				}
-			], 
-			eventColor: '#487896'
-		});
 
-	/*$(".all-event-button").click(function(){
-		window.location = "events-calendar.php"
-	});*/
-	
+
 	globalSkipNav();
 	homeSearchActiveToggle();
 	searchPageActiveToggle();
@@ -550,6 +544,7 @@ $(function() {
 	global.donateButtonPrefill();
 	global.addNonprofitNameToButton();
 	global.relatedCarousel();
+	global.calendar();
 
 	$('.carouselButtons button').on('click', function() {
 		var button = $(this),
@@ -1431,15 +1426,16 @@ $(function() {
 				required: true,
 				minlength: 2,
 				letterswithbasicpunc: true
-			}/*,
-			amount: {
-				required: true,
-                minlength: 1
-			},
-			send: {
-				required: true,
-                minlength: 1
-			}*/
+			}
+			/*,
+						amount: {
+							required: true,
+			                minlength: 1
+						},
+						send: {
+							required: true,
+			                minlength: 1
+						}*/
 		},
 
 		messages: {
@@ -1473,15 +1469,16 @@ $(function() {
 				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
 				minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.'),
 				letterswithbasicpunc: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid name'
-			}/*,
-			amount: {
-				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select at least 1 item',
-                minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select at least {0} option.')
-			},
-			send: {
-				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select at least 1 item',
-                minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select at least {0} option.')
-			}*/
+			}
+			/*,
+						amount: {
+							required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select at least 1 item',
+			                minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select at least {0} option.')
+						},
+						send: {
+							required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select at least 1 item',
+			                minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select at least {0} option.')
+						}*/
 		},
 
 		//Create our error summary that will appear before the form
@@ -1541,12 +1538,12 @@ $(function() {
 			submitted = false;
 		},
 		errorPlacement: function(error, element) {
-			
+
 			if (element.is(":radio")) {
-                        error.appendTo(element.parents('.radio-select'));
-                    } else {
-                       formHandlers.errorPosition(error, element);
-                    }
+				error.appendTo(element.parents('.radio-select'));
+			} else {
+				formHandlers.errorPosition(error, element);
+			}
 		},
 		highlight: function(element, errorClass, validClass) {
 			formHandlers.highlight(element, errorClass, validClass);
