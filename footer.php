@@ -61,6 +61,8 @@ $.fn.modal || document.write('<script src="assets/js/bootstrap.min.js"><\/script
 <script src="assets/js/jquery.validate.min.js" defer></script>
 <script src="assets/js/additional-methods.min.js" defer></script>
 <script src="assets/js/jquery.formatCurrency.js" defer></script>
+<script src="assets/js/moment.min.js" defer></script>
+<script src="assets/js/fullcalendar.min.js" defer></script>
 <!-- end of library loading -->
 <!-- load JS -->
 <script src="resources/js/main.js" async></script>

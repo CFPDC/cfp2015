@@ -4,7 +4,6 @@
 3. page specific functions
 ***/
 //ie8 test
-
 Modernizr.load({
 	test: Modernizr.textshadow,
 	nope: ['resources/css/ie.css', 'assets/js/html5shiv.js', 'assets/js/respond.js', 'resources/js/ie.js']
@@ -13,7 +12,6 @@ Modernizr.load({
 /*** variables ***/
 var $root = $('html, body'),
 	liveTextRegion = $('#liveTextPolite').children('p');
-
 
 
 var global = {
@@ -74,6 +72,65 @@ var global = {
 	},
 	carouselPlayPause: function() {
 		var button = $(this).attr('id');
+	},
+	calendar: function() {
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,basicWeek,basicDay'
+			},
+			defaultDate: '2015-09-12',
+			editable: true,
+			eventLimit: true, // allow "more" link when too many events
+			eventStartEditable: false,
+			events: [{
+				title: 'All Day Event',
+				start: '2015-02-01'
+			}, {
+				title: 'Long Event',
+				start: '2015-09-07',
+				end: '2015-09-10'
+			}, {
+				id: 999,
+				title: 'Repeating Event',
+				start: '2015-09-09T16:00:00',
+			}, {
+				id: 999,
+				title: 'Repeating Event',
+				start: '2015-09-16T16:00:00'
+			}, {
+				title: 'Conference',
+				start: '2015-09-11',
+				end: '2015-09-13'
+			}, {
+				title: 'Meeting',
+				start: '2015-09-12T10:30:00',
+				end: '2015-09-12T12:30:00'
+			}, {
+				title: 'Lunch',
+				start: '2015-09-12T12:00:00'
+			}, {
+				title: 'Meeting',
+				start: '2015-09-12T14:30:00'
+			}, {
+				title: 'Happy Hour',
+				start: '2015-09-12T17:30:00'
+			}, {
+				title: 'Dinner',
+				start: '2015-09-12T20:00:00'
+			}, {
+				title: 'Birthday Party',
+				start: '2015-09-13T07:00:00'
+			}, {
+				title: 'Click for Google',
+				url: 'http://google.com/',
+				start: '2015-09-28'
+			}],
+			eventColor: '#487896'
+		});
+		$('.fc-prev-button').prepend('<span class="sr-only">Select to for previous calendar</span>');
+		$('.fc-next-button').prepend('<span class="sr-only">Select to for next calendar</span>');
 	},
 	addNonprofitNameToButton: function() {
 		var nonprofitListing = $('.nonprofit-listing'),
@@ -179,25 +236,29 @@ var global = {
 
 	},
 	relatedCarousel: function() {
-		//nonprofit details page carousel
-		var carouselWidth = $('#carouselwrapper').width(),
-			carouselItem = $('#related-carousel li');
-		A11y.carousel();
-		//dont make carousel unless page is specific width
-		if (carouselWidth > 486) {
+		if ($(".carousel[data-class]").length) {
 
-			if (carouselItem.parent().is('ul.item')) {
+			//nonprofit details page carousel
+			var carouselWidth = $('#carouselwrapper').width(),
+				carouselItem = $('#related-carousel li');
+
+			A11y.carousel();
+			//dont make carousel unless page is specific width
+			if (carouselWidth > 486) {
+
+				if (carouselItem.parent().is('ul.item')) {
+					carouselItem.unwrap();
+				}
+				do {
+					$(carouselItem.slice(0, 3)).wrapAll('<ul class="item row" role="presentation "></ul>');
+				} while ((carouselItem = carouselItem.slice(3)).length > 0);
+				$('#related-carousel ul.item').first().addClass('active');
+			} else {
 				carouselItem.unwrap();
+				carouselItem.wrapAll('<ul class="carousel-inner" role="list"></ul>');
+				$('.left.carousel-control').hide();
+				$('.right.carousel-control').hide();
 			}
-			do {
-				$(carouselItem.slice(0, 3)).wrapAll('<ul class="item row" role="presentation "></ul>');
-			} while ((carouselItem = carouselItem.slice(3)).length > 0);
-			$('#related-carousel ul.item').first().addClass('active');
-		} else {
-			carouselItem.unwrap();
-			carouselItem.wrapAll('<ul class="carousel-inner" role="list"></ul>');
-			$('.left.carousel-control').hide();
-			$('.right.carousel-control').hide();
 		}
 	}
 };
@@ -309,6 +370,10 @@ $('.sort-by').on('click', 'button', function() {
 
 //end isotop script
 
+// events calendar button -- navigate to the calendar page
+$('.event-button, .all-event-button').on('click', function() {
+	location.href = '/events-calendar.php';
+})
 
 //checkout page checkbox toggle functions
 var expressCheckout = $('.express-checkout-section'),
@@ -433,6 +498,7 @@ $(function() {
 	});
 
 
+
 	globalSkipNav();
 	homeSearchActiveToggle();
 	searchPageActiveToggle();
@@ -478,6 +544,7 @@ $(function() {
 	global.donateButtonPrefill();
 	global.addNonprofitNameToButton();
 	global.relatedCarousel();
+	global.calendar();
 
 	$('.carouselButtons button').on('click', function() {
 		var button = $(this),
@@ -1303,6 +1370,185 @@ $(function() {
 		},
 		errorPlacement: function(error, element) {
 			formHandlers.errorPosition(error, element);
+		},
+		highlight: function(element, errorClass, validClass) {
+			formHandlers.highlight(element, errorClass, validClass);
+		},
+		unhighlight: function(element, errorClass, validClass) {
+			formHandlers.unHighlight(element, errorClass, validClass);
+
+		},
+
+		invalidHandler: function(form, validator) {
+			submitted = true;
+		},
+
+		//Removed the error summary upon successful completion of form
+		submitHandler: function(form) {
+			$('.errors-' + $(this.currentForm).attr('class')).remove();
+
+			$(form).submit();
+		}
+	});
+	/*gift card checkout form*/
+	$('.gift-card-form').validate({
+		focusCleanup: false,
+		errorClass: 'error',
+		rules: {
+			name: {
+				required: true,
+				minlength: 2,
+				letterswithbasicpunc: true
+			},
+			street: {
+				required: true
+			},
+			city: {
+				required: true,
+				lettersonly: true
+			},
+			state: {
+				required: true
+			},
+			zip: {
+				required: true,
+				digits: true,
+				ziprange: true,
+				minlength: 5,
+				maxlength: 5
+			},
+			to: {
+				required: true,
+				minlength: 2,
+				letterswithbasicpunc: true
+			},
+			from: {
+				required: true,
+				minlength: 2,
+				letterswithbasicpunc: true
+			},
+			amount: {
+				required: true,
+				minlength: 1
+			},
+			send: {
+				required: true,
+				minlength: 1
+			}
+		},
+
+		messages: {
+			name: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
+				minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.'),
+				letterswithbasicpunc: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid name'
+			},
+			street: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required'
+			},
+			city: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
+				lettersonly: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid city'
+			},
+			state: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required'
+			},
+			zip: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
+				digits: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid Virginia zip code',
+				minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.'),
+				maxlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter no more than {0} characters.')
+			},
+			to: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
+				minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.'),
+				letterswithbasicpunc: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid name'
+			},
+			from: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
+				minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.'),
+				letterswithbasicpunc: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid name'
+			},
+			amount: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select 1 item',
+                minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select {0} option.')
+			},
+			send: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select 1 item',
+                minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select {0} option.')
+			}
+		},
+
+		//Create our error summary that will appear before the form
+		showErrors: function(errorMap, errorList) {
+			//formHandlers.showError(errorMap, errorList);
+			if (submitted && errorList) {
+				var $errorFormClass1 = 'errors-' + $(this.currentForm).attr('class'),
+					$errorFormClass = $errorFormClass1.split(' ')[0];
+
+				//Reset and remove error messages if the form
+				//has been validated once already
+				var summary = "";
+				$('label .error', $(this.currentForm)).remove();
+
+				//Create our container if one doesnt already exits
+				//better than an empty div being in the HTML source
+				if ($('.' + $errorFormClass).length === 0) {
+					$('<div class="' + $errorFormClass + '" tabindex="-1"/>').insertBefore($(this.currentForm));
+				}
+
+				//Generate our error summary list
+				for (this.error in errorList) {
+					//get associated label text to be used for the error summary
+					var $errorLabel = $('label[for="' + $(errorList[this.error].element).attr('id') + '"]').text();
+					summary += '<li><a href="#' + errorList[this.error].element.id + '">' + $errorLabel + ' ' + errorList[this.error].message.replace('Important: ', '') + '</a></li>';
+				}
+
+				//Output our error summary and place it in the error container
+				$('.' + $errorFormClass).html('<h4 class="error-heading row"><span class="fa fa-exclamation" aria-hidden="true" style="font-family: FontAwesome !important"></span><span class="adobeBlank">Attention</span> Your information contains ' + this.numberOfInvalids() + ' errors</h4><ol class="summary-list">' + summary + '</ol>');
+				$('.' + $errorFormClass).addClass('col-xs-12');
+
+				//Focus on the error container
+				//Alternatively, you might want to use the Validation default option (focusInvalid)
+				$('.errors-' + $(this.currentForm).attr('class')).focus();
+
+				// Replace the group label for the fields. Alternative label is picked up from data-validatorLabel attr that is set in html dom
+                $('a[href="#recurring_period_0"], a[href="#recurring_period_5"]').html(function() {
+                    return $(this).html().replace($('label[for="' + $(this).attr('href').replace('#', '') + '"]').text(), $('label[for="' + $(this).attr('href').replace('#', '') + '"]').attr('data-validatorLabel'));
+                });
+
+
+				//Move the focus to the associated input when error message link is triggered
+				//a simple href anchor link doesnt seem to place focus inside the input
+				$('.' + $errorFormClass + ' a').on('click', function() {
+					$($(this).attr('href')).focus();
+					return false;
+				});
+
+				//removes exclamation icon from error summary list
+				if ($('.summary-list li a span').hasClass('Exclamation')) {
+					$('.summary-list li a span').removeClass('fa fa-exclamation-circle');
+				}
+				//remove required text from summary list
+				if ($('.summary-list li a span').hasClass('Exclamation')) {
+					$('.summary-list li a:contains(" (required)")').each(function() {
+						$(this).html($(this).html().split(" (required)").join(":"));
+					});
+				}
+				//removes adobeBlank text from error summary list
+				$('.summary-list li a span span').remove('.adobeBlank');
+			}
+			this.defaultShowErrors();
+			submitted = false;
+		},
+		errorPlacement: function(error, element) {
+            if (element.attr("name") == "amount") {
+                error.insertAfter('.other-amount');
+            } else if (element.attr("name") == "send") {
+            	 error.insertAfter('#recurring_period_8');
+            } else {
+            	formHandlers.errorPosition(error, element);
+            }
 		},
 		highlight: function(element, errorClass, validClass) {
 			formHandlers.highlight(element, errorClass, validClass);

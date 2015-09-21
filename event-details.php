@@ -16,7 +16,7 @@ include('includes/functions.php');
 		<h2 class="event-page-headings">Event Details</h2>
 	</div>
 	<div class="col-sm-4">
-		<a href="#" class="btn btn-info event-button"><span class="fa fa-calendar"> Check Our Event Calendar</span></a>
+		<a href="javascript:void(0)" class="btn btn-info event-button hidden"><span class="fa fa-calendar"></span> Check Our Event Calendar</a>
 	</div>
 </div>
 </div>

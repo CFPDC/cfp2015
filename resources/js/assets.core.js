@@ -210,7 +210,11 @@ var A11y = {
 
     carousel: function() {
         //show-hide prev/next buttons and change focus for when each is hidden
-        var carouselContainer = $('.carousel');
+        var carouselContainer = $('*[data-class="a11y-carousel"]'),
+            carouselControl = carouselContainer.children('.carousel-control');
+        $(carouselControl).each(function(index) {
+            $(this).attr('data-class', 'a11y-control');
+        })
         $(carouselContainer).carousel({
             interval: false,
             wrap: false
@@ -221,20 +225,20 @@ var A11y = {
             var lrUpdate = "Showing Carousel page " + currentIndex + " of " + pages.length;
             $(".carousel-liveRegion").text(lrUpdate);
             var $this = $(this);
-            $this.children('.carousel-control').show();
+            $this.children('*[data-class="a11y-control"]').show();
             if ($('.carousel-inner .item:first').hasClass('active')) {
-                $this.children('.left.carousel-control').hide();
+                $this.children('.left[data-class="a11y-control"]').hide();
                 //focus on first li a of first ul in carousel when the prev navigation button is hidden
                 $('.carousel-inner .item:first').find('li:first>a').focus();
 
             } else if ($('.carousel-inner .item:last').hasClass('active')) {
-                $this.children('.right.carousel-control').hide();
+                $this.children('.right[data-class="a11y-control"]').hide();
                 //focus on last li a of last ul in carousel when the next navigation button is hidden
                 $('.carousel-inner .item:last').find('li:last>a').focus();
             }
         });
-        $('.left.carousel-control').hide();
-        $('.right.carousel-control').show();
+        $('.left[data-class="a11y-control"]').hide();
+        $('.right[data-class="a11y-control"]').show();
     },
 
     //datatables 508
