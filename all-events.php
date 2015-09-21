@@ -60,10 +60,10 @@ include('includes/functions.php');
 	<section class="col-sm-8">
 		<div class="row">
 			<div class="col-sm-8">
-				<h2 class="event-page-headings ">All Events</h2>
+				<h2 class="event-page-headings">All Events</h2>
 			</div>
 			<div class="col-sm-4">
-				<a href="#" class="btn btn-info all-event-button hidden"><span class="fa fa-calendar"></span> Check Our Event Calendar</a>
+				<a href="javascript:void(0);" class="btn btn-info all-event-button hidden"><span class="fa fa-calendar"></span> Check Our Event Calendar</a>
 			</div>
 		</div>
 		<p>Explore this list of upcoming events&mdash;open houses, galas, informational evenings,volunteer opportunities&mdash;to find what interests you. Click the name of the event and then use our &ldquo;share&rdquo; utility to let your friends know what&rsquo;s happening.</p>

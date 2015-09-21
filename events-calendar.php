@@ -37,7 +37,7 @@ include('includes/functions.php');
 </ul>
 </aside>
 	<section class="col-sm-8">
-		<div id="calendar"></div>
+		<div id="calendar" class="calendar-container"></div>
 	</section>
 </div>
 </main>

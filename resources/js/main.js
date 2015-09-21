@@ -73,6 +73,65 @@ var global = {
 	carouselPlayPause: function() {
 		var button = $(this).attr('id');
 	},
+	calendar: function() {
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,basicWeek,basicDay'
+			},
+			defaultDate: '2015-09-12',
+			editable: true,
+			eventLimit: true, // allow "more" link when too many events
+			eventStartEditable: false,
+			events: [{
+				title: 'All Day Event',
+				start: '2015-02-01'
+			}, {
+				title: 'Long Event',
+				start: '2015-09-07',
+				end: '2015-09-10'
+			}, {
+				id: 999,
+				title: 'Repeating Event',
+				start: '2015-09-09T16:00:00',
+			}, {
+				id: 999,
+				title: 'Repeating Event',
+				start: '2015-09-16T16:00:00'
+			}, {
+				title: 'Conference',
+				start: '2015-09-11',
+				end: '2015-09-13'
+			}, {
+				title: 'Meeting',
+				start: '2015-09-12T10:30:00',
+				end: '2015-09-12T12:30:00'
+			}, {
+				title: 'Lunch',
+				start: '2015-09-12T12:00:00'
+			}, {
+				title: 'Meeting',
+				start: '2015-09-12T14:30:00'
+			}, {
+				title: 'Happy Hour',
+				start: '2015-09-12T17:30:00'
+			}, {
+				title: 'Dinner',
+				start: '2015-09-12T20:00:00'
+			}, {
+				title: 'Birthday Party',
+				start: '2015-09-13T07:00:00'
+			}, {
+				title: 'Click for Google',
+				url: 'http://google.com/',
+				start: '2015-09-28'
+			}],
+			eventColor: '#487896'
+		});
+		$('.fc-prev-button').prepend('<span class="sr-only">Select to for previous calendar</span>');
+		$('.fc-next-button').prepend('<span class="sr-only">Select to for next calendar</span>');
+	},
 	addNonprofitNameToButton: function() {
 		var nonprofitListing = $('.nonprofit-listing'),
 			nonprofitName = $('.nonprofit-listing h2');
@@ -311,6 +370,10 @@ $('.sort-by').on('click', 'button', function() {
 
 //end isotop script
 
+// events calendar button -- navigate to the calendar page
+$('.event-button, .all-event-button').on('click', function() {
+	location.href = '/events-calendar.php';
+})
 
 //checkout page checkbox toggle functions
 var expressCheckout = $('.express-checkout-section'),
@@ -434,65 +497,7 @@ $(function() {
 		$('#Mycarousel').carousel('pause');
 	});
 
-	$('#calendar').fullCalendar({
-		header: {
-			left: 'prev,next today',
-			center: 'title',
-			right: 'month,basicWeek,basicDay'
-		},
-		defaultDate: '2015-09-12',
-		editable: true,
-		eventLimit: true, // allow "more" link when too many events
-		eventStartEditable: false,
-		events: [{
-			title: 'All Day Event',
-			start: '2015-02-01'
-		}, {
-			title: 'Long Event',
-			start: '2015-09-07',
-			end: '2015-09-10'
-		}, {
-			id: 999,
-			title: 'Repeating Event',
-			start: '2015-09-09T16:00:00',
-		}, {
-			id: 999,
-			title: 'Repeating Event',
-			start: '2015-09-16T16:00:00'
-		}, {
-			title: 'Conference',
-			start: '2015-09-11',
-			end: '2015-09-13'
-		}, {
-			title: 'Meeting',
-			start: '2015-09-12T10:30:00',
-			end: '2015-09-12T12:30:00'
-		}, {
-			title: 'Lunch',
-			start: '2015-09-12T12:00:00'
-		}, {
-			title: 'Meeting',
-			start: '2015-09-12T14:30:00'
-		}, {
-			title: 'Happy Hour',
-			start: '2015-09-12T17:30:00'
-		}, {
-			title: 'Dinner',
-			start: '2015-09-12T20:00:00'
-		}, {
-			title: 'Birthday Party',
-			start: '2015-09-13T07:00:00'
-		}, {
-			title: 'Click for Google',
-			url: 'http://google.com/',
-			start: '2015-09-28'
-		}],
-		eventColor: '#487896'
-	});
 
-	/*$(".all-event-button").click(function(){
-		window.location = "events-calendar.php"
-	});*/
 
 	globalSkipNav();
 	homeSearchActiveToggle();
@@ -539,6 +544,7 @@ $(function() {
 	global.donateButtonPrefill();
 	global.addNonprofitNameToButton();
 	global.relatedCarousel();
+	global.calendar();
 
 	$('.carouselButtons button').on('click', function() {
 		var button = $(this),
