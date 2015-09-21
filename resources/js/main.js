@@ -1426,16 +1426,15 @@ $(function() {
 				required: true,
 				minlength: 2,
 				letterswithbasicpunc: true
+			},
+			amount: {
+				required: true,
+				minlength: 1
+			},
+			send: {
+				required: true,
+				minlength: 1
 			}
-			/*,
-						amount: {
-							required: true,
-			                minlength: 1
-						},
-						send: {
-							required: true,
-			                minlength: 1
-						}*/
 		},
 
 		messages: {
@@ -1469,16 +1468,15 @@ $(function() {
 				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: This field is required',
 				minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter at least {0} characters.'),
 				letterswithbasicpunc: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please enter a valid name'
+			},
+			amount: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select 1 item',
+                minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select {0} option.')
+			},
+			send: {
+				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select 1 item',
+                minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select {0} option.')
 			}
-			/*,
-						amount: {
-							required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select at least 1 item',
-			                minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select at least {0} option.')
-						},
-						send: {
-							required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select at least 1 item',
-			                minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select at least {0} option.')
-						}*/
 		},
 
 		//Create our error summary that will appear before the form
@@ -1514,6 +1512,12 @@ $(function() {
 				//Alternatively, you might want to use the Validation default option (focusInvalid)
 				$('.errors-' + $(this.currentForm).attr('class')).focus();
 
+				// Replace the group label for the fields. Alternative label is picked up from data-validatorLabel attr that is set in html dom
+                $('a[href="#recurring_period_0"], a[href="#recurring_period_5"]').html(function() {
+                    return $(this).html().replace($('label[for="' + $(this).attr('href').replace('#', '') + '"]').text(), $('label[for="' + $(this).attr('href').replace('#', '') + '"]').attr('data-validatorLabel'));
+                });
+
+
 				//Move the focus to the associated input when error message link is triggered
 				//a simple href anchor link doesnt seem to place focus inside the input
 				$('.' + $errorFormClass + ' a').on('click', function() {
@@ -1538,12 +1542,13 @@ $(function() {
 			submitted = false;
 		},
 		errorPlacement: function(error, element) {
-
-			if (element.is(":radio")) {
-				error.appendTo(element.parents('.radio-select'));
-			} else {
-				formHandlers.errorPosition(error, element);
-			}
+            if (element.attr("name") == "amount") {
+                error.insertAfter('.other-amount');
+            } else if (element.attr("name") == "send") {
+            	 error.insertAfter('#recurring_period_8');
+            } else {
+            	formHandlers.errorPosition(error, element);
+            }
 		},
 		highlight: function(element, errorClass, validClass) {
 			formHandlers.highlight(element, errorClass, validClass);
