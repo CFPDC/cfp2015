@@ -36,10 +36,9 @@ include('includes/functions.php');
 </aside>
 <section class="col-sm-8">
 <h2 id="purchase-gift-card-heading">Purchase A Gift Card</h2>
-<p><a href="javascript:void(0);"> A note about gift card expiration</a></p>
 <form class="gift-card-form one-column-form form-horizontal" id="gift-card-form" action="giftcards_process.php" method="post">
   <div class="col-sm-6 col-xs-12">
-    <p><strong>Step 1: Choose card value:</strong></p>
+    <p><strong>Step 1: Choose card value:</strong> <button class="btn btn-link info-tooltip" data-toggle="tooltip" title="Catalogue Gift Cards expire one year from date of purchase (or date of pickup if we have a relationship with your company). But rest assured: unredeemed gift cards become donations to the Catalogue for Philanthropy: Greater Washington, which raises visibility and resources for over 300 of the best community-based nonprofits in the region!"><span class="fa fa-info-circle"></span></button></p>
     <div class="radio-select1">
       <div class="radio">
         <label for="recurring_period_0" data-validatorLabel="Select Amount:" class="amount-25">
@@ -83,7 +82,7 @@ include('includes/functions.php');
       <div class="radio">
         <label for="recurring_period_5" data-validatorLabel="Delivery Method:" class="mail-to-me">
           <input type="radio" name="send" id="recurring_period_5" value="M" aria-describedby="checkboxDescriptor">
-          Mail to Me <em><a href="login.php">Login first to pre-fill your address below</a></em></label>
+          Mail to Me <button class="btn btn-link info-tooltip" data-toggle="tooltip" title="Login first to pre-fill your address below"><span class="fa fa-info-circle"></span></button></label>
         </div>
         <div class="radio">
           <label for="recurring_period_6" class="mail-recipient">
@@ -93,7 +92,7 @@ include('includes/functions.php');
         <div class="radio">
           <label for="recurring_period_7" class="pick-up">
             <input type="radio" name="send" id="recurring_period_7" value="Q" aria-describedby="checkboxDescriptor">
-            Pick up <em><a href="javascript:void(0);">What does this mean?</a></em></label>
+            Pick up <button class="btn btn-link info-tooltip" data-toggle="tooltip" title="If you are an employee of a company with whom we have a partnership, your company may have made it possible for you to pick up your gift card(s) on site or have them mailed via inter-office mail. If so, you will have been notified of this arrangement. IMPORTANT: It is not possible to pick up Gift Cards at the Catalogue office."><span class="fa fa-info-circle"></span></button></label>
           </div>
           <div class="radio">
             <label for="recurring_period_8" class="e-mail" >
