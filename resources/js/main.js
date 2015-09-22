@@ -39,6 +39,18 @@ var global = {
 		});
 
 	},
+	setHeight: function() {
+		var maxHeight = -1,
+			container = $('.search-results .caption');
+
+		container.each(function() {
+			maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
+		});
+
+		container.each(function() {
+			$(this).height(maxHeight);
+		});
+	},
 	navMenu: function() {
 		//add empty sub nav div for alignment purposes. This is needed if there is no dropdown.
 		$('.nav-item.last').append('<div class="sub-nav hidden"></div>');
@@ -260,9 +272,54 @@ var global = {
 				$('.right.carousel-control').hide();
 			}
 		}
+	},
+	setGetParameter: function(paramName, paramValue) {
+		var url = window.location.href;
+
+		if (url.indexOf(paramName + "=") >= 0) {
+			var prefix = url.substring(0, url.indexOf(paramName));
+			var suffix = url.substring(url.indexOf(paramName));
+			suffix = suffix.substring(suffix.indexOf("=") + 1);
+			suffix = (suffix.indexOf("&") >= 0) ? suffix.substring(suffix.indexOf("&")) : "";
+			url = prefix + paramName + "=" + paramValue + suffix;
+		} else {
+			if (url.indexOf("?") < 0)
+				url += "?" + paramName + "=" + paramValue;
+			else
+				url += "&" + paramName + "=" + paramValue;
+		}
+		window.location.href = url;
+	},
+	parameterUpdate: function() {
+		var oGetVars = {};
+		if (window.location.search.length > 1) {
+			for (var aItKey, nKeyId = 0, aCouples = window.location.search.substr(1).split("&"); nKeyId < aCouples.length; nKeyId++) {
+				aItKey = aCouples[nKeyId].split("=");
+				oGetVars[decodeURIComponent(aItKey[0])] = aItKey.length > 1 ? decodeURIComponent(aItKey[1]) : "";
+			}
+			for (var item in oGetVars) {
+				var valueParameter = $('[data-paramValue="' + oGetVars[item] + '" ]');
+				if ($(valueParameter).is(":checkbox")) {
+					valueParameter.prop("checked", true);
+				} else if ($(valueParameter).is("button")) {
+					setTimeout(function() {
+
+						var $this = valueParameter,
+							listClass = $this.attr('data-list'),
+							dataType = $this.attr("data-type");
+						if (dataType === 'uncheck') {
+							$this.attr("data-type", "check").text('Unselect All');
+							$('.' + listClass).prop("checked", true);
+
+						}
+					}, 1);
+					//valueParameter.prop("checked", true);
+				}
+			}
+
+		}
 	}
 };
-
 
 //list view page
 var listViewResults = {
@@ -326,13 +383,13 @@ function searchPageActiveToggle() {
 	});
 }
 
-
 //load assets responsive for screen size detection
 A11yResp.Core();
 A11y.ieDetect();
 //Set media query
 var lastDeviceState = A11yResp.getScreenWidth();
 $(window).resize(_.debounce(function() {
+
 	var state = A11yResp.getScreenWidth();
 	if (state != lastDeviceState) {
 		// Save the new state as current
@@ -340,15 +397,18 @@ $(window).resize(_.debounce(function() {
 		performMediaQueries(state);
 	}
 }, 20));
-
+$(window).resize(function() {
+	console.log('resize');
+	global.setHeight();
+});
 //Do custom Media query logic
 function performMediaQueries(state) {
 		if (state == 'screen-sm-max' || state == 'screen-xs-max' || state == 'screen-xs-min') {
 			$('#asideFilter').addClass('collapse');
 
+
 		} else {
 			$('#asideFilter').removeClass('collapse');
-
 		}
 	}
 	//begin isotop script
@@ -473,10 +533,76 @@ var formHandlers = {
 		}
 	}
 };
+$('.carouselButtons button').on('click', function() {
+	var button = $(this),
+		buttonFocus = button.siblings(),
+		liveText = $(this).siblings().text().trim();
+	button.delay(500).addClass('hide').siblings().removeClass('hide');
+	buttonFocus.focus();
+	$('#liveTextPolite').children('p').html(liveText);
+	liveTextRegion.text(liveText);
+	setTimeout(function() {
+		liveTextRegion.text('');
+	}, 3000);
+});
 
+//make all anchor tags 'clickable' by enter key
+$('a').on('keydown', function(event) {
+	if (event.keyCode === 13) {
+		event.preventDefault();
+		$(this).click();
+	}
+	return true;
+});
+
+
+//when user clicks the select all link, check the appropriate checkboxes and update text
+$('.select-all').on('click', function() {
+	var $this = $(this),
+		listClass = $this.attr('data-list'),
+		dataType = $this.attr("data-type");
+	if (dataType === 'uncheck') {
+		$this.attr("data-type", "check").text('Unselect All');
+		$('.' + listClass).prop("checked", true);
+		var paramName = $(this).attr('data-paramName'),
+			paramValue = $(this).attr('data-paramValue');
+
+		global.setGetParameter(paramName, paramValue);
+	} else {
+		$this.attr("data-type", "uncheck").text('Select All');
+		$('.' + listClass).prop("checked", false);
+	}
+});
+$('.filter-parameter').on('change', function() {
+	$('.select-all').each(function() {
+		var $this = $(this),
+			dataList = $this.attr('data-list'),
+			$checkboxes = $('.' + dataList);
+
+		if ($checkboxes.filter(':not(:checked)').length > 0) {
+			$(this).closest('button').attr("data-type", "uncheck").text('Select All');
+		}
+	});
+});
+$('.sort-by a').on('click', function(e) {
+	e.preventDefault();
+	//add functionality to update url with parameter from data-sort into this --> &strSort=name
+});
+//set parameter for filter on nonprofit search page
+$('.filter-parameter').on('click', function() {
+	if ($(this).is(':checked')) {
+		var paramName = $(this).attr('data-paramName'),
+			paramValue = $(this).attr('data-paramValue');
+
+		global.setGetParameter(paramName, paramValue);
+	}
+});
 
 $(function() {
 	//.ready for global functions
+	global.setHeight();
+	//check parameters on nonprofit search page and update filters
+	global.parameterUpdate();
 
 	//check for missing images in the home page grid
 	global.homeImageCheck();
@@ -545,48 +671,6 @@ $(function() {
 	global.addNonprofitNameToButton();
 	global.relatedCarousel();
 	global.calendar();
-
-	$('.carouselButtons button').on('click', function() {
-		var button = $(this),
-			buttonFocus = button.siblings(),
-			liveText = $(this).siblings().text().trim();
-		button.delay(500).addClass('hide').siblings().removeClass('hide');
-		buttonFocus.focus();
-		$('#liveTextPolite').children('p').html(liveText);
-		liveTextRegion.text(liveText);
-		setTimeout(function() {
-			liveTextRegion.text('');
-		}, 3000);
-	});
-
-	//make all anchor tags 'clickable' by enter key
-	$('a').on('keydown', function(event) {
-		if (event.keyCode === 13) {
-			event.preventDefault();
-			$(this).click();
-		}
-		return true;
-	});
-
-
-	//when user clicks the select all link, check the appropriate checkboxes and update text
-	$('.select-all').on('click', function() {
-		var $this = $(this),
-			listClass = $this.attr('data-list'),
-			dataType = $this.attr("data-type");
-		if (dataType === 'uncheck') {
-			$this.attr("data-type", "check").text('Unselect All');
-			$('.' + listClass).prop("checked", true);
-		} else {
-			$this.attr("data-type", "uncheck").text('Select All');
-			$('.' + listClass).prop("checked", false);
-		}
-	});
-	$('.sort-by a').on('click', function(e) {
-		e.preventDefault();
-		//add functionality to update url with parameter from data-sort into this --> &strSort=name
-	});
-
 
 
 	//all form validation must be in .ready
@@ -1471,11 +1555,11 @@ $(function() {
 			},
 			amount: {
 				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select 1 item',
-                minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select {0} option.')
+				minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select {0} option.')
 			},
 			send: {
 				required: '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select 1 item',
-                minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select {0} option.')
+				minlength: $.validator.format('<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please select {0} option.')
 			}
 		},
 
@@ -1513,9 +1597,9 @@ $(function() {
 				$('.errors-' + $(this.currentForm).attr('class')).focus();
 
 				// Replace the group label for the fields. Alternative label is picked up from data-validatorLabel attr that is set in html dom
-                $('a[href="#recurring_period_0"], a[href="#recurring_period_5"]').html(function() {
-                    return $(this).html().replace($('label[for="' + $(this).attr('href').replace('#', '') + '"]').text(), $('label[for="' + $(this).attr('href').replace('#', '') + '"]').attr('data-validatorLabel'));
-                });
+				$('a[href="#recurring_period_0"], a[href="#recurring_period_5"]').html(function() {
+					return $(this).html().replace($('label[for="' + $(this).attr('href').replace('#', '') + '"]').text(), $('label[for="' + $(this).attr('href').replace('#', '') + '"]').attr('data-validatorLabel'));
+				});
 
 
 				//Move the focus to the associated input when error message link is triggered
@@ -1542,13 +1626,13 @@ $(function() {
 			submitted = false;
 		},
 		errorPlacement: function(error, element) {
-            if (element.attr("name") == "amount") {
-                error.insertAfter('.other-amount');
-            } else if (element.attr("name") == "send") {
-            	 error.insertAfter('#recurring_period_8');
-            } else {
-            	formHandlers.errorPosition(error, element);
-            }
+			if (element.attr("name") == "amount") {
+				error.insertAfter('.other-amount');
+			} else if (element.attr("name") == "send") {
+				error.insertAfter('#recurring_period_8');
+			} else {
+				formHandlers.errorPosition(error, element);
+			}
 		},
 		highlight: function(element, errorClass, validClass) {
 			formHandlers.highlight(element, errorClass, validClass);

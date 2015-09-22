@@ -916,7 +916,14 @@ main.secondary {
 
 .search-results .thumbnail {
     border-radius: 0;
-    padding: 0;
+    padding: 0 0 75px;
+    position: relative;
+}
+
+.bottom-align {
+    bottom: 0;
+    position: absolute;
+    min-width: 95%;
 }
 
 .search-results .thumbnail > img {
@@ -925,6 +932,7 @@ main.secondary {
 
 .search-results .thumbnail .caption h2 {
     font-size: 22px;
+    min-height: 120px;
 }
 
 .search-results .thumbnail .caption p {
@@ -1310,9 +1318,17 @@ main address > span, address > a {
     position: relative;
 }
 
+.who-we-are-nav ul ul {
+    display: none;
+}
+
 .who-we-are-nav li a.current {
     font-family: 'ProximaNovaSemibold';
     font-size: 110%;
+}
+
+.who-we-are-nav ul a.current + ul {
+    display: block;
 }
 
 .list-unstyled > li > ul > li {
@@ -1690,22 +1706,28 @@ main address > span, address > a {
 form.gift-card-form {
     text-align: left;
 }
+
 div.row > div.col-xs-12 > strong.error {
     margin-bottom: -10px;
     margin-left: 17px;
 }
+
 div.radio > label > strong.error {
     margin-bottom: -25px;
 }
+
 .radio-select2 {
     margin-top: 10px;
 }
+
 .mail-to-me.error, .amount-25.error {
     color: #292929 !important;
 }
+
 .info {
     margin-top: 10px;
 }
+
 .gift-card-form .col-sm-6 > div {
     display: table;
     width: 100%;
@@ -2269,6 +2291,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .budget-container .budget-status {
         width: 45%;
     }
+    .search-results .thumbnail .caption h2 {
+        min-height: 75px;
+    }
 }
 
 @media screen and (min-width: 600px) {
@@ -2433,6 +2458,12 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     main.secondary {
         margin-top: 85px;
+    }
+    .bottom-align {
+        min-width: 93.6%;
+    }
+    .search-results .thumbnail .caption h2 {
+        min-height: 120px;
     }
     .search-results .caption .btn {
         display: block;

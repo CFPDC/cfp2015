@@ -25,7 +25,7 @@ include('includes/functions.php');
 	</aside>
 	<section class="col-xs-12 col-sm-9">
 			<div class="col-xs-12 col-md-3 pull-right hidden-xs hidden-sm">
-				<img class="vision-image img-responsive" src="/resources/images/vision/educate-clear.png" alt="" aria-hidden="true">
+				<img class="vision-image img-responsive" src="/resources/images/vision/convene-clear.png" alt="" aria-hidden="true">
 			</div>
 			<div class="col-xs-12 col-md-9">
 		<a href="vision-report.php" class="back">Back<span class="sr-only">Go back to the Vision Report page</span></a>
