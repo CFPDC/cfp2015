@@ -27,7 +27,7 @@ include('includes/functions.php');
 		<p class="lead">The Catalogue for Philanthropy takes the guesswork out of giving by identifying the best community-based charities in Washington D.C. and nearby Maryland and Virginia.</p>
 		<div class="row">
 			<div class="col-sm-12 col-md-7">
-				<p>We do this by identifying the best community-based charities in Greater Washington and spreading the word through our annual Catalogue (distributed to more than 25,000 people!), website, social media, partnerships and events throughout the year.</p> </br>
+				<p>We do this by identifying the best community-based charities in Greater Washington and spreading the word through our annual Catalogue (distributed to more than 25,000 people!), website, social media, partnerships and events throughout the year.</p>
 				<p>The Catalogue for Philanthropy's commitment to strengthening our community of nonprofits runs deep. From vetting charity applicants to creating educational and awareness-building programs, select the links below to learn how we do it all.</p>
 			</div>
 			<div class="col-sm-12 col-md-5">
@@ -45,7 +45,7 @@ include('includes/functions.php');
 				<li><a href="sharing.php">Sharing:</a> Using print and digital media to connect citizens with our charities</li>
 			</ul>
 		</div>
-	</div>
-</section>
+	</section>
+</div>
 </main>
 <?php get_template('footer'); ?>

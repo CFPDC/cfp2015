@@ -932,7 +932,6 @@ main.secondary {
 
 .search-results .thumbnail .caption h2 {
     font-size: 22px;
-    min-height: 120px;
 }
 
 .search-results .thumbnail .caption p {
@@ -1318,24 +1317,41 @@ main address > span, address > a {
     position: relative;
 }
 
-.who-we-are-nav ul ul {
-    display: none;
-}
-
 .who-we-are-nav li a.current {
     font-family: 'ProximaNovaSemibold';
     font-size: 110%;
 }
 
-.who-we-are-nav ul a.current + ul {
+.who-we-are-nav ul a + ul {
+    display: none;
+    padding-left: 10px;
+}
+
+.who-we-are-nav ul a.current + ul, .who-we-are-nav ul a.active-parent + ul {
     display: block;
+}
+
+.who-we-are-nav ul a + ul li {
+    margin-bottom: 6px;
+}
+
+.who-we-are-nav ul a + ul li a {
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+
+.who-we-are-nav ul a.active-parent + ul a.current {
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-family: 'ProximaNovaRegular';
+    font-weight: 600;
 }
 
 .list-unstyled > li > ul > li {
     list-style-type: none;
 }
 
-.who-we-are-nav li a.current:before, .who-we-are-nav li a:hover:before, .who-we-are-nav li a:focus:before, .who-we-are-nav li a.current:before {
+.who-we-are-nav li a.current:before, .who-we-are-nav li a:hover:before, .who-we-are-nav li a:focus:before {
     content: "\f105";
     font-family: 'FontAwesome';
     right: -15px;
@@ -1407,7 +1423,7 @@ main address > span, address > a {
 
 /*Sharing Page*/
 .best-of-badge-sharing {
-    max-width: 350px;
+   
 }
 
 /*Vision Pages*/
@@ -2625,6 +2641,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .gift-card-form .two-wide > div > div:nth-child(2) strong {
         display: none !important;
     }
+    .col-xs-12.nonprofit-listing {
+        width: 50%;
+    }
 }
 
 @media (min-width: 900px) {
@@ -2669,6 +2688,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
 @media (min-width: 950px) {
     .header-logo {
         max-width: 630px;
+    }
+    .search-results .thumbnail .caption h2 {
+        min-height: 95px;
     }
 }
 
@@ -2766,6 +2788,12 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .footer-logo {
         max-width: 450px;
     }
+    .col-xs-12.nonprofit-listing {
+        width: 33.33333333%;
+    }
+    .search-results .thumbnail .caption h2 {
+        min-height: 120px;
+    }
 }
 
 @media (min-width: 1050px) {
@@ -2855,6 +2883,18 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     .blog-search {
         padding: 15px 70px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .col-xs-12.nonprofit-listing {
+        width: 24.5%;
+    }
+}
+
+@media (min-width: 1700px) {
+    .search-results .thumbnail .caption h2 {
+        min-height: 95px;
     }
 }
 

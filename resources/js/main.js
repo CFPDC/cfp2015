@@ -15,70 +15,37 @@ var $root = $('html, body'),
 
 
 var global = {
-	globalImageCheck: function(img) {
-		//call this in another function by naming variable. See homeImageCheck() for reference
-		img.each(function() {
-			if (this.naturalWidth === 0 || this.naturalHeight === 0 || this.complete === false) {
-				$(this).attr('src', '../resources/images/clear.gif');
+	addNonprofitNameToButton: function() {
+		var nonprofitListing = $('.nonprofit-listing'),
+			nonprofitName = $('.nonprofit-listing h2');
+		nonprofitListing.each(function(index) {
+			var nonprofit = $(this),
+				nonprofitTitleRaw = nonprofit.find('.name').contents().filter(
+					function() {
+						return this.nodeType == 3;
+					}),
+				nonprofitChildRemove = nonprofitTitleRaw.text(),
+				nonprofitTitle = $.trim(nonprofitChildRemove).split(' ').join('_'),
+				learnMoreButton = nonprofit.find('.learn-more'),
+				learnMoreButtonLink = learnMoreButton.attr('href'),
+				donateButton = nonprofit.find('.donate-nonprofit'),
+				donateButtonLink = donateButton.attr('href');
+
+			//appand sr only info for each button and add parameter for 'donateButtonPrefill' function
+			learnMoreButton.append('<span/>').children('span').addClass('sr-only').text(' about ' + nonprofitChildRemove);
+			donateButton.append('<span/>').children('span').addClass('sr-only').text(' to ' + nonprofitChildRemove);
+			//check each href of learn more and donate buttons to see if parameters exist
+			if (learnMoreButtonLink.indexOf('?') != -1) {
+				learnMoreButton.attr("href", learnMoreButtonLink + "&np_title=" + nonprofitTitle);
+			} else {
+				learnMoreButton.attr("href", learnMoreButtonLink + "?np_title=" + nonprofitTitle);
 			}
-		});
-	},
-	homeImageCheck: function() {
-		var img = $('.subcategories .img-responsive');
-		this.globalImageCheck(img);
-	},
-	jumplink: function() {
-		$('.jumplink').on('click', function() {
-			var target = $(this).attr('data-target');
-			$(target).attr('tabindex', '0');
-			$root.animate({
-				scrollTop: $(target).offset().top
-			}, 'slow');
-			$(target).focus();
-			return false;
-		});
+			if (donateButtonLink.indexOf('?') != -1) {
+				donateButton.attr("href", donateButtonLink + "&np_title=" + nonprofitTitle);
+			} else {
+				donateButton.attr("href", donateButtonLink + "?np_title=" + nonprofitTitle);
+			}
 
-	},
-	setHeight: function() {
-		var maxHeight = -1,
-			container = $('.search-results .caption');
-
-		container.each(function() {
-			maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
-		});
-
-		container.each(function() {
-			$(this).height(maxHeight);
-		});
-	},
-	navMenu: function() {
-		//add empty sub nav div for alignment purposes. This is needed if there is no dropdown.
-		$('.nav-item.last').append('<div class="sub-nav hidden"></div>');
-		$(".nav-primary-nav").accessibleMegaMenu({
-			/* prefix for generated unique id attributes, which are required 
-			   to indicate aria-owns, aria-controls and aria-labelledby */
-			uuidPrefix: "accessible-megamenu",
-
-			/* css class used to define the megamenu styling */
-			menuClass: "nav-menu",
-
-			/* css class for a top-level navigation item in the megamenu */
-			topNavItemClass: "nav-item",
-
-			/* css class for a megamenu panel */
-			panelClass: "sub-nav",
-
-			/* css class for a group of items within a megamenu panel */
-			panelGroupClass: "sub-nav-group",
-
-			/* css class for the hover state */
-			hoverClass: "hover",
-
-			/* css class for the focus state */
-			focusClass: "focus",
-
-			/* css class for the open state */
-			openClass: "open"
 		});
 
 	},
@@ -144,38 +111,18 @@ var global = {
 		$('.fc-prev-button').prepend('<span class="sr-only">Select to for previous calendar</span>');
 		$('.fc-next-button').prepend('<span class="sr-only">Select to for next calendar</span>');
 	},
-	addNonprofitNameToButton: function() {
-		var nonprofitListing = $('.nonprofit-listing'),
-			nonprofitName = $('.nonprofit-listing h2');
-		nonprofitListing.each(function(index) {
-			var nonprofit = $(this),
-				nonprofitTitleRaw = nonprofit.find('.name').contents().filter(
-					function() {
-						return this.nodeType == 3;
-					}),
-				nonprofitChildRemove = nonprofitTitleRaw.text(),
-				nonprofitTitle = nonprofitChildRemove.split(' ').join('_').trim(),
-				learnMoreButton = nonprofit.find('.learn-more'),
-				learnMoreButtonLink = learnMoreButton.attr('href'),
-				donateButton = nonprofit.find('.donate-nonprofit'),
-				donateButtonLink = donateButton.attr('href');
-			//appand sr only info for each button and add parameter for 'donateButtonPrefill' function
-			learnMoreButton.append('<span/>').children('span').addClass('sr-only').text(' about ' + nonprofitChildRemove);
-			donateButton.append('<span/>').children('span').addClass('sr-only').text(' to ' + nonprofitChildRemove);
-			//check each href of learn more and donate buttons to see if parameters exist
-			if (learnMoreButtonLink.indexOf('?') != -1) {
-				learnMoreButton.attr("href", learnMoreButtonLink + "&np_title=" + nonprofitTitle);
-			} else {
-				learnMoreButton.attr("href", learnMoreButtonLink + "?np_title=" + nonprofitTitle);
-			}
-			if (donateButtonLink.indexOf('?') != -1) {
-				donateButton.attr("href", donateButtonLink + "&np_title=" + nonprofitTitle);
-			} else {
-				donateButton.attr("href", donateButtonLink + "?np_title=" + nonprofitTitle);
-			}
+	currentPageLink: function(e) {
+		if ($('a.current').length) {
+			var $this = $('a.current'),
+				currentPage = '<span class="sr-only">Currently viewing: </span>';
+			$this.prepend(currentPage);
+			//send current page to sr live text region to announce to screen reader if current page exists
+			liveTextRegion.text($this.text());
+			setTimeout(function() {
+				liveTextRegion.text('');
+			}, 3000);
 
-		});
-
+		}
 	},
 	donateButtonPrefill: function() {
 		//replace checkout page org name to the name of the org which the user clicks on by the substring '?np_title=, if none exists, then do nothing
@@ -199,7 +146,7 @@ var global = {
 		}
 		var substringTitle = 'np_title',
 			prodId = getParameterByName(substringTitle),
-			prodIdInput = getParameterByName(substringTitle).split('_').join(' ').trim(),
+			prodIdInput = $.trim(getParameterByName(substringTitle)).split('_').join(' '),
 			orgInput = $('#org-name'),
 			orgInputValue = orgInput.val(),
 			orgLabel = $("label[for='" + orgInput + "']"),
@@ -247,48 +194,60 @@ var global = {
 
 
 	},
-	relatedCarousel: function() {
-		if ($(".carousel[data-class]").length) {
-
-			//nonprofit details page carousel
-			var carouselWidth = $('#carouselwrapper').width(),
-				carouselItem = $('#related-carousel li');
-
-			A11y.carousel();
-			//dont make carousel unless page is specific width
-			if (carouselWidth > 486) {
-
-				if (carouselItem.parent().is('ul.item')) {
-					carouselItem.unwrap();
-				}
-				do {
-					$(carouselItem.slice(0, 3)).wrapAll('<ul class="item row" role="presentation "></ul>');
-				} while ((carouselItem = carouselItem.slice(3)).length > 0);
-				$('#related-carousel ul.item').first().addClass('active');
-			} else {
-				carouselItem.unwrap();
-				carouselItem.wrapAll('<ul class="carousel-inner" role="list"></ul>');
-				$('.left.carousel-control').hide();
-				$('.right.carousel-control').hide();
+	globalImageCheck: function(img) {
+		//call this in another function by naming variable. See homeImageCheck() for reference
+		img.each(function() {
+			if (this.naturalWidth === 0 || this.naturalHeight === 0 || this.complete === false) {
+				$(this).attr('src', '../resources/images/clear.gif');
 			}
-		}
+		});
 	},
-	setGetParameter: function(paramName, paramValue) {
-		var url = window.location.href;
+	homeImageCheck: function() {
+		var img = $('.subcategories .img-responsive');
+		this.globalImageCheck(img);
+	},
+	jumplink: function() {
+		$('.jumplink').on('click', function() {
+			var target = $(this).attr('data-target');
+			$(target).attr('tabindex', '0');
+			$root.animate({
+				scrollTop: $(target).offset().top
+			}, 'slow');
+			$(target).focus();
+			return false;
+		});
 
-		if (url.indexOf(paramName + "=") >= 0) {
-			var prefix = url.substring(0, url.indexOf(paramName));
-			var suffix = url.substring(url.indexOf(paramName));
-			suffix = suffix.substring(suffix.indexOf("=") + 1);
-			suffix = (suffix.indexOf("&") >= 0) ? suffix.substring(suffix.indexOf("&")) : "";
-			url = prefix + paramName + "=" + paramValue + suffix;
-		} else {
-			if (url.indexOf("?") < 0)
-				url += "?" + paramName + "=" + paramValue;
-			else
-				url += "&" + paramName + "=" + paramValue;
-		}
-		window.location.href = url;
+	},
+	navMenu: function() {
+		//add empty sub nav div for alignment purposes. This is needed if there is no dropdown.
+		$('.nav-item.last').append('<div class="sub-nav hidden"></div>');
+		$(".nav-primary-nav").accessibleMegaMenu({
+			/* prefix for generated unique id attributes, which are required 
+			   to indicate aria-owns, aria-controls and aria-labelledby */
+			uuidPrefix: "accessible-megamenu",
+
+			/* css class used to define the megamenu styling */
+			menuClass: "nav-menu",
+
+			/* css class for a top-level navigation item in the megamenu */
+			topNavItemClass: "nav-item",
+
+			/* css class for a megamenu panel */
+			panelClass: "sub-nav",
+
+			/* css class for a group of items within a megamenu panel */
+			panelGroupClass: "sub-nav-group",
+
+			/* css class for the hover state */
+			hoverClass: "hover",
+
+			/* css class for the focus state */
+			focusClass: "focus",
+
+			/* css class for the open state */
+			openClass: "open"
+		});
+
 	},
 	parameterUpdate: function() {
 		var oGetVars = {};
@@ -318,149 +277,64 @@ var global = {
 			}
 
 		}
-	}
-};
+	},
+	relatedCarousel: function() {
+		if ($(".carousel[data-class]").length) {
 
-//list view page
-var listViewResults = {
-	nonprofitCollapse: function() {
-		$(".listing").each(function(index) {
-			var npListing = $(this),
-				npHeader = npListing.find('.media-heading'),
-				npName = npHeader.clone().children().remove().end().text().trim().replace(/ /g, ''),
-				npContent = npListing.find('.content');
-			npContent.attr({
-				'id': '_' + npName
-			});
-			npHeader.attr({
-				'aria-controls': '_' + npName,
-				'data-target': '#_' + npName,
-				'tabindex': '0'
-			});
-		});
-	}
-};
+			//nonprofit details page carousel
+			var carouselWidth = $('#carouselwrapper').width(),
+				carouselItem = $('#related-carousel li');
 
-/*** global functions ***/
+			A11y.carousel();
+			//dont make carousel unless page is specific width
+			if (carouselWidth > 486) {
 
-//skip nav prevent hashtag in url
-function globalSkipNav() {
-	$(function() {
-		$('.skip-navigation-link').each(function() {
-			var focusedElement = $(this).attr('data-target');
-			//set a tabindex of -1 to make the element focusable for the skip nav but is not focusable for tabbing on page, this is only needed if the target is not a normally focusable element like a div container.
-			$(focusedElement).attr('tabindex', '-1');
-		}).on('click', function(event) {
-			var focusedElement = $(this).attr('data-target');
-
-			//prevent the hash and element id to show in url
-			event.preventDefault();
-
-			// set focus to element for skip nav
-			$(focusedElement).focus();
-		});
-	});
-}
-
-function homeSearchActiveToggle() {
-	$('.home-search button').on('click', function() {
-		var activeEl = this;
-		$('.home-search button.active').not(this).removeClass('active');
-
-		if (!$(this).hasClass('active')) {
-			$(this).toggleClass('active');
+				if (carouselItem.parent().is('ul.item')) {
+					carouselItem.unwrap();
+				}
+				do {
+					$(carouselItem.slice(0, 3)).wrapAll('<ul class="item row" role="presentation "></ul>');
+				} while ((carouselItem = carouselItem.slice(3)).length > 0);
+				$('#related-carousel ul.item').first().addClass('active');
+			} else {
+				carouselItem.unwrap();
+				carouselItem.wrapAll('<ul class="carousel-inner" role="list"></ul>');
+				$('.left.carousel-control').hide();
+				$('.right.carousel-control').hide();
+			}
 		}
-	});
-}
+	},
 
-//results page change toggle view active class
-function searchPageActiveToggle() {
+	setGetParameter: function(paramName, paramValue) {
+		var url = window.location.href;
 
-	$('.display-group button').on('click', function() {
-		var activeEl = this;
-		$('.display-group button.active').not(this).removeClass('active');
-		$(this).toggleClass('active');
-	});
-}
-
-//load assets responsive for screen size detection
-A11yResp.Core();
-A11y.ieDetect();
-//Set media query
-var lastDeviceState = A11yResp.getScreenWidth();
-$(window).resize(_.debounce(function() {
-
-	var state = A11yResp.getScreenWidth();
-	if (state != lastDeviceState) {
-		// Save the new state as current
-		lastDeviceState = state;
-		performMediaQueries(state);
-	}
-}, 20));
-$(window).resize(function() {
-	console.log('resize');
-	global.setHeight();
-});
-//Do custom Media query logic
-function performMediaQueries(state) {
-		if (state == 'screen-sm-max' || state == 'screen-xs-max' || state == 'screen-xs-min') {
-			$('#asideFilter').addClass('collapse');
-
-
+		if (url.indexOf(paramName + "=") >= 0) {
+			var prefix = url.substring(0, url.indexOf(paramName));
+			var suffix = url.substring(url.indexOf(paramName));
+			suffix = suffix.substring(suffix.indexOf("=") + 1);
+			suffix = (suffix.indexOf("&") >= 0) ? suffix.substring(suffix.indexOf("&")) : "";
+			url = prefix + paramName + "=" + paramValue + suffix;
 		} else {
-			$('#asideFilter').removeClass('collapse');
+			if (url.indexOf("?") < 0)
+				url += "?" + paramName + "=" + paramValue;
+			else
+				url += "&" + paramName + "=" + paramValue;
 		}
+		window.location.href = url;
+	},
+	setHeight: function() {
+		var maxHeight = -1,
+			container = $('.search-results .caption');
+		container.css('height', '');
+		container.each(function() {
+			maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
+		});
+
+		container.each(function() {
+			$(this).height(maxHeight + 40);
+		});
 	}
-	//begin isotop script
-var $grid = $('.grid');
-//sort button functionality with isotope
-$('.sort-by').on('click', 'button', function() {
-	var sortByValue = $(this).attr('data-sort-by');
-	$grid.isotope({
-		sortBy: sortByValue
-	});
-	//update screen reader of sorting announcement
-	liveTextRegion.text("Results sorted by " + sortByValue);
-	setTimeout(function() {
-		liveTextRegion.text('');
-	}, 3000);
-	//collapse the dropdown after selecting
-	$('.sort-toggle').click();
-});
-
-//end isotop script
-
-// events calendar button -- navigate to the calendar page
-$('.event-button, .all-event-button').on('click', function() {
-	location.href = '/events-calendar.php';
-})
-
-//checkout page checkbox toggle functions
-var expressCheckout = $('.express-checkout-section'),
-	checkoutButton = $('.checkout-section'),
-	expressHeading = $('.express-checkout-heading'),
-	checkoutHeading = $('.checkout-heading'),
-	expressUser = $('.userName');
-
-$('.checkout-form .toggle-check').on('click', function() {
-	if ($(this).is(':checked')) {
-		expressCheckout.show(); //show express checkout
-		checkoutButton.hide(); //hide normal checkout button
-		expressHeading.show(); //show express heading
-		checkoutHeading.hide(); //hide normal heading
-
-		setTimeout(function() {
-			expressUser.focus(); //focus on name input after 1 millisecond
-		}, 100);
-	} else {
-		expressHeading.hide(); //hide express heading
-		checkoutHeading.show(); //show normal heading
-		expressCheckout.hide(); //hide express checkout
-		checkoutButton.show(); //show normal checkout button
-	}
-});
-//request-catalogue page
-
+};
 //namespace to keep form functions short
 var formHandlers = {
 	highlight: function(element, errorClass, validClass) {
@@ -533,10 +407,172 @@ var formHandlers = {
 		}
 	}
 };
-$('.carouselButtons button').on('click', function() {
+
+//list view page - run only if the class 'nonprofit-listing' is present to prevent loading on all pages
+var listViewResults = {
+	nonprofitCollapse: function() {
+		if ($('.nonprofit-list').length > 0) {
+			$(".listing").each(function(index) {
+				var npListing = $(this),
+					npHeader = npListing.find('.media-heading'),
+					npName = $.trim(npHeader.clone().children().remove().end().text()).replace(/ /g, ''),
+					npContent = npListing.find('.content');
+				npContent.attr({
+					'id': '_' + npName
+				});
+				npHeader.attr({
+					'aria-controls': '_' + npName,
+					'data-target': '#_' + npName,
+					'tabindex': '0'
+				});
+			});
+		}
+	}
+};
+
+/*** global functions ***/
+
+//skip nav prevent hashtag in url
+function globalSkipNav() {
+	$(function() {
+		$('.skip-navigation-link').each(function() {
+			var focusedElement = $(this).attr('data-target');
+			//set a tabindex of -1 to make the element focusable for the skip nav but is not focusable for tabbing on page, this is only needed if the target is not a normally focusable element like a div container.
+			$(focusedElement).attr('tabindex', '-1');
+		}).on('click', function(event) {
+			var focusedElement = $(this).attr('data-target');
+
+			//prevent the hash and element id to show in url
+			event.preventDefault();
+
+			// set focus to element for skip nav
+			$(focusedElement).focus();
+		});
+	});
+}
+
+function homeSearchActiveToggle() {
+	$('.home-search button').on('click', function() {
+		var activeEl = this;
+		$('.home-search button.active').not(this).removeClass('active');
+
+		if (!$(this).hasClass('active')) {
+			$(this).toggleClass('active');
+		}
+	});
+}
+
+//results page change toggle view active class
+function searchPageActiveToggle() {
+
+	$('.display-group button').on('click', function() {
+		var activeEl = this;
+		$('.display-group button.active').not(this).removeClass('active');
+		$(this).toggleClass('active');
+	});
+}
+
+//load assets responsive for screen size detection
+A11yResp.Core();
+A11y.ieDetect();
+//Set media query
+var lastDeviceState = A11yResp.getScreenWidth();
+$(window).resize(_.debounce(function() {
+
+	var state = A11yResp.getScreenWidth();
+	if (state != lastDeviceState) {
+		// Save the new state as current
+		lastDeviceState = state;
+		performMediaQueries(state);
+
+	}
+	//if user changes width of browser this script picks up the change and changes height of nonprofit search listings
+	global.setHeight();
+
+}, 20));
+
+//Do custom Media query logic
+function performMediaQueries(state) {
+		if (state == 'screen-sm-max' || state == 'screen-xs-max' || state == 'screen-xs-min') {
+			$('#asideFilter').addClass('collapse');
+
+
+		} else {
+			$('#asideFilter').removeClass('collapse');
+		}
+	}
+	//begin isotop script
+
+//sort button functionality with isotope
+
+
+$(window).load(function() {
+	//isotope must load after images are loaded or the height of the element will be wrong
+	var $grid = $('.grid').isotope({
+		itemSelector: '.iso-item',
+		layoutMode: 'fitRows',
+		getSortData: {
+			category: '[data-category]',
+			name: '.name',
+			region: '[data-region]',
+			year: '[data-year]'
+		},
+		sortBy: 'random'
+	});
+
+	$('.sort-by').on('click', 'button', function() {
+		var sortByValue = $(this).attr('data-sort-by');
+		$grid.isotope({
+			sortBy: sortByValue
+		});
+		//update screen reader of sorting announcement
+		liveTextRegion.text("Results sorted by " + sortByValue);
+		setTimeout(function() {
+			liveTextRegion.text('');
+		}, 3000);
+		//collapse the dropdown after selecting
+		$('.sort-toggle').click();
+	});
+});
+
+//end isotope script
+
+// events calendar button -- navigate to the calendar page
+$('.event-button, .all-event-button').on('click', function() {
+	location.href = '/events-calendar.php';
+})
+
+//checkout page checkbox toggle functions
+var expressCheckout = $('.express-checkout-section'),
+	checkoutButton = $('.checkout-section'),
+	expressHeading = $('.express-checkout-heading'),
+	checkoutHeading = $('.checkout-heading'),
+	expressUser = $('.userName');
+
+$('.checkout-form .toggle-check').on('click', function() {
+	if ($(this).is(':checked')) {
+		expressCheckout.show(); //show express checkout
+		checkoutButton.hide(); //hide normal checkout button
+		expressHeading.show(); //show express heading
+		checkoutHeading.hide(); //hide normal heading
+
+		setTimeout(function() {
+			expressUser.focus(); //focus on name input after 1 millisecond
+		}, 100);
+	} else {
+		expressHeading.hide(); //hide express heading
+		checkoutHeading.show(); //show normal heading
+		expressCheckout.hide(); //hide express checkout
+		checkoutButton.show(); //show normal checkout button
+	}
+});
+//request-catalogue page
+
+
+$('.carouselButtons').on('click', 'button', function() {
 	var button = $(this),
 		buttonFocus = button.siblings(),
-		liveText = $(this).siblings().text().trim();
+		liveText = $.trim($(this).siblings().text());
 	button.delay(500).addClass('hide').siblings().removeClass('hide');
 	buttonFocus.focus();
 	$('#liveTextPolite').children('p').html(liveText);
@@ -601,6 +637,10 @@ $('.filter-parameter').on('click', function() {
 $(function() {
 	//.ready for global functions
 	global.setHeight();
+
+	//find current page link and add sr only text 
+	global.currentPageLink();
+
 	//check parameters on nonprofit search page and update filters
 	global.parameterUpdate();
 

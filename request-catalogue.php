@@ -11,35 +11,35 @@ include('includes/functions.php');
   <img src="http://lorempixel.com/1200/500/nature" alt="" aria-hidden="true" class="img-responsive">
 </div>
 <main class="container-fluid secondary" role="main">
-<div class="row">
-  <section class="col-md-10 col-lg-8">
-    <h2>Catalogue Request Form</h2>
-    <p>
-    Thank you for your interest! There are several ways you can access the Catalogue for Philanthropy.
-    </p>
-    <ol>
-      <li>
-        View the Catalogue online: Choose our interactive, <a href="http://en.calameo.com/read/0012788670d83233749da" title="View the Catalogue for Philanthropy catalogue online with an interative reader">digital edition</a> of the Catalogue if you like flipping the pages on your desktop or mobile device. Download the Catalogue as a <a href="http://www.cfp-dc.org/images/pdfs/Pdf2014/Catalogue2014dc.pdf" title="View the latest Catalogue for Philanthropy catalogue as a PDF">PDF</a>!
-      </li>
-      <li>
-        Browse our charities: Explore our charities by name, city, populations served, and even by affiliations such as Combined Federal Campaign or United Way members. <a href="our-nonprofits.php" title="Browse our charities">Click here</a>.<br>
-        <small>
-        <span>
-        Note:
-        </span>
-        2014-2015 Catalogue charities will be live on our website beginning November 1st.</small>
-      </li>
-      <li>
-        Receive a Catalogue by mail: Fill out the form below to receive a copy. You may also  join our mailing list with the form below in order to receive an updated version each year. Our newest edition is released each year in early November.
-      </li>
-    </ol>
-    <p>
-    Please fill the following form in order to receive a catalogue by mail and to join our email list. We respect your privacy. Your information will never be shared.
-    </p>
-    <form class="two-column-form request-catalogue form-horizontal col-xs-12" action="/cfpdc/print_cat_request_dc.php" method="post">
-      <fieldset>
-        <legend class="sr-only">Fill and submit this form to receive the latest Catalogue for Philanthropy catalogue by mail.</legend>
-        <div class="row">
+  <div class="row">
+    <section class="col-md-10 col-lg-8">
+      <h2>Catalogue Request Form</h2>
+      <p>
+        Thank you for your interest! There are several ways you can access the Catalogue for Philanthropy.
+      </p>
+      <ol>
+        <li>
+          View the Catalogue online: Choose our interactive, <a href="http://en.calameo.com/read/0012788670d83233749da" title="View the Catalogue for Philanthropy catalogue online with an interative reader">digital edition</a> of the Catalogue if you like flipping the pages on your desktop or mobile device. Download the Catalogue as a <a href="http://www.cfp-dc.org/images/pdfs/Pdf2014/Catalogue2014dc.pdf" title="View the latest Catalogue for Philanthropy catalogue as a PDF">PDF</a>!
+        </li>
+        <li>
+          Browse our charities: Explore our charities by name, city, populations served, and even by affiliations such as Combined Federal Campaign or United Way members. <a href="our-nonprofits.php" title="Browse our charities">Click here</a>.<br>
+          <small>
+          <span>
+            Note:
+          </span>
+          2014-2015 Catalogue charities will be live on our website beginning November 1st.</small>
+        </li>
+        <li>
+          Receive a Catalogue by mail: Fill out the form below to receive a copy. You may also  join our mailing list with the form below in order to receive an updated version each year. Our newest edition is released each year in early November.
+        </li>
+      </ol>
+      <p>
+        Please fill the following form in order to receive a catalogue by mail and to join our email list. We respect your privacy. Your information will never be shared.
+      </p>
+      <form class="two-column-form request-catalogue form-horizontal col-xs-12" action="/cfpdc/print_cat_request_dc.php" method="post">
+        <fieldset>
+          <legend class="sr-only">Fill and submit this form to receive the latest Catalogue for Philanthropy catalogue by mail.</legend>
+          <div class="row">
           <div class="col-sm-6">
             <div class="two-line">
               <label for="fname">Your First Name<small> (required)</small></label>
@@ -68,11 +68,11 @@ include('includes/functions.php');
               <div>
                 <label class="checkbox-label" for="requests">
                   <input type="checkbox" id="requests" name="requests">
-                Please send a catalogue by mail </label>
+                  Please send a catalogue by mail </label>
                 <br>
                 <label class="checkbox-label" for="mailing_list">
                   <input type="checkbox" id="mailing_list" name="mailing_list">
-                Please add my contact information to your mailing list </label>
+                  Please add my contact information to your mailing list </label>
               </div>
             </div>
           </div>
@@ -92,62 +92,62 @@ include('includes/functions.php');
                   <select class="form-control" id="state" name="state" aria-required="true">
                     <option value="" selected="">Select</option>
                     <optgroup label="Greater Washington Area">
-                      <option value="DC">District of Columbia</option>
-                      <option value="MD">Maryland</option>
-                      <option value="VA">Virginia</option>
+                    <option value="DC">District of Columbia</option>
+                    <option value="MD">Maryland</option>
+                    <option value="VA">Virginia</option>
                     </optgroup>
                     <optgroup label="Other States">
-                      <option value="AL">Alabama</option>
-                      <option value="AK">Alaska</option>
-                      <option value="AZ">Arizona</option>
-                      <option value="AR">Arkansas</option>
-                      <option value="CA">California</option>
-                      <option value="CO">Colorado</option>
-                      <option value="CT">Connecticut</option>
-                      <option value="DE">Delaware</option>
-                      <option value="DC">District of Columbia</option>
-                      <option value="FL">Florida</option>
-                      <option value="GA">Georgia</option>
-                      <option value="HI">Hawaii</option>
-                      <option value="ID">Idaho</option>
-                      <option value="IL">Illinois</option>
-                      <option value="IN">Indiana</option>
-                      <option value="IA">Iowa</option>
-                      <option value="KS">Kansas</option>
-                      <option value="KY">Kentucky</option>
-                      <option value="LA">Louisiana</option>
-                      <option value="ME">Maine</option>
-                      <option value="MD">Maryland</option>
-                      <option value="MA">Massachusetts</option>
-                      <option value="MI">Michigan</option>
-                      <option value="MN">Minnesota</option>
-                      <option value="MS">Mississippi</option>
-                      <option value="MO">Missouri</option>
-                      <option value="MT">Montana</option>
-                      <option value="NE">Nebraska</option>
-                      <option value="NV">Nevada</option>
-                      <option value="NH">New Hampshire</option>
-                      <option value="NJ">New Jersey</option>
-                      <option value="NM">New Mexico</option>
-                      <option value="NY">New York</option>
-                      <option value="NC">North Carolina</option>
-                      <option value="ND">North Dakota</option>
-                      <option value="OH">Ohio</option>
-                      <option value="OK">Oklahoma</option>
-                      <option value="OR">Oregon</option>
-                      <option value="PA">Pennsylvania</option>
-                      <option value="RI">Rhode Island</option>
-                      <option value="SC">South Carolina</option>
-                      <option value="SD">South Dakota</option>
-                      <option value="TN">Tennessee</option>
-                      <option value="TX">Texas</option>
-                      <option value="UT">Utah</option>
-                      <option value="VT">Vermont</option>
-                      <option value="VA">Virginia</option>
-                      <option value="WA">Washington</option>
-                      <option value="WV">West Virginia</option>
-                      <option value="WI">Wisconsin</option>
-                      <option value="WY">Wyoming</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="DC">District of Columbia</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
                     </optgroup>
                   </select>
                 </div>
@@ -165,7 +165,6 @@ include('includes/functions.php');
               <label for="phone">Phone</label>
               <input type="text" id="phone" maxlength="14" name="phone" placeholder="000-000-0000">
             </div>
-            
             <div class="request-questions">
               <div>
                 <label for="how_learn">How did you hear about the Catalogue?</label>
@@ -210,10 +209,9 @@ include('includes/functions.php');
               <input type="submit" class="btn btn-primary" id="form-submit" value="Submit Request">
             </div>
           </div>
-          
         </fieldset>
       </form>
     </section>
   </div>
-  </main>
+</main>
   <?php get_template('footer'); ?>

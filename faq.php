@@ -14,33 +14,75 @@ include('includes/functions.php');
 <div class="row">
 	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
 		<ul class="list-unstyled">
-			<li><a href="about-us.php" class="current">About Us</a></li>
-			<li><a href="cfp-team.php">Team</a></li>
-			<li><a href="cfp-reviewers.php">Our Reviewers</a></li>
-			<li><a href="sponsors.php">Sponsors</a></li>
-			<li><a href="press.php">Press</a></li>
-			<li><a href="testimonials.php">Testimonials</a></li>
-			<li><a href="vision-report.php">Vision Report</a></li>
+			<li>
+				<a href="about-us.php" class="current">About Us</a>
+			</li>
+			<li>
+				<a href="cfp-team.php">Team</a>
+			</li>
+			<li>
+				<a href="cfp-reviewers.php">Our Reviewers</a>
+			</li>
+			<li>
+				<a href="sponsors.php">Sponsors</a>
+			</li>
+			<li>
+				<a href="press.php">Press</a>
+			</li>
+			<li>
+				<a href="testimonials.php">Testimonials</a>
+			</li>
+			<li>
+				<a href="vision-report.php">Vision Report</a>
+			</li>
 		</ul>
 	</aside>
 	<section class="col-xs-12 col-sm-8">
 		<h2>Frequently Asked Questions</h2>
 		<div class="row">
 			<ul id="faq-list" class="list-unstyled faq-questions col-xs-12">
-				<li><a href="javascript:void(0);" class="jumplink" data-target="#what-is">What is the Catalogue?</a></li>
-				<li><a href="javascript:void(0);" class="jumplink" data-target="#who-sponsors">Who are the sponsors and why are they supporting the project?</a></li>
-				<li><a href="javascript:void(0);" class="jumplink" data-target="#when-deadline">When is the deadline to submit proposals and when will we hear the results of our application</a></li>
-				<li><a href="javascript:void(0);" class="jumplink" data-target="#orgs-selected">How are the featured organizations selected?</a></li>
-				<li><a href="javascript:void(0);" class="jumplink" data-target="#address-submit">To what address and in what form should we submit our application?</a></li>
-				<li><a href="javascript:void(0);" class="jumplink" data-target="#big-budget">Our budget is more than $3 million. Can we still apply?</a></li>
-				<li><a href="javascript:void(0);" class="jumplink" data-target="#ind-org">We are an independent "project" of a larger organization with a budget over $3 million (ie, an after-school arts program at a large human services organization). May we apply?</a></li>
-				<li><a href="javascript:void(0);" class="jumplink" data-target="#nat-org">We are a national organization with a DC address. May we apply?</a></li>
-				<li><a href="javascript:void(0);" class="jumplink" data-target="#inter-services">May our organization apply if we are located in Greater Washington but provide services internationally?</a></li>
-				<li><a href="javascript:void(0);" class="jumplink" data-target="#outsite-dc">May our organization apply if we are headquartered outside of the geographical area you describe but we provide services within it?</a></li>
-				<li><a href="javascript:void(0);" class="jumplink" data-target="#fundraising-big">We are an independent fundraising arm of a larger organization. We have our own 501(c)(3). Are we eligible?</a></li>
-				<li><a href="javascript:void(0);" class="jumplink" data-target="#inclusion">If we are selected for inclusion in the Catalogue, will we be able to review and approve the final text and photographs for our presentation?</a></li>
-				<li><a href="javascript:void(0);" class="jumplink" data-target="#other-benefits">Are there other benefits we should consider in weighing our decision about whether to apply?</a></li>
-				<li><a href="javascript:void(0);" class="jumplink" data-target="#total-collected">How much money have you helped to raise since you published your first Catalogue in 2003?</a></li>
+				<li>
+					<a href="javascript:void(0);" class="jumplink" data-target="#what-is">What is the Catalogue?</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="jumplink" data-target="#who-sponsors">Who are the sponsors and why are they supporting the project?</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="jumplink" data-target="#when-deadline">When is the deadline to submit proposals and when will we hear the results of our application</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="jumplink" data-target="#orgs-selected">How are the featured organizations selected?</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="jumplink" data-target="#address-submit">To what address and in what form should we submit our application?</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="jumplink" data-target="#big-budget">Our budget is more than $3 million. Can we still apply?</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="jumplink" data-target="#ind-org">We are an independent "project" of a larger organization with a budget over $3 million (ie, an after-school arts program at a large human services organization). May we apply?</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="jumplink" data-target="#nat-org">We are a national organization with a DC address. May we apply?</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="jumplink" data-target="#inter-services">May our organization apply if we are located in Greater Washington but provide services internationally?</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="jumplink" data-target="#outsite-dc">May our organization apply if we are headquartered outside of the geographical area you describe but we provide services within it?</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="jumplink" data-target="#fundraising-big">We are an independent fundraising arm of a larger organization. We have our own 501(c)(3). Are we eligible?</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="jumplink" data-target="#inclusion">If we are selected for inclusion in the Catalogue, will we be able to review and approve the final text and photographs for our presentation?</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="jumplink" data-target="#other-benefits">Are there other benefits we should consider in weighing our decision about whether to apply?</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="jumplink" data-target="#total-collected">How much money have you helped to raise since you published your first Catalogue in 2003?</a>
+				</li>
 			</ul>
 		</div>
 		<div class="row">
@@ -118,5 +160,7 @@ include('includes/functions.php');
 			</dl>
 		</div>
 	</section>
-	</main>
-	<?php get_template('footer'); ?>
+</div>
+</main>
+<?php get_template('footer'); ?>
+<!--missing closing div tag before main element closing tag -->

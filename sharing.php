@@ -34,9 +34,10 @@ include('includes/functions.php');
 			</div>
 		</div>
 		<div class="col-xs-12 col-sm-3 pull-right">
-			<img class="img-responsive best-of-badge-sharing" src="resources/images/logos/best-of-badge-14-15.gif" alt="Image showing Catalogue For Philanthropy as one of the best for 2014-2015"></img>
+			<img class="img-responsive best-of-badge-sharing" src="resources/images/logos/best-of-badge-14-15.gif" alt="Image showing Catalogue For Philanthropy as one of the best for 2014-2015">
 		</div>
 	</section>
 </div>
 </main>
 <?php get_template('footer'); ?>
+<!-- removed img closing tag -->
