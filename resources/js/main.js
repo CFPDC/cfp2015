@@ -15,70 +15,36 @@ var $root = $('html, body'),
 
 
 var global = {
-	globalImageCheck: function(img) {
-		//call this in another function by naming variable. See homeImageCheck() for reference
-		img.each(function() {
-			if (this.naturalWidth === 0 || this.naturalHeight === 0 || this.complete === false) {
-				$(this).attr('src', '../resources/images/clear.gif');
+	addNonprofitNameToButton: function() {
+		var nonprofitListing = $('.nonprofit-listing'),
+			nonprofitName = $('.nonprofit-listing h2');
+		nonprofitListing.each(function(index) {
+			var nonprofit = $(this),
+				nonprofitTitleRaw = nonprofit.find('.name').contents().filter(
+					function() {
+						return this.nodeType == 3;
+					}),
+				nonprofitChildRemove = nonprofitTitleRaw.text(),
+				nonprofitTitle = nonprofitChildRemove.split(' ').join('_').trim(),
+				learnMoreButton = nonprofit.find('.learn-more'),
+				learnMoreButtonLink = learnMoreButton.attr('href'),
+				donateButton = nonprofit.find('.donate-nonprofit'),
+				donateButtonLink = donateButton.attr('href');
+			//appand sr only info for each button and add parameter for 'donateButtonPrefill' function
+			learnMoreButton.append('<span/>').children('span').addClass('sr-only').text(' about ' + nonprofitChildRemove);
+			donateButton.append('<span/>').children('span').addClass('sr-only').text(' to ' + nonprofitChildRemove);
+			//check each href of learn more and donate buttons to see if parameters exist
+			if (learnMoreButtonLink.indexOf('?') != -1) {
+				learnMoreButton.attr("href", learnMoreButtonLink + "&np_title=" + nonprofitTitle);
+			} else {
+				learnMoreButton.attr("href", learnMoreButtonLink + "?np_title=" + nonprofitTitle);
 			}
-		});
-	},
-	homeImageCheck: function() {
-		var img = $('.subcategories .img-responsive');
-		this.globalImageCheck(img);
-	},
-	jumplink: function() {
-		$('.jumplink').on('click', function() {
-			var target = $(this).attr('data-target');
-			$(target).attr('tabindex', '0');
-			$root.animate({
-				scrollTop: $(target).offset().top
-			}, 'slow');
-			$(target).focus();
-			return false;
-		});
+			if (donateButtonLink.indexOf('?') != -1) {
+				donateButton.attr("href", donateButtonLink + "&np_title=" + nonprofitTitle);
+			} else {
+				donateButton.attr("href", donateButtonLink + "?np_title=" + nonprofitTitle);
+			}
 
-	},
-	setHeight: function() {
-		var maxHeight = -1,
-			container = $('.search-results .caption');
-		container.css('height', '');
-		container.each(function() {
-			maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
-		});
-
-		container.each(function() {
-			$(this).height(maxHeight + 40);
-		});
-	},
-	navMenu: function() {
-		//add empty sub nav div for alignment purposes. This is needed if there is no dropdown.
-		$('.nav-item.last').append('<div class="sub-nav hidden"></div>');
-		$(".nav-primary-nav").accessibleMegaMenu({
-			/* prefix for generated unique id attributes, which are required 
-			   to indicate aria-owns, aria-controls and aria-labelledby */
-			uuidPrefix: "accessible-megamenu",
-
-			/* css class used to define the megamenu styling */
-			menuClass: "nav-menu",
-
-			/* css class for a top-level navigation item in the megamenu */
-			topNavItemClass: "nav-item",
-
-			/* css class for a megamenu panel */
-			panelClass: "sub-nav",
-
-			/* css class for a group of items within a megamenu panel */
-			panelGroupClass: "sub-nav-group",
-
-			/* css class for the hover state */
-			hoverClass: "hover",
-
-			/* css class for the focus state */
-			focusClass: "focus",
-
-			/* css class for the open state */
-			openClass: "open"
 		});
 
 	},
@@ -144,38 +110,12 @@ var global = {
 		$('.fc-prev-button').prepend('<span class="sr-only">Select to for previous calendar</span>');
 		$('.fc-next-button').prepend('<span class="sr-only">Select to for next calendar</span>');
 	},
-	addNonprofitNameToButton: function() {
-		var nonprofitListing = $('.nonprofit-listing'),
-			nonprofitName = $('.nonprofit-listing h2');
-		nonprofitListing.each(function(index) {
-			var nonprofit = $(this),
-				nonprofitTitleRaw = nonprofit.find('.name').contents().filter(
-					function() {
-						return this.nodeType == 3;
-					}),
-				nonprofitChildRemove = nonprofitTitleRaw.text(),
-				nonprofitTitle = nonprofitChildRemove.split(' ').join('_').trim(),
-				learnMoreButton = nonprofit.find('.learn-more'),
-				learnMoreButtonLink = learnMoreButton.attr('href'),
-				donateButton = nonprofit.find('.donate-nonprofit'),
-				donateButtonLink = donateButton.attr('href');
-			//appand sr only info for each button and add parameter for 'donateButtonPrefill' function
-			learnMoreButton.append('<span/>').children('span').addClass('sr-only').text(' about ' + nonprofitChildRemove);
-			donateButton.append('<span/>').children('span').addClass('sr-only').text(' to ' + nonprofitChildRemove);
-			//check each href of learn more and donate buttons to see if parameters exist
-			if (learnMoreButtonLink.indexOf('?') != -1) {
-				learnMoreButton.attr("href", learnMoreButtonLink + "&np_title=" + nonprofitTitle);
-			} else {
-				learnMoreButton.attr("href", learnMoreButtonLink + "?np_title=" + nonprofitTitle);
-			}
-			if (donateButtonLink.indexOf('?') != -1) {
-				donateButton.attr("href", donateButtonLink + "&np_title=" + nonprofitTitle);
-			} else {
-				donateButton.attr("href", donateButtonLink + "?np_title=" + nonprofitTitle);
-			}
-
-		});
-
+	currentPageLink: function(e) {
+		if ($('a.current').length) {
+			var $this = $('a.current'),
+				currentPage = '<span class="sr-only">Currently viewing: </span>';
+			$this.prepend(currentPage);
+		}
 	},
 	donateButtonPrefill: function() {
 		//replace checkout page org name to the name of the org which the user clicks on by the substring '?np_title=, if none exists, then do nothing
@@ -247,48 +187,60 @@ var global = {
 
 
 	},
-	relatedCarousel: function() {
-		if ($(".carousel[data-class]").length) {
-
-			//nonprofit details page carousel
-			var carouselWidth = $('#carouselwrapper').width(),
-				carouselItem = $('#related-carousel li');
-
-			A11y.carousel();
-			//dont make carousel unless page is specific width
-			if (carouselWidth > 486) {
-
-				if (carouselItem.parent().is('ul.item')) {
-					carouselItem.unwrap();
-				}
-				do {
-					$(carouselItem.slice(0, 3)).wrapAll('<ul class="item row" role="presentation "></ul>');
-				} while ((carouselItem = carouselItem.slice(3)).length > 0);
-				$('#related-carousel ul.item').first().addClass('active');
-			} else {
-				carouselItem.unwrap();
-				carouselItem.wrapAll('<ul class="carousel-inner" role="list"></ul>');
-				$('.left.carousel-control').hide();
-				$('.right.carousel-control').hide();
+	globalImageCheck: function(img) {
+		//call this in another function by naming variable. See homeImageCheck() for reference
+		img.each(function() {
+			if (this.naturalWidth === 0 || this.naturalHeight === 0 || this.complete === false) {
+				$(this).attr('src', '../resources/images/clear.gif');
 			}
-		}
+		});
 	},
-	setGetParameter: function(paramName, paramValue) {
-		var url = window.location.href;
+	homeImageCheck: function() {
+		var img = $('.subcategories .img-responsive');
+		this.globalImageCheck(img);
+	},
+	jumplink: function() {
+		$('.jumplink').on('click', function() {
+			var target = $(this).attr('data-target');
+			$(target).attr('tabindex', '0');
+			$root.animate({
+				scrollTop: $(target).offset().top
+			}, 'slow');
+			$(target).focus();
+			return false;
+		});
 
-		if (url.indexOf(paramName + "=") >= 0) {
-			var prefix = url.substring(0, url.indexOf(paramName));
-			var suffix = url.substring(url.indexOf(paramName));
-			suffix = suffix.substring(suffix.indexOf("=") + 1);
-			suffix = (suffix.indexOf("&") >= 0) ? suffix.substring(suffix.indexOf("&")) : "";
-			url = prefix + paramName + "=" + paramValue + suffix;
-		} else {
-			if (url.indexOf("?") < 0)
-				url += "?" + paramName + "=" + paramValue;
-			else
-				url += "&" + paramName + "=" + paramValue;
-		}
-		window.location.href = url;
+	},
+	navMenu: function() {
+		//add empty sub nav div for alignment purposes. This is needed if there is no dropdown.
+		$('.nav-item.last').append('<div class="sub-nav hidden"></div>');
+		$(".nav-primary-nav").accessibleMegaMenu({
+			/* prefix for generated unique id attributes, which are required 
+			   to indicate aria-owns, aria-controls and aria-labelledby */
+			uuidPrefix: "accessible-megamenu",
+
+			/* css class used to define the megamenu styling */
+			menuClass: "nav-menu",
+
+			/* css class for a top-level navigation item in the megamenu */
+			topNavItemClass: "nav-item",
+
+			/* css class for a megamenu panel */
+			panelClass: "sub-nav",
+
+			/* css class for a group of items within a megamenu panel */
+			panelGroupClass: "sub-nav-group",
+
+			/* css class for the hover state */
+			hoverClass: "hover",
+
+			/* css class for the focus state */
+			focusClass: "focus",
+
+			/* css class for the open state */
+			openClass: "open"
+		});
+
 	},
 	parameterUpdate: function() {
 		var oGetVars = {};
@@ -318,6 +270,62 @@ var global = {
 			}
 
 		}
+	},
+	relatedCarousel: function() {
+		if ($(".carousel[data-class]").length) {
+
+			//nonprofit details page carousel
+			var carouselWidth = $('#carouselwrapper').width(),
+				carouselItem = $('#related-carousel li');
+
+			A11y.carousel();
+			//dont make carousel unless page is specific width
+			if (carouselWidth > 486) {
+
+				if (carouselItem.parent().is('ul.item')) {
+					carouselItem.unwrap();
+				}
+				do {
+					$(carouselItem.slice(0, 3)).wrapAll('<ul class="item row" role="presentation "></ul>');
+				} while ((carouselItem = carouselItem.slice(3)).length > 0);
+				$('#related-carousel ul.item').first().addClass('active');
+			} else {
+				carouselItem.unwrap();
+				carouselItem.wrapAll('<ul class="carousel-inner" role="list"></ul>');
+				$('.left.carousel-control').hide();
+				$('.right.carousel-control').hide();
+			}
+		}
+	},
+
+	setGetParameter: function(paramName, paramValue) {
+		var url = window.location.href;
+
+		if (url.indexOf(paramName + "=") >= 0) {
+			var prefix = url.substring(0, url.indexOf(paramName));
+			var suffix = url.substring(url.indexOf(paramName));
+			suffix = suffix.substring(suffix.indexOf("=") + 1);
+			suffix = (suffix.indexOf("&") >= 0) ? suffix.substring(suffix.indexOf("&")) : "";
+			url = prefix + paramName + "=" + paramValue + suffix;
+		} else {
+			if (url.indexOf("?") < 0)
+				url += "?" + paramName + "=" + paramValue;
+			else
+				url += "&" + paramName + "=" + paramValue;
+		}
+		window.location.href = url;
+	},
+	setHeight: function() {
+		var maxHeight = -1,
+			container = $('.search-results .caption');
+		container.css('height', '');
+		container.each(function() {
+			maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
+		});
+
+		container.each(function() {
+			$(this).height(maxHeight + 40);
+		});
 	}
 };
 //namespace to keep form functions short
@@ -622,6 +630,10 @@ $('.filter-parameter').on('click', function() {
 $(function() {
 	//.ready for global functions
 	global.setHeight();
+
+	//find current page link and add sr only text 
+	global.currentPageLink();
+
 	//check parameters on nonprofit search page and update filters
 	global.parameterUpdate();
 

@@ -32,9 +32,9 @@ include('includes/functions.php');
               <input type="checkbox" id="remember-me-nonprofit" name="remember-me-nonprofit" value="remember-me"> Remember me
             </label>
             <ul class="list-unstyled">
-            <li><a href="request_password_link.php" title="Reset your catalogue nonprofit account password">Forgot your password?</a></li>
-            <li><a href="sign-up.php" title="Create a catalogue nonprofit account password">Need an account?</a></li>
-          </ul>
+              <li><a href="request_password_link.php" title="Reset your catalogue nonprofit account password">Forgot your password?</a></li>
+              <li><a href="sign-up.php" title="Create a catalogue nonprofit account password">Need an account?</a></li>
+            </ul>
           </div>
           <div class="form-group form-group-lg submit-button">
             <input type="hidden" name="Step" value="Step2">
@@ -62,8 +62,8 @@ include('includes/functions.php');
               <input type="checkbox" id="remember-me-nonprofit" name="remember-me-nonprofit" value="remember-me"> Remember me
             </label>
             <ul class="list-unstyled">
-            <li><a href="request_password_link.php" title="Reset your catalogue nonprofit account password">Forgot your password?</a></li>
-            <li><a href="sign-up.php" title="Create a catalogue nonprofit account password">Need an account?</a></li>
+              <li><a href="request_password_link.php" title="Reset your catalogue nonprofit account password">Forgot your password?</a></li>
+              <li><a href="sign-up.php" title="Create a catalogue nonprofit account password">Need an account?</a></li>
             </ul>
           </div>
           <div class="form-group submit-button-container">

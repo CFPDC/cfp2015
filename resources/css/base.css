@@ -1317,24 +1317,41 @@ main address > span, address > a {
     position: relative;
 }
 
-.who-we-are-nav ul ul {
-    display: none;
-}
-
 .who-we-are-nav li a.current {
     font-family: 'ProximaNovaSemibold';
     font-size: 110%;
 }
 
-.who-we-are-nav ul a.current + ul {
+.who-we-are-nav ul a + ul {
+    display: none;
+    padding-left: 10px;
+}
+
+.who-we-are-nav ul a.current + ul, .who-we-are-nav ul a.active-parent + ul {
     display: block;
+}
+
+.who-we-are-nav ul a + ul li {
+    margin-bottom: 6px;
+}
+
+.who-we-are-nav ul a + ul li a {
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+
+.who-we-are-nav ul a.active-parent + ul a.current {
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-family: 'ProximaNovaRegular';
+    font-weight: 600;
 }
 
 .list-unstyled > li > ul > li {
     list-style-type: none;
 }
 
-.who-we-are-nav li a.current:before, .who-we-are-nav li a:hover:before, .who-we-are-nav li a:focus:before, .who-we-are-nav li a.current:before {
+.who-we-are-nav li a.current:before, .who-we-are-nav li a:hover:before, .who-we-are-nav li a:focus:before {
     content: "\f105";
     font-family: 'FontAwesome';
     right: -15px;

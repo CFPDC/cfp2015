@@ -29,7 +29,7 @@ include('includes/functions.php');
           <div>
             <label for="lname">Your Last Name</label>
             <input type="text" id="lname" maxlength="40" name="lname">
-          </div>        
+          </div>
           <div>
             <label for="email">Email<small> (required)</small></label>
             <input type="email" id="email" name="email" aria-required="true">
