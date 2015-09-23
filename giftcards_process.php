@@ -96,7 +96,7 @@ include('includes/functions.php');
           </div>
           <div class="radio">
             <label for="recurring_period_8" class="e-mail" >
-              <input type="radio" name="send"id="recurring_period_8" value="Q" aria-describedby="checkboxDescriptor">
+              <input type="radio" name="send" id="recurring_period_8" value="Q" aria-describedby="checkboxDescriptor">
             E&dash;Card</label>
           </div>
           </div>
@@ -215,3 +215,4 @@ include('includes/functions.php');
   </div>
   </main>
   <?php get_template('footer'); ?>
+  <!-- Added space between name and id attributes of a radio button -->

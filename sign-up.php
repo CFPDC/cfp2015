@@ -16,7 +16,6 @@ include('includes/functions.php');
     <h2>Sign Up<span class="sr-only"> for a Catalogue for Philanthropy account</span></h2>
     <p>
     When you sign up, you gain access to a wide range of benefits found in the <a href="how-to-give.php" title="The Catalogue for Philanthropy How to Give page">How to Give</a> section of our website.</p>
-    </p>
     <form class="two-column-form sign-up form-horizontal col-xs-12" action="account.php?i=0-0" method="post">
       <fieldset>
         <legend class="sr-only">Fill and submit this form to open a Catalogue for Philanthropy account.</legend>
@@ -209,3 +208,4 @@ include('includes/functions.php');
 </div>
 </main>
 <?php get_template('footer'); ?>
+<!-- Removed extra closing p tag from first paragraph -->

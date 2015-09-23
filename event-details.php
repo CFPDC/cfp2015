@@ -22,7 +22,6 @@ include('includes/functions.php');
 		Check Our Event Calendar</a>
 	</div>
 </div>
-</div>
 <div class="row">
 <aside class="col-sm-3 who-we-are-nav" id="asideFilter">
 	<ul class="list-unstyled">
@@ -74,3 +73,4 @@ include('includes/functions.php');
 </div>
 </main>
 <?php get_template('footer'); ?>
+<!-- Removed stray div tag from line 25-->

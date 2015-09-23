@@ -67,7 +67,7 @@ include('includes/functions.php');
 				<p class="testimonial">Bob Sicliano <small>Catalogue donor</small></p></blockquote>
 				
 				<blockquote>&ldquo;We value our place in the global community, but we always remember that we are citizens of our nation&rsquo;s capital. Today the demand on our local, smaller nonprofits is greater than ever, and the Catalogue for Philanthropy has become our &ldquo;go&ndash;to&rdquo; source ... allowing us to join with others to make a bigger impact on the smaller organizations that care for our fellow citizens in the DC Metro area every day of the week.&rdquo;
-				<p class="testimonial">Marian H Gelbwaks <small>Sidgmore Family Foundation</small></p>
+				<p class="testimonial">Marian H Gelbwaks <small>Sidgmore Family Foundation</small></p></blockquote>
 				
 				<blockquote>&ldquo;Thank you for providing the filter to guide our donations. That&rsquo;s a big added value for us.&rdquo;
 				<p class="testimonial">Laurence Platt and Clare Herinton <small>Catalogue Donors</small></p></blockquote>
@@ -131,3 +131,4 @@ include('includes/functions.php');
 </div>
 </main>
 <?php get_template('footer'); ?>
+<!-- Added missing closing blockquote -->

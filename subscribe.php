@@ -29,7 +29,7 @@ include('includes/functions.php');
           <div>
             <label for="lname">Your Last Name</label>
             <input type="text" id="lname" maxlength="40" name="lname">
-          </div>
+          </div>        
           <div>
             <label for="email">Email<small> (required)</small></label>
             <input type="email" id="email" name="email" aria-required="true">
@@ -65,7 +65,7 @@ include('includes/functions.php');
               Send me occasional emails</label>
               <br>
               <label class="checkbox-label" for="mailing_list">
-                <input class="require-one" type="checkbox" id="opt_in_fields_1" name="opt_in_fields[]" value="newsletter" aria-describedby="checkboxDescriptor"aria-required="true">
+                <input class="require-one" type="checkbox" id="opt_in_fields_1" name="opt_in_fields[]" value="newsletter" aria-describedby="checkboxDescriptor" aria-required="true">
               Send me the catalogue newsletter</label>
             </div>
           </div>
@@ -95,3 +95,4 @@ include('includes/functions.php');
 </div>
 </main>
 <?php get_template('footer'); ?>
+<!-- added space between aria-describedBy and aria-required -->
