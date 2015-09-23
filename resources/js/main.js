@@ -25,11 +25,12 @@ var global = {
 						return this.nodeType == 3;
 					}),
 				nonprofitChildRemove = nonprofitTitleRaw.text(),
-				nonprofitTitle = nonprofitChildRemove.split(' ').join('_').trim(),
+				nonprofitTitle = $.trim(nonprofitChildRemove).split(' ').join('_'),
 				learnMoreButton = nonprofit.find('.learn-more'),
 				learnMoreButtonLink = learnMoreButton.attr('href'),
 				donateButton = nonprofit.find('.donate-nonprofit'),
 				donateButtonLink = donateButton.attr('href');
+
 			//appand sr only info for each button and add parameter for 'donateButtonPrefill' function
 			learnMoreButton.append('<span/>').children('span').addClass('sr-only').text(' about ' + nonprofitChildRemove);
 			donateButton.append('<span/>').children('span').addClass('sr-only').text(' to ' + nonprofitChildRemove);
@@ -145,7 +146,7 @@ var global = {
 		}
 		var substringTitle = 'np_title',
 			prodId = getParameterByName(substringTitle),
-			prodIdInput = getParameterByName(substringTitle).split('_').join(' ').trim(),
+			prodIdInput = $.trim(getParameterByName(substringTitle)).split('_').join(' '),
 			orgInput = $('#org-name'),
 			orgInputValue = orgInput.val(),
 			orgLabel = $("label[for='" + orgInput + "']"),
@@ -410,11 +411,11 @@ var formHandlers = {
 //list view page - run only if the class 'nonprofit-listing' is present to prevent loading on all pages
 var listViewResults = {
 	nonprofitCollapse: function() {
-		if ($('.nonprofit-listing').length > 0) {
+		if ($('.nonprofit-list').length > 0) {
 			$(".listing").each(function(index) {
 				var npListing = $(this),
 					npHeader = npListing.find('.media-heading'),
-					npName = npHeader.clone().children().remove().end().text().trim().replace(/ /g, ''),
+					npName = $.trim(npHeader.clone().children().remove().end().text()).replace(/ /g, ''),
 					npContent = npListing.find('.content');
 				npContent.attr({
 					'id': '_' + npName
@@ -568,10 +569,10 @@ $('.checkout-form .toggle-check').on('click', function() {
 //request-catalogue page
 
 
-$('.carouselButtons button').on('click', function() {
+$('.carouselButtons').on('click', 'button', function() {
 	var button = $(this),
 		buttonFocus = button.siblings(),
-		liveText = $(this).siblings().text().trim();
+		liveText = $.trim($(this).siblings().text());
 	button.delay(500).addClass('hide').siblings().removeClass('hide');
 	buttonFocus.focus();
 	$('#liveTextPolite').children('p').html(liveText);

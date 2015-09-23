@@ -519,7 +519,7 @@ include('includes/functions.php');
             <a class="jumplink" href="javascript:void(0)" data-target="#number-0">0</a>
           </li>
         </ul>
-        <div class="col-xs-12">
+        <div class="col-xs-12 nonprofit-list">
           <h2 class="title-section" id="letter-a">A</h2>
           <div class="media listing">
             <div class="media-left">
