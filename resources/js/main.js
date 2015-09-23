@@ -42,13 +42,13 @@ var global = {
 	setHeight: function() {
 		var maxHeight = -1,
 			container = $('.search-results .caption');
-
+		container.css('height', '');
 		container.each(function() {
 			maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
 		});
 
 		container.each(function() {
-			$(this).height(maxHeight);
+			$(this).height(maxHeight + 40);
 		});
 	},
 	navMenu: function() {
@@ -320,147 +320,6 @@ var global = {
 		}
 	}
 };
-
-//list view page
-var listViewResults = {
-	nonprofitCollapse: function() {
-		$(".listing").each(function(index) {
-			var npListing = $(this),
-				npHeader = npListing.find('.media-heading'),
-				npName = npHeader.clone().children().remove().end().text().trim().replace(/ /g, ''),
-				npContent = npListing.find('.content');
-			npContent.attr({
-				'id': '_' + npName
-			});
-			npHeader.attr({
-				'aria-controls': '_' + npName,
-				'data-target': '#_' + npName,
-				'tabindex': '0'
-			});
-		});
-	}
-};
-
-/*** global functions ***/
-
-//skip nav prevent hashtag in url
-function globalSkipNav() {
-	$(function() {
-		$('.skip-navigation-link').each(function() {
-			var focusedElement = $(this).attr('data-target');
-			//set a tabindex of -1 to make the element focusable for the skip nav but is not focusable for tabbing on page, this is only needed if the target is not a normally focusable element like a div container.
-			$(focusedElement).attr('tabindex', '-1');
-		}).on('click', function(event) {
-			var focusedElement = $(this).attr('data-target');
-
-			//prevent the hash and element id to show in url
-			event.preventDefault();
-
-			// set focus to element for skip nav
-			$(focusedElement).focus();
-		});
-	});
-}
-
-function homeSearchActiveToggle() {
-	$('.home-search button').on('click', function() {
-		var activeEl = this;
-		$('.home-search button.active').not(this).removeClass('active');
-
-		if (!$(this).hasClass('active')) {
-			$(this).toggleClass('active');
-		}
-	});
-}
-
-//results page change toggle view active class
-function searchPageActiveToggle() {
-
-	$('.display-group button').on('click', function() {
-		var activeEl = this;
-		$('.display-group button.active').not(this).removeClass('active');
-		$(this).toggleClass('active');
-	});
-}
-
-//load assets responsive for screen size detection
-A11yResp.Core();
-A11y.ieDetect();
-//Set media query
-var lastDeviceState = A11yResp.getScreenWidth();
-$(window).resize(_.debounce(function() {
-
-	var state = A11yResp.getScreenWidth();
-	if (state != lastDeviceState) {
-		// Save the new state as current
-		lastDeviceState = state;
-		performMediaQueries(state);
-	}
-}, 20));
-$(window).resize(function() {
-	console.log('resize');
-	global.setHeight();
-});
-//Do custom Media query logic
-function performMediaQueries(state) {
-		if (state == 'screen-sm-max' || state == 'screen-xs-max' || state == 'screen-xs-min') {
-			$('#asideFilter').addClass('collapse');
-
-
-		} else {
-			$('#asideFilter').removeClass('collapse');
-		}
-	}
-	//begin isotop script
-var $grid = $('.grid');
-//sort button functionality with isotope
-$('.sort-by').on('click', 'button', function() {
-	var sortByValue = $(this).attr('data-sort-by');
-	$grid.isotope({
-		sortBy: sortByValue
-	});
-	//update screen reader of sorting announcement
-	liveTextRegion.text("Results sorted by " + sortByValue);
-	setTimeout(function() {
-		liveTextRegion.text('');
-	}, 3000);
-	//collapse the dropdown after selecting
-	$('.sort-toggle').click();
-});
-
-//end isotop script
-
-// events calendar button -- navigate to the calendar page
-$('.event-button, .all-event-button').on('click', function() {
-	location.href = '/events-calendar.php';
-})
-
-//checkout page checkbox toggle functions
-var expressCheckout = $('.express-checkout-section'),
-	checkoutButton = $('.checkout-section'),
-	expressHeading = $('.express-checkout-heading'),
-	checkoutHeading = $('.checkout-heading'),
-	expressUser = $('.userName');
-
-$('.checkout-form .toggle-check').on('click', function() {
-	if ($(this).is(':checked')) {
-		expressCheckout.show(); //show express checkout
-		checkoutButton.hide(); //hide normal checkout button
-		expressHeading.show(); //show express heading
-		checkoutHeading.hide(); //hide normal heading
-
-		setTimeout(function() {
-			expressUser.focus(); //focus on name input after 1 millisecond
-		}, 100);
-	} else {
-		expressHeading.hide(); //hide express heading
-		checkoutHeading.show(); //show normal heading
-		expressCheckout.hide(); //hide express checkout
-		checkoutButton.show(); //show normal checkout button
-	}
-});
-//request-catalogue page
-
 //namespace to keep form functions short
 var formHandlers = {
 	highlight: function(element, errorClass, validClass) {
@@ -533,6 +392,168 @@ var formHandlers = {
 		}
 	}
 };
+
+//list view page - run only if the class 'nonprofit-listing' is present to prevent loading on all pages
+var listViewResults = {
+	nonprofitCollapse: function() {
+		if ($('.nonprofit-listing').length > 0) {
+			$(".listing").each(function(index) {
+				var npListing = $(this),
+					npHeader = npListing.find('.media-heading'),
+					npName = npHeader.clone().children().remove().end().text().trim().replace(/ /g, ''),
+					npContent = npListing.find('.content');
+				npContent.attr({
+					'id': '_' + npName
+				});
+				npHeader.attr({
+					'aria-controls': '_' + npName,
+					'data-target': '#_' + npName,
+					'tabindex': '0'
+				});
+			});
+		}
+	}
+};
+
+/*** global functions ***/
+
+//skip nav prevent hashtag in url
+function globalSkipNav() {
+	$(function() {
+		$('.skip-navigation-link').each(function() {
+			var focusedElement = $(this).attr('data-target');
+			//set a tabindex of -1 to make the element focusable for the skip nav but is not focusable for tabbing on page, this is only needed if the target is not a normally focusable element like a div container.
+			$(focusedElement).attr('tabindex', '-1');
+		}).on('click', function(event) {
+			var focusedElement = $(this).attr('data-target');
+
+			//prevent the hash and element id to show in url
+			event.preventDefault();
+
+			// set focus to element for skip nav
+			$(focusedElement).focus();
+		});
+	});
+}
+
+function homeSearchActiveToggle() {
+	$('.home-search button').on('click', function() {
+		var activeEl = this;
+		$('.home-search button.active').not(this).removeClass('active');
+
+		if (!$(this).hasClass('active')) {
+			$(this).toggleClass('active');
+		}
+	});
+}
+
+//results page change toggle view active class
+function searchPageActiveToggle() {
+
+	$('.display-group button').on('click', function() {
+		var activeEl = this;
+		$('.display-group button.active').not(this).removeClass('active');
+		$(this).toggleClass('active');
+	});
+}
+
+//load assets responsive for screen size detection
+A11yResp.Core();
+A11y.ieDetect();
+//Set media query
+var lastDeviceState = A11yResp.getScreenWidth();
+$(window).resize(_.debounce(function() {
+
+	var state = A11yResp.getScreenWidth();
+	if (state != lastDeviceState) {
+		// Save the new state as current
+		lastDeviceState = state;
+		performMediaQueries(state);
+
+	}
+	//if user changes width of browser this script picks up the change and changes height of nonprofit search listings
+	global.setHeight();
+
+}, 20));
+
+//Do custom Media query logic
+function performMediaQueries(state) {
+		if (state == 'screen-sm-max' || state == 'screen-xs-max' || state == 'screen-xs-min') {
+			$('#asideFilter').addClass('collapse');
+
+
+		} else {
+			$('#asideFilter').removeClass('collapse');
+		}
+	}
+	//begin isotop script
+
+//sort button functionality with isotope
+
+
+$(window).load(function() {
+	//isotope must load after images are loaded or the height of the element will be wrong
+	var $grid = $('.grid').isotope({
+		itemSelector: '.iso-item',
+		layoutMode: 'fitRows',
+		getSortData: {
+			category: '[data-category]',
+			name: '.name',
+			region: '[data-region]',
+			year: '[data-year]'
+		},
+		sortBy: 'random'
+	});
+
+	$('.sort-by').on('click', 'button', function() {
+		var sortByValue = $(this).attr('data-sort-by');
+		$grid.isotope({
+			sortBy: sortByValue
+		});
+		//update screen reader of sorting announcement
+		liveTextRegion.text("Results sorted by " + sortByValue);
+		setTimeout(function() {
+			liveTextRegion.text('');
+		}, 3000);
+		//collapse the dropdown after selecting
+		$('.sort-toggle').click();
+	});
+});
+
+//end isotope script
+
+// events calendar button -- navigate to the calendar page
+$('.event-button, .all-event-button').on('click', function() {
+	location.href = '/events-calendar.php';
+})
+
+//checkout page checkbox toggle functions
+var expressCheckout = $('.express-checkout-section'),
+	checkoutButton = $('.checkout-section'),
+	expressHeading = $('.express-checkout-heading'),
+	checkoutHeading = $('.checkout-heading'),
+	expressUser = $('.userName');
+
+$('.checkout-form .toggle-check').on('click', function() {
+	if ($(this).is(':checked')) {
+		expressCheckout.show(); //show express checkout
+		checkoutButton.hide(); //hide normal checkout button
+		expressHeading.show(); //show express heading
+		checkoutHeading.hide(); //hide normal heading
+
+		setTimeout(function() {
+			expressUser.focus(); //focus on name input after 1 millisecond
+		}, 100);
+	} else {
+		expressHeading.hide(); //hide express heading
+		checkoutHeading.show(); //show normal heading
+		expressCheckout.hide(); //hide express checkout
+		checkoutButton.show(); //show normal checkout button
+	}
+});
+//request-catalogue page
+
+
 $('.carouselButtons button').on('click', function() {
 	var button = $(this),
 		buttonFocus = button.siblings(),
