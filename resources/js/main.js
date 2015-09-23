@@ -115,6 +115,12 @@ var global = {
 			var $this = $('a.current'),
 				currentPage = '<span class="sr-only">Currently viewing: </span>';
 			$this.prepend(currentPage);
+			//send current page to sr live text region to announce to screen reader if current page exists
+			liveTextRegion.text($this.text());
+			setTimeout(function() {
+				liveTextRegion.text('');
+			}, 3000);
+
 		}
 	},
 	donateButtonPrefill: function() {
