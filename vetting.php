@@ -73,9 +73,8 @@ include('includes/functions.php');
 				<p>Our goal is to create a balanced list of great nonprofits in all fields: we don&rsquo;t want all of our nonprofits to serve one category&ndash;for example all arts organizations or all programs that serve the elderly. While final decisions are editorial, they are always guided by the rankings and comments of our review team!</p>
 			</div>
 		</div>
-		
-	</div>
 </section>
 </div>
 </main>
 <?php get_template('footer'); ?>
+<!-- Removed extra closing div tag right before closing section tag -->
