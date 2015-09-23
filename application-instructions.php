@@ -76,8 +76,8 @@ include('includes/functions.php');
 						</li><li><strong>NOT</strong> have been featured in the 2012-13, 2013-14 or 2014-15 print Catalogue (though organizations re-listed only on the website in 2012, 2013 or 2014 <i>may</i> reapply this year to be re-featured in print)</li>
 					</ul>
 					<p><small>For more information on the eligibility of local chapters of national organizations, professional associations, membership organizations, etc, please see our <a href="faq.php">FAQ</a>.</small></p>
-				</div>
-				<div class="col-xs-12">
+			</div>
+			<div class="col-xs-12">
 					<h3>Review Process &amp; Timeline</h3>
 					<p>The application opens on January 5th and closes on February 27th. More than 200 charitable organizations apply to be included in the Catalogue for Philanthropy each year, and we select approximately 70 for our print Catalogue. Once applications are processed, over 100 reviewers from foundations, corporate giving programs, peer nonprofits, and the philanthropic advisory community are matched with applicants in the reviewers’ fields of expertise. Our review process (March&ndash;April) consists of three parts:</p>
 					<ul class="normal">
@@ -95,9 +95,9 @@ include('includes/functions.php');
 					<p>
 					<strong>Questions:</strong> Before you email or call, please read our <a href="faq.php">Frequently Asked Questions (FAQ)</a>. If you don't find the answers you are looking for, call us at <a href="tel:202-955-6538" title="call The Catalogue for Philanthropy">202-955-6538</a>, or email us at <a href="mailto:info@catalogueforphilanthropy-dc.org" title="email The Cataloge for Philanthropy">info@catalogueforphilanthropy-dc.org</a>.
 					</p>
-				</div>
 			</div>
 		</div>
 	</section>
-	</main>
-	<?php get_template('footer'); ?>
+</div>
+</main>
+<?php get_template('footer'); ?>

@@ -61,7 +61,7 @@ include('includes/functions.php');
 				</ol>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
+</div>
 </main>
 <?php get_template('footer'); ?>
