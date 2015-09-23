@@ -932,7 +932,6 @@ main.secondary {
 
 .search-results .thumbnail .caption h2 {
     font-size: 22px;
-    min-height: 120px;
 }
 
 .search-results .thumbnail .caption p {
@@ -2625,6 +2624,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .gift-card-form .two-wide > div > div:nth-child(2) strong {
         display: none !important;
     }
+    .col-xs-12.nonprofit-listing {
+        width: 50%;
+    }
 }
 
 @media (min-width: 900px) {
@@ -2669,6 +2671,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
 @media (min-width: 950px) {
     .header-logo {
         max-width: 630px;
+    }
+    .search-results .thumbnail .caption h2 {
+        min-height: 95px;
     }
 }
 
@@ -2766,6 +2771,12 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .footer-logo {
         max-width: 450px;
     }
+    .col-xs-12.nonprofit-listing {
+        width: 33.33333333%;
+    }
+    .search-results .thumbnail .caption h2 {
+        min-height: 120px;
+    }
 }
 
 @media (min-width: 1050px) {
@@ -2855,6 +2866,18 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     .blog-search {
         padding: 15px 70px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .col-xs-12.nonprofit-listing {
+        width: 24.5%;
+    }
+}
+
+@media (min-width: 1700px) {
+    .search-results .thumbnail .caption h2 {
+        min-height: 95px;
     }
 }
 

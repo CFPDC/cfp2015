@@ -281,9 +281,8 @@ include('includes/functions.php');
   </aside>
   <section class="col-xs-12 col-sm-9">
     <!--<div class="row grid">-->
-    <div class="row js-isotope grid" data-isotope-options='{ "layoutMode": "fitRows","itemSelector": ".iso-item", "getSortData": {"name": ".name", "category": ".category", "year": ".year", "region": ".region"}}'>
-      <div class="col-sm-6 col-md-4 col-lg-3 iso-item nonprofit-listing">
-        <div class="sr-only"><span class="region">VA</span><span class="year">2008</span><span class="category">culture</span></div>
+    <div class="row grid">
+      <div class="col-xs-12 iso-item nonprofit-listing" data-year="2008" data-region="VA" data-category="culture">
         <div class="thumbnail">
           <img src="http://www.cfp-dc.org/images/dc/cropped/165.jpg">
           <div class="caption">
@@ -297,8 +296,7 @@ include('includes/functions.php');
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 iso-item nonprofit-listing">
-        <div class="hidden"><span class="region">MD</span><span class="year">2014</span><span class="category">nature</span></div>
+      <div class="col-xs-12 iso-item nonprofit-listing" data-year="2014" data-region="MD" data-category="nature">
         <div class="thumbnail">
           <img src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
           <div class="caption">
@@ -312,8 +310,7 @@ include('includes/functions.php');
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 iso-item nonprofit-listing">
-        <div class="hidden"><span class="region">DC</span><span class="year">2014</span><span class="category">nature</span></div>
+      <div class="col-xs-12 iso-item nonprofit-listing" data-year="2014" data-region="DC" data-category="nature">
         <div class="thumbnail">
           <img src="http://www.cfp-dc.org/images/dc/cropped/217.jpg">
           <div class="caption">
@@ -326,8 +323,7 @@ include('includes/functions.php');
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 iso-item nonprofit-listing">
-        <div class="hidden"><span class="region">DC</span><span class="year">2010</span><span class="category">culture</span></div>
+      <div class="col-xs-12 iso-item nonprofit-listing" data-year="2010" data-region="DC" data-category="culture">
         <div class="thumbnail">
           <img src="http://www.cfp-dc.org/images/dc/cropped/162.jpg">
           <div class="caption">
@@ -341,8 +337,7 @@ include('includes/functions.php');
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 iso-item nonprofit-listing">
-        <div class="hidden"><span class="region">MD</span><span class="year">2011</span><span class="category">nature</span></div>
+      <div class="col-xs-12 iso-item nonprofit-listing" data-year="2011" data-region="MD" data-category="nature">
         <div class="thumbnail">
           <img src="http://www.cfp-dc.org/images/dc/cropped/233.jpg">
           <div class="caption">
@@ -355,8 +350,7 @@ include('includes/functions.php');
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 iso-item nonprofit-listing">
-        <div class="hidden"><span class="region">DC</span><span class="year">2014</span><span class="category">education</span></div>
+      <div class="col-xs-12 iso-item nonprofit-listing" data-year="2014" data-region="DC" data-category="education">
         <div class="thumbnail">
           <img src="http://www.cfp-dc.org/images/dc/cropped/266.jpg">
           <div class="caption">
@@ -369,8 +363,7 @@ include('includes/functions.php');
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 iso-item nonprofit-listing">
-        <div class="sr-only"><span class="region">DC</span><span class="year">2014</span><span class="category">education</span></div>
+      <div class="col-xs-12 iso-item nonprofit-listing" data-year="2014" data-region="DC" data-category="education">
         <div class="thumbnail">
           <img src="http://www.cfp-dc.org/images/dc/cropped/196.jpg">
           <div class="caption">
@@ -383,8 +376,7 @@ include('includes/functions.php');
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 iso-item nonprofit-listing">
-        <div class="hidden"><span class="region">MD</span><span class="year">2014</span><span class="category">human-services</span></div>
+      <div class="col-xs-12 iso-item nonprofit-listing clearfix" data-year="2014" data-region="MD" data-category="human-services">
         <div class="thumbnail">
           <img src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
           <div class="caption">
