@@ -746,7 +746,7 @@ form .error + textarea {
 
 .subcategories .thumb {
     border: none;
-    display: table;
+    display: block;
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
@@ -754,11 +754,15 @@ form .error + textarea {
     position: relative;
 }
 
+.subcategories .thumb .img-responsive {
+    min-width: 100%;
+}
+
 .subcategories .cap {
     position: absolute;
     bottom: 0;
     background: rgba(0, 0, 0, 0.8);
-    display: table-cell;
+    display: block;
     left: 0;
     padding: 0;
     text-transform: uppercase;
@@ -1422,9 +1426,7 @@ main address > span, address > a {
 }
 
 /*Sharing Page*/
-.best-of-badge-sharing {
-   
-}
+.best-of-badge-sharing {}
 
 /*Vision Pages*/
 .vision {
