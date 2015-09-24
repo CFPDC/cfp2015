@@ -506,6 +506,10 @@ form .error + textarea {
     border-radius: 0;
 }
 
+.global-search-field .input-group {
+    margin-bottom: 0;
+}
+
 /* a top level navigation item in the mega menu */
 .nav-item {
     display: inline-block;
