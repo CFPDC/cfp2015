@@ -24,3 +24,17 @@ form.request-catalogue {
 .lt-ie9 .search-results .sort-display-menu-container .sort-display-menu {
     margin-top: 50px;
 }
+
+.lt-ie9 .subcategories .cap > h3 {
+    background: #000;
+}
+
+.lt-ie9 .two-column-form .checkbox input[type=checkbox], .lt-ie9 .two-column-form input[type=radio] {
+    border: none;
+    left: 0;
+    top: -5px;
+}
+
+.lt-ie9 .two-column-form .checkbox label, .lt-ie9 .two-column-form .radio label {
+    position: relative;
+}
