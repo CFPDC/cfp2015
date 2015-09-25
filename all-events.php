@@ -17,7 +17,7 @@ include('includes/functions.php');
 	</div>
 </div>
 <div class="row">
-	<aside class="col-sm-3 who-we-are-nav" id="asideFilter">
+	<aside class="col-sm-3 who-we-are-nav" id="asideFilter" role="navigation">
 		<ul class="list-unstyled">
 			<li><a href="javascript:void(0);" class="current">Events</a></li>
 			<li><a href="volunteer-opportunities.php">Volunteer</a></li>

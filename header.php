@@ -274,7 +274,7 @@
       <legend class="sr-only">Search The Catalogue for Philanthropy website</legend>
       <label class="sr-only" for="globalSearch"></label>
       <div class="input-group">
-        <input type="text" class="form-control input-lg" placeholder="SEARCH" id="globalSearch" aria-describedby="globalSearch">
+        <input type="text" class="form-control input-lg" placeholder="SEARCH" id="globalSearch" aria-describedby="globalSearch" role="search">
         <span class="input-group-btn">
           <button class="btn btn-primary search-submit input-lg" id="search-submit-button" name="search-submit-button">
           <span class="fa fa-search fa-2x">
