@@ -12,7 +12,7 @@ include('includes/functions.php');
 </div>
 <main class="container-fluid secondary" role="main">
 <div class="row">
-	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
+	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter" role="navigation">
 		<ul class="list-unstyled">
 			<li><a href="javascript:void(0);" class="current">About Us</a></li>
 			<li><a href="cfp-team.php">Team</a></li>
