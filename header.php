@@ -271,11 +271,11 @@
         </li>
       </ul>
     </nav>
-    <fieldset class="col-sm-offset-9 col-md-offset-0 col-sm-5 col-md-4 hidden-xs hidden-sm pull-right global-search-field">
+    <fieldset class="col-sm-offset-9 col-md-offset-0 col-sm-5 col-md-4 hidden-xs hidden-sm pull-right global-search-field" role="search">
       <legend class="sr-only">Global Search The Catalogue for Philanthropy website</legend>
       <label class="sr-only" for="globalSearch">Search The Catalogue for Philanthropy website  </label>
       <div class="input-group">
-        <input type="text" class="form-control input-lg" placeholder="SEARCH" id="globalSearch" aria-describedby="globalSearch">
+        <input type="text" class="form-control input-lg" placeholder="SEARCH" id="globalSearch">
         <span class="input-group-btn">
           <button class="btn btn-primary search-submit input-lg" id="search-submit-button" name="search-submit-button">
           <span class="fa fa-search fa-2x">

@@ -221,24 +221,33 @@ var global = {
 
 	},
 	mobileNavTrigger: function() {
-		var mobileNav = $('.mobile-nav').find('a:first');
-		mobileNav.focus();
+		var mobileNav = $('.mobile-nav').find('a:first'),
+			liveText = 'The mobile menu has opened';
+		liveTextRegion.text(liveText);
+		setTimeout(function() {
+			liveTextRegion.text('');
+		}, 3000);
+		setTimeout(function() {
+			mobileNav.focus();
+		}, 50);
+
 	},
 	mobileNavClose: function(e) {
-		var lastMenuItem = $('.mobile-nav').find('a:last');
-		if ($('.mobile-nav.offcanvas').is('in')) {
-			$(lastMenuItem).on('focus', function(e) {
-				$(window).keyup(function(e) {
-					var code = (e.keyCode ? e.keyCode : e.which);
-					if (code == 9) {
-						alert('I was tabbed!');
-					}
-				});
-			});
+		var mobileMenu = $('.mobile-nav'),
+			navTrigger = $('.navbar-toggle'),
+			liveText = 'The mobile menu has closed';
+
+		if ($('.mobile-nav').hasClass('in') && e.keyCode === 9) {
+			mobileMenu.offcanvas('hide');
+			liveTextRegion.text(liveText);
+			setTimeout(function() {
+				liveTextRegion.text('');
+			}, 3000);
+			setTimeout(function() {
+				navTrigger.focus();
+			}, 50);
+
 		}
-
-
-
 	},
 	navMenu: function() {
 		//add empty sub nav div for alignment purposes. This is needed if there is no dropdown.
@@ -588,7 +597,10 @@ $('.navbar-toggle').on('click', function() {
 });
 
 //closing mobile menu --- not working yet
-//global.mobileNavClose(e);
+$('.mobile-nav').find('a:last').on('keydown', function(e) {
+	global.mobileNavClose(e);
+});
+
 
 // events calendar button -- navigate to the calendar page
 $('.event-button, .all-event-button').on('click', function() {
