@@ -26,7 +26,7 @@ include('includes/functions.php');
 	<section class="col-xs-12 col-sm-8">
 		<h2>Application Guidelines &amp; Instructions<br> <small> The 2015 Application is closed</small></h2>
 		<div class="row">
-			<p class="col-xs-12 alert alert-danger">UPDATE: Join us for a workshop (optional) to learn more about our financial review and ask questions of our reviewers at <a href="http://www.raffa.com/">Raffa</a>&mdash;<strong>Monday, February 9th @ 3:30pm</strong> or <strong>Friday, February 20th @ 10am</strong>. <a href="http://cfp-dc.org/rsvp/rsvp.php?rid=156&amp;id=-1" title="Link to register for financial review and FAQ session with reviewers">Register here</a> to join us in person or via the web!</p>
+			<p class="col-xs-12 alert alert-danger">UPDATE: Join us for a workshop (optional) to learn more about our financial review and ask questions of our reviewers at <a href="http://www.raffa.com/">Raffa</a>&mdash;<strong>Monday, February 9th @ 3:30pm</strong> or <strong>Friday, February 20th @ 10am</strong>. <a href="http://cfp-dc.org/rsvp/rsvp.php?rid=156&amp;id=-1" title="Link to register for financial review and FAQ session with reviewers">Register here<span class="sr-only">Link to register for financial review and FAQ session with reviewers</span></a> to join us in person or via the web!</p>
 			<div class="col-sm-12 col-md-8">
 				<h3>Why Apply</h3>
 				<p>Being part of our network means you’ll be recognized as “one of the best” high-impact, community-based nonprofits in our region&mdash;something that means so much to supporters, both existing and new. While we do not guarantee a specific financial benefit, our track record shows that when nonprofits engage in a committed partnership with us, they receive both financial and other returns. (The Catalogue has helped raise over $25 million since 2003.)</p>
@@ -91,7 +91,7 @@ include('includes/functions.php');
 					<p>
 					Our vetted list of charities for the 2015-16 print Catalogue will be finalized in May and we’ll work with selected organizations to create their Catalogue features, wish lists, photos and more before the Catalogue is released in late fall, just in advance of the giving season.
 					</p>
-					<p>If you have read our application guidelines, eligibility criteria and <a href="faq.php">FAQ</a> and are interested in applying to be featured in the 2015-16 Catalogue for Philanthropy, please download our application instructions <a href="http://cfp-dc.org/email_content/2014/app2014/Application%20Instructions_2014.pdf">here</a></p>
+					<p>If you have read our application guidelines, eligibility criteria and <a href="faq.php">FAQ</a> and are interested in applying to be featured in the 2015-16 Catalogue for Philanthropy, please download our application instructions <a href="http://cfp-dc.org/email_content/2014/app2014/Application%20Instructions_2014.pdf">here<span class="sr-only">Download our Instructions here</span></a></p>
 					<p>
 					<strong>Questions:</strong> Before you email or call, please read our <a href="faq.php">Frequently Asked Questions (FAQ)</a>. If you don't find the answers you are looking for, call us at <a href="tel:202-955-6538" title="call The Catalogue for Philanthropy">202-955-6538</a>, or email us at <a href="mailto:info@catalogueforphilanthropy-dc.org" title="email The Cataloge for Philanthropy">info@catalogueforphilanthropy-dc.org</a>.
 					</p>
