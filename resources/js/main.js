@@ -220,6 +220,26 @@ var global = {
 		});
 
 	},
+	mobileNavTrigger: function() {
+		var mobileNav = $('.mobile-nav').find('a:first');
+		mobileNav.focus();
+	},
+	mobileNavClose: function(e) {
+		var lastMenuItem = $('.mobile-nav').find('a:last');
+		if ($('.mobile-nav.offcanvas').is('in')) {
+			$(lastMenuItem).on('focus', function(e) {
+				$(window).keyup(function(e) {
+					var code = (e.keyCode ? e.keyCode : e.which);
+					if (code == 9) {
+						alert('I was tabbed!');
+					}
+				});
+			});
+		}
+
+
+
+	},
 	navMenu: function() {
 		//add empty sub nav div for alignment purposes. This is needed if there is no dropdown.
 		$('.nav-item.last').append('<div class="sub-nav hidden"></div>');
@@ -280,6 +300,18 @@ var global = {
 
 		}
 	},
+	pressReleaseLink508: function() {
+		if ($('a').closest('.url_press_release').length > 0) {
+			$('.url_press_release').find('a[target="_blank"]').each(function() {
+				var $this = $(this),
+					parent = $this.parent('.url_press_release'),
+					parentLink = parent.prev('.press-release').children('a:first'),
+					textToAdd = parentLink.text(),
+					srAppendText = '<span class="sr-only"> to learn more about ' + textToAdd + '</span>';
+				$this.append(srAppendText);
+			});
+		}
+	},
 	relatedCarousel: function() {
 		if ($(".carousel[data-class]").length) {
 
@@ -306,7 +338,6 @@ var global = {
 			}
 		}
 	},
-
 	setGetParameter: function(paramName, paramValue) {
 		var url = window.location.href;
 
@@ -552,6 +583,13 @@ if (!$('html').hasClass('lt-ie9')) {
 }
 //end isotope script
 
+$('.navbar-toggle').on('click', function() {
+	global.mobileNavTrigger();
+});
+
+//closing mobile menu --- not working yet
+//global.mobileNavClose(e);
+
 // events calendar button -- navigate to the calendar page
 $('.event-button, .all-event-button').on('click', function() {
 	location.href = '/events-calendar.php';
@@ -600,7 +638,6 @@ $('.carouselButtons').on('click', 'button', function() {
 //make all anchor tags 'clickable' by enter key
 $('a').on('keydown', function(event) {
 	if (event.keyCode === 13) {
-		event.preventDefault();
 		$(this).click();
 	}
 	return true;
@@ -650,6 +687,9 @@ $('.filter-parameter').on('click', function() {
 });
 
 $(function() {
+	global.pressReleaseLink508();
+	A11y.Core();
+
 	//.ready for global functions
 	global.setHeight();
 

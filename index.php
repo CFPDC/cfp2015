@@ -2,6 +2,7 @@
 include('includes/functions.php');
 ?>
 <?php get_template('header', 'Title of homepage'); ?>
+<h1 class="sr-only">Catalogue for Philanthropy: Greater Washington Area Home page</h1>
 <div id="myCarousel" class="carousel slide clearfix hero" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -37,7 +38,7 @@ include('includes/functions.php');
       <img src="http://lorempixel.com/1200/500/animals" class="img-responsive" alt="" aria-hidden="true">
       <div class="container">
         <div class="carousel-caption col-sm-4 col-md-3">
-          <h1>Slide 1</h1>
+          <p class="h1">Slide 1</p>
           <p>
           Aenean a rutrum nulla. Vestibulum a arcu at nisi tristique pretium.
           </p>
@@ -51,7 +52,7 @@ include('includes/functions.php');
       <img src="http://lorempixel.com/1200/500/nature" class="img-responsive" alt="" aria-hidden="true">
       <div class="container">
         <div class="carousel-caption col-sm-4 col-md-3">
-          <h1>Slide 2</h1>
+          <p class="h1">Slide 2</p>
           <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae egestas purus.
           </p>
@@ -65,7 +66,7 @@ include('includes/functions.php');
       <img src="http://lorempixel.com/1200/500/abstract" class="img-responsive" alt="" aria-hidden="true">
       <div class="container">
         <div class="carousel-caption col-sm-4 col-md-3">
-          <h1>Slide 3</h1>
+          <p class="h1">Slide 3</p>
           <p>
           Donec sit amet mi imperdiet mauris viverra accumsan ut at libero.
           </p>
@@ -83,7 +84,6 @@ include('includes/functions.php');
 </div>
 <main class="container-fluid" role="main">
 <div class="row">
-  <h1 class="sr-only">Catalogue for Philanthropy: Greater Washington Area Home page</h1>
   <p class="lead text-center home-lead-text col-sm-8 col-sm-offset-2">
   Donec metus ex, maximus vel dolor vel, pellentesque dictum diam. Maecenas feugiat nulla sem, vel ultrices nisi fringilla in. Sed ac rutrum purus. Donec libero massa, pulvinar eget elit et, accumsan porttitor orci.
   </p>
