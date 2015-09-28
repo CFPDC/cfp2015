@@ -220,6 +220,35 @@ var global = {
 		});
 
 	},
+	mobileNavTrigger: function() {
+		var mobileNav = $('.mobile-nav').find('a:first'),
+			liveText = 'The mobile menu has opened';
+		liveTextRegion.text(liveText);
+		setTimeout(function() {
+			liveTextRegion.text('');
+		}, 3000);
+		setTimeout(function() {
+			mobileNav.focus();
+		}, 50);
+
+	},
+	mobileNavClose: function(e) {
+		var mobileMenu = $('.mobile-nav'),
+			navTrigger = $('.navbar-toggle'),
+			liveText = 'The mobile menu has closed';
+
+		if ($('.mobile-nav').hasClass('in') && e.keyCode === 9) {
+			mobileMenu.offcanvas('hide');
+			liveTextRegion.text(liveText);
+			setTimeout(function() {
+				liveTextRegion.text('');
+			}, 3000);
+			setTimeout(function() {
+				navTrigger.focus();
+			}, 50);
+
+		}
+	},
 	navMenu: function() {
 		//add empty sub nav div for alignment purposes. This is needed if there is no dropdown.
 		$('.nav-item.last').append('<div class="sub-nav hidden"></div>');
@@ -280,6 +309,18 @@ var global = {
 
 		}
 	},
+	pressReleaseLink508: function() {
+		if ($('a').closest('.url_press_release').length > 0) {
+			$('.url_press_release').find('a[target="_blank"]').each(function() {
+				var $this = $(this),
+					parent = $this.parent('.url_press_release'),
+					parentLink = parent.prev('.press-release').children('a:first'),
+					textToAdd = parentLink.text(),
+					srAppendText = '<span class="sr-only"> to learn more about ' + textToAdd + '</span>';
+				$this.append(srAppendText);
+			});
+		}
+	},
 	relatedCarousel: function() {
 		if ($(".carousel[data-class]").length) {
 
@@ -306,7 +347,6 @@ var global = {
 			}
 		}
 	},
-
 	setGetParameter: function(paramName, paramValue) {
 		var url = window.location.href;
 
@@ -552,6 +592,16 @@ if (!$('html').hasClass('lt-ie9')) {
 }
 //end isotope script
 
+$('.navbar-toggle').on('click', function() {
+	global.mobileNavTrigger();
+});
+
+//closing mobile menu --- not working yet
+$('.mobile-nav').find('a:last').on('keydown', function(e) {
+	global.mobileNavClose(e);
+});
+
+
 // events calendar button -- navigate to the calendar page
 $('.event-button, .all-event-button').on('click', function() {
 	location.href = '/events-calendar.php';
@@ -600,7 +650,6 @@ $('.carouselButtons').on('click', 'button', function() {
 //make all anchor tags 'clickable' by enter key
 $('a').on('keydown', function(event) {
 	if (event.keyCode === 13) {
-		event.preventDefault();
 		$(this).click();
 	}
 	return true;
@@ -650,6 +699,9 @@ $('.filter-parameter').on('click', function() {
 });
 
 $(function() {
+	global.pressReleaseLink508();
+	A11y.Core();
+
 	//.ready for global functions
 	global.setHeight();
 

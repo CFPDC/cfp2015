@@ -37,10 +37,52 @@
 <a class="sr-only sr-only-focusable skip-navigation-link" href="javascript:void(0);" data-target="#primary-nav-container">Skip to main navigation</a>
 <noscript>
 <p class="js-off-message">
-  The page could not be loaded. Assets.cms.gov currently does not fully support browsers with &quot;JavaScript&quot; disabled. Please note that if you choose to continue without enabling &quot;JavaScript&quot; certain functionalities on this website may not be available.
+  The page could not be loaded. The Catalogue for Philanthorpy website currently does not fully support browsers with &quot;JavaScript&quot; disabled. Please note that if you choose to continue without enabling &quot;JavaScript&quot; certain functionalities on this website may not be available.
 </p>
 </noscript>
-<div class="mobile-nav navmenu navmenu-default navmenu-fixed-left offcanvas">
+
+<header class="container-fluid" role="banner">
+  <div class="row">
+    <div class="col-sm-12 col-md-5">
+      <a href="../" title="Catalogue for Philanthropy: Greater Washington home"> <img class="img-responsive header-logo" src="resources/images/cfp-logo-blue-brown2.gif" alt="Catalogue for Philanthropy: Greater Washington logo"> </a>
+    </div>
+    <nav class="col-xs-7 col-md-7 secondary-nav">
+      <ul class="list-inline">
+        <li>
+          <a href="contact.php" target="_self" title="CFP's contact information">Contact
+            <span class="sr-only">
+              The Catalogue for Philanthropy
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="request-catalogue.php" target="_self" title="Request a catalogue from CFP">Request a Catalogue</a>
+        </li>
+        <li>
+          <a href="sign-up.php" target="_self" title="Sign up for a CFP account">Sign Up</a>
+        </li>
+        <li>
+          <a href="login.php" target="_self" title="Login to your CFP account">Log In
+            <span class="sr-only">
+              to your Catalogue for Philanthropy account
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="hidden-print col-xs-12 col-sm-5 col-md-4 col-lg-3 catalogue-donate-button-container">
+      <a href="checkout.php?np_title=Catalogue_for_Philanthropy:_Greater_Washington" title="Donate to The Catalogue for Philanthropy" class="btn btn-primary catalogue-donate-button" id="donate-to-catalogue">Donate to The Catalogue</a>
+      <button class="navbar-toggle pull-right" data-toggle="offcanvas" data-target=".mobile-nav" data-canvas="body">
+      <span class="adobeBlank sr-only" aria-hidden="true">
+        Expand Menu Icon
+      </span>
+      <em class="fa fa-bars fa-lg fa-2x" style="font-family :'FontAwesome' !important">
+        <span id="expandText" class="sr-only">
+          Expand Menu
+        </span>
+      </em>
+      </button>
+      <div class="mobile-nav navmenu navmenu-default navmenu-fixed-left offcanvas">
   <ul class="list-unstyled">
     <li>
       <a href="contact.php" target="_self" title="CFP's contact information">Contact
@@ -153,47 +195,6 @@
     </li>
   </ul>
 </div>
-<header class="container-fluid" role="banner">
-  <div class="row">
-    <div class="col-sm-12 col-md-5">
-      <a href="../" title="Catalogue for Philanthropy: Greater Washington home"> <img class="img-responsive header-logo" src="resources/images/cfp-logo-blue-brown2.gif" alt="Catalogue for Philanthropy: Greater Washington logo"> </a>
-    </div>
-    <nav class="col-xs-7 col-md-7 secondary-nav">
-      <ul class="list-inline">
-        <li>
-          <a href="contact.php" target="_self" title="CFP's contact information">Contact
-            <span class="sr-only">
-              The Catalogue for Philanthropy
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="request-catalogue.php" target="_self" title="Request a catalogue from CFP">Request a Catalogue</a>
-        </li>
-        <li>
-          <a href="sign-up.php" target="_self" title="Sign up for a CFP account">Sign Up</a>
-        </li>
-        <li>
-          <a href="login.php" target="_self" title="Login to your CFP account">Log In
-            <span class="sr-only">
-              to your Catalogue for Philanthropy account
-            </span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <div class="hidden-print col-xs-12 col-sm-5 col-md-4 col-lg-3 catalogue-donate-button-container">
-      <a href="checkout.php?np_title=Catalogue_for_Philanthropy:_Greater_Washington" title="Donate to The Catalogue for Philanthropy" class="btn btn-primary catalogue-donate-button" id="donate-to-catalogue">Donate to The Catalogue</a>
-      <button class="navbar-toggle pull-right" data-toggle="offcanvas" data-target=".mobile-nav" data-canvas="body">
-      <span class="adobeBlank sr-only" aria-hidden="true">
-        Expand Menu Icon
-      </span>
-      <em class="fa fa-bars fa-lg fa-2x" style="font-family :'FontAwesome' !important">
-        <span id="expandText" class="sr-only">
-          Expand Menu
-        </span>
-      </em>
-      </button>
     </div>
   </div>
   <div class="row primary-nav" id="primary-nav-container">
@@ -270,11 +271,11 @@
         </li>
       </ul>
     </nav>
-    <fieldset class="col-sm-offset-9 col-md-offset-0 col-sm-5 col-md-4 hidden-xs hidden-sm pull-right global-search-field">
-      <legend class="sr-only">Search The Catalogue for Philanthropy website</legend>
-      <label class="sr-only" for="globalSearch"></label>
+    <fieldset class="col-sm-offset-9 col-md-offset-0 col-sm-5 col-md-4 hidden-xs hidden-sm pull-right global-search-field" role="search">
+      <legend class="sr-only">Global Search The Catalogue for Philanthropy website</legend>
+      <label class="sr-only" for="globalSearch">Search The Catalogue for Philanthropy website  </label>
       <div class="input-group">
-        <input type="text" class="form-control input-lg" placeholder="SEARCH" id="globalSearch" aria-describedby="globalSearch">
+        <input type="text" class="form-control input-lg" placeholder="SEARCH" id="globalSearch">
         <span class="input-group-btn">
           <button class="btn btn-primary search-submit input-lg" id="search-submit-button" name="search-submit-button">
           <span class="fa fa-search fa-2x">
