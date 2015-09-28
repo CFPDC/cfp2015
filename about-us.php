@@ -12,7 +12,7 @@ include('includes/functions.php');
 </div>
 <main class="container-fluid secondary" role="main">
 <div class="row">
-	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
+	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter" role="navigation">
 		<ul class="list-unstyled">
 			<li><a href="javascript:void(0);" class="current">About Us</a></li>
 			<li><a href="cfp-team.php">Team</a></li>
@@ -32,7 +32,7 @@ include('includes/functions.php');
 			</div>
 			<div class="col-sm-12 col-md-5">
 				<figure class="embed-responsive embed-responsive-16by9">
-					<iframe src="https://player.vimeo.com/video/110540179" class="embed-responsive-item" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					<iframe src="https://player.vimeo.com/video/110540179" class="embed-responsive-item" title="video explaining how The Catalogue for Philanthropy operates"></iframe>
 					<figcaption class="cfp-video-caption"><a href="http://vimeo.com/110540179">Give Like a Local</a> from <a href="http://vimeo.com/user9318152">Catalogue for Philanthropy: GW</a> on <a href="https://vimeo.com">Vimeo</a>.</figcaption>
 				</figure>
 			</div>
