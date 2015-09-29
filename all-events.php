@@ -10,7 +10,7 @@ include('includes/functions.php');
 <div class="clearfix hero">
 	<img src="http://lorempixel.com/1200/500/nature" alt="" aria-hidden="true" class="img-responsive">
 </div>
-<main class="container-fluid secondary" role="main">
+<main role="main" class="container-fluid secondary">
 <div class="row">
 	<div class="col-xs-10 col-xs-offset-1 visible-xs filter-toggle-button">
 		<button class="btn btn-primary center-block" data-toggle="collapse" data-target="#asideFilter" aria-expanded="false" aria-controls="asideFilter">Filter Results</button>

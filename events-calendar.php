@@ -7,7 +7,7 @@ include('includes/functions.php');
 		<h1 class="text-center">Events Calendar</h1>
 	</div>
 </div>
-<main class="container-fluid secondary" role="main">
+<main role="main" class="container-fluid secondary">
 <div class="row event-details-row">
 	<div class="col-sm-3">
 		<a href="all-events.php" class="back back-to-events">Back to All Events</a>

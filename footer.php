@@ -67,7 +67,7 @@
 	<!-- load JS -->
 	<script src="resources/js/main.js" async></script>
 	<!-- Google Analytics -->
-	<script defer>
+	<script>
 	var _gaq = _gaq || [];
 	_gaq.push(['_setAccount', 'UA-2058492-2']);
 	_gaq.push(['_setDomainName', 'catalogueforphilanthropy-dc.org']);

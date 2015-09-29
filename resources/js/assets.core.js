@@ -17,7 +17,9 @@ var exitText = '<span class="sr-only"> opens a new tab</span>',
     //add ARIA attributes to mobile navigation and remove if screen size is adjusted above mobile screen size
     mobileDropdownUl = $('#topNavList').find('.navbar-nav'),
     //variable to find accordion header text
-    headerTitle;
+    headerTitle,
+    liveTextRegion = $('#liveText').children('p'),
+    liveTextPoliteRegion = $('#liveText-polite').children('p');
 
 
 /*************************************************************************
@@ -61,8 +63,8 @@ var A11y = {
         ********************************************/
         //add live region for anything to use for announcements to screen readers
         if ($('#liveText').length === 0) {
-            $('body').prepend('<div id="liveText" class="sr-only" aria-live="assertive"></div>');
-            $('body').prepend('<div id="liveText-polite" class="sr-only" aria-live="polite"></div>');
+            $('body').prepend('<div id="liveText" class="sr-only" aria-live="assertive"><p></p></div>');
+            $('body').prepend('<div id="liveText-polite" class="sr-only" aria-live="polite"><p></p></div>');
         }
 
         /*******************************************
