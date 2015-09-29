@@ -24,12 +24,13 @@ include('includes/functions.php');
 		</ul>
 	</aside>
 	<section class="col-xs-12 col-sm-8">
-		<h2>Application Guidelines &amp; Instructions<br> <small> The 2015 Application is closed</small></h2>
+		<h2 class="app-guideline">Application Guidelines &amp; Instructions</h2> 
+		<p><span class="sr-only">Note:</span> The 2015 Application is closed</p>
 		<div class="row">
 			<p class="col-xs-12 alert alert-danger">UPDATE: Join us for a workshop (optional) to learn more about our financial review and ask questions of our reviewers at <a href="http://www.raffa.com/">Raffa</a>&mdash;<strong>Monday, February 9th @ 3:30pm</strong> or <strong>Friday, February 20th @ 10am</strong>. <a href="http://cfp-dc.org/rsvp/rsvp.php?rid=156&amp;id=-1" title="Link to register for financial review and FAQ session with reviewers">Register here<span class="sr-only">Link to register for financial review and FAQ session with reviewers</span></a> to join us in person or via the web!</p>
 			<div class="col-sm-12 col-md-8">
 				<h3>Why Apply</h3>
-				<p>Being part of our network means you’ll be recognized as “one of the best” high-impact, community-based nonprofits in our region&mdash;something that means so much to supporters, both existing and new. While we do not guarantee a specific financial benefit, our track record shows that when nonprofits engage in a committed partnership with us, they receive both financial and other returns. (The Catalogue has helped raise over $25 million since 2003.)</p>
+				<p>Being part of our network means you'll be recognized as “one of the best” high-impact, community-based nonprofits in our region&mdash;something that means so much to supporters, both existing and new. While we do not guarantee a specific financial benefit, our track record shows that when nonprofits engage in a committed partnership with us, they receive both financial and other returns. (The Catalogue has helped raise over $25 million since 2003.)</p>
 				<h3>Benefits of a Catalogue Partnership</h3>
 				<h4>What we'll do:</h4>
 				<ul class="normal">
@@ -51,7 +52,7 @@ include('includes/functions.php');
 				<ul class="list-unstyled normal">
 					<li><a href="http://cfp-dc.org/email_content/2015/2015app/Financial%20supplement%20FAQ_2015.pdf">Financial FAQ (PDF)</a></li>
 					<li><a href="http://cfp-dc.org/email_content/2015/2015app/Glossary%20of%20Financial%20Terms_2015.pdf">Financial glossary (PDF)</a></li>
-					<li><a href="http://cfp-dc.org/email_content/2015/2015app/RaffaFinancialSupplement-2015.xlsx"> Financial Worksheet (.xlsx)</a> <br><small>(one of the required financial uploads)</small></li>
+					<li><a href="http://cfp-dc.org/email_content/2015/2015app/RaffaFinancialSupplement-2015.xlsx"> Financial Worksheet (.xlsx) (one of the required financial uploads)</a></li>
 					<li><a href="http://cfp-dc.org/email_content/2015/2015app/CFPDC-Financials-Workshop-20150209.pdf">RAFFA Financial Workshop Powerpoint</a></li>
 				</ul>
 			</div>
