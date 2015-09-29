@@ -34,7 +34,7 @@
   <p>
   </p>
 </div>
-<a class="sr-only sr-only-focusable skip-navigation-link" href="javascript:void(0);" data-target="#primary-nav-container">Skip to main navigation</a>
+<a class="sr-only sr-only-focusable skip-navigation-link" href="javascript:void(0);" data-target="#primary-skip-nav">Skip to main navigation</a>
 <noscript>
 <p class="js-off-message">
   The page could not be loaded. The Catalogue for Philanthorpy website currently does not fully support browsers with &quot;JavaScript&quot; disabled. Please note that if you choose to continue without enabling &quot;JavaScript&quot; certain functionalities on this website may not be available.
@@ -201,7 +201,7 @@
     <nav class="col-md-8 col-md-offset-0 nav-primary-nav" role="navigation">
       <ul class="nav-menu list-inline">
         <li class="nav-item">
-          <a role="button" href="javascript:void(0)">Who We Are</a>
+          <a role="button" href="about-us.php" title="About CFP">Who We Are</a>
           <div class="sub-nav">
             <ul class="sub-nav-group">
               <li>
@@ -229,7 +229,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <a role="button" href="javascript:void(0);">Our Nonprofits</a>
+          <a role="button" href="our-nonprofits.php" title="View our Nonprofits">Our Nonprofits</a>
           <div class="sub-nav">
             <ul class="sub-nav-group">
               <li>
@@ -251,7 +251,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <a role="button" href="javascript:void(0);">Get Involved</a>
+          <a role="button" href="javascript:void(0);" title="View our ways to give page">Get Involved</a>
           <div class="sub-nav">
             <ul class="sub-nav-group">
               <li>

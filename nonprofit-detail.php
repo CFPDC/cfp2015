@@ -7,7 +7,7 @@ include('includes/functions.php');
     <h1 class="col-xs-12" id="np-2seeds">2 Seeds</h1>
   </div>
 </div>
-<main class="container-fluid" role="main">
+<main role="main" class="container-fluid">
   <div class="row">
     <section class="col-sm-8">
       <div class="clearfix hero details">

@@ -100,22 +100,22 @@ strong {
 
 /* do not group these rules */
 *::-webkit-input-placeholder {
-    color: #292929;
+    color: #292929 !important;
 }
 
 *:-moz-placeholder {
     /* FF 4-18 */
-    color: #292929;
+    color: #292929 !important;
 }
 
 *::-moz-placeholder {
     /* FF 19+ */
-    color: #292929;
+    color: #292929 !important;
 }
 
 *:-ms-input-placeholder {
     /* IE 10+ */
-    color: #292929;
+    color: #292929 !important;
 }
 
 hr {
@@ -191,7 +191,7 @@ p.img-above {
 }
 
 .alert-danger {
-    background-color: #F6E6E6;
+    background-color: #FFF7F7;
     color: #9E3735;
 }
 
@@ -744,7 +744,7 @@ form .error + textarea {
 
 .carouselButtons {
     background-color: rgba(0, 0, 0, 0.77);
-    display: none;
+    display: block;
     position: absolute;
     right: 0;
     top: 0;
@@ -1706,7 +1706,6 @@ main address > span, address > a {
 
 .red-text {
     color: #c00000;
-    font-weight: 700;
 }
 
 /*---Gift Cards Process---*/
@@ -1966,6 +1965,11 @@ label[for="year"] {
 
 .blog .comments small {
     display: inline-block;
+}
+
+/*---Application Guidlines---*/
+.app-guideline {
+    margin-bottom: 5px;
 }
 
 /*---nonprofit details---*/
@@ -2329,9 +2333,6 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
 
 /*---MEDIA QUERIES---*/
 @media screen and (min-width: 480px) {
-    .carouselButtons {
-        display: block;
-    }
     .carousel-caption {
         padding-left: 13%;
         padding-right: 13%;

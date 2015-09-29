@@ -10,7 +10,7 @@ include('includes/functions.php');
 <div class="clearfix hero">
 	<img src="http://lorempixel.com/1200/500/nature" alt="" aria-hidden="true" class="img-responsive">
 </div>
-<main class="container-fluid secondary blog" role="main">
+<main role="main" class="container-fluid secondary blog">
 <div class="row">
 	<section class="col-sm-8">
 		<a href="javascript:void(0);" class="posts back" title="View older posts on The Catalogue for Philanthropy's Blog">Older Posts</a>

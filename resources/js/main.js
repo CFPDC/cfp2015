@@ -11,7 +11,9 @@ Modernizr.load({
 
 /*** variables ***/
 var $root = $('html, body'),
-	liveTextRegion = $('#liveTextPolite').children('p');
+	liveTextRegion = $('#liveTextPolite').children('p'),
+	navTrigger = $('.navbar-toggle'),
+	mobileMenu = $('.mobile-nav');
 
 
 var global = {
@@ -196,6 +198,19 @@ var global = {
 
 
 	},
+	faqSetup: function() {
+		//.faq-questions
+		if ($('.faq-list a[data-target]')) {
+			var list = $('#faq-list');
+			if (list.length > 0) {
+				list.find('a[data-target]').each(function() {
+					var $this = $(this),
+						question = $this.attr('data-target');
+					$this.attr('id', question + '-question');
+				});
+			}
+		}
+	},
 	globalImageCheck: function(img) {
 		//call this in another function by naming variable. See homeImageCheck() for reference
 		img.each(function() {
@@ -212,13 +227,59 @@ var global = {
 		$('.jumplink').on('click', function() {
 			var target = $(this).attr('data-target');
 			$(target).attr('tabindex', '0');
+			/*if ($('.faq-list a[data-target]')) {
+				var targetId = $(this).attr('id');
+				$(target).parent().children('.back-top').attr('data-target', targetId);
+			}*/
 			$root.animate({
 				scrollTop: $(target).offset().top
 			}, 'slow');
+
+
 			$(target).focus();
 			return false;
 		});
 
+	},
+
+	navTriggerToggle: function(e) {
+		var srText = $('#expandText');
+		mobileMenu.attr({
+			'aria-expanded': 'false'
+		});
+		srText.text('Expand navigation');
+
+		//toggle aria attributes for mobile screens
+		navTrigger.on('click', function() {
+			if (mobileMenu.is(':hidden')) {
+				srText.text('Collapse navigation');
+				mobileMenu.attr({
+					'aria-expanded': 'true'
+				});
+			} else {
+				srText.text('Expand navigation');
+				mobileMenu.attr({
+					'aria-expanded': 'false'
+				});
+			}
+		});
+		//if mobile menu is open and user clicks on body close menu update hidden text
+		$('body').on('click', function(e) {
+			if ($('.mobile-nav').hasClass('in')) {
+				if (mobileMenu.is(':hidden')) {
+					srText.text('Collapse navigation');
+					mobileMenu.attr({
+						'aria-expanded': 'true'
+					});
+				} else {
+					srText.text('Expand navigation');
+					mobileMenu.attr({
+						'aria-expanded': 'false'
+					});
+					global.mobileNavClose(e);
+				}
+			}
+		});
 	},
 	mobileNavTrigger: function() {
 		var mobileNav = $('.mobile-nav').find('a:first'),
@@ -233,9 +294,7 @@ var global = {
 
 	},
 	mobileNavClose: function(e) {
-		var mobileMenu = $('.mobile-nav'),
-			navTrigger = $('.navbar-toggle'),
-			liveText = 'The mobile menu has closed';
+		var liveText = 'The mobile menu has closed';
 
 		if ($('.mobile-nav').hasClass('in') && e.keyCode === 9) {
 			mobileMenu.offcanvas('hide');
@@ -489,20 +548,20 @@ var listViewResults = {
 
 //skip nav prevent hashtag in url
 function globalSkipNav() {
-	$(function() {
-		$('.skip-navigation-link').each(function() {
-			var focusedElement = $(this).attr('data-target');
-			//set a tabindex of -1 to make the element focusable for the skip nav but is not focusable for tabbing on page, this is only needed if the target is not a normally focusable element like a div container.
-			$(focusedElement).attr('tabindex', '-1');
-		}).on('click', function(event) {
-			var focusedElement = $(this).attr('data-target');
+	$('.skip-navigation-link').each(function() {
+		var focusedElement = $(this).attr('data-target').replace("#", ""),
+			newFocusElement = $('header').next(),
+			focusAnchor = '<a href="javascript:void(0)" class="sr-only" id="' + focusedElement + '"></a>';
+		$(focusAnchor).insertBefore(newFocusElement).attr('tabindex', '-1');
+		//set a tabindex of -1 to make the element focusable for the skip nav but is not focusable for tabbing on page, this is only needed if the target is not a normally focusable element like a div container.
+	}).on('click', function(event) {
+		var focusedElement = $(this).attr('data-target');
 
-			//prevent the hash and element id to show in url
-			event.preventDefault();
+		//prevent the hash and element id to show in url
+		event.preventDefault();
 
-			// set focus to element for skip nav
-			$(focusedElement).focus();
-		});
+		// set focus to element for skip nav
+		$(focusedElement).focus();
 	});
 }
 
@@ -701,6 +760,7 @@ $('.filter-parameter').on('click', function() {
 $(function() {
 	global.pressReleaseLink508();
 	A11y.Core();
+	global.navTriggerToggle();
 
 	//.ready for global functions
 	global.setHeight();
@@ -724,13 +784,18 @@ $(function() {
 		pause: "hover"
 	});
 	$('#playButton').on('click', function() {
-		$('#Mycarousel').carousel('cycle');
+		$('#myCarousel').carousel('cycle');
+		$('#pauseButton').focus();
 	});
 	$('#pauseButton').on('click', function() {
-		$('#Mycarousel').carousel('pause');
+		$('#myCarousel').carousel('pause');
+		$('#playButton').focus();
 	});
 
-
+	//faq list add jumplink attributes
+	if ($('.faq-questions').length > 0) {
+		global.faqSetup();
+	}
 
 	globalSkipNav();
 	homeSearchActiveToggle();
