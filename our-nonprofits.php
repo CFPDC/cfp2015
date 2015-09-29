@@ -7,7 +7,7 @@ include('includes/functions.php');
     <h1 class="col-xs-12 text-center">Our Nonprofits</h1>
   </div>
 </div>
-<main class="container-fluid search-results" role="main">
+<main role="main" class="container-fluid search-results">
 <div class="row">
   <div class="col-xs-12 hidden-xs sort-display-menu-container">
     <div class="pull-right sort-display-menu">

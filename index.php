@@ -29,8 +29,9 @@ include('includes/functions.php');
     </span>
     </button>
   </div>
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+  <a  role="button" class="left carousel-control" href="#myCarousel" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left">
+    <span class="sr-only">Select to view previous slide</span>
     </span>
   </a>
   <div class="carousel-inner">
@@ -77,12 +78,13 @@ include('includes/functions.php');
       </div>
     </div>
   </div>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+  <a role="button" class="right carousel-control" href="#myCarousel" data-slide="next">
     <span class="glyphicon glyphicon-chevron-right">
+    <span class="sr-only">Select to view next slide</span>
     </span>
   </a>
 </div>
-<main class="container-fluid" role="main">
+<main role="main" class="container-fluid">
 <div class="row">
   <p class="lead text-center home-lead-text col-sm-8 col-sm-offset-2">
   Donec metus ex, maximus vel dolor vel, pellentesque dictum diam. Maecenas feugiat nulla sem, vel ultrices nisi fringilla in. Sed ac rutrum purus. Donec libero massa, pulvinar eget elit et, accumsan porttitor orci.

@@ -7,7 +7,7 @@ include('includes/functions.php');
     <h1 class="col-xs-12 text-center">Catalogue For Philanthropy Site Map</h1>
   </div>
 </div>
-<main class="container-fluid secondary" role="main">
+<main role="main" class="container-fluid secondary">
 <div class="row">
   <section class="col-xs-12">
     <div class="row">
