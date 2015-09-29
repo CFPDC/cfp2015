@@ -1967,7 +1967,10 @@ label[for="year"] {
 .blog .comments small {
     display: inline-block;
 }
-
+/*---Application Guidlines---*/
+.app-guideline {
+    margin-bottom: 5px;
+}
 /*---nonprofit details---*/
 .hero.details, .more-about-section {
     margin-bottom: 30px;

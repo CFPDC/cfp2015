@@ -2,7 +2,7 @@
 	<section class="row">
 		<div class="col-sm-5 col-xs-12 col-md-4">
 			<a href="../" title="The Catalogue for Philanthropy: Greater Washington home">
-				<img class="img-responsive footer-logo" src="resources/images/footer-logo-no-flag-white.gif" title="CFP footer logo">
+				<img class="img-responsive footer-logo" src="resources/images/footer-logo-no-flag-white.gif" title="CFP footer logo" alt="Catalogue for Philanthropy logo">
 			</a>
 			<ul class="list-inline social-icons">
 				<li><a class="fa fa-facebook fa-3x" href="#"><span class="sr-only">Like CFP on Facebook</span></a></li>
