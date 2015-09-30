@@ -200,14 +200,30 @@ var global = {
 	},
 	faqSetup: function() {
 		//.faq-questions
-		if ($('.faq-list a[data-target]')) {
+		if ($('#faq-list a[data-target]')) {
 			var list = $('#faq-list');
+
 			if (list.length > 0) {
 				list.find('a[data-target]').each(function() {
 					var $this = $(this),
-						question = $this.attr('data-target');
+						question = $this.attr('data-target').replace("#", ""),
+						questionText = $(this).text(),
+						backTopTarget = '#' + question + '-question',
+						targetId = $this.attr('data-target'),
+						targetParent = $(targetId).parent(),
+						backTopLink = targetParent.next(),
+						backTopSrText = '<span class="sr-only"> - Returns to ' + questionText + ' in list of F A Q questions</span>';
+
+					//take each data-target in list of questions and make id for linking for back to top links
 					$this.attr('id', question + '-question');
+					//change each back to top link to return to each question
+					backTopLink.attr({
+						'data-target': backTopTarget,
+						'tabindex': '0'
+					}).append(backTopSrText);
+
 				});
+
 			}
 		}
 	},
@@ -795,6 +811,14 @@ $(function() {
 	//faq list add jumplink attributes
 	if ($('.faq-questions').length > 0) {
 		global.faqSetup();
+
+		//remove tabindex if user clicks on FAQ question and is focused on the 'dt' element, but only when tabbing off of the 'dt'element.
+		$('dt').on('keydown', function(event) {
+			if ((event.keyCode === 9) || (event.shiftKey && event.keyCode == 9)) {
+				$(this).removeAttr('tabindex');
+			}
+			return true;
+		});
 	}
 
 	globalSkipNav();
