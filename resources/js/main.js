@@ -200,14 +200,33 @@ var global = {
 	},
 	faqSetup: function() {
 		//.faq-questions
-		if ($('.faq-list a[data-target]')) {
+		if ($('#faq-list a[data-target]')) {
 			var list = $('#faq-list');
+
 			if (list.length > 0) {
 				list.find('a[data-target]').each(function() {
 					var $this = $(this),
-						question = $this.attr('data-target');
+						question = $this.attr('data-target').replace("#", ""),
+						questionText = $(this).text(),
+						backTopTarget = '#' + question + '-question',
+						targetId = $this.attr('data-target'),
+						targetParent = $(targetId).parent(),
+						backTopLink = targetParent.next(),
+						backTopSrText = '<span class="sr-only"> - Returns to ' + questionText + ' in list of F A Q questions</span>',
+						titleText = questionText.replace("?", ""),
+						backTopTitle = 'Go back to ' + titleText + ' in the list of questions';
+
+					//take each data-target in list of questions and make id for linking for back to top links
 					$this.attr('id', question + '-question');
+					//change each back to top link to return to each question
+					backTopLink.attr({
+						'data-target': backTopTarget,
+						'tabindex': '0',
+						'title': backTopTitle
+					}).append(backTopSrText);
+
 				});
+
 			}
 		}
 	},
@@ -226,18 +245,14 @@ var global = {
 	jumplink: function() {
 		$('.jumplink').on('click', function() {
 			var target = $(this).attr('data-target');
+			console.log(target);
 			$(target).attr('tabindex', '0');
-			/*if ($('.faq-list a[data-target]')) {
-				var targetId = $(this).attr('id');
-				$(target).parent().children('.back-top').attr('data-target', targetId);
-			}*/
 			$root.animate({
 				scrollTop: $(target).offset().top
 			}, 'slow');
 
 
 			$(target).focus();
-			return false;
 		});
 
 	},
@@ -706,12 +721,14 @@ $('.carouselButtons').on('click', 'button', function() {
 	}, 3000);
 });
 
-//make all anchor tags 'clickable' by enter key
+//make all anchor tags 'clickable' by enter key except if anchor tag is the 'back to top' anchor on FAQ page
 $('a').on('keydown', function(event) {
-	if (event.keyCode === 13) {
-		$(this).click();
+	if (!$(this).hasClass('back-top')) {
+		if (event.keyCode === 13) {
+			$(this).click();
+		}
+		return true;
 	}
-	return true;
 });
 
 
@@ -795,6 +812,14 @@ $(function() {
 	//faq list add jumplink attributes
 	if ($('.faq-questions').length > 0) {
 		global.faqSetup();
+
+		//remove tabindex if user clicks on FAQ question and is focused on the 'dt' element, but only when tabbing off of the 'dt'element.
+		$('dt').on('keydown', function(event) {
+			if ((event.keyCode === 9) || (event.shiftKey && event.keyCode == 9)) {
+				$(this).removeAttr('tabindex');
+			}
+			return true;
+		});
 	}
 
 	globalSkipNav();

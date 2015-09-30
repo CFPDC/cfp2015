@@ -326,7 +326,7 @@ small a {
     font-family: 'ProximaNovaRegular';
 }
 
-dl > div {
+dl > a {
     margin-bottom: 35px;
 }
 
@@ -1313,7 +1313,7 @@ main address > span, address > a {
 }
 
 .faq-list-container dt:before, .faq-list-container dd:before {
-    content: "Q:";
+    content: "\0051:";
     left: 0;
     position: absolute;
     font-family: 'LibreBaskervilleBold';
@@ -1323,7 +1323,7 @@ main address > span, address > a {
 }
 
 .faq-list-container dd:before {
-    content: "A:";
+    content: "\0041:";
 }
 
 .faq-questions {

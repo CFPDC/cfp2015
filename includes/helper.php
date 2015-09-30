@@ -840,10 +840,10 @@ function debug($array){
 function body_classes() {
 	$userAgent = strtolower($_SERVER['HTTP_USER_AGENT']); 
 	$klass = null;
-	if (preg_match('/windows/', $userAgent))  							$klass .= ' windows '; 
-	if (preg_match('/mac/', $userAgent)) 										$klass .= ' mac '; 
-	if ((bool) strpos($_SERVER['HTTP_USER_AGENT'],'iPad')) 	$klass .= ' ipad '; 
-	if ((bool) strpos($_SERVER['HTTP_USER_AGENT'],'iPhone')) 	$klass .= ' iphone ';
+	if (preg_match('/windows/', $userAgent)) $klass .= 'windows'; 
+	if (preg_match('/mac/', $userAgent)) $klass .= ' mac '; 
+	if ((bool) strpos($_SERVER['HTTP_USER_AGENT'],'iPad')) $klass .= ' ipad'; 
+	if ((bool) strpos($_SERVER['HTTP_USER_AGENT'],'iPhone')) $klass .= ' iphone';
 	
 	echo $klass;
 }
