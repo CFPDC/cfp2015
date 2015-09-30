@@ -21,11 +21,11 @@
 <link href="assets/css/proxima-nova.css" rel="stylesheet">
 <link href="assets/css/libre-baskerville.css" rel="stylesheet">
 <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="resources/css/docs.css" rel="stylesheet">
 <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 <link href="assets/css/jasny-bootstrap.min.css" rel="stylesheet">
 <link href="assets/css/fullcalendar.min.css" rel="stylesheet">
 <link href="assets/css/fullcalendar.print.css" rel="stylesheet" media="print">
-<link href="resources/css/docs.css" rel="stylesheet">
 <link href="resources/css/base.css" rel="stylesheet">
 <script src="assets/js/modernizr.js"></script>
 </head>
