@@ -12,30 +12,32 @@ include('includes/functions.php');
 </div>
 <main role="main" class="container-fluid secondary">
 <div class="row">
-	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter" role="navigation">
-		<ul class="list-unstyled">
-			<li>
-				<a href="about-us.php">About Us</a>
-			</li>
-			<li>
-				<a href="cfp-team.php">Team</a>
-			</li>
-			<li>
-				<a href="cfp-reviewers.php">Our Reviewers</a>
-			</li>
-			<li>
-				<a href="sponsors.php">Sponsors</a>
-			</li>
-			<li>
-				<a href="press.php">Press</a>
-			</li>
-			<li>
-				<a href="testimonials.php">Testimonials</a>
-			</li>
-			<li>
-				<a href="javascript:void(0);" class="current">Vision Report</a>
-			</li>
-		</ul>
+	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
+		<nav role="navigation">
+			<ul class="list-unstyled">
+				<li>
+					<a href="about-us.php">About Us</a>
+				</li>
+				<li>
+					<a href="cfp-team.php">Team</a>
+				</li>
+				<li>
+					<a href="cfp-reviewers.php">Our Reviewers</a>
+				</li>
+				<li>
+					<a href="sponsors.php">Sponsors</a>
+				</li>
+				<li>
+					<a href="press.php">Press</a>
+				</li>
+				<li>
+					<a href="testimonials.php">Testimonials</a>
+				</li>
+				<li>
+					<a href="vision-report.php" class="current">Vision Report</a>
+				</li>
+			</ul>
+		</nav>
 	</aside>
 	<section class="col-xs-12 col-sm-8">
 		<div class="row">

@@ -12,24 +12,26 @@ include('includes/functions.php');
 </div>
 <main role="main" class="container-fluid secondary">
 <div class="row">
-	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter" role="navigation">
-		<ul class="list-unstyled">
-			<li>
-				<a href="our-nonprofits.php" target="_self" title="View our Nonprofits" class="">Our Vetted Nonprofits</a>
-			</li>
-			<li>
-				<a href="our-nonprofits.php?strCategory=nature" target="_self" title="View our Nature Nonprofits" class="">Nature Nonprofits</a>
-			</li>
-			<li>
-				<a href="our-nonprofits.php?strCategory=culture" target="_self" title="View our Culture Nonprofits" class="hover">Culture Nonprofits</a>
-			</li>
-			<li>
-				<a href="our-nonprofits.php?strCategory=education" target="_self" title="View our Education Nonprofits" class="">Education Nonprofits</a>
-			</li>
-			<li>
-				<a href="our-nonprofits.php?strCategory=human-services" target="_self" title="View our Human Services Nonprofits">Human Services Nonprofits</a>
-			</li>
-		</ul>
+	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
+		<nav role="navigation">
+			<ul class="list-unstyled">
+				<li>
+					<a href="our-nonprofits.php" target="_self" title="View our Nonprofits" class="">Our Vetted Nonprofits</a>
+				</li>
+				<li>
+					<a href="our-nonprofits.php?strCategory=nature" target="_self" title="View our Nature Nonprofits" class="">Nature Nonprofits</a>
+				</li>
+				<li>
+					<a href="our-nonprofits.php?strCategory=culture" target="_self" title="View our Culture Nonprofits" class="hover">Culture Nonprofits</a>
+				</li>
+				<li>
+					<a href="our-nonprofits.php?strCategory=education" target="_self" title="View our Education Nonprofits" class="">Education Nonprofits</a>
+				</li>
+				<li>
+					<a href="our-nonprofits.php?strCategory=human-services" target="_self" title="View our Human Services Nonprofits">Human Services Nonprofits</a>
+				</li>
+			</ul>
+		</nav>
 	</aside>
 	<section class="col-sm-8">
 		<div class="col-sm-6">
