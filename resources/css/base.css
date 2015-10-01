@@ -2411,6 +2411,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .carousel-inner > .item > img {
         display: block;
     }
+    .related-links {
+        float: right;
+    }
     .subcategories .thumb {
         margin-left: 0;
         margin-right: 0;
