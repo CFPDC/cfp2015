@@ -26,11 +26,7 @@ include('includes/functions.php');
 	<section class="col-xs-12 col-sm-8">
 		<h2>Apply for The Catalogue for Philanthropy<br> <small> The 2015 Application is closed</small></h2>
 		<div class="row">
-			<div class="col-sm-12 col-md-8">
-				<h3>Who We Are: An Overview</h3>
-				<p>The mission of the Catalogue for Philanthropy: Greater Washington is to create strong and vibrant communities by connecting caring citizens with worthy community causes. For donors&sbquo; this means we take the guesswork out of giving by identifying the best community-based charities in Washington D.C. and nearby Maryland and Virginia. For our nonprofits&sbquo; we raise visibility through the distribution of our annual print Catalogue&sbquo; events&sbquo; and campaigns&sbquo; and we create resources and run educational workshops throughout the year to help them elevate their capacity to do good.</p>
-			</div>
-			<div class="col-xs-8 col-xs-offset-2 col-sm-12 col-sm-offset-0 col-md-4 well">
+		<div class="col-xs-8 col-xs-offset-2 col-sm-12 col-sm-offset-0 col-md-4 well related-links">
 				<h3>Quick Links</h3>
 				<ul class="list-unstyled normal">
 					<li><a href="application-instructions.php" title="The Catalogue for Philanthropy application guidelines and instructions"><span class="sr-only">CFP's </span>Application Guidelines and Instructions</a></li>
@@ -38,6 +34,11 @@ include('includes/functions.php');
 					<li><a href="faq.php" title="Visit The Catalogue for Philanthropy Frequently Asked Questions page">FAQ<span class="sr-only"> - frequently asked questions about applying to The Catalogue for Philanthropy</span></a></li>
 				</ul>
 			</div>
+			<div class="col-sm-12 col-md-8">
+				<h3>Who We Are: An Overview</h3>
+				<p>The mission of the Catalogue for Philanthropy: Greater Washington is to create strong and vibrant communities by connecting caring citizens with worthy community causes. For donors&sbquo; this means we take the guesswork out of giving by identifying the best community-based charities in Washington D.C. and nearby Maryland and Virginia. For our nonprofits&sbquo; we raise visibility through the distribution of our annual print Catalogue&sbquo; events&sbquo; and campaigns&sbquo; and we create resources and run educational workshops throughout the year to help them elevate their capacity to do good.</p>
+			</div>
+			
 			<p class="col-xs-12"><small>PLEASE NOTE: The Catalogue is NOT a grant-making organization. To facilitate the giving process for donors&sbquo; we accept donations on behalf of our charities and pass them on to our nonprofits&sbquo; but make no direct contributions or donations to any of our charities. We charge no fees for the work we do and are supported entirely by outside donations.</small></p>
 			<div class="col-xs-12">
 				<h3>Why Apply</h3>

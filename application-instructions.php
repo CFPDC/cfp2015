@@ -28,20 +28,8 @@ include('includes/functions.php');
 		<p><span class="sr-only">Note:</span> The 2015 Application is closed</p>
 		<div class="row">
 			<p class="col-xs-12 alert alert-danger">UPDATE: Join us for a workshop (optional) to learn more about our financial review and ask questions of our reviewers at <a href="http://www.raffa.com/">Raffa</a>&mdash;<strong>Monday, February 9th @ 3:30pm</strong> or <strong>Friday, February 20th @ 10am</strong>. <a href="http://cfp-dc.org/rsvp/rsvp.php?rid=156&amp;id=-1" title="Link to register for financial review and FAQ session with reviewers">Register here<span class="sr-only">Link to register for financial review and FAQ session with reviewers</span></a> to join us in person or via the web!</p>
-			<div class="col-sm-12 col-md-8">
-				<h3>Why Apply</h3>
-				<p>Being part of our network means you'll be recognized as “one of the best” high-impact, community-based nonprofits in our region&mdash;something that means so much to supporters, both existing and new. While we do not guarantee a specific financial benefit, our track record shows that when nonprofits engage in a committed partnership with us, they receive both financial and other returns. (The Catalogue has helped raise over $25 million since 2003.)</p>
-				<h3>Benefits of a Catalogue Partnership</h3>
-				<h4>What we'll do:</h4>
-				<ul class="normal">
-					<li>Collaborate with you on a powerful 170-word story about your work and your impact, to use in our Catalogue, and in your marketing, fundraising and other materials;</li>
-					<li>Promote your story through our <a href="http://en.calameo.com/read/0012788674c703b42cb3e">print Catalogue</a> (mailed to 25,000 local donors), a <a href="www.cfp-dc.org/nonprofits">personalized webpage on our website</a> and in our corporate portal, <a href="http://blog.cfp-dc.org/">our blog</a>, partnerships with local media outlets, social media and more: Check out our piece in <a href="http://www.washingtoncitypaper.com/giveitup"> Washington City Paper!</a></li>
-					<li>Give you access to our Nonprofit Portal, with customized marketing &amp; communications materials from personalized booklets, to online fundraising platforms, to our “One of the Best” seal;</li>
-					<li>Invite you to workshops &amp; events hosted by the Catalogue and our partners throughout the year, starting with our “Best Practices” workshop for new nonprofits and continuing with sessions on topics ranging from storytelling to development, financial sustainability and best practices to Board development;</li>
-					<li>Continue this partnership for three years beyond your print Catalogue feature!</li>
-				</ul>
-			</div>
-			<div class="col-xs-8 col-xs-offset-2 col-sm-12 col-sm-offset-0 col-md-4 well">
+			
+			<div class="col-xs-8 col-xs-offset-2 col-sm-12 col-sm-offset-0 col-md-4 well related-links">
 				<h3>Quick Links</h3>
 				<ul class="list-unstyled normal">
 					<li><a href="http://cfp-dc.org/email_content/2015/2015app/Application%20Instructions_2015.pdf">Application Instructions (PDF)</a></li>
@@ -54,6 +42,19 @@ include('includes/functions.php');
 					<li><a href="http://cfp-dc.org/email_content/2015/2015app/Glossary%20of%20Financial%20Terms_2015.pdf">Financial glossary (PDF)</a></li>
 					<li><a href="http://cfp-dc.org/email_content/2015/2015app/RaffaFinancialSupplement-2015.xlsx"> Financial Worksheet (.xlsx) (one of the required financial uploads)</a></li>
 					<li><a href="http://cfp-dc.org/email_content/2015/2015app/CFPDC-Financials-Workshop-20150209.pdf">RAFFA Financial Workshop Powerpoint</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-12 col-md-8">
+				<h3>Why Apply</h3>
+				<p>Being part of our network means you'll be recognized as “one of the best” high-impact, community-based nonprofits in our region&mdash;something that means so much to supporters, both existing and new. While we do not guarantee a specific financial benefit, our track record shows that when nonprofits engage in a committed partnership with us, they receive both financial and other returns. (The Catalogue has helped raise over $25 million since 2003.)</p>
+				<h3>Benefits of a Catalogue Partnership</h3>
+				<h4>What we'll do:</h4>
+				<ul class="normal">
+					<li>Collaborate with you on a powerful 170-word story about your work and your impact, to use in our Catalogue, and in your marketing, fundraising and other materials;</li>
+					<li>Promote your story through our <a href="http://en.calameo.com/read/0012788674c703b42cb3e">print Catalogue</a> (mailed to 25,000 local donors), a <a href="www.cfp-dc.org/nonprofits">personalized webpage on our website</a> and in our corporate portal, <a href="http://blog.cfp-dc.org/">our blog</a>, partnerships with local media outlets, social media and more: Check out our piece in <a href="http://www.washingtoncitypaper.com/giveitup"> Washington City Paper!</a></li>
+					<li>Give you access to our Nonprofit Portal, with customized marketing &amp; communications materials from personalized booklets, to online fundraising platforms, to our “One of the Best” seal;</li>
+					<li>Invite you to workshops &amp; events hosted by the Catalogue and our partners throughout the year, starting with our “Best Practices” workshop for new nonprofits and continuing with sessions on topics ranging from storytelling to development, financial sustainability and best practices to Board development;</li>
+					<li>Continue this partnership for three years beyond your print Catalogue feature!</li>
 				</ul>
 			</div>
 			<p class="col-xs-12"><small>There is no financial obligation of any kind associated with applying to or being featured in the Catalogue for Philanthropy. Leading institutions and generous individuals in the Washington region support the Catalogue as a service to the community.</small></p>
