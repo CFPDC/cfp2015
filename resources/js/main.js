@@ -214,7 +214,8 @@ var global = {
 						backTopLink = targetParent.next(),
 						backTopSrText = '<span class="sr-only"> - Returns to ' + questionText + ' in list of F A Q questions</span>',
 						titleText = questionText.replace("?", ""),
-						backTopTitle = 'Go back to ' + titleText + ' in the list of questions';
+						backTopTitle = 'Go back to ' + titleText + ' in the list of questions',
+						backTopAfterEl = '<span class="back-top-border" aria-hidden="true"></span>';
 
 					//take each data-target in list of questions and make id for linking for back to top links
 					$this.attr('id', question + '-question');
@@ -224,7 +225,7 @@ var global = {
 						'tabindex': '0',
 						'title': backTopTitle
 					}).append(backTopSrText);
-
+					$(backTopAfterEl).insertAfter(backTopLink);
 				});
 
 			}
