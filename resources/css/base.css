@@ -2924,6 +2924,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .four-wide a {
         margin-left: 13px;
     }
+    footer .social-icons {
+        float: left;
+    }
 }
 
 @media (min-width: 1225px) {
