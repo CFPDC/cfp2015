@@ -327,7 +327,7 @@ small a {
 }
 
 dl > a {
-    margin-bottom: 35px;
+    margin-bottom: 47px;
 }
 
 dl dt {
@@ -408,8 +408,7 @@ form .error + textarea {
 }
 
 .back-top {
-    display: block;
-    margin-left: 20px;
+    display: inline-block;
     margin-top: 5px;
     padding-left: 20px;
     position: relative;
@@ -423,6 +422,19 @@ form .error + textarea {
     position: absolute;
     top: -2px;
     width: 15px;
+}
+
+.back-top-border {
+    display: block;
+    position: relative;
+    bottom: 35px;
+}
+
+.back-top-border:before {
+    border-bottom: 1px solid #e2e2e2;
+    content: "";
+    position: absolute;
+    width: 100%;
 }
 
 /*--- end of form errors ---*/
@@ -1309,9 +1321,9 @@ main address > span, address > a {
 
 .faq-list-container dt, .faq-list-container dd {
     position: relative;
-    padding-left: 40px;
 }
 
+/* CFP-46 removed 'q' and 'a' from FAQ page for 508 screen reader issue-- some sr were reading the letter while others were not
 .faq-list-container dt:before, .faq-list-container dd:before {
     content: "\0051:";
     left: 0;
@@ -1324,7 +1336,7 @@ main address > span, address > a {
 
 .faq-list-container dd:before {
     content: "\0041:";
-}
+}*/
 
 .faq-questions {
     margin-bottom: 20px;
@@ -2228,6 +2240,7 @@ label[for="year"] {
     font-size: 1.8rem;
     text-align: left;
 }
+
 .lt-ie9 .header-logo, .ie10 .header-logo, .ie11 .header-logo, .ie9 .header-logo, .lt-ie9 .footer-logo, .ie10 .footer-logo, .ie11 .footer-logo, .ie9 .footer-logo {
     display: inherit;
 }
