@@ -215,7 +215,8 @@ var global = {
 						backTopSrText = '<span class="sr-only"> - Returns to ' + questionText + ' in list of F A Q questions</span>',
 						titleText = questionText.replace("?", ""),
 						backTopTitle = 'Go back to ' + titleText + ' in the list of questions',
-						backTopAfterEl = '<span class="back-top-border" aria-hidden="true"></span>';
+						backTopAfterEl = '<span class="back-top-border" aria-hidden="true"></span>',
+						lsatBackTopEl;
 
 					//take each data-target in list of questions and make id for linking for back to top links
 					$this.attr('id', question + '-question');
@@ -227,7 +228,10 @@ var global = {
 					}).append(backTopSrText);
 					$(backTopAfterEl).insertAfter(backTopLink);
 				});
-
+				if (list.length > 0) {
+					//after links are updated, remove last question bottom border
+					$('.back-top-border').last().hide();
+				}
 			}
 		}
 	},
