@@ -566,7 +566,7 @@ function globalSkipNav() {
 	$('.skip-navigation-link').each(function() {
 		var focusedElement = $(this).attr('data-target').replace("#", ""),
 			newFocusElement = $('header').next(),
-			focusAnchor = '<a href="javascript:void(0)" class="sr-only" id="' + focusedElement + '"></a>';
+			focusAnchor = '<a href="javascript:void(0)" class="sr-only" id="' + focusedElement + '">You have skipped the navigation and are now at the main content.</a>';
 		$(focusAnchor).insertBefore(newFocusElement).attr('tabindex', '-1');
 		//set a tabindex of -1 to make the element focusable for the skip nav but is not focusable for tabbing on page, this is only needed if the target is not a normally focusable element like a div container.
 	}).on('click', function(event) {
@@ -778,7 +778,8 @@ $(function() {
 	global.pressReleaseLink508();
 	A11y.Core();
 	global.navTriggerToggle();
-
+	//script to detect highcontrast mode and user defined stylesheets
+	HCDetect.init();
 	//.ready for global functions
 	global.setHeight();
 
