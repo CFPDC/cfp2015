@@ -12,36 +12,40 @@ include('includes/functions.php');
 </div>
 <main role="main" class="container-fluid secondary">
 <div class="row">
-	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter" role="navigation">
-		<ul class="list-unstyled">
-			<li><a href="about-us.php" class="current">About Us</a></li>
-			<li><a href="cfp-team.php">Team</a></li>
-			<li><a href="cfp-reviewers.php">Our Reviewers</a></li>
-			<li><a href="sponsors.php">Sponsors</a></li>
-			<li><a href="press.php">Press</a></li>
-			<li><a href="testimonials.php">Testimonials</a></li>
-			<li><a href="vision-report.php">Vision Report</a></li>
-		</ul>
+	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
+		<nav role="navigation">
+			<ul class="list-unstyled">
+				<li>
+					<a href="about-us.php" class="current">About Us</a>
+				</li>
+				<li>
+					<a href="cfp-team.php">Team</a>
+				</li>
+				<li>
+					<a href="cfp-reviewers.php">Our Reviewers</a>
+				</li>
+				<li>
+					<a href="sponsors.php">Sponsors</a>
+				</li>
+				<li>
+					<a href="press.php">Press</a>
+				</li>
+				<li>
+					<a href="testimonials.php">Testimonials</a>
+				</li>
+				<li>
+					<a href="vision-report.php">Vision Report</a>
+				</li>
+			</ul>
+		</nav>
 	</aside>
 	<section class="col-xs-12 col-sm-8">
-		<h2 class="app-guideline">Application Guidelines &amp; Instructions</h2> 
+		<h2 class="app-guideline">Application Guidelines &amp; Instructions</h2>
 		<p><span class="sr-only">Note:</span> The 2015 Application is closed</p>
 		<div class="row">
 			<p class="col-xs-12 alert alert-danger">UPDATE: Join us for a workshop (optional) to learn more about our financial review and ask questions of our reviewers at <a href="http://www.raffa.com/">Raffa</a>&mdash;<strong>Monday, February 9th @ 3:30pm</strong> or <strong>Friday, February 20th @ 10am</strong>. <a href="http://cfp-dc.org/rsvp/rsvp.php?rid=156&amp;id=-1" title="Link to register for financial review and FAQ session with reviewers">Register here<span class="sr-only">Link to register for financial review and FAQ session with reviewers</span></a> to join us in person or via the web!</p>
-			<div class="col-sm-12 col-md-8">
-				<h3>Why Apply</h3>
-				<p>Being part of our network means you'll be recognized as “one of the best” high-impact, community-based nonprofits in our region&mdash;something that means so much to supporters, both existing and new. While we do not guarantee a specific financial benefit, our track record shows that when nonprofits engage in a committed partnership with us, they receive both financial and other returns. (The Catalogue has helped raise over $25 million since 2003.)</p>
-				<h3>Benefits of a Catalogue Partnership</h3>
-				<h4>What we'll do:</h4>
-				<ul class="normal">
-					<li>Collaborate with you on a powerful 170-word story about your work and your impact, to use in our Catalogue, and in your marketing, fundraising and other materials;</li>
-					<li>Promote your story through our <a href="http://en.calameo.com/read/0012788674c703b42cb3e">print Catalogue</a> (mailed to 25,000 local donors), a <a href="www.cfp-dc.org/nonprofits">personalized webpage on our website</a> and in our corporate portal, <a href="http://blog.cfp-dc.org/">our blog</a>, partnerships with local media outlets, social media and more: Check out our piece in <a href="http://www.washingtoncitypaper.com/giveitup"> Washington City Paper!</a></li>
-					<li>Give you access to our Nonprofit Portal, with customized marketing &amp; communications materials from personalized booklets, to online fundraising platforms, to our “One of the Best” seal;</li>
-					<li>Invite you to workshops &amp; events hosted by the Catalogue and our partners throughout the year, starting with our “Best Practices” workshop for new nonprofits and continuing with sessions on topics ranging from storytelling to development, financial sustainability and best practices to Board development;</li>
-					<li>Continue this partnership for three years beyond your print Catalogue feature!</li>
-				</ul>
-			</div>
-			<div class="col-xs-8 col-xs-offset-2 col-sm-12 col-sm-offset-0 col-md-4 well">
+			
+			<div class="col-xs-8 col-xs-offset-2 col-sm-12 col-sm-offset-0 col-md-4 well related-links">
 				<h3>Quick Links</h3>
 				<ul class="list-unstyled normal">
 					<li><a href="http://cfp-dc.org/email_content/2015/2015app/Application%20Instructions_2015.pdf">Application Instructions (PDF)</a></li>
@@ -54,6 +58,19 @@ include('includes/functions.php');
 					<li><a href="http://cfp-dc.org/email_content/2015/2015app/Glossary%20of%20Financial%20Terms_2015.pdf">Financial glossary (PDF)</a></li>
 					<li><a href="http://cfp-dc.org/email_content/2015/2015app/RaffaFinancialSupplement-2015.xlsx"> Financial Worksheet (.xlsx) (one of the required financial uploads)</a></li>
 					<li><a href="http://cfp-dc.org/email_content/2015/2015app/CFPDC-Financials-Workshop-20150209.pdf">RAFFA Financial Workshop Powerpoint</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-12 col-md-8">
+				<h3>Why Apply</h3>
+				<p>Being part of our network means you'll be recognized as “one of the best” high-impact, community-based nonprofits in our region&mdash;something that means so much to supporters, both existing and new. While we do not guarantee a specific financial benefit, our track record shows that when nonprofits engage in a committed partnership with us, they receive both financial and other returns. (The Catalogue has helped raise over $25 million since 2003.)</p>
+				<h3>Benefits of a Catalogue Partnership</h3>
+				<h4>What we'll do:</h4>
+				<ul class="normal">
+					<li>Collaborate with you on a powerful 170-word story about your work and your impact, to use in our Catalogue, and in your marketing, fundraising and other materials;</li>
+					<li>Promote your story through our <a href="http://en.calameo.com/read/0012788674c703b42cb3e">print Catalogue</a> (mailed to 25,000 local donors), a <a href="www.cfp-dc.org/nonprofits">personalized webpage on our website</a> and in our corporate portal, <a href="http://blog.cfp-dc.org/">our blog</a>, partnerships with local media outlets, social media and more: Check out our piece in <a href="http://www.washingtoncitypaper.com/giveitup"> Washington City Paper!</a></li>
+					<li>Give you access to our Nonprofit Portal, with customized marketing &amp; communications materials from personalized booklets, to online fundraising platforms, to our “One of the Best” seal;</li>
+					<li>Invite you to workshops &amp; events hosted by the Catalogue and our partners throughout the year, starting with our “Best Practices” workshop for new nonprofits and continuing with sessions on topics ranging from storytelling to development, financial sustainability and best practices to Board development;</li>
+					<li>Continue this partnership for three years beyond your print Catalogue feature!</li>
 				</ul>
 			</div>
 			<p class="col-xs-12"><small>There is no financial obligation of any kind associated with applying to or being featured in the Catalogue for Philanthropy. Leading institutions and generous individuals in the Washington region support the Catalogue as a service to the community.</small></p>
@@ -77,8 +94,8 @@ include('includes/functions.php');
 						</li><li><strong>NOT</strong> have been featured in the 2012-13, 2013-14 or 2014-15 print Catalogue (though organizations re-listed only on the website in 2012, 2013 or 2014 <i>may</i> reapply this year to be re-featured in print)</li>
 					</ul>
 					<p><small>For more information on the eligibility of local chapters of national organizations, professional associations, membership organizations, etc, please see our <a href="faq.php">FAQ</a>.</small></p>
-			</div>
-			<div class="col-xs-12">
+				</div>
+				<div class="col-xs-12">
 					<h3>Review Process &amp; Timeline</h3>
 					<p>The application opens on January 5th and closes on February 27th. More than 200 charitable organizations apply to be included in the Catalogue for Philanthropy each year, and we select approximately 70 for our print Catalogue. Once applications are processed, over 100 reviewers from foundations, corporate giving programs, peer nonprofits, and the philanthropic advisory community are matched with applicants in the reviewers’ fields of expertise. Our review process (March&ndash;April) consists of three parts:</p>
 					<ul class="normal">
@@ -87,18 +104,18 @@ include('includes/functions.php');
 						<li><strong>Site Visits:</strong> All reviewers are asked if they have site visited an organization within the past three years. Positive site visits confirm positive reviews. Negative site visits generate a phone call. Any organization that has not been visited by our review team will be visited by Catalogue staff.</li>
 					</ul>
 					<p>
-					Our goal is to create a balanced list of great nonprofits in all fields: we don’t want all of our nonprofits to serve one category – for example all arts organizations or all programs that serve the elderly. While final decisions are editorial, they are always guided by the rankings and comments of our review team!
+						Our goal is to create a balanced list of great nonprofits in all fields: we don’t want all of our nonprofits to serve one category – for example all arts organizations or all programs that serve the elderly. While final decisions are editorial, they are always guided by the rankings and comments of our review team!
 					</p>
 					<p>
-					Our vetted list of charities for the 2015-16 print Catalogue will be finalized in May and we’ll work with selected organizations to create their Catalogue features, wish lists, photos and more before the Catalogue is released in late fall, just in advance of the giving season.
+						Our vetted list of charities for the 2015-16 print Catalogue will be finalized in May and we’ll work with selected organizations to create their Catalogue features, wish lists, photos and more before the Catalogue is released in late fall, just in advance of the giving season.
 					</p>
 					<p>If you have read our application guidelines, eligibility criteria and <a href="faq.php">FAQ</a> and are interested in applying to be featured in the 2015-16 Catalogue for Philanthropy, please download our application instructions <a href="http://cfp-dc.org/email_content/2014/app2014/Application%20Instructions_2014.pdf">here<span class="sr-only">Download our Instructions here</span></a></p>
 					<p>
-					<strong>Questions:</strong> Before you email or call, please read our <a href="faq.php">Frequently Asked Questions (FAQ)</a>. If you don't find the answers you are looking for, call us at <a href="tel:202-955-6538" title="call The Catalogue for Philanthropy">202-955-6538</a>, or email us at <a href="mailto:info@catalogueforphilanthropy-dc.org" title="email The Cataloge for Philanthropy">info@catalogueforphilanthropy-dc.org</a>.
+						<strong>Questions:</strong> Before you email or call, please read our <a href="faq.php">Frequently Asked Questions (FAQ)</a>. If you don't find the answers you are looking for, call us at <a href="tel:202-955-6538" title="call The Catalogue for Philanthropy">202-955-6538</a>, or email us at <a href="mailto:info@catalogueforphilanthropy-dc.org" title="email The Cataloge for Philanthropy">info@catalogueforphilanthropy-dc.org</a>.
 					</p>
+				</div>
 			</div>
-		</div>
-	</section>
-</div>
-</main>
-<?php get_template('footer'); ?>
+		</section>
+	</div>
+	</main>
+	<?php get_template('footer'); ?>

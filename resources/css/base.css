@@ -327,7 +327,7 @@ small a {
 }
 
 dl > a {
-    margin-bottom: 35px;
+    margin-bottom: 47px;
 }
 
 dl dt {
@@ -408,8 +408,7 @@ form .error + textarea {
 }
 
 .back-top {
-    display: block;
-    margin-left: 20px;
+    display: inline-block;
     margin-top: 5px;
     padding-left: 20px;
     position: relative;
@@ -423,6 +422,19 @@ form .error + textarea {
     position: absolute;
     top: -2px;
     width: 15px;
+}
+
+.back-top-border {
+    display: block;
+    position: relative;
+    bottom: 35px;
+}
+
+.back-top-border:before {
+    border-bottom: 1px solid #e2e2e2;
+    content: "";
+    position: absolute;
+    width: 100%;
 }
 
 /*--- end of form errors ---*/
@@ -1309,9 +1321,9 @@ main address > span, address > a {
 
 .faq-list-container dt, .faq-list-container dd {
     position: relative;
-    padding-left: 40px;
 }
 
+/* CFP-46 removed 'q' and 'a' from FAQ page for 508 screen reader issue-- some sr were reading the letter while others were not
 .faq-list-container dt:before, .faq-list-container dd:before {
     content: "\0051:";
     left: 0;
@@ -1324,7 +1336,7 @@ main address > span, address > a {
 
 .faq-list-container dd:before {
     content: "\0041:";
-}
+}*/
 
 .faq-questions {
     margin-bottom: 20px;
@@ -2331,6 +2343,20 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     width: inherit;
 }
 
+/*---User Defined Style Sheets---*/
+.ie11.ui-helper-nocustomfonts .adobeBlank, .ie10.ui-helper-nocustomfonts .adobeBlank, .ie9.ui-helper-nocustomfonts .adobeBlank, .lt-ie9.ui-helper-nocustomfonts .adobeBlank {
+    display: inline-block;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+.ie11.ui-helper-nocustomfonts .carousel-control .adobeBlank, .ie10.ui-helper-nocustomfonts .carousel-control .adobeBlank, .ie9.ui-helper-nocustomfonts .carousel-control .adobeBlank, .lt-ie9.ui-helper-nocustomfonts .carousel-control .adobeBlank {
+    font-size: 45px;
+    font-size: 4.5rem;
+}
+
+/*---High Contrast Mode---*/
+
 /*---MEDIA QUERIES---*/
 @media screen and (min-width: 480px) {
     .carousel-caption {
@@ -2380,6 +2406,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     .carousel-inner > .item > img {
         display: block;
+    }
+    .related-links {
+        float: right;
     }
     .subcategories .thumb {
         margin-left: 0;
@@ -2890,6 +2919,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     .four-wide a {
         margin-left: 13px;
+    }
+    footer .social-icons {
+        float: left;
     }
 }
 

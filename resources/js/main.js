@@ -214,7 +214,9 @@ var global = {
 						backTopLink = targetParent.next(),
 						backTopSrText = '<span class="sr-only"> - Returns to ' + questionText + ' in list of F A Q questions</span>',
 						titleText = questionText.replace("?", ""),
-						backTopTitle = 'Go back to ' + titleText + ' in the list of questions';
+						backTopTitle = 'Go back to ' + titleText + ' in the list of questions',
+						backTopAfterEl = '<span class="back-top-border" aria-hidden="true"></span>',
+						lsatBackTopEl;
 
 					//take each data-target in list of questions and make id for linking for back to top links
 					$this.attr('id', question + '-question');
@@ -224,9 +226,12 @@ var global = {
 						'tabindex': '0',
 						'title': backTopTitle
 					}).append(backTopSrText);
-
+					$(backTopAfterEl).insertAfter(backTopLink);
 				});
-
+				if (list.length > 0) {
+					//after links are updated, remove last question bottom border
+					$('.back-top-border').last().hide();
+				}
 			}
 		}
 	},
@@ -566,7 +571,7 @@ function globalSkipNav() {
 	$('.skip-navigation-link').each(function() {
 		var focusedElement = $(this).attr('data-target').replace("#", ""),
 			newFocusElement = $('header').next(),
-			focusAnchor = '<a href="javascript:void(0)" class="sr-only" id="' + focusedElement + '"></a>';
+			focusAnchor = '<a href="javascript:void(0)" class="sr-only" id="' + focusedElement + '">You have skipped the navigation and are now at the main content.</a>';
 		$(focusAnchor).insertBefore(newFocusElement).attr('tabindex', '-1');
 		//set a tabindex of -1 to make the element focusable for the skip nav but is not focusable for tabbing on page, this is only needed if the target is not a normally focusable element like a div container.
 	}).on('click', function(event) {
@@ -778,7 +783,8 @@ $(function() {
 	global.pressReleaseLink508();
 	A11y.Core();
 	global.navTriggerToggle();
-
+	//script to detect highcontrast mode and user defined stylesheets
+	HCDetect.init();
 	//.ready for global functions
 	global.setHeight();
 
