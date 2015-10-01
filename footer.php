@@ -1,13 +1,13 @@
 <footer class="container-fluid" role="contentinfo">
 	<section class="row">
 		<div class="col-sm-5 col-xs-12 col-md-4">
-			<a href="../" title="The Catalogue for Philanthropy: Greater Washington home">
+			<a href="../" title="The Catalogue for Philanthropy: Greater Washington home" class="pull-left">
 				<img class="img-responsive footer-logo" src="resources/images/footer-logo-no-flag-white.gif" title="CFP footer logo" alt="Catalogue for Philanthropy logo">
 			</a>
 			<ul class="list-inline social-icons">
-				<li><a class="fa fa-facebook fa-3x" href="#"><span class="sr-only">Like CFP on Facebook</span></a></li>
-				<li><a class="fa fa-twitter fa-3x" href="#"><span class="sr-only">Follow CFP on Twitter</span></a></li>
-				<li><a class="fa fa-linkedin fa-3x" href="#"><span class="sr-only">Visit CFP on Linkedin</span></a></li>
+				<li><a class="fa fa-facebook fa-3x" href="#"><span class="adobeBlank" aria-hidden="true">Facebook Icon</span><span class="sr-only">Like CFP on Facebook</span></a></li>
+				<li><a class="fa fa-twitter fa-3x" href="#"><span class="adobeBlank" aria-hidden="true">Twitter Icon</span><span class="sr-only">Follow CFP on Twitter</span></a></li>
+				<li><a class="fa fa-linkedin fa-3x" href="#"><span class="adobeBlank" aria-hidden="true">LinkedIn Icon</span><span class="sr-only">Visit CFP on Linkedin</span></a></li>
 			</ul>
 		</div>
 		<nav class="col-sm-7 col-xs-12 col-md-8 text-right">
@@ -55,6 +55,7 @@
 	<script src="assets/js/jasny-bootstrap.min.js"></script>
 	<script src="assets/js/underscore.js"></script>
 	<script src="assets/js/jquery-accessibleMegaMenu.js"></script>
+	<script src="resources/js/hc-detect.js" async></script>
 	<script src="resources/js/assets.core.js"></script>
 	<script src="resources/js/assets.responsive.js"></script>
 	<script src="assets/js/isotope.pkgd.min.js"></script>

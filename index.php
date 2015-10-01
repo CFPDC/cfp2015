@@ -16,6 +16,7 @@ include('includes/functions.php');
   <div class="carouselButtons">
     <button id="pauseButton" type="button" class="btn btn-link btn-xs">
     <span class="fa fa-pause fa-2x">
+    <span class="adobeBlank" aria-hidden="true">Pause icon</span>
     <span class="sr-only">
     Pause the carousel
     </span>
@@ -23,6 +24,7 @@ include('includes/functions.php');
     </button>
     <button id="playButton" type="button" class="btn btn-link btn-xs hide">
     <span class="fa fa-play-circle fa-2x">
+    <span class="adobeBlank" aria-hidden="true">Play Icon</span>
     <span class="sr-only">
     Play the carousel
     </span>
@@ -31,6 +33,7 @@ include('includes/functions.php');
   </div>
   <a  role="button" class="left carousel-control" href="#myCarousel" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left">
+    <span class="adobeBlank" aria-hidden="true">&lt;</span>
     <span class="sr-only">Select to view previous slide</span>
     </span>
   </a>
@@ -80,6 +83,7 @@ include('includes/functions.php');
   </div>
   <a role="button" class="right carousel-control" href="#myCarousel" data-slide="next">
     <span class="glyphicon glyphicon-chevron-right">
+    <span class="adobeBlank" aria-hidden="true">&gt;</span>
     <span class="sr-only">Select to view next slide</span>
     </span>
   </a>
