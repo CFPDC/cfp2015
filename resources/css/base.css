@@ -2334,6 +2334,20 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     width: inherit;
 }
 
+/*---User Defined Style Sheets---*/
+.ie11.ui-helper-nocustomfonts .adobeBlank, .ie10.ui-helper-nocustomfonts .adobeBlank, .ie9.ui-helper-nocustomfonts .adobeBlank, .lt-ie9.ui-helper-nocustomfonts .adobeBlank {
+    display: inline-block;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+.ie11.ui-helper-nocustomfonts .carousel-control .adobeBlank, .ie10.ui-helper-nocustomfonts .carousel-control .adobeBlank, .ie9.ui-helper-nocustomfonts .carousel-control .adobeBlank, .lt-ie9.ui-helper-nocustomfonts .carousel-control .adobeBlank {
+    font-size: 45px;
+    font-size: 4.5rem;
+}
+
+/*---High Contrast Mode---*/
+
 /*---MEDIA QUERIES---*/
 @media screen and (min-width: 480px) {
     .carousel-caption {

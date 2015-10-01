@@ -44,7 +44,7 @@
 <header class="container-fluid" role="banner">
   <div class="row">
     <div class="col-sm-12 col-md-5">
-      <a href="../" title="Catalogue for Philanthropy: Greater Washington home"> <img class="img-responsive header-logo" src="resources/images/cfp-logo-blue-brown2.gif" alt="Catalogue for Philanthropy: Greater Washington logo"> </a>
+      <a class="pull-left" href="../" title="Catalogue for Philanthropy: Greater Washington home"> <img class="img-responsive header-logo" src="resources/images/cfp-logo-blue-brown2.gif" alt="Catalogue for Philanthropy: Greater Washington logo"> </a>
     </div>
     <nav class="col-xs-7 col-md-7 secondary-nav">
       <ul class="list-inline">
@@ -279,6 +279,7 @@
         <span class="input-group-btn">
           <button class="btn btn-primary search-submit input-lg" id="search-submit-button" name="search-submit-button">
           <span class="fa fa-search fa-2x">
+          <span class="adobeBlank" aria-hidden="true">Submit</span>
             <span class="sr-only">
               Submit Search
             </span>
