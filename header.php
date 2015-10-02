@@ -29,7 +29,7 @@
 <link href="resources/css/base.css" rel="stylesheet">
 <script src="assets/js/modernizr.js"></script>
 </head>
-<body data-page_id="<?php page_id(); ?>" class="<?php body_classes();?>">
+<body data-page-id="<?php page_id(); ?>" class="<?php body_classes();?>">
 <div class="sr-only" aria-live="polite" id="liveTextPolite">
   <p>
   </p>
