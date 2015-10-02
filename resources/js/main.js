@@ -1,19 +1,37 @@
-/*** loading order
-1. Setting variables
-2. global functions for each page
-3. page specific functions
+/*** loading order --- you can search these list items to find each section
+1. IE8 modernizr test
+2. global variables
+2. global namespace function
+3. 'click' events
+4. global functions 
+5. page specific functions
+6. form functions
 ***/
+
+//temporary for dev purposes
+//This applies the class 'need-page' to any link which has the host below in the if statment
+$('a').each(function() {
+	var host = this.hostname;
+	if (host === 'cfp-dc.org' || host === 'catalogueforphilanthropy-dc.org') {
+		$(this).addClass('need-page');
+	}
+});
+
+//1. IE8 modernizr test
 //ie8 test
 Modernizr.load({
 	test: Modernizr.textshadow,
 	nope: ['resources/css/ie.css', 'assets/js/html5shiv.js', 'assets/js/respond.js', 'resources/js/ie.js']
 });
 
-/*** variables ***/
+//2. global variables
+/*** global variables ***/
 var $root = $('html, body'),
 	liveTextRegion = $('#liveTextPolite').children('p'),
 	navTrigger = $('.navbar-toggle'),
-	mobileMenu = $('.mobile-nav');
+	mobileMenu = $('.mobile-nav'),
+	bodyElement = document.body,
+	pageName = bodyElement.dataset.pageId;
 
 
 var global = {
@@ -66,6 +84,8 @@ var global = {
 				editable: true,
 				eventLimit: true, // allow "more" link when too many events
 				eventStartEditable: false,
+				//events: '/myfeed.php', // uncomment this and replace with calendar feed
+				//remove this calendar array as it is for example only
 				events: [{
 					title: 'All Day Event',
 					start: '2015-02-01'
@@ -199,7 +219,6 @@ var global = {
 
 	},
 	faqSetup: function() {
-		//.faq-questions
 		if ($('#faq-list a[data-target]')) {
 			var list = $('#faq-list');
 
@@ -246,6 +265,16 @@ var global = {
 	homeImageCheck: function() {
 		var img = $('.subcategories .img-responsive');
 		this.globalImageCheck(img);
+	},
+	homeSearchActiveToggle: function() {
+		$('.home-search').on('click', 'button', function() {
+			var activeEl = this;
+			$('.home-search button.active').not(this).removeClass('active');
+
+			if (!$(this).hasClass('active')) {
+				$(this).toggleClass('active');
+			}
+		});
 	},
 	jumplink: function() {
 		$('.jumplink').on('click', function() {
@@ -382,7 +411,6 @@ var global = {
 
 						}
 					}, 1);
-					//valueParameter.prop("checked", true);
 				}
 			}
 
@@ -426,6 +454,15 @@ var global = {
 			}
 		}
 	},
+
+	searchPageActiveToggle: function() {
+		//results page change toggle view active class
+		$('.display-group').on('click', 'button', function() {
+			var activeEl = this;
+			$('.display-group button.active').not(this).removeClass('active');
+			$(this).toggleClass('active');
+		});
+	},
 	setGetParameter: function(paramName, paramValue) {
 		var url = window.location.href;
 
@@ -467,6 +504,57 @@ var global = {
 				$(this).height(maxHeight + 80);
 			});
 		}
+	},
+
+	skipNav: function() {
+		//skip nav prevent hashtag in url
+		$('.skip-navigation-link').each(function() {
+			var focusedElement = $(this).attr('data-target').replace("#", ""),
+				newFocusElement = $('header').next(),
+				focusAnchor = '<a href="javascript:void(0)" class="sr-only" id="' + focusedElement + '">You have skipped the navigation and are now at the main content.</a>';
+			$(focusAnchor).insertBefore(newFocusElement).attr('tabindex', '-1');
+			//set a tabindex of -1 to make the element focusable for the skip nav but is not focusable for tabbing on page, this is only needed if the target is not a normally focusable element like a div container.
+		}).on('click', function(event) {
+			var focusedElement = $(this).attr('data-target');
+
+			//prevent the hash and element id to show in url
+			event.preventDefault();
+
+			// set focus to element for skip nav
+			$(focusedElement).focus();
+		});
+	},
+	valid: function() { //all form validation must be in .ready
+		$.validator.setDefaults({
+			debug: true,
+			errorElement: "strong",
+			focusInvalid: false
+
+		});
+		var submitted = false;
+		//only accepts US phone numbers
+		$.validator.addMethod('phoneUS', function(phone_number, element) {
+			phone_number = phone_number.replace(/\s+/g, "");
+			return this.optional(element) || phone_number.length == 12 && phone_number.match(/\d{10}|(([\(]?([0-9]{3})[\)]?)?[ \.\-]?([0-9]{3})[ \.\-]([0-9]{4}))$/);
+		}, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Please specify a valid phone number');
+
+		//allows you to specify a zip code range to accept
+		$.validator.addMethod("ziprange", function(value, element) {
+			return this.optional(element) || (/^2[0101-4658]/).test(value);
+		}, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Please enter a Virginia Zip Code');
+
+		$.validator.addMethod("lettersonly", function(value, element) {
+			return this.optional(element) || (/^[a-z]+$/i).test(value);
+		}, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Letters only please');
+
+		$.validator.addMethod("letterswithbasicpunc", function(value, element) {
+			return this.optional(element) || (/^[a-z\-.,()'"\s]+$/i).test(value);
+		}, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Letters or punctuation only please');
+
+		$.validator.addMethod('require-one', function(value, element) {
+			return $('.require-one:checked').size() > 0;
+		}, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please check at least one box.');
+
 	}
 };
 //namespace to keep form functions short
@@ -564,52 +652,12 @@ var listViewResults = {
 	}
 };
 
-/*** global functions ***/
-
-//skip nav prevent hashtag in url
-function globalSkipNav() {
-	$('.skip-navigation-link').each(function() {
-		var focusedElement = $(this).attr('data-target').replace("#", ""),
-			newFocusElement = $('header').next(),
-			focusAnchor = '<a href="javascript:void(0)" class="sr-only" id="' + focusedElement + '">You have skipped the navigation and are now at the main content.</a>';
-		$(focusAnchor).insertBefore(newFocusElement).attr('tabindex', '-1');
-		//set a tabindex of -1 to make the element focusable for the skip nav but is not focusable for tabbing on page, this is only needed if the target is not a normally focusable element like a div container.
-	}).on('click', function(event) {
-		var focusedElement = $(this).attr('data-target');
-
-		//prevent the hash and element id to show in url
-		event.preventDefault();
-
-		// set focus to element for skip nav
-		$(focusedElement).focus();
-	});
-}
-
-function homeSearchActiveToggle() {
-	$('.home-search button').on('click', function() {
-		var activeEl = this;
-		$('.home-search button.active').not(this).removeClass('active');
-
-		if (!$(this).hasClass('active')) {
-			$(this).toggleClass('active');
-		}
-	});
-}
-
-//results page change toggle view active class
-function searchPageActiveToggle() {
-
-	$('.display-group button').on('click', function() {
-		var activeEl = this;
-		$('.display-group button.active').not(this).removeClass('active');
-		$(this).toggleClass('active');
-	});
-}
 
 //load assets responsive for screen size detection
 A11yResp.Core();
 A11y.ieDetect();
-//Set media query
+
+//Set media query for resize functionality
 var lastDeviceState = A11yResp.getScreenWidth();
 $(window).resize(_.debounce(function() {
 
@@ -627,16 +675,16 @@ $(window).resize(_.debounce(function() {
 
 //Do custom Media query logic
 function performMediaQueries(state) {
-		if (state == 'screen-sm-max' || state == 'screen-xs-max' || state == 'screen-xs-min') {
-			$('#asideFilter').addClass('collapse');
+	if (state == 'screen-sm-max' || state == 'screen-xs-max' || state == 'screen-xs-min') {
+		$('#asideFilter').addClass('collapse');
 
 
-		} else {
-			$('#asideFilter').removeClass('collapse');
-		}
+	} else {
+		$('#asideFilter').removeClass('collapse');
 	}
-	//begin isotop script
+}
 
+//begin isotop script
 //sort button functionality with isotope - do not load isotope for ie8
 if (!$('html').hasClass('lt-ie9')) {
 
@@ -671,6 +719,8 @@ if (!$('html').hasClass('lt-ie9')) {
 }
 //end isotope script
 
+
+//3. 'click' events
 $('.navbar-toggle').on('click', function() {
 	global.mobileNavTrigger();
 });
@@ -710,8 +760,6 @@ $('.checkout-form .toggle-check').on('click', function() {
 		checkoutButton.show(); //show normal checkout button
 	}
 });
-//request-catalogue page
-
 
 $('.carouselButtons').on('click', 'button', function() {
 	var button = $(this),
@@ -774,28 +822,16 @@ $('.filter-parameter').on('click', function() {
 	if ($(this).is(':checked')) {
 		var paramName = $(this).attr('data-paramName'),
 			paramValue = $(this).attr('data-paramValue');
-
 		global.setGetParameter(paramName, paramValue);
 	}
 });
 
+//4. global functions 
 $(function() {
-	global.pressReleaseLink508();
-	A11y.Core();
-	global.navTriggerToggle();
 	//script to detect highcontrast mode and user defined stylesheets
 	HCDetect.init();
-	//.ready for global functions
-	global.setHeight();
-
-	//find current page link and add sr only text 
-	global.currentPageLink();
-
-	//check parameters on nonprofit search page and update filters
-	global.parameterUpdate();
-
-	//check for missing images in the home page grid
-	global.homeImageCheck();
+	//Accessibility function to take care of generic 508 house keeping
+	A11y.Core();
 
 	//Do initial check for media state
 	var state = A11yResp.getScreenWidth();
@@ -803,111 +839,126 @@ $(function() {
 		performMediaQueries(state);
 	}
 
-	$('#Mycarousel').carousel({
-		pause: "hover"
-	});
-	$('#playButton').on('click', function() {
-		$('#myCarousel').carousel('cycle');
-		$('#pauseButton').focus();
-	});
-	$('#pauseButton').on('click', function() {
-		$('#myCarousel').carousel('pause');
-		$('#playButton').focus();
-	});
+	//change sr only text on toggle and control focus with user input
+	global.navTriggerToggle();
+	global.navMenu();
 
-	//faq list add jumplink attributes
-	if ($('.faq-questions').length > 0) {
-		global.faqSetup();
+	/*Get current page link, append sr only 
+	 * text for readability then take entire
+	 * text block of current page link to live
+	 * region to announce current page to screen reader
+	 */
+	global.currentPageLink();
 
-		//remove tabindex if user clicks on FAQ question and is focused on the 'dt' element, but only when tabbing off of the 'dt'element.
-		$('dt').on('keydown', function(event) {
-			if ((event.keyCode === 9) || (event.shiftKey && event.keyCode == 9)) {
-				$(this).removeAttr('tabindex');
-			}
-			return true;
-		});
-	}
+	//handle skip nav link before header/create target for skip nav link to focus
+	global.skipNav();
 
-	globalSkipNav();
-	homeSearchActiveToggle();
-	searchPageActiveToggle();
-
-	//scroll spy for styleguide
-	$('body').scrollspy({
-		target: '.bs-docs-sidebar'
-	});
-	var nav = $(".push-down");
-	$(window).scroll(function() {
-		var scroll = $(window).scrollTop();
-
-		if (scroll >= 105) {
-			nav.addClass("scrolling");
-		} else {
-			nav.removeClass("scrolling");
-		}
-	});
-
-	//open collapsed sections of filtering on results/search page
-	$(".category-toggle").click();
-
-	//add unchecked to each results page filter section
-	$('.select-all').attr("data-type", "uncheck");
-
-	//this is to find all pages pointing to prod links which we will need to change to relative to ensure each page is covered
-	$('a').each(function() {
-		var host = this.hostname;
-		if (host === 'cfp-dc.org' || host === 'catalogueforphilanthropy-dc.org') {
-			$(this).addClass('need-page');
-		}
-	});
+	global.jumplink();
+	global.donateButtonPrefill();
+	global.addNonprofitNameToButton();
 
 	//bootstrap tooltips activated on page load
 	$('[data-toggle="tooltip"]').tooltip({
 		container: 'body'
 	});
 
-	/* list view */
-	listViewResults.nonprofitCollapse();
-	global.jumplink();
-	global.navMenu();
-	global.donateButtonPrefill();
-	global.addNonprofitNameToButton();
-	global.relatedCarousel();
-	global.calendar();
+	//5. page specific functions
+	//page specific functions
+	if (pageName === 'index') {
+		//home page functions
 
-	if ($('.request-catalogue').length || $('.sign-up').length || $('.login-form-container').length || $('.donor-form-container').length || $('.subscribe-form').length || $('.checkout-form').length || $('.gift-card-form').length || $('.comment-form').length) {
-		//all form validation must be in .ready
-		$.validator.setDefaults({
-			debug: true,
-			errorElement: "strong",
-			focusInvalid: false
+		//check for missing images in the home page grid
+		global.homeImageCheck();
 
+		global.homeSearchActiveToggle();
+
+		$('#Mycarousel').carousel({
+			pause: "hover"
 		});
-		var submitted = false;
-		//only accepts US phone numbers
-		$.validator.addMethod('phoneUS', function(phone_number, element) {
-			phone_number = phone_number.replace(/\s+/g, "");
-			return this.optional(element) || phone_number.length == 12 && phone_number.match(/\d{10}|(([\(]?([0-9]{3})[\)]?)?[ \.\-]?([0-9]{3})[ \.\-]([0-9]{4}))$/);
-		}, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Please specify a valid phone number');
+		$('#playButton').on('click', function() {
+			$('#myCarousel').carousel('cycle');
+			$('#pauseButton').focus();
+		});
+		$('#pauseButton').on('click', function() {
+			$('#myCarousel').carousel('pause');
+			$('#playButton').focus();
+		});
 
-		//allows you to specify a zip code range to accept
-		$.validator.addMethod("ziprange", function(value, element) {
-			return this.optional(element) || (/^2[0101-4658]/).test(value);
-		}, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Please enter a Virginia Zip Code');
+	} else if (pageName === 'our-nonprofits') {
+		//.ready for global functions- only for grid nonprofit listing page
+		global.setHeight();
 
-		$.validator.addMethod("lettersonly", function(value, element) {
-			return this.optional(element) || (/^[a-z]+$/i).test(value);
-		}, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Letters only please');
+		//nonprofit listings list and grid view functions
+		global.searchPageActiveToggle();
 
-		$.validator.addMethod("letterswithbasicpunc", function(value, element) {
-			return this.optional(element) || (/^[a-z\-.,()'"\s]+$/i).test(value);
-		}, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Letters or punctuation only please');
+		//check parameters on nonprofit search page and update filters
+		global.parameterUpdate();
 
-		$.validator.addMethod('require-one', function(value, element) {
-			return $('.require-one:checked').size() > 0;
-		}, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please check at least one box.');
+		//open collapsed sections of filtering on results/search page
+		$(".category-toggle").click();
 
+		//add unchecked to each results page filter section
+		$('.select-all').attr("data-type", "uncheck");
 
+	} else if (pageName === 'our-nonprofits-list') {
+		//collapse listings of nonprofits in list view
+		listViewResults.nonprofitCollapse();
+
+		//nonprofit listings list and grid view functions
+		global.searchPageActiveToggle();
+
+		//check parameters on nonprofit search page and update filters
+		global.parameterUpdate();
+
+		//open collapsed sections of filtering on results/search page
+		$(".category-toggle").click();
+
+		//add unchecked to each results page filter section
+		$('.select-all').attr("data-type", "uncheck");
+
+	} else if (pageName === 'faq') {
+		//faq list add jumplink attributes
+		if ($('.faq-questions').length > 0) {
+			global.faqSetup();
+
+			//remove tabindex if user clicks on FAQ question and is focused on the 'dt' element, but only when tabbing off of the 'dt'element.
+			$('dt').on('keydown', function(event) {
+				if ((event.keyCode === 9) || (event.shiftKey && event.keyCode == 9)) {
+					$(this).removeAttr('tabindex');
+				}
+				return true;
+			});
+		}
+	} else if (pageName === 'press') {
+		//add sr only text to each 'connect here' link on press page
+		global.pressReleaseLink508();
+	} else if (pageName === 'styles' || null) {
+		//scroll spy for styleguide
+		$('body').scrollspy({
+			target: '.bs-docs-sidebar'
+		});
+		var nav = $(".push-down");
+		$(window).scroll(function() {
+			var scroll = $(window).scrollTop();
+
+			if (scroll >= 105) {
+				nav.addClass("scrolling");
+			} else {
+				nav.removeClass("scrolling");
+			}
+		});
+	} else if (pageName === 'events-calendar') {
+		//JS for adding functionality of the calendar widget
+		global.calendar();
+	} else if (pageName === 'nonprofit-detail') {
+		//JS to control functionality of nonprofit detail 'similar nonprofits' carousel
+		global.relatedCarousel();
+	}
+
+	//6. form functions
+	//form functions
+	if ($('.request-catalogue').length) {
+		global.valid();
 		$('.request-catalogue').validate({
 			focusCleanup: false,
 			errorClass: 'error',
@@ -1064,7 +1115,9 @@ $(function() {
 				$(form).submit();
 			}
 		});
-
+	}
+	if ($('.sign-up').length) {
+		global.valid();
 		//signup form
 		$('.sign-up').validate({
 			focusCleanup: false,
@@ -1205,6 +1258,9 @@ $(function() {
 				$(form).submit();
 			}
 		});
+	}
+	if ($('.donor-form-container').length) {
+		global.valid();
 		//login form
 		$('.donor-form-container').validate({
 			focusCleanup: false,
@@ -1310,7 +1366,9 @@ $(function() {
 				$(form).submit();
 			}
 		});
-
+	}
+	if ($('.login-form-container').length) {
+		global.valid();
 		//login form
 		$('.login-form-container').validate({
 			focusCleanup: false,
@@ -1417,7 +1475,9 @@ $(function() {
 				$(form).submit();
 			}
 		});
-
+	}
+	if ($('.subscribe-form').length) {
+		global.valid();
 		//subscribe form
 		var checkboxes = $('.require-one');
 		var checkbox_names = $.map(checkboxes, function(e, i) {
@@ -1525,7 +1585,9 @@ $(function() {
 				$(form).submit();
 			}
 		});
-
+	}
+	if ($('.checkout-form').length) {
+		global.valid();
 		//checkout form
 		$('.checkout-form').validate({
 			focusCleanup: false,
@@ -1677,6 +1739,9 @@ $(function() {
 				$(form).submit();
 			}
 		});
+	}
+	if ($('.gift-card-form').length) {
+		global.valid();
 		/*gift card checkout form*/
 		$('.gift-card-form').validate({
 			focusCleanup: false,
@@ -1856,6 +1921,9 @@ $(function() {
 				$(form).submit();
 			}
 		});
+	}
+	if ($('.comment-form').length) {
+		global.valid();
 		//blog reply form
 		$('.comment-form').validate({
 			focusCleanup: false,
