@@ -2241,6 +2241,10 @@ label[for="year"] {
     text-align: left;
 }
 
+.lt-ie9 .header-logo, .ie10 .header-logo, .ie11 .header-logo, .ie9 .header-logo, .lt-ie9 .footer-logo, .ie10 .footer-logo, .ie11 .footer-logo, .ie9 .footer-logo {
+    display: inherit;
+}
+
 /*---FOOTER---*/
 footer {
     background: #487896;
@@ -2919,9 +2923,6 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     .four-wide a {
         margin-left: 13px;
-    }
-    footer .social-icons {
-        float: left;
     }
 }
 

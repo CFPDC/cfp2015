@@ -12,35 +12,19 @@ include('includes/functions.php');
 </div>
 <main role="main" class="container-fluid secondary">
 <div class="row">
-	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
-		<nav role="navigation">
-			<ul class="list-unstyled">
-				<li>
-					<a href="about-us.php" class="current">About Us</a>
-				</li>
-				<li>
-					<a href="cfp-team.php">Team</a>
-				</li>
-				<li>
-					<a href="cfp-reviewers.php">Our Reviewers</a>
-				</li>
-				<li>
-					<a href="sponsors.php">Sponsors</a>
-				</li>
-				<li>
-					<a href="press.php">Press</a>
-				</li>
-				<li>
-					<a href="testimonials.php">Testimonials</a>
-				</li>
-				<li>
-					<a href="vision-report.php">Vision Report</a>
-				</li>
-			</ul>
-		</nav>
+	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter" role="navigation">
+		<ul class="list-unstyled">
+			<li><a href="about-us.php" class="current">About Us</a></li>
+			<li><a href="cfp-team.php">Team</a></li>
+			<li><a href="cfp-reviewers.php">Our Reviewers</a></li>
+			<li><a href="sponsors.php">Sponsors</a></li>
+			<li><a href="press.php">Press</a></li>
+			<li><a href="testimonials.php">Testimonials</a></li>
+			<li><a href="vision-report.php">Vision Report</a></li>
+		</ul>
 	</aside>
 	<section class="col-xs-12 col-sm-8">
-		<h2 class="app-guideline">Application Guidelines &amp; Instructions</h2>
+		<h2 class="app-guideline">Application Guidelines &amp; Instructions</h2> 
 		<p><span class="sr-only">Note:</span> The 2015 Application is closed</p>
 		<div class="row">
 			<p class="col-xs-12 alert alert-danger">UPDATE: Join us for a workshop (optional) to learn more about our financial review and ask questions of our reviewers at <a href="http://www.raffa.com/">Raffa</a>&mdash;<strong>Monday, February 9th @ 3:30pm</strong> or <strong>Friday, February 20th @ 10am</strong>. <a href="http://cfp-dc.org/rsvp/rsvp.php?rid=156&amp;id=-1" title="Link to register for financial review and FAQ session with reviewers">Register here<span class="sr-only">Link to register for financial review and FAQ session with reviewers</span></a> to join us in person or via the web!</p>
@@ -94,8 +78,8 @@ include('includes/functions.php');
 						</li><li><strong>NOT</strong> have been featured in the 2012-13, 2013-14 or 2014-15 print Catalogue (though organizations re-listed only on the website in 2012, 2013 or 2014 <i>may</i> reapply this year to be re-featured in print)</li>
 					</ul>
 					<p><small>For more information on the eligibility of local chapters of national organizations, professional associations, membership organizations, etc, please see our <a href="faq.php">FAQ</a>.</small></p>
-				</div>
-				<div class="col-xs-12">
+			</div>
+			<div class="col-xs-12">
 					<h3>Review Process &amp; Timeline</h3>
 					<p>The application opens on January 5th and closes on February 27th. More than 200 charitable organizations apply to be included in the Catalogue for Philanthropy each year, and we select approximately 70 for our print Catalogue. Once applications are processed, over 100 reviewers from foundations, corporate giving programs, peer nonprofits, and the philanthropic advisory community are matched with applicants in the reviewers’ fields of expertise. Our review process (March&ndash;April) consists of three parts:</p>
 					<ul class="normal">
@@ -104,18 +88,18 @@ include('includes/functions.php');
 						<li><strong>Site Visits:</strong> All reviewers are asked if they have site visited an organization within the past three years. Positive site visits confirm positive reviews. Negative site visits generate a phone call. Any organization that has not been visited by our review team will be visited by Catalogue staff.</li>
 					</ul>
 					<p>
-						Our goal is to create a balanced list of great nonprofits in all fields: we don’t want all of our nonprofits to serve one category – for example all arts organizations or all programs that serve the elderly. While final decisions are editorial, they are always guided by the rankings and comments of our review team!
+					Our goal is to create a balanced list of great nonprofits in all fields: we don’t want all of our nonprofits to serve one category – for example all arts organizations or all programs that serve the elderly. While final decisions are editorial, they are always guided by the rankings and comments of our review team!
 					</p>
 					<p>
-						Our vetted list of charities for the 2015-16 print Catalogue will be finalized in May and we’ll work with selected organizations to create their Catalogue features, wish lists, photos and more before the Catalogue is released in late fall, just in advance of the giving season.
+					Our vetted list of charities for the 2015-16 print Catalogue will be finalized in May and we’ll work with selected organizations to create their Catalogue features, wish lists, photos and more before the Catalogue is released in late fall, just in advance of the giving season.
 					</p>
 					<p>If you have read our application guidelines, eligibility criteria and <a href="faq.php">FAQ</a> and are interested in applying to be featured in the 2015-16 Catalogue for Philanthropy, please download our application instructions <a href="http://cfp-dc.org/email_content/2014/app2014/Application%20Instructions_2014.pdf">here<span class="sr-only">Download our Instructions here</span></a></p>
 					<p>
-						<strong>Questions:</strong> Before you email or call, please read our <a href="faq.php">Frequently Asked Questions (FAQ)</a>. If you don't find the answers you are looking for, call us at <a href="tel:202-955-6538" title="call The Catalogue for Philanthropy">202-955-6538</a>, or email us at <a href="mailto:info@catalogueforphilanthropy-dc.org" title="email The Cataloge for Philanthropy">info@catalogueforphilanthropy-dc.org</a>.
+					<strong>Questions:</strong> Before you email or call, please read our <a href="faq.php">Frequently Asked Questions (FAQ)</a>. If you don't find the answers you are looking for, call us at <a href="tel:202-955-6538" title="call The Catalogue for Philanthropy">202-955-6538</a>, or email us at <a href="mailto:info@catalogueforphilanthropy-dc.org" title="email The Cataloge for Philanthropy">info@catalogueforphilanthropy-dc.org</a>.
 					</p>
-				</div>
 			</div>
-		</section>
-	</div>
-	</main>
-	<?php get_template('footer'); ?>
+		</div>
+	</section>
+</div>
+</main>
+<?php get_template('footer'); ?>
