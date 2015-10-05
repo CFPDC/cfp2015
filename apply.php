@@ -42,7 +42,7 @@ include('includes/functions.php');
 	<section class="col-xs-12 col-sm-8">
 		<h2>Apply for The Catalogue for Philanthropy<br> <small> The 2015 Application is closed</small></h2>
 		<div class="row">
-		<div class="col-xs-8 col-xs-offset-2 col-sm-12 col-sm-offset-0 col-md-4 well related-links">
+			<div class="col-xs-8 col-xs-offset-2 col-sm-12 col-sm-offset-0 col-md-4 well related-links">
 				<h3>Quick Links</h3>
 				<ul class="list-unstyled normal">
 					<li><a href="application-instructions.php" title="The Catalogue for Philanthropy application guidelines and instructions"><span class="sr-only">CFP's </span>Application Guidelines and Instructions</a></li>

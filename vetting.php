@@ -49,7 +49,7 @@ include('includes/functions.php');
 				<h2 class="media-heading apply-heading">Apply
 				<small>(January&dash;February)</small>
 				</h2>
-				<p>At the beginning of each year, more than 200 charitable organizations apply to be included in the Catalogue for Philanthropy. All applicants must have 501c3 status with budgets under $3 million, be located in Greater Washington (the District of Columbia and nearby Maryland and Virginia counties), and provide significant services in this region. <a href="apply.php">Click here</a> for details about our application.</p>
+				<p>At the beginning of each year, more than 200 charitable organizations apply to be included in the Catalogue for Philanthropy. All applicants must have 501c3 status with budgets under $3 million, be located in Greater Washington (the District of Columbia and nearby Maryland and Virginia counties), and provide significant services in this region. <a href="apply.php">Find details about our application here</a>.</p>
 			</div>
 		</div>
 		<div class="media team-member">
@@ -89,7 +89,7 @@ include('includes/functions.php');
 				<p>Our goal is to create a balanced list of great nonprofits in all fields: we don&rsquo;t want all of our nonprofits to serve one category&ndash;for example all arts organizations or all programs that serve the elderly. While final decisions are editorial, they are always guided by the rankings and comments of our review team!</p>
 			</div>
 		</div>
-	</section>
+</section>
 </div>
 </main>
 <?php get_template('footer'); ?>

@@ -61,7 +61,7 @@ include('includes/functions.php');
 		</nav>
 	</aside>
 	<section class="col-sm-8">
-		<div id="calendar" class="calendar-container">
+		<div id="calendar" class="calendar-container fc">
 		</div>
 	</section>
 </div>

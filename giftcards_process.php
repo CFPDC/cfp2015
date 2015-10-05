@@ -92,10 +92,12 @@ include('includes/functions.php');
           <div class="row">
             <div class="col-xs-12 col-sm-12">
               <div class="input-group other-amount">
+                <label class="sr-only" for="amount-input">Select to enter your own denomination</label>
                 <span class="input-group-addon">
-                  <input type="radio" name="amount">
+                  <input type="radio" name="amount" id="amount-input">
                 </span>
-                <input type="text" placeholder="Denominations of $50" name="amount" class="form-control">
+                <label class="sr-only" for="denomination">Please enter denominations of $50</label>
+                <input type="text" placeholder="Denominations of $50" name="amount" id="denomination" class="form-control">
                 <span class="sr-only">Please enter denominations of $50</span>
                 </div><!-- /input-group -->
               </div>
@@ -128,21 +130,21 @@ include('includes/functions.php');
                 <p>Enter Card Mailing Address</p>
                 <div class="two-line">
                   <label for="name">Your Name<small> (required)</small></label>
-                  <input type="text" class="userName" id="name" maxlength="40" name="name" aria-describedby="purchase-gift-card-heading">
+                  <input type="text" class="userName" id="name" maxlength="40" name="name" aria-describedby="purchase-gift-card-heading" aria-required="true">
                 </div>
                 <div class="two-line">
                   <label for="street">Street Address<small> (required)</small></label>
-                  <input type="text" id="street" maxlength="40" name="street">
+                  <input type="text" id="street" maxlength="40" name="street" aria-required="true">
                 </div>
                 <div class="two-line">
                   <label for="city">City<small> (required)</small></label>
-                  <input type="text" id="city" maxlength="40" name="city">
+                  <input type="text" id="city" maxlength="40" name="city" aria-required="true">
                 </div>
                 <div class="two-wide clearfix">
                   <div>
                     <div>
                       <label for="state">State<small> (required)</small></label>
-                      <select class="form-control" id="state" name="state">
+                      <select class="form-control" id="state" name="state" aria-required="true">
                         <option value="" selected="">Select</option>
                         <optgroup label="Greater Washington Area">
                           <option value="DC">District of Columbia</option>
@@ -206,7 +208,7 @@ include('includes/functions.php');
                     </div>
                     <div>
                       <label class="zip-label" for="zip">Zip<small> (required)</small></label>
-                      <input type="text" class="zip-code" id="zip" maxlength="5" name="zip">
+                      <input type="text" class="zip-code" id="zip" maxlength="5" name="zip" aria-required="true">
                     </div>
                   </div>
                 </div>
