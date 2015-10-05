@@ -12,7 +12,8 @@ include('includes/functions.php');
 </div>
 <main role="main" class="container-fluid secondary">
   <div class="row">
-    <aside class="col-sm-3 who-we-are-nav" id="asideFilter" role="navigation">
+    <aside class="col-sm-3 who-we-are-nav" id="asideFilter">
+    <nav role="navigation">
       <ul class="list-unstyled">
         <li>
           <a href="all-events.php">Events</a>
@@ -29,7 +30,7 @@ include('includes/functions.php');
           </ul>
         </li>
         <li>
-          <a href="how-to-give.php">Ways to Give</a>
+          <a href="how-to-give.php" class="active-parent">Ways to Give</a>
           <ul>
             <li>
               <a href="giftcards.php">Gift Cards</a>
@@ -55,7 +56,8 @@ include('includes/functions.php');
           <a href="volunteer-opportunities.php">Volunteer</a>
         </li>
       </ul>
-    </aside>
+    </nav>
+  </aside>
     <section class="col-xs-12 col-sm-9">
       <p>
         Welcome to Especially for Kids! Scroll through our photos and descriptions until you find something that interests you. The list is sorted by category, but you can also sort it by location if you prefer to look in &ldquo;your own backyard.&rdquo; If you want to learn more, click the name of the organization to get to its page on the Catalogue website; sometimes there&rsquo;s even a video! Return to this page by clicking &ldquo;back to list.&rdquo;

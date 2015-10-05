@@ -76,21 +76,21 @@ include('includes/functions.php');
               <div class="col-sm-6 express-checkout-section" style="display: none;">
                 <div>
                   <label for="name">Your Name</label>
-                  <input type="text" class="userName" id="name" maxlength="40" name="name" aria-describedby="express-checkout-heading-section">
+                  <input type="text" class="userName" id="name" maxlength="40" name="name" aria-describedby="express-checkout-heading-section" aria-required="true">
                 </div>
                 <div>
                   <label for="street">Street Address</label>
-                  <input type="text" id="street" maxlength="40" name="street">
+                  <input type="text" id="street" maxlength="40" name="street" aria-required="true">
                 </div>
                 <div>
                   <label for="city">City</label>
-                  <input type="text" id="city" maxlength="40" name="city">
+                  <input type="text" id="city" maxlength="40" name="city" aria-required="true">
                 </div>
                 <div class="two-wide clearfix">
                   <div class="pull-right">
                     <div>
                       <label for="state">State</label>
-                      <select class="form-control" id="state" name="state">
+                      <select class="form-control" id="state" name="state" aria-required="true">
                         <option value="" selected="">Select</option>
                         <optgroup label="Greater Washington Area">
                         <option value="DC">District of Columbia</option>
@@ -154,7 +154,7 @@ include('includes/functions.php');
                     </div>
                     <div>
                       <label class="zip-label" for="zip">Zip</label>
-                      <input type="text" data-mask="99999" class="zip-code" id="zip" maxlength="5" name="zip">
+                      <input type="text" data-mask="99999" class="zip-code" id="zip" maxlength="5" name="zip" aria-required="true">
                     </div>
                   </div>
                 </div>

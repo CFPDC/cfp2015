@@ -12,22 +12,38 @@ include('includes/functions.php');
 </div>
 <main role="main" class="container-fluid secondary">
 <div class="row">
-	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter" role="navigation">
+<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
+	<nav role="navigation">
 		<ul class="list-unstyled">
-			<li><a href="about-us.php">About Us</a></li>
-			<li><a href="cfp-team.php">Team</a></li>
-			<li><a href="javascript:void(0);" class="current">Our Reviewers</a></li>
-			<li><a href="sponsors.php">Sponsors</a></li>
-			<li><a href="press.php">Press</a></li>
-			<li><a href="testimonials.php">Testimonials</a></li>
-			<li><a href="vision-report.php">Vision Report</a></li>
+			<li>
+				<a href="about-us.php">About Us</a>
+			</li>
+			<li>
+				<a href="cfp-team.php">Team</a>
+			</li>
+			<li>
+				<a href="javascript:void(0);" class="current">Our Reviewers</a>
+			</li>
+			<li>
+				<a href="sponsors.php">Sponsors</a>
+			</li>
+			<li>
+				<a href="press.php">Press</a>
+			</li>
+			<li>
+				<a href="testimonials.php">Testimonials</a>
+			</li>
+			<li>
+				<a href="vision-report.php">Vision Report</a>
+			</li>
 		</ul>
-	</aside>
+	</nav>
+</aside>
 	<section class="col-xs-12 col-sm-8">
 		<div class="row">
 			<div class="col-sm-12">
 				<p>Over one hundred reviewers from foundations, corporate giving programs, local government agencies, giving circles, peer nonprofits, and the philanthropic advisory community evaluate applications (about 225 a year) for distinction, merit, and impact. Approximately seventy nonprofits are selected annually. Every featured charity has been “site visited” by at least one reviewer, some by as many as five. Our accounting firm, RAFFA, PC, reviews the 990 filings, audited financials, and other key financial indicators of all finalists to ensure financial viability and transparency. And all organizations on the Catalogue website are re-certified every four years. We leverage the region’s knowledge about philanthropy for the benefit of the entire community.</p>
-				<p class="lead">The following participated in the selection process in 2014-15:</p>
+				<h2>The following participated in the selection process in 2014-15:</h2>
 				<ul class="list-unstyled">
 					<li>
 						ACCESS Hope <small><em>(Patricia Lunt)</em></small>

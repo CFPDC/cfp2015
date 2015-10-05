@@ -12,35 +12,37 @@ include('includes/functions.php');
 </div>
 <main role="main" class="container-fluid secondary">
 <div class="row">
-	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter" role="navigation">
-		<ul class="list-unstyled">
-			<li>
-				<a href="about-us.php">About Us</a>
-			</li>
-			<li>
-				<a href="javascript:void(0);" class="current">Team</a>
-			</li>
-			<li>
-				<a href="cfp-reviewers.php">Our Reviewers</a>
-			</li>
-			<li>
-				<a href="sponsors.php">Sponsors</a>
-			</li>
-			<li>
-				<a href="press.php">Press</a>
-			</li>
-			<li>
-				<a href="testimonials.php">Testimonials</a>
-			</li>
-			<li>
-				<a href="vision-report.php">Vision Report</a>
-			</li>
-		</ul>
+	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
+		<nav role="navigation">
+			<ul class="list-unstyled">
+				<li>
+					<a href="about-us.php">About Us</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="current">Team</a>
+				</li>
+				<li>
+					<a href="cfp-reviewers.php">Our Reviewers</a>
+				</li>
+				<li>
+					<a href="sponsors.php">Sponsors</a>
+				</li>
+				<li>
+					<a href="press.php">Press</a>
+				</li>
+				<li>
+					<a href="testimonials.php">Testimonials</a>
+				</li>
+				<li>
+					<a href="vision-report.php">Vision Report</a>
+				</li>
+			</ul>
+		</nav>
 	</aside>
 	<section class="col-sm-8">
 		<div class="media team-member">
 			<div class="media-left">
-				<img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=34998&g2_serialNumber=2" aria-hidden="true">
+				<img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=34998&g2_serialNumber=2" aria-hidden="true" alt="">
 			</div>
 			<div class="media-body">
 				<h2 class="media-heading">Barbara Harman <small>President and Editor <a href="mailto:bharman@cfp-dc.org">bharman@cfp-dc.org</a></small> </h2>
@@ -54,7 +56,7 @@ include('includes/functions.php');
 		</div>
 		<div class="media team-member">
 			<div class="media-left">
-				<img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=35010&g2_serialNumber=2" aria-hidden="true">
+				<img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=35010&g2_serialNumber=2" aria-hidden="true" alt="">
 			</div>
 			<div class="media-body">
 				<h2 class="media-heading">Nancy Swartz <small>Managing Editor &amp; Director of Special Events <a href="mailto:nswartz@cfp-dc.org">nswartz@cfp-dc.org</a></small> </h2>
@@ -68,7 +70,7 @@ include('includes/functions.php');
 		</div>
 		<div class="media team-member">
 			<div class="media-left">
-				<img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=39236&g2_serialNumber=2" aria-hidden="true">
+				<img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=39236&g2_serialNumber=2" aria-hidden="true" alt="">
 			</div>
 			<div class="media-body">
 				<h2 class="media-heading">Emma Bloksberg-Fireovid <small>Program Coordinator <a href="mailto:emmabf@cfp-dc.org">emmabf@cfp-dc.org</a></small> </h2>
@@ -82,7 +84,7 @@ include('includes/functions.php');
 		</div>
 		<div class="media team-member">
 			<div class="media-left">
-				<img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40844&g2_serialNumber=2" aria-hidden="true">
+				<img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40844&g2_serialNumber=2" aria-hidden="true" alt="">
 			</div>
 			<div class="media-body">
 				<h2 class="media-heading">Emily Flanagan <small>Community Partnerships Manager <a href="mailto:">needemail@cfp-dc.org</a> </small> </h2>
@@ -96,7 +98,7 @@ include('includes/functions.php');
 		</div>
 		<div class="media team-member">
 			<div class="media-left">
-				<img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=35003&g2_serialNumber=4" aria-hidden="true">
+				<img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=35003&g2_serialNumber=4" aria-hidden="true" alt="">
 			</div>
 			<div class="media-body">
 				<h2 class="media-heading">Aline Newman <small>Director of Marketing and Communications <a href="mailto:anewman@cfp-dc.org">anewman@cfp-dc.org</a></small> </h2>
@@ -110,7 +112,7 @@ include('includes/functions.php');
 		</div>
 		<div class="media team-member">
 			<div class="media-left">
-				<img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40840&g2_serialNumber=2" aria-hidden="true">
+				<img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40840&g2_serialNumber=2" aria-hidden="true" alt="">
 			</div>
 			<div class="media-body">
 				<h2 class="lead media-heading">Holly Richardson <small>Development Manager <a href="mailto:hrichardson@cfp-dc.org">hrichardson@cfp-dc.org</a></small> </h2>

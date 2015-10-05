@@ -17,45 +17,47 @@ include('includes/functions.php');
 	</div>
 </div>
 <div class="row">
-	<aside class="col-sm-3 who-we-are-nav" id="asideFilter" role="navigation">
-		<ul class="list-unstyled">
-			<li><a href="javascript:void(0);" class="current">Events</a></li>
-			<li><a href="volunteer-opportunities.php">Volunteer</a></li>
-		</ul>
-		<h3 class="search-event">Search for Events
-		<small>(All fields are optional)</small>
-		</h3>
-		<form onsubmit="return iso_doit()">
-			<div class="input-group form-group">
-				<label for="category">Select A Category</label>
-				<select class="category-select" id="category">
-					<option>All Categories</option>
-					<option>Nature</option>
-					<option>Culture</option>
-					<option>Education</option>
-					<option>Human Services</option>
-					<option>International</option>
-				</select>
-			</div>
-			<div class="input-group form-group">
-				<label for="location">Select A Location</label>
-				<select class="location-select" id="location">
-					<option>All Locations</option>
-					<option>Maryland</option>
-					<option>Virginia</option>
-					<option>Washington D.C.</option>
-				</select>
-			</div>
-			<div class="input-group form-group">
-				<label for="keyword">Keyword</label>
-				<input type="text" class="form-control" id="keyword" size="15">
-			</div>
-			<div class="input-group form-group">
-				<label for="zip">Enter a Zipcode</label>
-				<input type="text" class="form-control" id="zip" size="10">
-			</div>
-			<button type="submit" class="btn btn-primary">SEARCH FOR EVENTS</button>
-		</form>
+	<aside class="col-sm-3 who-we-are-nav" id="asideFilter">
+		<nav role="navigation">
+			<ul class="list-unstyled">
+				<li><a href="javascript:void(0);" class="current">Events</a></li>
+				<li><a href="volunteer-opportunities.php">Volunteer</a></li>
+			</ul>
+			<h3 class="search-event">Search for Events
+			<small>(All fields are optional)</small>
+			</h3>
+			<form onsubmit="return iso_doit()">
+				<div class="input-group form-group">
+					<label for="category">Select A Category</label>
+					<select class="category-select" id="category">
+						<option>All Categories</option>
+						<option>Nature</option>
+						<option>Culture</option>
+						<option>Education</option>
+						<option>Human Services</option>
+						<option>International</option>
+					</select>
+				</div>
+				<div class="input-group form-group">
+					<label for="location">Select A Location</label>
+					<select class="location-select" id="location">
+						<option>All Locations</option>
+						<option>Maryland</option>
+						<option>Virginia</option>
+						<option>Washington D.C.</option>
+					</select>
+				</div>
+				<div class="input-group form-group">
+					<label for="keyword">Keyword</label>
+					<input type="text" class="form-control" id="keyword" size="15">
+				</div>
+				<div class="input-group form-group">
+					<label for="zip">Enter a Zipcode</label>
+					<input type="text" class="form-control" id="zip" size="10">
+				</div>
+				<button type="submit" class="btn btn-primary">SEARCH FOR EVENTS</button>
+			</form>
+		</nav>
 	</aside>
 	<section class="col-sm-8">
 		<div class="row">
