@@ -404,6 +404,7 @@ form .error + textarea {
 }
 
 .adobeBlank {
+    display: none;
     font-size: 0;
 }
 
