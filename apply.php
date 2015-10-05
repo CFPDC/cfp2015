@@ -12,21 +12,37 @@ include('includes/functions.php');
 </div>
 <main role="main" class="container-fluid secondary">
 <div class="row">
-	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter" role="navigation">
-		<ul class="list-unstyled">
-			<li><a href="about-us.php" class="current">About Us</a></li>
-			<li><a href="cfp-team.php">Team</a></li>
-			<li><a href="cfp-reviewers.php">Our Reviewers</a></li>
-			<li><a href="sponsors.php">Sponsors</a></li>
-			<li><a href="press.php">Press</a></li>
-			<li><a href="testimonials.php">Testimonials</a></li>
-			<li><a href="vision-report.php">Vision Report</a></li>
-		</ul>
+	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
+		<nav role="navigation">
+			<ul class="list-unstyled">
+				<li>
+					<a href="about-us.php" class="current">About Us</a>
+				</li>
+				<li>
+					<a href="cfp-team.php">Team</a>
+				</li>
+				<li>
+					<a href="cfp-reviewers.php">Our Reviewers</a>
+				</li>
+				<li>
+					<a href="sponsors.php">Sponsors</a>
+				</li>
+				<li>
+					<a href="press.php">Press</a>
+				</li>
+				<li>
+					<a href="testimonials.php">Testimonials</a>
+				</li>
+				<li>
+					<a href="vision-report.php">Vision Report</a>
+				</li>
+			</ul>
+		</nav>
 	</aside>
 	<section class="col-xs-12 col-sm-8">
 		<h2>Apply for The Catalogue for Philanthropy<br> <small> The 2015 Application is closed</small></h2>
 		<div class="row">
-		<div class="col-xs-8 col-xs-offset-2 col-sm-12 col-sm-offset-0 col-md-4 well related-links">
+			<div class="col-xs-8 col-xs-offset-2 col-sm-12 col-sm-offset-0 col-md-4 well related-links">
 				<h3>Quick Links</h3>
 				<ul class="list-unstyled normal">
 					<li><a href="application-instructions.php" title="The Catalogue for Philanthropy application guidelines and instructions"><span class="sr-only">CFP's </span>Application Guidelines and Instructions</a></li>

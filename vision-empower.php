@@ -12,16 +12,32 @@ include('includes/functions.php');
 </div>
 <main role="main" class="container-fluid secondary">
 <div class="row">
-	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter" role="navigation">
-		<ul class="list-unstyled">
-			<li><a href="about-us.php">About Us</a></li>
-			<li><a href="cfp-team.php">Team</a></li>
-			<li><a href="cfp-reviewers.php">Our Reviewers</a></li>
-			<li><a href="sponsors.php">Sponsors</a></li>
-			<li><a href="press.php">Press</a></li>
-			<li><a href="testimonials.php">Testimonials</a></li>
-			<li><a href="vision-report.php" class="current">Vision Report</a></li>
-		</ul>
+	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
+		<nav role="navigation">
+			<ul class="list-unstyled">
+				<li>
+					<a href="about-us.php">About Us</a>
+				</li>
+				<li>
+					<a href="cfp-team.php">Team</a>
+				</li>
+				<li>
+					<a href="cfp-reviewers.php">Our Reviewers</a>
+				</li>
+				<li>
+					<a href="sponsors.php">Sponsors</a>
+				</li>
+				<li>
+					<a href="press.php">Press</a>
+				</li>
+				<li>
+					<a href="testimonials.php">Testimonials</a>
+				</li>
+				<li>
+					<a href="vision-report.php" class="current">Vision Report</a>
+				</li>
+			</ul>
+		</nav>
 	</aside>
 	<section class="col-xs-12 col-sm-9">
 			<div class="col-xs-12 col-md-3 pull-right hidden-xs hidden-sm">
@@ -38,15 +54,15 @@ include('includes/functions.php');
 					</blockquote>
 				</div>
 				<p>Each year, the Catalogue for Philanthropy&hellip; </p>
+				<ul class="list-unstyled">
+				<li><b>&hellip; conducts financial workshops</b> for nearly 100 of our charity applicants to assist them with presenting their numbers in line with accepted “best practices.” These workshops, presented by our friends at Raffa PC, are designed to aid charities not only with the CFP application, but with other grant applications and donor presentations as well.</li>
 
-				<p><b>&hellip; conducts financial workshops</b> for nearly 100 of our charity applicants to assist them with presenting their numbers in line with accepted “best practices.” These workshops, presented by our friends at Raffa PC, are designed to aid charities not only with the CFP application, but with other grant applications and donor presentations as well.</p>
+				<li><b>&hellip; empowers our nonprofits with marketing and communications tools</b> such as <a href="http://www.gazette.net/article/20131226/NEWS/131229583/1010/casa-prince-george-x2019-s-listed-in-philanthropy-guide&amp;template=gazette">press releases</a>, <a href="http://www.501ctech.org/501ctech-featured-in-catalogue-for-philanthropy-as-one-of-the-best-local-charities-in-greater-washington/">announcements</a>, and online fundraising templates. Thanks to the tools provided in the Catalogue’s Nonprofit Portal, our charities can easily share news with grantmakers, donors, volunteers, and media outlets in their community.</li>
 
-				<p><b>&hellip; empowers our nonprofits with marketing and communications tools</b> such as <a href="http://www.gazette.net/article/20131226/NEWS/131229583/1010/casa-prince-george-x2019-s-listed-in-philanthropy-guide&amp;template=gazette">press releases</a>, <a href="http://www.501ctech.org/501ctech-featured-in-catalogue-for-philanthropy-as-one-of-the-best-local-charities-in-greater-washington/">announcements</a>, and online fundraising templates. Thanks to the tools provided in the Catalogue’s Nonprofit Portal, our charities can easily share news with grantmakers, donors, volunteers, and media outlets in their community.</p>
+				<li><b>&hellip; presents &ldquo;The Art of the Thank You&rdquo;</b> to educate charities on the do's and don'ts of thanking donors. Using real examples from CFP charities, Catalogue President and Editor Barbara Harman draws on her experience as a philanthropist, charity director, and former English professor to share helpful tips for writing thoughtful and powerful thank&dash;you letters.</li>
 
-				<p><b>&hellip; presents &ldquo;The Art of the Thank You&rdquo;</b> to educate charities on the do's and don'ts of thanking donors. Using real examples from CFP charities, Catalogue President and Editor Barbara Harman draws on her experience as a philanthropist, charity director, and former English professor to share helpful tips for writing thoughtful and powerful thank&dash;you letters.</p>
-
-				<p><b>&hellip; and the beat goes on.</b> Throughout year we also offer training sessions on Marketing and Communications, and new workshops on Donor Stewardship.</p>
-				<p><b></b></p>
+				<li><b>&hellip; and the beat goes on.</b> Throughout year we also offer training sessions on Marketing and Communications, and new workshops on Donor Stewardship.</li>
+			</ul>
 				<a class="forward pull-right" href="vision-expand.php">Next: Expand <span class="sr-only">Visit the Expand page</span></a>
 			</div>
 	</section>

@@ -1414,6 +1414,7 @@ main address > span, address > a {
 
 .sponsors-heading3 {
     margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .two-column-well {
@@ -2239,10 +2240,6 @@ label[for="year"] {
     font-size: 18px;
     font-size: 1.8rem;
     text-align: left;
-}
-
-.lt-ie9 .header-logo, .ie10 .header-logo, .ie11 .header-logo, .ie9 .header-logo, .lt-ie9 .footer-logo, .ie10 .footer-logo, .ie11 .footer-logo, .ie9 .footer-logo {
-    display: inherit;
 }
 
 /*---FOOTER---*/

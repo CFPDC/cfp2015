@@ -12,16 +12,32 @@ include('includes/functions.php');
 </div>
 <main role="main" class="container-fluid secondary">
 <div class="row">
-	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter" role="navigation">
-		<ul class="list-unstyled">
-			<li><a href="about-us.php">About Us</a></li>
-			<li><a href="cfp-team.php">Team</a></li>
-			<li><a href="cfp-reviewers.php">Our Reviewers</a></li>
-			<li><a href="javascript:void(0);" class="current">Sponsors</a></li>
-			<li><a href="press.php">Press</a></li>
-			<li><a href="testimonials.php">Testimonials</a></li>
-			<li><a href="vision-report.php">Vision Report</a></li>
-		</ul>
+	<aside class="col-xs-12 col-sm-3 who-we-are-nav" id="asideFilter">
+		<nav role="navigation">
+			<ul class="list-unstyled">
+				<li>
+					<a href="about-us.php">About Us</a>
+				</li>
+				<li>
+					<a href="cfp-team.php">Team</a>
+				</li>
+				<li>
+					<a href="cfp-reviewers.php">Our Reviewers</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="current">Sponsors</a>
+				</li>
+				<li>
+					<a href="press.php">Press</a>
+				</li>
+				<li>
+					<a href="testimonials.php">Testimonials</a>
+				</li>
+				<li>
+					<a href="vision-report.php">Vision Report</a>
+				</li>
+			</ul>
+		</nav>
 	</aside>
 	<section class="col-xs-12 col-sm-8">
 		<div class="row">
@@ -31,20 +47,20 @@ include('includes/functions.php');
 				<p>In the past year (September 16, 2013&ndash;September 15, 2014) the following foundations, corporations, individuals, and nonprofit organizations have made the Catalogue possible&mdash;in print and online:</p>
 			</div>
 			<div class="col-sm-12">
-				<h3 class="sponsors-heading3">Founder</h3>
+				<h2 class="sponsors-heading3">Founder</h2>
 				<ul class="list-unstyled">
 					<li><a href="http://harman-foundation.org/" title="The Harman Family Foundation's website">Harman Family Foundation</a></li>
 				</ul>
 			</div>
 			<div class="col-sm-12">
-				<h3 class="sponsors-heading3">Partner</h3>
+				<h2 class="sponsors-heading3">Partner</h2>
 				<ul class="list-unstyled">
 					<li><a href="http://raffa.com/" title="The RAFFA website">RAFFA</a></li>
 					<li><a href="http://cgi.com/" title="The CGI website">CGI</a></li>
 				</ul>
 			</div>
 			<div class="col-sm-12">
-				<h3 class="sponsors-heading3">Investor</h3>
+				<h2 class="sponsors-heading3">Investor</h2>
 				<ul class="list-unstyled">
 					<li>Donald Graham</li>
 					<li>Harman Hain Family Foundation, Barbara Harman and William Cain</li>
@@ -54,7 +70,7 @@ include('includes/functions.php');
 				</ul>
 			</div>
 			<div class="col-sm-12">
-				<h3 class="sponsors-heading3">Ally</h3>
+				<h2 class="sponsors-heading3">Ally</h2>
 				<ul class="list-unstyled">
 					<li><a href="http://www.cafritzfoundation.org/" title="The Morris and Gwendoly Cafritz Foundation's website">Morris and Gwendolyn Cafritz Foundation</a></li>
 					<li><a href="www.capitalone.com" title="Capital One's website">Capital One</a></li>
@@ -74,7 +90,7 @@ include('includes/functions.php');
 				</ul>
 			</div>
 			<div class="col-sm-12">
-				<h3 class="sponsors-heading3">Friend</h3>
+				<h2 class="sponsors-heading3">Friend</h2>
 				<ul class="list-unstyled">
 					<li><a href="http://www.360livemedia.com/" title="The 360 Live Media website">360 Live Media</a></li>
 					<li><a href="http://www.boozallen.com/" title="The Booz Allen website">Booz Allen Hamilton</a></li>
@@ -98,7 +114,7 @@ include('includes/functions.php');
 				</ul>
 			</div>
 			<div class="col-sm-12">
-				<h3 class="sponsors-heading3">Supporter</h3>
+				<h2 class="sponsors-heading3">Supporter</h2>
 				<ul class="list-unstyled">
 					<li>Anonymous (2) </li>
 					<li>The Aspen Institute </li>
@@ -128,12 +144,51 @@ include('includes/functions.php');
 					<li>Kathleen Zeifang </li>
 				</ul>
 			</div>
-			<div class="col-sm-12">
-				<h3 class="sponsors-heading3">Contributor</h3>
-				<p>Anonymous (1), Nancy Adams, Amy Austin, Nancy and Robert Brown, Margaret Clark, Rose Ann Cleveland, Laurie Davis and Joseph Sellers, Brian Doherty and Kelsey Flora, Kelley Ellsworth, Michael Farrell, Mary Cornelia Ginn, Philip Golrick, Lauren Hodapp, Elizabeth Hyman, Charles Kackley, Jerome A Kaplan and Deena L Kaplan Family Foundation, Michael and Erna Kerst, Marie Lerch, The Herbert J and Dianne J Lerner Foundation, Deirdre Maloney, Marget Maurer, Paul McClenon, Jill Meyer, Barry and Margery Passett, Jane Ramsey, Sherry Reilly, David Rhoad, J Brinton Rowdybush, Kenneth and Beverly Sheiffer, Laura Sherman, Rachel Shub, Nancy and Wayne Swartz, Anne Urban and Peter Yeo, Rex Wagner, Audrey Winter</p>
+			<div class="row">
+				<div class="col-sm-12">
+					<h2 class="sponsors-heading3">Contributor</h2>
+					<div class="well two-column-well">
+						<ul class="list-unstyled two-column-list">
+							<li>Anonymous (1)</li>
+							<li>Nancy Adams</li>
+							<li>Amy Austin</li>
+							<li>Nancy and Robert Brown</li>
+							<li>Margaret Clark</li>
+							<li>Rose Ann Cleveland</li>
+							<li>Laurie Davis and Joseph Sellers</li>
+							<li>Brian Doherty and Kelsey Flora</li>
+							<li>Kelley Ellsworth</li>
+							<li>Michael Farrell</li>
+							<li>Mary Cornelia Ginn</li>
+							<li>Philip Golrick</li>
+							<li>Lauren Hodapp</li>
+							<li>Elizabeth Hyman</li>
+							<li>Charles Kackley</li>
+							<li>Jerome A Kaplan and Deena L Kaplan Family Foundation</li>
+							<li>Michael and Erna Kerst</li>
+							<li>Marie Lerch</li>
+							<li>The Herbert J and Dianne J Lerner Foundation</li>
+							<li>Deirdre Maloney</li>
+							<li>Marget Maurer</li>
+							<li>Paul McClenon</li>
+							<li>Jill Meyer</li>
+							<li>Barry and Margery Passett</li>
+							<li>Jane Ramsey</li>
+							<li>Sherry Reilly</li>
+							<li>David Rhoad</li>
+							<li>J Brinton Rowdybush</li>
+							<li>Kenneth and Beverly Sheiffer</li>
+							<li>Laura Sherman</li>
+							<li>Rachel Shub</li>
+							<li>Nancy and Wayne Swartz</li>
+							<li>Anne Urban and Peter Yeo</li>
+							<li>Rex Wagner</li>
+							<li>Audrey Winter</li>
+						</ul>
+					</div>
+				</div>
 			</div>
-		</div>
-	</section>
-</div>
-</main>
-<?php get_template('footer'); ?>
+		</section>
+	</div>
+	</main>
+	<?php get_template('footer'); ?>
