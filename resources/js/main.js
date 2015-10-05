@@ -884,7 +884,7 @@ $(function() {
 			$('#playButton').focus();
 		});
 
-	} else if (pageName === 'our-nonprofits') {
+	} else if (pageName === 'nonprofits-grid' || pageName === 'our-nonprofits') {
 		//.ready for global functions- only for grid nonprofit listing page
 		global.setHeight();
 
@@ -900,7 +900,7 @@ $(function() {
 		//add unchecked to each results page filter section
 		$('.select-all').attr("data-type", "uncheck");
 
-	} else if (pageName === 'our-nonprofits-list') {
+	} else if (pageName === 'our-nonprofits-list' || pageName === 'nonprofits-list') {
 		//collapse listings of nonprofits in list view
 		listViewResults.nonprofitCollapse();
 
