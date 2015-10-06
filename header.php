@@ -34,7 +34,7 @@
   <p>
   </p>
 </div>
-<a class="sr-only sr-only-focusable skip-navigation-link" href="javascript:void(0);" data-target="#primary-skip-nav">Skip to main navigation</a>
+<a class="sr-only sr-only-focusable skip-navigation-link" href="javascript:void(0);" data-target="#primary-skip-nav">Skip to main content</a>
 <noscript>
 <p class="js-off-message">
   The page could not be loaded. The Catalogue for Philanthorpy website currently does not fully support browsers with &quot;JavaScript&quot; disabled. Please note that if you choose to continue without enabling &quot;JavaScript&quot; certain functionalities on this website may not be available.
