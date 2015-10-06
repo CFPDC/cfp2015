@@ -44,7 +44,7 @@
 <header class="container-fluid" role="banner">
   <div class="row">
     <div class="col-sm-12 col-md-5">
-      <a class="pull-left" href="../" title="Catalogue for Philanthropy: Greater Washington home"> <img class="img-responsive header-logo" src="resources/images/cfp-logo-blue-brown2.gif" alt="Catalogue for Philanthropy: Greater Washington logo"> </a>
+<a class="sr-only sr-only-focusable skip-navigation-link" href="javascript:void(0);" data-target="#primary-skip-nav">Skip to main content</a>
     </div>
     <nav class="col-xs-7 col-md-7 secondary-nav">
       <ul class="list-inline">
