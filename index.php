@@ -2,19 +2,6 @@
 include('includes/functions.php');
 ?>
 <?php get_template('header', 'Title of homepage'); ?>
-<picture>
-  <source 
-    media="(min-width: 650px)"
-    srcset="http://www.html5rocks.com/en/tutorials/responsive/picture-element/cat-sitting.png">
-  <source 
-    media="(min-width: 465px)"
-    srcset="images/kitten-sitting.png">
-  <img 
-    src="http://www.html5rocks.com/en/tutorials/responsive/picture-element/cat-stretching.png" 
-    alt="a cute kitten">
-</picture>
-
-
 <h1 class="sr-only">Catalogue for Philanthropy: Greater Washington Area Home page</h1>
 <div id="myCarousel" class="carousel slide clearfix hero" data-ride="carousel">
   <!-- Indicators -->
