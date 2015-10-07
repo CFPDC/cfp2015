@@ -60,7 +60,7 @@ include('includes/functions.php');
 					<li><a href="http://cfp-dc.org/email_content/2015/2015app/CFPDC-Financials-Workshop-20150209.pdf">RAFFA Financial Workshop Powerpoint</a></li>
 				</ul>
 			</div>
-			<div class="col-sm-12 col-md-8">
+			<div class="col-sm-12 col-xs-12 col-md-8">
 				<h3>Why Apply</h3>
 				<p>Being part of our network means you'll be recognized as “one of the best” high-impact, community-based nonprofits in our region&mdash;something that means so much to supporters, both existing and new. While we do not guarantee a specific financial benefit, our track record shows that when nonprofits engage in a committed partnership with us, they receive both financial and other returns. (The Catalogue has helped raise over $25 million since 2003.)</p>
 				<h3>Benefits of a Catalogue Partnership</h3>
