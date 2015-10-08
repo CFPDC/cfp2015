@@ -69,7 +69,7 @@ include('includes/functions.php');
 			To set up your registry, or view an existing registry, click the link below.
 		</p>
 		<p>
-			<a href="registry_process.php" class="needs-page" title="Visit the Create/View Gift Registry page">Create/View Gift Registry</a>
+			<a href="http://www.cfp-dc.org/cfpdc/registry_process.php" title="Visit the Create/View Gift Registry page">Create/View Gift Registry</a>
 		</p>
 	</section>
 </div>
