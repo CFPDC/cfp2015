@@ -458,6 +458,7 @@ form .error + textarea {
 
 .catalogue-donate-button {
     border-radius: 0;
+    float: right;
     line-height: 1;
     margin-top: 10px;
     padding-bottom: 10px;
@@ -465,7 +466,12 @@ form .error + textarea {
 }
 
 /*---NAV---*/
+body.canvas-slid {
+    overflow-x: hidden;
+}
+
 .navbar-toggle {
+    float: left;
     margin-right: 0;
 }
 
@@ -2509,7 +2515,6 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .catalogue-donate-button {
         font-size: 17px;
         font-size: 1.7rem;
-        float: right;
     }
     .nav.nav-pills.home-search > li button.btn-link {
         border: 0;

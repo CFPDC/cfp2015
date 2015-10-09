@@ -27,7 +27,7 @@ Modernizr.load({
 //2. global variables
 /*** global variables ***/
 var $root = $('html, body'),
-	liveTextRegion = $('#liveTextPolite').children('p'),
+	liveTextRegion = $('#liveText-polite').find('p'),
 	navTrigger = $('.navbar-toggle'),
 	mobileMenu = $('.mobile-nav'),
 	bodyElement = document.body,
@@ -141,9 +141,9 @@ var global = {
 				currentPage = '<span class="sr-only">Currently viewing: </span>';
 			$this.prepend(currentPage);
 			//send current page to sr live text region to announce to screen reader if current page exists
-			liveTextRegion.text($this.text());
+			$('#liveText-polite').find('p').html($this.text());
 			setTimeout(function() {
-				liveTextRegion.text('');
+				$('#liveText-polite').find('p').html('');
 			}, 3000);
 
 		}
@@ -268,12 +268,51 @@ var global = {
 	},
 	homeSearchActiveToggle: function() {
 		$('.home-search').on('click', 'button', function() {
-			var activeEl = this;
+			var activeEl = $(this),
+				liveText = 'Showing all categories';
 			$('.home-search button.active').not(this).removeClass('active');
+			if ($(this).is('.nature-btn')) {
+				$gridHome.isotope({
+					filter: '.nature-cat',
+					sortBy: 'random'
+				});
+				$(this).addClass('active');
+				liveText = 'Showing only nature category';
 
-			if (!$(this).hasClass('active')) {
-				$(this).toggleClass('active');
+			} else if ($(this).is('.culture-btn')) {
+				$gridHome.isotope({
+					filter: '.culture-cat',
+					sortBy: 'random'
+				});
+				$(this).addClass('active');
+				liveText = 'Showing only culture category';
+
+			} else if ($(this).is('.education-btn')) {
+				$gridHome.isotope({
+					filter: '.education-cat',
+					sortBy: 'random'
+				});
+				$(this).addClass('active');
+				liveText = 'Showing only education category';
+
+			} else if ($(this).is('.human-services-btn')) {
+				$gridHome.isotope({
+					filter: '.human-services-cat',
+					sortBy: 'random'
+				});
+				$(this).addClass('active');
+				liveText = 'Showing only human services category';
+
+			} else if ($(this).is('.view-all-btn')) {
+				$gridHome.isotope({
+					filter: '*',
+					sortBy: 'random'
+				});
 			}
+			$('#liveText-polite').find('p').html(liveText);
+			setTimeout(function() {
+				$('#liveText-polite').find('p').html('');
+			}, 3000);
 		});
 	},
 	jumplink: function() {
@@ -284,8 +323,6 @@ var global = {
 			$root.animate({
 				scrollTop: $(target).offset().top
 			}, 'slow');
-
-
 			$(target).focus();
 		});
 
@@ -333,9 +370,9 @@ var global = {
 	mobileNavTrigger: function() {
 		var mobileNav = $('.mobile-nav').find('a:first'),
 			liveText = 'The mobile menu has opened';
-		liveTextRegion.text(liveText);
+		$('#liveText-polite').find('p').html(liveText);
 		setTimeout(function() {
-			liveTextRegion.text('');
+			$('#liveText-polite').find('p').html('');
 		}, 3000);
 		setTimeout(function() {
 			mobileNav.focus();
@@ -347,9 +384,9 @@ var global = {
 
 		if ($('.mobile-nav').hasClass('in') && e.keyCode === 9) {
 			mobileMenu.offcanvas('hide');
-			liveTextRegion.text(liveText);
+			$('#liveText-polite').find('p').html(liveText);
 			setTimeout(function() {
-				liveTextRegion.text('');
+				$('#liveText-polite').find('p').html('');
 			}, 3000);
 			setTimeout(function() {
 				navTrigger.focus();
@@ -389,31 +426,20 @@ var global = {
 
 	},
 	parameterUpdate: function() {
-		var oGetVars = {};
-		if (window.location.search.length > 1) {
-			for (var aItKey, nKeyId = 0, aCouples = window.location.search.substr(1).split("&"); nKeyId < aCouples.length; nKeyId++) {
-				aItKey = aCouples[nKeyId].split("=");
-				oGetVars[decodeURIComponent(aItKey[0])] = aItKey.length > 1 ? decodeURIComponent(aItKey[1]) : "";
-			}
-			for (var item in oGetVars) {
-				var valueParameter = $('[data-paramValue="' + oGetVars[item] + '" ]');
-				if ($(valueParameter).is(":checkbox")) {
-					valueParameter.prop("checked", true);
-				} else if ($(valueParameter).is("button")) {
-					setTimeout(function() {
-
-						var $this = valueParameter,
-							listClass = $this.attr('data-list'),
-							dataType = $this.attr("data-type");
-						if (dataType === 'uncheck') {
-							$this.attr("data-type", "check").text('Unselect All');
-							$('.' + listClass).prop("checked", true);
-
-						}
-					}, 1);
+		//checks parameters in url on page load and applies checked items or select all button to be toggled
+		var urlList = window.location.href.split("?");
+		if (urlList.length > 1 && urlList[1] != null) {
+			$.each(urlList[1].split("&"), function(i, item) {
+				if (item) {
+					$('input[data-paramvalue="' + item.split("=")[1] + '"]').prop('checked', true)
 				}
-			}
-
+			});
+			$.each($('div.selections'), function() {
+				if ($(this).find("input:checked").length == $(this).find("input").length)
+					$(this).find(".select-all").text("Unselect All").attr('data-type', 'checked');
+				else
+					$(this).find(".select-all").text("Select All").attr('data-type', 'unchecked');
+			})
 		}
 	},
 	pressReleaseLink508: function() {
@@ -463,22 +489,22 @@ var global = {
 			$(this).toggleClass('active');
 		});
 	},
-	setGetParameter: function(paramName, paramValue) {
-		var url = window.location.href;
-
-		if (url.indexOf(paramName + "=") >= 0) {
-			var prefix = url.substring(0, url.indexOf(paramName));
-			var suffix = url.substring(url.indexOf(paramName));
-			suffix = suffix.substring(suffix.indexOf("=") + 1);
-			suffix = (suffix.indexOf("&") >= 0) ? suffix.substring(suffix.indexOf("&")) : "";
-			url = prefix + paramName + "=" + paramValue + suffix;
+	setGetParameter: function(paramName, paramValue, dataType) {
+		var url = window.location.href.split("?")[0] + "?",
+			queryStr = window.location.href.split("?")[1];
+		if (queryStr) {
+			if (queryStr.indexOf(paramValue) > -1) {
+				var arr = jQuery.grep(queryStr.split("&"), function(value) {
+					return !(value.indexOf(paramValue) > -1);
+				});
+				window.location.href = url + arr.join("&");
+			} else {
+				queryStr += "&" + paramName + "=" + paramValue;
+				window.location.href = url + queryStr;
+			}
 		} else {
-			if (url.indexOf("?") < 0)
-				url += "?" + paramName + "=" + paramValue;
-			else
-				url += "&" + paramName + "=" + paramValue;
+			window.location.href = url + paramName + "=" + paramValue;
 		}
-		window.location.href = url;
 	},
 	setHeight: function() {
 		if (!$('html').hasClass('lt-ie9')) {
@@ -690,7 +716,7 @@ if (!$('html').hasClass('lt-ie9')) {
 
 	$(window).load(function() {
 		//isotope must load after images are loaded or the height of the element will be wrong
-		var $grid = $('.grid').isotope({
+		var $gridNp = $('.grid.nonprofits').isotope({
 			itemSelector: '.iso-item',
 			layoutMode: 'fitRows',
 			getSortData: {
@@ -704,18 +730,26 @@ if (!$('html').hasClass('lt-ie9')) {
 
 		$('.sort-by').on('click', 'button', function() {
 			var sortByValue = $(this).attr('data-sort-by');
-			$grid.isotope({
+			$gridNp.isotope({
 				sortBy: sortByValue
 			});
 			//update screen reader of sorting announcement
-			liveTextRegion.text("Results sorted by " + sortByValue);
+			$('#liveText-polite').find('p').html("Results sorted by " + sortByValue);
 			setTimeout(function() {
-				liveTextRegion.text('');
+				$('#liveText-polite').find('p').html('');
 			}, 3000);
 			//collapse the dropdown after selecting
 			$('.sort-toggle').click();
 		});
 	});
+
+	//isotope must load after images are loaded or the height of the element will be wrong
+	var $gridHome = $('.subcategories').isotope({
+		itemSelector: '.subcat-grid-item',
+		layoutMode: 'fitRows',
+		sortBy: 'random'
+	});
+
 }
 //end isotope script
 
@@ -768,9 +802,9 @@ $('.carouselButtons').on('click', 'button', function() {
 	button.delay(500).addClass('hide').siblings().removeClass('hide');
 	buttonFocus.focus();
 	$('#liveTextPolite').children('p').html(liveText);
-	liveTextRegion.text(liveText);
+	$('#liveText-polite').find('p').html(liveText);
 	setTimeout(function() {
-		liveTextRegion.text('');
+		$('#liveText-polite').find('p').html('');
 	}, 3000);
 });
 
@@ -787,44 +821,28 @@ $('a').on('keydown', function(event) {
 
 //when user clicks the select all link, check the appropriate checkboxes and update text
 $('.select-all').on('click', function() {
-	var $this = $(this),
-		listClass = $this.attr('data-list'),
-		dataType = $this.attr("data-type");
-	if (dataType === 'uncheck') {
-		$this.attr("data-type", "check").text('Unselect All');
-		$('.' + listClass).prop("checked", true);
-		var paramName = $(this).attr('data-paramName'),
-			paramValue = $(this).attr('data-paramValue');
+	var rootDiv = $(this).parent(),
+		btnDataType = $(this).data("type");
+	$(rootDiv).find("input").prop("checked", (btnDataType == "checked") ? false : true);
+	btnDataType == "checked" ? $(this).data('type', 'unchecked').text("Select All") : $(this).data('type', 'checked').text("Unselect All");
 
-		global.setGetParameter(paramName, paramValue);
-	} else {
-		$this.attr("data-type", "uncheck").text('Select All');
-		$('.' + listClass).prop("checked", false);
-	}
-});
-$('.filter-parameter').on('change', function() {
-	$('.select-all').each(function() {
-		var $this = $(this),
-			dataList = $this.attr('data-list'),
-			$checkboxes = $('.' + dataList);
-
-		if ($checkboxes.filter(':not(:checked)').length > 0) {
-			$(this).closest('button').attr("data-type", "uncheck").text('Select All');
-		}
+	var params = "?";
+	$("input:checked").each(function() {
+		params += $(this).data("paramname") + "=" + $(this).data("paramvalue") + "&";
 	});
-});
-$('.sort-by a').on('click', function(e) {
-	e.preventDefault();
-	//add functionality to update url with parameter from data-sort into this --> &strSort=name
+	window.location.href = window.location.href.split("?")[0] + params;
 });
 //set parameter for filter on nonprofit search page
 $('.filter-parameter').on('click', function() {
-	if ($(this).is(':checked')) {
-		var paramName = $(this).attr('data-paramName'),
-			paramValue = $(this).attr('data-paramValue');
-		global.setGetParameter(paramName, paramValue);
-	}
+	var paramName = $(this).attr('data-paramname'),
+		paramValue = $(this).attr('data-paramvalue');
+	global.setGetParameter(paramName, paramValue);
 });
+
+$('.sort-by a').on('click', function(e) {
+	e.preventDefault();
+});
+
 
 //4. global functions 
 $(function() {
@@ -897,8 +915,6 @@ $(function() {
 		//open collapsed sections of filtering on results/search page
 		$(".category-toggle").click();
 
-		//add unchecked to each results page filter section
-		$('.select-all').attr("data-type", "uncheck");
 
 	} else if (pageName === 'our-nonprofits-list' || pageName === 'nonprofits-list') {
 		//collapse listings of nonprofits in list view
@@ -912,9 +928,6 @@ $(function() {
 
 		//open collapsed sections of filtering on results/search page
 		$(".category-toggle").click();
-
-		//add unchecked to each results page filter section
-		$('.select-all').attr("data-type", "uncheck");
 
 	} else if (pageName === 'faq') {
 		//faq list add jumplink attributes
