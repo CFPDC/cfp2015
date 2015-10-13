@@ -63,28 +63,28 @@ include('includes/functions.php');
 			Donating appreciated stock can be a tax&dash;wise way to conduct your charitable giving. Investors Capital Inc., a member of NASD &amp; SIPC, handles gifts of stock for Catalogue donors. Here’s how it works:
 		</p>
 		<ul class="list-unstyled">
-		<li class="stock">
-			<strong>Step One:</strong> Complete and SIGN the <a href="http://www.cfp-dc.org/email_content/PDF/CFPDC%20Letter%20of%20Authorization%20to%20Transfer%20Stock.pdf" target="_blank" title="Letter of Authorization">Letter of Authorization</a> and send it to your broker.
-		</li>
-		<li class="stock">
-			<strong>Step Two:</strong> Email a copy of the Letter of Authorization to Emma Bloksberg&dash;Fireovid at <a href="mailto: emmabf@cfp-dc.org" title="Email Emma Bloksberg-Fireovid">emmabf@cfp-dc.org</a>. Once you do this, we will advise our broker to watch for the transfer and to liquidate the stock when it is received into our account. PLEASE NOTE: there is NO IDENTIFYING INFORMATION attached to a stock transfer, so alerting us is CRUCIAL.
-		</li>
-		<li class="stock">
-			<strong>Step Three:</strong> We will tell you the amount of the liquidation after fees: this is the sum you will have to distribute. Please remember that stock prices can vary tremendously even in a single day, and certainly in the day or two that it takes to receive and sell your shares, so there is often a difference between the value on the day it was contributed and its value when liquidated. The liquidation amount may be lower, or higher, than when you made the transfer. The proceeds of the sale, after fees, is what you will have to distribute.
-		</li>
-		<li class="stock">
-			<strong>Step Four:</strong> We will contact you to discuss distribution of your funds.
-		</li>
-		<li class="stock">
+			<li class="stock">
+				<strong>Step One:</strong> Complete and SIGN the <a href="http://www.cfp-dc.org/email_content/PDF/CFPDC%20Letter%20of%20Authorization%20to%20Transfer%20Stock.pdf" target="_blank" title="Letter of Authorization">Letter of Authorization</a> and send it to your broker.
+			</li>
+			<li class="stock">
+				<strong>Step Two:</strong> Email a copy of the Letter of Authorization to Emma Bloksberg&dash;Fireovid at <a href="mailto: emmabf@cfp-dc.org" title="Email Emma Bloksberg-Fireovid">emmabf@cfp-dc.org</a>. Once you do this, we will advise our broker to watch for the transfer and to liquidate the stock when it is received into our account. PLEASE NOTE: there is NO IDENTIFYING INFORMATION attached to a stock transfer, so alerting us is CRUCIAL.
+			</li>
+			<li class="stock">
+				<strong>Step Three:</strong> We will tell you the amount of the liquidation after fees: this is the sum you will have to distribute. Please remember that stock prices can vary tremendously even in a single day, and certainly in the day or two that it takes to receive and sell your shares, so there is often a difference between the value on the day it was contributed and its value when liquidated. The liquidation amount may be lower, or higher, than when you made the transfer. The proceeds of the sale, after fees, is what you will have to distribute.
+			</li>
+			<li class="stock">
+				<strong>Step Four:</strong> We will contact you to discuss distribution of your funds.
+			</li>
+		</ul>
+		<p class="stock">
 			The Catalogue charges no fee for this service, but our broker does charge a modest fee, which will be deducted from the total amount raised by the sale of securities.
-		</li>
-		<li class="stock">
+		</p>
+		<p class="stock">
 			Your contribution of stock to the Catalogue for Philanthropy is a charitable gift and is deductible (according to IRS tax laws) in the calendar year in which the donation is made. Please contact your tax advisor for more information.
-		</li>
-		<li class="stock">
+		</p>
+		<p class="stock">
 			Please feel free to call or email us with questions.
-		</li>
-	</ul>
+		</p>
 	</section>
 </div>
 </main>

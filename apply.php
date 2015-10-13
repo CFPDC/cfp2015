@@ -50,7 +50,7 @@ include('includes/functions.php');
 					<li><a href="faq.php" title="Visit The Catalogue for Philanthropy Frequently Asked Questions page">FAQ<span class="sr-only"> - frequently asked questions about applying to The Catalogue for Philanthropy</span></a></li>
 				</ul>
 			</div>
-			<div class="col-sm-12 col-md-8">
+			<div class="col-sm-12 col-xs-12 col-md-8">
 				<h3>Who We Are: An Overview</h3>
 				<p>The mission of the Catalogue for Philanthropy: Greater Washington is to create strong and vibrant communities by connecting caring citizens with worthy community causes. For donors&sbquo; this means we take the guesswork out of giving by identifying the best community-based charities in Washington D.C. and nearby Maryland and Virginia. For our nonprofits&sbquo; we raise visibility through the distribution of our annual print Catalogue&sbquo; events&sbquo; and campaigns&sbquo; and we create resources and run educational workshops throughout the year to help them elevate their capacity to do good.</p>
 			</div>

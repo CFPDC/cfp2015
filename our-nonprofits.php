@@ -69,7 +69,7 @@ include('includes/functions.php');
     <div>
       <button class="btn btn-link category-toggle" data-toggle="collapse" data-target="#natureSearch" aria-expanded="false" aria-controls="natureSearch"> Nature </button>
       <div class="collapse selections" id="natureSearch">
-        <button class="btn btn-link select-all" data-list="natureSubCat" data-paramName="strCategory-nature" data-paramValue="nature">Select All</button>
+        <button class="btn btn-link select-all" data-type="unchecked" data-list="natureSubCat" data-paramName="strCategory-nature" data-paramValue="nature">Select All</button>
         <ul class="list-unstyled normal">
           <li>
             <label for="animals">
@@ -96,7 +96,7 @@ include('includes/functions.php');
     <div>
       <button class="btn btn-link category-toggle" data-toggle="collapse" data-target="#cultureSearch" aria-expanded="false" aria-controls="cultureSearch"> Culture </button>
       <div class="collapse selections" id="cultureSearch">
-        <button class="btn btn-link select-all" data-list="cultureSubCat" data-paramName="strCategory-culture" data-paramValue="culture">Select All</button>
+        <button class="btn btn-link select-all" data-type="unchecked" data-list="cultureSubCat" data-paramName="strCategory-culture" data-paramValue="culture">Select All</button>
         <ul class="list-unstyled normal">
           <li>
             <label for="kid-art">
@@ -123,7 +123,7 @@ include('includes/functions.php');
     <div>
       <button class="btn btn-link category-toggle" data-toggle="collapse" data-target="#educationSearch" aria-expanded="false" aria-controls="educationSearch"> Education </button>
       <div class="collapse selections" id="educationSearch">
-        <button class="btn btn-link select-all" data-list="educationSubCat" data-paramName="strCategory-education" data-paramValue="education">Select All</button>
+        <button class="btn btn-link select-all" data-type="unchecked" data-list="educationSubCat" data-paramName="strCategory-education" data-paramValue="education">Select All</button>
         <ul class="list-unstyled normal">
           <li>
             <label for="enrichment">
@@ -159,7 +159,7 @@ include('includes/functions.php');
     <div>
       <button class="btn btn-link category-toggle" data-toggle="collapse" data-target="#humanServicesSearch" aria-expanded="false" aria-controls="humanServicesSearch"> Human Services </button>
       <div class="collapse selections" id="humanServicesSearch">
-        <button class="btn btn-link select-all" data-list="humanServicesSubCat" data-paramName="strCategory-human-services" data-paramValue="human-services">Select All</button>
+        <button class="btn btn-link select-all" data-type="unchecked" data-list="humanServicesSubCat" data-paramName="strCategory-human-services" data-paramValue="human-services">Select All</button>
         <ul class="list-unstyled normal">
           <li>
             <label for="Aging">
@@ -249,14 +249,14 @@ include('includes/functions.php');
     <div>
       <button class="btn btn-link category-toggle" data-toggle="collapse" data-target="#areasServed" aria-expanded="false" aria-controls="areasServed"> Areas Served </button>
       <div class="collapse selections" id="areasServed">
-        <button class="btn btn-link select-all" data-list="areasSubCat" data-paramName="strCategory-areas" data-paramValue="areas-served">Select All</button>
+        <button class="btn btn-link select-all" data-type="unchecked" data-list="areasSubCat" data-paramName="strCategory-areas" data-paramValue="areas-served">Select All</button>
         <div class="collaspingSection">
           <button class="btn btn-link state-collapse" data-toggle="collapse" data-target="#marylandCollapse" aria-expanded="false" aria-controls="marylandCollapse">Maryland</button>
           <div class="collapse" id="marylandCollapse">
             <ul class="list-unstyled normal">
               <li>
                 <label for="md-1">
-                  <input type="checkbox" id="md-1" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="md-">
+                  <input type="checkbox" id="md-1" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="md-1">
                   area 1 (
                   <span class="md-1-count">
                   4
@@ -265,7 +265,7 @@ include('includes/functions.php');
               </li>
               <li>
                 <label for="md-2">
-                  <input type="checkbox" id="md-2" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="md-">
+                  <input type="checkbox" id="md-2" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="md-2">
                   area 2 (
                   <span class="md-2-count">
                   3
@@ -282,7 +282,7 @@ include('includes/functions.php');
             <ul class="list-unstyled normal">
               <li>
                 <label for="va-1">
-                  <input type="checkbox" id="va-1" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="va-">
+                  <input type="checkbox" id="va-1" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="va-1">
                   area 1 (
                   <span class="va-1-count">
                   4
@@ -291,7 +291,7 @@ include('includes/functions.php');
               </li>
               <li>
                 <label for="va-2">
-                  <input type="checkbox" id="va-2" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="va-">
+                  <input type="checkbox" id="va-2" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="va-2">
                   area 2 (
                   <span class="va-2-count">
                   3
@@ -307,7 +307,7 @@ include('includes/functions.php');
               <ul class="list-unstyled normal">
                 <li>
                   <label for="dc-1">
-                    <input type="checkbox" id="dc-1" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="dc-">
+                    <input type="checkbox" id="dc-1" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="dc-1">
                     area 1 (
                     <span class="cd-1-count">
                     4
@@ -316,7 +316,7 @@ include('includes/functions.php');
                 </li>
                 <li>
                   <label for="dc-2">
-                    <input type="checkbox" id="dc-2" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="dc-">
+                    <input type="checkbox" id="dc-2" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="dc-2">
                     area 2 (
                     <span class="dc-2-count">
                     3
@@ -333,7 +333,7 @@ include('includes/functions.php');
               <ul class="list-unstyled normal">
                 <li>
                   <label for="int-1">
-                    <input type="checkbox" id="int-1" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="int-">
+                    <input type="checkbox" id="int-1" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="int-1">
                     area 1 (
                     <span class="int-1-count">
                     4
@@ -342,7 +342,7 @@ include('includes/functions.php');
                 </li>
                 <li>
                   <label for="int-2">
-                    <input type="checkbox" id="int-2" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="int-">
+                    <input type="checkbox" id="int-2" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="int-2">
                     area 2 (
                     <span class="int-2-count">
                     3
@@ -360,7 +360,7 @@ include('includes/functions.php');
     <div>
       <button class="btn btn-link category-toggle" data-toggle="collapse" data-target="#populationsServed" aria-expanded="false" aria-controls="populationsServed"> Populations Served </button>
       <div class="collapse selections" id="populationsServed">
-        <button class="btn btn-link select-all" data-list="popsSubCat" data-paramName="strCategory-population" data-paramValue="pop-served">Select All</button>
+        <button class="btn btn-link select-all" data-type="unchecked" data-list="popsSubCat" data-paramName="strCategory-population" data-paramValue="pop-served">Select All</button>
         <ul class="list-unstyled normal">
           <li>
             <label for="infants">

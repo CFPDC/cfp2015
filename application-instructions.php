@@ -60,7 +60,7 @@ include('includes/functions.php');
 					<li><a href="http://cfp-dc.org/email_content/2015/2015app/CFPDC-Financials-Workshop-20150209.pdf">RAFFA Financial Workshop Powerpoint</a></li>
 				</ul>
 			</div>
-			<div class="col-sm-12 col-md-8">
+			<div class="col-sm-12 col-xs-12 col-md-8">
 				<h3>Why Apply</h3>
 				<p>Being part of our network means you'll be recognized as “one of the best” high-impact, community-based nonprofits in our region&mdash;something that means so much to supporters, both existing and new. While we do not guarantee a specific financial benefit, our track record shows that when nonprofits engage in a committed partnership with us, they receive both financial and other returns. (The Catalogue has helped raise over $25 million since 2003.)</p>
 				<h3>Benefits of a Catalogue Partnership</h3>
@@ -109,7 +109,7 @@ include('includes/functions.php');
 					<p>
 						Our vetted list of charities for the 2015-16 print Catalogue will be finalized in May and we’ll work with selected organizations to create their Catalogue features, wish lists, photos and more before the Catalogue is released in late fall, just in advance of the giving season.
 					</p>
-					<p>If you have read our application guidelines, eligibility criteria and <a href="faq.php">FAQ</a> and are interested in applying to be featured in the 2015-16 Catalogue for Philanthropy, please download our application instructions <a href="http://cfp-dc.org/email_content/2014/app2014/Application%20Instructions_2014.pdf">here<span class="sr-only">Download our Instructions here</span></a></p>
+					<p>If you have read our application guidelines, eligibility criteria and <a href="faq.php">FAQ</a> and are interested in applying to be featured in the 2015-16 Catalogue for Philanthropy, please <a href="http://cfp-dc.org/email_content/2014/app2014/Application%20Instructions_2014.pdf">download our application instructions here</a></p>
 					<p>
 						<strong>Questions:</strong> Before you email or call, please read our <a href="faq.php">Frequently Asked Questions (FAQ)</a>. If you don't find the answers you are looking for, call us at <a href="tel:202-955-6538" title="call The Catalogue for Philanthropy">202-955-6538</a>, or email us at <a href="mailto:info@catalogueforphilanthropy-dc.org" title="email The Cataloge for Philanthropy">info@catalogueforphilanthropy-dc.org</a>.
 					</p>
