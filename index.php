@@ -42,7 +42,7 @@ include('includes/functions.php');
       <img src="http://lorempixel.com/1200/500/animals" class="img-responsive" alt="" aria-hidden="true">
       <div class="container">
         <div class="carousel-caption col-sm-4 col-md-3">
-          <p class="h1">Slide 1</p>
+          <h2 class="h1">Slide 1</h2>
           <p>
           Aenean a rutrum nulla. Vestibulum a arcu at nisi tristique pretium.
           </p>
@@ -56,7 +56,7 @@ include('includes/functions.php');
       <img src="http://lorempixel.com/1200/500/nature" class="img-responsive" alt="" aria-hidden="true">
       <div class="container">
         <div class="carousel-caption col-sm-4 col-md-3">
-          <p class="h1">Slide 2</p>
+          <h2 class="h1">Slide 2</h2>
           <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae egestas purus.
           </p>
@@ -70,7 +70,7 @@ include('includes/functions.php');
       <img src="http://lorempixel.com/1200/500/abstract" class="img-responsive" alt="" aria-hidden="true">
       <div class="container">
         <div class="carousel-caption col-sm-4 col-md-3">
-          <p class="h1">Slide 3</p>
+          <h2 class="h1">Slide 3</h2>
           <p>
           Donec sit amet mi imperdiet mauris viverra accumsan ut at libero.
           </p>
