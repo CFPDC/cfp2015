@@ -2137,7 +2137,7 @@ label[for="year"] {
     width: 40px;
 }
 
-.carousel-control:focus {
+.carousel-control:focus > span {
     outline: 2px solid #487896;
 }
 
