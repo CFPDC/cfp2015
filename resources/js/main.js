@@ -484,9 +484,15 @@ var global = {
 	searchPageActiveToggle: function() {
 		//results page change toggle view active class
 		$('.display-group').on('click', 'button', function() {
-			var activeEl = this;
+			var activeEl = this,
+				liveText = $(this).attr('data-original-title');
 			$('.display-group button.active').not(this).removeClass('active');
-			$(this).toggleClass('active');
+			$(this).addClass('active');
+
+			$('#liveText-polite').find('p').html(liveText);
+			setTimeout(function() {
+				$('#liveText-polite').find('p').html('');
+			}, 3000);
 		});
 	},
 	setGetParameter: function(paramName, paramValue, dataType) {
@@ -728,18 +734,19 @@ if (!$('html').hasClass('lt-ie9')) {
 			sortBy: 'random'
 		});
 
-		$('.sort-by').on('click', 'button', function() {
-			var sortByValue = $(this).attr('data-sort-by');
+		//get value of select option and sort results by 
+		$('.sort-by-select').on('change', function() {
+			var sortByValue = $(this).val();
+
 			$gridNp.isotope({
 				sortBy: sortByValue
 			});
-			//update screen reader of sorting announcement
-			$('#liveText-polite').find('p').html("Results sorted by " + sortByValue);
+
+			//update screen reader with current selection
+			$('#liveText-polite').children('p').html('Results have been sorted by: ' + sortByValue);
 			setTimeout(function() {
 				$('#liveText-polite').find('p').html('');
-			}, 3000);
-			//collapse the dropdown after selecting
-			$('.sort-toggle').click();
+			}, 1000);
 		});
 	});
 
@@ -801,7 +808,6 @@ $('.carouselButtons').on('click', 'button', function() {
 		liveText = $.trim($(this).siblings().text());
 	button.delay(500).addClass('hide').siblings().removeClass('hide');
 	buttonFocus.focus();
-	$('#liveTextPolite').children('p').html(liveText);
 	$('#liveText-polite').find('p').html(liveText);
 	setTimeout(function() {
 		$('#liveText-polite').find('p').html('');

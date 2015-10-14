@@ -11,7 +11,16 @@ include('includes/functions.php');
 <div class="row">
   <div class="col-xs-12 hidden-xs sort-display-menu-container">
     <div class="pull-right sort-display-menu">
-      <button class="btn btn-link pull-left clearfix sort-toggle collapsed" data-toggle="collapse" data-target="#sortBy" aria-expanded="false" aria-controls="sortByCollapse"> Sort By </button>
+      <div class="pull-left sort-by">
+          <label for="sort-by-list" data-filter-group="sort-by-list">Sort By:</label>
+          <select class="form-control input-lg sort-by-select" id="sort-by-list">
+            <option value="category">Category</option>
+            <option value="name">Name</option>
+            <option value="region">Region</option>
+            <option value="year">Year</option>
+          </select>
+        </div>
+      <!--<button class="btn btn-link pull-left clearfix sort-toggle collapsed" data-toggle="collapse" data-target="#sortBy" aria-expanded="false" aria-controls="sortByCollapse"> Sort By </button>
       <ul class="collapse sort-by list-unstyled dropdown-menu normal" id="sortBy">
         <li>
           <button class="btn btn-link" data-sort-by="category">Category</button>
@@ -25,7 +34,7 @@ include('includes/functions.php');
         <li>
           <button class="btn btn-link" data-sort-by="year">Year</button>
         </li>
-      </ul>
+      </ul>-->
       <div class="display-group pull-left">
         <label id="viewLabel">Display As:</label>
         <div class="btn-group" role="group" aria-label="viewLabel">
@@ -409,7 +418,7 @@ include('includes/functions.php');
   </aside>
   <section class="col-xs-12 col-sm-9">
     <!--<div class="row grid">-->
-    <div class="row grid">
+    <div class="row grid nonprofits">
       <div class="col-xs-12 iso-item nonprofit-listing" data-year="2008" data-region="VA" data-category="culture">
         <div class="thumbnail">
           <img src="http://www.cfp-dc.org/images/dc/cropped/165.jpg">
