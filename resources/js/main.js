@@ -254,6 +254,28 @@ var global = {
 			}
 		}
 	},
+	filterExpandPageLoad: function() {
+		var categoryToggle = $('.category-toggle');
+		categoryToggle.each(function() {
+			var toggle = $(this),
+				expandContainer = toggle.next(),
+				list = expandContainer.children('ul'),
+				id = expandContainer.attr('id'),
+				inputChecked = '.filter-parameter:checked';
+			if (list.find(inputChecked).length) {
+				toggle.click();
+			} else if (id == 'areasServed') {
+				$('#' + id).find('.collaspingSection').each(function() {
+					if ($(this).find(inputChecked).length) {
+						toggle.click();
+						$(this).find('.state-collapse').click();
+
+					}
+				});
+			}
+		})
+
+	},
 	globalImageCheck: function(img) {
 		//call this in another function by naming variable. See homeImageCheck() for reference
 		img.each(function() {
@@ -918,8 +940,9 @@ $(function() {
 		//check parameters on nonprofit search page and update filters
 		global.parameterUpdate();
 
+
 		//open collapsed sections of filtering on results/search page
-		$(".category-toggle").click();
+		global.filterExpandPageLoad();
 
 
 	} else if (pageName === 'our-nonprofits-list' || pageName === 'nonprofits-list') {
@@ -933,7 +956,7 @@ $(function() {
 		global.parameterUpdate();
 
 		//open collapsed sections of filtering on results/search page
-		$(".category-toggle").click();
+		global.filterExpandPageLoad();
 
 	} else if (pageName === 'faq') {
 		//faq list add jumplink attributes
