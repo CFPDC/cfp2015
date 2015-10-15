@@ -50,7 +50,7 @@ include('includes/functions.php');
   <aside class="col-xs-12 col-sm-3" id="asideFilter">
     <form onsubmit="return iso_doit()">
       <div class="input-group form-group form-group-lg">
-        <input type="text" class="form-control" id="filtertext" si="30" placeholder="SEARCH NONPROFITS">
+        <input type="text" class="form-control" id="filtertext" placeholder="SEARCH NONPROFITS">
         <span class="input-group-btn">
         <button class="btn btn-gray btn-lg">
         <span class="fa fa-search">
@@ -297,60 +297,61 @@ include('includes/functions.php');
               </li>
             </ul>
           </div>
-          <!-- end of VA -->
-          <div class="collaspingSection">
-            <button class="btn btn-link state-collapse" data-toggle="collapse" data-target="#dcCollapse" aria-expanded="false" aria-controls="dcCollapse">District of Columbia</button>
-            <div class="collapse" id="dcCollapse">
-              <ul class="list-unstyled normal">
-                <li>
-                  <label for="dc-1">
-                    <input type="checkbox" id="dc-1" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="dc-1">
-                    area 1 (
-                    <span class="cd-1-count">
-                    4
-                    </span>
-                  ) </label>
-                </li>
-                <li>
-                  <label for="dc-2">
-                    <input type="checkbox" id="dc-2" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="dc-2">
-                    area 2 (
-                    <span class="dc-2-count">
-                    3
-                    </span>
-                  ) </label>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- end of DC -->
-          <div class="collaspingSection">
-            <button class="btn btn-link state-collapse" data-toggle="collapse" data-target="#internationalCollapse" aria-expanded="false" aria-controls="internationalCollapse">International</button>
-            <div class="collapse" id="internationalCollapse">
-              <ul class="list-unstyled normal">
-                <li>
-                  <label for="int-1">
-                    <input type="checkbox" id="int-1" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="int-1">
-                    area 1 (
-                    <span class="int-1-count">
-                    4
-                    </span>
-                  ) </label>
-                </li>
-                <li>
-                  <label for="int-2">
-                    <input type="checkbox" id="int-2" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="int-2">
-                    area 2 (
-                    <span class="int-2-count">
-                    3
-                    </span>
-                  ) </label>
-                </li>
-              </ul>
-            </div>
-            <!-- end of International -->
+        </div>
+        <!-- end of VA -->
+        <div class="collaspingSection">
+          <button class="btn btn-link state-collapse" data-toggle="collapse" data-target="#dcCollapse" aria-expanded="false" aria-controls="dcCollapse">District of Columbia</button>
+          <div class="collapse" id="dcCollapse">
+            <ul class="list-unstyled normal">
+              <li>
+                <label for="dc-1">
+                  <input type="checkbox" id="dc-1" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="dc-1">
+                  area 1 (
+                  <span class="cd-1-count">
+                  4
+                  </span>
+                ) </label>
+              </li>
+              <li>
+                <label for="dc-2">
+                  <input type="checkbox" id="dc-2" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="dc-2">
+                  area 2 (
+                  <span class="dc-2-count">
+                  3
+                  </span>
+                ) </label>
+              </li>
+            </ul>
           </div>
         </div>
+        <!-- end of DC -->
+        <div class="collaspingSection">
+          <button class="btn btn-link state-collapse" data-toggle="collapse" data-target="#internationalCollapse" aria-expanded="false" aria-controls="internationalCollapse">International</button>
+          <div class="collapse" id="internationalCollapse">
+            <ul class="list-unstyled normal">
+              <li>
+                <label for="int-1">
+                  <input type="checkbox" id="int-1" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="int-1">
+                  area 1 (
+                  <span class="int-1-count">
+                  4
+                  </span>
+                ) </label>
+              </li>
+              <li>
+                <label for="int-2">
+                  <input type="checkbox" id="int-2" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="int-2">
+                  area 2 (
+                  <span class="int-2-count">
+                  3
+                  </span>
+                ) </label>
+              </li>
+            </ul>
+          </div>
+          <!-- end of International -->
+        </div>
+        
       </div>
     </div>
     <!-- end of Areas Served section -->
@@ -517,7 +518,7 @@ include('includes/functions.php');
         <h2 class="title-section" id="letter-a">A</h2>
         <div class="media listing">
           <div class="media-left">
-            <a data-target="#" title="link to Alice Ferguson Foundation details"> <img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40167"> </a>
+            <a data-target="#" title="link to Alice Ferguson Foundation details"> <img class="media-object" alt="" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40167"> </a>
           </div>
           <div class="media-body">
             <div class="clearfix">
@@ -545,7 +546,7 @@ include('includes/functions.php');
       <h2 class="title-section" id="letter-b">B</h2>
       <div class="media listing">
         <div class="media-left">
-          <a href="#" title="link to Beacon House details"> <img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40203"> </a>
+          <a href="#" title="link to Beacon House details"> <img class="media-object" alt="" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40203"> </a>
         </div>
         <div class="media-body">
           <div class="clearfix">
@@ -573,7 +574,7 @@ include('includes/functions.php');
     <h2 class="title-section" id="letter-c">C</h2>
     <div class="media listing">
       <div class="media-left">
-        <a href="#" title="link to Beacon House details"> <img class="media-object" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40225"> </a>
+        <a href="#" title="link to Beacon House details"> <img class="media-object" alt="" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40225"> </a>
       </div>
       <div class="media-body">
         <div class="clearfix">
