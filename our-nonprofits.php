@@ -12,29 +12,14 @@ include('includes/functions.php');
   <div class="col-xs-12 hidden-xs sort-display-menu-container">
     <div class="pull-right sort-display-menu">
       <div class="pull-left sort-by">
-          <label for="sort-by-list" data-filter-group="sort-by-list">Sort By:</label>
-          <select class="form-control input-lg sort-by-select" id="sort-by-list">
-            <option value="category">Category</option>
-            <option value="name">Name</option>
-            <option value="region">Region</option>
-            <option value="year">Year</option>
-          </select>
-        </div>
-      <!--<button class="btn btn-link pull-left clearfix sort-toggle collapsed" data-toggle="collapse" data-target="#sortBy" aria-expanded="false" aria-controls="sortByCollapse"> Sort By </button>
-      <ul class="collapse sort-by list-unstyled dropdown-menu normal" id="sortBy">
-        <li>
-          <button class="btn btn-link" data-sort-by="category">Category</button>
-        </li>
-        <li>
-          <button class="btn btn-link" data-sort-by="name">Name</button>
-        </li>
-        <li>
-          <button class="btn btn-link" data-sort-by="region">Region</button>
-        </li>
-        <li>
-          <button class="btn btn-link" data-sort-by="year">Year</button>
-        </li>
-      </ul>-->
+        <label for="sort-by-list" data-filter-group="sort-by-list">Sort By:</label>
+        <select class="form-control input-lg sort-by-select" id="sort-by-list">
+          <option value="category">Category</option>
+          <option value="name">Name</option>
+          <option value="region">Region</option>
+          <option value="year">Year</option>
+        </select>
+      </div>
       <div class="display-group pull-left">
         <label id="viewLabel">Display As:</label>
         <div class="btn-group" role="group" aria-label="viewLabel">
