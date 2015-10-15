@@ -47,7 +47,7 @@ include('includes/functions.php');
   <aside class="col-xs-12 col-sm-3" id="asideFilter">
     <form onsubmit="return iso_doit()">
       <div class="input-group form-group form-group-lg">
-        <input type="text" class="form-control" id="filtertext" si="30" placeholder="SEARCH NONPROFITS">
+        <input type="text" class="form-control" id="filtertext" placeholder="SEARCH NONPROFITS">
         <span class="input-group-btn">
         <button class="btn btn-gray btn-lg">
         <span class="fa fa-search">
@@ -294,60 +294,61 @@ include('includes/functions.php');
               </li>
             </ul>
           </div>
-          <!-- end of VA -->
-          <div class="collaspingSection">
-            <button class="btn btn-link state-collapse" data-toggle="collapse" data-target="#dcCollapse" aria-expanded="false" aria-controls="dcCollapse">District of Columbia</button>
-            <div class="collapse" id="dcCollapse">
-              <ul class="list-unstyled normal">
-                <li>
-                  <label for="dc-1">
-                    <input type="checkbox" id="dc-1" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="dc-1">
-                    area 1 (
-                    <span class="cd-1-count">
-                    4
-                    </span>
-                  ) </label>
-                </li>
-                <li>
-                  <label for="dc-2">
-                    <input type="checkbox" id="dc-2" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="dc-2">
-                    area 2 (
-                    <span class="dc-2-count">
-                    3
-                    </span>
-                  ) </label>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- end of DC -->
-          <div class="collaspingSection">
-            <button class="btn btn-link state-collapse" data-toggle="collapse" data-target="#internationalCollapse" aria-expanded="false" aria-controls="internationalCollapse">International</button>
-            <div class="collapse" id="internationalCollapse">
-              <ul class="list-unstyled normal">
-                <li>
-                  <label for="int-1">
-                    <input type="checkbox" id="int-1" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="int-1">
-                    area 1 (
-                    <span class="int-1-count">
-                    4
-                    </span>
-                  ) </label>
-                </li>
-                <li>
-                  <label for="int-2">
-                    <input type="checkbox" id="int-2" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="int-2">
-                    area 2 (
-                    <span class="int-2-count">
-                    3
-                    </span>
-                  ) </label>
-                </li>
-              </ul>
-            </div>
-            <!-- end of International -->
+        </div>
+        <!-- end of VA -->
+        <div class="collaspingSection">
+          <button class="btn btn-link state-collapse" data-toggle="collapse" data-target="#dcCollapse" aria-expanded="false" aria-controls="dcCollapse">District of Columbia</button>
+          <div class="collapse" id="dcCollapse">
+            <ul class="list-unstyled normal">
+              <li>
+                <label for="dc-1">
+                  <input type="checkbox" id="dc-1" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="dc-1">
+                  area 1 (
+                  <span class="cd-1-count">
+                  4
+                  </span>
+                ) </label>
+              </li>
+              <li>
+                <label for="dc-2">
+                  <input type="checkbox" id="dc-2" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="dc-2">
+                  area 2 (
+                  <span class="dc-2-count">
+                  3
+                  </span>
+                ) </label>
+              </li>
+            </ul>
           </div>
         </div>
+        <!-- end of DC -->
+        <div class="collaspingSection">
+          <button class="btn btn-link state-collapse" data-toggle="collapse" data-target="#internationalCollapse" aria-expanded="false" aria-controls="internationalCollapse">International</button>
+          <div class="collapse" id="internationalCollapse">
+            <ul class="list-unstyled normal">
+              <li>
+                <label for="int-1">
+                  <input type="checkbox" id="int-1" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="int-1">
+                  area 1 (
+                  <span class="int-1-count">
+                  4
+                  </span>
+                ) </label>
+              </li>
+              <li>
+                <label for="int-2">
+                  <input type="checkbox" id="int-2" class="areasSubCat filter-parameter" data-paramName="strCategory-areas" data-paramValue="int-2">
+                  area 2 (
+                  <span class="int-2-count">
+                  3
+                  </span>
+                ) </label>
+              </li>
+            </ul>
+          </div>
+          <!-- end of International -->
+        </div>
+        
       </div>
     </div>
     <!-- end of Areas Served section -->
@@ -406,7 +407,7 @@ include('includes/functions.php');
     <div class="row grid nonprofits">
       <div class="col-xs-12 iso-item nonprofit-listing" data-year="2008" data-region="VA" data-category="culture">
         <div class="thumbnail">
-          <img src="http://www.cfp-dc.org/images/dc/cropped/165.jpg">
+          <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/165.jpg">
           <div class="caption">
             <h2 class="name">Bowen McCauley Dance Company<br>
             <small class="city">Arlington, VA</small></h2>
@@ -429,7 +430,7 @@ include('includes/functions.php');
       </div>
       <div class="col-xs-12 iso-item nonprofit-listing" data-year="2014" data-region="MD" data-category="nature">
         <div class="thumbnail">
-          <img src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
+          <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
           <div class="caption">
             <h2 class="name" >Alice Ferguson Foundation<br>
             <small class="city">Accokeek, MD</small></h2>
@@ -452,7 +453,7 @@ include('includes/functions.php');
       </div>
       <div class="col-xs-12 iso-item nonprofit-listing" data-year="2014" data-region="DC" data-category="nature">
         <div class="thumbnail">
-          <img src="http://www.cfp-dc.org/images/dc/cropped/217.jpg">
+          <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/217.jpg">
           <div class="caption">
             <h2 class="name">DC Greens<br>
             <small class="city">Washington, DC</small></h2>
@@ -472,7 +473,7 @@ include('includes/functions.php');
       </div>
       <div class="col-xs-12 iso-item nonprofit-listing" data-year="2010" data-region="DC" data-category="culture">
         <div class="thumbnail">
-          <img src="http://www.cfp-dc.org/images/dc/cropped/162.jpg">
+          <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/162.jpg">
           <div class="caption">
             <h2 class="name">United States Capitol Historical Society<br>
             <small class="city">Washington, DC</small></h2>
@@ -495,7 +496,7 @@ include('includes/functions.php');
       </div>
       <div class="col-xs-12 iso-item nonprofit-listing" data-year="2011" data-region="MD" data-category="nature">
         <div class="thumbnail">
-          <img src="http://www.cfp-dc.org/images/dc/cropped/233.jpg">
+          <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/233.jpg">
           <div class="caption">
             <h2 class="name" >Rock Creek Conservancy <br>
             <small class="city">Bethesda, MD</small></h2>
@@ -515,7 +516,7 @@ include('includes/functions.php');
       </div>
       <div class="col-xs-12 iso-item nonprofit-listing" data-year="2014" data-region="DC" data-category="education">
         <div class="thumbnail">
-          <img src="http://www.cfp-dc.org/images/dc/cropped/266.jpg">
+          <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/266.jpg">
           <div class="caption">
             <h2 class="name">Latin American Montessori Bilingual Public Charter School<br>
             <small class="city">Washington, DC</small></h2>
@@ -535,7 +536,7 @@ include('includes/functions.php');
       </div>
       <div class="col-xs-12 iso-item nonprofit-listing" data-year="2014" data-region="DC" data-category="education">
         <div class="thumbnail">
-          <img src="http://www.cfp-dc.org/images/dc/cropped/196.jpg">
+          <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/196.jpg">
           <div class="caption">
             <h2 class="name">The Posse Foundation<br>
             <small class="city">Washington, DC</small></h2>
@@ -555,7 +556,7 @@ include('includes/functions.php');
       </div>
       <div class="col-xs-12 iso-item nonprofit-listing clearfix" data-year="2014" data-region="MD" data-category="human-services">
         <div class="thumbnail">
-          <img src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
+          <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
           <div class="caption">
             <h2 class="name" >KEEN Greater DC (Kids Enjoy Exercise Now)<br>
             <small class="city">Bethesda, MD</small></h2>
