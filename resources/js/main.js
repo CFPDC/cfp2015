@@ -731,10 +731,11 @@ $(window).resize(_.debounce(function() {
 function performMediaQueries(state) {
 	if (state == 'screen-sm-max' || state == 'screen-xs-max' || state == 'screen-xs-min') {
 		$('#asideFilter').addClass('collapse');
-
+		global.relatedCarousel();
 
 	} else {
 		$('#asideFilter').removeClass('collapse');
+		global.relatedCarousel();
 	}
 }
 
