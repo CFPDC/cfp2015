@@ -2049,6 +2049,7 @@ label[for="year"] {
 
 .nonprofit-social a {
     color: #292929;
+    clear: both;
 }
 
 .nonprofit-social a:focus, .nonprofit-social a:hover {
@@ -2138,7 +2139,7 @@ label[for="year"] {
     width: 40px;
 }
 
-.carousel-control:focus > span {
+.carousel-control:focus:before {
     outline: 2px solid #487896;
 }
 
@@ -2152,10 +2153,12 @@ label[for="year"] {
 
 .related-carousel-container .carousel-control:before {
     font-family: 'FontAwesome';
+    height: 80px;
+    line-height: 1;
     position: absolute;
     left: auto;
     right: auto;
-    top: 5px;
+    top: 25%;
     font-size: 90px;
     font-size: 9rem;
 }
