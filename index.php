@@ -118,7 +118,8 @@ include('includes/functions.php');
 <div class="row subcategories">
   <div class="col-sm-6 col-md-3 subcat-grid-item nature-cat">
     <div class="thumb">
-      <img class="img-responsive" aria-hidden="true" src="-dc.org/gallerm&g2_itemId=40157" alt="">
+    <!-- img path is incorrect to show script loading blank image to maintain grid -->
+      <img class="img-responsive" aria-hidden="true" src="resources/images/lg.jpg" alt="">
       <div class="cap text-center">
         <h3> <a href="our-nonprofits.php?strCategory-nature=nature-environment" title="Show all Environment related nonprofits">
           <span class="sr-only">
@@ -130,7 +131,7 @@ include('includes/functions.php');
   </div>
   <div class="col-sm-6 col-md-3 subcat-grid-item nature-cat">
     <div class="thumb">
-      <img class="img-responsive" aria-hidden="true" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40157" alt="">
+      <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
         <h3> <a href="our-nonprofits.php?strCategory-nature=nature-animals" title="Show all Animals related nonprofits">
           <span class="sr-only">
@@ -142,7 +143,7 @@ include('includes/functions.php');
   </div>
   <div class="col-sm-6 col-md-3 subcat-grid-item culture-cat">
     <div class="thumb">
-      <img class="img-responsive" aria-hidden="true" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40157" alt="">
+      <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
         <h3> <a href="our-nonprofits.php?strCategory-culture=culture-arts-culture" title="Show all Arts &amp; Culture related nonprofits">
           <span class="sr-only">
@@ -154,7 +155,7 @@ include('includes/functions.php');
   </div>
   <div class="col-sm-6 col-md-3 subcat-grid-item culture-cat">
     <div class="thumb">
-      <img class="img-responsive" aria-hidden="true" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40157" alt="">
+      <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
         <h3 class="multi-line"> <a href="our-nonprofits.php?strCategory-culture=culture-community-arts" title="Show all COMMUNITY ARTS/ARTS FOR KIDS related nonprofits">
           <span class="sr-only">
@@ -167,7 +168,7 @@ include('includes/functions.php');
   </div>
   <div class="col-sm-6 col-md-3 subcat-grid-item education-cat">
     <div class="thumb">
-      <img class="img-responsive" aria-hidden="true" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40157" alt="">
+      <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
         <h3> <a href="our-nonprofits.php?strCategory-education=education-schools" title="Show all Schools related nonprofits">
           <span class="sr-only">
@@ -179,7 +180,7 @@ include('includes/functions.php');
   </div>
   <div class="col-sm-6 col-md-3 subcat-grid-item education-cat">
     <div class="thumb">
-      <img class="img-responsive" aria-hidden="true" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40157" alt="">
+      <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
         <h3 class="multi-line"> <a href="our-nonprofits.php?strCategory-education=education-enrichment" title="Show all Educational Enrichment related nonprofits">
           <span class="sr-only">
@@ -192,7 +193,7 @@ include('includes/functions.php');
   </div>
   <div class="col-sm-6 col-md-3 subcat-grid-item education-cat">
     <div class="thumb">
-      <img class="img-responsive" aria-hidden="true" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40157" alt="">
+      <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
         <h3> <a href="our-nonprofits.php?strCategory-education=education-literacy" title="Show all Literacy &amp; Learning related nonprofits"> 
           <span class="sr-only">
@@ -204,7 +205,7 @@ include('includes/functions.php');
   </div>
   <div class="col-sm-6 col-md-3 subcat-grid-item human-services-cat">
     <div class="thumb">
-      <img class="img-responsive" aria-hidden="true" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40157" alt="">
+      <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
         <h3 class="multi-line"> <a href="our-nonprofits.php?strCategory-human-services=human-services-children-youth" title="Show all Children&sbquo; Youth Families related nonprofits">
           <span class="sr-only">
@@ -217,7 +218,7 @@ include('includes/functions.php');
   </div>
   <div class="col-sm-6 col-md-3 subcat-grid-item human-services-cat">
     <div class="thumb">
-      <img class="img-responsive" aria-hidden="true" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40157" alt="">
+      <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
         <h3> <a href="our-nonprofits.php?strCategory-human-services=human-services-girls-women" title="Show all Girls &amp; Women related nonprofits">
           <span class="sr-only">
@@ -229,7 +230,7 @@ include('includes/functions.php');
   </div>
   <div class="col-sm-6 col-md-3 subcat-grid-item human-services-cat">
     <div class="thumb">
-      <img class="img-responsive" aria-hidden="true" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40157" alt="">
+      <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
         <h3> <a href="our-nonprofits.php?strCategory-human-services=human-services-health" title="Show all Health &amp; Mental Health related nonprofits">
           <span class="sr-only">
@@ -241,7 +242,7 @@ include('includes/functions.php');
   </div>
   <div class="col-sm-6 col-md-3 subcat-grid-item human-services-cat">
     <div class="thumb">
-      <img class="img-responsive" aria-hidden="true" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40157" alt="">
+      <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
         <h3> <a href="our-nonprofits.php?strCategory-human-services=human-services-aging" title="Show all Aging related nonprofits">
           <span class="sr-only">
@@ -253,7 +254,7 @@ include('includes/functions.php');
   </div>
   <div class="col-sm-6 col-md-3 subcat-grid-item human-services-cat">
     <div class="thumb">
-      <img class="img-responsive" aria-hidden="true" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40157" alt="">
+      <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
         <h3> <a href="our-nonprofits.php?strCategory-human-services=human-services-hunger" title="Show all Hunger related nonprofits">
           <span class="sr-only">
@@ -266,7 +267,7 @@ include('includes/functions.php');
 
   <div class="col-sm-6 col-md-3 subcat-grid-item human-services-cat">
     <div class="thumb">
-      <img class="img-responsive" aria-hidden="true" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40157" alt="">
+      <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
         <h3> <a href="our-nonprofits.php?strCategory-human-services=human-services-homelessness" title="Show all Homelessness &amp; Housing related nonprofits">
           <span class="sr-only">
@@ -278,7 +279,7 @@ include('includes/functions.php');
   </div>
   <div class="col-sm-6 col-md-3 subcat-grid-item human-services-cat">
     <div class="thumb">
-      <img class="img-responsive" aria-hidden="true" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40157" alt="">
+      <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
         <h3 class="multi-line"> <a href="our-nonprofits.php?strCategory-human-services=human-services-legal" title="Show all Legal &amp; Justice Programs related nonprofits">
           <span class="sr-only">
@@ -291,7 +292,7 @@ include('includes/functions.php');
   </div>
   <div class="col-sm-6 col-md-3 subcat-grid-item human-services-cat">
     <div class="thumb">
-      <img class="img-responsive" aria-hidden="true" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40157" alt="">
+      <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
         <h3 class="multi-line"> 
         <a href="our-nonprofits.php?strCategory-human-services=human-services-life-skills" title="Show all Life Skills, Training &amp; Employment related nonprofits">
@@ -305,7 +306,7 @@ include('includes/functions.php');
   </div>
   <div class="col-sm-6 col-md-3 subcat-grid-item human-services-cat">
     <div class="thumb">
-      <img class="img-responsive" aria-hidden="true" src="http://photos.cfp-dc.org/gallery/main.php?g2_view=core.DownloadItem&g2_itemId=40157" alt="">
+      <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
         <h3> 
         <a href="our-nonprofits.php?strCategory-human-services=human-services-community-development" title="Show all Community Development related nonprofits">
