@@ -795,25 +795,20 @@ $(window).load(function() {
 });
 //end isotope script
 if ($('body').hasClass('mac') && ($('body').hasClass('ipad') || $('body').hasClass('iphone'))) {
-	function removeMobileScroll(e) {
-		e.preventDefault();
+	if (mobileMenu.hasClass('in')) {
+		$('body').css('overflow', 'hidden');
+	} else {
+		$('body').css('overflow', 'auto');
 	}
-	setInterval(function() {
-		if (mobileMenu.hasClass('in')) {
-			$('body').bind('touchmove', removeMobileScroll);
-		} else {
-			$('body').unbind('touchmove', removeMobileScroll);
-		}
-	}, 100);
-}
+};
 
 
 //help iOS work properly with offcanvas
 if ($('body').hasClass('windows')) {
-	$('.navbar-toggle').attr('data-disable-scrolling', 'false');
+	navTrigger.attr('data-disable-scrolling', 'false');
 };
 //3. 'click' events
-$('.navbar-toggle').on('click', function() {
+navTrigger.on('click', function() {
 	global.mobileNavTrigger();
 });
 $('.mobile-nav-close').on('click', function() {
