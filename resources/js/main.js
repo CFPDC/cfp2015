@@ -794,6 +794,19 @@ $(window).load(function() {
 	}
 });
 //end isotope script
+if ($('body').hasClass('mac') && ($('body').hasClass('ipad') || $('body').hasClass('iphone'))) {
+	function removeMobileScroll(e) {
+		e.preventDefault();
+	}
+	setInterval(function() {
+		if (mobileMenu.hasClass('in')) {
+			$('body').bind('touchmove', removeMobileScroll);
+		} else {
+			$('body').unbind('touchmove', removeMobileScroll);
+		}
+	}, 100);
+}
+
 
 //help iOS work properly with offcanvas
 if ($('body').hasClass('windows')) {
