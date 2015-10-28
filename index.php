@@ -116,10 +116,9 @@ include('includes/functions.php');
   </ul>
 </div>
 <div class="row subcategories">
-  <div class="col-sm-6 col-md-3 subcat-grid-item nature-cat">
+  <div class="col-xs-12 col-sm-6 col-md-3 subcat-grid-item nature-cat">
     <div class="thumb">
-    <!-- img path is incorrect to show script loading blank image to maintain grid -->
-      <img class="img-responsive" aria-hidden="true" src="resources/images/lg.jpg" alt="">
+      <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
         <h3> <a href="our-nonprofits.php?strCategory-nature=nature-environment" title="Show all Environment related nonprofits">
           <span class="sr-only">
@@ -129,7 +128,7 @@ include('includes/functions.php');
       </div>
     </div>
   </div>
-  <div class="col-sm-6 col-md-3 subcat-grid-item nature-cat">
+  <div class="col-xs-12 col-sm-6 col-md-3 subcat-grid-item nature-cat">
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
@@ -141,7 +140,7 @@ include('includes/functions.php');
       </div>
     </div>
   </div>
-  <div class="col-sm-6 col-md-3 subcat-grid-item culture-cat">
+  <div class="col-xs-12 col-sm-6 col-md-3 subcat-grid-item culture-cat">
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
@@ -153,7 +152,7 @@ include('includes/functions.php');
       </div>
     </div>
   </div>
-  <div class="col-sm-6 col-md-3 subcat-grid-item culture-cat">
+  <div class="col-xs-12 col-sm-6 col-md-3 subcat-grid-item culture-cat">
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
@@ -166,7 +165,7 @@ include('includes/functions.php');
       </div>
     </div>
   </div>
-  <div class="col-sm-6 col-md-3 subcat-grid-item education-cat">
+  <div class="col-xs-12 col-sm-6 col-md-3 subcat-grid-item education-cat">
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
@@ -178,7 +177,7 @@ include('includes/functions.php');
       </div>
     </div>
   </div>
-  <div class="col-sm-6 col-md-3 subcat-grid-item education-cat">
+  <div class="col-xs-12 col-sm-6 col-md-3 subcat-grid-item education-cat">
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
@@ -191,7 +190,7 @@ include('includes/functions.php');
       </div>
     </div>
   </div>
-  <div class="col-sm-6 col-md-3 subcat-grid-item education-cat">
+  <div class="col-xs-12 col-sm-6 col-md-3 subcat-grid-item education-cat">
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
@@ -203,7 +202,7 @@ include('includes/functions.php');
       </div>
     </div>
   </div>
-  <div class="col-sm-6 col-md-3 subcat-grid-item human-services-cat">
+  <div class="col-xs-12 col-sm-6 col-md-3 subcat-grid-item human-services-cat">
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
@@ -216,7 +215,7 @@ include('includes/functions.php');
       </div>
     </div>
   </div>
-  <div class="col-sm-6 col-md-3 subcat-grid-item human-services-cat">
+  <div class="col-xs-12 col-sm-6 col-md-3 subcat-grid-item human-services-cat">
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
@@ -228,7 +227,7 @@ include('includes/functions.php');
       </div>
     </div>
   </div>
-  <div class="col-sm-6 col-md-3 subcat-grid-item human-services-cat">
+  <div class="col-xs-12 col-sm-6 col-md-3 subcat-grid-item human-services-cat">
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
@@ -240,7 +239,7 @@ include('includes/functions.php');
       </div>
     </div>
   </div>
-  <div class="col-sm-6 col-md-3 subcat-grid-item human-services-cat">
+  <div class="col-xs-12 col-sm-6 col-md-3 subcat-grid-item human-services-cat">
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
@@ -252,7 +251,7 @@ include('includes/functions.php');
       </div>
     </div>
   </div>
-  <div class="col-sm-6 col-md-3 subcat-grid-item human-services-cat">
+  <div class="col-xs-12 col-sm-6 col-md-3 subcat-grid-item human-services-cat">
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
@@ -265,7 +264,7 @@ include('includes/functions.php');
     </div>
   </div>
 
-  <div class="col-sm-6 col-md-3 subcat-grid-item human-services-cat">
+  <div class="col-xs-12 col-sm-6 col-md-3 subcat-grid-item human-services-cat">
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
@@ -277,7 +276,7 @@ include('includes/functions.php');
       </div>
     </div>
   </div>
-  <div class="col-sm-6 col-md-3 subcat-grid-item human-services-cat">
+  <div class="col-xs-12 col-sm-6 col-md-3 subcat-grid-item human-services-cat">
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
@@ -290,7 +289,7 @@ include('includes/functions.php');
       </div>
     </div>
   </div>
-  <div class="col-sm-6 col-md-3 subcat-grid-item human-services-cat">
+  <div class="col-xs-12 col-sm-6 col-md-3 subcat-grid-item human-services-cat">
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
@@ -304,7 +303,7 @@ include('includes/functions.php');
       </div>
     </div>
   </div>
-  <div class="col-sm-6 col-md-3 subcat-grid-item human-services-cat">
+  <div class="col-xs-12 col-sm-6 col-md-3 subcat-grid-item human-services-cat">
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap text-center">
