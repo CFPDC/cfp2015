@@ -795,10 +795,26 @@ $(window).load(function() {
 });
 //end isotope script
 
-
+//help iOS work properly with offcanvas
+if ($('body').hasClass('windows')) {
+	$('.navbar-toggle').attr('data-disable-scrolling', 'false');
+};
 //3. 'click' events
 $('.navbar-toggle').on('click', function() {
 	global.mobileNavTrigger();
+});
+$('.mobile-nav-close').on('click', function() {
+	mobileMenu.offcanvas('hide');
+	var liveText = 'The mobile menu has closed';
+
+	mobileMenu.offcanvas('hide');
+	$('#liveText-polite').find('p').html(liveText);
+	setTimeout(function() {
+		$('#liveText-polite').find('p').html('');
+	}, 3000);
+	setTimeout(function() {
+		navTrigger.focus();
+	}, 50);
 });
 
 //closing mobile menu --- not working yet
