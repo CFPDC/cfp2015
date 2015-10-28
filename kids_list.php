@@ -89,7 +89,7 @@ include('includes/functions.php');
         <h2>Nature</h2>
         <div class="media">
           <div class="media-left">
-            <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg"> </a>
+            <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg" alt=""> </a>
           </div>
           <div class="media-body">
             <h3 class="media-heading name"><a target="_blank" href="nonprofit-detail.php?id=71852">Alice Ferguson Foundation</a></h3>
@@ -103,7 +103,7 @@ include('includes/functions.php');
         <h2>Culture: Community Arts</h2>
         <div class="media">
           <div class="media-left">
-            <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg"> </a>
+            <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg" alt=""> </a>
           </div>
           <div class="media-body">
             <h3 class="media-heading name"><a target="_blank" href="nonprofit-detail.php?id=94559">The Art League</a></h3>
@@ -117,7 +117,7 @@ include('includes/functions.php');
         <h2>Culture: Performing, Literary, and Visual Arts</h2>
         <div class="media">
           <div class="media-left">
-            <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg"> </a>
+            <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg" alt=""> </a>
           </div>
           <div class="media-body">
             <h3 class="media-heading name"><a target="_blank" href="nonprofit-detail.php?id=94149">Adventure Theatre MTC</a></h3>
@@ -131,7 +131,7 @@ include('includes/functions.php');
         <h2>Education: Enrichment</h2>
         <div class="media">
           <div class="media-left">
-            <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg"> </a>
+            <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg" alt=""> </a>
           </div>
           <div class="media-body">
             <h3 class="media-heading name"><a target="_blank" href="nonprofit-detail.php?id=95721">826DC</a></h3>
@@ -145,7 +145,7 @@ include('includes/functions.php');
         <h2>Education: Literacy and Learning</h2>
         <div class="media">
           <div class="media-left">
-            <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg"> </a>
+            <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg" alt=""> </a>
           </div>
           <div class="media-body">
             <h3 class="media-heading name"><a target="_blank" href="nonprofit-detail.php?id=94669">AppleTree Institute for Education Innovation</a></h3>
@@ -159,7 +159,7 @@ include('includes/functions.php');
         <h2>Education: Schools</h2>
         <div class="media">
           <div class="media-left">
-            <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg"> </a>
+            <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg" alt=""> </a>
           </div>
           <div class="media-body">
             <h3 class="media-heading name"><a target="_blank" href="nonprofit-detail.php?id=95742">Bishop John T Walker School for Boys</a></h3>
@@ -174,7 +174,7 @@ include('includes/functions.php');
         <div class="media">
         
         <div class="media-left">
-          <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg"> </a>
+          <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg" alt=""> </a>
         </div>
         <div class="media-body">
           <h3 class="media-heading name"><a target="_blank" href="nonprofit-detail.php?id=95704">The Arc of Northern Virginia</a></h3>
@@ -188,7 +188,7 @@ include('includes/functions.php');
       <h2>Human Services: Community Development</h2>
       <div class="media">
         <div class="media-left">
-          <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg"> </a>
+          <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg" alt=""> </a>
         </div>
         <div class="media-body">
           <h3 class="media-heading name"><a target="_blank" href="nonprofit-detail.php?id=95615">Bikes for the World</a></h3>
@@ -202,7 +202,7 @@ include('includes/functions.php');
       <h2>Human Services: Girls and Women</h2>
       <div class="media">
         <div class="media-left">
-          <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg"> </a>
+          <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg" alt=""> </a>
         </div>
         <div class="media-body">
           <h3 class="media-heading name"><a target="_blank" href="nonprofit-detail.php?id=84054">FAIR Girls</a></h3>
@@ -216,7 +216,7 @@ include('includes/functions.php');
       <h2>Human Services: Health, Mental Health, and Aging</h2>
       <div class="media">
         <div class="media-left">
-          <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg"> </a>
+          <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg" alt=""> </a>
         </div>
         <div class="media-body">
           <h3 class="media-heading name"><a target="_blank" href="nonprofit-detail.php?id=94368">Aspire Counseling</a></h3>
@@ -230,7 +230,7 @@ include('includes/functions.php');
       <h2>Human Services: Hunger, Homelessness, and Housing</h2>
       <div class="media">
         <div class="media-left">
-          <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg"> </a>
+          <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg" alt=""> </a>
         </div>
         <div class="media-body">
           <h3 class="media-heading name"><a target="_blank" href="nonprofit-detail.php?id=71653">Arlington Food Assistance Center</a></h3>
@@ -244,7 +244,7 @@ include('includes/functions.php');
       <h2>Human Services: Legal Services and Justice Programs</h2>
       <div class="media">
         <div class="media-left">
-          <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg"> </a>
+          <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg" alt=""> </a>
         </div>
         <div class="media-body">
           <h3 class="media-heading name"><a target="_blank" href="nonprofit-detail.php?id=94234">Mentoring Today</a></h3>
@@ -258,7 +258,7 @@ include('includes/functions.php');
       <h2>Human Services: Life Skills, Training, and Employment</h2>
       <div class="media">
         <div class="media-left">
-          <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg"> </a>
+          <a href="#"> <img class="media-object" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg" alt=""> </a>
         </div>
         <div class="media-body">
           <h3 class="media-heading name"><a target="_blank" href="nonprofit-detail.php?id=95035">Arts on the Block</a></h3>
