@@ -70,7 +70,7 @@
           </ul>
         </nav>
         <div class="hidden-print col-xs-12 col-sm-5 col-md-4 col-lg-3 catalogue-donate-button-container">
-          <button class="navbar-toggle" data-toggle="offcanvas" data-target=".mobile-nav" data-canvas="body" data-disable-scrolling="false">
+          <button class="navbar-toggle" data-toggle="offcanvas" data-target=".mobile-nav" data-canvas="body" >
           <span class="adobeBlank sr-only" aria-hidden="true">
           Expand Menu Icon
           </span>
@@ -82,6 +82,9 @@
           </button>
           <div class="mobile-nav navmenu navmenu-default navmenu-fixed-left offcanvas">
             <ul class="list-unstyled">
+            <li>
+              <button class="btn btn-link mobile-nav-close">Close menu</button>
+            </li>
               <li>
                 <a href="contact.php" target="_self" title="CFP's contact information">Contact
                   <span class="sr-only">
@@ -102,8 +105,6 @@
                   </span>
                 </a>
               </li>
-            </ul>
-            <ul>
               <li>
                 Who We Are
                 <ul>

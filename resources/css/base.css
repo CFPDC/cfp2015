@@ -470,6 +470,10 @@ body.canvas-slid {
     overflow-x: hidden;
 }
 
+body.mac.canvas-slid {
+    overflow-x: auto;
+}
+
 .navbar-toggle {
     float: left;
     margin-right: 0;
@@ -627,11 +631,16 @@ body.canvas-slid {
     margin-bottom: 0;
 }
 
-.mobile-nav li a {
+.mobile-nav li a, .mobile-nav li .btn-link {
     font-family: 'ProximaNovaLight';
     font-size: 14px;
     font-size: 1.4rem;
     letter-spacing: 0.06em;
+}
+
+.mobile-nav li .btn-link {
+    text-align: left;
+    width: 100%;
 }
 
 .mobile-nav {
@@ -645,7 +654,7 @@ body.canvas-slid {
     text-indent: 0;
 }
 
-.mobile-nav a {
+.mobile-nav a, .mobile-nav .btn-link {
     background: #3b3b3b;
     background: -o-linear-gradient(top, #3e3e3e, #383838);
     background: -ms-linear-gradient(top, #3e3e3e, #383838);
@@ -664,7 +673,7 @@ body.canvas-slid {
     position: relative;
 }
 
-.mobile-nav li a:hover, .mobile-nav li a:focus {
+.mobile-nav li a:hover, .mobile-nav li a:focus, .mobile-nav li .btn-link:hover, .mobile-nav li .btn-link:focus {
     background: #404040;
     background: -o-linear-gradient(top, #484848, #383838);
     background: -ms-linear-gradient(top, #484848, #383838);
@@ -2442,6 +2451,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .all-event-button, .event-button {
         float: right;
     }
+    .pull-right.kids-list {
+        margin-top: -60px;
+    }
     footer .social-icons, footer address, footer .primary-footer-nav li, footer .secondary-footer-nav li {
         text-align: left;
     }
@@ -2472,6 +2484,7 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     footer .social-icons {
         margin: 0 0 0 -5px;
+        float: left;
     }
 }
 
