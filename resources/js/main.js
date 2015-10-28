@@ -31,7 +31,7 @@ var $root = $('html, body'),
 	navTrigger = $('.navbar-toggle'),
 	mobileMenu = $('.mobile-nav'),
 	bodyElement = document.body,
-	pageName = bodyElement.dataset.pageId;
+	pageName = bodyElement.getAttribute("data-page-id");
 
 
 var global = {
@@ -278,17 +278,20 @@ var global = {
 	},
 	globalImageCheck: function(img) {
 		//call this in another function by naming variable. See homeImageCheck() for reference
-		img.each(function() {
-			if (this.naturalWidth === 0 || this.naturalHeight === 0 || this.complete === false) {
-				$(this).attr('src', '../resources/images/clear.gif');
-			}
-		});
+		setTimeout(function() {
+			img.each(function() {
+				if (this.naturalWidth === 0 || this.naturalHeight === 0 || this.complete === false) {
+					$(this).attr('src', '../resources/images/clear.gif');
+				}
+			});
+		}, 500);
 	},
 	homeImageCheck: function() {
 		var img = $('.subcategories .img-responsive');
 		this.globalImageCheck(img);
 	},
 	homeSearchActiveToggle: function() {
+		var $gridHome = $('.subcategories');
 		$('.home-search').on('click', 'button', function() {
 			var activeEl = $(this),
 				liveText = 'Showing all categories';
@@ -741,9 +744,10 @@ function performMediaQueries(state) {
 
 //begin isotop script
 //sort button functionality with isotope - do not load isotope for ie8
-if (!$('html').hasClass('lt-ie9')) {
+$(window).load(function() {
+	if (!$('html').hasClass('lt-ie9')) {
 
-	$(window).load(function() {
+
 		//isotope must load after images are loaded or the height of the element will be wrong
 		var $gridNp = $('.grid.nonprofits').isotope({
 			itemSelector: '.iso-item',
@@ -771,16 +775,17 @@ if (!$('html').hasClass('lt-ie9')) {
 				$('#liveText-polite').find('p').html('');
 			}, 1000);
 		});
-	});
 
-	//isotope must load after images are loaded or the height of the element will be wrong
-	var $gridHome = $('.subcategories').isotope({
-		itemSelector: '.subcat-grid-item',
-		layoutMode: 'fitRows',
-		sortBy: 'random'
-	});
 
-}
+		//isotope must load after images are loaded or the height of the element will be wrong
+		var $gridHome = $('.subcategories').isotope({
+			itemSelector: '.subcat-grid-item',
+			layoutMode: 'fitRows',
+			sortBy: 'random'
+		});
+
+	}
+});
 //end isotope script
 
 
@@ -872,7 +877,6 @@ $('.sort-by a').on('click', function(e) {
 	e.preventDefault();
 });
 
-
 //4. global functions 
 $(function() {
 	//script to detect highcontrast mode and user defined stylesheets
@@ -917,7 +921,9 @@ $(function() {
 		//check for missing images in the home page grid
 		global.homeImageCheck();
 
+		//filters out selection base on user selecting grid filters
 		global.homeSearchActiveToggle();
+
 
 		$('#Mycarousel').carousel({
 			pause: "hover"
