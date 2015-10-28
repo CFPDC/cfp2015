@@ -2442,6 +2442,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .all-event-button, .event-button {
         float: right;
     }
+    .pull-right.kids-list {
+        margin-top: -60px;
+    }
     footer .social-icons, footer address, footer .primary-footer-nav li, footer .secondary-footer-nav li {
         text-align: left;
     }
@@ -2472,6 +2475,7 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     footer .social-icons {
         margin: 0 0 0 -5px;
+        float: left;
     }
 }
 
