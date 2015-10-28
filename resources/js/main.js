@@ -286,12 +286,25 @@ var global = {
 			});
 		}, 500);
 	},
+	homeGridSetup: function() {
+		//isotope must load after images are loaded or the height of the element will be wrong
+		var $gridHome = $('.subcategories').isotope({
+			itemSelector: '.subcat-grid-item',
+			layoutMode: 'fitRows',
+			sortBy: 'random'
+		});
+
+	},
 	homeImageCheck: function() {
 		var img = $('.subcategories .img-responsive');
 		this.globalImageCheck(img);
 	},
 	homeSearchActiveToggle: function() {
-		var $gridHome = $('.subcategories');
+		var $gridHome = $('.subcategories').isotope({
+			itemSelector: '.subcat-grid-item',
+			layoutMode: 'fitRows',
+			sortBy: 'random'
+		});
 		$('.home-search').on('click', 'button', function() {
 			var activeEl = $(this),
 				liveText = 'Showing all categories';
@@ -505,7 +518,20 @@ var global = {
 			}
 		}
 	},
-
+	searchGridSetup: function() {
+		//isotope must load after images are loaded or the height of the element will be wrong
+		var $gridNp = $('.grid.nonprofits').isotope({
+			itemSelector: '.iso-item',
+			layoutMode: 'fitRows',
+			getSortData: {
+				category: '[data-category]',
+				name: '.name',
+				region: '[data-region]',
+				year: '[data-year]'
+			},
+			sortBy: 'random'
+		});
+	},
 	searchPageActiveToggle: function() {
 		//results page change toggle view active class
 		$('.display-group').on('click', 'button', function() {
@@ -746,42 +772,23 @@ function performMediaQueries(state) {
 //sort button functionality with isotope - do not load isotope for ie8
 $(window).load(function() {
 	if (!$('html').hasClass('lt-ie9')) {
-
-
-		//isotope must load after images are loaded or the height of the element will be wrong
-		var $gridNp = $('.grid.nonprofits').isotope({
-			itemSelector: '.iso-item',
-			layoutMode: 'fitRows',
-			getSortData: {
-				category: '[data-category]',
-				name: '.name',
-				region: '[data-region]',
-				year: '[data-year]'
-			},
-			sortBy: 'random'
-		});
+		global.homeGridSetup();
+		global.searchGridSetup();
 
 		//get value of select option and sort results by 
 		$('.sort-by-select').on('change', function() {
-			var sortByValue = $(this).val();
-
+			var $gridNp = $('.grid.nonprofits'),
+				sortByValue = $(this).val(),
+				liveTextRegion = $('#liveText-polite').children('p');
 			$gridNp.isotope({
 				sortBy: sortByValue
 			});
-
 			//update screen reader with current selection
-			$('#liveText-polite').children('p').html('Results have been sorted by: ' + sortByValue);
+
+			liveTextRegion.html('Results have been sorted by: ' + sortByValue);
 			setTimeout(function() {
-				$('#liveText-polite').find('p').html('');
+				liveTextRegion.html('');
 			}, 1000);
-		});
-
-
-		//isotope must load after images are loaded or the height of the element will be wrong
-		var $gridHome = $('.subcategories').isotope({
-			itemSelector: '.subcat-grid-item',
-			layoutMode: 'fitRows',
-			sortBy: 'random'
 		});
 
 	}
@@ -876,6 +883,7 @@ $('.filter-parameter').on('click', function() {
 $('.sort-by a').on('click', function(e) {
 	e.preventDefault();
 });
+
 
 //4. global functions 
 $(function() {
