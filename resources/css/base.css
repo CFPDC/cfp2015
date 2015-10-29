@@ -440,6 +440,18 @@ form .error + textarea {
 
 /*--- end of form errors ---*/
 /*---HEADER---*/
+.scrollup {
+    background-color: #0F344C;
+    border-color: #0F344C;
+    padding: 15px 10px 5px;
+    position: fixed;
+    bottom: 0;
+    right: 8px;
+    font-weight: 600;
+    display: none;
+    z-index: 1000000;
+}
+
 .secondary-nav {
     margin-top: 12px;
 }
@@ -2406,6 +2418,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
 }
 
 @media screen and (min-width: 767px) {
+    .scrollup {
+        display: none !important;
+    }
     .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
         margin-right: -25px;
     }
