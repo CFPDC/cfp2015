@@ -518,6 +518,15 @@ var global = {
 			}
 		}
 	},
+	scrollToTop: function() {
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > 250) {
+				$('.scrollup').fadeIn(300);
+			} else {
+				$('.scrollup').fadeOut(300);
+			}
+		});
+	},
 	searchGridSetup: function() {
 		//isotope must load after images are loaded or the height of the element will be wrong
 		var $gridNp = $('.grid.nonprofits').isotope({
@@ -905,6 +914,13 @@ $('.filter-parameter').on('click', function() {
 });
 
 $('.sort-by a').on('click', function(e) {
+
+});
+//On click scroll to top of page t = 1000ms
+$('.scrollup').on('click', function(e) {
+	$("html, body").animate({
+		scrollTop: 0
+	}, 1000);
 	e.preventDefault();
 });
 
@@ -915,6 +931,8 @@ $(function() {
 	HCDetect.init();
 	//Accessibility function to take care of generic 508 house keeping
 	A11y.Core();
+	//handle scroll to top button 
+	global.scrollToTop();
 
 	//Do initial check for media state
 	var state = A11yResp.getScreenWidth();
