@@ -93,13 +93,25 @@ select {
 .table-bordered th, .table-bordered td {
     border: 1px solid #ddd !important;
 }
-aside, .sort-display-menu-container, .filter-toggle-button button, .adobeBlank, .hero .img-responsive, .carousel {
+aside, .sort-display-menu-container, .filter-toggle-button button, .adobeBlank, .hero {
     display: none;
 }
 a[href]:after {
     content: "";
 }
 section.col-xs-12, section.col-sm-8, section.col-md-10 {
+    width: 100%;
+}
+section > aside {
+    display: block;
+}
+aside .details-contact .nonprofit-social .fa {
+    font-size: 1.5em;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 0;
+}
+.details-wishlist .btn, .details-support .btn {
     width: 100%;
 }
 .login-form div.col-lg-4 {
@@ -115,7 +127,6 @@ section.col-xs-12, section.col-sm-8, section.col-md-10 {
     margin-top: 100px;
     height: auto;
 }
-
 .primary-nav, .secondary-nav {
     display: block;
 }
@@ -166,5 +177,10 @@ footer .primary-footer-nav li a, footer .secondary-footer-nav li a {
     [data-page-id="sponsors"] .two-column-well {
         overflow: inherit !important;
         border: none;
+    }
+    aside .details-contact .nonprofit-social .fa {
+        font-size: 1.5em;
+        margin: 0;
+        padding: 0;
     }
 }
