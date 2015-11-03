@@ -27,6 +27,7 @@
     <link href="assets/css/fullcalendar.min.css" rel="stylesheet">
     <link href="assets/css/fullcalendar.print.css" rel="stylesheet" media="print">
     <link href="resources/css/base.css" rel="stylesheet">
+    <link href="resources/css/cfp-print.css" rel="stylesheet" media="print">
     <script src="assets/js/modernizr.js"></script>
   </head>
   <body data-page-id="<?php page_id(); ?>" class="<?php body_classes();?>">
@@ -34,7 +35,7 @@
       <p>
       </p>
     </div>
-    <button class="scrollup btn btn-primary" tabindex="-1">Back to Top</button>
+    <button class="scrollup btn btn-primary hidden-print" tabindex="-1">Back to Top</button>
     <a class="sr-only sr-only-focusable skip-navigation-link" href="javascript:void(0);" data-target="#primary-skip-nav">Skip to main content</a>
     <noscript>
     <p class="js-off-message">
