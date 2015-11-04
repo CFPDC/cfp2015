@@ -260,7 +260,9 @@ footer address > a {
 }
 
 @media (-webkit-min-device-pixel-ratio: 0) {
-    .thumbnail {}
+    .iso-item .thumbnail .caption {
+        height: auto !important;
+    }
 }
 
 @-moz-document url-prefix() {
