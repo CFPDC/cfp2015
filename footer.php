@@ -40,7 +40,7 @@
 		
 		<address class="col-xs-12">
 			<span class="name">&copy; 2014 CATALOGUE FOR PHILANTHROPY: GREATER WASHINGTON</span><br>
-			<span class="street">1899 L Street NW Suite 900</span>, <span class="city-state">Washington DC 20036</span>, <a href="tel:202-955-6538">202-955-6538</a></address>
+			<span class="street">1899 L Street NW Suite 900,</span> <span class="city-state">Washington DC 20036,</span> <a href="tel:202-955-6538">202-955-6538</a></address>
 		</section>
 	</footer>
 	<!-- loading libraries with local fallbacks -->
