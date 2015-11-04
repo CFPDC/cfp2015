@@ -150,8 +150,16 @@ section.col-xs-12, section.col-sm-8, section.col-md-10 {
     top: auto !important;
 }
 
-.grid.nonprofits {
+.grid.nonprofits, .thumbnail {
     height: auto !important;
+}
+
+.search-results .thumbnail {
+    padding-bottom: 0 !important;
+}
+
+.search-results .bottom-align {
+    position: relative;
 }
 
 .col-xs-12.nonprofit-listing {
@@ -257,15 +265,10 @@ footer address > a {
 
 @-moz-document url-prefix() {
     .thumbnail {
-        width: 15%;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
     }
-    .thumbnail .caption {
-        height: auto;
-    }
-    .col-xs-12 .nonprofit-listing {
-        width: 100% !important;
-        margin-bottom: 50px;
+    .iso-item .thumbnail .caption, .grid .col-md-12.iso-item, .iso-item {
+        height: auto !important;
     }
     footer .pull-left {
         float: none !important;
