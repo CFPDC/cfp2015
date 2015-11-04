@@ -150,7 +150,7 @@ section.col-xs-12, section.col-sm-8, section.col-md-10 {
     top: auto !important;
 }
 
-.grid.nonprofits, .thumbnail {
+.grid .nonprofits, .thumbnail {
     height: auto !important;
 }
 
