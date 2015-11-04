@@ -175,7 +175,28 @@ section.col-xs-12, section.col-sm-8, section.col-md-10 {
 .home-how-help-section .btn {
     width: 49%;
 }
-
+.home-how-help-section .col-sm-offset-2 {
+    float: right;
+}
+.home-how-help-section .btn-primary {
+    margin-left: -170px;
+}
+.home-how-help-section .btn-secondary {
+    margin-right: 125px;
+}
+section > aside {
+    display: block;
+}
+aside .details-contact .nonprofit-social .fa {
+    font-size: 1.5em;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 0;
+}
+.details-wishlist .btn, .details-support .btn {
+    width: 100%;
+    margin-top: 5px;
+}
 .login-form div.col-lg-4 {
     margin-left: 60px;
     width: 40%;
@@ -203,7 +224,8 @@ section.col-xs-12, section.col-sm-8, section.col-md-10 {
 }
 
 .secondary-nav {
-    float: right;
+    float: right !important;
+    margin-right: -65px;
 }
 
 .secondary-nav li {
@@ -214,7 +236,7 @@ section.col-xs-12, section.col-sm-8, section.col-md-10 {
     font-size: .7em !important;
 }
 
-.home-lead-text, .home-how-help-section {
+.home-lead-text, .home-how-help-section .col-sm-10 {
     width: 100%;
     margin-left: 0;
 }
@@ -272,11 +294,16 @@ footer address > a {
     .iso-item .thumbnail .caption, .grid .col-md-12.iso-item, .iso-item {
         height: auto !important;
     }
-    footer .pull-left {
+    header .pull-left, footer .pull-left {
         float: none !important;
     }
     [data-page-id="sponsors"] .two-column-well {
         overflow: inherit !important;
         border: none;
     }
+    aside .details-contact .nonprofit-social .fa {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
 }
