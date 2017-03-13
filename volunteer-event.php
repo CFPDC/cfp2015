@@ -11,19 +11,18 @@ include('includes/functions.php');
 <main role="main" class="container-fluid secondary volunteer-event-main">
 <div class="row">
 	<section class="col-xs-12">
-		<div class="col-sm-8">
+		<div class="col-sm-8 volunteer-details">
       		<div class="clearfix hero details">
       		  <img src="http://lorempixel.com/1200/500/nature" alt="" aria-hidden="true" class="img-responsive">
       		</div>
 			<h3 class="all-caps">Events seeking volunteers</h3>
-			<p>Alice Ferguson Foundation does not currently have any upcoming events in need of volunteers. To be notified of future events please contact Alice Ferguson Foundation via the information below</p>
+			<p class="bottom-padding">Alice Ferguson Foundation does not currently have any upcoming events in need of volunteers. To be notified of future events please contact Alice Ferguson Foundation via the information below</p>
 			<h3 class="all-caps">General Information</h3>
-			<p>Alice Ferguson Foundation does not currently have any upcoming events in need of volunteers. To be notified of future events please contact Alice Ferguson Foundation via the information below</p>
-			<h3>Description of Volunteer Opportunities/Responsibilities:</h3>
+			<p class="text-bold">Description of Volunteer Opportunities/Responsibilities:</p>
 			<p>Invasive plant removal, trash clean-up and general farm maintenance.</p>
-			<h3>Types of Volunteers Needed:</h3>
+			<p class="text-bold">Types of Volunteers Needed:</p>
 			<p>Adults; Teens (13 and up); Youth (12 and under); Families; Groups of more than 25 volunteers; Corporate volunteer groups</p>
-			<h3>Hours Needed:</h3>
+			<p class="text-bold">Hours Needed:</p>
 			<p>Weekday Day; Weekend Day</p>
 		</div>
 		<aside class="col-sm-4 col-lg-offset-1 col-lg-3 pull-right">
@@ -44,7 +43,7 @@ include('includes/functions.php');
 					<span class="city-state">
 						Accokeek, MD 20607 <a href="maps.google.com" title="">Map</a>
 					</span>
-					<a href="tel:760-519-6731" class="phone" title="call 2Seeds main office">310-292-5665</a> <a href="http://2seeds.org/" class="pull-left" title="The Catalogue for Philanthropy's Website" target="_blank">www.2seeds.org</a>
+					<a href="tel:301-292-5665" class="phone" title="call the Alice Ferguson Foundation main office">310-292-5665</a> <a href="fergusonfoundation.org" class="pull-left" title="The Catalogue for Philanthropy's Website" target="_blank">fergusonfoundation.org</a>
 				</address>
 				<a href="mailto:hseligmann@fergusonfoundation.org" title="Email the Alice Ferguson Foundation" class="btn btn-secondary email-button" id="email">Email</a>
 			</div>
