@@ -83,7 +83,36 @@ h2 small {
     font-size: 1.6rem;
     font-style: italic;
 }
-
+/* volunteer events page */
+.volunteer-event-h1 {
+    padding-bottom: 0px;
+    padding-bottom: 0rem;
+}
+.volunteer-text {
+    color: #5E88A2;
+    padding-left: 15px;
+    padding-left: 1.5rem;
+    margin-bottom: 0px;
+    margin-bottom: 0rem;
+}
+main.volunteer-event-main {
+    margin-top: 0px;
+    margin-top: 0rem;
+}
+.volunteer-contact {
+    color: #153B50;
+}
+.email-button,
+.learn-more {
+    width: 100%;
+}
+.charity-details .learn-more {
+    padding: 10px 0;
+}
+.charity-details hr {
+    width: 66.6666667%;
+}
+/* end volunteer events page */
 form small {
     font-family: 'ProximaNovaThin';
     font-size: 13px;
@@ -96,6 +125,10 @@ strong {
 
 .text-bold {
     font-weight: 700;
+}
+
+.all-caps {
+    text-transform: uppercase;
 }
 
 /* do not group these rules */
@@ -241,6 +274,20 @@ p.img-above {
     background-color: #fff;
     border-color: #934683;
     color: #934683;
+}
+
+.btn-tertiary {
+    background-color: #339966;
+    border-color: #339966;
+    color: #fff;
+    font-family: 'ProximaNovaBold';
+    text-transform: uppercase;
+}
+
+.btn-tertiary:focus, .btn-tertiary:hover {
+    background-color: #fff;
+    border-color: #339966;
+    color: #339966;
 }
 
 .btn-success {
@@ -477,6 +524,28 @@ form .error + textarea {
     padding-top: 15px;
 }
 
+.donate-button {
+    float: none;
+}
+
+.donate-button,
+.volunteer-button {
+    border-radius: 0;
+    line-height: 1;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    padding-top: 15px;
+}
+.btn-group.donate-buttons {
+    float: right;
+}
+.btn-group.donate-buttons a {
+    margin-right: 10px;
+}
+.volunteer-button {
+    float: left;
+    margin-right: 28px;
+}
 /*---NAV---*/
 body.canvas-slid {
     overflow-x: hidden;
@@ -2049,7 +2118,6 @@ label[for="year"] {
     padding: 10px 0;
     width: 13em;
 }
-
 .details-wishlist hr, .details-support hr {
     width: 66.6666667%;
 }
@@ -2548,10 +2616,11 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .catalogue-donate-button-container {
         float: right;
     }
-    .catalogue-donate-button {
+    .catalogue-donate-button, .volunteer-button, .donate-button {
         font-size: 17px;
         font-size: 1.7rem;
     }
+    
     .nav.nav-pills.home-search > li button.btn-link {
         border: 0;
         border-bottom: 5px solid transparent;
@@ -2583,6 +2652,10 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     main.secondary {
         margin-top: 85px;
+    }
+    main.volunteer-event-main {
+        margin-top: 0px;
+        margin-top: 0rem;
     }
     .bottom-align {
         min-width: 93.6%;
@@ -2808,6 +2881,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .primary-nav {
         padding: 15px 0;
     }
+    .btn-group.donate-buttons {
+        margin-left: 92px;
+    }
     .primary-nav > nav {
         margin-bottom: 0;
         margin-top: 0;
@@ -2833,6 +2909,7 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
         font-size: 1.5rem;
         letter-spacing: .05em;
     }
+    
     .nav.nav-pills.home-search > li {
         margin-left: 20px;
     }
@@ -3026,6 +3103,7 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     #screen-indicator {
         z-index: 8;
     }
+    
 }
 
 @media (max-width: 991px) {

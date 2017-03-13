@@ -71,7 +71,7 @@
             </li>
           </ul>
         </nav>
-        <div class="hidden-print col-xs-12 col-sm-5 col-md-4 col-lg-3 catalogue-donate-button-container">
+        <div class="hidden-print col-xs-12 col-md-5 col-lg-6 catalogue-donate-button-container">
           <button class="navbar-toggle" data-toggle="offcanvas" data-target=".mobile-nav" data-canvas="body" >
           <span class="adobeBlank sr-only" aria-hidden="true">
           Expand Menu Icon
@@ -197,7 +197,11 @@
             </ul>
             
           </div>
-          <a href="checkout.php?np_title=Catalogue_for_Philanthropy:_Greater_Washington" title="Donate to The Catalogue for Philanthropy" class="btn btn-primary catalogue-donate-button" id="donate-to-catalogue">Donate to The Catalogue</a>
+          <div class="btn-group donate-buttons">
+            <a href="checkout.php?np_title=Catalogue_for_Philanthropy:_Greater_Washington" title="Donate to The Catalogue for Philanthropy" class="btn btn-secondary volunteer-button" id="volunteer">Volunteer</a>
+            <a href="checkout.php?np_title=Catalogue_for_Philanthropy:_Greater_Washington" title="Donate to The Catalogue for Philanthropy" class="btn btn-primary donate-button" id="donate">Donate</a>
+            <a href="checkout.php?np_title=Catalogue_for_Philanthropy:_Greater_Washington" title="Donate to The Catalogue for Philanthropy" class="btn btn-tertiary catalogue-donate-button" id="donate-to-catalogue">Donate to The Catalogue</a>
+          </div>
         </div>
       </div>
       <div class="row primary-nav" id="primary-nav-container">
