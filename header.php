@@ -198,8 +198,8 @@
             
           </div>
           <div class="btn-group donate-buttons">
-            <a href="checkout.php?np_title=Catalogue_for_Philanthropy:_Greater_Washington" title="Donate to The Catalogue for Philanthropy" class="btn btn-secondary volunteer-button" id="volunteer">Volunteer</a>
-            <a href="checkout.php?np_title=Catalogue_for_Philanthropy:_Greater_Washington" title="Donate to The Catalogue for Philanthropy" class="btn btn-primary donate-button" id="donate">Donate</a>
+            <a href="#" title="Donate to The Catalogue for Philanthropy" class="btn btn-secondary volunteer-button" id="volunteer">Volunteer</a>
+            <a href="#" title="Donate to The Catalogue for Philanthropy" class="btn btn-primary donate-button" id="donate">Donate</a>
             <a href="checkout.php?np_title=Catalogue_for_Philanthropy:_Greater_Washington" title="Donate to The Catalogue for Philanthropy" class="btn btn-tertiary catalogue-donate-button" id="donate-to-catalogue">Donate to The Catalogue</a>
           </div>
         </div>

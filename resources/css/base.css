@@ -102,6 +102,18 @@ main.volunteer-event-main {
 .volunteer-contact {
     color: #153B50;
 }
+.volunteer-details .all-caps {
+    margin-bottom: 20px;
+    margin-bottom: 2.0rem;
+}
+.volunteer-details p.text-bold {
+    margin-bottom: 0px;
+    margin-bottom: 0rem;
+}
+.volunteer-details p.bottom-padding {
+    padding-bottom: 13px;
+    padding-bottom: 1.3rem;
+}
 .email-button,
 .learn-more {
     width: 100%;
@@ -111,6 +123,10 @@ main.volunteer-event-main {
 }
 .charity-details hr {
     width: 66.6666667%;
+}
+a.email[href^="mailto"], a.email[href^="mailto"]:hover, a.email[href^="mailto"]:focus {
+    color: inherit;
+    text-decoration: none;
 }
 /* end volunteer events page */
 form small {
