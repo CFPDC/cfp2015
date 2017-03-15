@@ -54,6 +54,18 @@ include('includes/functions.php');
 				</p>
 				<a href="nonprofit-detail.php" class="btn btn-primary learn-more">Learn More</a>
 			</div>
+			<h3>Share</h3>
+			<div class="well share-details">
+				<!--part1-->
+	  			<div class="addthis_sharing_toolbox" data-url="http://cfp-dc.org/aff"></div>
+				<!--part2-->
+	  			<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4d7e615503d03f12" async="async"></script>
+				<script type="text/javascript">
+					var addthis_config = addthis_config||{};
+					addthis_config.data_track_addressbar = false;
+					addthis_config.data_track_clickback = false;
+				</script>
+			</div>
 		</aside>
 	</section>
 </div>

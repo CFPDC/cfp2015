@@ -3140,6 +3140,20 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
 }
 
+@media (max-width: 533px) {
+    .btn-group.donate-buttons {
+        float: none;
+    }   
+    .btn-group.donate-buttons a {
+        width: 100%;
+        display: block;
+    }   
+    .btn-group.donate-buttons a:last-child {
+        margin-bottom: 15px;
+        margin-bottom: 1.5rem;
+    }   
+}
+
 @media (min-width: 480px) {
     #screen-indicator {
         z-index: 5;
