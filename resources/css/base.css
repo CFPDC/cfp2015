@@ -87,6 +87,11 @@ h2 small {
 .volunteer-event-h1 {
     padding-bottom: 0px;
     padding-bottom: 0rem;
+    margin-bottom: 0px;
+    margin-bottom: 0rem;
+}
+.block-text {
+    display: block;
 }
 .volunteer-text {
     color: #5E88A2;
@@ -94,6 +99,14 @@ h2 small {
     padding-left: 1.5rem;
     margin-bottom: 0px;
     margin-bottom: 0rem;
+    margin-top: 0px;
+    margin-top: 0rem;
+}
+.seeking-volunteers {
+    margin-top: 10px;
+}
+.volunteer-h4 {
+    color: #5E88A2;
 }
 main.volunteer-event-main {
     margin-top: 0px;
@@ -127,6 +140,14 @@ main.volunteer-event-main {
 a.email[href^="mailto"], a.email[href^="mailto"]:hover, a.email[href^="mailto"]:focus {
     color: inherit;
     text-decoration: none;
+}
+.event-details-list li {
+    margin-bottom: 0px
+}
+.volunteer-details .add-to-calendar {
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 /* end volunteer events page */
 form small {
@@ -293,8 +314,8 @@ p.img-above {
 }
 
 .btn-tertiary {
-    background-color: #339966;
-    border-color: #339966;
+    background-color: #153B50;
+    border-color: #153B50;
     color: #fff;
     font-family: 'ProximaNovaBold';
     text-transform: uppercase;
@@ -302,8 +323,8 @@ p.img-above {
 
 .btn-tertiary:focus, .btn-tertiary:hover {
     background-color: #fff;
-    border-color: #339966;
-    color: #339966;
+    border-color: #153B50;
+    color: #153B50;
 }
 
 .btn-success {
@@ -555,9 +576,6 @@ form .error + textarea {
 .btn-group.donate-buttons {
     float: right;
 }
-.btn-group.donate-buttons a {
-    margin-right: 10px;
-}
 .volunteer-button {
     float: left;
     margin-right: 28px;
@@ -660,12 +678,12 @@ body.mac.canvas-slid {
     border: 1px solid transparent;
 }
 
-/* focus/open states of first descendant link within a top level 
+/* focus/open states of first descendant link within a top level
    navigation item */
 .nav-item > a:focus,
 .nav-item > a.open {}
 
-/* open state of first descendant link within a top level 
+/* open state of first descendant link within a top level
    navigation item */
 .nav-item > a.open {
     border-bottom: none;
@@ -2636,7 +2654,7 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
         font-size: 17px;
         font-size: 1.7rem;
     }
-    
+
     .nav.nav-pills.home-search > li button.btn-link {
         border: 0;
         border-bottom: 5px solid transparent;
@@ -2850,7 +2868,7 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
         font-size: 1.9rem;
     }
     .secondary-nav li {
-        margin-left: 30px;
+        margin-left: 16px;
     }
     .two-column-form label.organization-label {
         font-size: inherit;
@@ -2925,7 +2943,7 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
         font-size: 1.5rem;
         letter-spacing: .05em;
     }
-    
+
     .nav.nav-pills.home-search > li {
         margin-left: 20px;
     }
@@ -3027,6 +3045,12 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     .nav.nav-pills.home-search > li + li {
         margin-left: 150px;
     }
+    .donate-buttons a:first-child {
+        margin-right: 31px;
+    }
+    .donate-buttons a.donate-button {
+        margin-right: 36px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -3119,12 +3143,15 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     #screen-indicator {
         z-index: 8;
     }
-    
+
 }
 
 @media (max-width: 991px) {
     #screen-indicator {
         z-index: 7;
+    }
+    .btn-group.donate-buttons a {
+        margin-right: 10px;
     }
 }
 
@@ -3143,15 +3170,15 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
 @media (max-width: 533px) {
     .btn-group.donate-buttons {
         float: none;
-    }   
+    }
     .btn-group.donate-buttons a {
         width: 100%;
         display: block;
-    }   
+    }
     .btn-group.donate-buttons a:last-child {
         margin-bottom: 15px;
         margin-bottom: 1.5rem;
-    }   
+    }
 }
 
 @media (min-width: 480px) {
