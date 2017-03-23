@@ -2442,6 +2442,64 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     background: #fff;
     text-decoration: none;
 }
+/*--- VOLUNTEER PAGE ---*/
+.volunteer-h1 {
+    padding-bottom: 0px;
+}
+
+main.secondary.volunteer-main {
+    margin-top: 0px;
+}
+
+.subcategories .cap.cap-volunteer {
+    position: absolute;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    display: block;
+    left: 0;
+    padding: 0;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.subcategories .cap.cap-volunteer > h3 {
+    min-height: 70px;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: -8px;
+}
+
+.subcategories .cap.cap-volunteer a {
+    color: rgb(0, 0, 0);
+    display: block;
+    font-size: 19px;
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    padding-bottom: 10px;
+    padding-top: 27px;
+    transition: background-color 0.3s ease;
+}
+
+.subcategories .cap.cap-volunteer a:hover {
+    background: #fff;
+}
+
+.subcategories .cap.cap-volunteer h3.multi-line a {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 7px;
+    padding-top: 17px;
+}
+
+.show-volunteer-categories {
+    padding: 20px;
+}
+.volunteer-label {
+    color: #487896;
+    text-transform: none;
+    margin-left: 5px;
+}
 
 /*--- HOME PAGE ---*/
 .home-lead-text {
@@ -2674,6 +2732,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     .nav.nav-pills.home-search > li button.btn-link.active.human-services-btn, .nav.nav-pills.home-search > li button.btn-link.human-services-btn:focus, .nav.nav-pills.home-search > li button.btn-link.human-services-btn:hover {
         border-bottom-color: #487896;
+    }
+    .nav.nav-pills.home-search > li button.btn-link.active.international-btn, .nav.nav-pills.home-search > li button.btn-link.international-btn:focus, .nav.nav-pills.home-search > li button.btn-link.international-btn:hover {
+        border-bottom-color: #931621;
     }
     .nav.nav-pills.home-search > li button.btn-link.active.view-all-btn, .nav.nav-pills.home-search > li button.btn-link.view-all-btn:focus, .nav.nav-pills.home-search > li button.btn-link.view-all-btn:hover {
         border-bottom-color: #FDAF17;
@@ -3044,6 +3105,9 @@ footer .social-icons .fa:focus, footer .social-icons .fa:hover {
     }
     .nav.nav-pills.home-search > li + li {
         margin-left: 150px;
+    }
+    .nav.nav-pills.home-search.volunteer-search > li + li {
+        margin-left: 100px;
     }
     .donate-buttons a:first-child {
         margin-right: 31px;
