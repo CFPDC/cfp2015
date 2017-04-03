@@ -26,6 +26,8 @@
     <link href="assets/css/jasny-bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/fullcalendar.min.css" rel="stylesheet">
     <link href="assets/css/fullcalendar.print.css" rel="stylesheet" media="print">
+    <link href="assets/css/dhtmlxcombo.css" rel="stylesheet">
+  <script src="assets/js/dhtmlxcombo.js"></script>
     <link href="resources/css/base.css" rel="stylesheet">
     <link href="resources/css/cfp-print.css" rel="stylesheet" media="print">
     <script src="assets/js/modernizr.js"></script>
