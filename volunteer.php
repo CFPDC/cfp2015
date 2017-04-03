@@ -10,7 +10,12 @@ include('includes/functions.php');
 <h1 class="text-center volunteer-h1">VOLUNTEER</h1>
 
 <main role="main" class="container-fluid secondary volunteer-main">
-		
+	
+<div class="row text-center">
+	<button class="btn btn-primary show-volunteer-categories">
+		Show Selected Categories
+	</button>
+</div>	
 <div class="row subcategory-section">
   <ul class="nav nav-pills home-search volunteer-search col-sm-12 text-center">
     <li role="presentation">
