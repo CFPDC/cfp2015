@@ -12,9 +12,9 @@ include('includes/functions.php');
 <main role="main" class="container-fluid secondary volunteer-main">
 	
 <div class="row text-center">
-	<button class="btn btn-primary show-volunteer-categories">
+	<a href="volunteer-search.php" class="btn btn-primary btn-inverse show-volunteer-categories">
 		Show Selected Categories
-	</button>
+	</a>
 </div>	
 <div class="row subcategory-section">
   <ul class="nav nav-pills home-search volunteer-search col-sm-12 text-center">
@@ -257,9 +257,9 @@ include('includes/functions.php');
   </div>
 </div>
 <div class="row text-center">
-	<button class="btn btn-primary show-volunteer-categories">
+	<a href="volunteer-search.php" class="btn btn-primary btn-inverse show-volunteer-categories">
 		Show Selected Categories
-	</button>
+	</a>
 </div>
 </main>
 <?php get_template('footer'); ?>

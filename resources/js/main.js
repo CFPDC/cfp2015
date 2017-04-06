@@ -215,8 +215,6 @@ var global = {
             }).siblings(amountLabel).attr('aria-describedby', 'np-selected-amount');
 
         }
-
-
     },
     faqSetup: function() {
         if ($('#faq-list a[data-target]')) {
@@ -274,7 +272,6 @@ var global = {
                 });
             }
         })
-
     },
     globalImageCheck: function(img) {
         //call this in another function by naming variable. See homeImageCheck() for reference
@@ -293,7 +290,6 @@ var global = {
             layoutMode: 'fitRows',
             sortBy: 'random'
         });
-
     },
     homeImageCheck: function() {
         var img = $('.subcategories .img-responsive');
@@ -363,9 +359,7 @@ var global = {
             }, 'slow');
             $(target).focus();
         });
-
     },
-
     navTriggerToggle: function(e) {
         var srText = $('#expandText');
         mobileMenu.attr({
@@ -415,7 +409,6 @@ var global = {
         setTimeout(function() {
             mobileNav.focus();
         }, 50);
-
     },
     mobileNavClose: function(e) {
         var liveText = 'The mobile menu has closed';
@@ -461,7 +454,6 @@ var global = {
             /* css class for the open state */
             openClass: "open"
         });
-
     },
     parameterUpdate: function() {
         //checks parameters in url on page load and applies checked items or select all button to be toggled
@@ -728,9 +720,22 @@ var global = {
             layoutMode: 'fitRows'
         });
 
-        $('.narrow-search').on('change', function() {
-            var filterValue = $('.narrow-search').val();
-            $gridNarrowVolunteer.isotope({ filter: filterValue });
+        var $checkboxes = $('.vol-filters input');
+        $checkboxes.on('change', function() {
+            // map input values to an array
+            var inclusives = [];
+            // inclusive filters from checkboxes
+            $checkboxes.each(function(i, elem) {
+                // if checkbox, use value if checked
+                if (elem.checked) {
+                    inclusives.push(elem.dataset.filter);
+                }
+            });
+
+            // combine inclusive filters
+            var filterValue = inclusives.length ? inclusives.join(', ') : '*';
+
+            $gridNarrowVolunteer.isotope({ filter: filterValue })
         });
     }
 };
@@ -847,7 +852,6 @@ $(window).resize(_.debounce(function() {
     }
     //if user changes width of browser this script picks up the change and changes height of nonprofit search listings
     global.setHeight();
-
 }, 20));
 
 //Do custom Media query logic
@@ -895,7 +899,6 @@ if ($('body').hasClass('mac') && ($('body').hasClass('ipad') || $('body').hasCla
         $('body').css('overflow', 'auto');
     }
 };
-
 
 //help iOS work properly with offcanvas
 if ($('body').hasClass('windows')) {
@@ -1149,104 +1152,15 @@ $(function() {
             global.volunteerSearchActiveToggle();
             break;
         case 'volunteer-search':
-            global.multiSelectSearch();
+
+
+            /* global.multiSelectSearch();*/
             global.volunteerNarrowSearch();
             break;
         default:
             break;
     }
 
-    /*if (pageName === 'index') {
-                                //home page functions
-
-                                //check for missing images in the home page grid
-                                global.homeImageCheck();
-
-                                //filters out selection base on user selecting grid filters
-                                global.homeSearchActiveToggle();
-
-
-                                $('#Mycarousel').carousel({
-                                                pause: "hover"
-                                });
-                                $('#playButton').on('click', function() {
-                                                $('#myCarousel').carousel('cycle');
-                                                $('#pauseButton').focus();
-                                });
-                                $('#pauseButton').on('click', function() {
-                                                $('#myCarousel').carousel('pause');
-                                                $('#playButton').focus();
-                                });
-
-                } else if (pageName === 'nonprofits-grid' || pageName === 'our-nonprofits') {
-                                //.ready for global functions- only for grid nonprofit listing page
-                                global.setHeight();
-
-                                //nonprofit listings list and grid view functions
-                                global.searchPageActiveToggle();
-
-                                //check parameters on nonprofit search page and update filters
-                                global.parameterUpdate();
-
-
-                                //open collapsed sections of filtering on results/search page
-                                global.filterExpandPageLoad();
-
-
-                } else if (pageName === 'our-nonprofits-list' || pageName === 'nonprofits-list') {
-                                //collapse listings of nonprofits in list view
-                                listViewResults.nonprofitCollapse();
-
-                                //nonprofit listings list and grid view functions
-                                global.searchPageActiveToggle();
-
-                                //check parameters on nonprofit search page and update filters
-                                global.parameterUpdate();
-
-                                //open collapsed sections of filtering on results/search page
-                                global.filterExpandPageLoad();
-
-                } else if (pageName === 'faq') {
-                                //faq list add jumplink attributes
-                                if ($('.faq-questions').length > 0) {
-                                                global.faqSetup();
-
-                                                //remove tabindex if user clicks on FAQ question and is focused on the 'dt' element, but only when tabbing off of the 'dt'element.
-                                                $('dt').on('keydown', function(event) {
-                                                                if ((event.keyCode === 9) || (event.shiftKey && event.keyCode == 9)) {
-                                                                                $(this).removeAttr('tabindex');
-                                                                }
-                                                                return true;
-                                                });
-                                }
-                } else if (pageName === 'press') {
-                                //add sr only text to each 'connect here' link on press page
-                                global.pressReleaseLink508();
-                } else if (pageName === 'styles' || null) {
-                                //scroll spy for styleguide
-                                $('body').scrollspy({
-                                                target: '.bs-docs-sidebar'
-                                });
-                                var nav = $(".push-down");
-                                $(window).scroll(function() {
-                                                var scroll = $(window).scrollTop();
-
-                                                if (scroll >= 105) {
-                                                                nav.addClass("scrolling");
-                                                } else {
-                                                                nav.removeClass("scrolling");
-                                                }
-                                });
-                } else if (pageName === 'events-calendar') {
-                                //JS for adding functionality of the calendar widget
-                                global.calendar();
-                } else if (pageName === 'nonprofit-detail') {
-                                //JS to control functionality of nonprofit detail 'similar nonprofits' carousel
-                                global.relatedCarousel();
-                } else if (pageName === 'volunteer') {
-                                global.volunteerSearchActiveToggle();
-                }
-*/
     //6. form functions
     //form functions
     if ($('.request-catalogue').length) {

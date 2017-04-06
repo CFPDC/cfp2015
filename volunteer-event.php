@@ -4,18 +4,19 @@ include('includes/functions.php');
 <?php get_template('header', 'Title of homepage'); ?>
 <div class="container-fluid">
 	<div class="row">
-		<h1 class="col-xs-12 volunteer-event-h1">Parkinson Foundation of the National Capital Area</h1>
+		<h1 class="col-xs-12 vol-event">Parkinson Foundation of the National Capital Area</h1>
 		<h2 class="col-xs-12 volunteer-text">Volunteer</h2>
 	</div>
 </div>
 <main role="main" class="container-fluid secondary volunteer-event-main">
 <div class="row">
 	<section class="col-xs-12">
+	<div class="row">
 		<div class="col-sm-8 volunteer-details">
       		<div class="clearfix hero details">
       		  <img src="http://lorempixel.com/1200/500/nature" alt="" aria-hidden="true" class="img-responsive">
       		</div>
-			<div class="row">
+			
 				<h3 class="all-caps">General Information</h3>
 				<ul class="list-unstyled">
 					<li><span class="text-bold block-text">Description of Volunteer Opportunities/Responsibilities:</span> Volunteers assis with PFNCA's annual Walk Off Parkinson's program (held each Fall) and at its annual educationsl Symposium (held each Spring). Volunteers also assist other times of the year with various projects including community outreach, administrative support, etc.</li>
@@ -23,8 +24,6 @@ include('includes/functions.php');
 					<li><span class="text-bold">Hours Needed:</span> Weekday Day; Weekday Evening Weekend Day</li>
 					<li></li>
 				</ul>
-			</div>
-			<div class="row">
 				<h3 class="all-caps seeking-volunteers">Events seeking volunteers</h3>
 				<h4 class="volunteer-h4">PFNCA Symposium</h4>
 				<p class="bottom-padding">The PFNCA Symposium is an all day eduational program produced by the Parkinson Foundation of the National Capital Area's Medical Advisory Board to provide information and resources to live well with Parkinson's. Speakers include area physicians who specialize in Parkinson's.</p>
@@ -37,7 +36,7 @@ include('includes/functions.php');
 				</ul>
 				<a href="events-calendar.php" class="btn btn-primary add-to-calendar">Add to Calendar</a>
 			</div>
-		</div>
+		
 		<aside class="col-sm-4 col-lg-offset-1 col-lg-3 pull-right">
 			<h3>Contact
 			<span class="sr-only">
@@ -80,6 +79,7 @@ include('includes/functions.php');
 				</script>
 			</div>
 		</aside>
+		</div>
 	</section>
 </div>
 </main>

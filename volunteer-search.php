@@ -33,39 +33,60 @@ include('includes/functions.php');
 <main role="main" class="container-fluid secondary volunteer-search-main">
 <div class="row">
 	<aside class="col-xs-12 col-sm-3" id="asideFilter">
-		<div class="well">
+		<div class="well vol-filters">
 			<h3 class="all-caps narrow-search">Narrow Your Choices</h3>
 			<label class="volunteer-search-label" for="location">Where:</label>
-			<select name="location" class="narrow-search" id="location" mode="checkbox">
-				<option value="0">Select a location</option>
-				<option value=".DC" data-region="DC">Washington D.C.</option>
-				<option value=".MD" data-region="MD">Maryland</option>
-				<option value=".VA" data-region="VA">Virginia</option>
-			</select>
+			<div class="dropdown">
+			  <button id="vol-location" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    Select a location
+			    <span class="caret" aria-hidden="true"></span>
+			  </button>
+			  <div class="dropdown-menu" id="vol-loc-list" aria-labelledby="vol-location">
+			    <ul class="list-unstyled">
+			    <li><label><input type="checkbox" data-filter=".DC">Washington D.C.</label></li>
+			    <li><label><input type="checkbox" data-filter=".VA">Virginia</label></li>
+			    <li><label><input type="checkbox" data-filter=".MD">Maryland</label></li>
+			  </ul>
+			  </div>
+			</div>
 			<label class="volunteer-search-label" for="time">When:</label>
-			<select name="time" class="narrow-search" id="time" mode="checkbox">
-				<option value="0" data-time="0">Select a time</option>
-				<option value=".eleven" data-time="11">Weekday Day</option>
-				<option value=".two" data-time="2">Weekday Evening</option>
-				<option value=".one" data-time="1">Weekend Day</option>
-				<option value=".four" data-time="4">Weekend Evening</option>
-			</select>
+			<div class="dropdown">
+			  <button id="vol-time" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    Select a time
+			    <span class="caret" aria-hidden="true"></span>
+			  </button>
+			  <div class="dropdown-menu" id="vol-time-list" aria-labelledby="vol-time">
+			    <ul class="list-unstyled">
+			    <li><label><input type="checkbox" data-filter=".solo">Weekday Day</label></li>
+			    <li><label><input type="checkbox" data-filter=".solo">Weekday Evening</label></li>
+			    <li><label><input type="checkbox" data-filter=".solo">Weekend Day</label></li>
+			    <li><label><input type="checkbox" data-filter=".solo">Weekend Evening</label></li>
+			  </ul>
+			  </div>
+			</div>
 			<label class="volunteer-search-label" for="volunteers">Who:</label>
-			<select name="volunteers" class="narrow-search" id="volunteers" mode="checkbox">
-				<option value="9">Select a group size</option>
-				<option value=".solo" data-who="solo">Myself</option>
-				<option value=".group" data-who="group">My Group or Team</option>
-				<option value=".family" data-who="family">My family (with Children)</option>
-			</select>
+			<div class="dropdown">
+			  <button id="vol-group" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    Select a group size
+			    <span class="caret" aria-hidden="true"></span>
+			  </button>
+			  <div class="dropdown-menu" id="vol-group-list" aria-labelledby="vol-group"> 
+			  <ul class="list-unstyled">
+			    <li><label><input type="checkbox" data-filter=".solo">Myself</label></li>
+			    <li><label><input type="checkbox" data-filter=".group">My Group or Team</label></li>
+			    <li><label><input type="checkbox" data-filter=".family">My family (with Children)</label></li>
+			  </ul>
+			  </div>
+			</div> 
 		</div>
 	</aside>
 	<section class="col-sm-9">
 		<p>RESULTS: 10</p>
-		<p>Environment &amp; Animal Services <span class="fa fa-times-circle close" aria-hidden="true"></span></p>
-		<p>Youth Education &amp; Enrichment <span class="fa fa-times-circle close" aria-hidden="true"></span></p>
+		<p><b>Categories:</b> <span>Environment &amp; Animal Services <button class="fa fa-times-circle close remove-opt" aria-hidden="true"><span class="sr-only">Remove Environment &amp; Animal Services</span></button></span>
+		<span>Youth Education &amp; Enrichment <button class="fa fa-times-circle close remove-opt"><span class="sr-only">Remove Youth Education &amp; Enrichment</span></button></span></p>
 		<h2 class="volunteer-search-h2">Environment &amp; Animal Services</h2>
 		<div class="row grid">
-			<div class="col-xs-12 col-sm-4 col-md-3 iso-item VA solo eleven" data-time="11" data-region="VA" data-who="solo" data-category="Nature">
+			<div class="col-xs-12 vol-listing iso-item VA solo eleven" data-time="11" data-region="VA" data-who="solo" data-category="Nature">
 				<div class="thumbnail">
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
 					<div class="caption">
@@ -75,16 +96,13 @@ include('includes/functions.php');
 						</p>
 						<div class="bottom-align">
 							<p>
-								<a href="#" class="btn btn-secondary" role="button">Volunteer</a>
-							</p>
-							<p>
-								<small>Nature</small>
+								<a href="#" class="btn btn-secondary btn-block" role="button">Volunteer</a>
 							</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 iso-item two MD group" data-time="2" data-region="MD" data-who="group" data-category="nature">
+			<div class="col-xs-12 vol-listing iso-item two MD group" data-time="2" data-region="MD" data-who="group" data-category="nature">
 				<div class="thumbnail">
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/1381.jpg">
 					<div class="caption">
@@ -94,16 +112,13 @@ include('includes/functions.php');
 						</p>
 						<div class="bottom-align">
 							<p>
-								<a href="#" class="btn btn-secondary" role="button">Volunteer</a>
-							</p>
-							<p>
-								<small>Nature</small>
+								<a href="#" class="btn btn-secondary btn-block" role="button">Volunteer</a>
 							</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 iso-item two DC solo" data-time="2" data-region="DC" data-who="solo" data-category="nature">
+			<div class="col-xs-12 vol-listing iso-item two DC solo" data-time="2" data-region="DC" data-who="solo" data-category="nature">
 				<div class="thumbnail">
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/225.jpg">
 					<div class="caption">
@@ -113,16 +128,13 @@ include('includes/functions.php');
 						</p>
 						<div class="bottom-align">
 							<p>
-								<a href="#" class="btn btn-secondary" role="button">Volunteer</a>
-							</p>
-							<p>
-								<small>Nature</small>
+								<a href="#" class="btn btn-secondary btn-block" role="button">Volunteer</a>
 							</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 iso-item eleven MD family" data-time="11" data-region="MD" data-who="family" data-category="nature">
+			<div class="col-xs-12 vol-listing iso-item eleven MD family" data-time="11" data-region="MD" data-who="family" data-category="nature">
 				<div class="thumbnail">
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/94.jpg">
 					<div class="caption">
@@ -132,16 +144,13 @@ include('includes/functions.php');
 						</p>
 						<div class="bottom-align">
 							<p>
-								<a href="#" class="btn btn-secondary" role="button">Volunteer</a>
-							</p>
-							<p>
-								<small>Nature</small>
+								<a href="#" class="btn btn-secondary btn-block" role="button">Volunteer</a>
 							</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 iso-item one MD solo" data-time="1" data-region="MD" data-who="solo" data-category="nature">
+			<div class="col-xs-12 vol-listing iso-item one MD solo" data-time="1" data-region="MD" data-who="solo" data-category="nature">
 				<div class="thumbnail">
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/527.jpg">
 					<div class="caption">
@@ -151,16 +160,13 @@ include('includes/functions.php');
 						</p>
 						<div class="bottom-align">
 							<p>
-								<a href="#" class="btn btn-secondary" role="button">Volunteer</a>
-							</p>
-							<p>
-								<small>Nature</small>
+								<a href="#" class="btn btn-secondary btn-block" role="button">Volunteer</a>
 							</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 iso-item  eleven MD group" data-time="11" data-region="MD" data-who="group" data-category="nature">
+			<div class="col-xs-12 vol-listing iso-item  eleven MD group" data-time="11" data-region="MD" data-who="group" data-category="nature">
 				<div class="thumbnail">
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/95.jpg">
 					<div class="caption">
@@ -170,10 +176,7 @@ include('includes/functions.php');
 						</p>
 						<div class="bottom-align">
 							<p>
-								<a href="#" class="btn btn-secondary" role="button">Volunteer</a>
-							</p>
-							<p>
-								<small>Nature</small>
+								<a href="#" class="btn btn-secondary btn-block" role="button">Volunteer</a>
 							</p>
 						</div>
 					</div>
@@ -182,7 +185,7 @@ include('includes/functions.php');
 		</div>
 		<h2 class="volunteer-search-h2">Youth Education &amp; Enrichment</h2>
 		<div class="row grid">
-			<div class="col-xs-12 col-sm-4 col-md-3 iso-item two DC group" data-time="2" data-region="DC" data-who="group" data-category="education">
+			<div class="col-xs-12 vol-listing iso-item two DC group" data-time="2" data-region="DC" data-who="group" data-category="education">
 				<div class="thumbnail">
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/975.jpg">
 					<div class="caption">
@@ -192,16 +195,13 @@ include('includes/functions.php');
 						</p>
 						<div class="bottom-align">
 							<p>
-								<a href="#" class="btn btn-secondary" role="button">Volunteer</a>
-							</p>
-							<p>
-								<small>Education</small>
+								<a href="#" class="btn btn-secondary btn-block" role="button">Volunteer</a>
 							</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 iso-item four DC solo" data-time="4" data-region="DC" data-who="solo" data-category="education">
+			<div class="col-xs-12 vol-listing iso-item four DC solo" data-time="4" data-region="DC" data-who="solo" data-category="education">
 				<div class="thumbnail">
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/992.jpg">
 					<div class="caption">
@@ -211,16 +211,13 @@ include('includes/functions.php');
 						</p>
 						<div class="bottom-align">
 							<p>
-								<a href="#" class="btn btn-secondary" role="button">Volunteer</a>
-							</p>
-							<p>
-								<small>Education</small>
+								<a href="#" class="btn btn-secondary btn-block" role="button">Volunteer</a>
 							</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 iso-item one DC family" data-time="1" data-region="DC" data-who="family" data-category="education">
+			<div class="col-xs-12 vol-listing iso-item one DC family" data-time="1" data-region="DC" data-who="family" data-category="education">
 				<div class="thumbnail">
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/1193.jpg">
 					<div class="caption">
@@ -230,16 +227,13 @@ include('includes/functions.php');
 						</p>
 						<div class="bottom-align">
 							<p>
-								<a href="#" class="btn btn-secondary" role="button">Volunteer</a>
-							</p>
-							<p>
-								<small>Education</small>
+								<a href="#" class="btn btn-secondary btn-block" role="button">Volunteer</a>
 							</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 col-sm-4 col-sm-4 col-md-3 iso-item four DC family" data-time="4" data-region="DC" data-who="family" data-category="education">
+			<div class="col-xs-12 vol-listing iso-item four DC family" data-time="4" data-region="DC" data-who="family" data-category="education">
 				<div class="thumbnail">
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/555.jpg">
 					<div class="caption">
@@ -249,10 +243,7 @@ include('includes/functions.php');
 						</p>
 						<div class="bottom-align">
 							<p>
-								<a href="#" class="btn btn-secondary" role="button">Volunteer</a>
-							</p>
-							<p>
-								<small>Education</small>
+								<a href="#" class="btn btn-secondary btn-block" role="button">Volunteer</a>
 							</p>
 						</div>
 					</div>
