@@ -14,7 +14,7 @@ include('includes/functions.php');
 	<div class="row">
 		<div class="col-sm-8 volunteer-details">
       		<div class="clearfix hero details">
-      		  <img src="http://lorempixel.com/1200/500/nature" alt="" aria-hidden="true" class="img-responsive">
+      		  <img src="http://lorempixel.com/1200/400/nature" alt="" aria-hidden="true" class="img-responsive">
       		</div>
 			
 				<h3 class="all-caps">General Information</h3>

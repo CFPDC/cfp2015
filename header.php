@@ -46,10 +46,12 @@
     </noscript>
     <header class="container-fluid" role="banner">
       <div class="row">
-        <div class="col-sm-12 col-md-3">
-          <a class="pull-left" href="../" title="Catalogue for Philanthropy: Greater Washington home"> <img class="img-responsive header-logo" src="resources/images/cfp-logo-blue-brown2.gif" alt="Catalogue for Philanthropy: Greater Washington logo"> </a>
+        <div class="col-sm-12 col-md-6">
+          <a class="pull-left" href="../" title="Catalogue for Philanthropy: Greater Washington home">
+          <img class="img-responsive header-logo" src="resources/images/cfp-logo-blue-brown2.gif" alt="Catalogue for Philanthropy: Greater Washington logo">
+          </a>
         </div>
-        <nav class="col-xs-12 col-md-9 secondary-nav">
+        <nav class="col-sm-12 col-md-6 secondary-nav">
           <ul class="list-inline">
             <li>
               <a href="contact.php" target="_self" title="CFP's contact information">Contact
@@ -80,7 +82,7 @@
             </li>
           </ul>
         </nav>
-        <div class="hidden-print col-xs-12 col-md-5 col-lg-9 catalogue-donate-button-container">
+        <div class="hidden-print col-xs-12 col-md-6 catalogue-donate-button-container">
           <button class="navbar-toggle" data-toggle="offcanvas" data-target=".mobile-nav" data-canvas="body" >
           <span class="adobeBlank sr-only" aria-hidden="true">
           Expand Menu Icon

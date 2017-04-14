@@ -91,9 +91,7 @@ include('includes/functions.php');
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
 					<div class="caption">
 						<h2 class="name">Alice Ferguson Foundation</h2>
-						<p>
-							Connects people to nature through educations, stewardship, and advocacy.
-						</p>
+						
 						<div class="bottom-align">
 							<p>
 								<a href="#" class="btn btn-secondary btn-block" role="button">Volunteer</a>
@@ -107,9 +105,7 @@ include('includes/functions.php');
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/1381.jpg">
 					<div class="caption">
 						<h2 class="name">Amazon Conservation Association</h2>
-						<p>
-							Protects biodiversity and communities in the southwestern Amazon rainforest.
-						</p>
+						
 						<div class="bottom-align">
 							<p>
 								<a href="#" class="btn btn-secondary btn-block" role="button">Volunteer</a>
@@ -123,9 +119,7 @@ include('includes/functions.php');
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/225.jpg">
 					<div class="caption">
 						<h2 class="name">Anacostia Watershed Society</h2>
-						<p>
-							Mobilizes the community to stop pollution, restore natural systems, and rebuild relationships to Anacostia River.
-						</p>
+						
 						<div class="bottom-align">
 							<p>
 								<a href="#" class="btn btn-secondary btn-block" role="button">Volunteer</a>
@@ -139,9 +133,7 @@ include('includes/functions.php');
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/94.jpg">
 					<div class="caption">
 						<h2 class="name">Arlington Outdoor Education Association Longer Name</h2>
-						<p>
-							Provides hands&dash;on environmental education to Arlington children.
-						</p>
+						
 						<div class="bottom-align">
 							<p>
 								<a href="#" class="btn btn-secondary btn-block" role="button">Volunteer</a>
@@ -155,9 +147,7 @@ include('includes/functions.php');
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/527.jpg">
 					<div class="caption">
 						<h2 class="name">Arlingtonians for a Clean Environment</h2>
-						<p>
-							Connects people to nature through educations, stewardship, and advocacy.
-						</p>
+						
 						<div class="bottom-align">
 							<p>
 								<a href="#" class="btn btn-secondary btn-block" role="button">Volunteer</a>
@@ -171,9 +161,7 @@ include('includes/functions.php');
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/95.jpg">
 					<div class="caption">
 						<h2 class="name">Audubon Naturalist Society</h2>
-						<p>
-							Protects biodiversity and communities in the southwestern Amazon rainforest.
-						</p>
+						
 						<div class="bottom-align">
 							<p>
 								<a href="#" class="btn btn-secondary btn-block" role="button">Volunteer</a>
@@ -190,9 +178,7 @@ include('includes/functions.php');
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/975.jpg">
 					<div class="caption">
 						<h2 class="name">Art Works Now Foundation</h2>
-						<p>
-							Connects people to nature through educations, stewardship, and advocacy.
-						</p>
+						
 						<div class="bottom-align">
 							<p>
 								<a href="#" class="btn btn-secondary btn-block" role="button">Volunteer</a>
@@ -206,9 +192,7 @@ include('includes/functions.php');
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/992.jpg">
 					<div class="caption">
 						<h2 class="name">Asian American LEAD Association</h2>
-						<p>
-							Protects biodiversity and communities in the southwestern Amazon rainforest.
-						</p>
+						
 						<div class="bottom-align">
 							<p>
 								<a href="#" class="btn btn-secondary btn-block" role="button">Volunteer</a>
@@ -222,10 +206,7 @@ include('includes/functions.php');
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/1193.jpg">
 					<div class="caption">
 						<h2 class="name">Aspire! Afterschool Learning</h2>
-						<p>
-							Mobilizes the community to stop pollution, restore natural systems, and rebuild relationships to Anacostia River.
-						</p>
-						<div class="bottom-align">
+					<div class="bottom-align">
 							<p>
 								<a href="#" class="btn btn-secondary btn-block" role="button">Volunteer</a>
 							</p>
@@ -238,9 +219,7 @@ include('includes/functions.php');
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/555.jpg">
 					<div class="caption">
 						<h2 class="name">BEST Kids Education Association Longer Name</h2>
-						<p>
-							Provides hands&dash;on environmental education to Arlington children.
-						</p>
+						
 						<div class="bottom-align">
 							<p>
 								<a href="#" class="btn btn-secondary btn-block" role="button">Volunteer</a>

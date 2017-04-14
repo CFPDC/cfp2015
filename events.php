@@ -16,7 +16,7 @@ include('includes/functions.php');
 						</select>
 					</label>
 				</div>
-				<div class="display-group pull-left">
+				<div class="display-group pull-left events-vol-desc">
 					<img src="resources/images/icon-volunteer-opportunity-purple.gif" alt="Volunteer Icon">
 					<label id="viewLabel">Volunteer Opportunity</label>
 				</div>
@@ -24,23 +24,19 @@ include('includes/functions.php');
 		</div>
 	</div>
 </div>
-<div class="container-fluid">
-	<div class="row">
-		<h1 class="text-center event-h1">Events</h1>
-	</div>
-</div>
-<main role="main" class="container-fluid secondary event-main">
+<main role="main" class="container secondary event-main">
 <div class="row">
+<h1 class="text-center event-h1 event-main">Events</h1>
 	<div class="col-sm-12">
 		<p>Explore this list of upcoming events&mdash;open houses, galas, informational evenings,volunteer opportunities&mdash;to find what interests you. Click the name of the event and then use our &ldquo;share&rdquo; utility to let your friends know what&rsquo;s happening.</p>
 	</div>
 </div>
 <div class="row">
-	<section class="col-sm-12">
-		<div class="row">
-			<h2 class="events-h2">Saturday, March 18, 2017</h2>
+	<section>
+		<div>
+			<h2 class="events-h2 col-sm-12">Saturday, March 18, 2017</h2>
 			<div class="col-sm-7">
-				<h3 class="events-h3"><a href="event-details.php">Giving Voice Award Gala</a></h3>
+				<h3 class="events-h3 clearfix"><a href="event-details.php">Giving Voice Award Gala</a></h3>
 				<p><a href="more_info.php?id=94454&amp;tab=events" class="event-host">By Young Playwright's Theater</a></p>
 				<p>Celebrate Young Playwrights&rsquo; Theater&rsquo;s work with our signature brand of eclectic elegance. Enjoy delicious hors d&rsquo;oeuvres and an open bar, bid on unique silent auction prizes and dance the night away in the beautiful Josephine Butler Parks Center! Most importantly, YPT&rsquo;s gala will once again highlight the inspiring voices of DC students, featuring readings by some of the wonderful young people we serve! We can&rsquo;t wait to share their work with you. The YPT Giving Voice Award recognizes extraordinary individuals who have exemplified YPT&rsquo;s spirit and vision by giving voice to the voiceless and inspiring others to realize their full potential. All proceeds to benefit YPT&rsquo;s programming, helping us inspire thousands of local students to discover the power and value of their voices and stories in the coming year, and beyond.</p>
 			</div>
@@ -66,10 +62,10 @@ include('includes/functions.php');
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<h2 class="events-h2">Saturday, March 28, 2017</h2>
+		<div>
+			<h2 class="events-h2 col-sm-12">Saturday, March 28, 2017</h2>
 			<div class="col-sm-7">
-				<h3 class="events-h3"><a title="Permanent link to this event listing"  href="event-details.php" class="needs-page">PFNCA Symposium</a> <img src="resources/images/icon-volunteer-opportunity-purple.gif" alt="Volunteer Icon"></h3>
+				<h3 class="events-h3 clearfix"><a title="Permanent link to this event listing"  href="event-details.php" class="needs-page">PFNCA Symposium</a> <img src="resources/images/icon-volunteer-opportunity-purple.gif" alt="Volunteer Icon"></h3>
 				<p><a href="more_info.php?id=95708&amp;tab=events" class="event-host">By Parkinson Foundation of the National Capital Area</a></p>
 				<p>The PFNCA Symposium is an all day educational program produced by the Parkinson Foundation of the National Capital Area&rsquo;s Medical Advisory Board to provide information and resources to live well with Parkinson&rsquo;s. Speakers include area physicians who specialize in Parkinson&rsquo;s.</p>
 			</div>

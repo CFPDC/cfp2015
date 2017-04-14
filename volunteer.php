@@ -4,10 +4,10 @@ include('includes/functions.php');
 <?php get_template('header', 'Title of homepage'); ?>
 
 <div class="clearfix hero">
-	<img src="http://lorempixel.com/1200/500/nature" alt="" aria-hidden="true" class="img-responsive">
+	<img src="http://lorempixel.com/1200/400/nature" alt="" aria-hidden="true" class="img-responsive">
 </div>
 
-<h1 class="text-center volunteer-h1">VOLUNTEER</h1>
+<h1 class="text-center volunteer-h1">Volunteer</h1>
 
 <main role="main" class="container-fluid secondary volunteer-main">
 	
@@ -43,12 +43,12 @@ include('includes/functions.php');
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap cap-volunteer text-center">
-        <h3> <a href="our-nonprofits.php?strCategory-nature=nature-environment" title="Show all Environment related nonprofits">
+        <h3><label class="volunteer-label" for="checkbox1"> <input id="checkbox1" type="checkbox">
           <span class="sr-only">
           Show only
           </span>
-        Environment</a> </h3>
-        <input id="checkbox1" type="checkbox"><label class="volunteer-label" for="checkbox1">Select</label>
+        Environment</label> </h3>
+        
       </div>
     </div>
   </div>
@@ -56,12 +56,13 @@ include('includes/functions.php');
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap cap-volunteer text-center">
-        <h3> <a href="our-nonprofits.php?strCategory-nature=nature-animals" title="Show all Animals related nonprofits">
+        <h3> <label class="volunteer-label" for="checkbox2">
+        <input id="checkbox2" type="checkbox">
           <span class="sr-only">
           Show only
           </span>
-        Animals</a> </h3>
-        <input id="checkbox2" type="checkbox"><label class="volunteer-label" for="checkbox2">Select</label>
+        Animals </label> </h3>
+       
       </div>
     </div>
   </div>
@@ -69,12 +70,13 @@ include('includes/functions.php');
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap cap-volunteer text-center">
-        <h3> <a href="our-nonprofits.php?strCategory-culture=culture-arts-culture" title="Show all Arts &amp; Culture related nonprofits">
+        <h3> <label class="volunteer-label" for="checkbox3">
+          <input id="checkbox3" type="checkbox">
           <span class="sr-only">
           Show only
           </span>
-        Arts &amp; Culture</a> </h3>
-        <input id="checkbox3" type="checkbox"><label class="volunteer-label" for="checkbox3">Select</label>
+        Arts &amp; Culture</label> </h3>
+        
       </div>
     </div>
   </div>
@@ -82,13 +84,13 @@ include('includes/functions.php');
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap cap-volunteer text-center">
-        <h3 class="multi-line"> <a href="our-nonprofits.php?strCategory-culture=culture-community-arts" title="Show all COMMUNITY ARTS/ARTS FOR KIDS related nonprofits">
+        <h3> <label class="volunteer-label" for="checkbox4">
+          <input id="checkbox4" type="checkbox">
           <span class="sr-only">
           Show only
           </span>
-          COMMUNITY ARTS/<br>
-        ARTS FOR KIDS</a> </h3>
-        <input id="checkbox4" type="checkbox"><label class="volunteer-label" for="checkbox4">Select</label>
+          COMMUNITY ARTS</label> </h3>
+        
       </div>
     </div>
   </div>
@@ -96,12 +98,12 @@ include('includes/functions.php');
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap cap-volunteer text-center">
-        <h3> <a href="our-nonprofits.php?strCategory-education=education-schools" title="Show all Schools related nonprofits">
+        <h3> <label class="volunteer-label" for="checkbox5">
+        <input id="checkbox5" type="checkbox">
           <span class="sr-only">
           Show only
           </span>
-        Schools</a> </h3>
-        <input id="checkbox5" type="checkbox"><label class="volunteer-label" for="checkbox5">Select</label>
+        Schools</label> </h3>
       </div>
     </div>
   </div>
@@ -109,13 +111,12 @@ include('includes/functions.php');
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap cap-volunteer text-center">
-        <h3 class="multi-line"> <a href="our-nonprofits.php?strCategory-international=international-programs" title="Show all Educational Enrichment related nonprofits">
+        <h3> <label class="volunteer-label" for="checkbox6">
+          <input id="checkbox6" type="checkbox">
           <span class="sr-only">
           Show only
           </span>
-          International <br>
-        Programs</a> </h3>
-        <input id="checkbox6" type="checkbox"><label class="volunteer-label" for="checkbox6">Select</label>
+          International</label> </h3>
       </div>
     </div>
   </div>
@@ -123,12 +124,12 @@ include('includes/functions.php');
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap cap-volunteer text-center">
-        <h3> <a href="our-nonprofits.php?strCategory-education=education-literacy" title="Show all Literacy &amp; Learning related nonprofits"> 
+        <h3> <label class="volunteer-label" for="checkbox7"><input id="checkbox7" type="checkbox">
           <span class="sr-only">
           Show only
           </span>
-        Literacy &amp; Learning</a> </h3>
-        <input id="checkbox7" type="checkbox"><label class="volunteer-label" for="checkbox7">Select</label>
+        Learning</label> </h3>
+        
       </div>
     </div>
   </div>
@@ -136,13 +137,12 @@ include('includes/functions.php');
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap cap-volunteer text-center">
-        <h3 class="multi-line"> <a href="our-nonprofits.php?strCategory-human-services=human-services-children-youth" title="Show all Children&sbquo; Youth Families related nonprofits">
+        <h3> <label class="volunteer-label" for="checkbox8"><input id="checkbox8" type="checkbox">
           <span class="sr-only">
           Show only
           </span>
-          Children&sbquo; Youth <br>
-        Families</a> </h3>
-        <input id="checkbox8" type="checkbox"><label class="volunteer-label" for="checkbox8">Select</label>
+          Families</label> </h3>
+        
       </div>
     </div>
   </div>
@@ -150,12 +150,12 @@ include('includes/functions.php');
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap cap-volunteer text-center">
-        <h3> <a href="our-nonprofits.php?strCategory-human-services=human-services-girls-women" title="Show all Girls &amp; Women related nonprofits">
+        <h3> <label class="volunteer-label" for="checkbox9"><input id="checkbox9" type="checkbox">
           <span class="sr-only">
           Show only
           </span>
-        Girls &amp; Women</a> </h3>
-        <input id="checkbox9" type="checkbox"><label class="volunteer-label" for="checkbox9">Select</label>
+        Girls &amp; Women </label> </h3>
+       
       </div>
     </div>
   </div>
@@ -163,12 +163,12 @@ include('includes/functions.php');
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap cap-volunteer text-center">
-        <h3> <a href="our-nonprofits.php?strCategory-human-services=human-services-health" title="Show all Health &amp; Mental Health related nonprofits">
+        <h3> <label class="volunteer-label" for="checkbox10"><input id="checkbox10" type="checkbox">
           <span class="sr-only">
           Show only
           </span>
-        Health &amp; Mental Health</a> </h3>
-        <input id="checkbox10" type="checkbox"><label class="volunteer-label" for="checkbox10">Select</label>
+        Health</label> </h3>
+        
       </div>
     </div>
   </div>
@@ -176,12 +176,12 @@ include('includes/functions.php');
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap cap-volunteer text-center">
-        <h3> <a href="our-nonprofits.php?strCategory-human-services=human-services-aging" title="Show all Aging related nonprofits">
+        <h3> <label class="volunteer-label" for="checkbox11"><input id="checkbox11" type="checkbox">
           <span class="sr-only">
           Show only
           </span>
-        Aging</a> </h3>
-        <input id="checkbox11" type="checkbox"><label class="volunteer-label" for="checkbox11">Select</label>
+        Aging</label> </h3>
+        
       </div>
     </div>
   </div>
@@ -189,12 +189,12 @@ include('includes/functions.php');
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap cap-volunteer text-center">
-        <h3> <a href="our-nonprofits.php?strCategory-human-services=human-services-hunger" title="Show all Hunger related nonprofits">
+        <h3> <label class="volunteer-label" for="checkbox12"><input id="checkbox12" type="checkbox">
           <span class="sr-only">
           Show only
           </span>
-        Hunger</a> </h3>
-        <input id="checkbox12" type="checkbox"><label class="volunteer-label" for="checkbox12">Select</label>
+        Hunger</label></h3>
+        
       </div>
     </div>
   </div>
@@ -203,12 +203,12 @@ include('includes/functions.php');
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap cap-volunteer text-center">
-        <h3> <a href="our-nonprofits.php?strCategory-human-services=human-services-homelessness" title="Show all Homelessness &amp; Housing related nonprofits">
+        <h3> <label class="volunteer-label" for="checkbox13"><input id="checkbox13" type="checkbox">
           <span class="sr-only">
           Show only
           </span>
-        Homelessness &amp; Housing</a> </h3>
-        <input id="checkbox13" type="checkbox"><label class="volunteer-label" for="checkbox13">Select</label>
+        Homelessness</a> </label></h3>
+        
       </div>
     </div>
   </div>
@@ -216,28 +216,12 @@ include('includes/functions.php');
     <div class="thumb">
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap cap-volunteer text-center">
-        <h3 class="multi-line"> <a href="our-nonprofits.php?strCategory-human-services=human-services-legal" title="Show all Legal &amp; Justice Programs related nonprofits">
+        <h3> <label class="volunteer-label" for="checkbox14"><input id="checkbox14" type="checkbox">
           <span class="sr-only">
           Show only
           </span>
-          Legal &amp;<br>
-        Justice Programs</a> </h3>
-        <input id="checkbox14" type="checkbox"><label class="volunteer-label" for="checkbox14">Select</label>
-      </div>
-    </div>
-  </div>
-  <div class="col-xs-12 col-sm-6 col-md-3 subcat-grid-item human-services-cat">
-    <div class="thumb">
-      <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
-      <div class="cap cap-volunteer text-center">
-        <h3 class="multi-line"> 
-        <a href="our-nonprofits.php?strCategory-human-services=human-services-life-skills" title="Show all Life Skills, Training &amp; Employment related nonprofits">
-          <span class="sr-only">
-          Show only
-          </span>
-          Life Skills&sbquo;<br>
-        Training &amp; Employment</a> </h3>
-        <input id="checkbox15" type="checkbox"><label class="volunteer-label" for="checkbox15">Select</label>
+          Legal</label> </h3>
+        
       </div>
     </div>
   </div>
@@ -246,12 +230,26 @@ include('includes/functions.php');
       <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
       <div class="cap cap-volunteer text-center">
         <h3> 
-        <a href="our-nonprofits.php?strCategory-human-services=human-services-community-development" title="Show all Community Development related nonprofits">
+        <label class="volunteer-label" for="checkbox15"><input id="checkbox15" type="checkbox">
           <span class="sr-only">
           Show only
           </span>
-        Community Development</a> </h3>
-        <input id="checkbox16" type="checkbox"><label class="volunteer-label" for="checkbox16">Select</label>
+          Life Skills</label> </h3>
+        
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-3 subcat-grid-item human-services-cat">
+    <div class="thumb">
+      <img class="img-responsive" aria-hidden="true" src="resources/images/localImg.jpg" alt="">
+      <div class="cap cap-volunteer text-center">
+        <h3> 
+        <label class="volunteer-label" for="checkbox16"><input id="checkbox16" type="checkbox">
+          <span class="sr-only">
+          Show only
+          </span>
+        Community</label> </h3>
+        
       </div>
     </div>
   </div>
