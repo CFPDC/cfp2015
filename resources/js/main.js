@@ -728,6 +728,94 @@ var global = {
 
             $gridNarrowVolunteer.isotope({ filter: filterValue })
         });
+    },
+    /* 
+     *@description       Handles adding/removing parameters if filters are selected
+     *@param {object}    e
+     *returns parameters for URL and updates URL without refreshing the DOM
+     */
+    volunteerFilterUrlHandler: function(e) {
+        var search = location.search.substring(1);
+        var params = search.split('&');
+        var listTest = [];
+        var $gridNarrowVolunteer = $('.grid').isotope({
+            itemSelector: '.iso-item',
+            layoutMode: 'fitRows'
+        });
+
+        for (i = 0; i < params.length; i++) {
+            var param = params[i];
+            if (param.indexOf('loc=') >= 0) {
+                var loc = param.substring(4);
+                var locations = loc.split(',');
+                for (var l = 0; l < locations.length; l++) {
+                    console.log(locations[l]);
+                    listTest.push('.' + locations[l]);
+                    $('.vol-filter-input[data-filter=".' + locations[l] + '"]').prop('checked', true);
+                }
+            } else if (param.indexOf('time=') >= 0) {
+                var time = param.substring(5);
+                var times = time.split(',');
+                for (var t = 0; t < times.length; t++) {
+                    listTest.push('.' + times[t]);
+                    $('.vol-filter-input[data-filter=".' + times[t] + '"]').prop('checked', true);
+                }
+            } else if (param.indexOf('group=') >= 0) {
+                var group = param.substring(6);
+                var groups = group.split(',');
+                for (var g = 0; g < groups.length; g++) {
+                    listTest.push('.' + groups[g]);
+                    $('.vol-filter-input[data-filter=".' + groups[g] + '"]').prop('checked', true);
+                }
+            }
+        }
+
+        console.log(locations);
+        //check the checkboxes in the array of parameters
+        var filterValue = listTest.length ? listTest.join(', ') : '*';
+
+        $gridNarrowVolunteer.isotope({ filter: filterValue });
+
+
+
+        // if (e) {
+        //     var selectedParam = e.currentTarget.dataset.filter.slice(1, 10),
+        //         key = $(e.currentTarget).closest('ul').data('group');
+        // }
+        // var res = global.getUrlParameter("loc").split(",");
+        // if (selectedParam) {
+        //     var index = res.indexOf(selectedParam);
+        //     if (index >= 0) {
+        //         res.splice(index, 1);
+        //     } else {
+        //         res.push(selectedParam);
+        //     }
+        // }
+
+        /* var resLength = res.length;
+
+
+        
+
+        //update the url with the new parameters without reloading the page
+        if (e) {
+            url = 'http://localhost:81/volunteer-search.php?loc=DCA,DC1';
+            history.pushState(null, null, url);
+        }
+    */
+
+    },
+
+    getUrlParameter: function(paramKey) {
+        paramKey = paramKey.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regexS = "[\\?&]" + paramKey + "=([^&#]*)";
+        var regex = new RegExp(regexS);
+        var results = regex.exec(window.location.href);
+        if (results == null) {
+            return "";
+        } else {
+            return results[1];
+        }
     }
 };
 //namespace to keep form functions short
@@ -848,9 +936,11 @@ $(window).resize(_.debounce(function() {
 //Do custom Media query logic
 function performMediaQueries(state) {
     if (state == 'screen-sm-max' || state == 'screen-xs-max' || state == 'screen-xs-min') {
-        $('#asideFilter').addClass('collapse');
-        global.relatedCarousel();
+        if (pageName !== 'volunteer-search') {
 
+            $('#asideFilter').addClass('collapse');
+            global.relatedCarousel();
+        }
     } else {
         $('#asideFilter').removeClass('collapse');
         global.relatedCarousel();
@@ -1003,6 +1093,55 @@ $('.scrollup').on('click', function(e) {
     e.preventDefault();
 });
 
+$('.vol-filter-input').on('click', function(e) {
+    // global.volunteerFilterUrlHandler(e);
+    var url = location.href;
+    var paramList = url.split('?');
+    var params = paramList.length > 1 ? paramList[1].split('&') : [];
+    var notInHref = '';
+    var exists = false;
+
+    var selectedParam = e.currentTarget.dataset.filter.slice(1),
+        key = $(e.currentTarget).closest('ul').data('group'),
+        paramStr = '';
+
+    for (i = 0; i < params.length; i++) {
+        var param = params[i];
+        if (param.indexOf(key + '=') >= 0) {
+            var paramUpdated = param.substring(key + 1);
+            //append new parameter to string
+            if (paramUpdated.indexOf(selectedParam) === -1) {
+                params[i] = paramUpdated + ',' + selectedParam;
+            } else {
+                var commaExists = params[i].indexOf(',');
+                if (commaExists > -1) {
+                    //remove from list, remove comma if first or last character of string
+                    params[i] = params[i].replace(selectedParam, '');
+                    params[i] = params[i].replace(/,\s*$/, '').replace('=,', '=');
+                } else {
+                    params.splice(i, 1);
+                }
+            }
+            exists = true;
+        }
+    }
+    if (!exists) {
+        if (params.length === 0) {
+            notInHref += key + '=' + selectedParam;
+        } else {
+            notInHref += '&' + key + '=' + selectedParam;
+        }
+    }
+    //remove last '&' on string
+    paramStr = params.join('&');
+    paramStr = paramStr + notInHref;
+    var finalHref = paramStr? paramList[0] + '?' + paramStr: paramList[0];
+    //update url without reloading DOM
+    if (history.pushState) {
+        window.history.pushState({ path: finalHref }, '', finalHref);
+    }
+
+});
 
 //4. global functions 
 $(function() {
@@ -1145,6 +1284,7 @@ $(function() {
         case 'volunteer-search':
             global.setHeight();
             global.volunteerNarrowSearch();
+            global.volunteerFilterUrlHandler();
             break;
         default:
             break;

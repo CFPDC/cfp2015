@@ -292,6 +292,10 @@ a.email[href^="mailto"]:focus {
     padding-top: 30px;
 }
 
+.vol-filters{
+    display: block !important;
+}
+
 .vol-filters button {
     background: none;
     border: 1px solid #ddd;

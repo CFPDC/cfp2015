@@ -4,8 +4,8 @@ include('includes/functions.php');
 <?php get_template('header', 'Title of homepage'); ?>
 <div class="container-fluid volunteer-search">
 	<div class="row">
-		<h1 class="col-xs-12 col-sm-7 text-right volunteer-search-h1">Volunteer</h1>
-		<div class="col-xs-12 col-sm-5 hidden-xs sort-display-menu-container">
+		<h1 class="col-xs-12 col-sm-9 col-sm-offset-1 text-center volunteer-search-h1">Volunteer</h1>
+		<div class="col-xs-12 col-sm-2 hidden-xs sort-display-menu-container">
 			<div class="pull-right sort-display-menu">
 				<div class="display-group pull-left">
 					<label id="viewLabel">Display As:</label>
@@ -32,7 +32,7 @@ include('includes/functions.php');
 </div>
 <main role="main" class="container-fluid secondary volunteer-search-main">
 <div class="row">
-	<aside class="col-xs-12 col-sm-3" id="asideFilter">
+	<aside class="col-sm-3" id="asideFilter">
 		<div class="well vol-filters">
 			<h3 class="all-caps narrow-search">Narrow Your Choices</h3>
 			<label class="volunteer-search-label" for="location">Where:</label>
@@ -42,10 +42,34 @@ include('includes/functions.php');
 			    <span class="caret" aria-hidden="true"></span>
 			  </button>
 			  <div class="dropdown-menu" id="vol-loc-list" aria-labelledby="vol-location">
-			    <ul class="list-unstyled">
-			    <li><label><input type="checkbox" data-filter=".DC">Washington D.C.</label></li>
-			    <li><label><input type="checkbox" data-filter=".VA">Virginia</label></li>
-			    <li><label><input type="checkbox" data-filter=".MD">Maryland</label></li>
+			    <ul class="list-unstyled" data-group="loc">
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".DCA">DC-CityWide</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".DC1">DC-1</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".DC2">DC-2</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".DC3">DC-3</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".DC4">DC-4</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".DC5">DC-5</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".DC6">DC-6</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".DC7">DC-7</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".DC8">DC-8</label></li>
+			    
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".MDA">MD-StateWide</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".MDF">MD-Frederick County</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".MDH">MD-Howard County</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".MDM">MD-Montgomery County</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".MDP">MD-Prince George's County</label></li>
+
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".VAA">VA-Statewide</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".VAAC">VA-Arlington County</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".VAFC">VA-Fairfax County</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".VALC">VA-Loudon County</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".VAPC">VA-Prince William County</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".VACA">VA-City of Alexandria</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".VACF">VA-City of Fairfax</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".VACFC">VA-City of Falls Church</label></li>
+
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".IN">Internationally</label></li>
+			    
 			  </ul>
 			  </div>
 			</div>
@@ -56,11 +80,11 @@ include('includes/functions.php');
 			    <span class="caret" aria-hidden="true"></span>
 			  </button>
 			  <div class="dropdown-menu" id="vol-time-list" aria-labelledby="vol-time">
-			    <ul class="list-unstyled">
-			    <li><label><input type="checkbox" data-filter=".solo">Weekday Day</label></li>
-			    <li><label><input type="checkbox" data-filter=".solo">Weekday Evening</label></li>
-			    <li><label><input type="checkbox" data-filter=".solo">Weekend Day</label></li>
-			    <li><label><input type="checkbox" data-filter=".solo">Weekend Evening</label></li>
+			    <ul class="list-unstyled" data-group="time">
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".WDD">Weekday Day</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".WDE">Weekday Evening</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".WKDD">Weekend Day</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".WKDE">Weekend Evening</label></li>
 			  </ul>
 			  </div>
 			</div>
@@ -71,10 +95,10 @@ include('includes/functions.php');
 			    <span class="caret" aria-hidden="true"></span>
 			  </button>
 			  <div class="dropdown-menu" id="vol-group-list" aria-labelledby="vol-group"> 
-			  <ul class="list-unstyled">
-			    <li><label><input type="checkbox" data-filter=".solo">Myself</label></li>
-			    <li><label><input type="checkbox" data-filter=".group">My Group or Team</label></li>
-			    <li><label><input type="checkbox" data-filter=".family">My family (with Children)</label></li>
+			  <ul class="list-unstyled" data-group="group">
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".solo">Myself</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".group">My Group or Team</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".family">My family (with Children)</label></li>
 			  </ul>
 			  </div>
 			</div> 
@@ -86,7 +110,7 @@ include('includes/functions.php');
 		<span>Youth Education &amp; Enrichment <button class="fa fa-times-circle close remove-opt"><span class="sr-only">Remove Youth Education &amp; Enrichment</span></button></span></p>
 		<h2 class="volunteer-search-h2">Environment &amp; Animal Services</h2>
 		<div class="row grid">
-			<div class="col-xs-12 vol-listing iso-item VA solo eleven" data-time="11" data-region="VA" data-who="solo" data-category="Nature">
+			<div class="col-xs-12 vol-listing iso-item VAA solo WDD">
 				<div class="thumbnail">
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
 					<div class="caption">
@@ -100,7 +124,7 @@ include('includes/functions.php');
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 vol-listing iso-item two MD group" data-time="2" data-region="MD" data-who="group" data-category="nature">
+			<div class="col-xs-12 vol-listing iso-item MDP group WDE">
 				<div class="thumbnail">
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/1381.jpg">
 					<div class="caption">
@@ -114,7 +138,7 @@ include('includes/functions.php');
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 vol-listing iso-item two DC solo" data-time="2" data-region="DC" data-who="solo" data-category="nature">
+			<div class="col-xs-12 vol-listing iso-item DCA solo WDD">
 				<div class="thumbnail">
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/225.jpg">
 					<div class="caption">
@@ -128,7 +152,7 @@ include('includes/functions.php');
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 vol-listing iso-item eleven MD family" data-time="11" data-region="MD" data-who="family" data-category="nature">
+			<div class="col-xs-12 vol-listing iso-item MDA family WDE">
 				<div class="thumbnail">
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/94.jpg">
 					<div class="caption">
@@ -142,7 +166,7 @@ include('includes/functions.php');
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 vol-listing iso-item one MD solo" data-time="1" data-region="MD" data-who="solo" data-category="nature">
+			<div class="col-xs-12 vol-listing iso-item MDH solo WKDD">
 				<div class="thumbnail">
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/527.jpg">
 					<div class="caption">
@@ -156,7 +180,7 @@ include('includes/functions.php');
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 vol-listing iso-item  eleven MD group" data-time="11" data-region="MD" data-who="group" data-category="nature">
+			<div class="col-xs-12 vol-listing iso-item MDF group WKDE">
 				<div class="thumbnail">
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/95.jpg">
 					<div class="caption">
@@ -173,7 +197,7 @@ include('includes/functions.php');
 		</div>
 		<h2 class="volunteer-search-h2">Youth Education &amp; Enrichment</h2>
 		<div class="row grid">
-			<div class="col-xs-12 vol-listing iso-item two DC group" data-time="2" data-region="DC" data-who="group" data-category="education">
+			<div class="col-xs-12 vol-listing iso-item DC1 group WDD">
 				<div class="thumbnail">
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/975.jpg">
 					<div class="caption">
@@ -187,7 +211,7 @@ include('includes/functions.php');
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 vol-listing iso-item four DC solo" data-time="4" data-region="DC" data-who="solo" data-category="education">
+			<div class="col-xs-12 vol-listing iso-item DC2 solo WKE">
 				<div class="thumbnail">
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/992.jpg">
 					<div class="caption">
@@ -201,7 +225,7 @@ include('includes/functions.php');
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 vol-listing iso-item one DC family" data-time="1" data-region="DC" data-who="family" data-category="education">
+			<div class="col-xs-12 vol-listing iso-item DC3 family WKDD">
 				<div class="thumbnail">
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/1193.jpg">
 					<div class="caption">
@@ -214,7 +238,7 @@ include('includes/functions.php');
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 vol-listing iso-item four DC family" data-time="4" data-region="DC" data-who="family" data-category="education">
+			<div class="col-xs-12 vol-listing iso-item DCA family WKDE">
 				<div class="thumbnail">
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/555.jpg">
 					<div class="caption">
