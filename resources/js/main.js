@@ -1,16 +1,16 @@
 /*** loading order --- you can search these list items to find each section
-1. IE8 modernizr test
-2. global variables
-2. global namespace function
-3. 'click' events
-4. global functions 
-5. page specific functions
-6. form functions
-***/
+ 1. IE8 modernizr test
+ 2. global variables
+ 2. global namespace function
+ 3. 'click' events
+ 4. global functions 
+ 5. page specific functions
+ 6. form functions
+ ***/
 
 //temporary for dev purposes
 //This applies the class 'need-page' to any link which has the host below in the if statment
-$('a').each(function() {
+$('a').each(function () {
     var host = this.hostname;
     if (host === 'cfp-dc.org' || host === 'catalogueforphilanthropy-dc.org') {
         $(this).addClass('need-page');
@@ -27,29 +27,29 @@ Modernizr.load({
 //2. global variables
 /*** global variables ***/
 var $root = $('html, body'),
-    liveTextRegion = $('#liveText-polite').find('p'),
-    navTrigger = $('.navbar-toggle'),
-    mobileMenu = $('.mobile-nav'),
-    bodyElement = document.body,
-    pageName = bodyElement.getAttribute("data-page-id");
+        liveTextRegion = $('#liveText-polite').find('p'),
+        navTrigger = $('.navbar-toggle'),
+        mobileMenu = $('.mobile-nav'),
+        bodyElement = document.body,
+        pageName = bodyElement.getAttribute("data-page-id");
 
 
 var global = {
-    addNonprofitNameToButton: function() {
+    addNonprofitNameToButton: function () {
         var nonprofitListing = $('.nonprofit-listing'),
-            nonprofitName = $('.nonprofit-listing h2');
-        nonprofitListing.each(function(index) {
+                nonprofitName = $('.nonprofit-listing h2');
+        nonprofitListing.each(function (index) {
             var nonprofit = $(this),
-                nonprofitTitleRaw = nonprofit.find('.name').contents().filter(
-                    function() {
+                    nonprofitTitleRaw = nonprofit.find('.name').contents().filter(
+                    function () {
                         return this.nodeType == 3;
                     }),
-                nonprofitChildRemove = nonprofitTitleRaw.text(),
-                nonprofitTitle = $.trim(nonprofitChildRemove).split(' ').join('_'),
-                learnMoreButton = nonprofit.find('.learn-more'),
-                learnMoreButtonLink = learnMoreButton.attr('href'),
-                donateButton = nonprofit.find('.donate-nonprofit'),
-                donateButtonLink = donateButton.attr('href');
+                    nonprofitChildRemove = nonprofitTitleRaw.text(),
+                    nonprofitTitle = $.trim(nonprofitChildRemove).split(' ').join('_'),
+                    learnMoreButton = nonprofit.find('.learn-more'),
+                    learnMoreButtonLink = learnMoreButton.attr('href'),
+                    donateButton = nonprofit.find('.donate-nonprofit'),
+                    donateButtonLink = donateButton.attr('href');
 
             //appand sr only info for each button and add parameter for 'donateButtonPrefill' function
             learnMoreButton.append('<span/>').children('span').addClass('sr-only').text(' about ' + nonprofitChildRemove);
@@ -68,10 +68,10 @@ var global = {
 
         });
     },
-    carouselPlayPause: function() {
+    carouselPlayPause: function () {
         var button = $(this).attr('id');
     },
-    calendar: function() {
+    calendar: function () {
         if ($('.fc').length) {
             $('#calendar').fullCalendar({
                 header: {
@@ -86,73 +86,98 @@ var global = {
                 //events: '/myfeed.php', // uncomment this and replace with calendar feed
                 //remove this calendar array as it is for example only
                 events: [{
-                    title: 'All Day Event',
-                    start: '2015-02-01'
-                }, {
-                    title: 'Long Event',
-                    start: '2015-09-07',
-                    end: '2015-09-10'
-                }, {
-                    id: 999,
-                    title: 'Repeating Event',
-                    start: '2015-09-09T16:00:00',
-                }, {
-                    id: 999,
-                    title: 'Repeating Event',
-                    start: '2015-09-16T16:00:00'
-                }, {
-                    title: 'Conference',
-                    start: '2015-09-11',
-                    end: '2015-09-13'
-                }, {
-                    title: 'Meeting',
-                    start: '2015-09-12T10:30:00',
-                    end: '2015-09-12T12:30:00'
-                }, {
-                    title: 'Lunch',
-                    start: '2015-09-12T12:00:00'
-                }, {
-                    title: 'Meeting',
-                    start: '2015-09-12T14:30:00'
-                }, {
-                    title: 'Happy Hour',
-                    start: '2015-09-12T17:30:00'
-                }, {
-                    title: 'Dinner',
-                    start: '2015-09-12T20:00:00'
-                }, {
-                    title: 'Birthday Party',
-                    start: '2015-09-13T07:00:00'
-                }, {
-                    title: 'Click for Google',
-                    url: 'http://google.com/',
-                    start: '2015-09-28'
-                }],
+                        title: 'All Day Event',
+                        start: '2015-02-01'
+                    }, {
+                        title: 'Long Event',
+                        start: '2015-09-07',
+                        end: '2015-09-10'
+                    }, {
+                        id: 999,
+                        title: 'Repeating Event',
+                        start: '2015-09-09T16:00:00',
+                    }, {
+                        id: 999,
+                        title: 'Repeating Event',
+                        start: '2015-09-16T16:00:00'
+                    }, {
+                        title: 'Conference',
+                        start: '2015-09-11',
+                        end: '2015-09-13'
+                    }, {
+                        title: 'Meeting',
+                        start: '2015-09-12T10:30:00',
+                        end: '2015-09-12T12:30:00'
+                    }, {
+                        title: 'Lunch',
+                        start: '2015-09-12T12:00:00'
+                    }, {
+                        title: 'Meeting',
+                        start: '2015-09-12T14:30:00'
+                    }, {
+                        title: 'Happy Hour',
+                        start: '2015-09-12T17:30:00'
+                    }, {
+                        title: 'Dinner',
+                        start: '2015-09-12T20:00:00'
+                    }, {
+                        title: 'Birthday Party',
+                        start: '2015-09-13T07:00:00'
+                    }, {
+                        title: 'Click for Google',
+                        url: 'http://google.com/',
+                        start: '2015-09-28'
+                    }],
                 eventColor: '#487896'
             });
             $('.fc-prev-button').prepend('<span class="sr-only">Select to for previous calendar</span>');
             $('.fc-next-button').prepend('<span class="sr-only">Select to for next calendar</span>');
         }
     },
-    currentPageLink: function(e) {
+    //concatenates values for volunteer search page filtering
+    concatValues: function (allObjects) {
+        var concatedValues = allObjects[0];
+        
+        function groupCreator(a,b){
+            var tempObject = [];
+             for (var j = 0; j < b.length; j++) {
+                for (var k = 0; k < a.length; k++) {
+                    tempObject.push(a[k] + '.' + b[j]);
+                }
+            }
+            return tempObject;
+        }
+        
+        for (var i = 0; i < concatedValues.length; i++) {
+            concatedValues[i] = '.'+ concatedValues[i];
+        }
+        
+        for (var i = 1; i < allObjects.length; i++) {
+            concatedValues = groupCreator(concatedValues, allObjects[i]);
+        }
+        
+        concatedValues = concatedValues.join();
+        return concatedValues;
+    },
+    currentPageLink: function (e) {
         if ($('a.current').length) {
             var $this = $('a.current'),
-                currentPage = '<span class="sr-only">Currently viewing: </span>';
+                    currentPage = '<span class="sr-only">Currently viewing: </span>';
             $this.prepend(currentPage);
             //send current page to sr live text region to announce to screen reader if current page exists
             $('#liveText-polite').find('p').html($this.text());
-            setTimeout(function() {
+            setTimeout(function () {
                 $('#liveText-polite').find('p').html('');
             }, 3000);
 
         }
     },
-    donateButtonPrefill: function() {
+    donateButtonPrefill: function () {
         //replace checkout page org name to the name of the org which the user clicks on by the substring '?np_title=, if none exists, then do nothing
         function getParameterByName(name) {
             name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
             var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-                results = regex.exec(location.search);
+                    results = regex.exec(location.search);
             return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
         }
 
@@ -168,17 +193,17 @@ var global = {
             return (false);
         }
         var substringTitle = 'np_title',
-            prodId = getParameterByName(substringTitle),
-            prodIdInput = $.trim(getParameterByName(substringTitle)).split('_').join(' '),
-            orgInput = $('#org-name'),
-            orgInputValue = orgInput.val(),
-            orgLabel = $("label[for='" + orgInput + "']"),
-            substringAmount = getQueryVariable('np_amount'),
-            amountId = substringAmount,
-            amountIdInput = substringAmount,
-            amountInput = $('#amount'),
-            amountInputValue = amountId,
-            amountLabel = $("label[for='" + amountInput + "']");
+                prodId = getParameterByName(substringTitle),
+                prodIdInput = $.trim(getParameterByName(substringTitle)).split('_').join(' '),
+                orgInput = $('#org-name'),
+                orgInputValue = orgInput.val(),
+                orgLabel = $("label[for='" + orgInput + "']"),
+                substringAmount = getQueryVariable('np_amount'),
+                amountId = substringAmount,
+                amountIdInput = substringAmount,
+                amountInput = $('#amount'),
+                amountInputValue = amountId,
+                amountLabel = $("label[for='" + amountInput + "']");
         if (window.location.search.indexOf(substringTitle) > -1) {
 
             if ($(orgInput)[0]) {
@@ -215,24 +240,24 @@ var global = {
 
         }
     },
-    faqSetup: function() {
+    faqSetup: function () {
         if ($('#faq-list a[data-target]')) {
             var list = $('#faq-list');
 
             if (list.length > 0) {
-                list.find('a[data-target]').each(function() {
+                list.find('a[data-target]').each(function () {
                     var $this = $(this),
-                        question = $this.attr('data-target').replace("#", ""),
-                        questionText = $(this).text(),
-                        backTopTarget = '#' + question + '-question',
-                        targetId = $this.attr('data-target'),
-                        targetParent = $(targetId).parent(),
-                        backTopLink = targetParent.next(),
-                        backTopSrText = '<span class="sr-only"> - Returns to ' + questionText + ' in list of F A Q questions</span>',
-                        titleText = questionText.replace("?", ""),
-                        backTopTitle = 'Go back to ' + titleText + ' in the list of questions',
-                        backTopAfterEl = '<span class="back-top-border" aria-hidden="true"></span>',
-                        lsatBackTopEl;
+                            question = $this.attr('data-target').replace("#", ""),
+                            questionText = $(this).text(),
+                            backTopTarget = '#' + question + '-question',
+                            targetId = $this.attr('data-target'),
+                            targetParent = $(targetId).parent(),
+                            backTopLink = targetParent.next(),
+                            backTopSrText = '<span class="sr-only"> - Returns to ' + questionText + ' in list of F A Q questions</span>',
+                            titleText = questionText.replace("?", ""),
+                            backTopTitle = 'Go back to ' + titleText + ' in the list of questions',
+                            backTopAfterEl = '<span class="back-top-border" aria-hidden="true"></span>',
+                            lsatBackTopEl;
 
                     //take each data-target in list of questions and make id for linking for back to top links
                     $this.attr('id', question + '-question');
@@ -251,18 +276,18 @@ var global = {
             }
         }
     },
-    filterExpandPageLoad: function() {
+    filterExpandPageLoad: function () {
         var categoryToggle = $('.category-toggle');
-        categoryToggle.each(function() {
+        categoryToggle.each(function () {
             var toggle = $(this),
-                expandContainer = toggle.next(),
-                list = expandContainer.children('ul'),
-                id = expandContainer.attr('id'),
-                inputChecked = '.filter-parameter:checked';
+                    expandContainer = toggle.next(),
+                    list = expandContainer.children('ul'),
+                    id = expandContainer.attr('id'),
+                    inputChecked = '.filter-parameter:checked';
             if (list.find(inputChecked).length) {
                 toggle.click();
             } else if (id == 'areasServed') {
-                $('#' + id).find('.collaspingSection').each(function() {
+                $('#' + id).find('.collaspingSection').each(function () {
                     if ($(this).find(inputChecked).length) {
                         toggle.click();
                         $(this).find('.state-collapse').click();
@@ -272,17 +297,17 @@ var global = {
             }
         })
     },
-    globalImageCheck: function(img) {
+    globalImageCheck: function (img) {
         //call this in another function by naming variable. See homeImageCheck() for reference
-        setTimeout(function() {
-            img.each(function() {
+        setTimeout(function () {
+            img.each(function () {
                 if (this.naturalWidth === 0 || this.naturalHeight === 0 || this.complete === false) {
                     $(this).attr('src', '../resources/images/clear.gif');
                 }
             });
         }, 500);
     },
-    homeGridSetup: function() {
+    homeGridSetup: function () {
         //isotope must load after images are loaded or the height of the element will be wrong
         var $gridHome = $('.subcategories').isotope({
             itemSelector: '.subcat-grid-item',
@@ -290,19 +315,19 @@ var global = {
             sortBy: 'random'
         });
     },
-    homeImageCheck: function() {
+    homeImageCheck: function () {
         var img = $('.subcategories .img-responsive');
         this.globalImageCheck(img);
     },
-    homeSearchActiveToggle: function() {
+    homeSearchActiveToggle: function () {
         var $gridHome = $('.subcategories').isotope({
             itemSelector: '.subcat-grid-item',
             layoutMode: 'fitRows',
             sortBy: 'random'
         });
-        $('.home-search').on('click', 'button', function() {
+        $('.home-search').on('click', 'button', function () {
             var activeEl = $(this),
-                liveText = 'Showing all categories';
+                    liveText = 'Showing all categories';
             $('.home-search button.active').not(this).removeClass('active');
             if ($(this).is('.nature-btn')) {
                 $gridHome.isotope({
@@ -343,15 +368,14 @@ var global = {
                 });
             }
             $('#liveText-polite').find('p').html(liveText);
-            setTimeout(function() {
+            setTimeout(function () {
                 $('#liveText-polite').find('p').html('');
             }, 3000);
         });
     },
-    jumplink: function() {
-        $('.jumplink').on('click', function() {
+    jumplink: function () {
+        $('.jumplink').on('click', function () {
             var target = $(this).attr('data-target');
-            console.log(target);
             $(target).attr('tabindex', '0');
             $root.animate({
                 scrollTop: $(target).offset().top
@@ -359,7 +383,7 @@ var global = {
             $(target).focus();
         });
     },
-    navTriggerToggle: function(e) {
+    navTriggerToggle: function (e) {
         var srText = $('#expandText');
         mobileMenu.attr({
             'aria-expanded': 'false'
@@ -367,7 +391,7 @@ var global = {
         srText.text('Expand navigation');
 
         //toggle aria attributes for mobile screens
-        navTrigger.on('click', function() {
+        navTrigger.on('click', function () {
             if (mobileMenu.is(':hidden')) {
                 srText.text('Collapse navigation');
                 mobileMenu.attr({
@@ -381,7 +405,7 @@ var global = {
             }
         });
         //if mobile menu is open and user clicks on body close menu update hidden text
-        $('body').on('click', function(e) {
+        $('body').on('click', function (e) {
             if ($('.mobile-nav').hasClass('in')) {
                 if (mobileMenu.is(':hidden')) {
                     srText.text('Collapse navigation');
@@ -398,38 +422,38 @@ var global = {
             }
         });
     },
-    mobileNavTrigger: function() {
+    mobileNavTrigger: function () {
         var mobileNav = $('.mobile-nav').find('a:first'),
-            liveText = 'The mobile menu has opened';
+                liveText = 'The mobile menu has opened';
         $('#liveText-polite').find('p').html(liveText);
-        setTimeout(function() {
+        setTimeout(function () {
             $('#liveText-polite').find('p').html('');
         }, 3000);
-        setTimeout(function() {
+        setTimeout(function () {
             mobileNav.focus();
         }, 50);
     },
-    mobileNavClose: function(e) {
+    mobileNavClose: function (e) {
         var liveText = 'The mobile menu has closed';
 
         if ($('.mobile-nav').hasClass('in') && e.keyCode === 9) {
             mobileMenu.offcanvas('hide');
             $('#liveText-polite').find('p').html(liveText);
-            setTimeout(function() {
+            setTimeout(function () {
                 $('#liveText-polite').find('p').html('');
             }, 3000);
-            setTimeout(function() {
+            setTimeout(function () {
                 navTrigger.focus();
             }, 50);
 
         }
     },
-    navMenu: function() {
+    navMenu: function () {
         //add empty sub nav div for alignment purposes. This is needed if there is no dropdown.
         $('.nav-item.last').append('<div class="sub-nav hidden"></div>');
         $(".nav-primary-nav").accessibleMegaMenu({
             /* prefix for generated unique id attributes, which are required 
-               to indicate aria-owns, aria-controls and aria-labelledby */
+             to indicate aria-owns, aria-controls and aria-labelledby */
             uuidPrefix: "accessible-megamenu",
 
             /* css class used to define the megamenu styling */
@@ -454,16 +478,16 @@ var global = {
             openClass: "open"
         });
     },
-    parameterUpdate: function() {
+    parameterUpdate: function () {
         //checks parameters in url on page load and applies checked items or select all button to be toggled
         var urlList = window.location.href.split("?");
         if (urlList.length > 1 && urlList[1] != null) {
-            $.each(urlList[1].split("&"), function(i, item) {
+            $.each(urlList[1].split("&"), function (i, item) {
                 if (item) {
                     $('input[data-paramvalue="' + item.split("=")[1] + '"]').prop('checked', true)
                 }
             });
-            $.each($('div.selections'), function() {
+            $.each($('div.selections'), function () {
                 if ($(this).find("input:checked").length == $(this).find("input").length)
                     $(this).find(".select-all").text("Unselect All").attr('data-type', 'checked');
                 else
@@ -471,24 +495,24 @@ var global = {
             })
         }
     },
-    pressReleaseLink508: function() {
+    pressReleaseLink508: function () {
         if ($('a').closest('.url_press_release').length > 0) {
-            $('.url_press_release').find('a[target="_blank"]').each(function() {
+            $('.url_press_release').find('a[target="_blank"]').each(function () {
                 var $this = $(this),
-                    parent = $this.parent('.url_press_release'),
-                    parentLink = parent.prev('.press-release').children('a:first'),
-                    textToAdd = parentLink.text(),
-                    srAppendText = '<span class="sr-only"> to learn more about ' + textToAdd + '</span>';
+                        parent = $this.parent('.url_press_release'),
+                        parentLink = parent.prev('.press-release').children('a:first'),
+                        textToAdd = parentLink.text(),
+                        srAppendText = '<span class="sr-only"> to learn more about ' + textToAdd + '</span>';
                 $this.append(srAppendText);
             });
         }
     },
-    relatedCarousel: function() {
+    relatedCarousel: function () {
         if ($(".carousel[data-class]").length) {
 
             //nonprofit details page carousel
             var carouselWidth = $('#carouselwrapper').width(),
-                carouselItem = $('#related-carousel li');
+                    carouselItem = $('#related-carousel li');
 
             A11y.carousel();
             //dont make carousel unless page is specific width
@@ -509,8 +533,8 @@ var global = {
             }
         }
     },
-    scrollToTop: function() {
-        $(window).scroll(function() {
+    scrollToTop: function () {
+        $(window).scroll(function () {
             if ($(this).scrollTop() > 250) {
                 $('.scrollup').fadeIn(300);
             } else {
@@ -518,7 +542,7 @@ var global = {
             }
         });
     },
-    searchGridSetup: function() {
+    searchGridSetup: function () {
         //isotope must load after images are loaded or the height of the element will be wrong
         var $gridNp = $('.grid.nonprofits').isotope({
             itemSelector: '.iso-item',
@@ -532,26 +556,26 @@ var global = {
             sortBy: 'random'
         });
     },
-    searchPageActiveToggle: function() {
+    searchPageActiveToggle: function () {
         //results page change toggle view active class
-        $('.display-group').on('click', 'button', function() {
+        $('.display-group').on('click', 'button', function () {
             var activeEl = this,
-                liveText = $(this).attr('data-original-title');
+                    liveText = $(this).attr('data-original-title');
             $('.display-group button.active').not(this).removeClass('active');
             $(this).addClass('active');
 
             $('#liveText-polite').find('p').html(liveText);
-            setTimeout(function() {
+            setTimeout(function () {
                 $('#liveText-polite').find('p').html('');
             }, 3000);
         });
     },
-    setGetParameter: function(paramName, paramValue, dataType) {
+    setGetParameter: function (paramName, paramValue, dataType) {
         var url = window.location.href.split("?")[0] + "?",
-            queryStr = window.location.href.split("?")[1];
+                queryStr = window.location.href.split("?")[1];
         if (queryStr) {
             if (queryStr.indexOf(paramValue) > -1) {
-                var arr = jQuery.grep(queryStr.split("&"), function(value) {
+                var arr = jQuery.grep(queryStr.split("&"), function (value) {
                     return !(value.indexOf(paramValue) > -1);
                 });
                 window.location.href = url + arr.join("&");
@@ -563,33 +587,33 @@ var global = {
             window.location.href = url + paramName + "=" + paramValue;
         }
     },
-    setHeight: function() {
+    setHeight: function () {
         var maxHeight = -1,
-            container = ($('main').is('.search-results')) ? $('.search-results .caption') : $('.volunteer-search-main .caption');
+                container = ($('main').is('.search-results')) ? $('.search-results .caption') : $('.volunteer-search-main .caption');
         container.css('height', '');
-        container.each(function() {
+        container.each(function () {
             maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
         });
         if (!$('html').hasClass('lt-ie9')) {
-            container.each(function() {
+            container.each(function () {
                 $(this).height(maxHeight + 40);
             });
         } else {
-            container.each(function() {
+            container.each(function () {
                 $(this).height(maxHeight + 80);
             });
         }
     },
 
-    skipNav: function() {
+    skipNav: function () {
         //skip nav prevent hashtag in url
-        $('.skip-navigation-link').each(function() {
+        $('.skip-navigation-link').each(function () {
             var focusedElement = $(this).attr('data-target').replace("#", ""),
-                newFocusElement = $('header').next(),
-                focusAnchor = '<a href="javascript:void(0)" class="sr-only" id="' + focusedElement + '"></a>';
+                    newFocusElement = $('header').next(),
+                    focusAnchor = '<a href="javascript:void(0)" class="sr-only" id="' + focusedElement + '"></a>';
             $(focusAnchor).insertBefore(newFocusElement).attr('tabindex', '-1');
             //set a tabindex of -1 to make the element focusable for the skip nav but is not focusable for tabbing on page, this is only needed if the target is not a normally focusable element like a div container.
-        }).on('click', function(event) {
+        }).on('click', function (event) {
             var focusedElement = $(this).attr('data-target');
 
             //prevent the hash and element id to show in url
@@ -599,7 +623,7 @@ var global = {
             $(focusedElement).focus();
         });
     },
-    valid: function() { //all form validation must be in .ready
+    valid: function () { //all form validation must be in .ready
         $.validator.setDefaults({
             debug: true,
             errorElement: "strong",
@@ -608,39 +632,39 @@ var global = {
         });
         var submitted = false;
         //only accepts US phone numbers
-        $.validator.addMethod('phoneUS', function(phone_number, element) {
+        $.validator.addMethod('phoneUS', function (phone_number, element) {
             phone_number = phone_number.replace(/\s+/g, "");
             return this.optional(element) || phone_number.length == 12 && phone_number.match(/\d{10}|(([\(]?([0-9]{3})[\)]?)?[ \.\-]?([0-9]{3})[ \.\-]([0-9]{4}))$/);
         }, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Please specify a valid phone number');
 
         //allows you to specify a zip code range to accept
-        $.validator.addMethod("ziprange", function(value, element) {
+        $.validator.addMethod("ziprange", function (value, element) {
             return this.optional(element) || (/^2[0101-4658]/).test(value);
         }, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Please enter a Virginia Zip Code');
 
-        $.validator.addMethod("lettersonly", function(value, element) {
+        $.validator.addMethod("lettersonly", function (value, element) {
             return this.optional(element) || (/^[a-z]+$/i).test(value);
         }, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Letters only please');
 
-        $.validator.addMethod("letterswithbasicpunc", function(value, element) {
+        $.validator.addMethod("letterswithbasicpunc", function (value, element) {
             return this.optional(element) || (/^[a-z\-.,()'"\s]+$/i).test(value);
         }, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Letters or punctuation only please');
 
-        $.validator.addMethod('require-one', function(value, element) {
+        $.validator.addMethod('require-one', function (value, element) {
             return $('.require-one:checked').size() > 0;
         }, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please check at least one box.');
     },
 
     //added for volunteer page
-    volunteerSearchActiveToggle: function() {
+    volunteerSearchActiveToggle: function () {
         var $gridVolunteer = $('.volunteer-subcategories').isotope({
             itemSelector: '.subcat-grid-item',
             layoutMode: 'fitRows',
             sortBy: 'random'
         });
-        $('.volunteer-search').on('click', 'button', function() {
+        $('.volunteer-search').on('click', 'button', function () {
             var activeEl = $(this),
-                liveText = 'Showing all categories';
+                    liveText = 'Showing all categories';
             $('.volunteer-search button.active').not(this).removeClass('active');
             if ($(this).is('.nature-btn')) {
                 $gridVolunteer.isotope({
@@ -689,44 +713,44 @@ var global = {
                 });
             }
             $('#liveText-polite').find('p').html(liveText);
-            setTimeout(function() {
+            setTimeout(function () {
                 $('#liveText-polite').find('p').html('');
             }, 3000);
         });
     },
     //added for volunteer page
-    volunteerImageCheck: function() {
+    volunteerImageCheck: function () {
         var img = $('.volunteer-subcategories .img-responsive');
         this.globalImageCheck(img);
     },
-    multiSelectSearch: function() {
+    multiSelectSearch: function () {
         var myCombo2, myCombo3, myCombo4;
         myCombo2 = dhtmlXComboFromSelect("location");
         myCombo3 = dhtmlXComboFromSelect("time");
         myCombo4 = dhtmlXComboFromSelect("volunteers");
     },
-    volunteerNarrowSearch: function() {
+    volunteerNarrowSearch: function () {
         var $gridNarrowVolunteer = $('.grid').isotope({
             itemSelector: '.iso-item',
             layoutMode: 'fitRows'
         });
 
         var $checkboxes = $('.vol-filters input');
-        $checkboxes.on('change', function() {
+        $checkboxes.on('change', function () {
             // map input values to an array
             var inclusives = [];
             // inclusive filters from checkboxes
-            $checkboxes.each(function(i, elem) {
+            $checkboxes.each(function (i, elem) {
                 // if checkbox, use value if checked
                 if (elem.checked) {
                     inclusives.push(elem.dataset.filter);
                 }
             });
 
-            // combine inclusive filters
-            var filterValue = inclusives.length ? inclusives.join(', ') : '*';
+            //check the checkboxes in the array of parameters
+            var filterValue = inclusives.length ? global.concatValues(inclusives) : '*';
+            $gridNarrowVolunteer.isotope({filter: filterValue});
 
-            $gridNarrowVolunteer.isotope({ filter: filterValue })
         });
     },
     /* 
@@ -734,47 +758,49 @@ var global = {
      *@param {object}    e
      *returns parameters for URL and updates URL without refreshing the DOM
      */
-    volunteerFilterUrlHandler: function(e) {
+    volunteerFilterUrlHandler: function () {
         var search = location.search.substring(1);
         var params = search.split('&');
-        var listTest = [];
+        var inclusives = [];
         var $gridNarrowVolunteer = $('.grid').isotope({
             itemSelector: '.iso-item',
             layoutMode: 'fitRows'
         });
-
+        inclusives = [];
         for (i = 0; i < params.length; i++) {
             var param = params[i];
             if (param.indexOf('loc=') >= 0) {
                 var loc = param.substring(4);
                 var locations = loc.split(',');
+                inclusives.push(locations);
+        
                 for (var l = 0; l < locations.length; l++) {
-                    console.log(locations[l]);
-                    listTest.push('.' + locations[l]);
                     $('.vol-filter-input[data-filter=".' + locations[l] + '"]').prop('checked', true);
                 }
             } else if (param.indexOf('time=') >= 0) {
                 var time = param.substring(5);
                 var times = time.split(',');
+                inclusives.push(times);
+
                 for (var t = 0; t < times.length; t++) {
-                    listTest.push('.' + times[t]);
                     $('.vol-filter-input[data-filter=".' + times[t] + '"]').prop('checked', true);
                 }
             } else if (param.indexOf('group=') >= 0) {
                 var group = param.substring(6);
                 var groups = group.split(',');
+                inclusives.push(groups);
+
                 for (var g = 0; g < groups.length; g++) {
-                    listTest.push('.' + groups[g]);
                     $('.vol-filter-input[data-filter=".' + groups[g] + '"]').prop('checked', true);
                 }
             }
         }
 
-        console.log(locations);
-        //check the checkboxes in the array of parameters
-        var filterValue = listTest.length ? listTest.join(', ') : '*';
 
-        $gridNarrowVolunteer.isotope({ filter: filterValue });
+
+        //check the checkboxes in the array of parameters
+        var filterValue = inclusives.length > 0 ? global.concatValues(inclusives) : '*';
+        $gridNarrowVolunteer.isotope({filter: filterValue});
 
 
 
@@ -793,20 +819,20 @@ var global = {
         // }
 
         /* var resLength = res.length;
-
-
-        
-
-        //update the url with the new parameters without reloading the page
-        if (e) {
-            url = 'http://localhost:81/volunteer-search.php?loc=DCA,DC1';
-            history.pushState(null, null, url);
-        }
-    */
+         
+         
+         
+         
+         //update the url with the new parameters without reloading the page
+         if (e) {
+         url = 'http://localhost:81/volunteer-search.php?loc=DCA,DC1';
+         history.pushState(null, null, url);
+         }
+         */
 
     },
 
-    getUrlParameter: function(paramKey) {
+    getUrlParameter: function (paramKey) {
         paramKey = paramKey.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
         var regexS = "[\\?&]" + paramKey + "=([^&#]*)";
         var regex = new RegExp(regexS);
@@ -820,20 +846,20 @@ var global = {
 };
 //namespace to keep form functions short
 var formHandlers = {
-    highlight: function(element, errorClass, validClass) {
+    highlight: function (element, errorClass, validClass) {
         $(element.form).find("label[for=" + element.id + "]").addClass("error");
         $(element.form).find("input[id=" + element.id + "]").addClass("error");
         $(element.form).find("input[id=" + element.id + "], select[id=" + element.id + "]").closest('div').addClass("error");
     },
-    unHighlight: function(element, errorClass, validClass) {
+    unHighlight: function (element, errorClass, validClass) {
         $(element.form).find("label[for=" + element.id + "]").removeClass("error");
         $(element.form).find("input[id=" + element.id + "]").removeClass("error");
         $(element.form).find("input[id=" + element.id + "], select[id=" + element.id + "]").closest('div').removeClass("error");
     },
-    showError: function(errorMap, errorList) {
+    showError: function (errorMap, errorList) {
         if (submitted && errorList) {
             var $errorFormClass1 = 'errors-' + $(this.currentForm).attr('class'),
-                $errorFormClass = $errorFormClass1.split(' ')[0];
+                    $errorFormClass = $errorFormClass1.split(' ')[0];
 
             //Reset and remove error messages if the form
             //has been validated once already
@@ -862,7 +888,7 @@ var formHandlers = {
 
             //Move the focus to the associated input when error message link is triggered
             //a simple href anchor link doesnt seem to place focus inside the input
-            $('.' + $errorFormClass + ' a').click(function() {
+            $('.' + $errorFormClass + ' a').click(function () {
                 $($(this).attr('href')).focus();
                 return false;
             });
@@ -878,7 +904,7 @@ var formHandlers = {
         this.defaultShowErrors();
         submitted = false;
     },
-    errorPosition: function(error, element) {
+    errorPosition: function (error, element) {
         if (element.prop('nodeName').toLowerCase() === 'select') {
             if ($(element).parent().hasClass('custom-style')) {
                 error.insertAfter($(element).parent('.custom-style'));
@@ -893,13 +919,13 @@ var formHandlers = {
 
 //list view page - run only if the class 'nonprofit-listing' is present to prevent loading on all pages
 var listViewResults = {
-    nonprofitCollapse: function() {
+    nonprofitCollapse: function () {
         if ($('.nonprofit-list').length > 0) {
-            $(".listing").each(function(index) {
+            $(".listing").each(function (index) {
                 var npListing = $(this),
-                    npHeader = npListing.find('.media-heading'),
-                    npName = $.trim(npHeader.clone().children().remove().end().text()).replace(/ /g, ''),
-                    npContent = npListing.find('.content');
+                        npHeader = npListing.find('.media-heading'),
+                        npName = $.trim(npHeader.clone().children().remove().end().text()).replace(/ /g, ''),
+                        npContent = npListing.find('.content');
                 npContent.attr({
                     'id': '_' + npName
                 });
@@ -920,7 +946,7 @@ A11y.ieDetect();
 
 //Set media query for resize functionality
 var lastDeviceState = A11yResp.getScreenWidth();
-$(window).resize(_.debounce(function() {
+$(window).resize(_.debounce(function () {
 
     var state = A11yResp.getScreenWidth();
     if (state != lastDeviceState) {
@@ -949,23 +975,23 @@ function performMediaQueries(state) {
 
 //begin isotop script
 //sort button functionality with isotope - do not load isotope for ie8
-$(window).load(function() {
+$(window).load(function () {
     if (!$('html').hasClass('lt-ie9')) {
         global.homeGridSetup();
         global.searchGridSetup();
 
         //get value of select option and sort results by 
-        $('.sort-by-select').on('change', function() {
+        $('.sort-by-select').on('change', function () {
             var $gridNp = $('.grid.nonprofits'),
-                sortByValue = $(this).val(),
-                liveTextRegion = $('#liveText-polite').children('p');
+                    sortByValue = $(this).val(),
+                    liveTextRegion = $('#liveText-polite').children('p');
             $gridNp.isotope({
                 sortBy: sortByValue
             });
             //update screen reader with current selection
 
             liveTextRegion.html('Results have been sorted by: ' + sortByValue);
-            setTimeout(function() {
+            setTimeout(function () {
                 liveTextRegion.html('');
             }, 1000);
         });
@@ -979,56 +1005,58 @@ if ($('body').hasClass('mac') && ($('body').hasClass('ipad') || $('body').hasCla
     } else {
         $('body').css('overflow', 'auto');
     }
-};
+}
+;
 
 //help iOS work properly with offcanvas
 if ($('body').hasClass('windows')) {
     navTrigger.attr('data-disable-scrolling', 'false');
-};
+}
+;
 //3. 'click' events
-navTrigger.on('click', function() {
+navTrigger.on('click', function () {
     global.mobileNavTrigger();
 });
-$('.mobile-nav-close').on('click', function() {
+$('.mobile-nav-close').on('click', function () {
     mobileMenu.offcanvas('hide');
     var liveText = 'The mobile menu has closed';
 
     mobileMenu.offcanvas('hide');
     $('#liveText-polite').find('p').html(liveText);
-    setTimeout(function() {
+    setTimeout(function () {
         $('#liveText-polite').find('p').html('');
     }, 3000);
-    setTimeout(function() {
+    setTimeout(function () {
         navTrigger.focus();
     }, 50);
 });
 
 //closing mobile menu --- not working yet
-$('.mobile-nav').find('a:last').on('keydown', function(e) {
+$('.mobile-nav').find('a:last').on('keydown', function (e) {
     global.mobileNavClose(e);
 });
 
 
 // events calendar button -- navigate to the calendar page
-$('.event-button, .all-event-button').on('click', function() {
+$('.event-button, .all-event-button').on('click', function () {
     location.href = '/events-calendar.php';
 })
 
 //checkout page checkbox toggle functions
 var expressCheckout = $('.express-checkout-section'),
-    checkoutButton = $('.checkout-section'),
-    expressHeading = $('.express-checkout-heading'),
-    checkoutHeading = $('.checkout-heading'),
-    expressUser = $('.userName');
+        checkoutButton = $('.checkout-section'),
+        expressHeading = $('.express-checkout-heading'),
+        checkoutHeading = $('.checkout-heading'),
+        expressUser = $('.userName');
 
-$('.checkout-form .toggle-check').on('click', function() {
+$('.checkout-form .toggle-check').on('click', function () {
     if ($(this).is(':checked')) {
         expressCheckout.show(); //show express checkout
         checkoutButton.hide(); //hide normal checkout button
         expressHeading.show(); //show express heading
         checkoutHeading.hide(); //hide normal heading
 
-        setTimeout(function() {
+        setTimeout(function () {
             expressUser.focus(); //focus on name input after 1 millisecond
         }, 100);
     } else {
@@ -1039,20 +1067,20 @@ $('.checkout-form .toggle-check').on('click', function() {
     }
 });
 
-$('.carouselButtons').on('click', 'button', function() {
+$('.carouselButtons').on('click', 'button', function () {
     var button = $(this),
-        buttonFocus = button.siblings(),
-        liveText = $.trim($(this).siblings().text());
+            buttonFocus = button.siblings(),
+            liveText = $.trim($(this).siblings().text());
     button.delay(500).addClass('hide').siblings().removeClass('hide');
     buttonFocus.focus();
     $('#liveText-polite').find('p').html(liveText);
-    setTimeout(function() {
+    setTimeout(function () {
         $('#liveText-polite').find('p').html('');
     }, 3000);
 });
 
 //make all anchor tags 'clickable' by enter key except if anchor tag is the 'back to top' anchor on FAQ page
-$('a').on('keydown', function(event) {
+$('a').on('keydown', function (event) {
     if (!$(this).hasClass('back-top')) {
         if (event.keyCode === 13) {
             $(this).click();
@@ -1063,47 +1091,48 @@ $('a').on('keydown', function(event) {
 
 
 //when user clicks the select all link, check the appropriate checkboxes and update text
-$('.select-all').on('click', function() {
+$('.select-all').on('click', function () {
     var rootDiv = $(this).parent(),
-        btnDataType = $(this).data("type");
+            btnDataType = $(this).data("type");
     $(rootDiv).find("input").prop("checked", (btnDataType == "checked") ? false : true);
     btnDataType == "checked" ? $(this).data('type', 'unchecked').text("Select All") : $(this).data('type', 'checked').text("Unselect All");
 
     var params = "?";
-    $("input:checked").each(function() {
+    $("input:checked").each(function () {
         params += $(this).data("paramname") + "=" + $(this).data("paramvalue") + "&";
     });
     window.location.href = window.location.href.split("?")[0] + params;
 });
 //set parameter for filter on nonprofit search page
-$('.filter-parameter').on('click', function() {
+$('.filter-parameter').on('click', function () {
     var paramName = $(this).attr('data-paramname'),
-        paramValue = $(this).attr('data-paramvalue');
+            paramValue = $(this).attr('data-paramvalue');
     global.setGetParameter(paramName, paramValue);
 });
 
-$('.sort-by a').on('click', function(e) {
+$('.sort-by a').on('click', function (e) {
 
 });
 //On click scroll to top of page t = 1000ms
-$('.scrollup').on('click', function(e) {
+$('.scrollup').on('click', function (e) {
     $("html, body").animate({
         scrollTop: 0
     }, 1000);
     e.preventDefault();
 });
 
-$('.vol-filter-input').on('click', function(e) {
+$('.vol-filter-input').on('click', function (e) {
     // global.volunteerFilterUrlHandler(e);
     var url = location.href;
     var paramList = url.split('?');
     var params = paramList.length > 1 ? paramList[1].split('&') : [];
     var notInHref = '';
     var exists = false;
-
+    var inclusives = [];
+    
     var selectedParam = e.currentTarget.dataset.filter.slice(1),
-        key = $(e.currentTarget).closest('ul').data('group'),
-        paramStr = '';
+            key = $(e.currentTarget).closest('ul').data('group'),
+            paramStr = '';
 
     for (i = 0; i < params.length; i++) {
         var param = params[i];
@@ -1135,16 +1164,17 @@ $('.vol-filter-input').on('click', function(e) {
     //remove last '&' on string
     paramStr = params.join('&');
     paramStr = paramStr + notInHref;
-    var finalHref = paramStr? paramList[0] + '?' + paramStr: paramList[0];
+    var finalHref = paramStr ? paramList[0] + '?' + paramStr : paramList[0];
     //update url without reloading DOM
     if (history.pushState) {
-        window.history.pushState({ path: finalHref }, '', finalHref);
+        window.history.pushState({path: finalHref}, '', finalHref);
     }
+    global.volunteerFilterUrlHandler();
 
 });
 
 //4. global functions 
-$(function() {
+$(function () {
     //script to detect highcontrast mode and user defined stylesheets
     HCDetect.init();
     //Accessibility function to take care of generic 508 house keeping
@@ -1197,11 +1227,11 @@ $(function() {
             $('#Mycarousel').carousel({
                 pause: "hover"
             });
-            $('#playButton').on('click', function() {
+            $('#playButton').on('click', function () {
                 $('#myCarousel').carousel('cycle');
                 $('#pauseButton').focus();
             });
-            $('#pauseButton').on('click', function() {
+            $('#pauseButton').on('click', function () {
                 $('#myCarousel').carousel('pause');
                 $('#playButton').focus();
             });
@@ -1245,7 +1275,7 @@ $(function() {
                 global.faqSetup();
 
                 //remove tabindex if user clicks on FAQ question and is focused on the 'dt' element, but only when tabbing off of the 'dt'element.
-                $('dt').on('keydown', function(event) {
+                $('dt').on('keydown', function (event) {
                     if ((event.keyCode === 9) || (event.shiftKey && event.keyCode == 9)) {
                         $(this).removeAttr('tabindex');
                     }
@@ -1268,7 +1298,7 @@ $(function() {
                 target: '.bs-docs-sidebar'
             });
             var nav = $(".push-down");
-            $(window).scroll(function() {
+            $(window).scroll(function () {
                 var scroll = $(window).scrollTop();
 
                 if (scroll >= 105) {
@@ -1283,7 +1313,7 @@ $(function() {
             break;
         case 'volunteer-search':
             global.setHeight();
-            global.volunteerNarrowSearch();
+            //global.volunteerNarrowSearch();
             global.volunteerFilterUrlHandler();
             break;
         default:
@@ -1373,11 +1403,11 @@ $(function() {
             },
 
             //Create our error summary that will appear before the form
-            showErrors: function(errorMap, errorList) {
+            showErrors: function (errorMap, errorList) {
                 //formHandlers.showError(errorMap, errorList);
                 if (submitted && errorList) {
                     var $errorFormClass1 = 'errors-' + $(this.currentForm).attr('class'),
-                        $errorFormClass = $errorFormClass1.split(' ')[0];
+                            $errorFormClass = $errorFormClass1.split(' ')[0];
 
                     //Reset and remove error messages if the form
                     //has been validated once already
@@ -1407,7 +1437,7 @@ $(function() {
 
                     //Move the focus to the associated input when error message link is triggered
                     //a simple href anchor link doesnt seem to place focus inside the input
-                    $('.' + $errorFormClass + ' a').on('click', function() {
+                    $('.' + $errorFormClass + ' a').on('click', function () {
                         $($(this).attr('href')).focus();
                         return false;
                     });
@@ -1418,7 +1448,7 @@ $(function() {
                     }
                     //remove required text from summary list
                     if ($('.summary-list li a span').hasClass('Exclamation')) {
-                        $('.summary-list li a:contains(" (required)")').each(function() {
+                        $('.summary-list li a:contains(" (required)")').each(function () {
                             $(this).html($(this).html().split(" (required)").join(":"));
                         });
                     }
@@ -1428,23 +1458,23 @@ $(function() {
                 this.defaultShowErrors();
                 submitted = false;
             },
-            errorPlacement: function(error, element) {
+            errorPlacement: function (error, element) {
                 formHandlers.errorPosition(error, element);
             },
-            highlight: function(element, errorClass, validClass) {
+            highlight: function (element, errorClass, validClass) {
                 formHandlers.highlight(element, errorClass, validClass);
             },
-            unhighlight: function(element, errorClass, validClass) {
+            unhighlight: function (element, errorClass, validClass) {
                 formHandlers.unHighlight(element, errorClass, validClass);
 
             },
 
-            invalidHandler: function(form, validator) {
+            invalidHandler: function (form, validator) {
                 submitted = true;
             },
 
             //Removed the error summary upon successful completion of form
-            submitHandler: function(form) {
+            submitHandler: function (form) {
                 $('.errors-' + $(this.currentForm).attr('class')).remove();
 
                 $(form).submit();
@@ -1515,11 +1545,11 @@ $(function() {
             },
 
             //Create our error summary that will appear before the form
-            showErrors: function(errorMap, errorList) {
+            showErrors: function (errorMap, errorList) {
                 //formHandlers.showError(errorMap, errorList);
                 if (submitted && errorList) {
                     var $errorFormClass1 = 'errors-' + $(this.currentForm).attr('class'),
-                        $errorFormClass = $errorFormClass1.split(' ')[0];
+                            $errorFormClass = $errorFormClass1.split(' ')[0];
 
                     //Reset and remove error messages if the form
                     //has been validated once already
@@ -1549,7 +1579,7 @@ $(function() {
 
                     //Move the focus to the associated input when error message link is triggered
                     //a simple href anchor link doesnt seem to place focus inside the input
-                    $('.' + $errorFormClass + ' a').on('click', function() {
+                    $('.' + $errorFormClass + ' a').on('click', function () {
                         $($(this).attr('href')).focus();
                         return false;
                     });
@@ -1560,7 +1590,7 @@ $(function() {
                     }
                     //remove required text from summary list
                     if ($('.summary-list li a span').hasClass('Exclamation')) {
-                        $('.summary-list li a:contains(" (required)")').each(function() {
+                        $('.summary-list li a:contains(" (required)")').each(function () {
                             $(this).html($(this).html().split(" (required)").join(":"));
                         });
                     }
@@ -1571,23 +1601,23 @@ $(function() {
                 this.defaultShowErrors();
                 submitted = false;
             },
-            errorPlacement: function(error, element) {
+            errorPlacement: function (error, element) {
                 formHandlers.errorPosition(error, element);
             },
-            highlight: function(element, errorClass, validClass) {
+            highlight: function (element, errorClass, validClass) {
                 formHandlers.highlight(element, errorClass, validClass);
             },
-            unhighlight: function(element, errorClass, validClass) {
+            unhighlight: function (element, errorClass, validClass) {
                 formHandlers.unHighlight(element, errorClass, validClass);
 
             },
 
-            invalidHandler: function(form, validator) {
+            invalidHandler: function (form, validator) {
                 submitted = true;
             },
 
             //Removed the error summary upon successful completion of form
-            submitHandler: function(form) {
+            submitHandler: function (form) {
                 $('.errors-' + $(this.currentForm).attr('class')).remove();
 
                 $(form).submit();
@@ -1623,11 +1653,11 @@ $(function() {
             },
 
             //Create our error summary that will appear before the form
-            showErrors: function(errorMap, errorList) {
+            showErrors: function (errorMap, errorList) {
                 //formHandlers.showError(errorMap, errorList);
                 if (submitted && errorList) {
                     var $errorFormClass1 = 'errors-' + $(this.currentForm).attr('class'),
-                        $errorFormClass = $errorFormClass1.split(' ')[0];
+                            $errorFormClass = $errorFormClass1.split(' ')[0];
 
                     //Reset and remove error messages if the form
                     //has been validated once already
@@ -1657,7 +1687,7 @@ $(function() {
 
                     //Move the focus to the associated input when error message link is triggered
                     //a simple href anchor link doesnt seem to place focus inside the input
-                    $('.' + $errorFormClass + ' a').on('click', function() {
+                    $('.' + $errorFormClass + ' a').on('click', function () {
                         $($(this).attr('href')).focus();
                         return false;
                     });
@@ -1668,7 +1698,7 @@ $(function() {
                     }
                     //remove required text from summary list
                     if ($('.summary-list li a span').hasClass('Exclamation')) {
-                        $('.summary-list li a:contains(" (your email address)")').each(function() {
+                        $('.summary-list li a:contains(" (your email address)")').each(function () {
                             $(this).html($(this).html().split(" (your email address)").join(":"));
                         });
                     }
@@ -1679,23 +1709,23 @@ $(function() {
                 this.defaultShowErrors();
                 submitted = false;
             },
-            errorPlacement: function(error, element) {
+            errorPlacement: function (error, element) {
                 formHandlers.errorPosition(error, element);
             },
-            highlight: function(element, errorClass, validClass) {
+            highlight: function (element, errorClass, validClass) {
                 formHandlers.highlight(element, errorClass, validClass);
             },
-            unhighlight: function(element, errorClass, validClass) {
+            unhighlight: function (element, errorClass, validClass) {
                 formHandlers.unHighlight(element, errorClass, validClass);
 
             },
 
-            invalidHandler: function(form, validator) {
+            invalidHandler: function (form, validator) {
                 submitted = true;
             },
 
             //Removed the error summary upon successful completion of form
-            submitHandler: function(form) {
+            submitHandler: function (form) {
                 $('.errors-' + $(this.currentForm).attr('class')).remove();
 
                 $(form).submit();
@@ -1732,11 +1762,11 @@ $(function() {
             },
 
             //Create our error summary that will appear before the form
-            showErrors: function(errorMap, errorList) {
+            showErrors: function (errorMap, errorList) {
                 //formHandlers.showError(errorMap, errorList);
                 if (submitted && errorList) {
                     var $errorFormClass1 = 'errors-' + $(this.currentForm).attr('class'),
-                        $errorFormClass = $errorFormClass1.split(' ')[0];
+                            $errorFormClass = $errorFormClass1.split(' ')[0];
 
                     //Reset and remove error messages if the form
                     //has been validated once already
@@ -1766,7 +1796,7 @@ $(function() {
 
                     //Move the focus to the associated input when error message link is triggered
                     //a simple href anchor link doesnt seem to place focus inside the input
-                    $('.' + $errorFormClass + ' a').on('click', function() {
+                    $('.' + $errorFormClass + ' a').on('click', function () {
                         $($(this).attr('href')).focus();
                         return false;
                     });
@@ -1777,7 +1807,7 @@ $(function() {
                     }
                     //remove required text from summary list
                     if ($('.summary-list li a span').hasClass('Exclamation')) {
-                        $('.summary-list li a:contains(" (required)")').each(function() {
+                        $('.summary-list li a:contains(" (required)")').each(function () {
                             $(this).html($(this).html().split(" (required)").join(":"));
                         });
                     }
@@ -1788,23 +1818,23 @@ $(function() {
                 this.defaultShowErrors();
                 submitted = false;
             },
-            errorPlacement: function(error, element) {
+            errorPlacement: function (error, element) {
                 formHandlers.errorPosition(error, element);
             },
-            highlight: function(element, errorClass, validClass) {
+            highlight: function (element, errorClass, validClass) {
                 formHandlers.highlight(element, errorClass, validClass);
             },
-            unhighlight: function(element, errorClass, validClass) {
+            unhighlight: function (element, errorClass, validClass) {
                 formHandlers.unHighlight(element, errorClass, validClass);
 
             },
 
-            invalidHandler: function(form, validator) {
+            invalidHandler: function (form, validator) {
                 submitted = true;
             },
 
             //Removed the error summary upon successful completion of form
-            submitHandler: function(form) {
+            submitHandler: function (form) {
                 $('.errors-' + $(this.currentForm).attr('class')).remove();
 
                 $(form).submit();
@@ -1815,7 +1845,7 @@ $(function() {
         global.valid();
         //subscribe form
         var checkboxes = $('.require-one');
-        var checkbox_names = $.map(checkboxes, function(e, i) {
+        var checkbox_names = $.map(checkboxes, function (e, i) {
             return $(e).attr("name");
         }).join(" ");
 
@@ -1842,11 +1872,11 @@ $(function() {
             },
 
             //Create our error summary that will appear before the form
-            showErrors: function(errorMap, errorList) {
+            showErrors: function (errorMap, errorList) {
                 //formHandlers.showError(errorMap, errorList);
                 if (submitted && errorList) {
                     var $errorFormClass1 = 'errors-' + $(this.currentForm).attr('class'),
-                        $errorFormClass = $errorFormClass1.split(' ')[0];
+                            $errorFormClass = $errorFormClass1.split(' ')[0];
 
                     //Reset and remove error messages if the form
                     //has been validated once already
@@ -1876,7 +1906,7 @@ $(function() {
 
                     //Move the focus to the associated input when error message link is triggered
                     //a simple href anchor link doesnt seem to place focus inside the input
-                    $('.' + $errorFormClass + ' a').on('click', function() {
+                    $('.' + $errorFormClass + ' a').on('click', function () {
                         $($(this).attr('href')).focus();
                         return false;
                     });
@@ -1887,7 +1917,7 @@ $(function() {
                     }
                     //remove required text from summary list
                     if ($('.summary-list li a span').hasClass('Exclamation')) {
-                        $('.summary-list li a:contains(" (required)")').each(function() {
+                        $('.summary-list li a:contains(" (required)")').each(function () {
                             $(this).html($(this).html().split(" (required)").join(":"));
                         });
                     }
@@ -1898,23 +1928,23 @@ $(function() {
                 this.defaultShowErrors();
                 submitted = false;
             },
-            errorPlacement: function(error, element) {
+            errorPlacement: function (error, element) {
                 formHandlers.errorPosition(error, element);
             },
-            highlight: function(element, errorClass, validClass) {
+            highlight: function (element, errorClass, validClass) {
                 formHandlers.highlight(element, errorClass, validClass);
             },
-            unhighlight: function(element, errorClass, validClass) {
+            unhighlight: function (element, errorClass, validClass) {
                 formHandlers.unHighlight(element, errorClass, validClass);
 
             },
 
-            invalidHandler: function(form, validator) {
+            invalidHandler: function (form, validator) {
                 submitted = true;
             },
 
             //Removed the error summary upon successful completion of form
-            submitHandler: function(form) {
+            submitHandler: function (form) {
                 $('.errors-' + $(this.currentForm).attr('class')).remove();
 
                 $(form).submit();
@@ -1997,11 +2027,11 @@ $(function() {
             },
 
             //Create our error summary that will appear before the form
-            showErrors: function(errorMap, errorList) {
+            showErrors: function (errorMap, errorList) {
                 //formHandlers.showError(errorMap, errorList);
                 if (submitted && errorList) {
                     var $errorFormClass1 = 'errors-' + $(this.currentForm).attr('class'),
-                        $errorFormClass = $errorFormClass1.split(' ')[0];
+                            $errorFormClass = $errorFormClass1.split(' ')[0];
 
                     //Reset and remove error messages if the form
                     //has been validated once already
@@ -2031,7 +2061,7 @@ $(function() {
 
                     //Move the focus to the associated input when error message link is triggered
                     //a simple href anchor link doesnt seem to place focus inside the input
-                    $('.' + $errorFormClass + ' a').on('click', function() {
+                    $('.' + $errorFormClass + ' a').on('click', function () {
                         $($(this).attr('href')).focus();
                         return false;
                     });
@@ -2042,7 +2072,7 @@ $(function() {
                     }
                     //remove required text from summary list
                     if ($('.summary-list li a span').hasClass('Exclamation')) {
-                        $('.summary-list li a:contains(" (required)")').each(function() {
+                        $('.summary-list li a:contains(" (required)")').each(function () {
                             $(this).html($(this).html().split(" (required)").join(":"));
                         });
                     }
@@ -2052,23 +2082,23 @@ $(function() {
                 this.defaultShowErrors();
                 submitted = false;
             },
-            errorPlacement: function(error, element) {
+            errorPlacement: function (error, element) {
                 formHandlers.errorPosition(error, element);
             },
-            highlight: function(element, errorClass, validClass) {
+            highlight: function (element, errorClass, validClass) {
                 formHandlers.highlight(element, errorClass, validClass);
             },
-            unhighlight: function(element, errorClass, validClass) {
+            unhighlight: function (element, errorClass, validClass) {
                 formHandlers.unHighlight(element, errorClass, validClass);
 
             },
 
-            invalidHandler: function(form, validator) {
+            invalidHandler: function (form, validator) {
                 submitted = true;
             },
 
             //Removed the error summary upon successful completion of form
-            submitHandler: function(form) {
+            submitHandler: function (form) {
                 $('.errors-' + $(this.currentForm).attr('class')).remove();
 
                 $(form).submit();
@@ -2167,11 +2197,11 @@ $(function() {
             },
 
             //Create our error summary that will appear before the form
-            showErrors: function(errorMap, errorList) {
+            showErrors: function (errorMap, errorList) {
                 //formHandlers.showError(errorMap, errorList);
                 if (submitted && errorList) {
                     var $errorFormClass1 = 'errors-' + $(this.currentForm).attr('class'),
-                        $errorFormClass = $errorFormClass1.split(' ')[0];
+                            $errorFormClass = $errorFormClass1.split(' ')[0];
 
                     //Reset and remove error messages if the form
                     //has been validated once already
@@ -2200,14 +2230,14 @@ $(function() {
                     $('.errors-' + $(this.currentForm).attr('class')).focus();
 
                     // Replace the group label for the fields. Alternative label is picked up from data-validatorLabel attr that is set in html dom
-                    $('a[href="#recurring_period_0"], a[href="#recurring_period_5"]').html(function() {
+                    $('a[href="#recurring_period_0"], a[href="#recurring_period_5"]').html(function () {
                         return $(this).html().replace($('label[for="' + $(this).attr('href').replace('#', '') + '"]').text(), $('label[for="' + $(this).attr('href').replace('#', '') + '"]').attr('data-validatorLabel'));
                     });
 
 
                     //Move the focus to the associated input when error message link is triggered
                     //a simple href anchor link doesnt seem to place focus inside the input
-                    $('.' + $errorFormClass + ' a').on('click', function() {
+                    $('.' + $errorFormClass + ' a').on('click', function () {
                         $($(this).attr('href')).focus();
                         return false;
                     });
@@ -2218,7 +2248,7 @@ $(function() {
                     }
                     //remove required text from summary list
                     if ($('.summary-list li a span').hasClass('Exclamation')) {
-                        $('.summary-list li a:contains(" (required)")').each(function() {
+                        $('.summary-list li a:contains(" (required)")').each(function () {
                             $(this).html($(this).html().split(" (required)").join(":"));
                         });
                     }
@@ -2228,7 +2258,7 @@ $(function() {
                 this.defaultShowErrors();
                 submitted = false;
             },
-            errorPlacement: function(error, element) {
+            errorPlacement: function (error, element) {
                 if (element.attr("name") == "amount") {
                     error.insertAfter('.other-amount');
                 } else if (element.attr("name") == "send") {
@@ -2237,20 +2267,20 @@ $(function() {
                     formHandlers.errorPosition(error, element);
                 }
             },
-            highlight: function(element, errorClass, validClass) {
+            highlight: function (element, errorClass, validClass) {
                 formHandlers.highlight(element, errorClass, validClass);
             },
-            unhighlight: function(element, errorClass, validClass) {
+            unhighlight: function (element, errorClass, validClass) {
                 formHandlers.unHighlight(element, errorClass, validClass);
 
             },
 
-            invalidHandler: function(form, validator) {
+            invalidHandler: function (form, validator) {
                 submitted = true;
             },
 
             //Removed the error summary upon successful completion of form
-            submitHandler: function(form) {
+            submitHandler: function (form) {
                 $('.errors-' + $(this.currentForm).attr('class')).remove();
 
                 $(form).submit();
@@ -2296,11 +2326,11 @@ $(function() {
             },
 
             //Create our error summary that will appear before the form
-            showErrors: function(errorMap, errorList) {
+            showErrors: function (errorMap, errorList) {
                 //formHandlers.showError(errorMap, errorList);
                 if (submitted && errorList) {
                     var $errorFormClass1 = 'errors-' + $(this.currentForm).attr('class'),
-                        $errorFormClass = $errorFormClass1.split(' ')[0];
+                            $errorFormClass = $errorFormClass1.split(' ')[0];
 
                     //Reset and remove error messages if the form
                     //has been validated once already
@@ -2330,7 +2360,7 @@ $(function() {
 
                     //Move the focus to the associated input when error message link is triggered
                     //a simple href anchor link doesnt seem to place focus inside the input
-                    $('.' + $errorFormClass + ' a').on('click', function() {
+                    $('.' + $errorFormClass + ' a').on('click', function () {
                         $($(this).attr('href')).focus();
                         return false;
                     });
@@ -2341,7 +2371,7 @@ $(function() {
                     }
                     //remove required text from summary list
                     if ($('.summary-list li a span').hasClass('Exclamation')) {
-                        $('.summary-list li a:contains(" (required)")').each(function() {
+                        $('.summary-list li a:contains(" (required)")').each(function () {
                             $(this).html($(this).html().split(" (required)").join(":"));
                         });
                     }
@@ -2352,23 +2382,23 @@ $(function() {
                 this.defaultShowErrors();
                 submitted = false;
             },
-            errorPlacement: function(error, element) {
+            errorPlacement: function (error, element) {
                 formHandlers.errorPosition(error, element);
             },
-            highlight: function(element, errorClass, validClass) {
+            highlight: function (element, errorClass, validClass) {
                 formHandlers.highlight(element, errorClass, validClass);
             },
-            unhighlight: function(element, errorClass, validClass) {
+            unhighlight: function (element, errorClass, validClass) {
                 formHandlers.unHighlight(element, errorClass, validClass);
 
             },
 
-            invalidHandler: function(form, validator) {
+            invalidHandler: function (form, validator) {
                 submitted = true;
             },
 
             //Removed the error summary upon successful completion of form
-            submitHandler: function(form) {
+            submitHandler: function (form) {
                 $('.errors-' + $(this.currentForm).attr('class')).remove();
 
                 $(form).submit();
