@@ -1146,7 +1146,7 @@ $('.vol-filter-input').on('click', function (e) {
                 if (commaExists > -1) {
                     //remove from list, remove comma if first or last character of string
                     params[i] = params[i].replace(selectedParam, '');
-                    params[i] = params[i].replace(/,\s*$/, '').replace('=,', '=');
+                    params[i] = params[i].replace(/,\s*$/, '').replace('=,', '=').replace(/,{2}/g, ',');
                 } else {
                     params.splice(i, 1);
                 }
