@@ -43,30 +43,30 @@ include('includes/functions.php');
 			  </button>
 			  <div class="dropdown-menu" id="vol-loc-list" aria-labelledby="vol-location">
 			    <ul class="list-unstyled" data-group="loc">
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".DCA">DC-CityWide</label></li>
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".DC1">DC-1</label></li>
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".DC2">DC-2</label></li>
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".DC3">DC-3</label></li>
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".DC4">DC-4</label></li>
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".DC5">DC-5</label></li>
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".DC6">DC-6</label></li>
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".DC7">DC-7</label></li>
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".DC8">DC-8</label></li>
+			    <li><label><input class="vol-filter-input all-loc-dca" data-filter-group="dca" type="checkbox">DC-CityWide</label></li>
+			    <li><label><input class="vol-filter-input dca" type="checkbox" data-filter-group="dca" data-filter=".DC1">DC-1</label></li>
+			    <li><label><input class="vol-filter-input dca" type="checkbox" data-filter-group="dca" data-filter=".DC2">DC-2</label></li>
+			    <li><label><input class="vol-filter-input dca" type="checkbox" data-filter-group="dca" data-filter=".DC3">DC-3</label></li>
+			    <li><label><input class="vol-filter-input dca" type="checkbox" data-filter-group="dca" data-filter=".DC4">DC-4</label></li>
+			    <li><label><input class="vol-filter-input dca" type="checkbox" data-filter-group="dca" data-filter=".DC5">DC-5</label></li>
+			    <li><label><input class="vol-filter-input dca" type="checkbox" data-filter-group="dca" data-filter=".DC6">DC-6</label></li>
+			    <li><label><input class="vol-filter-input dca" type="checkbox" data-filter-group="dca" data-filter=".DC7">DC-7</label></li>
+			    <li><label><input class="vol-filter-input dca" type="checkbox" data-filter-group="dca" data-filter=".DC8">DC-8</label></li>
 			    
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".MDA">MD-StateWide</label></li>
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".MDF">MD-Frederick County</label></li>
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".MDH">MD-Howard County</label></li>
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".MDM">MD-Montgomery County</label></li>
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".MDP">MD-Prince George's County</label></li>
+			    <li><label><input class="vol-filter-input all-loc-mda" data-filter-group="mda" type="checkbox">MD-StateWide</label></li>
+			    <li><label><input class="vol-filter-input mda" type="checkbox" data-filter-group="mda" data-filter=".MDF">MD-Frederick County</label></li>
+			    <li><label><input class="vol-filter-input mda" type="checkbox" data-filter-group="mda" data-filter=".MDH">MD-Howard County</label></li>
+			    <li><label><input class="vol-filter-input mda" type="checkbox" data-filter-group="mda" data-filter=".MDM">MD-Montgomery County</label></li>
+			    <li><label><input class="vol-filter-input mda" type="checkbox" data-filter-group="mda" data-filter=".MDP">MD-Prince George's County</label></li>
 
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".VAA">VA-Statewide</label></li>
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".VAAC">VA-Arlington County</label></li>
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".VAFC">VA-Fairfax County</label></li>
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".VALC">VA-Loudon County</label></li>
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".VAPC">VA-Prince William County</label></li>
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".VACA">VA-City of Alexandria</label></li>
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".VACF">VA-City of Fairfax</label></li>
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".VACFC">VA-City of Falls Church</label></li>
+			    <li><label><input class="vol-filter-input all-loc-vaa" data-filter-group="vaa" type="checkbox">VA-Statewide</label></li>
+			    <li><label><input class="vol-filter-input vaa" type="checkbox" data-filter-group="vaa" data-filter=".VAAC">VA-Arlington County</label></li>
+			    <li><label><input class="vol-filter-input vaa" type="checkbox" data-filter-group="vaa" data-filter=".VAFC">VA-Fairfax County</label></li>
+			    <li><label><input class="vol-filter-input vaa" type="checkbox" data-filter-group="vaa" data-filter=".VALC">VA-Loudon County</label></li>
+			    <li><label><input class="vol-filter-input vaa" type="checkbox" data-filter-group="vaa" data-filter=".VAPC">VA-Prince William County</label></li>
+			    <li><label><input class="vol-filter-input vaa" type="checkbox" data-filter-group="vaa" data-filter=".VACA">VA-City of Alexandria</label></li>
+			    <li><label><input class="vol-filter-input vaa" type="checkbox" data-filter-group="vaa" data-filter=".VACF">VA-City of Fairfax</label></li>
+			    <li><label><input class="vol-filter-input vaa" type="checkbox" data-filter-group="vaa" data-filter=".VACFC">VA-City of Falls Church</label></li>
 
 			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".IN">Internationally</label></li>
 			    
@@ -81,10 +81,10 @@ include('includes/functions.php');
 			  </button>
 			  <div class="dropdown-menu" id="vol-time-list" aria-labelledby="vol-time">
 			    <ul class="list-unstyled" data-group="time">
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".WDD">Weekday Day</label></li>
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".WDE">Weekday Evening</label></li>
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".WKDD">Weekend Day</label></li>
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".WKDE">Weekend Evening</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter-group="time" data-filter=".WDD">Weekday Day</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter-group="time" data-filter=".WDE">Weekday Evening</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter-group="time" data-filter=".WKDD">Weekend Day</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter-group="time" data-filter=".WKDE">Weekend Evening</label></li>
 			  </ul>
 			  </div>
 			</div>
@@ -96,9 +96,9 @@ include('includes/functions.php');
 			  </button>
 			  <div class="dropdown-menu" id="vol-group-list" aria-labelledby="vol-group"> 
 			  <ul class="list-unstyled" data-group="group">
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".solo">Myself</label></li>
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".group">My Group or Team</label></li>
-			    <li><label><input class="vol-filter-input" type="checkbox" data-filter=".family">My family (with Children)</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter-group="group" data-filter=".solo">Myself</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter-group="group" data-filter=".group">My Group or Team</label></li>
+			    <li><label><input class="vol-filter-input" type="checkbox" data-filter-group="group" data-filter=".family">My family (with Children)</label></li>
 			  </ul>
 			  </div>
 			</div> 
@@ -110,7 +110,7 @@ include('includes/functions.php');
 		<span>Youth Education &amp; Enrichment <button class="fa fa-times-circle close remove-opt"><span class="sr-only">Remove Youth Education &amp; Enrichment</span></button></span></p>
 		<h2 class="volunteer-search-h2">Environment &amp; Animal Services</h2>
 		<div class="row grid">
-			<div class="col-xs-12 vol-listing iso-item VAA solo WDD">
+			<div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
 				<div class="thumbnail">
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
 					<div class="caption">
@@ -138,7 +138,7 @@ include('includes/functions.php');
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 vol-listing iso-item DCA solo WDD">
+			<div class="col-xs-12 vol-listing iso-item DC2 solo WDD">
 				<div class="thumbnail">
 					<img alt="" src="http://www.cfp-dc.org/images/dc/cropped/225.jpg">
 					<div class="caption">

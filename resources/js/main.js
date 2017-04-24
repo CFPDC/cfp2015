@@ -137,25 +137,25 @@ var global = {
     //concatenates values for volunteer search page filtering
     concatValues: function (allObjects) {
         var concatedValues = allObjects[0];
-        
-        function groupCreator(a,b){
+
+        function groupCreator(a, b) {
             var tempObject = [];
-             for (var j = 0; j < b.length; j++) {
+            for (var j = 0; j < b.length; j++) {
                 for (var k = 0; k < a.length; k++) {
                     tempObject.push(a[k] + '.' + b[j]);
                 }
             }
             return tempObject;
         }
-        
+
         for (var i = 0; i < concatedValues.length; i++) {
-            concatedValues[i] = '.'+ concatedValues[i];
+            concatedValues[i] = '.' + concatedValues[i];
         }
-        
+
         for (var i = 1; i < allObjects.length; i++) {
             concatedValues = groupCreator(concatedValues, allObjects[i]);
         }
-        
+
         concatedValues = concatedValues.join();
         return concatedValues;
     },
@@ -767,13 +767,13 @@ var global = {
             layoutMode: 'fitRows'
         });
         inclusives = [];
-        for (i = 0; i < params.length; i++) {
+        for (var i = 0; i < params.length; i++) {
             var param = params[i];
             if (param.indexOf('loc=') >= 0) {
                 var loc = param.substring(4);
                 var locations = loc.split(',');
                 inclusives.push(locations);
-        
+
                 for (var l = 0; l < locations.length; l++) {
                     $('.vol-filter-input[data-filter=".' + locations[l] + '"]').prop('checked', true);
                 }
@@ -802,34 +802,17 @@ var global = {
         var filterValue = inclusives.length > 0 ? global.concatValues(inclusives) : '*';
         $gridNarrowVolunteer.isotope({filter: filterValue});
 
+        var checkAllLocation = ['dca', 'mda', 'vaa'];
 
+        for (var i = 0; i < checkAllLocation.length; i++) {
+            if ($('.' + checkAllLocation[i] + ':checked').length == $('.' + checkAllLocation[i]).length)
+            {
+                $('.all-loc-' + checkAllLocation[i]).prop("checked", true);
 
-        // if (e) {
-        //     var selectedParam = e.currentTarget.dataset.filter.slice(1, 10),
-        //         key = $(e.currentTarget).closest('ul').data('group');
-        // }
-        // var res = global.getUrlParameter("loc").split(",");
-        // if (selectedParam) {
-        //     var index = res.indexOf(selectedParam);
-        //     if (index >= 0) {
-        //         res.splice(index, 1);
-        //     } else {
-        //         res.push(selectedParam);
-        //     }
-        // }
-
-        /* var resLength = res.length;
-         
-         
-         
-         
-         //update the url with the new parameters without reloading the page
-         if (e) {
-         url = 'http://localhost:81/volunteer-search.php?loc=DCA,DC1';
-         history.pushState(null, null, url);
-         }
-         */
-
+            } else {
+                $('.all-loc-' + checkAllLocation[i]).prop("checked", false);
+            }
+        }
     },
 
     getUrlParameter: function (paramKey) {
@@ -1122,48 +1105,57 @@ $('.scrollup').on('click', function (e) {
 });
 
 $('.vol-filter-input').on('click', function (e) {
-    // global.volunteerFilterUrlHandler(e);
     var url = location.href;
     var paramList = url.split('?');
-    var params = paramList.length > 1 ? paramList[1].split('&') : [];
-    var notInHref = '';
-    var exists = false;
-    var inclusives = [];
-    
-    var selectedParam = e.currentTarget.dataset.filter.slice(1),
-            key = $(e.currentTarget).closest('ul').data('group'),
-            paramStr = '';
+    var params = [];
 
-    for (i = 0; i < params.length; i++) {
-        var param = params[i];
-        if (param.indexOf(key + '=') >= 0) {
-            var paramUpdated = param.substring(key + 1);
-            //append new parameter to string
-            if (paramUpdated.indexOf(selectedParam) === -1) {
-                params[i] = paramUpdated + ',' + selectedParam;
-            } else {
-                var commaExists = params[i].indexOf(',');
-                if (commaExists > -1) {
-                    //remove from list, remove comma if first or last character of string
-                    params[i] = params[i].replace(selectedParam, '');
-                    params[i] = params[i].replace(/,\s*$/, '').replace('=,', '=').replace(/,{2}/g, ',');
-                } else {
-                    params.splice(i, 1);
-                }
-            }
-            exists = true;
-        }
-    }
-    if (!exists) {
-        if (params.length === 0) {
-            notInHref += key + '=' + selectedParam;
+    if ($(e.currentTarget).is('.all-loc-dca, .all-loc-mda, .all-loc-vaa')) {
+        var allLocation = $(this).data('filter-group');
+        $('.' + allLocation).prop("checked", this.checked);
+    } else if ($(e.currentTarget).is('.dca, .mda, .vaa')) {
+        var allLocation = $(this).data('filter-group').toLowerCase();
+        if ($('.' + allLocation + ':checked').length == $('.' + allLocation).length) {
+            $('.all-loc-' + allLocation).prop("checked", true);
+
         } else {
-            notInHref += '&' + key + '=' + selectedParam;
+            $('.all-loc-' + allLocation).prop("checked", false);
         }
     }
+
+    var locationList = [], timeList = [], groupList = [];
+
+    $('.dca:checked,  .mda:checked, .vaa:checked').each(function (index, element) {
+        locationList.push($(this).data('filter'));
+    });
+    $('[data-filter-group="time"]').each(function (index, element) {
+        if (this.checked) {
+            timeList.push($(this).data('filter'));
+        }
+    });
+    $('[data-filter-group="group"]').each(function (index, element) {
+        if (this.checked) {
+            groupList.push($(this).data('filter'));
+        }
+    });
+
+    if (locationList.length > 0) {
+        var locationStr = 'loc=' + locationList.join(',');
+        params.push(locationStr);
+    }
+
+    if (timeList.length > 0) {
+        var timeStr = 'time=' + timeList.join(',');
+        params.push(timeStr);
+    }
+
+    if (groupList.length > 0) {
+        var groupStr = 'group=' + groupList.join(',');
+        params.push(groupStr);
+    }
+
     //remove last '&' on string
-    paramStr = params.join('&');
-    paramStr = paramStr + notInHref;
+    var paramStr = params.join('&');
+    paramStr = paramStr.replace(/[.]/g, '');
     var finalHref = paramStr ? paramList[0] + '?' + paramStr : paramList[0];
     //update url without reloading DOM
     if (history.pushState) {
