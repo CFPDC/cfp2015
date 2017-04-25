@@ -42,7 +42,7 @@ var global = {
             var nonprofit = $(this),
                     nonprofitTitleRaw = nonprofit.find('.name').contents().filter(
                     function () {
-                        return this.nodeType == 3;
+                        return this.nodeType === 3;
                     }),
                     nonprofitChildRemove = nonprofitTitleRaw.text(),
                     nonprofitTitle = $.trim(nonprofitChildRemove).split(' ').join('_'),
@@ -55,12 +55,12 @@ var global = {
             learnMoreButton.append('<span/>').children('span').addClass('sr-only').text(' about ' + nonprofitChildRemove);
             donateButton.append('<span/>').children('span').addClass('sr-only').text(' to ' + nonprofitChildRemove);
             //check each href of learn more and donate buttons to see if parameters exist
-            if (learnMoreButtonLink.indexOf('?') != -1) {
+            if (learnMoreButtonLink.indexOf('?') !== -1) {
                 learnMoreButton.attr("href", learnMoreButtonLink + "&np_title=" + nonprofitTitle);
             } else {
                 learnMoreButton.attr("href", learnMoreButtonLink + "?np_title=" + nonprofitTitle);
             }
-            if (donateButtonLink.indexOf('?') != -1) {
+            if (donateButtonLink.indexOf('?') !== -1) {
                 donateButton.attr("href", donateButtonLink + "&np_title=" + nonprofitTitle);
             } else {
                 donateButton.attr("href", donateButtonLink + "?np_title=" + nonprofitTitle);
@@ -95,7 +95,7 @@ var global = {
                     }, {
                         id: 999,
                         title: 'Repeating Event',
-                        start: '2015-09-09T16:00:00',
+                        start: '2015-09-09T16:00:00'
                     }, {
                         id: 999,
                         title: 'Repeating Event',
@@ -186,7 +186,7 @@ var global = {
             var vars = query.split("&");
             for (var i = 0; i < vars.length; i++) {
                 var pair = vars[i].split("=");
-                if (pair[0] == variable) {
+                if (pair[0] === variable) {
                     return pair[1];
                 }
             }
@@ -286,7 +286,7 @@ var global = {
                     inputChecked = '.filter-parameter:checked';
             if (list.find(inputChecked).length) {
                 toggle.click();
-            } else if (id == 'areasServed') {
+            } else if (id === 'areasServed') {
                 $('#' + id).find('.collaspingSection').each(function () {
                     if ($(this).find(inputChecked).length) {
                         toggle.click();
@@ -295,7 +295,7 @@ var global = {
                     }
                 });
             }
-        })
+        });
     },
     globalImageCheck: function (img) {
         //call this in another function by naming variable. See homeImageCheck() for reference
@@ -326,53 +326,7 @@ var global = {
             sortBy: 'random'
         });
         $('.home-search').on('click', 'button', function (e) {
-            var activeEl = $(this),
-                    liveText = 'Showing all categories';
-            var selBtn = $(this).attr('class').replace('btn btn-link ', '');
-            $('.home-search button.active').removeClass('active');
-            switch (selBtn) {
-                case 'nature-btn':
-                    $gridHome.isotope({
-                        filter: '.nature-cat',
-                        sortBy: 'random'
-                    });
-                    liveText = 'Showing only nature category';
-                    break;
-                case 'culture-btn':
-                    $gridHome.isotope({
-                        filter: '.culture-cat',
-                        sortBy: 'random'
-                    });
-                    liveText = 'Showing only culture category';
-                    break;
-                case 'education-btn':
-                    $gridHome.isotope({
-                        filter: '.education-cat',
-                        sortBy: 'random'
-                    });
-                    liveText = 'Showing only education category';
-                    break;
-                case 'human-services-btn':
-                    $gridHome.isotope({
-                        filter: '.human-services-cat',
-                        sortBy: 'random'
-                    });
-                    liveText = 'Showing only human services category';
-                    break;
-                case 'view-all-btn':
-                    $gridHome.isotope({
-                        filter: '*',
-                        sortBy: 'random'
-                    });
-                    break;
-                default:
-                    break;
-            }
-            $(this).addClass('active');
-            $('#liveText-polite').find('p').html(liveText);
-            setTimeout(function () {
-                $('#liveText-polite').find('p').html('');
-            }, 3000);
+            global.gridFilterToggle($gridHome, e);
         });
     },
     jumplink: function () {
@@ -480,21 +434,26 @@ var global = {
             openClass: "open"
         });
     },
+    /**
+     * @description  Nonprofit search page - checks parameters in url on page load and 
+     *                                        applies checked items or select all button to be toggled 
+     */
     parameterUpdate: function () {
-        //checks parameters in url on page load and applies checked items or select all button to be toggled
+        //
         var urlList = window.location.href.split("?");
-        if (urlList.length > 1 && urlList[1] != null) {
+        if (urlList.length > 1 && urlList[1] !== null) {
             $.each(urlList[1].split("&"), function (i, item) {
                 if (item) {
-                    $('input[data-paramvalue="' + item.split("=")[1] + '"]').prop('checked', true)
+                    $('input[data-paramvalue="' + item.split("=")[1] + '"]').prop('checked', true);
                 }
             });
             $.each($('div.selections'), function () {
-                if ($(this).find("input:checked").length == $(this).find("input").length)
+                if ($(this).find("input:checked").length === $(this).find("input").length) {
                     $(this).find(".select-all").text("Unselect All").attr('data-type', 'checked');
-                else
+                } else {
                     $(this).find(".select-all").text("Select All").attr('data-type', 'unchecked');
-            })
+                }
+            });
         }
     },
     pressReleaseLink508: function () {
@@ -636,7 +595,7 @@ var global = {
         //only accepts US phone numbers
         $.validator.addMethod('phoneUS', function (phone_number, element) {
             phone_number = phone_number.replace(/\s+/g, "");
-            return this.optional(element) || phone_number.length == 12 && phone_number.match(/\d{10}|(([\(]?([0-9]{3})[\)]?)?[ \.\-]?([0-9]{3})[ \.\-]([0-9]{4}))$/);
+            return this.optional(element) || phone_number.length === 12 && phone_number.match(/\d{10}|(([\(]?([0-9]{3})[\)]?)?[ \.\-]?([0-9]{3})[ \.\-]([0-9]{4}))$/);
         }, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Please specify a valid phone number');
 
         //allows you to specify a zip code range to accept
@@ -657,6 +616,69 @@ var global = {
         }, '<span class="fa fa-exclamation-circle Exclamation" aria-hidden="true" style="font-family: FontAwesome !important; font-size: 16px;"><span class="adobeBlank">Error icon</span></span> Important: Please check at least one box.');
     },
 
+    /**
+     * gridFilterToggle
+     * @description            event setup for home page and volunteer page grid toggling
+     * @param {object} grid     returns isotope grid in view
+     * @param {object} e        returns current event
+     */
+    gridFilterToggle: function (grid, e) {
+        var activeEl = e.target,
+                liveText = 'Showing all categories';
+        //var selBtn = activeEl.attr('class').replace('btn btn-link ', '');
+        var selBtn = activeEl.classList.value.replace('btn btn-link ', '');
+        $(activeEl).closest('ul').find('.active').removeClass('active');
+        switch (selBtn) {
+            case 'nature-btn':
+                grid.isotope({
+                    filter: '.nature-cat',
+                    sortBy: 'random'
+                });
+                liveText = 'Showing only nature volunteer opportunities category';
+                break;
+            case 'culture-btn':
+                grid.isotope({
+                    filter: '.culture-cat',
+                    sortBy: 'random'
+                });
+                liveText = 'Showing only culture volunteer opportunities category';
+                break;
+            case 'education-btn':
+                grid.isotope({
+                    filter: '.education-cat',
+                    sortBy: 'random'
+                });
+                liveText = 'Showing only education volunteer opportunities category';
+                break;
+            case 'human-services-btn':
+                grid.isotope({
+                    filter: '.human-services-cat',
+                    sortBy: 'random'
+                });
+                liveText = 'Showing only human volunteer opportunities category';
+                break;
+            case 'international-btn':
+                grid.isotope({
+                    filter: '.international-cat',
+                    sortBy: 'random'
+                });
+                liveText = 'Showing only international volunteer opportunities category';
+                break;
+            case 'view-all-btn':
+                grid.isotope({
+                    filter: '*',
+                    sortBy: 'random'
+                });
+                break;
+            default:
+                break;
+        }
+        $(activeEl).addClass('active');
+        $('#liveText-polite').find('p').html(liveText);
+        setTimeout(function () {
+            $('#liveText-polite').find('p').html('');
+        }, 3000);
+    },
     //added for volunteer page
     volunteerSearchActiveToggle: function () {
         var $gridVolunteer = $('.volunteer-subcategories').isotope({
@@ -664,60 +686,8 @@ var global = {
             layoutMode: 'fitRows',
             sortBy: 'random'
         });
-        $('.volunteer-search').on('click', 'button', function () {
-            var activeEl = $(this),
-                    liveText = 'Showing all categories';
-            $('.volunteer-search button.active').not(this).removeClass('active');
-            if ($(this).is('.nature-btn')) {
-                $gridVolunteer.isotope({
-                    filter: '.nature-cat',
-                    sortBy: 'random'
-                });
-                $(this).addClass('active');
-                liveText = 'Showing only nature category';
-
-            } else if ($(this).is('.culture-btn')) {
-                $gridVolunteer.isotope({
-                    filter: '.culture-cat',
-                    sortBy: 'random'
-                });
-                $(this).addClass('active');
-                liveText = 'Showing only culture category';
-
-            } else if ($(this).is('.education-btn')) {
-                $gridVolunteer.isotope({
-                    filter: '.education-cat',
-                    sortBy: 'random'
-                });
-                $(this).addClass('active');
-                liveText = 'Showing only education category';
-
-            } else if ($(this).is('.human-services-btn')) {
-                $gridVolunteer.isotope({
-                    filter: '.human-services-cat',
-                    sortBy: 'random'
-                });
-                $(this).addClass('active');
-                liveText = 'Showing only human services category';
-
-            } else if ($(this).is('.international-btn')) {
-                $gridVolunteer.isotope({
-                    filter: '.international-cat',
-                    sortBy: 'random'
-                });
-                $(this).addClass('active');
-                liveText = 'Showing only human services category';
-
-            } else if ($(this).is('.view-all-btn')) {
-                $gridVolunteer.isotope({
-                    filter: '*',
-                    sortBy: 'random'
-                });
-            }
-            $('#liveText-polite').find('p').html(liveText);
-            setTimeout(function () {
-                $('#liveText-polite').find('p').html('');
-            }, 3000);
+        $('.volunteer-search').on('click', 'button', function (e) {
+            global.gridFilterToggle($gridVolunteer, e);
         });
     },
     //added for volunteer page
@@ -807,10 +777,8 @@ var global = {
         var checkAllLocation = ['dca', 'mda', 'vaa'];
 
         for (var i = 0; i < checkAllLocation.length; i++) {
-            if ($('.' + checkAllLocation[i] + ':checked').length == $('.' + checkAllLocation[i]).length)
-            {
+            if ($('.' + checkAllLocation[i] + ':checked').length === $('.' + checkAllLocation[i]).length) {
                 $('.all-loc-' + checkAllLocation[i]).prop("checked", true);
-
             } else {
                 $('.all-loc-' + checkAllLocation[i]).prop("checked", false);
             }
@@ -822,7 +790,7 @@ var global = {
         var regexS = "[\\?&]" + paramKey + "=([^&#]*)";
         var regex = new RegExp(regexS);
         var results = regex.exec(window.location.href);
-        if (results == null) {
+        if (results === null) {
             return "";
         } else {
             return results[1];
@@ -934,7 +902,7 @@ var lastDeviceState = A11yResp.getScreenWidth();
 $(window).resize(_.debounce(function () {
 
     var state = A11yResp.getScreenWidth();
-    if (state != lastDeviceState) {
+    if (state !== lastDeviceState) {
         // Save the new state as current
         lastDeviceState = state;
         performMediaQueries(state);
@@ -946,7 +914,7 @@ $(window).resize(_.debounce(function () {
 
 //Do custom Media query logic
 function performMediaQueries(state) {
-    if (state == 'screen-sm-max' || state == 'screen-xs-max' || state == 'screen-xs-min') {
+    if (state === 'screen-sm-max' || state === 'screen-xs-max' || state === 'screen-xs-min') {
         if (pageName !== 'volunteer-search') {
 
             $('#asideFilter').addClass('collapse');
@@ -1025,7 +993,7 @@ $('.mobile-nav').find('a:last').on('keydown', function (e) {
 // events calendar button -- navigate to the calendar page
 $('.event-button, .all-event-button').on('click', function () {
     location.href = '/events-calendar.php';
-})
+});
 
 //checkout page checkbox toggle functions
 var expressCheckout = $('.express-checkout-section'),
@@ -1079,8 +1047,8 @@ $('a').on('keydown', function (event) {
 $('.select-all').on('click', function () {
     var rootDiv = $(this).parent(),
             btnDataType = $(this).data("type");
-    $(rootDiv).find("input").prop("checked", (btnDataType == "checked") ? false : true);
-    btnDataType == "checked" ? $(this).data('type', 'unchecked').text("Select All") : $(this).data('type', 'checked').text("Unselect All");
+    $(rootDiv).find("input").prop("checked", (btnDataType === 'checked') ? false : true);
+    btnDataType === 'checked' ? $(this).data('type', 'unchecked').text("Select All") : $(this).data('type', 'checked').text("Unselect All");
 
     var params = "?";
     $("input:checked").each(function () {
@@ -1116,7 +1084,7 @@ $('.vol-filter-input').on('click', function (e) {
         $('.' + allLocation).prop("checked", this.checked);
     } else if ($(e.currentTarget).is('.dca, .mda, .vaa')) {
         var allLocation = $(this).data('filter-group').toLowerCase();
-        if ($('.' + allLocation + ':checked').length == $('.' + allLocation).length) {
+        if ($('.' + allLocation + ':checked').length === $('.' + allLocation).length) {
             $('.all-loc-' + allLocation).prop("checked", true);
 
         } else {
@@ -1270,7 +1238,7 @@ $(function () {
 
                 //remove tabindex if user clicks on FAQ question and is focused on the 'dt' element, but only when tabbing off of the 'dt'element.
                 $('dt').on('keydown', function (event) {
-                    if ((event.keyCode === 9) || (event.shiftKey && event.keyCode == 9)) {
+                    if ((event.keyCode === 9) || (event.shiftKey && event.keyCode === 9)) {
                         $(this).removeAttr('tabindex');
                     }
                     return true;
@@ -2253,9 +2221,9 @@ $(function () {
                 submitted = false;
             },
             errorPlacement: function (error, element) {
-                if (element.attr("name") == "amount") {
+                if (element.attr("name") === "amount") {
                     error.insertAfter('.other-amount');
-                } else if (element.attr("name") == "send") {
+                } else if (element.attr("name") === "send") {
                     error.insertAfter('#recurring_period_8');
                 } else {
                     formHandlers.errorPosition(error, element);

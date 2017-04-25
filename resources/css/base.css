@@ -325,7 +325,10 @@ a.email[href^="mailto"]:focus {
     width: 100%;
 }
 .vol-filters > label{
-margin-top: 15px;
+    margin-top: 15px;
+}
+.vol-filters li{
+    margin-bottom: 20px;
 }
 .vol-filters > label[for='location'] {
     margin-top: 0;
@@ -465,16 +468,19 @@ ul li {
     margin-bottom: 20px;
 }
 
+main li {
+    margin-bottom: 0px; /* EPH added */
+}
 input,
 select {
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
 }
 
 textarea,
 select,
 select.form-control,
 textarea.form-control {
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     border-radius: 0;
 }
 
@@ -623,6 +629,23 @@ p.img-above {
     border-color: #487896;
     color: #fff;
 }
+/* EPH begin */
+.btn-campaign {
+    color: #fff;
+    font-family: 'ProximaNovaBold';
+    text-transform: uppercase;
+    white-space:normal;
+    width:auto!important;
+    padding-left:12px!important;
+    padding-right:12px!important;
+}
+
+.btn-campaign:focus, .btn-campaign:hover {
+    background-color: #fff;
+    border-color: #CCC; 
+    color: #CCC;
+}
+/* EPH end */
 
 .btn-success {
     background-color: #05583D;
@@ -861,6 +884,10 @@ header .btn:hover{
 
 .secondary-nav {
     margin-top: 12px;
+}
+
+.list-inline {
+    white-space: nowrap; /* EPH new */
 }
 
 .secondary-nav li {
@@ -1179,6 +1206,7 @@ body.mac.canvas-slid {
 
 .carousel-caption {
     background: #153B50;
+    opacity: 0.77; /* eph */
     bottom: 0;
     right: 0;
     left: 0;
@@ -1234,9 +1262,11 @@ body.mac.canvas-slid {
     padding: inherit;
 }
 
+/* EPH show the image even if small
 .carousel-inner > .item > img {
     display: none;
 }
+*/
 
 .carousel-indicators {
     bottom: 0;
@@ -1268,6 +1298,10 @@ body.mac.canvas-slid {
     z-index: 2;
 }
 
+.carousel-img-minheight {
+    min-height:280px; /* EPH make room for words and indicators */
+}
+
 .carouselButtons .btn-link {
     color: #fff;
 }
@@ -1284,12 +1318,19 @@ body.mac.canvas-slid {
 .subcategories .thumb {
     border: none;
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 10px; /* EPH grid was 30px; */
     margin-left: auto;
     margin-right: auto;
     padding: 0px;
     position: relative;
 }
+
+.subcat-grid-item
+{
+    padding-left:5px; /* EPH grid */
+    padding-right:5px; /* EPH grid  */
+}
+
 
 .subcategories .thumb .img-responsive {
     min-width: 100%;
@@ -1298,16 +1339,18 @@ body.mac.canvas-slid {
 .subcategories .cap {
     position: absolute;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.6); /* EPH grid was rgba(0, 0, 0, 0.8); */
     display: block;
     left: 0;
     padding: 0;
+    padding-left:2px; /* EPH grid */
+    padding-right:2px; /*EPH grid */
     text-transform: uppercase;
     width: 100%;
 }
 
 .subcategories .cap > h3 {
-    min-height: 70px;
+    min-height: 60px; /* EPH bar was 70px; */
     position: relative;
     margin-top: 0;
     margin-bottom: 0;
@@ -1320,8 +1363,8 @@ body.mac.canvas-slid {
     font-size: 1.9rem;
     text-transform: uppercase;
     letter-spacing: 0.07em;
-    padding-bottom: 23px;
-    padding-top: 27px;
+    padding-bottom: 18px; /* EPH bar was 23px; */
+    padding-top: 22px; /* EPH bar was 27px; */
     transition: background-color 0.3s ease;
 }
 
@@ -1332,8 +1375,12 @@ body.mac.canvas-slid {
 .subcategories .cap h3.multi-line a {
     margin-top: 0;
     margin-bottom: 0;
-    padding-bottom: 13px;
-    padding-top: 17px;
+    padding-bottom: 8px; /* EPH bar was 13px; */
+    padding-top: 12px; /* EPH bar was 17px; */
+}
+
+.home-how-help-section {
+    margin-top: 20px; /* EPH bar was 0 but need extra 20 to make up for 10 instead of 30 */
 }
 
 .home-how-help-section .btn {
@@ -1343,9 +1390,7 @@ body.mac.canvas-slid {
     width: 100%;
 }
 
-
 /*---Styleguide---*/
-
 .style-guide-container h2 {
     margin-top: 40px;
 }
@@ -1381,9 +1426,7 @@ body.mac.canvas-slid {
     background-color: #934683;
 }
 
-
 /*---Search/Results page---*/
-
 main.secondary {
     margin-top: 50px;
 }
@@ -1400,7 +1443,7 @@ main.secondary {
     color: inherit;
     font-family: 'ProximaNovaSemibold';
     font-size: inherit;
-    padding: 0;
+    padding: 0 20px 0 0; /* eh was just 0 -- added for pseudoclass firerfox fix 8/2016 http://stackoverflow.com/questions/11701145/after-content-in-an-a-not-clickable-in-chrome */
     position: relative;
 }
 
@@ -1408,16 +1451,16 @@ main.secondary {
 .search-results aside .category-toggle[aria-expanded="false"]:before {
     font-family: 'FontAwesome';
     position: absolute;
-    right: -20px;
+    right: 0; /* eh 8/2016 was -20px -- fix firefox unclickable pseudoclass with button (ok div) */
     top: 0;
 }
 
 .search-results aside .category-toggle[aria-expanded="false"]:before {
-    content: '\f196';
+    content: '\f105';  /*  content: '\f196'; */
 }
 
 .search-results aside .category-toggle[aria-expanded="true"]:before {
-    content: '\f147';
+    content: '\f107'; /*    content: '\f147';  ADDTO:new2016 */
 }
 
 .search-results aside .selections .btn-link,
@@ -1468,6 +1511,7 @@ main.secondary {
 
 .search-results .thumbnail {
     border-radius: 0;
+    border: 2px solid #CCC; /* EPH nonprofits-grid.php */
     padding: 0 0 75px;
     position: relative;
 }
@@ -1480,6 +1524,14 @@ main.secondary {
 
 .search-results .thumbnail > img {
     width: 100%;
+}
+
+.search-results .thumbnail .caption .name {
+    min-height:0;margin-bottom:10px;margin-top:10px; /* EPH nonprofits-grid.php adjust H2 with org name */
+}
+
+.search-results .thumbnail .caption .lastline {
+    margin-bottom:0; /* EPH nonprofits-grid.php */
 }
 
 .search-results .thumbnail .caption h2 {
@@ -1577,9 +1629,7 @@ main.secondary {
     color: #fff;
 }
 
-
 /*   search page list view   */
-
 .search-list-view .search-list-jumplinks li a {
     font-family: 'ProximaNovaBold';
     font-size: 22px;
@@ -1860,9 +1910,7 @@ address > a {
     left: 0;
 }
 
-
 /*---FAQ page---*/
-
 .faq-list-container {}
 
 .faq-list-container dt {
@@ -1894,9 +1942,7 @@ address > a {
     margin-bottom: 20px;
 }
 
-
 /*Who We Are pages*/
-
 .about-list li:before {
     content: "-";
     position: relative;
@@ -2007,7 +2053,6 @@ address > a {
     font-size: 1.8rem;
 }
 
-
 /*Vetting page*/
 
 .apply-heading {
@@ -2026,14 +2071,10 @@ address > a {
     color: #337ab7;
 }
 
-
 /*Sharing Page*/
-
 .best-of-badge-sharing {}
 
-
 /*Vision Pages*/
-
 .vision {
     background: url("/resources/images/vision-sprite.jpg") no-repeat transparent 0 0 scroll;
     display: block;
@@ -2198,9 +2239,7 @@ address > a {
     text-indent: 1em;
 }
 
-
 /*---Press Page---*/
-
 .press-release {
     margin-bottom: 0;
 }
@@ -2270,23 +2309,17 @@ address > a {
     margin-bottom: 30px;
 }
 
-
 /*---All News---*/
-
 .news-paragraph {
     margin: 0;
 }
 
-
 /*---Kids List---*/
-
 .category-sort li {
     display: inline;
 }
 
-
 /* How to Help page*/
-
 .give-image {}
 
 .volunteer-img {
@@ -2294,9 +2327,7 @@ address > a {
     margin-left: 5px;
 }
 
-
 /*---Gift Cards---*/
-
 .gift-card-img {
     width: 300px !important;
     padding-top: 15px;
@@ -2307,9 +2338,7 @@ address > a {
     color: #c00000;
 }
 
-
 /*---Gift Cards Process---*/
-
 .gift-card-p {
     margin-top: 15px;
 }
@@ -2438,23 +2467,17 @@ div.radio > label > strong.error {
     margin-top: 10px;
 }
 
-
 /*---Stock---*/
-
 .stock {
     padding-bottom: 10px;
 }
 
-
 /*---Advanced Search---*/
-
 label[for="year"] {
     display: block;
 }
 
-
 /*---Blog---*/
-
 .blog .posts.back {
     position: relative;
     padding-left: 35px;
@@ -2495,9 +2518,12 @@ label[for="year"] {
     margin-top: -35px;
 }
 
+/*
+// EPH causing headings to move to right of content /2015/11/12/around-town-1113-1119/
 .entry-content > * {
-    float: left;
+    float: left; 
 }
+*/
 
 .entry-content h3 {
     margin-top: 25px;
@@ -2507,6 +2533,19 @@ label[for="year"] {
 .entry-content h4,
 .entry-content > .org {
     clear: both;
+}
+
+/* EPH blog have past months, but contained in a box */
+#archives-3 h3 {
+    margin-top:0!important;
+}
+
+#archives-3 {
+    height: 300px;
+    width: 250px;
+    overflow-y: scroll;
+    border: 3px solid #ccc;
+    padding: 8px;
 }
 
 .entry-content h4 {
@@ -2642,7 +2681,8 @@ label[for="year"] {
 
 .details-partnership li {
     display: inline-block;
-    margin-left: 3%;
+    margin-left: 2%;
+    margin-right: 2%;
     max-width: 29%;
 }
 
@@ -2650,9 +2690,11 @@ label[for="year"] {
     max-width: 21%;
 }
 
+/* EPH instead left and right for 2nd line centering
 .details-partnership li:first-child {
     margin-left: 0;
 }
+*/
 
 .nonprofit-social a {
     color: #292929;
@@ -2691,8 +2733,8 @@ label[for="year"] {
 }
 
 .nonprofit-social.four-wide a > .fa {
-    font-size: 60px;
-    font-size: 6rem;
+    font-size: 40px;
+    font-size: 4rem;  /* EPH: was 60 and 6 */
 }
 
 .related-carousel-container {
@@ -2720,7 +2762,7 @@ label[for="year"] {
     font-family: 'ProximaNovaSemibold';
     font-size: 18px;
     font-size: 1.8rem;
-    margin-top: 15px;
+    margin-top: 8px; /* EPH was 15px; */
 }
 
 .related-carousel-container li a:focus,
@@ -2734,7 +2776,7 @@ label[for="year"] {
     color: #292929;
     font-size: 14px;
     font-size: 1.4rem;
-    margin-bottom: 0;
+    margin-bottom: 25px; /* EPH formobile was 0; */
 }
 
 .related-carousel-container li a:focus p,
@@ -2785,7 +2827,6 @@ label[for="year"] {
     right: -5px;
 }
 
-
 /*budget list on details page*/
 
 .budget-container h2 {
@@ -2828,9 +2869,7 @@ label[for="year"] {
     font-size: 3rem;
 }
 
-
 /*---Sitemap---*/
-
 .sitemap-list {
     padding-left: 8px;
 }
@@ -2868,9 +2907,7 @@ label[for="year"] {
     text-align: left;
 }
 
-
 /*---FOOTER---*/
-
 footer {
     background: #487896;
     border-top: 3px solid #153B50;
@@ -3010,10 +3047,9 @@ main.secondary.volunteer-main {
 
 
 /*--- HOME PAGE ---*/
-
 .home-lead-text {
-    margin-bottom: 50px;
-    margin-top: 75px;
+    /* EPH space was margin-bottom: 50px; 
+    margin-top: 75px; */
 }
 
 .nav.nav-pills.home-search {
@@ -3071,12 +3107,9 @@ main.secondary.volunteer-main {
     font-size: 4.5rem;
 }
 
-
 /*---High Contrast Mode---*/
 
-
 /*---MEDIA QUERIES---*/
-
 @media (min-width: 480px) {
     .carousel-caption {
         padding-left: 13%;
@@ -3115,18 +3148,20 @@ main.secondary.volunteer-main {
         margin-left: 25px;
     }
     .nav.nav-pills.home-search > li + li {
-        margin-left: 65px;
+        margin-left: 40px; /* EPH was 65px; */
     }
     .carousel-control {
         bottom: 0;
         top: 0;
     }
     .carousel-caption {
+        /* EPH too much
         bottom: 0;
+        top: 0;
+        */
         left: 10%;
         padding-left: 15px;
         padding-right: 15px;
-        top: 0;
     }
     .carousel-inner > .item > img {
         display: block;
@@ -3139,10 +3174,10 @@ main.secondary.volunteer-main {
         margin-right: 0;
     }
     .subcategories .cap a {
-        padding-bottom: 23px;
+        padding-bottom: 18px; /* EPH bar was 23px; */
     }
     .subcategories .cap h3.multi-line a {
-        padding-bottom: 13px;
+        padding-bottom: 8px; /* EPH bar was 13px; */
     }
     .home-how-help-section .btn {
         font-size: 16px;
@@ -3197,21 +3232,30 @@ main.secondary.volunteer-main {
     }
 }
 
+/* EPH for under 768 */
+.carousel-inner > .item h1, .carousel-inner > .item .h1 {
+    font-family: 'ProximaNovaThin';
+    font-size: 30px;
+    font-size: 3rem;
+    padding-bottom: 8px; /* EPH h1 was 53px; */
+    padding-top: 0px; /* EPH h1 was 53px; */
+}
+
 @media (min-width: 768px) {
     h1,
     .carousel-inner > .item h1,
     .carousel-inner > .item .h1 {
         font-family: 'ProximaNovaThin';
-        font-size: 60px;
-        font-size: 6rem;
-        padding-bottom: 53px;
-        padding-top: 53px;
+        font-size: 50px; /* was 60px & 6em but a little extreme ipad mini */
+        font-size: 5rem;
+        padding-bottom: 15px; /* EPH h1 was 53, 33px; */
+        padding-top: 33px; /* EPH h1 was 53px; */
     }
     .header-logo {
         max-width: 630px;
     }
-    .carousel-inner > .item h1,
-    .carousel-inner > .item .h1 {
+    .carousel-inner > .item h1, .carousel-inner > .item .h1 {
+        padding-left: 0; /* EPH */
         padding-bottom: 0;
         padding-top: 0;
     }
@@ -3234,7 +3278,7 @@ main.secondary.volunteer-main {
         display: block;
     }
     .primary-nav > nav > ul > li {
-        margin-left: 5%;
+        margin-left: 2%; /* was 5% EPH  new APPLY, 5% too much */
     }
     .secondary-nav li {
         margin-top: 9px;
@@ -3280,7 +3324,7 @@ main.secondary.volunteer-main {
     .nav.nav-pills.home-search > li button.btn-link.active.international-btn,
     .nav.nav-pills.home-search > li button.btn-link.international-btn:focus,
     .nav.nav-pills.home-search > li button.btn-link.international-btn:hover {
-        border-bottom-color: #931621;
+        border-bottom-color: #931621; /* EPH grid red */
     }
     .nav.nav-pills.home-search > li button.btn-link.active.view-all-btn,
     .nav.nav-pills.home-search > li button.btn-link.view-all-btn:focus,
@@ -3288,7 +3332,7 @@ main.secondary.volunteer-main {
         border-bottom-color: #FDAF17;
     }
     .carousel-caption {
-        background: rgba(0, 0, 0, 0.77);
+        background: rgba(0, 0, 0, 0.77); /* opacity 0.77 */
     }
     .home-how-help-section .btn {
         width: auto;
@@ -3297,8 +3341,7 @@ main.secondary.volunteer-main {
         margin-top: 85px;
     }
     main.volunteer-event-main {
-        margin-top: 0px;
-        margin-top: 0rem;
+        margin-top: 0;
     }
     .bottom-align {
         min-width: 93.6%;
@@ -3307,10 +3350,10 @@ main.secondary.volunteer-main {
         min-height: 120px;
     }
     .search-results .caption .btn {
-        display: block;
+        /*EPH display: block; */
     }
     .search-results .caption .btn.btn-primary {
-        margin-bottom: 10px;
+        /* EPH margin-bottom: 10px; */
     }
     .email-contact {
         margin-left: 25px;
@@ -3334,8 +3377,7 @@ main.secondary.volunteer-main {
         width: 100%;
         padding-top: 0;
     }
-    .two-column-form input,
-    .two-column-form label {
+    .two-column-form input, .two-column-form label {
         display: table-cell;
         width: auto;
         vertical-align: top;
@@ -3354,15 +3396,11 @@ main.secondary.volunteer-main {
     .two-column-form small {
         display: block;
     }
-    .two-column-form .checkbox,
-    .two-column-form .radio {
+    .two-column-form .checkbox, .two-column-form .radio {
         float: right;
         width: 15.6em;
     }
-    .two-column-form .checkbox input,
-    .two-column-form .checkbox label,
-    .two-column-form .radio input,
-    .two-column-form .radio label {
+    .two-column-form .checkbox input, .two-column-form .checkbox label, .two-column-form .radio input, .two-column-form .radio label {
         float: left;
         padding-right: 0;
         text-align: left;
@@ -3403,8 +3441,7 @@ main.secondary.volunteer-main {
     .two-column-form .two-wide > div > div:first-child strong {
         right: -105px;
     }
-    .two-column-form .two-wide > div label,
-    .two-column-form .two-wide > div select {
+    .two-column-form .two-wide > div label, .two-column-form .two-wide > div select {
         clear: both;
         float: right;
         vertical-align: bottom;
@@ -3418,8 +3455,7 @@ main.secondary.volunteer-main {
         padding: 0;
         margin: 0;
     }
-    .two-column-form .checkbox > div,
-    .two-column-form .radio > div {
+    .two-column-form .checkbox > div, .two-column-form .radio > div {
         float: right;
     }
     .two-column-form .checkbox.left > div {
@@ -3473,8 +3509,17 @@ main.secondary.volunteer-main {
     .gift-card-form .two-wide > div > div:nth-child(2) strong {
         display: none !important;
     }
-    .col-xs-12.nonprofit-listing,
-    .col-xs-12.vol-listing {
+    .col-xs-12.nonprofit-listing {
+        width: 50%;
+    }
+}
+
+/* EPH small phones in landscape still fine in two-wide 
+640x360 screen => 598x279 browser 
+ipod touch 480x208 */
+@media (min-width: 479px) 
+{
+    .col-xs-12.nonprofit-listing {
         width: 50%;
     }
 }
@@ -3485,7 +3530,7 @@ main.secondary.volunteer-main {
         font-size: 1.9rem;
     }
     .secondary-nav li {
-        margin-left: 16px;
+        margin-left: 10px; /* EPH was 30px; */
     }
     .two-column-form label.organization-label {
         font-size: inherit;
@@ -3503,7 +3548,7 @@ main.secondary.volunteer-main {
 
 @media (min-width: 915px) {
     .carousel-caption {
-        bottom: 20px;
+        bottom: 10%;
         top: auto;
     }
     .search-list-view .media .media-body .media-heading {
@@ -3562,22 +3607,22 @@ main.secondary.volunteer-main {
         margin-left: 20px;
     }
     .nav.nav-pills.home-search > li + li {
-        margin-left: 100px;
+        margin-left: 40px; /* EPH was 100px; */
     }
     .subcategories .cap a {
         font-size: 14px;
         font-size: 1.4rem;
     }
     .subcategories .cap > h3 {
-        min-height: 10px;
+        min-height: 48px; /* EPH bar was 54px; */
     }
     .subcategories .cap a {
-        padding-bottom: 17px;
-        padding-top: 20px;
+        padding-bottom: 12px; /* EPH bar was 17px; */
+        padding-top: 15px; /* EPH bar was 20px; */
     }
     .subcategories .cap h3.multi-line a {
-        padding-bottom: 10px;
-        padding-top: 10px;
+        padding-bottom: 5px;  /* EPH bar was 10px; */
+        padding-top: 5px;  /* EPH bar was 10px; */
     }
     .search-results .caption .btn {
         width: auto;
@@ -3602,12 +3647,13 @@ main.secondary.volunteer-main {
         padding-left: 10px;
     }
     .nonprofit-social.four-wide a > .fa {
-        font-size: 60px;
-        font-size: 6rem;
+        font-size: 40px;
+        font-size: 4rem; /* EPH: was 60 and 6 */
     }
     .budget-container {
-        border-left: 1px solid #ddd;
-        padding-left: 8.333333%;
+        border-right: 1px solid #ddd; /* EPH was left, now on right */
+        /* padding-right: 8.333333%; */ /* EPH was left, now on right*/
+        padding-top:8px; /* eph new */
     }
     .budget-container .budget-status {
         width: 100%;
@@ -3691,7 +3737,7 @@ main.secondary.volunteer-main {
         margin-left: 0;
     }
     .nav.nav-pills.home-search > li + li {
-        margin-left: 150px;
+        margin-left: 40px; /* EPH was 150px; */
     }
     .nav.nav-pills.home-search.volunteer-search > li + li {
         margin-left: 100px;
@@ -3707,7 +3753,7 @@ main.secondary.volunteer-main {
         font-size: 1.4rem;
     }
     .login-form > div {
-        margin-left: 10%;
+        /* margin-left: 10%;  EPH causes 2nd box to go below */
     }
     /*make 1200 pixel wide images stretch entire width of page*/
     .hero img.img-responsive {
@@ -3736,8 +3782,8 @@ main.secondary.volunteer-main {
         margin-left: 4%;
     }
     .budget-container {
-        border-left: 1px solid #ddd;
-        padding-left: 8.333333%;
+        border-right: 1px solid #ddd; /* EPH was left not right */
+        /* padding-right: 8.333333%; */
     }
     .budget-container .budget-status li {
         font-size: 16px;
@@ -3754,10 +3800,10 @@ main.secondary.volunteer-main {
         float: right;
         max-width: 55rem;
     }
-     .donate-buttons .btn {
+    .donate-buttons .btn {
         margin-right: 30px;
     }
-     .donate-buttons .btn:last-child{
+    .donate-buttons .btn:last-child{
         margin-left: 0;
         margin-right: 0;
     }
@@ -3888,4 +3934,153 @@ main.secondary.volunteer-main {
     #screen-indicator {
         z-index: 2;
     }
+}
+
+/*
+@media print {
+    .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-sx-12, .col-sm-12, .col-md-12, .col-lg-12 {
+        float: left;
+    }
+    .col-sx-12, .col-sm-12, .col-md-12, .col-lg-12 {
+        width: 100%;
+    }
+    .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11 {
+        width: 91.66667%;
+    }
+    .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10 {
+        width: 83.33333%;
+    }
+    .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9 {
+        width: 75%;
+    }
+    .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8 {
+        width: 66.66667%;
+    }
+    .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7 {
+        width: 58.33333%;
+    }
+    .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6 {
+        width: 50%;
+    }
+    .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5 {
+        width: 41.66667%;
+    }
+    .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4 {
+        width: 33.33333%;
+    }
+    .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3 {
+        width: 25%;
+    }
+    .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2 {
+        width: 16.66667%;
+    }
+    .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1 {
+        width: 8.33333%;
+    }
+    * {
+        text-shadow: none !important;
+        color: #000 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+    a, a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    a[href^="javascript:"]:after, a[href^="#"]:after {
+        content: "";
+    }
+    pre, blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    thead {
+        display: table-header-group;
+    }
+    tr, img {
+        page-break-inside: avoid;
+    }
+    img {
+        max-width: 100% !important;
+    }
+    p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2, h3 {
+        page-break-after: avoid;
+    }
+    select {
+        background: #fff !important;
+    }
+    .navbar {
+        display: none;
+    }
+    .table td, .table th {
+        background-color: #fff !important;
+    }
+    .label {
+        border: 1px solid #000;
+    }
+    .table {
+        border-collapse: collapse !important;
+    }
+    .table-bordered th, .table-bordered td {
+        border: 1px solid #ddd !important;
+    }
+}
+*/
+
+/* EPH */
+
+.nobr {white-space:nowrap;}
+li.cfp-indent{text-indent:20px}
+li.cfp-margin-less {margin-bottom:10px;/* instead of 20 */}
+
+.gleft{
+    float:left;
+    width:90px;
+    clear:both;
+}
+
+.gright{
+    float:left;
+
+}
+
+.thumbnail a > img { width:100% }
+
+/* centered columns styles */
+.row-centered2 {
+    text-align:center;
+}
+.col-centered2 {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+/* ---------- FLEX ADDTO:new2016 --------- */
+
+.Aligner {
+    display: flex;
+    align-items: center;
+    min-height: 24em;
+    justify-content: center;
+}
+.Aligner-item {
+    flex: 1;
 }
