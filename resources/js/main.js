@@ -325,48 +325,50 @@ var global = {
             layoutMode: 'fitRows',
             sortBy: 'random'
         });
-        $('.home-search').on('click', 'button', function () {
+        $('.home-search').on('click', 'button', function (e) {
             var activeEl = $(this),
                     liveText = 'Showing all categories';
-            $('.home-search button.active').not(this).removeClass('active');
-            if ($(this).is('.nature-btn')) {
-                $gridHome.isotope({
-                    filter: '.nature-cat',
-                    sortBy: 'random'
-                });
-                $(this).addClass('active');
-                liveText = 'Showing only nature category';
-
-            } else if ($(this).is('.culture-btn')) {
-                $gridHome.isotope({
-                    filter: '.culture-cat',
-                    sortBy: 'random'
-                });
-                $(this).addClass('active');
-                liveText = 'Showing only culture category';
-
-            } else if ($(this).is('.education-btn')) {
-                $gridHome.isotope({
-                    filter: '.education-cat',
-                    sortBy: 'random'
-                });
-                $(this).addClass('active');
-                liveText = 'Showing only education category';
-
-            } else if ($(this).is('.human-services-btn')) {
-                $gridHome.isotope({
-                    filter: '.human-services-cat',
-                    sortBy: 'random'
-                });
-                $(this).addClass('active');
-                liveText = 'Showing only human services category';
-
-            } else if ($(this).is('.view-all-btn')) {
-                $gridHome.isotope({
-                    filter: '*',
-                    sortBy: 'random'
-                });
+            var selBtn = $(this).attr('class').replace('btn btn-link ', '');
+            $('.home-search button.active').removeClass('active');
+            switch (selBtn) {
+                case 'nature-btn':
+                    $gridHome.isotope({
+                        filter: '.nature-cat',
+                        sortBy: 'random'
+                    });
+                    liveText = 'Showing only nature category';
+                    break;
+                case 'culture-btn':
+                    $gridHome.isotope({
+                        filter: '.culture-cat',
+                        sortBy: 'random'
+                    });
+                    liveText = 'Showing only culture category';
+                    break;
+                case 'education-btn':
+                    $gridHome.isotope({
+                        filter: '.education-cat',
+                        sortBy: 'random'
+                    });
+                    liveText = 'Showing only education category';
+                    break;
+                case 'human-services-btn':
+                    $gridHome.isotope({
+                        filter: '.human-services-cat',
+                        sortBy: 'random'
+                    });
+                    liveText = 'Showing only human services category';
+                    break;
+                case 'view-all-btn':
+                    $gridHome.isotope({
+                        filter: '*',
+                        sortBy: 'random'
+                    });
+                    break;
+                default:
+                    break;
             }
+            $(this).addClass('active');
             $('#liveText-polite').find('p').html(liveText);
             setTimeout(function () {
                 $('#liveText-polite').find('p').html('');
@@ -754,9 +756,9 @@ var global = {
         });
     },
     /* 
-     *@description       Handles adding/removing parameters if filters are selected
-     *@param {object}    e
-     *returns parameters for URL and updates URL without refreshing the DOM
+     *@description        Handles adding/removing parameters if filters are selected
+     *@param {object}      e
+     *returns parameters   for URL and updates URL without refreshing the DOM
      */
     volunteerFilterUrlHandler: function () {
         var search = location.search.substring(1);
