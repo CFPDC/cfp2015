@@ -386,7 +386,7 @@ a.email[href^="mailto"]:focus {
     background-color: #fff;
 }
 
-.volunteer-search .btn-sort.active .fa-th:before {
+.volunteer-search .btn-sort.active .fa-th:before, .volunteer-search .btn-sort.active .fa-th-list:before {
     color: #fff;
 }
 
@@ -399,7 +399,18 @@ a.email[href^="mailto"]:focus {
     font-size: 16px;
     font-size: 1.6rem;
 }
-
+.volunteer-search-main grid-view{
+    display: block;
+}
+.volunteer-search-main.list-view grid-view{
+    display: none;
+}
+.volunteer-search-main list-view{
+    display: none;
+}
+.volunteer-search-main.list-view list-view{
+    display: block;
+}
 .multiselect-container li {
     margin-bottom: 0;
 }

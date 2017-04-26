@@ -156,6 +156,12 @@ var global = {
             concatedValues = groupCreator(concatedValues, allObjects[i]);
         }
 
+        $('.vol-list-listing').hide();
+        for (var i = 1; i < concatedValues.length; i++) {
+            if ($('.vol-list-listing').is(concatedValues[i])) {
+                $('.vol-list-listing' + concatedValues[i]).show();
+            }
+        }
         concatedValues = concatedValues.join();
         return concatedValues;
     },
@@ -584,6 +590,49 @@ var global = {
             $(focusedElement).focus();
         });
     },
+    switchGridOrList: function (listView) {
+        var url = location.href;
+        var paramList = url.split('?');
+        var params = [];
+        $('.vol-views').find('.active').removeClass('active');
+        if (paramList.length > 1) {
+            var otherParams = [];
+            var tempParams = paramList[1].split('&');
+            for (var i = 0; i < tempParams.length; i++) {
+                if (tempParams[i].indexOf('list=') !== 0) {
+                    otherParams.push(tempParams[i]);
+                }
+            }
+            otherParamsStr = otherParams.join('&');
+        }
+        if (otherParamsStr !== '') {
+            params.push(otherParamsStr);
+        }
+        if (listView === 'true') {
+            //add parma list=true
+            params.push('list=true');
+
+            //add list-view class to main section
+            $('.volunteer-search-main').addClass('list-view');
+        } else {
+            //add parma list=false
+            params.push('list=false');
+            //remove list-view class to main section
+            $('.volunteer-search-main').removeClass('list-view');
+            var $gridNarrowVolunteer = $('.grid').isotope({
+                itemSelector: '.iso-item',
+                layoutMode: 'fitRows'
+            });
+        }
+
+        var paramStr = params.join('&');
+        paramStr = paramStr.replace(/[.]/g, '');
+        var finalHref = paramStr ? paramList[0] + '?' + paramStr : paramList[0];
+        //update url without reloading DOM
+        if (history.pushState) {
+            window.history.pushState({path: finalHref}, '', finalHref);
+        }
+    },
     valid: function () { //all form validation must be in .ready
         $.validator.setDefaults({
             debug: true,
@@ -738,10 +787,14 @@ var global = {
             itemSelector: '.iso-item',
             layoutMode: 'fitRows'
         });
+
+        var listView = false;
         inclusives = [];
         for (var i = 0; i < params.length; i++) {
             var param = params[i];
-            if (param.indexOf('loc=') >= 0) {
+            if (param.indexOf('list=') >= 0) {
+                listView = param.substring(5);
+            } else if (param.indexOf('loc=') >= 0) {
                 var loc = param.substring(4);
                 var locations = loc.split(',');
                 inclusives.push(locations);
@@ -768,8 +821,12 @@ var global = {
             }
         }
 
-
-
+        if (listView === 'true' || listView === true) {
+            global.switchGridOrList(listView);
+            $('.vol-views .list-view').addClass('active');
+        } else {
+            $('.vol-views .grid-view').addClass('active');
+        }
         //check the checkboxes in the array of parameters
         var filterValue = inclusives.length > 0 ? global.concatValues(inclusives) : '*';
         $gridNarrowVolunteer.isotope({filter: filterValue});
@@ -1063,9 +1120,6 @@ $('.filter-parameter').on('click', function () {
     global.setGetParameter(paramName, paramValue);
 });
 
-$('.sort-by a').on('click', function (e) {
-
-});
 //On click scroll to top of page t = 1000ms
 $('.scrollup').on('click', function (e) {
     $("html, body").animate({
@@ -1073,11 +1127,36 @@ $('.scrollup').on('click', function (e) {
     }, 1000);
     e.preventDefault();
 });
+/**
+ * @param {param} e 
+ */
+
+
+$('.vol-views').on('click', 'button', function (e) {
+    var listView = e.currentTarget.dataset.list;
+    global.switchGridOrList(listView);
+    $(e.currentTarget).addClass('active');
+});
 
 $('.vol-filter-input').on('click', function (e) {
     var url = location.href;
     var paramList = url.split('?');
+    var otherParamsStr = '';
     var params = [];
+    //loc = time = group =
+    if (paramList.length > 1) {
+        var otherParams = [];
+        var tempParams = paramList[1].split('&');
+        for (var i = 0; i < tempParams.length; i++) {
+            if (tempParams[i].indexOf('loc=') === -1 && tempParams[i].indexOf('time=') === -1 && tempParams[i].indexOf('group=') === -1) {
+                otherParams.push(tempParams[i]);
+            }
+        }
+        otherParamsStr = otherParams.join('&');
+    }
+    if (otherParamsStr !== '') {
+        params.push(otherParamsStr);
+    }
 
     if ($(e.currentTarget).is('.all-loc-dca, .all-loc-mda, .all-loc-vaa')) {
         var allLocation = $(this).data('filter-group');
