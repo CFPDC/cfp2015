@@ -26,6 +26,8 @@
     <link href="assets/css/jasny-bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/fullcalendar.min.css" rel="stylesheet">
     <link href="assets/css/fullcalendar.print.css" rel="stylesheet" media="print">
+    <link href="assets/css/dhtmlxcombo.css" rel="stylesheet">
+  <script src="assets/js/dhtmlxcombo.js"></script>
     <link href="resources/css/base.css" rel="stylesheet">
     <link href="resources/css/cfp-print.css" rel="stylesheet" media="print">
     <script src="assets/js/modernizr.js"></script>
@@ -44,10 +46,12 @@
     </noscript>
     <header class="container-fluid" role="banner">
       <div class="row">
-        <div class="col-sm-12 col-md-5">
-          <a class="pull-left" href="../" title="Catalogue for Philanthropy: Greater Washington home"> <img class="img-responsive header-logo" src="resources/images/cfp-logo-blue-brown2.gif" alt="Catalogue for Philanthropy: Greater Washington logo"> </a>
+        <div class="col-sm-12 col-md-6">
+          <a class="pull-left" href="../" title="Catalogue for Philanthropy: Greater Washington home">
+          <img class="img-responsive header-logo" src="resources/images/cfp-logo-blue-brown2.gif" alt="Catalogue for Philanthropy: Greater Washington logo">
+          </a>
         </div>
-        <nav class="col-xs-7 col-md-7 secondary-nav">
+        <nav class="col-sm-12 col-md-6 secondary-nav">
           <ul class="list-inline">
             <li>
               <a href="contact.php" target="_self" title="CFP's contact information">Contact
@@ -69,9 +73,16 @@
                 </span>
               </a>
             </li>
+            <li>
+              <a href="checkout.php?np_title=Catalogue_for_Philanthropy:_Greater_Washington" target="_self" title="Giving Cart">Giving Cart
+                <span class="sr-only">
+                for your Catalogue for Philanthropy account
+                </span>
+              </a>
+            </li>
           </ul>
         </nav>
-        <div class="hidden-print col-xs-12 col-sm-5 col-md-4 col-lg-3 catalogue-donate-button-container">
+        <div class="hidden-print col-xs-12 col-md-6 catalogue-donate-button-container">
           <button class="navbar-toggle" data-toggle="offcanvas" data-target=".mobile-nav" data-canvas="body" >
           <span class="adobeBlank sr-only" aria-hidden="true">
           Expand Menu Icon
@@ -195,9 +206,13 @@
                 <a href="blog.php" target="_self" title="View the CFP blog">Blog</a>
               </li>
             </ul>
-            
+
           </div>
-          <a href="checkout.php?np_title=Catalogue_for_Philanthropy:_Greater_Washington" title="Donate to The Catalogue for Philanthropy" class="btn btn-primary catalogue-donate-button" id="donate-to-catalogue">Donate to The Catalogue</a>
+          <div class="btn-group donate-buttons">
+            <a href="volunteer.php" title="Search volunteer opportunities from our vetted nonprofits" class="btn btn-secondary volunteer-button" id="volunteer">Volunteer</a>
+            <a href="#" title="Donate to The Catalogue for Philanthropy" class="btn btn-primary donate-button" id="donate">Donate</a>
+            <a href="checkout.php?np_title=Catalogue_for_Philanthropy:_Greater_Washington" title="Donate to The Catalogue for Philanthropy" class="btn btn-tertiary catalogue-donate-button" id="donate-to-catalogue">Donate to The Catalogue</a>
+          </div>
         </div>
       </div>
       <div class="row primary-nav" id="primary-nav-container">
