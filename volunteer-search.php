@@ -257,13 +257,13 @@ include('includes/functions.php');
                 </div>
             </grid-view>
             <list-view>
-                <ul class="list-grid-volunteer">
-                    <li class="vol-list-listing dc1 solo WKDD"><a href="">bla bla bla</a></li>
-                    <li class="vol-list-listing DC2 solo WDD"><a href="">bla bla bla</a></li>
-                    <li class="vol-list-listing DC3 solo WKDD"><a href="">bla bla bla</a></li>
-                    <li class="vol-list-listing DC4 family WKDD"><a href="">bla bla bla</a></li>
-                    <li class="vol-list-listing DC5 solo WKDD"><a href="">bla bla bla</a></li>
-                    <li class="vol-list-listing VAAC solo WKDD"><a href="">bla bla bla</a></li>
+                <ul class="list-grid-volunteer list-unstyled">
+                    <li class="vol-list-listing MDP group WDE"><a href="">Amazon Conservation Association</a></li>
+                    <li class="vol-list-listing DC2 group WDD"><a href="">Anacostia Watershed Society</a></li>
+                    <li class="vol-list-listing MDH solo WKDD"><a href="">Arlingtonians for a Clean Environment</a></li>
+                    <li class="vol-list-listing MDF group WKDE"><a href="">Audubon Naturalist Society</a></li>
+                    <li class="vol-list-listing DC2 solo WKE"><a href="">Asian American LEAD Association</a></li>
+                    <li class="vol-list-listing VAAC solo WDD"><a href="">Alice Ferguson Foundation</a></li>
 
                 </ul>
             </list-view>

@@ -594,6 +594,7 @@ var global = {
         var url = location.href;
         var paramList = url.split('?');
         var params = [];
+        var otherParamsStr;
         $('.vol-views').find('.active').removeClass('active');
         if (paramList.length > 1) {
             var otherParams = [];
@@ -827,8 +828,17 @@ var global = {
         } else {
             $('.vol-views .grid-view').addClass('active');
         }
+        
+         var filterValue = '*';
+            if (inclusives.length) {
+                filterValue = global.concatValues(inclusives);
+            } else {
+                $('.vol-list-listing').show();
+                filterValue = '*';
+            }
+        
         //check the checkboxes in the array of parameters
-        var filterValue = inclusives.length > 0 ? global.concatValues(inclusives) : '*';
+        //var filterValue = inclusives.length > 0 ? global.concatValues(inclusives) : '*';
         $gridNarrowVolunteer.isotope({filter: filterValue});
 
         var checkAllLocation = ['dca', 'mda', 'vaa'];
