@@ -188,7 +188,10 @@ a.email[href^="mailto"]:focus {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
+.event-main .add-to-calendar{
+    float: left;
+    margin-right: 5px;
+}
 
 /* end volunteer events page */
 
@@ -209,8 +212,9 @@ a.email[href^="mailto"]:focus {
 }
 
 .event-main .addthis_sharing_toolbox {
+    clear: none !important; /* override JS library */
     display: inline-block;
-    float: right;
+    float: left;
     margin-top: 5px;
 }
 
@@ -3121,6 +3125,11 @@ main.secondary.volunteer-main {
 /*---High Contrast Mode---*/
 
 /*---MEDIA QUERIES---*/
+@media (min-width: 440px) {
+    .event-main .add-to-calendar{
+        margin-right: 18px;
+    }
+}
 @media (min-width: 480px) {
     .carousel-caption {
         padding-left: 13%;
@@ -3134,6 +3143,10 @@ main.secondary.volunteer-main {
     }
     .search-results .thumbnail .caption h2 {
         min-height: 75px;
+    }
+
+    .event-main .add-to-calendar{
+        margin-right: 35px;
     }
 }
 
@@ -3876,8 +3889,6 @@ ipod touch 480x208 */
 
 @media (max-width: 1029px) {
     .event-main .addthis_sharing_toolbox {
-        float: none;
-        margin-left: 22px;
     }
 }
 
