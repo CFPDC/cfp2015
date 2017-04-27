@@ -332,8 +332,22 @@ a.email[href^="mailto"]:focus {
     margin-top: 15px;
 }
 .vol-filters li{
-    margin-bottom: 20px;
+    margin-bottom: 8px;
+    margin-left: 25px;
 }
+
+.vol-filters li.all-areas{
+    margin-bottom: 3px;
+    margin-left: 0;
+    margin-top: 22px;
+}
+.vol-filters li.all-areas:first-child{
+    margin-top: 0;
+}
+.vol-filters li.all-areas:last-child{
+    margin-bottom: 0;
+}
+
 .vol-filters > label[for='location'] {
     margin-top: 0;
 }
