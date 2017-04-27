@@ -561,15 +561,11 @@ var global = {
         container.each(function () {
             maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
         });
-        if (!$('html').hasClass('lt-ie9')) {
-            container.each(function () {
-                $(this).height(maxHeight + 40);
-            });
-        } else {
-            container.each(function () {
-                $(this).height(maxHeight + 80);
-            });
-        }
+        var heightSet = container.selector === '.volunteer-search-main .caption' ? maxHeight + 15 : maxHeight + 40;
+        container.each(function () {
+            $(this).height(heightSet);
+        });
+
     },
 
     skipNav: function () {
@@ -828,15 +824,15 @@ var global = {
         } else {
             $('.vol-views .grid-view').addClass('active');
         }
-        
-         var filterValue = '*';
-            if (inclusives.length) {
-                filterValue = global.concatValues(inclusives);
-            } else {
-                $('.vol-list-listing').show();
-                filterValue = '*';
-            }
-        
+
+        var filterValue = '*';
+        if (inclusives.length) {
+            filterValue = global.concatValues(inclusives);
+        } else {
+            $('.vol-list-listing').show();
+            filterValue = '*';
+        }
+
         //check the checkboxes in the array of parameters
         //var filterValue = inclusives.length > 0 ? global.concatValues(inclusives) : '*';
         $gridNarrowVolunteer.isotope({filter: filterValue});

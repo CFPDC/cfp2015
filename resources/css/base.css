@@ -188,7 +188,10 @@ a.email[href^="mailto"]:focus {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
+.event-main .add-to-calendar{
+    float: left;
+    margin-right: 5px;
+}
 
 /* end volunteer events page */
 
@@ -209,8 +212,9 @@ a.email[href^="mailto"]:focus {
 }
 
 .event-main .addthis_sharing_toolbox {
+    clear: none !important; /* override JS library */
     display: inline-block;
-    float: right;
+    float: left;
     margin-top: 5px;
 }
 
@@ -328,8 +332,22 @@ a.email[href^="mailto"]:focus {
     margin-top: 15px;
 }
 .vol-filters li{
-    margin-bottom: 20px;
+    margin-bottom: 8px;
+    margin-left: 25px;
 }
+
+.vol-filters li.all-areas{
+    margin-bottom: 3px;
+    margin-left: 0;
+    margin-top: 22px;
+}
+.vol-filters li.all-areas:first-child{
+    margin-top: 0;
+}
+.vol-filters li.all-areas:last-child{
+    margin-bottom: 0;
+}
+
 .vol-filters > label[for='location'] {
     margin-top: 0;
 }
@@ -3056,6 +3074,13 @@ main.secondary.volunteer-main {
     margin-left: 5px;
 }
 
+.link-wrap{
+    white-space: pre-wrap; /* css-3 */    
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */    
+    white-space: -o-pre-wrap; /* Opera 7 */    
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
 
 /*--- HOME PAGE ---*/
 .home-lead-text {
@@ -3121,6 +3146,11 @@ main.secondary.volunteer-main {
 /*---High Contrast Mode---*/
 
 /*---MEDIA QUERIES---*/
+@media (min-width: 440px) {
+    .event-main .add-to-calendar{
+        margin-right: 18px;
+    }
+}
 @media (min-width: 480px) {
     .carousel-caption {
         padding-left: 13%;
@@ -3134,6 +3164,10 @@ main.secondary.volunteer-main {
     }
     .search-results .thumbnail .caption h2 {
         min-height: 75px;
+    }
+
+    .event-main .add-to-calendar{
+        margin-right: 35px;
     }
 }
 
@@ -3871,13 +3905,6 @@ ipod touch 480x208 */
 @media (max-width: 1199px) {
     #screen-indicator {
         z-index: 8;
-    }
-}
-
-@media (max-width: 1029px) {
-    .event-main .addthis_sharing_toolbox {
-        float: none;
-        margin-left: 22px;
     }
 }
 

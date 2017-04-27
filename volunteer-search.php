@@ -43,7 +43,7 @@ include('includes/functions.php');
                     </button>
                     <div class="dropdown-menu" id="vol-loc-list" aria-labelledby="vol-location">
                         <ul class="list-unstyled" data-group="loc">
-                            <li><label><input class="vol-filter-input all-loc-dca" data-filter-group="dca" type="checkbox">DC-CityWide</label></li>
+                            <li class="all-areas"><label><input class="vol-filter-input all-loc-dca" data-filter-group="dca" type="checkbox">DC-CityWide</label></li>
                             <li><label><input class="vol-filter-input dca" type="checkbox" data-filter-group="dca" data-filter=".DC1">DC-1</label></li>
                             <li><label><input class="vol-filter-input dca" type="checkbox" data-filter-group="dca" data-filter=".DC2">DC-2</label></li>
                             <li><label><input class="vol-filter-input dca" type="checkbox" data-filter-group="dca" data-filter=".DC3">DC-3</label></li>
@@ -53,13 +53,13 @@ include('includes/functions.php');
                             <li><label><input class="vol-filter-input dca" type="checkbox" data-filter-group="dca" data-filter=".DC7">DC-7</label></li>
                             <li><label><input class="vol-filter-input dca" type="checkbox" data-filter-group="dca" data-filter=".DC8">DC-8</label></li>
 
-                            <li><label><input class="vol-filter-input all-loc-mda" data-filter-group="mda" type="checkbox">MD-StateWide</label></li>
+                            <li class="all-areas"><label><input class="vol-filter-input all-loc-mda" data-filter-group="mda" type="checkbox">MD-StateWide</label></li>
                             <li><label><input class="vol-filter-input mda" type="checkbox" data-filter-group="mda" data-filter=".MDF">MD-Frederick County</label></li>
                             <li><label><input class="vol-filter-input mda" type="checkbox" data-filter-group="mda" data-filter=".MDH">MD-Howard County</label></li>
                             <li><label><input class="vol-filter-input mda" type="checkbox" data-filter-group="mda" data-filter=".MDM">MD-Montgomery County</label></li>
                             <li><label><input class="vol-filter-input mda" type="checkbox" data-filter-group="mda" data-filter=".MDP">MD-Prince George's County</label></li>
 
-                            <li><label><input class="vol-filter-input all-loc-vaa" data-filter-group="vaa" type="checkbox">VA-Statewide</label></li>
+                            <li class="all-areas"><label><input class="vol-filter-input all-loc-vaa" data-filter-group="vaa" type="checkbox">VA-Statewide</label></li>
                             <li><label><input class="vol-filter-input vaa" type="checkbox" data-filter-group="vaa" data-filter=".VAAC">VA-Arlington County</label></li>
                             <li><label><input class="vol-filter-input vaa" type="checkbox" data-filter-group="vaa" data-filter=".VAFC">VA-Fairfax County</label></li>
                             <li><label><input class="vol-filter-input vaa" type="checkbox" data-filter-group="vaa" data-filter=".VALC">VA-Loudon County</label></li>
@@ -68,7 +68,7 @@ include('includes/functions.php');
                             <li><label><input class="vol-filter-input vaa" type="checkbox" data-filter-group="vaa" data-filter=".VACF">VA-City of Fairfax</label></li>
                             <li><label><input class="vol-filter-input vaa" type="checkbox" data-filter-group="vaa" data-filter=".VACFC">VA-City of Falls Church</label></li>
 
-                            <li><label><input class="vol-filter-input" type="checkbox" data-filter=".IN">Internationally</label></li>
+                            <li class="all-areas"><label><input class="vol-filter-input" type="checkbox" data-filter=".IN">Internationally</label></li>
 
                         </ul>
                     </div>
@@ -108,7 +108,7 @@ include('includes/functions.php');
             <p>RESULTS: 10</p>
             <p><b>Categories:</b> <span>Environment &amp; Animal Services <button class="fa fa-times-circle close remove-opt" aria-hidden="true"><span class="sr-only">Remove Environment &amp; Animal Services</span></button></span>
                 <span>Youth Education &amp; Enrichment <button class="fa fa-times-circle close remove-opt"><span class="sr-only">Remove Youth Education &amp; Enrichment</span></button></span></p>
-            
+
             <grid-view>
                 <h2 class="volunteer-search-h2">Environment &amp; Animal Services</h2>
                 <div class="row grid">
