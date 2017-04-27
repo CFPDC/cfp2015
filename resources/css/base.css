@@ -3894,11 +3894,6 @@ ipod touch 480x208 */
     }
 }
 
-@media (max-width: 1029px) {
-    .event-main .addthis_sharing_toolbox {
-    }
-}
-
 @media (max-width: 991px) {
     #screen-indicator {
         z-index: 7;
