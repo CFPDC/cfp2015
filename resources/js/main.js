@@ -157,7 +157,7 @@ var global = {
         }
 
         $('.vol-list-listing').hide();
-        for (var i = 1; i < concatedValues.length; i++) {
+        for (var i = 0; i < concatedValues.length; i++) {
             if ($('.vol-list-listing').is(concatedValues[i])) {
                 $('.vol-list-listing' + concatedValues[i]).show();
             }
@@ -771,6 +771,88 @@ var global = {
 
         });
     },
+
+    volunteerFilterResultHandler: function () {
+        var allFilters = [];
+        if ($('.all-loc-dca').is(':checked')) {
+            var object = {
+                'key': '.all-loc-dca',
+                'text': $('.all-loc-dca').parent().text()
+            };
+            allFilters.push(object);
+        } else {
+            $('[data-filter-group="dca"]').each(function (index, element) {
+                if (this.checked) {
+                    var object = {
+                        'key': $(this).data('filter'),
+                        'text': this.labels[0].innerText
+                    };
+                    allFilters.push(object);
+                }
+            });
+        }
+        if ($('.all-loc-mda').is(':checked')) {
+            var object = {
+                'key': '.all-loc-mda',
+                'text': $('.all-loc-mda').parent().text()
+            };
+            allFilters.push(object);
+        } else {
+            $('[data-filter-group="mda"]').each(function (index, element) {
+                if (this.checked) {
+                    var object = {
+                        'key': $(this).data('filter'),
+                        'text': this.labels[0].innerText
+                    };
+                    allFilters.push(object);
+                }
+            });
+        }
+        if ($('.all-loc-vaa').is(':checked')) {
+            var object = {
+                'key': '.all-loc-vaa',
+                'text': $('.all-loc-vaa').parent().text()
+            };
+            allFilters.push(object);
+        } else {
+            $('[data-filter-group="vaa"]').each(function (index, element) {
+                if (this.checked) {
+                    var object = {
+                        'key': $(this).data('filter'),
+                        'text': this.labels[0].innerText
+                    };
+                    allFilters.push(object);
+                }
+            });
+        }
+
+        $('[data-filter-group="time"]').each(function (index, element) {
+            if (this.checked) {
+                var object = {
+                    'key': $(this).data('filter'),
+                    'text': this.labels[0].innerText
+                };
+                allFilters.push(object);
+            }
+        });
+        $('[data-filter-group="group"]').each(function (index, element) {
+            if (this.checked) {
+                var object = {
+                    'key': $(this).data('filter'),
+                    'text': this.labels[0].innerText
+                };
+                allFilters.push(object);
+            }
+        });
+
+        $("#idcResults").empty();
+
+        $.each(allFilters, function (index, element) {
+            var htmlBtn = '<button class="vol-filter-result-btn btn-link" data-filter-btn="' + element.key + '">' + element.text + '</button>';
+            $('#idcResults').append(htmlBtn);
+        });
+
+    },
     /* 
      *@description        Handles adding/removing parameters if filters are selected
      *@param {object}      e
@@ -846,6 +928,18 @@ var global = {
                 $('.all-loc-' + checkAllLocation[i]).prop("checked", false);
             }
         }
+        global.volunteerFilterResultHandler();
+
+        $('.vol-filter-result-btn').off('click').on('click', function (e) {
+            var checkBoxClickInput = e.currentTarget.dataset.filterBtn;
+            if (checkBoxClickInput === '.all-loc-dca' || checkBoxClickInput === '.all-loc-mda' || checkBoxClickInput === '.all-loc-vaa') {
+                $(checkBoxClickInput).trigger("click");
+            } else {
+                $('[data-filter="' + checkBoxClickInput + '"]').trigger("click");
+            }
+            //$('#idcResults').children($(e.currentTarget)).detach();
+            $(this).detach();
+        });
     },
 
     getUrlParameter: function (paramKey) {

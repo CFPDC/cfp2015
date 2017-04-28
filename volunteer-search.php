@@ -108,7 +108,7 @@ include('includes/functions.php');
             <p>RESULTS: 10</p>
             <p><b>Categories:</b> <span>Environment &amp; Animal Services <button class="fa fa-times-circle close remove-opt" aria-hidden="true"><span class="sr-only">Remove Environment &amp; Animal Services</span></button></span>
                 <span>Youth Education &amp; Enrichment <button class="fa fa-times-circle close remove-opt"><span class="sr-only">Remove Youth Education &amp; Enrichment</span></button></span></p>
-
+            <div id="idcResults"></div>
             <grid-view>
                 <h2 class="volunteer-search-h2">Environment &amp; Animal Services</h2>
                 <div class="row grid">
