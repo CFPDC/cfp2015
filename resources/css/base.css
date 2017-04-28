@@ -337,7 +337,7 @@ a.email[href^="mailto"]:focus {
 }
 
 .vol-filters li.all-areas{
-    margin-bottom: 3px;
+    margin-bottom: 20px;
     margin-left: 0;
     margin-top: 22px;
 }
@@ -368,6 +368,27 @@ a.email[href^="mailto"]:focus {
     width: 100%;
 }
 
+.vol-filter-result-btn {
+    color: inherit !important;
+    position: relative;
+    padding-right: 20px;
+    margin-right: 5px;
+}
+
+.vol-filter-result-btn:last-child {
+    margin-right: 0;
+}
+.vol-filter-result-btn:after {
+    display: block;
+    color: #487896;
+    position: absolute;
+    top: 0;
+    right:2px;
+    height: 22px;
+    width: 15px;
+    font-family :'FontAwesome' !important;
+    content:"\f057";
+}
 .volunteer-search-label {
     display: block;
 }
