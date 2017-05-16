@@ -285,9 +285,12 @@ a.email[href^="mailto"]:focus {
     font-size: 2.4rem;
 }
 .well.event-well{
+    border: none;
     padding: 0;
 }
-.well.event-well >div{
+.well.event-well > div{
+    border: 2px solid #DDD;
+    border-top: 0;
     padding: 15px;
 }
 
