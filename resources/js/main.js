@@ -976,10 +976,10 @@ var global = {
         }
 
         if ($(e.currentTarget).is('.all-loc-dca, .all-loc-mda, .all-loc-vaa')) {
-            var allLocation = $(e.currentTarget).data('filter-group');
+            var allLocation = $(e.target).data('filter-group');
             $('.' + allLocation).prop("checked", this.checked);
         } else if ($(e.currentTarget).is('.dca, .mda, .vaa')) {
-            var allLocation = $(e.currentTarget).data('filter-group').toLowerCase();
+            var allLocation = $(e.target).data('filter-group').toLowerCase();
             if ($('.' + allLocation + ':checked').length === $('.' + allLocation).length) {
                 $('.all-loc-' + allLocation).prop("checked", true);
 
@@ -991,16 +991,16 @@ var global = {
         var locationList = [], timeList = [], groupList = [];
 
         $('.dca:checked,  .mda:checked, .vaa:checked').each(function (index, element) {
-            locationList.push($(e.currentTarget).data('filter'));
+            locationList.push($(this).data('filter'));
         });
         $('[data-filter-group="time"]').each(function (index, element) {
             if (this.checked) {
-                timeList.push($(e.currentTarget).data('filter'));
+                timeList.push($(this).data('filter'));
             }
         });
         $('[data-filter-group="group"]').each(function (index, element) {
             if (this.checked) {
-                groupList.push($(e.currentTarget).data('filter'));
+                groupList.push($(this).data('filter'));
             }
         });
 
