@@ -758,6 +758,7 @@ var global = {
             // map input values to an array
             var inclusives = [];
             // inclusive filters from checkboxes
+
             $checkboxes.each(function (i, elem) {
                 // if checkbox, use value if checked
                 if (elem.checked) {
@@ -952,6 +953,82 @@ var global = {
         } else {
             return results[1];
         }
+    },
+    
+   volunteerSearchFilter: function (e){     
+        var url = location.href;
+        var paramList = url.split('?');
+        var otherParamsStr = '';
+        var params = [];
+        //loc = time = group =
+        if (paramList.length > 1) {
+            var otherParams = [];
+            var tempParams = paramList[1].split('&');
+            for (var i = 0; i < tempParams.length; i++) {
+                if (tempParams[i].indexOf('loc=') === -1 && tempParams[i].indexOf('time=') === -1 && tempParams[i].indexOf('group=') === -1) {
+                    otherParams.push(tempParams[i]);
+                }
+            }
+            otherParamsStr = otherParams.join('&');
+        }
+        if (otherParamsStr !== '') {
+            params.push(otherParamsStr);
+        }
+
+        if ($(e.currentTarget).is('.all-loc-dca, .all-loc-mda, .all-loc-vaa')) {
+            var allLocation = $(e.currentTarget).data('filter-group');
+            $('.' + allLocation).prop("checked", this.checked);
+        } else if ($(e.currentTarget).is('.dca, .mda, .vaa')) {
+            var allLocation = $(e.currentTarget).data('filter-group').toLowerCase();
+            if ($('.' + allLocation + ':checked').length === $('.' + allLocation).length) {
+                $('.all-loc-' + allLocation).prop("checked", true);
+
+            } else {
+                $('.all-loc-' + allLocation).prop("checked", false);
+            }
+        }
+
+        var locationList = [], timeList = [], groupList = [];
+
+        $('.dca:checked,  .mda:checked, .vaa:checked').each(function (index, element) {
+            locationList.push($(e.currentTarget).data('filter'));
+        });
+        $('[data-filter-group="time"]').each(function (index, element) {
+            if (this.checked) {
+                timeList.push($(e.currentTarget).data('filter'));
+            }
+        });
+        $('[data-filter-group="group"]').each(function (index, element) {
+            if (this.checked) {
+                groupList.push($(e.currentTarget).data('filter'));
+            }
+        });
+
+        if (locationList.length > 0) {
+            var locationStr = 'loc=' + locationList.join(',');
+            params.push(locationStr);
+        }
+
+        if (timeList.length > 0) {
+            var timeStr = 'time=' + timeList.join(',');
+            params.push(timeStr);
+        }
+
+        if (groupList.length > 0) {
+            var groupStr = 'group=' + groupList.join(',');
+            params.push(groupStr);
+        }
+
+        //remove last '&' on string
+        var paramStr = params.join('&');
+        paramStr = paramStr.replace(/[.]/g, '');
+        var finalHref = paramStr ? paramList[0] + '?' + paramStr : paramList[0];
+        //update url without reloading DOM
+        if (history.pushState) {
+            window.history.pushState({path: finalHref}, '', finalHref);
+        }
+
+        global.volunteerFilterUrlHandler();
     }
 };
 //namespace to keep form functions short
@@ -1239,78 +1316,10 @@ $('.vol-views').on('click', 'button', function (e) {
 });
 
 $('.vol-filter-input').on('click', function (e) {
-    var url = location.href;
-    var paramList = url.split('?');
-    var otherParamsStr = '';
-    var params = [];
-    //loc = time = group =
-    if (paramList.length > 1) {
-        var otherParams = [];
-        var tempParams = paramList[1].split('&');
-        for (var i = 0; i < tempParams.length; i++) {
-            if (tempParams[i].indexOf('loc=') === -1 && tempParams[i].indexOf('time=') === -1 && tempParams[i].indexOf('group=') === -1) {
-                otherParams.push(tempParams[i]);
-            }
-        }
-        otherParamsStr = otherParams.join('&');
-    }
-    if (otherParamsStr !== '') {
-        params.push(otherParamsStr);
-    }
-
-    if ($(e.currentTarget).is('.all-loc-dca, .all-loc-mda, .all-loc-vaa')) {
-        var allLocation = $(this).data('filter-group');
-        $('.' + allLocation).prop("checked", this.checked);
-    } else if ($(e.currentTarget).is('.dca, .mda, .vaa')) {
-        var allLocation = $(this).data('filter-group').toLowerCase();
-        if ($('.' + allLocation + ':checked').length === $('.' + allLocation).length) {
-            $('.all-loc-' + allLocation).prop("checked", true);
-
-        } else {
-            $('.all-loc-' + allLocation).prop("checked", false);
-        }
-    }
-
-    var locationList = [], timeList = [], groupList = [];
-
-    $('.dca:checked,  .mda:checked, .vaa:checked').each(function (index, element) {
-        locationList.push($(this).data('filter'));
-    });
-    $('[data-filter-group="time"]').each(function (index, element) {
-        if (this.checked) {
-            timeList.push($(this).data('filter'));
-        }
-    });
-    $('[data-filter-group="group"]').each(function (index, element) {
-        if (this.checked) {
-            groupList.push($(this).data('filter'));
-        }
-    });
-
-    if (locationList.length > 0) {
-        var locationStr = 'loc=' + locationList.join(',');
-        params.push(locationStr);
-    }
-
-    if (timeList.length > 0) {
-        var timeStr = 'time=' + timeList.join(',');
-        params.push(timeStr);
-    }
-
-    if (groupList.length > 0) {
-        var groupStr = 'group=' + groupList.join(',');
-        params.push(groupStr);
-    }
-
-    //remove last '&' on string
-    var paramStr = params.join('&');
-    paramStr = paramStr.replace(/[.]/g, '');
-    var finalHref = paramStr ? paramList[0] + '?' + paramStr : paramList[0];
-    //update url without reloading DOM
-    if (history.pushState) {
-        window.history.pushState({path: finalHref}, '', finalHref);
-    }
-    global.volunteerFilterUrlHandler();
+    
+    setTimeout(function(){ 
+        global.volunteerSearchFilter(e); 
+    }, 0);
 
 });
 
