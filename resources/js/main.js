@@ -1319,7 +1319,7 @@ $('.vol-filter-input').on('click', function (e) {
     
     setTimeout(function(){ 
         global.volunteerSearchFilter(e); 
-    }, 0);
+    }, 100);
 
 });
 
