@@ -977,7 +977,7 @@ var global = {
 
         if ($(e.currentTarget).is('.all-loc-dca, .all-loc-mda, .all-loc-vaa')) {
             var allLocation = $(e.target).data('filter-group');
-            $('.' + allLocation).prop("checked", this.checked);
+            $('.' + allLocation).prop('checked', e.target.checked);
         } else if ($(e.currentTarget).is('.dca, .mda, .vaa')) {
             var allLocation = $(e.target).data('filter-group').toLowerCase();
             if ($('.' + allLocation + ':checked').length === $('.' + allLocation).length) {
