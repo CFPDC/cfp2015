@@ -75,7 +75,7 @@ include('includes/functions.php');
                 </div>
                 <label class="volunteer-search-label" for="time">When:</label>
                 <div class="dropdown">
-                    <button id="vol-time" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button id="vol-time" type="button" class="vol-search-filter-dd-cntrl"  aria-haspopup="true" aria-expanded="false">
                         Select a time
                         <span class="caret" aria-hidden="true"></span>
                     </button>
@@ -90,7 +90,7 @@ include('includes/functions.php');
                 </div>
                 <label class="volunteer-search-label" for="volunteers">Who:</label>
                 <div class="dropdown">
-                    <button id="vol-group" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button id="vol-group" type="button" class="vol-search-filter-dd-cntrl"  aria-haspopup="true" aria-expanded="false">
                         Select a group size
                         <span class="caret" aria-hidden="true"></span>
                     </button>

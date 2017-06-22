@@ -76,7 +76,12 @@ var global = {
     bindDropdownEvents: function () {
         var dropControl = $('.vol-search-filter-dd-cntrl');
         dropControl.on('click', function (e) {
-            $(this).parent().toggleClass('open');
+            var showDropDown = $(this).parent().is('.open')? false : true;
+            
+            $('.vol-filters .dropdown').removeClass('open');
+            if(showDropDown){
+                $(this).parent().toggleClass('open');
+            }
         });
         $('body').on('click', function (e) {
             if (!dropControl.is(e.target) && dropControl.has(e.target).length === 0 && $('.open').has(e.target).length === 0) {
