@@ -68,6 +68,22 @@ var global = {
 
         });
     },
+    
+    /**
+     * bindDropdownEvents
+     * @description Handles binding events for volunteer search page filter dropdown open/close
+     */
+    bindDropdownEvents: function () {
+        var dropControl = $('.vol-search-filter-dd-cntrl');
+        dropControl.on('click', function (e) {
+            $(this).parent().toggleClass('open');
+        });
+        $('body').on('click', function (e) {
+            if (!dropControl.is(e.target) && dropControl.has(e.target).length === 0 && $('.open').has(e.target).length === 0) {
+                $('.vol-filters .open').removeClass('open');
+            }
+        });
+    },
     carouselPlayPause: function () {
         var button = $(this).attr('id');
     },
@@ -954,8 +970,8 @@ var global = {
             return results[1];
         }
     },
-    
-   volunteerSearchFilter: function (e){     
+
+    volunteerSearchFilter: function (e) {
         var url = location.href;
         var paramList = url.split('?');
         var otherParamsStr = '';
@@ -1316,9 +1332,9 @@ $('.vol-views').on('click', 'button', function (e) {
 });
 
 $('.vol-filter-input').on('click', function (e) {
-    
-    setTimeout(function(){ 
-        global.volunteerSearchFilter(e); 
+
+    setTimeout(function () {
+        global.volunteerSearchFilter(e);
     }, 100);
 
 });
@@ -1463,7 +1479,7 @@ $(function () {
             break;
         case 'volunteer-search':
             global.setHeight();
-            //global.volunteerNarrowSearch();
+            global.bindDropdownEvents();
             global.volunteerFilterUrlHandler();
             break;
         default:

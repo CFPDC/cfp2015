@@ -37,7 +37,7 @@ include('includes/functions.php');
                 <h3 class="all-caps narrow-search">Narrow Your Choices</h3>
                 <label class="volunteer-search-label" for="location">Where:</label>
                 <div class="dropdown">
-                    <button id="vol-location" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button id="vol-location" class="vol-search-filter-dd-cntrl" type="button" aria-haspopup="true" aria-expanded="false">
                         Select a location
                         <span class="caret" aria-hidden="true"></span>
                     </button>
@@ -197,9 +197,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                 <!--row-->
-                <div class="row grid">
+                
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -284,9 +282,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                  <!--row-->
-                <div class="row grid">
+                
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -371,9 +367,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                   <!--row-->
-                <div class="row grid">
+               
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -458,9 +452,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                    <!--row-->
-                <div class="row grid">
+                
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -545,9 +537,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                     <!--row-->
-                <div class="row grid">
+
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -632,9 +622,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                      <!--row-->
-                <div class="row grid">
+               
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -719,9 +707,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                       <!--row-->
-                <div class="row grid">
+                
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -806,9 +792,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                        <!--row-->
-                <div class="row grid">
+               
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -893,9 +877,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                         <!--row-->
-                <div class="row grid">
+                
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -980,9 +962,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                          <!--row-->
-                <div class="row grid">
+                
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -1067,9 +1047,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                           <!--row-->
-                <div class="row grid">
+               
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -1154,9 +1132,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                            <!--row-->
-                <div class="row grid">
+               
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -1241,9 +1217,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                             <!--row-->
-                <div class="row grid">
+               
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -1328,9 +1302,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                              <!--row-->
-                <div class="row grid">
+                
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -1415,9 +1387,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                               <!--row-->
-                <div class="row grid">
+                
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -1502,9 +1472,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                                <!--row-->
-                <div class="row grid">
+                
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -1589,9 +1557,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                                 <!--row-->
-                <div class="row grid">
+                
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -1676,9 +1642,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                                  <!--row-->
-                <div class="row grid">
+               
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -1763,9 +1727,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                                   <!--row-->
-                <div class="row grid">
+                
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -1850,9 +1812,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                                    <!--row-->
-                <div class="row grid">
+                
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -1937,9 +1897,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                                     <!--row-->
-                <div class="row grid">
+                
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -2024,9 +1982,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                                      <!--row-->
-                <div class="row grid">
+                
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -2111,9 +2067,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                                       <!--row-->
-                <div class="row grid">
+                
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -2198,9 +2152,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                                        <!--row-->
-                <div class="row grid">
+                
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -2285,9 +2237,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                                         <!--row-->
-                <div class="row grid">
+                
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -2372,9 +2322,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                                          <!--row-->
-                <div class="row grid">
+                
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -2459,9 +2407,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                                           <!--row-->
-                <div class="row grid">
+              
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -2546,9 +2492,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                                            <!--row-->
-                <div class="row grid">
+                
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -2633,9 +2577,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                                             <!--row-->
-                <div class="row grid">
+              
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -2720,9 +2662,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                                              <!--row-->
-                <div class="row grid">
+               
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -2807,9 +2747,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                                               <!--row-->
-                <div class="row grid">
+              
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
@@ -2894,9 +2832,7 @@ include('includes/functions.php');
                             </div>
                         </div>
                     </div>
-                </div>
-                                                <!--row-->
-                <div class="row grid">
+               
                     <div class="col-xs-12 vol-listing iso-item VAAC solo WDD">
                         <div class="thumbnail">
                             <img alt="" src="http://www.cfp-dc.org/images/dc/cropped/87.jpg">
